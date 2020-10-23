@@ -38,7 +38,7 @@ export default function PresentationPage() {
   return (
     <div>
       <Header
-        brand="Material Kit PRO React"
+        brand="GALACTIC POLYMATH"
         links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
         color="transparent"
@@ -56,11 +56,10 @@ export default function PresentationPage() {
             <GridItem>
               <div className={classes.brand}>
                 <h1>
-                  Material Kit React
-                  <span className={classes.proBadge}>PRO</span>
+                  GALACTIC POLYMATH
                 </h1>
                 <h3 className={classes.title}>
-                  A Badass Material-UI Kit based on Material Design.
+                  THINK BIGGER - LEARN EVERYTHING
                 </h3>
               </div>
             </GridItem>

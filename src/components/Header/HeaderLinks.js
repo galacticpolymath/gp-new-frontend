@@ -91,6 +91,25 @@ export default function HeaderLinks(props) {
   return (
     <List className={classes.list + " " + classes.mlAuto}>
       <ListItem className={classes.listItem}>
+      <Link to="/">
+        <div className="navbar-logo_container">
+          <img alt="logo" className="navbar-logo" src="assets/img/android-chrome-512x512.png" />
+        </div>
+      </Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Link to="/about-us" className={classes.navLink}>Lessons</Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Link to="/about-us" className={classes.navLink}>JobViz</Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Link to="/pricing" className={classes.navLink}>Hire Us</Link>
+      </ListItem>
+      <ListItem className={classes.listItem}>
+        <Link to="/about-us" className={classes.navLink}>About</Link>
+      </ListItem>
+      {/* <ListItem className={classes.listItem}>
         <CustomDropdown
           noLiPadding
           navDropdown
@@ -244,8 +263,8 @@ export default function HeaderLinks(props) {
             </Link>
           ]}
         />
-      </ListItem>
-      <ListItem className={classes.listItem}>
+      </ListItem> */}
+      {/* <ListItem className={classes.listItem}>
         <Button
           href="https://www.creative-tim.com/product/material-kit-pro-react?ref=mkpr-navbar"
           color={window.innerWidth < 960 ? "info" : "white"}
@@ -255,7 +274,7 @@ export default function HeaderLinks(props) {
         >
           <ShoppingCart className={classes.icons} /> buy now
         </Button>
-      </ListItem>
+      </ListItem> */}
     </List>
   );
 }
