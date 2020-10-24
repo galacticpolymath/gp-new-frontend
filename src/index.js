@@ -44,22 +44,21 @@ var hist = createBrowserHistory();
 ReactDOM.render(
   <Router history={hist}>
     <Switch>
-      <Route path="/about-us" component={AboutUsPage} />
+      <Route path="/about" component={AboutUsPage} />
+      <Route path="/lessons" component={BlogPostsPage} />
+      <Route path="/hire-us" component={PricingPage} />
+      <Route path="/" component={LandingPage} />
       <Route path="/blog-post" component={BlogPostPage} />
-      <Route path="/blog-posts" component={BlogPostsPage} />
       <Route path="/components" component={ComponentsPage} />
       <Route path="/contact-us" component={ContactUsPage} />
       <Route path="/ecommerce-page" component={EcommercePage} />
-      <Route path="/landing-page" component={LandingPage} />
       <Route path="/login-page" component={LoginPage} />
-      <Route path="/pricing" component={PricingPage} />
       <Route path="/profile-page" component={ProfilePage} />
       <Route path="/product-page" component={ProductPage} />
       <Route path="/sections" component={SectionsPage} />
       <Route path="/shopping-cart-page" component={ShoppingCartPage} />
       <Route path="/signup-page" component={SignupPage} />
       <Route path="/error-page" component={ErrorPage} />
-      <Route path="/" component={PresentationPage} />
     </Switch>
   </Router>,
   document.getElementById("root")

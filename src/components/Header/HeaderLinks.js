@@ -91,23 +91,16 @@ export default function HeaderLinks(props) {
   return (
     <List className={classes.list + " " + classes.mlAuto}>
       <ListItem className={classes.listItem}>
-      <Link to="/">
-        <div className="navbar-logo_container">
-          <img alt="logo" className="navbar-logo" src="assets/img/android-chrome-512x512.png" />
-        </div>
-      </Link>
+        <Link to="/lessons" className={classes.navLink}>Lessons</Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link to="/about-us" className={classes.navLink}>Lessons</Link>
+        <Link to="/about" className={classes.navLink}>JobViz</Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link to="/about-us" className={classes.navLink}>JobViz</Link>
+        <Link to="/hire-us" className={classes.navLink}>Hire Us</Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link to="/pricing" className={classes.navLink}>Hire Us</Link>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Link to="/about-us" className={classes.navLink}>About</Link>
+        <Link to="/about" className={classes.navLink}>About</Link>
       </ListItem>
       {/* <ListItem className={classes.listItem}>
         <CustomDropdown
