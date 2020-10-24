@@ -35,11 +35,7 @@ export default function SectionTeam() {
             classes.textCenter
           )}
         >
-          <h2 className={classes.title}>We are nerd rockstars</h2>
-          <h5 className={classes.description}>
-            This is the paragraph where you can write more details about your
-            team. Keep you user engaged by providing meaningful information.
-          </h5>
+          <h2 className={classes.title}>Meet Our Team</h2>
         </GridItem>
       </GridContainer>
       <GridContainer>
@@ -51,8 +47,8 @@ export default function SectionTeam() {
               </a>
             </CardAvatar>
             <CardBody plain>
-              <h4 className={classes.cardTitle}>Alec Thompson</h4>
-              <h6 className={classes.textMuted}>CEO / Co-Founder</h6>
+              <h4 className={classes.cardTitle}>Matt Wilkins, PhD</h4>
+              <h6 className={classes.textMuted}>CEO / Founder</h6>
               <p className={classes.cardDescription}>
                 And I love you like Kanye loves Kanye. We need to restart the
                 human foundation.
@@ -83,8 +79,8 @@ export default function SectionTeam() {
               </a>
             </CardAvatar>
             <CardBody plain>
-              <h4 className={classes.cardTitle}>Tania Andrew</h4>
-              <h6 className={classes.textMuted}>DESIGNER</h6>
+              <h4 className={classes.cardTitle}>Stephanie Castillo</h4>
+              <h6 className={classes.textMuted}>DIGITAL MULTIMEDIA SPECIALIST</h6>
               <p className={classes.cardDescription}>
                 Don{"'"}t be scared of the truth because we need to restart the
                 human foundation. And I love you like Kanye loves Kanye.
@@ -115,8 +111,8 @@ export default function SectionTeam() {
               </a>
             </CardAvatar>
             <CardBody plain>
-              <h4 className={classes.cardTitle}>Christian Mike</h4>
-              <h6 className={classes.textMuted}>Web Developer</h6>
+              <h4 className={classes.cardTitle}>Arda Turkman</h4>
+              <h6 className={classes.textMuted}>BACK-END DEVELOPER</h6>
               <p className={classes.cardDescription}>
                 I love you like Kanye loves Kanye. Don{"'"}t be scared of the
                 truth because we need to restart the human foundation.
@@ -144,8 +140,8 @@ export default function SectionTeam() {
               </a>
             </CardAvatar>
             <CardBody plain>
-              <h4 className={classes.cardTitle}>Rebecca Stormvile</h4>
-              <h6 className={classes.textMuted}>WEB DEVELOPER</h6>
+              <h4 className={classes.cardTitle}>Tyler Lemburg</h4>
+              <h6 className={classes.textMuted}>JOBVIZ DEVELOPER</h6>
               <p className={classes.cardDescription}>
                 And I love you like Kanye loves Kanye. We really need to restart
                 the human foundation.
