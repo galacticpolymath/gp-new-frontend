@@ -14,13 +14,8 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import teamStyle from "assets/jss/material-kit-pro-react/views/aboutUsSections/teamStyle.js";
 
-import FaceMarc from "assets/img/faces/marc.jpg";
-import FaceChristian from "assets/img/faces/christian.jpg";
-import FaceKendall from "assets/img/faces/kendall.jpg";
-import FaceAvatar from "assets/img/faces/avatar.jpg";
-
-
 import { makeCloudinaryUrl } from 'components/shared/constants';
+import grey from '@material-ui/core/colors/grey';
 
 
 const useStyles = makeStyles(teamStyle);
@@ -59,14 +54,11 @@ export default function SectionTeam() {
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
-              <Button href="#pablo" justIcon simple color="twitter">
-                <i className="fab fa-twitter" />
+              <Button href="http://www.mattwilkinsbio.com/" target="_blank" justIcon simple style={{color: grey[900]}}>
+                <i class="fas fa-globe"></i>
               </Button>
-              <Button href="#pablo" justIcon simple color="facebook">
-                <i className="fab fa-facebook" />
-              </Button>
-              <Button href="#pablo" justIcon simple color="google">
-                <i className="fab fa-google" />
+              <Button href="#pablo" justIcon simple color="linkedin">
+                <i className="fab fa-linkedin" />
               </Button>
             </CardFooter>
           </Card>
@@ -91,14 +83,8 @@ export default function SectionTeam() {
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
-              <Button href="#pablo" justIcon simple color="twitter">
-                <i className="fab fa-twitter" />
-              </Button>
-              <Button href="#pablo" justIcon simple color="dribbble">
-                <i className="fab fa-dribbble" />
-              </Button>
               <Button href="#pablo" justIcon simple color="linkedin">
-                <i className="fab fa-linkedin-in" />
+                <i className="fab fa-linkedin" />
               </Button>
             </CardFooter>
           </Card>
@@ -123,11 +109,8 @@ export default function SectionTeam() {
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
-              <Button href="#pablo" justIcon simple color="facebook">
-                <i className="fab fa-facebook" />
-              </Button>
-              <Button href="#pablo" justIcon simple color="dribbble">
-                <i className="fab fa-dribbble" />
+              <Button href="#pablo" justIcon simple color="linkedin">
+                <i className="fab fa-linkedin" />
               </Button>
             </CardFooter>
           </Card>
@@ -154,14 +137,11 @@ export default function SectionTeam() {
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
-              <Button href="#pablo" justIcon simple color="google">
-                <i className="fab fa-google" />
+              <Button href="http://tylerlemburg.com/" target="_blank" justIcon simple style={{color: grey[900]}}>
+                <i class="fas fa-globe"></i>
               </Button>
-              <Button href="#pablo" justIcon simple color="twitter">
-                <i className="fab fa-twitter" />
-              </Button>
-              <Button href="#pablo" justIcon simple color="dribbble">
-                <i className="fab fa-dribbble" />
+              <Button href="#pablo" justIcon simple color="linkedin">
+                <i className="fab fa-linkedin" />
               </Button>
             </CardFooter>
           </Card>
