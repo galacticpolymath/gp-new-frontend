@@ -46,9 +46,10 @@ ReactDOM.render(
     <Switch>
       <Route path="/about" component={AboutUsPage} />
       <Route path="/lessons" component={BlogPostsPage} />
+      <Route path="/JobViz" component={AboutUsPage} />
       <Route path="/hire-us" component={PricingPage} />
       <Route path="/" component={LandingPage} />
-      <Route path="/blog-post" component={BlogPostPage} />
+      {/* <Route path="/blog-post" component={BlogPostPage} />
       <Route path="/components" component={ComponentsPage} />
       <Route path="/contact-us" component={ContactUsPage} />
       <Route path="/ecommerce-page" component={EcommercePage} />
@@ -58,7 +59,7 @@ ReactDOM.render(
       <Route path="/sections" component={SectionsPage} />
       <Route path="/shopping-cart-page" component={ShoppingCartPage} />
       <Route path="/signup-page" component={SignupPage} />
-      <Route path="/error-page" component={ErrorPage} />
+      <Route path="/error-page" component={ErrorPage} /> */}
     </Switch>
   </Router>,
   document.getElementById("root")
