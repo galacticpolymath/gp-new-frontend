@@ -57,7 +57,7 @@ export default function SectionTeam() {
               <Button href="http://www.mattwilkinsbio.com/" target="_blank" justIcon simple style={{color: grey[900]}}>
                 <i class="fas fa-globe"></i>
               </Button>
-              <Button href="#pablo" justIcon simple color="linkedin">
+              <Button href="https://www.linkedin.com/in/mattwilkinsphd/" target="_blank" justIcon simple color="linkedin">
                 <i className="fab fa-linkedin" />
               </Button>
             </CardFooter>
@@ -83,7 +83,7 @@ export default function SectionTeam() {
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
-              <Button href="#pablo" justIcon simple color="linkedin">
+              <Button href="https://www.linkedin.com/in/castils/" target="_blank" justIcon simple color="linkedin">
                 <i className="fab fa-linkedin" />
               </Button>
             </CardFooter>
@@ -101,7 +101,7 @@ export default function SectionTeam() {
               </a>
             </CardAvatar>
             <CardBody plain>
-              <h4 className={classes.cardTitle}>Arda Turkman</h4>
+              <h4 className={classes.cardTitle}>Arda Turkmen</h4>
               <h6 className={classes.textMuted}>BACK-END DEVELOPER</h6>
               <p className={classes.cardDescription}>
                 I love you like Kanye loves Kanye. Don{"'"}t be scared of the
@@ -109,7 +109,7 @@ export default function SectionTeam() {
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
-              <Button href="#pablo" justIcon simple color="linkedin">
+              <Button href="https://www.linkedin.com/in/arda-turkmen-604432113/" target="_blank" justIcon simple color="linkedin">
                 <i className="fab fa-linkedin" />
               </Button>
             </CardFooter>
@@ -140,7 +140,7 @@ export default function SectionTeam() {
               <Button href="http://tylerlemburg.com/" target="_blank" justIcon simple style={{color: grey[900]}}>
                 <i class="fas fa-globe"></i>
               </Button>
-              <Button href="#pablo" justIcon simple color="linkedin">
+              <Button href="https://www.linkedin.com/in/tylerlemburg/" target="_blank" justIcon simple color="linkedin">
                 <i className="fab fa-linkedin" />
               </Button>
             </CardFooter>
