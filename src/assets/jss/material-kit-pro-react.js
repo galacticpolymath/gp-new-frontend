@@ -94,7 +94,7 @@ const successColor = [
   "#66bb6a"
 ];
 const infoColor = [
-  "#00acc1",
+  "#2c83c3",
   "#26c6da",
   "#00acc1",
   "#00d3ee",
