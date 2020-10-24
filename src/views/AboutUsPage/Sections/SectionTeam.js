@@ -19,6 +19,10 @@ import FaceChristian from "assets/img/faces/christian.jpg";
 import FaceKendall from "assets/img/faces/kendall.jpg";
 import FaceAvatar from "assets/img/faces/avatar.jpg";
 
+
+import { makeCloudinaryUrl } from 'components/shared/constants';
+
+
 const useStyles = makeStyles(teamStyle);
 
 export default function SectionTeam() {
@@ -43,7 +47,7 @@ export default function SectionTeam() {
           <Card profile plain>
             <CardAvatar profile plain>
               <a href="#pablo">
-                <img src={FaceMarc} alt="profile-pic" className={classes.img} />
+                <img src={makeCloudinaryUrl('w_150,c_fill,ar_1:1,q_100,g_auto/v1592966233/Team/Matt_Wilkins_profile_ukorql.jpg')} alt="profile-pic" className={classes.img} />
               </a>
             </CardAvatar>
             <CardBody plain>
@@ -72,7 +76,7 @@ export default function SectionTeam() {
             <CardAvatar profile plain>
               <a href="#pablo">
                 <img
-                  src={FaceKendall}
+                  src={makeCloudinaryUrl('w_150,c_fill,ar_1:1,q_100,g_auto/v1597113803/Team/StephanieCastillo_mu3bln.jpg')}
                   alt="profile-pic"
                   className={classes.img}
                 />
@@ -104,7 +108,7 @@ export default function SectionTeam() {
             <CardAvatar profile plain>
               <a href="#pablo">
                 <img
-                  src={FaceChristian}
+                  src={makeCloudinaryUrl('w_150,c_fill,ar_1:1,q_100,g_auto/v1595867238/Team/FullSizeRender_Arda_headshot-2_ebakrg.jpg')}
                   alt="profile-pic"
                   className={classes.img}
                 />
@@ -133,7 +137,9 @@ export default function SectionTeam() {
             <CardAvatar profile plain>
               <a href="#pablo">
                 <img
-                  src={FaceAvatar}
+                  src={makeCloudinaryUrl(
+      'w_150,c_fill,ar_1:1,q_100,g_auto/v1597278923/Team/image_2_jjogfs.png'
+    )}
                   alt="profile-pic"
                   className={classes.img}
                 />
