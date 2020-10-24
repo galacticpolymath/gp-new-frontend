@@ -41,9 +41,7 @@ export default function SectionTeam() {
         <GridItem md={3} sm={3}>
           <Card profile plain>
             <CardAvatar profile plain>
-              <a href="#pablo">
-                <img src={makeCloudinaryUrl('w_150,c_fill,ar_1:1,q_100,g_auto/v1592966233/Team/Matt_Wilkins_profile_ukorql.jpg')} alt="profile-pic" className={classes.img} />
-              </a>
+              <img src={makeCloudinaryUrl('w_150,c_fill,ar_1:1,q_100,g_auto/v1592966233/Team/Matt_Wilkins_profile_ukorql.jpg')} alt="profile-pic" className={classes.img} />
             </CardAvatar>
             <CardBody plain>
               <h4 className={classes.cardTitle}>Matt Wilkins, PhD</h4>
@@ -66,13 +64,11 @@ export default function SectionTeam() {
         <GridItem md={3} sm={3}>
           <Card profile plain>
             <CardAvatar profile plain>
-              <a href="#pablo">
                 <img
                   src={makeCloudinaryUrl('w_150,c_fill,ar_1:1,q_100,g_auto/v1597113803/Team/StephanieCastillo_mu3bln.jpg')}
                   alt="profile-pic"
                   className={classes.img}
                 />
-              </a>
             </CardAvatar>
             <CardBody plain>
               <h4 className={classes.cardTitle}>Stephanie Castillo</h4>
@@ -92,13 +88,11 @@ export default function SectionTeam() {
         <GridItem md={3} sm={3}>
           <Card profile plain>
             <CardAvatar profile plain>
-              <a href="#pablo">
                 <img
                   src={makeCloudinaryUrl('w_150,c_fill,ar_1:1,q_100,g_auto/v1595867238/Team/FullSizeRender_Arda_headshot-2_ebakrg.jpg')}
                   alt="profile-pic"
                   className={classes.img}
                 />
-              </a>
             </CardAvatar>
             <CardBody plain>
               <h4 className={classes.cardTitle}>Arda Turkmen</h4>
@@ -118,19 +112,15 @@ export default function SectionTeam() {
         <GridItem md={3} sm={3}>
           <Card profile plain>
             <CardAvatar profile plain>
-              <a href="#pablo">
                 <img
-                  src={makeCloudinaryUrl(
-      'w_150,c_fill,ar_1:1,q_100,g_auto/v1597278923/Team/image_2_jjogfs.png'
-    )}
+                  src={makeCloudinaryUrl('w_150,c_fill,ar_1:1,q_100,g_auto/v1597278923/Team/image_2_jjogfs.png')}
                   alt="profile-pic"
                   className={classes.img}
                 />
-              </a>
             </CardAvatar>
             <CardBody plain>
               <h4 className={classes.cardTitle}>Tyler Lemburg</h4>
-              <h6 className={classes.textMuted}>JOBVIZ DEVELOPER</h6>
+              <h6 className={classes.textMuted}>JobViz DEVELOPER</h6>
               <p className={classes.cardDescription}>
                 And I love you like Kanye loves Kanye. We really need to restart
                 the human foundation.
