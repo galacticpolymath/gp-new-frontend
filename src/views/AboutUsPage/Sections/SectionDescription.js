@@ -21,13 +21,12 @@ export default function SectionDescription() {
           sm={8}
           className={classNames(classes.mrAuto, classes.mlAuto)}
         >
-          <h5 className={classes.description}>
-            This is the paragraph where you can write more details about your
-            product. Keep you user engaged by providing meaningful information.
-            Remember that by this time, the user is curious, otherwise he wouldn
-            {"'"}t scroll to get here. Add a button if you want the user to see
-            more.
-          </h5>
+          <h4 className={classes.description}>
+            Galactic Polymath (GP) is a startup education studio that works
+            on behalf of scientists, nonprofits, and sustainable companies with
+            outreach needs to translate complicated, cutting-edge knowledge into
+            mind-blowing lessons for grades 5+.
+          </h4>
         </GridItem>
       </GridContainer>
     </div>

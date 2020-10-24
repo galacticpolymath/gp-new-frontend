@@ -29,11 +29,14 @@ export default function SectionServices() {
             classes.textCenter
           )}
         >
-          <h2 className={classes.title}>We build awesome products</h2>
-          <h5 className={classes.description}>
-            This is the paragraph where you can write more details about your
-            product. Keep you user engaged by providing meaningful information.
-          </h5>
+          <h2 className={classes.title}>We Build Awesome Lessons</h2>
+          <h4 className={classes.description}>
+          They are creative, interdisciplinary, and weave real
+          world data and puzzles into memorable learning experiences.
+          We work tirelessly with teachers to make lessons better and
+          easier to teach so they can spend less time planning and more
+          time empowering students to think bigger – learn everything!
+          </h4>
         </GridItem>
       </GridContainer>
       <GridContainer>
