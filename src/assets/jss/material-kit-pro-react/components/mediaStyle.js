@@ -52,7 +52,7 @@ const mediaStyle = {
     marginTop: "10px",
     marginBottom: "10px",
     "& small": {
-      fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif'
+      fontFamily: '"Montserrat", "Helvetica", "Arial", sans-serif'
     }
   },
   mediaFooter: {
