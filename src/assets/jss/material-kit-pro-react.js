@@ -185,7 +185,7 @@ const card = {
 };
 
 const defaultFont = {
-  fontFamily: '"Montserrat", "Helvetica", "Arial", sans-serif',
+  fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
   fontWeight: "300",
   lineHeight: "1.5em"
 };
@@ -331,7 +331,7 @@ const title = {
   marginTop: "30px",
   marginBottom: "25px",
   minHeight: "32px",
-  fontFamily: `"Montserrat", "Helvetica", sans-serif`
+  fontFamily: `"Roboto Slab", "Times New Roman", serif`
 };
 
 const cardTitle = {
@@ -400,8 +400,7 @@ const sectionDescription = {
 };
 
 const description = {
-  color: grayColor[0],
-  fontFamily: '"Cormorant Garamond", "Times New Roman", serif'
+  color: grayColor[0]
 };
 
 const mlAuto = {
