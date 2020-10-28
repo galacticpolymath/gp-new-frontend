@@ -26,6 +26,7 @@ import AboutUsPage from "views/AboutUsPage/AboutUsPage.js";
 import BlogPostsPage from "views/BlogPostsPage/BlogPostsPage.js";
 import LandingPage from "views/LandingPage/LandingPage.js";
 import PricingPage from "views/PricingPage/PricingPage.js";
+import ContactUsPage from "views/ContactUsPage/ContactUsPage.js";
 // import BlogPostPage from "views/BlogPostPage/BlogPostPage.js";
 // import ComponentsPage from "views/ComponentsPage/ComponentsPage.js";
 // import ContactUsPage from "views/ContactUsPage/ContactUsPage.js";
