@@ -47,6 +47,20 @@ $green: #28a745 !default;
 $teal: #20c997 !default;
 $cyan: #17a2b8 !default;
 
+//GP colors
+$gp-hydro-blue: #2c83c3 !default;
+$gp-lightning-purple: #6c2d82 !default;
+$gp-fuchsia: #ff3dac !default;
+$gp-atomic-blue: #6812d1 !default;
+$gp-burst-purple: #cb1f8e !default;
+$gp-galactic-black: #363636 !default;
+$gp-sparkle-white: #f0f4ff !default;
+$math: #DB4125 !default;
+$sci: #B798E8 !default;
+$socstudies: #633A9A !default;
+$ela: #ECA14D !default;
+$extra: #F4F0D9 !default;
+
 $colors: () !default;
 $colors: map-merge(
   (
@@ -67,10 +81,10 @@ $colors: map-merge(
   $colors
 );
 
-$primary: $blue !default;
-$secondary: $gray-600 !default;
+$primary: $gp-hydro-blue !default;
+$secondary: $gp-galactic-black !default;
 $success: $green !default;
-$info: $cyan !default;
+$info: $gp-lightning-purple !default;
 $warning: $yellow !default;
 $danger: $red !default;
 $light: $gray-100 !default;

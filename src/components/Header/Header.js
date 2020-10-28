@@ -12,6 +12,7 @@ import IconButton from "@material-ui/core/IconButton";
 import Button from "@material-ui/core/Button";
 import Hidden from "@material-ui/core/Hidden";
 import Drawer from "@material-ui/core/Drawer";
+
 // @material-ui/icons
 import Menu from "@material-ui/icons/Menu";
 import Close from "@material-ui/icons/Close";
@@ -69,7 +70,7 @@ export default function Header(props) {
         <Button className={classes.title}>
           <Link to="/">
           <div>
-          <img alt="logo" src="assets/img/android-chrome-512x512.png" />
+          <img alt="logo" src={"src/assets/img/android-chrome-192x192.png"} />
         </div>
           </Link>
         </Button>
@@ -133,7 +134,7 @@ Header.propTypes = {
   absolute: PropTypes.bool,
   // this will cause the sidebar to change the color from
   // props.color (see above) to changeColorOnScroll.color
-  // when the window.pageYOffset is heigher or equal to
+  // when the window.pageYOffset is higher or equal to
   // changeColorOnScroll.height and then when it is smaller than
   // changeColorOnScroll.height change it back to
   // props.color (see above)
