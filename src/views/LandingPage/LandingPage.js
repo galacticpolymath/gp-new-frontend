@@ -50,15 +50,18 @@ export default function LandingPage({ ...rest }) {
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={6} md={6}>
-              <h1 className={classes.title}>We are an education studio.</h1>
+              <h1 className={classes.title}>Your Story Starts With Us.</h1>
               <h4>
-                We translate current research into creative, interdisciplinary lessons for grades 5+ that are <em>free for everyone.</em>
+                Every landing page needs a small description after the big bold
+                title, that{"'"}s why we added this text here. Add here all the
+                information that can make you or your product create the first
+                impression.
               </h4>
               <br />
               <Button
-                color="info"
+                color="danger"
                 size="lg"
-                href="https://vimeo.com/448000812"
+                href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ref=creativetim"
                 target="_blank"
               >
                 <i className="fas fa-play" />
