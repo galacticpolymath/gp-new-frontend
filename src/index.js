@@ -46,7 +46,7 @@ ReactDOM.render(
     <Switch>
       <Route path="/about" component={AboutUsPage} />
       <Route path="/lessons" component={BlogPostsPage} />
-      <Route path="/jobviz" component={AboutUsPage} />
+      <Route path="/jobviz" component={ContactUsPage} />
       <Route path="/hire-us" component={PricingPage} />
       <Route path="/" component={LandingPage} />
       {/* <Route path="/blog-post" component={BlogPostPage} />
