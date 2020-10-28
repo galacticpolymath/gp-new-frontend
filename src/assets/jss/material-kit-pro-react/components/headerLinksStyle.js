@@ -62,10 +62,11 @@ const headerLinksStyle = theme => ({
     position: "relative",
     padding: "0.9375rem",
     fontWeight: "400",
-    fontSize: "12px",
+    fontSize: "18px",
     textTransform: "uppercase",
     lineHeight: "20px",
     textDecoration: "none",
+    letterSpacing: "1.5px !important",
     margin: "0px",
     display: "inline-flex",
     "&:hover,&:focus": {

@@ -14,10 +14,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import teamStyle from "assets/jss/material-kit-pro-react/views/aboutUsSections/teamStyle.js";
 
-import FaceMarc from "assets/img/faces/marc.jpg";
-import FaceChristian from "assets/img/faces/christian.jpg";
-import FaceKendall from "assets/img/faces/kendall.jpg";
-import FaceAvatar from "assets/img/faces/avatar.jpg";
+import { makeCloudinaryUrl } from 'components/shared/constants';
+import grey from '@material-ui/core/colors/grey';
+
 
 const useStyles = makeStyles(teamStyle);
 
@@ -35,38 +34,29 @@ export default function SectionTeam() {
             classes.textCenter
           )}
         >
-          <h2 className={classes.title}>We are nerd rockstars</h2>
-          <h5 className={classes.description}>
-            This is the paragraph where you can write more details about your
-            team. Keep you user engaged by providing meaningful information.
-          </h5>
+          <h2 className={classes.title}>Meet Our Team</h2>
         </GridItem>
       </GridContainer>
       <GridContainer>
         <GridItem md={3} sm={3}>
           <Card profile plain>
             <CardAvatar profile plain>
-              <a href="#pablo">
-                <img src={FaceMarc} alt="profile-pic" className={classes.img} />
-              </a>
+              <img src={makeCloudinaryUrl('w_150,c_fill,ar_1:1,q_100,g_auto/v1592966233/Team/Matt_Wilkins_profile_ukorql.jpg')} alt="profile-pic" className={classes.img} />
             </CardAvatar>
             <CardBody plain>
-              <h4 className={classes.cardTitle}>Alec Thompson</h4>
-              <h6 className={classes.textMuted}>CEO / Co-Founder</h6>
+              <h4 className={classes.cardTitle}>Matt Wilkins, PhD</h4>
+              <h6 className={classes.textMuted}>CEO / Founder</h6>
               <p className={classes.cardDescription}>
                 And I love you like Kanye loves Kanye. We need to restart the
                 human foundation.
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
-              <Button href="#pablo" justIcon simple color="twitter">
-                <i className="fab fa-twitter" />
+              <Button href="http://www.mattwilkinsbio.com/" target="_blank" justIcon simple style={{color: grey[900]}}>
+                <i class="fas fa-globe"></i>
               </Button>
-              <Button href="#pablo" justIcon simple color="facebook">
-                <i className="fab fa-facebook" />
-              </Button>
-              <Button href="#pablo" justIcon simple color="google">
-                <i className="fab fa-google" />
+              <Button href="https://www.linkedin.com/in/mattwilkinsphd/" target="_blank" justIcon simple color="linkedin">
+                <i className="fab fa-linkedin" />
               </Button>
             </CardFooter>
           </Card>
@@ -74,31 +64,23 @@ export default function SectionTeam() {
         <GridItem md={3} sm={3}>
           <Card profile plain>
             <CardAvatar profile plain>
-              <a href="#pablo">
                 <img
-                  src={FaceKendall}
+                  src={makeCloudinaryUrl('w_150,c_fill,ar_1:1,q_100,g_auto/v1597113803/Team/StephanieCastillo_mu3bln.jpg')}
                   alt="profile-pic"
                   className={classes.img}
                 />
-              </a>
             </CardAvatar>
             <CardBody plain>
-              <h4 className={classes.cardTitle}>Tania Andrew</h4>
-              <h6 className={classes.textMuted}>DESIGNER</h6>
+              <h4 className={classes.cardTitle}>Stephanie Castillo</h4>
+              <h6 className={classes.textMuted}>DIGITAL MULTIMEDIA SPECIALIST</h6>
               <p className={classes.cardDescription}>
                 Don{"'"}t be scared of the truth because we need to restart the
                 human foundation. And I love you like Kanye loves Kanye.
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
-              <Button href="#pablo" justIcon simple color="twitter">
-                <i className="fab fa-twitter" />
-              </Button>
-              <Button href="#pablo" justIcon simple color="dribbble">
-                <i className="fab fa-dribbble" />
-              </Button>
-              <Button href="#pablo" justIcon simple color="linkedin">
-                <i className="fab fa-linkedin-in" />
+              <Button href="https://www.linkedin.com/in/castils/" target="_blank" justIcon simple color="linkedin">
+                <i className="fab fa-linkedin" />
               </Button>
             </CardFooter>
           </Card>
@@ -106,28 +88,23 @@ export default function SectionTeam() {
         <GridItem md={3} sm={3}>
           <Card profile plain>
             <CardAvatar profile plain>
-              <a href="#pablo">
                 <img
-                  src={FaceChristian}
+                  src={makeCloudinaryUrl('w_150,c_fill,ar_1:1,q_100,g_auto/v1595867238/Team/FullSizeRender_Arda_headshot-2_ebakrg.jpg')}
                   alt="profile-pic"
                   className={classes.img}
                 />
-              </a>
             </CardAvatar>
             <CardBody plain>
-              <h4 className={classes.cardTitle}>Christian Mike</h4>
-              <h6 className={classes.textMuted}>Web Developer</h6>
+              <h4 className={classes.cardTitle}>Arda Turkmen</h4>
+              <h6 className={classes.textMuted}>BACK-END DEVELOPER</h6>
               <p className={classes.cardDescription}>
                 I love you like Kanye loves Kanye. Don{"'"}t be scared of the
                 truth because we need to restart the human foundation.
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
-              <Button href="#pablo" justIcon simple color="facebook">
-                <i className="fab fa-facebook" />
-              </Button>
-              <Button href="#pablo" justIcon simple color="dribbble">
-                <i className="fab fa-dribbble" />
+              <Button href="https://www.linkedin.com/in/arda-turkmen-604432113/" target="_blank" justIcon simple color="linkedin">
+                <i className="fab fa-linkedin" />
               </Button>
             </CardFooter>
           </Card>
@@ -135,31 +112,26 @@ export default function SectionTeam() {
         <GridItem md={3} sm={3}>
           <Card profile plain>
             <CardAvatar profile plain>
-              <a href="#pablo">
                 <img
-                  src={FaceAvatar}
+                  src={makeCloudinaryUrl('w_150,c_fill,ar_1:1,q_100,g_auto/v1597278923/Team/image_2_jjogfs.png')}
                   alt="profile-pic"
                   className={classes.img}
                 />
-              </a>
             </CardAvatar>
             <CardBody plain>
-              <h4 className={classes.cardTitle}>Rebecca Stormvile</h4>
-              <h6 className={classes.textMuted}>WEB DEVELOPER</h6>
+              <h4 className={classes.cardTitle}>Tyler Lemburg</h4>
+              <h6 className={classes.textMuted}>JobViz DEVELOPER</h6>
               <p className={classes.cardDescription}>
                 And I love you like Kanye loves Kanye. We really need to restart
                 the human foundation.
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
-              <Button href="#pablo" justIcon simple color="google">
-                <i className="fab fa-google" />
+              <Button href="http://tylerlemburg.com/" target="_blank" justIcon simple style={{color: grey[900]}}>
+                <i class="fas fa-globe"></i>
               </Button>
-              <Button href="#pablo" justIcon simple color="twitter">
-                <i className="fab fa-twitter" />
-              </Button>
-              <Button href="#pablo" justIcon simple color="dribbble">
-                <i className="fab fa-dribbble" />
+              <Button href="https://www.linkedin.com/in/tylerlemburg/" target="_blank" justIcon simple color="linkedin">
+                <i className="fab fa-linkedin" />
               </Button>
             </CardFooter>
           </Card>

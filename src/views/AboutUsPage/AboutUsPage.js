@@ -35,8 +35,7 @@ export default function AboutUsPage() {
   return (
     <div>
       <Header
-        brand="Material Kit PRO React"
-        links={<HeaderLinks dropdownHoverColor="info" />}
+        links={<HeaderLinks />}
         fixed
         color="transparent"
         changeColorOnScroll={{
@@ -56,10 +55,9 @@ export default function AboutUsPage() {
                 classes.textCenter
               )}
             >
-              <h1 className={classes.title}>About Us</h1>
-              <h4>
-                Meet the amazing team behind this project and find out more
-                about how we work.
+              <h2 className={classes.title}>Weaving Data Into Memorable Lessons</h2>
+              <h4 className={classes.title} style={{letterSpacing: "1.5px", fontWeight: 500}}>
+              THINK BIGGER - LEARN EVERYTHING
               </h4>
             </GridItem>
           </GridContainer>
@@ -70,7 +68,7 @@ export default function AboutUsPage() {
           <SectionDescription />
           <SectionTeam />
           <SectionServices />
-          <SectionOffice />
+          {/* <SectionOffice /> */}
           <SectionContact />
         </div>
       </div>
