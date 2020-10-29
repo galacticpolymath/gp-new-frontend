@@ -32,7 +32,7 @@ export default function SectionPricing() {
         >
           <NavPills
             alignCenter
-            color="primary"
+            color="success"
             tabs={[
               {
                 tabButton: "monthly"
@@ -95,14 +95,14 @@ export default function SectionPricing() {
                   <b>X</b>  Custom data analysis or <p>synthesis</p>
                 </li>
               </ul>
-              <Button href="#pablo" color="primary" round>
+              <Button href="#pablo" color="success" round>
                 Get started
               </Button>
             </CardBody>
           </Card>
         </GridItem>
         <GridItem md={4} sm={4}>
-          <Card raised pricing color="primary">
+          <Card raised pricing color="success">
             <CardBody pricing>
               <h5 className={classes.cardCategory}>LASTING <p>IMPACT</p></h5>
               <h3 className={classes.cardTitleWhite}>
@@ -202,7 +202,7 @@ export default function SectionPricing() {
                   <b>✓</b>  Custom data analysis or <p>synthesis</p>
                 </li>
               </ul>
-              <Button href="#pablo" color="primary" round>
+              <Button href="#pablo" color="success" round>
                 Get started
               </Button>
             </CardBody>
