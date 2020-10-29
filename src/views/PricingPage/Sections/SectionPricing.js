@@ -19,7 +19,8 @@ export default function SectionPricing() {
   const classes = useStyles();
   return (
     <div className={classes.pricingSection}>
-      <GridContainer>
+      {/* Monthly/Yearly section? */}
+      {/* <GridContainer>
         <GridItem
           md={6}
           sm={6}
@@ -31,7 +32,7 @@ export default function SectionPricing() {
         >
           <NavPills
             alignCenter
-            color="rose"
+            color="primary"
             tabs={[
               {
                 tabButton: "monthly"
@@ -42,7 +43,7 @@ export default function SectionPricing() {
             ]}
           />
         </GridItem>
-      </GridContainer>
+      </GridContainer> */}
       <GridContainer>
         <GridItem md={4} sm={4}>
           <Card plain pricing>
@@ -94,14 +95,14 @@ export default function SectionPricing() {
                   <b>X</b>  Custom data analysis or <p>synthesis</p>
                 </li>
               </ul>
-              <Button href="#pablo" color="rose" round>
+              <Button href="#pablo" color="primary" round>
                 Get started
               </Button>
             </CardBody>
           </Card>
         </GridItem>
         <GridItem md={4} sm={4}>
-          <Card raised pricing color="rose">
+          <Card raised pricing color="primary">
             <CardBody pricing>
               <h5 className={classes.cardCategory}>LASTING <p>IMPACT</p></h5>
               <h3 className={classes.cardTitleWhite}>
@@ -170,7 +171,8 @@ export default function SectionPricing() {
                   <b>All Media Assets</b>
                 </li>
                 <li>
-                  <b>Unlimited</b><p> </p>
+                  {/* find cleaner fix for multiple line breaks */}
+                  <b>Unlimited</b><p>.</p><p></p>
                 </li>
                 <li>
                   <b>Lifetime Lesson Support</b>
@@ -200,7 +202,7 @@ export default function SectionPricing() {
                   <b>✓</b>  Custom data analysis or <p>synthesis</p>
                 </li>
               </ul>
-              <Button href="#pablo" color="rose" round>
+              <Button href="#pablo" color="primary" round>
                 Get started
               </Button>
             </CardBody>

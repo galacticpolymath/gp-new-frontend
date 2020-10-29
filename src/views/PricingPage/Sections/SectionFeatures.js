@@ -13,6 +13,10 @@ import QuestionAnswer from "@material-ui/icons/QuestionAnswer";
 
 import featuresStyle from "assets/jss/material-kit-pro-react/views/pricingSections/featuresStyle.js";
 
+import classNames from "classnames";
+import Card from "components/Card/Card.js";
+import CardBody from "components/Card/CardBody.js";
+
 const useStyles = makeStyles(featuresStyle);
 
 export default function SectionFeatures() {
@@ -20,42 +24,53 @@ export default function SectionFeatures() {
   return (
     <div className={classes.featuresSection}>
       <div className={classes.textCenter}>
-        <h3 className={classes.title}>Frequently Asked Questions</h3>
       </div>
       <GridContainer>
-        <GridItem md={4} sm={4} className={classes.mlAuto}>
-          <InfoArea
-            title="Can I cancel my subscription?"
-            description="Yes, you can cancel and perform other actions on your subscriptions via the My Account page."
-            icon={CardMembership}
-            iconColor="info"
-          />
-        </GridItem>
-        <GridItem md={4} sm={4} className={classes.mrAuto}>
-          <InfoArea
-            title="Is there any discount for an annual subscription?"
-            description="Yes, we offer a 40% discount if you choose annual subscription for any plan."
-            icon={CardGiftCard}
-            iconColor="success"
-          />
+        <GridItem md={12} sm={12} className={classes.mlAuto}>
+          <Card raised pricing>
+            <CardBody pricing>
+              <h5
+                className="makeStyles-textInfo-83"
+              >
+                BASIC ADD-ON
+              </h5>
+              <ul>
+                <li>
+                  <b><h3><small>$</small>500-750</h3> Simple data interactive</b>
+                </li>
+                <li>
+                  <b><h3><small>$</small>650<small>/finished min</small></h3> Simple video project (e.g. simplevideo assembly, with voiceover)</b>
+                </li>
+                <li>
+                  <b><h3><small>$</small>100-500</h3> Basic infographic or data visual</b>
+                </li>
+              </ul>
+            </CardBody>
+          </Card>
         </GridItem>
       </GridContainer>
       <GridContainer>
-        <GridItem md={4} sm={4} className={classes.mlAuto}>
-          <InfoArea
-            title="Which payment methods do you take?"
-            description="WooCommerce comes bundled with PayPal (for accepting credit card and PayPal account payments), BACS, and cash on delivery for accepting payments."
-            icon={AttachMoney}
-            iconColor="success"
-          />
-        </GridItem>
-        <GridItem md={4} sm={4} className={classes.mrAuto}>
-          <InfoArea
-            title="Any other questions we can answer?"
-            description="We are happy to help you. Contact us."
-            icon={QuestionAnswer}
-            iconColor="rose"
-          />
+        <GridItem md={12} sm={12} className={classes.mlAuto}>
+          <Card raised pricing>
+            <CardBody pricing>
+              <h5
+                className="makeStyles-textInfo-83"
+              >
+                PREMIUM ADD-ON
+              </h5>
+              <ul>
+                <li>
+                  <b><h3><small>$</small>1000- 3000</h3> Complex data interactive/ web app</b>
+                </li>
+                <li>
+                  <b><h3><small>$</small>1000- 2000<small>/finished min</small></h3> Complex video project (new footage,animations, scripting, narration and complex assembly))</b>
+                </li>
+                <li>
+                  <b><h3><small>$</small>600-1000</h3> Complex infographic or data visual</b>
+                </li>
+              </ul>
+            </CardBody>
+          </Card>
         </GridItem>
       </GridContainer>
     </div>
