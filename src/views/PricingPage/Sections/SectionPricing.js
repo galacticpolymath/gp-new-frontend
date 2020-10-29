@@ -47,26 +47,51 @@ export default function SectionPricing() {
         <GridItem md={4} sm={4}>
           <Card plain pricing>
             <CardBody pricing>
-              <h6
+              <h5
                 className={classNames(classes.cardCategory, classes.textInfo)}
               >
-                Free
-              </h6>
-              <h1 className={classes.cardTitle}>
-                <small>$</small>0 <small>/mo</small>
-              </h1>
+                BASIC <p>TRANSLATION</p>
+              </h5>
+
+              <h3 className={classes.cardTitle}>
+                <small>$</small>1,500- 5000
+              </h3>
               <ul>
                 <li>
-                  <b>1</b> Project
+                  <b>1</b> Lesson
                 </li>
                 <li>
-                  <b>5</b> Team Members
+                  <b>1-3</b> Custom Media Assets
                 </li>
                 <li>
-                  <b>55</b> Personal Contacts
+                  <b>up to 3</b> Rounds of Revision <p>During Phase <b>I</b></p>
                 </li>
                 <li>
-                  <b>5.000</b> Messages
+                  <b>X</b> Lesson Support
+                </li>
+                <li>
+                  <b>X</b> Impact Reports
+                </li>
+                <li>
+                  <b>X</b> Beta testing before <p>publication</p>
+                </li>
+                <li>
+                  <b>✓</b> Creative, story-based <p>lesson design</p>
+                </li>
+                <li>
+                  <b>✓</b> Alignment to US National <p>standards in all subjects</p>
+                </li>
+                <li>
+                  <b>X</b> Custom standards <p>alignment</p>
+                </li>
+                <li>
+                  <b>✓</b> Non-subject-expert <p>Teacher Supported</p>
+                </li>
+                <li>
+                  <b>✓</b> GP Sensible Lesson Plan
+                </li>
+                <li>
+                  <b>X</b>  Custom data analysis or <p>synthesis</p>
                 </li>
               </ul>
               <Button href="#pablo" color="rose" round>
@@ -78,22 +103,46 @@ export default function SectionPricing() {
         <GridItem md={4} sm={4}>
           <Card raised pricing color="rose">
             <CardBody pricing>
-              <h6 className={classes.cardCategory}>Premium</h6>
-              <h1 className={classes.cardTitleWhite}>
-                <small>$</small>89 <small>/mo</small>
-              </h1>
+              <h5 className={classes.cardCategory}>LASTING <p>IMPACT</p></h5>
+              <h3 className={classes.cardTitleWhite}>
+                <small>$</small>10,000- 18,000
+              </h3>
               <ul>
                 <li>
-                  <b>500</b> Project
+                  <b>4</b> Lesson Unit
                 </li>
                 <li>
-                  <b>50</b> Team Members
+                  <b>6-10</b> Custom Media Assets
                 </li>
                 <li>
-                  <b>125</b> Personal Contacts
+                  <b>up to 10</b> Rounds of Revision <p>During Phase <b>I</b></p>
                 </li>
                 <li>
-                  <b>15.000</b> Messages
+                  <b>3 Years</b> Lesson Support
+                </li>
+                <li>
+                  <b>✓</b> Impact Reports
+                </li>
+                <li>
+                  <b>✓</b> Beta testing before <p>publication</p>
+                </li>
+                <li>
+                  <b>✓</b> Creative, story-based <p>lesson design</p>
+                </li>
+                <li>
+                  <b>✓</b> Alignment to US National <p>standards in all subjects</p>
+                </li>
+                <li>
+                  <b>✓</b> Custom standards <p>alignment</p>
+                </li>
+                <li>
+                  <b>✓</b> Non-subject-expert <p>Teacher Supported</p>
+                </li>
+                <li>
+                  <b>✓</b> GP Sensible Lesson Plan
+                </li>
+                <li>
+                  <b>✓</b>  Custom data analysis or <p>synthesis</p>
                 </li>
               </ul>
               <Button href="#pablo" color="white" round>
@@ -105,26 +154,50 @@ export default function SectionPricing() {
         <GridItem md={4} sm={4}>
           <Card plain pricing>
             <CardBody pricing>
-              <h6
+              <h5
                 className={classNames(classes.cardCategory, classes.textInfo)}
               >
-                Platinum
-              </h6>
-              <h1 className={classes.cardTitle}>
-                <small>$</small>199 <small>/mo</small>
-              </h1>
+                WORLD <p>CHANGER</p>
+              </h5>
+              <h3 className={classes.cardTitle}>
+                Let’s Talk
+              </h3>
               <ul>
                 <li>
-                  <b>1000</b> Project
+                  <b>All Lessons Needed</b>
                 </li>
                 <li>
-                  <b>100</b> Team Members
+                  <b>All Media Assets</b>
                 </li>
                 <li>
-                  <b>550</b> Personal Contacts
+                  <b>Unlimited</b><p> </p>
                 </li>
                 <li>
-                  <b>50.000</b> Messages
+                  <b>Lifetime Lesson Support</b>
+                </li>
+                <li>
+                  <b>✓</b> Impact Reports
+                </li>
+                <li>
+                  <b>✓</b> Beta testing before <p>publication</p>
+                </li>
+                <li>
+                  <b>✓</b> Creative, story-based <p>lesson design</p>
+                </li>
+                <li>
+                  <b>✓</b> Alignment to US National <p>standards in all subjects</p>
+                </li>
+                <li>
+                  <b>✓</b> Custom standards <p>alignment</p>
+                </li>
+                <li>
+                  <b>✓</b> Non-subject-expert <p>Teacher Supported</p>
+                </li>
+                <li>
+                  <b>✓</b> GP Sensible Lesson Plan
+                </li>
+                <li>
+                  <b>✓</b>  Custom data analysis or <p>synthesis</p>
                 </li>
               </ul>
               <Button href="#pablo" color="rose" round>
