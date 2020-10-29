@@ -4,7 +4,6 @@ import classNames from "classnames";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import NavPills from "components/NavPills/NavPills.js";
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import Button from "components/CustomButtons/Button.js";
@@ -19,31 +18,6 @@ export default function SectionPricing() {
   const classes = useStyles();
   return (
     <div className={classes.pricingSection}>
-      {/* Monthly/Yearly section? */}
-      {/* <GridContainer>
-        <GridItem
-          md={6}
-          sm={6}
-          className={classNames(
-            classes.mrAuto,
-            classes.mlAuto,
-            classes.textCenter
-          )}
-        >
-          <NavPills
-            alignCenter
-            color="success"
-            tabs={[
-              {
-                tabButton: "monthly"
-              },
-              {
-                tabButton: "yearly"
-              }
-            ]}
-          />
-        </GridItem>
-      </GridContainer> */}
       <GridContainer>
         <GridItem md={4} sm={4}>
           <Card plain pricing>

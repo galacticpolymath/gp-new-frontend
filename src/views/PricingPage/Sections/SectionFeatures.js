@@ -2,18 +2,13 @@ import React from "react";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import InfoArea from "components/InfoArea/InfoArea.js";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui icons
-import CardMembership from "@material-ui/icons/CardMembership";
-import CardGiftCard from "@material-ui/icons/CardGiftcard";
-import AttachMoney from "@material-ui/icons/AttachMoney";
-import QuestionAnswer from "@material-ui/icons/QuestionAnswer";
+
 
 import featuresStyle from "assets/jss/material-kit-pro-react/views/pricingSections/featuresStyle.js";
 
-import classNames from "classnames";
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 
