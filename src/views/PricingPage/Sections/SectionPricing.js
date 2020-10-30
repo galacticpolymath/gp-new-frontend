@@ -69,14 +69,14 @@ export default function SectionPricing() {
                   <b>X</b>  Custom data analysis or <p>synthesis</p>
                 </li>
               </ul>
-              <Button href="#pablo" color="success" round>
+              <Button href="#pablo" color="primary" round>
                 Get started
               </Button>
             </CardBody>
           </Card>
         </GridItem>
         <GridItem md={4} sm={4}>
-          <Card raised pricing color="success">
+          <Card raised pricing color="primary">
             <CardBody pricing>
               <h5 className={classes.cardCategory}>LASTING <p>IMPACT</p></h5>
               <h3 className={classes.cardTitleWhite}>
@@ -176,7 +176,7 @@ export default function SectionPricing() {
                   <b>✓</b>  Custom data analysis or <p>synthesis</p>
                 </li>
               </ul>
-              <Button href="#pablo" color="success" round>
+              <Button href="#pablo" color="primary" round>
                 Get started
               </Button>
             </CardBody>
