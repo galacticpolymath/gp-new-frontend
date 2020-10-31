@@ -18,6 +18,14 @@ export default function SectionPricing() {
   const classes = useStyles();
   return (
     <div className={classes.pricingSection}>
+      <h4>
+        By working with our team, we can translate your area of focus into open-access
+        lessons that inspire and engage students, while also making it easy for teachers to connect
+        abstract learning standards to real world problems involving diverse STEM professionals. Forget
+        the textbook lessons you were taught in school. Each of our lessons is carefully crafted over
+        weeks, imbued with creativity, artistry, authentic data, and storytelling. Let us do the heavy lifting
+        to achieve your outreach goals. <em>Together we can democratize current knowledge for all,</em> and forever change the education status quo!
+        </h4>
       <GridContainer>
         <GridItem md={4} sm={4}>
           <Card plain pricing>
@@ -25,7 +33,7 @@ export default function SectionPricing() {
               <h5
                 className={classNames(classes.cardCategory, classes.textInfo)}
               >
-                BASIC <p>TRANSLATION</p>
+                BASIC TRANSLATION
               </h5>
 
               <h3 className={classes.cardTitle}>
@@ -39,13 +47,16 @@ export default function SectionPricing() {
                   <b>1-3</b> Custom Media Assets
                 </li>
                 <li>
-                  <b>up to 3</b> Rounds of Revision <p>During Phase <b>I</b></p>
+                  <b>up to 3</b> Rounds of Revision <p>During Phase I</p>
                 </li>
                 <li>
                   <b>X</b> Lesson Support
                 </li>
                 <li>
                   <b>X</b> Impact Reports
+                </li>
+                <li>
+                  <b>✓</b> Published Open Access For All
                 </li>
                 <li>
                   <b>X</b> Beta testing before <p>publication</p>
@@ -78,7 +89,7 @@ export default function SectionPricing() {
         <GridItem md={4} sm={4}>
           <Card raised pricing color="primary">
             <CardBody pricing>
-              <h5 className={classes.cardCategory}>LASTING <p>IMPACT</p></h5>
+              <h5 className={classes.cardCategory}>LASTING IMPACT</h5>
               <h3 className={classes.cardTitleWhite}>
                 <small>$</small>10,000- 18,000
               </h3>
@@ -90,13 +101,16 @@ export default function SectionPricing() {
                   <b>6-10</b> Custom Media Assets
                 </li>
                 <li>
-                  <b>up to 10</b> Rounds of Revision <p>During Phase <b>I</b></p>
+                  <b>up to 10</b> Rounds of Revision <p>During Phase I</p>
                 </li>
                 <li>
                   <b>3 Years</b> Lesson Support
                 </li>
                 <li>
                   <b>✓</b> Impact Reports
+                </li>
+                <li>
+                  <b>✓</b> Published Open Access For All
                 </li>
                 <li>
                   <b>✓</b> Beta testing before <p>publication</p>
@@ -132,10 +146,10 @@ export default function SectionPricing() {
               <h5
                 className={classNames(classes.cardCategory, classes.textInfo)}
               >
-                WORLD <p>CHANGER</p>
+                WORLD CHANGER
               </h5>
               <h3 className={classes.cardTitle}>
-                Let’s Talk
+                Let{"’"}s Talk
               </h3>
               <ul>
                 <li>
@@ -146,13 +160,16 @@ export default function SectionPricing() {
                 </li>
                 <li>
                   {/* find cleaner fix for multiple line breaks */}
-                  <b>Unlimited</b><p>.</p><p></p>
+                  <b>Unlimited </b>Rounds of Revision during Phase I<p></p>
                 </li>
                 <li>
-                  <b>Lifetime Lesson Support</b>
+                  <b>Lifetime</b> Lesson Support
                 </li>
                 <li>
                   <b>✓</b> Impact Reports
+                </li>
+                <li>
+                  <b>✓</b> Published Open Access For All
                 </li>
                 <li>
                   <b>✓</b> Beta testing before <p>publication</p>

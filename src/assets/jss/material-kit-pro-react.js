@@ -54,13 +54,24 @@ const hexToRgb = input => {
 
 const drawerWidth = 260;
 
+// const primaryColor = [
+//   "#9c27b0",
+//   "#ab47bc",
+//   "#8e24aa",
+//   "#af2cc5",
+//   "#e1bee7",
+//   "#ba68c8"
+// ];
+
+// Don't understand logic of original primaryColor palette...attempted to match pattern w/ GP Hydro blue colors
 const primaryColor = [
-  "#9c27b0",
-  "#ab47bc",
-  "#8e24aa",
-  "#af2cc5",
-  "#e1bee7",
-  "#ba68c8"
+  "#2c83c3",
+  "#3497e0",
+  "#2476b3",
+  "#218ede",
+  "#f5f9fc",
+  "#e3f4ff",
+  "#38a6f5"
 ];
 const secondaryColor = ["#fafafa"];
 const warningColor = [
