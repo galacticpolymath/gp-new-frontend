@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="07e823a3-6d9b-490c-82bf-f62006dbc3e8" name="Default Changelist" comment="modified Castle's Hire-Us page text and styling. Changed primaryColor styling on material-kit-pro-react to reflect GP color palette.">
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/material-kit-pro-react.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/jss/material-kit-pro-react.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/PricingPage/PricingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PricingPage/PricingPage.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="ProjectId" id="1jJ0M6EGOAUhfAkbVz4VGRCrzVS" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.webOptions" />
+    <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.eject">
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="eject" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="eject" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="install:clean" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="install:clean" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.start" />
+        <item itemvalue="npm.install:clean" />
+        <item itemvalue="npm.eject" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="07e823a3-6d9b-490c-82bf-f62006dbc3e8" name="Default Changelist" comment="" />
+      <created>1603506837145</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603506837145</updated>
+      <workItem from="1603506839080" duration="5525000" />
+      <workItem from="1603899208740" duration="451000" />
+      <workItem from="1603900159305" duration="43000" />
+      <workItem from="1603902095312" duration="10396000" />
+      <workItem from="1603914214296" duration="2213000" />
+      <workItem from="1603919468519" duration="17570000" />
+    </task>
+    <task id="LOCAL-00001" summary="changed all refs to Roboto to Montserrat;&#10;All Roboto Slab changed to Cormorant Garamond;&#10;Add GP color defs to _variables.scss">
+      <created>1603911254601</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603911254601</updated>
+    </task>
+    <task id="LOCAL-00002" summary="changed all refs to Roboto to Montserrat;&#10;All Roboto Slab changed to Cormorant Garamond;&#10;Add GP color defs to _variables.scss">
+      <created>1603912765140</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603912765140</updated>
+    </task>
+    <task id="LOCAL-00003" summary="For some reason package-lock.json was in the .gitignore. This is necessary and was preventing Amplify from building">
+      <created>1603912822603</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1603912822603</updated>
+    </task>
+    <task id="LOCAL-00004" summary="actually adding package-lock.json caused a problem, b/c amplify builds with yarn, so rolling back last merge">
+      <created>1603914661104</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1603914661104</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Merge pull request #2 from galacticpolymath/mw-bug-palettesFontsEtc&#10;&#10;changed all refs to Roboto to Montserrat;">
+      <created>1603917741960</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1603917741960</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added contactUsPage import that was throwing error">
+      <created>1603924150070</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1603924150070</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Did I do it?">
+      <created>1603928667995</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1603928667995</updated>
+    </task>
+    <task id="LOCAL-00008" summary="modified Castle's Hire-Us page text and styling. Changed primaryColor styling on material-kit-pro-react to reflect GP color palette.">
+      <created>1604169626876</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1604169626876</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="changed all refs to Roboto to Montserrat;&#10;All Roboto Slab changed to Cormorant Garamond;&#10;Add GP color defs to _variables.scss" />
+    <MESSAGE value="For some reason package-lock.json was in the .gitignore. This is necessary and was preventing Amplify from building" />
+    <MESSAGE value="actually adding package-lock.json caused a problem, b/c amplify builds with yarn, so rolling back last merge" />
+    <MESSAGE value="went too far...adding back my changes to font-family and color palette" />
+    <MESSAGE value="Merge pull request #2 from galacticpolymath/mw-bug-palettesFontsEtc&#10;&#10;changed all refs to Roboto to Montserrat;" />
+    <MESSAGE value="added contactUsPage import that was throwing error" />
+    <MESSAGE value="Did I do it?" />
+    <MESSAGE value="modified Castle's Hire-Us page text and styling. Changed primaryColor styling on material-kit-pro-react to reflect GP color palette." />
+    <option name="LAST_COMMIT_MESSAGE" value="modified Castle's Hire-Us page text and styling. Changed primaryColor styling on material-kit-pro-react to reflect GP color palette." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="528" height="565" key="GridCell.Tab.0.bottom" timestamp="1604249992451">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="528" height="565" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604249992451" />
+    <state width="467" height="269" key="GridCell.Tab.0.bottom/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603929992622" />
+    <state width="528" height="565" key="GridCell.Tab.0.center" timestamp="1604249992451">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="528" height="565" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1604249992451" />
+    <state width="467" height="269" key="GridCell.Tab.0.center/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603929992621" />
+    <state width="528" height="565" key="GridCell.Tab.0.left" timestamp="1604249992451">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="528" height="565" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1604249992451" />
+    <state width="467" height="269" key="GridCell.Tab.0.left/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603929992621" />
+    <state width="528" height="565" key="GridCell.Tab.0.right" timestamp="1604249992451">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="528" height="565" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1604249992451" />
+    <state width="467" height="269" key="GridCell.Tab.0.right/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603929992622" />
+    <state x="221" y="100" key="SettingsEditor" timestamp="1604165830816">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="221" y="100" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1604165830816" />
+    <state x="218" y="363" key="VCS.EditChangelistDialog" timestamp="1603924601925">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="218" y="363" key="VCS.EditChangelistDialog/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603924601925" />
+    <state x="320" y="188" key="Vcs.Push.Dialog.v2" timestamp="1604169634130">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="320" y="188" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1604169634130" />
+    <state x="320" y="188" key="Vcs.Push.Dialog.v2/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603924458561" />
+    <state x="518" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603924628884">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="518" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1603899223165" />
+    <state x="518" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603924628884" />
+    <state x="418" y="216" width="604" height="490" key="find.popup" timestamp="1604167395594">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="418" y="216" width="604" height="490" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1604167395594" />
+    <state x="418" y="216" width="604" height="490" key="find.popup/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603910005674" />
+    <state x="246" y="317" width="670" height="676" key="search.everywhere.popup" timestamp="1604247172971">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="246" y="317" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1604247172971" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603923842339" />
+  </component>
+</project>

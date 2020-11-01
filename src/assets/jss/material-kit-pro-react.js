@@ -402,7 +402,7 @@ const sectionDark = {
     "radial-gradient(ellipse at center," +
     grayColor[4] +
     " 0," +
-    grayColor[5] +
+    grayColor[1] +
     " 100%)"
 };
 
