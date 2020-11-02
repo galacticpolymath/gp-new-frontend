@@ -19,6 +19,7 @@ import Close from "@material-ui/icons/Close";
 // core components
 import styles from "assets/jss/material-kit-pro-react/components/headerStyle.js";
 import logoImage from "../../assets/img/android-chrome-192x192.png"
+import "./Header.css";
 
 const useStyles = makeStyles(styles);
 
@@ -70,9 +71,9 @@ export default function Header(props) {
       <Toolbar className={classes.container}>
         <Button className={classes.title}>
           <Link to="/">
-          <div>
-          <img alt="logo" src={logoImage} width="100px" />
-        </div>
+          <div >
+            <img className="Lr-logo" alt="logo" src={logoImage} />
+          </div>
           </Link>
         </Button>
         <Hidden smDown implementation="css" className={classes.hidden}>
