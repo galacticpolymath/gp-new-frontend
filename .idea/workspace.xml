@@ -22,8 +22,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07e823a3-6d9b-490c-82bf-f62006dbc3e8" name="Default Changelist" comment="modified Castle's Hire-Us page text and styling. Changed primaryColor styling on material-kit-pro-react to reflect GP color palette.">
-      <change beforePath="$PROJECT_DIR$/src/assets/jss/material-kit-pro-react.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/jss/material-kit-pro-react.js" afterDir="false" />
+    <list default="true" id="07e823a3-6d9b-490c-82bf-f62006dbc3e8" name="Default Changelist" comment="added a new hero graphic for hire-us page">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/views/PricingPage/PricingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PricingPage/PricingPage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,7 +139,7 @@
       <workItem from="1603900159305" duration="43000" />
       <workItem from="1603902095312" duration="10396000" />
       <workItem from="1603914214296" duration="2213000" />
-      <workItem from="1603919468519" duration="17570000" />
+      <workItem from="1603919468519" duration="19183000" />
     </task>
     <task id="LOCAL-00001" summary="changed all refs to Roboto to Montserrat;&#10;All Roboto Slab changed to Cormorant Garamond;&#10;Add GP color defs to _variables.scss">
       <created>1603911254601</created>
@@ -197,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604169626876</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added a new hero graphic for hire-us page">
+      <created>1604250075336</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1604250075337</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,29 +231,30 @@
     <MESSAGE value="added contactUsPage import that was throwing error" />
     <MESSAGE value="Did I do it?" />
     <MESSAGE value="modified Castle's Hire-Us page text and styling. Changed primaryColor styling on material-kit-pro-react to reflect GP color palette." />
-    <option name="LAST_COMMIT_MESSAGE" value="modified Castle's Hire-Us page text and styling. Changed primaryColor styling on material-kit-pro-react to reflect GP color palette." />
+    <MESSAGE value="added a new hero graphic for hire-us page" />
+    <option name="LAST_COMMIT_MESSAGE" value="added a new hero graphic for hire-us page" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="528" height="565" key="GridCell.Tab.0.bottom" timestamp="1604249992451">
+    <state width="528" height="565" key="GridCell.Tab.0.bottom" timestamp="1604360338386">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="528" height="565" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604249992451" />
-    <state width="467" height="269" key="GridCell.Tab.0.bottom/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603929992622" />
-    <state width="528" height="565" key="GridCell.Tab.0.center" timestamp="1604249992451">
+    <state width="528" height="565" key="GridCell.Tab.0.bottom/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1604360338386" />
+    <state width="528" height="565" key="GridCell.Tab.0.center" timestamp="1604360338386">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="528" height="565" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1604249992451" />
-    <state width="467" height="269" key="GridCell.Tab.0.center/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603929992621" />
-    <state width="528" height="565" key="GridCell.Tab.0.left" timestamp="1604249992451">
+    <state width="528" height="565" key="GridCell.Tab.0.center/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1604360338386" />
+    <state width="528" height="565" key="GridCell.Tab.0.left" timestamp="1604360338385">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="528" height="565" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1604249992451" />
-    <state width="467" height="269" key="GridCell.Tab.0.left/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603929992621" />
-    <state width="528" height="565" key="GridCell.Tab.0.right" timestamp="1604249992451">
+    <state width="528" height="565" key="GridCell.Tab.0.left/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1604360338385" />
+    <state width="528" height="565" key="GridCell.Tab.0.right" timestamp="1604360338386">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="528" height="565" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1604249992451" />
-    <state width="467" height="269" key="GridCell.Tab.0.right/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603929992622" />
+    <state width="528" height="565" key="GridCell.Tab.0.right/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1604360338386" />
     <state x="221" y="100" key="SettingsEditor" timestamp="1604165830816">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -255,10 +263,10 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="218" y="363" key="VCS.EditChangelistDialog/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603924601925" />
-    <state x="320" y="188" key="Vcs.Push.Dialog.v2" timestamp="1604169634130">
+    <state x="320" y="188" key="Vcs.Push.Dialog.v2" timestamp="1604250242634">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="188" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1604169634130" />
+    <state x="320" y="188" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1604250242634" />
     <state x="320" y="188" key="Vcs.Push.Dialog.v2/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603924458561" />
     <state x="518" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603924628884">
       <screen x="0" y="23" width="1440" height="877" />

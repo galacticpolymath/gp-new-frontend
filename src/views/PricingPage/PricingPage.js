@@ -42,7 +42,7 @@ export default function PricingPage() {
         }}
       />
 
-      <Parallax image={require("assets/img/GP_Hero_HireUs-01.jpg")} filter="dark" small>
+      <Parallax image={require("assets/img/GP_Hero_HireUs-02.jpg")} filter="dark" small>
         <div className={classes.container}>
           <GridContainer>
             <GridItem
