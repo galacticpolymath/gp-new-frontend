@@ -19,6 +19,10 @@ import Close from "@material-ui/icons/Close";
 // core components
 import styles from "assets/jss/material-kit-pro-react/components/headerStyle.js";
 import logoImage from "../../assets/img/android-chrome-192x192.png"
+import "../../../src/assets/css/logo.css"
+
+
+
 
 const useStyles = makeStyles(styles);
 
@@ -71,7 +75,7 @@ export default function Header(props) {
         <Button className={classes.title}>
           <Link to="/">
           <div>
-          <img alt="logo" src={logoImage} width="100px" />
+          <img className="galacticLogo" alt="logo" src={logoImage}  />
         </div>
           </Link>
         </Button>

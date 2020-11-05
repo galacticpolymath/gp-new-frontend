@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../../src/assets/css/FundingAnimation.css";
+import "../../../../src/assets/css/fundingAnimation.css";
 
 
 export const FundingSVG = () => {
