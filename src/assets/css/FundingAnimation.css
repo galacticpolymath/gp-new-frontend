@@ -1,0 +1,167 @@
+.ParentBox {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes zoom1 {
+  4% {
+    transform: scalex(1.07) scaley(1.07);
+  }
+  8% {
+    transform: scalex(1.07) scaley(1.07);
+  }
+
+  12% {
+    transform: scalex(1) scaley(1);
+  }
+}
+
+@keyframes zoom2 {
+  12% {
+    transform: scalex(1) scaley(1);
+  }
+  16% {
+    transform: scalex(1.09) scaley(1.09);
+  }
+  18% {
+    transform: scalex(1.09) scaley(1.09);
+  }
+  22% {
+    transform: scalex(1) scaley(1);
+  }
+}
+
+@keyframes zoom3 {
+  22% {
+    transform: scalex(1) scaley(1);
+  }
+  26% {
+    transform: scalex(1.2) scaley(1.2);
+  }
+  30% {
+    transform: scalex(1.2) scaley(1.2);
+  }
+  34% {
+    transform: scalex(1) scaley(1);
+  }
+}
+@keyframes zoom4 {
+  34% {
+    transform: scalex(1) scaley(1);
+  }
+  38% {
+    transform: scalex(1.2) scaley(1.2);
+  }
+  42% {
+    transform: scalex(1.2) scaley(1.2);
+  }
+  46% {
+    transform: scalex(1) scaley(1);
+  }
+}
+
+@keyframes zoom5 {
+  46% {
+    transform: scalex(1) scaley(1);
+  }
+  50% {
+    transform: scalex(1.2) scaley(1.2);
+  }
+  54% {
+    transform: scalex(1.2) scaley(1.2);
+  }
+  58% {
+    transform: scalex(1) scaley(1);
+  }
+}
+
+@keyframes zoom6 {
+  58% {
+    transform: scalex(1) scaley(1);
+  }
+  62% {
+    transform: scalex(1.2) scaley(1.2);
+  }
+  66% {
+    transform: scalex(1.2) scaley(1.2);
+  }
+  70% {
+    transform: scalex(1) scaley(1);
+  }
+}
+
+@keyframes zoom7 {
+  70% {
+    transform: scalex(1) scaley(1);
+  }
+  74% {
+    transform: scalex(1.2) scaley(1.2);
+  }
+  78% {
+    transform: scalex(1.2) scaley(1.2);
+  }
+  82% {
+    transform: scalex(1) scaley(1);
+  }
+}
+
+@keyframes zoom8 {
+  82% {
+    transform: scalex(1) scaley(1);
+  }
+  86% {
+    transform: scalex(1.09) scaley(1.09);
+  }
+  90% {
+    transform: scalex(1.09) scaley(1.09);
+  }
+  94% {
+    transform: scalex(1) scaley(1);
+  }
+}
+
+#OurClients {
+  animation: zoom1 20s infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+#Arrow {
+  animation: zoom1 20s infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+#RealResearch {
+  animation: zoom2 20s infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+#RealStories {
+  animation: zoom3 20s infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+#RealData {
+  animation: zoom4 20s infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+#RealCareers {
+  animation: zoom5 20s infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+#RealLearning {
+  animation: zoom6 20s infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
+
+#outreachImpactTextbox {
+  animation: zoom7 20s ease-in-out infinite;
+  transform-origin: bottom;
+  transform-box: fill-box;
+}
