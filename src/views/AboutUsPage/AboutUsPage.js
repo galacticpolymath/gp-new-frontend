@@ -40,10 +40,14 @@ export default function AboutUsPage() {
         color="transparent"
         changeColorOnScroll={{
           height: 300,
-          color: "info"
+          color: "info",
         }}
       />
-      <Parallax image={require("assets/img/bg9.jpg")} filter="dark" small>
+      <Parallax
+        image={require("assets/img/hero-images/AboutPage_Bubbles.png")}
+        filter="dark"
+        small
+      >
         <div className={classes.container}>
           <GridContainer justify="center">
             <GridItem
@@ -55,9 +59,14 @@ export default function AboutUsPage() {
                 classes.textCenter
               )}
             >
-              <h2 className={classes.title}>Weaving Data Into Memorable Lessons</h2>
-              <h4 className={classes.title} style={{letterSpacing: "1.5px", fontWeight: 500}}>
-              THINK BIGGER - LEARN EVERYTHING
+              <h2 className={classes.title}>
+                Weaving Data Into Memorable Lessons
+              </h2>
+              <h4
+                className={classes.title}
+                style={{ letterSpacing: "1.5px", fontWeight: 500 }}
+              >
+                THINK BIGGER - LEARN EVERYTHING
               </h4>
             </GridItem>
           </GridContainer>

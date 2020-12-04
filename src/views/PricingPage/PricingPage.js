@@ -38,11 +38,15 @@ export default function PricingPage() {
         color="transparent"
         changeColorOnScroll={{
           height: 300,
-          color: "info"
+          color: "info",
         }}
       />
 
-      <Parallax image={require("assets/img/GP_Hero_HireUs-02.jpg")} filter="dark" small>
+      <Parallax
+        image={require("assets/img/hero-images/PricingPage_DotLine.svg")}
+        filter="dark"
+        small
+      >
         <div className={classes.container}>
           <GridContainer>
             <GridItem
@@ -54,11 +58,13 @@ export default function PricingPage() {
                 classes.textCenter
               )}
             >
-              <h1 className={classes.title}>Let{"'"}s build something amazing</h1>
+              <h1 className={classes.title}>
+                Let{"'"}s build something amazing
+              </h1>
               <h4>
-                Whether you are an NSF-funded researcher, a nonprofit, or a socially responsible company,
-                you care about a body of knowledge and you want the public to understand and
-                care about it, too.
+                Whether you are an NSF-funded researcher, a nonprofit, or a
+                socially responsible company, you care about a body of knowledge
+                and you want the public to understand and care about it, too.
               </h4>
             </GridItem>
           </GridContainer>

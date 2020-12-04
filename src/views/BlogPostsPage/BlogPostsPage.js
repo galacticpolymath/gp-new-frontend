@@ -38,10 +38,14 @@ export default function BlogPostsPage() {
         color="transparent"
         changeColorOnScroll={{
           height: 400,
-          color: "info"
+          color: "info",
         }}
       />
-      <Parallax image={require("assets/img/bg10.jpg")} filter="dark" small>
+      <Parallax
+        image={require("assets/img/hero-images/Lessons_VerticalDotandline.svg")}
+        filter="dark"
+        small
+      >
         <div className={classes.container}>
           <GridContainer justify="center">
             <GridItem xs={12} sm={12} md={8} className={classes.textCenter}>
