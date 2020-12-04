@@ -118,9 +118,13 @@ export default function ContactUsPage() {
     <div>
       <Header
         brand="Material Kit PRO React"
-        links={<HeaderLinks dropdownHoverColor="dark" />}
+        links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
-        color="dark"
+        color="transparent"
+        changeColorOnScroll={{
+          height: 400,
+          color: "info",
+        }}
       />
       <Parallax
         image={require("assets/img/hero-images/JobViz_Bubble.svg")}
