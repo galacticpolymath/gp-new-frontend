@@ -44,30 +44,46 @@ export default function AboutUsPage() {
         }}
       />
       <Parallax
-        image={require("assets/img/hero-images/AboutPage_Bubbles.png")}
-        filter="dark"
         small
+        style={{
+          backgroundColor: "#2c83c3",
+        }}
       >
         <div className={classes.container}>
           <GridContainer justify="center">
             <GridItem
-              md={8}
-              sm={8}
+              sm={7}
+              className={classNames(
+                classes.mlAuto,
+                classes.mrAuto,
+                classes.textLeft
+              )}
+              style={{ paddingTop: "75px", paddingRight: "25px" }}
+            >
+              <h2 className={classes.title}>About Galactic Polymath</h2>
+              <h4
+                className={classes.title}
+                style={{ letterSpacing: "1.5px", fontWeight: 500 }}
+              >
+                Galactic Polymath (GP) is a startup education studio that works
+                on behalf of scientists, nonprofits, and sustainable companies
+                with outreach needs to translate complicated, cutting-edge
+                knowledge into mind-blowing lessons for grades 5+.
+              </h4>
+            </GridItem>
+            <GridItem
+              sm={5}
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,
                 classes.textCenter
               )}
             >
-              <h2 className={classes.title}>
-                Weaving Data Into Memorable Lessons
-              </h2>
-              <h4
-                className={classes.title}
-                style={{ letterSpacing: "1.5px", fontWeight: 500 }}
-              >
-                THINK BIGGER - LEARN EVERYTHING
-              </h4>
+              <img
+                src={require("assets/img/hero-images/AboutPage_Bubbles.png")}
+                height="380"
+                width="625"
+              />
             </GridItem>
           </GridContainer>
         </div>
