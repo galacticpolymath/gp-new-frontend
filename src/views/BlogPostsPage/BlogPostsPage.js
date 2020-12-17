@@ -30,7 +30,7 @@ export default function BlogPostsPage() {
   });
   const classes = useStyles();
   return (
-    <div>
+    <div style={{ backgroundColor: "#6812D1" }}>
       <Header
         brand="Material Kit PRO React"
         links={<HeaderLinks dropdownHoverColor="info" />}

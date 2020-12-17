@@ -33,7 +33,7 @@ export default function AboutUsPage() {
   });
   const classes = useStyles();
   return (
-    <div>
+    <div style={{ backgroundColor: "#2c83c3" }}>
       <Header
         links={<HeaderLinks />}
         fixed

@@ -115,7 +115,7 @@ export default function ContactUsPage() {
   });
   const classes = useStyles();
   return (
-    <div>
+    <div style={{ backgroundColor: "#CB1F8E" }}>
       <Header
         brand="Material Kit PRO React"
         links={<HeaderLinks dropdownHoverColor="info" />}
