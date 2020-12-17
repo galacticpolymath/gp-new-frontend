@@ -48,8 +48,14 @@ export default function BlogPostsPage() {
         }}
       >
         <div className={classes.container}>
-          <GridContainer justify="center">
-            <GridItem xs={6} sm={6} md={6} className={classes.textCenter}>
+          <GridContainer>
+            <GridItem
+              xs={6}
+              sm={6}
+              md={6}
+              className={classes.textCenter}
+              style={{ paddingTop: "5%", paddingRight: "25px" }}
+            >
               <h2 className={classes.title}>Galactic Lessons</h2>
               <h4 className={classes.title}>
                 Galactic Polymath (GP) is a startup education studio that works

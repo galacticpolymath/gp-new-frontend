@@ -58,7 +58,7 @@ export default function AboutUsPage() {
                 classes.mrAuto,
                 classes.textLeft
               )}
-              style={{ paddingTop: "auto", paddingRight: "25px" }}
+              style={{ paddingTop: "10%", paddingRight: "25px" }}
             >
               <h2 className={classes.title}>About Galactic Polymath</h2>
               <h4

@@ -57,7 +57,7 @@ export default function PricingPage() {
                 classes.mrAuto,
                 classes.textLeft
               )}
-              style={{ paddingTop: "auto", paddingRight: "25px" }}
+              style={{ paddingTop: "5%", paddingRight: "25px" }}
             >
               <h1 className={classes.title}>The cost{"'"}s of impact</h1>
               <h4>

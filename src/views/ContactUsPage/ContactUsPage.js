@@ -141,9 +141,11 @@ export default function ContactUsPage() {
                 classes.mrAuto,
                 classes.textLeft
               )}
-              style={{ paddingTop: "auto", paddingRight: "25px" }}
+              style={{ paddingTop: "5%", paddingRight: "25px", color: "white" }}
             >
-              <h1 className={classes.title}>JobViz</h1>
+              <h1 className={classes.title} style={{ color: "white" }}>
+                JobViz
+              </h1>
               <h4>
                 Whether you are an NSF-funded researcher, a nonprofit, or a
                 socially responsible company, you care about a body of knowledge
