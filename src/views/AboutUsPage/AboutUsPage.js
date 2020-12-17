@@ -50,15 +50,15 @@ export default function AboutUsPage() {
         }}
       >
         <div className={classes.container}>
-          <GridContainer justify="center">
+          <GridContainer>
             <GridItem
-              sm={7}
+              sm={6}
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,
                 classes.textLeft
               )}
-              style={{ paddingTop: "75px", paddingRight: "25px" }}
+              style={{ paddingTop: "auto", paddingRight: "25px" }}
             >
               <h2 className={classes.title}>About Galactic Polymath</h2>
               <h4
@@ -72,7 +72,7 @@ export default function AboutUsPage() {
               </h4>
             </GridItem>
             <GridItem
-              sm={5}
+              sm={6}
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,
@@ -81,8 +81,8 @@ export default function AboutUsPage() {
             >
               <img
                 src={require("assets/img/hero-images/AboutPage_Bubbles.png")}
-                height="380"
-                width="625"
+                height="auto"
+                width="120%"
               />
             </GridItem>
           </GridContainer>

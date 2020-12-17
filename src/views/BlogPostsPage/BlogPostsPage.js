@@ -42,16 +42,28 @@ export default function BlogPostsPage() {
         }}
       />
       <Parallax
-        image={require("assets/img/hero-images/Lessons_VerticalDotandline.svg")}
-        filter="dark"
         small
+        style={{
+          backgroundColor: "#6812D1",
+        }}
       >
         <div className={classes.container}>
           <GridContainer justify="center">
-            <GridItem xs={12} sm={12} md={8} className={classes.textCenter}>
-              <h2 className={classes.title}>
-                A Place for Entrepreneurs to Share and Discover New Stories
-              </h2>
+            <GridItem xs={6} sm={6} md={6} className={classes.textCenter}>
+              <h2 className={classes.title}>Galactic Lessons</h2>
+              <h4 className={classes.title}>
+                Galactic Polymath (GP) is a startup education studio that works
+                on behalf of scientists, nonprofits, and sustainable companies
+                with outreach needs to translate complicated, cutting-edge
+                knowledge into mind-blowing lessons for grades 5+.
+              </h4>
+            </GridItem>
+            <GridItem xs={6} sm={6} md={6} className={classes.textCenter}>
+              <img
+                src={require("assets/img/hero-images/JobViz_Bubble.svg")}
+                height="auto"
+                width="120%"
+              />
             </GridItem>
           </GridContainer>
         </div>

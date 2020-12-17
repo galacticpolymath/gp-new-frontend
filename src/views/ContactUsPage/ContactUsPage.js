@@ -31,80 +31,80 @@ import Parallax from "components/Parallax/Parallax.js";
 
 import contactUsStyle from "assets/jss/material-kit-pro-react/views/contactUsStyle.js";
 
-const CustomSkinMap = withScriptjs(
-  withGoogleMap(() => (
-    <GoogleMap
-      defaultZoom={14}
-      defaultCenter={{ lat: 44.43353, lng: 26.093928 }}
-      defaultOptions={{
-        scrollwheel: false,
-        zoomControl: true,
-        styles: [
-          {
-            featureType: "water",
-            stylers: [
-              { saturation: 43 },
-              { lightness: -11 },
-              { hue: "#0088ff" },
-            ],
-          },
-          {
-            featureType: "road",
-            elementType: "geometry.fill",
-            stylers: [
-              { hue: "#ff0000" },
-              { saturation: -100 },
-              { lightness: 99 },
-            ],
-          },
-          {
-            featureType: "road",
-            elementType: "geometry.stroke",
-            stylers: [{ color: "#808080" }, { lightness: 54 }],
-          },
-          {
-            featureType: "landscape.man_made",
-            elementType: "geometry.fill",
-            stylers: [{ color: "#ece2d9" }],
-          },
-          {
-            featureType: "poi.park",
-            elementType: "geometry.fill",
-            stylers: [{ color: "#ccdca1" }],
-          },
-          {
-            featureType: "road",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#767676" }],
-          },
-          {
-            featureType: "road",
-            elementType: "labels.text.stroke",
-            stylers: [{ color: "#ffffff" }],
-          },
-          { featureType: "poi", stylers: [{ visibility: "off" }] },
-          {
-            featureType: "landscape.natural",
-            elementType: "geometry.fill",
-            stylers: [{ visibility: "on" }, { color: "#b8cb93" }],
-          },
-          { featureType: "poi.park", stylers: [{ visibility: "on" }] },
-          {
-            featureType: "poi.sports_complex",
-            stylers: [{ visibility: "on" }],
-          },
-          { featureType: "poi.medical", stylers: [{ visibility: "on" }] },
-          {
-            featureType: "poi.business",
-            stylers: [{ visibility: "simplified" }],
-          },
-        ],
-      }}
-    >
-      <Marker position={{ lat: 44.43353, lng: 26.093928 }} />
-    </GoogleMap>
-  ))
-);
+// const CustomSkinMap = withScriptjs(
+//   withGoogleMap(() => (
+//     <GoogleMap
+//       defaultZoom={14}
+//       defaultCenter={{ lat: 44.43353, lng: 26.093928 }}
+//       defaultOptions={{
+//         scrollwheel: false,
+//         zoomControl: true,
+//         styles: [
+//           {
+//             featureType: "water",
+//             stylers: [
+//               { saturation: 43 },
+//               { lightness: -11 },
+//               { hue: "#0088ff" },
+//             ],
+//           },
+//           {
+//             featureType: "road",
+//             elementType: "geometry.fill",
+//             stylers: [
+//               { hue: "#ff0000" },
+//               { saturation: -100 },
+//               { lightness: 99 },
+//             ],
+//           },
+//           {
+//             featureType: "road",
+//             elementType: "geometry.stroke",
+//             stylers: [{ color: "#808080" }, { lightness: 54 }],
+//           },
+//           {
+//             featureType: "landscape.man_made",
+//             elementType: "geometry.fill",
+//             stylers: [{ color: "#ece2d9" }],
+//           },
+//           {
+//             featureType: "poi.park",
+//             elementType: "geometry.fill",
+//             stylers: [{ color: "#ccdca1" }],
+//           },
+//           {
+//             featureType: "road",
+//             elementType: "labels.text.fill",
+//             stylers: [{ color: "#767676" }],
+//           },
+//           {
+//             featureType: "road",
+//             elementType: "labels.text.stroke",
+//             stylers: [{ color: "#ffffff" }],
+//           },
+//           { featureType: "poi", stylers: [{ visibility: "off" }] },
+//           {
+//             featureType: "landscape.natural",
+//             elementType: "geometry.fill",
+//             stylers: [{ visibility: "on" }, { color: "#b8cb93" }],
+//           },
+//           { featureType: "poi.park", stylers: [{ visibility: "on" }] },
+//           {
+//             featureType: "poi.sports_complex",
+//             stylers: [{ visibility: "on" }],
+//           },
+//           { featureType: "poi.medical", stylers: [{ visibility: "on" }] },
+//           {
+//             featureType: "poi.business",
+//             stylers: [{ visibility: "simplified" }],
+//           },
+//         ],
+//       }}
+//     >
+//       <Marker position={{ lat: 44.43353, lng: 26.093928 }} />
+//     </GoogleMap>
+//   ))
+// );
 
 const useStyles = makeStyles(contactUsStyle);
 
@@ -122,16 +122,52 @@ export default function ContactUsPage() {
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 400,
+          height: 300,
           color: "info",
         }}
       />
       <Parallax
-        image={require("assets/img/hero-images/JobViz_Bubble.svg")}
-        filter="dark"
         small
-      ></Parallax>
-      <div className={classes.bigMap}>
+        style={{
+          backgroundColor: "#CB1F8E",
+        }}
+      >
+        <div className={classes.container}>
+          <GridContainer>
+            <GridItem
+              sm={6}
+              className={classNames(
+                classes.mlAuto,
+                classes.mrAuto,
+                classes.textLeft
+              )}
+              style={{ paddingTop: "auto", paddingRight: "25px" }}
+            >
+              <h1 className={classes.title}>JobViz</h1>
+              <h4>
+                Whether you are an NSF-funded researcher, a nonprofit, or a
+                socially responsible company, you care about a body of knowledge
+                and you want the public to understand and care about it, too.
+              </h4>
+            </GridItem>
+            <GridItem
+              sm={6}
+              className={classNames(
+                classes.mlAuto,
+                classes.mrAuto,
+                classes.textCenter
+              )}
+            >
+              <img
+                src={require("assets/img/hero-images/JobViz_Bubble.svg")}
+                height="auto"
+                width="120%"
+              />
+            </GridItem>
+          </GridContainer>
+        </div>
+      </Parallax>
+      {/* <div className={classes.bigMap}>
         <CustomSkinMap
           googleMapURL="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
           loadingElement={<div style={{ height: `100%` }} />}
@@ -146,7 +182,7 @@ export default function ContactUsPage() {
           }
           mapElement={<div style={{ height: `100%` }} />}
         />
-      </div>
+      </div> */}
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.contactContent}>
           <div className={classes.container}>

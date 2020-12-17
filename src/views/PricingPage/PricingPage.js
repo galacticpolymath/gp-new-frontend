@@ -43,29 +43,42 @@ export default function PricingPage() {
       />
 
       <Parallax
-        image={require("assets/img/hero-images/PricingPage_DotLine.svg")}
-        filter="dark"
+        style={{
+          backgroundColor: "#6C2D82",
+        }}
         small
       >
         <div className={classes.container}>
           <GridContainer>
             <GridItem
-              md={8}
-              sm={8}
+              sm={6}
+              className={classNames(
+                classes.mlAuto,
+                classes.mrAuto,
+                classes.textLeft
+              )}
+              style={{ paddingTop: "auto", paddingRight: "25px" }}
+            >
+              <h1 className={classes.title}>The cost{"'"}s of impact</h1>
+              <h4>
+                Whether you are an NSF-funded researcher, a nonprofit, or a
+                socially responsible company, you care about a body of knowledge
+                and you want the public to understand and care about it, too.
+              </h4>
+            </GridItem>
+            <GridItem
+              sm={6}
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,
                 classes.textCenter
               )}
             >
-              <h1 className={classes.title}>
-                Let{"'"}s build something amazing
-              </h1>
-              <h4>
-                Whether you are an NSF-funded researcher, a nonprofit, or a
-                socially responsible company, you care about a body of knowledge
-                and you want the public to understand and care about it, too.
-              </h4>
+              <img
+                src={require("assets/img/hero-images/PricingPage_DotLine.svg")}
+                height="auto"
+                width="120%"
+              />
             </GridItem>
           </GridContainer>
         </div>
