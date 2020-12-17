@@ -34,7 +34,7 @@ export default function LandingPage({ ...rest }) {
   });
   const classes = useStyles();
   return (
-    <div>
+    <div style={{ backgroundColor: "#470F2C" }}>
       <Header
         color="transparent"
         brand="Material Kit PRO React"
@@ -48,7 +48,6 @@ export default function LandingPage({ ...rest }) {
       />
       <Parallax
         image={require("assets/img/hero-images/MoscowTinted_Faded-01.jpg")}
-        filter="dark"
       >
         <div className={classes.container}>
           <GridContainer>
