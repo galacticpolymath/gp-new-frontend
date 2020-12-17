@@ -60,7 +60,7 @@ export default function BlogPostsPage() {
             </GridItem>
             <GridItem xs={6} sm={6} md={6} className={classes.textCenter}>
               <img
-                src={require("assets/img/hero-images/JobViz_Bubble.svg")}
+                src={require("assets/img/hero-images/Lessons_VerticalDotandline.svg")}
                 height="auto"
                 width="120%"
               />
