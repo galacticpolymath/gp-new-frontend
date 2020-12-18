@@ -52,11 +52,17 @@ export default function LandingPage({ ...rest }) {
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={6} md={6}>
-              <h1 className={classes.title}>We are an education studio.</h1>
-              <h4>
-                We translate current research into creative, interdisciplinary
-                lessons for grades 5+ that are <em>free for everyone.</em>
-              </h4>
+              <div>
+                <h1 className={classes.title}>We are an education studio.</h1>
+                <h4
+                  style={{
+                    backgroundColor: "rgba(71, 15, 44, 0.7)",
+                  }}
+                >
+                  We translate current research into creative, interdisciplinary
+                  lessons for grades 5+ that are <em>free for everyone.</em>
+                </h4>
+              </div>
               <br />
               <Button
                 color="info"
