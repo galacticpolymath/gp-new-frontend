@@ -1,5 +1,7 @@
 /*eslint-disable*/
 import React from "react";
+// nodejs library that concatenates classes
+import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
@@ -42,17 +44,15 @@ export default function BlogPostsPage() {
         }}
       />
       <Parallax
-        small
         style={{
           backgroundColor: "#6812D1",
         }}
+        small
       >
         <div className={classes.container}>
           <GridContainer>
             <GridItem
-              xs={6}
               sm={6}
-              md={6}
               className={classes.textCenter}
               style={{ paddingTop: "5%", paddingRight: "25px" }}
             >
@@ -64,7 +64,14 @@ export default function BlogPostsPage() {
                 knowledge into mind-blowing lessons for grades 5+.
               </h4>
             </GridItem>
-            <GridItem xs={6} sm={6} md={6} className={classes.textCenter}>
+            <GridItem
+              sm={6}
+              className={classNames(
+                classes.mlAuto,
+                classes.mrAuto,
+                classes.textCenter
+              )}
+            >
               <img
                 src={require("assets/img/hero-images/Lessons_VerticalDotandline.svg")}
                 height="auto"

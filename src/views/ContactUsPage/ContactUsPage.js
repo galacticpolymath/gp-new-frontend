@@ -127,10 +127,10 @@ export default function ContactUsPage() {
         }}
       />
       <Parallax
-        small
         style={{
           backgroundColor: "#CB1F8E",
         }}
+        small
       >
         <div className={classes.container}>
           <GridContainer>

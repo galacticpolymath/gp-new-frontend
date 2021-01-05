@@ -44,10 +44,10 @@ export default function AboutUsPage() {
         }}
       />
       <Parallax
-        small
         style={{
           backgroundColor: "#2c83c3",
         }}
+        small
       >
         <div className={classes.container}>
           <GridContainer>
