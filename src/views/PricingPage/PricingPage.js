@@ -30,7 +30,7 @@ export default function PricingPage() {
   });
   const classes = useStyles();
   return (
-    <div style={{ backgroundColor: "#6C2D82" }}>
+    <div>
       <Header
         brand="Material Kit PRO React"
         links={<HeaderLinks dropdownHoverColor="info" />}
@@ -42,12 +42,7 @@ export default function PricingPage() {
         }}
       />
 
-      <Parallax
-        style={{
-          backgroundColor: "#6C2D82",
-        }}
-        small
-      >
+      <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
           <GridContainer>
             <GridItem

@@ -33,7 +33,7 @@ export default function AboutUsPage() {
   });
   const classes = useStyles();
   return (
-    <div style={{ backgroundColor: "#2c83c3" }}>
+    <div>
       <Header
         links={<HeaderLinks />}
         fixed
@@ -43,12 +43,7 @@ export default function AboutUsPage() {
           color: "info",
         }}
       />
-      <Parallax
-        style={{
-          backgroundColor: "#2c83c3",
-        }}
-        small
-      >
+      <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
           <GridContainer>
             <GridItem

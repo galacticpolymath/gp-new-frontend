@@ -115,7 +115,7 @@ export default function ContactUsPage() {
   });
   const classes = useStyles();
   return (
-    <div style={{ backgroundColor: "#CB1F8E" }}>
+    <div>
       <Header
         brand="Material Kit PRO React"
         links={<HeaderLinks dropdownHoverColor="info" />}
@@ -126,12 +126,7 @@ export default function ContactUsPage() {
           color: "info",
         }}
       />
-      <Parallax
-        style={{
-          backgroundColor: "#CB1F8E",
-        }}
-        small
-      >
+      <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
           <GridContainer>
             <GridItem

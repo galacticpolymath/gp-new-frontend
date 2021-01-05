@@ -32,7 +32,7 @@ export default function BlogPostsPage() {
   });
   const classes = useStyles();
   return (
-    <div style={{ backgroundColor: "#6812D1" }}>
+    <div>
       <Header
         brand="Material Kit PRO React"
         links={<HeaderLinks dropdownHoverColor="info" />}
@@ -43,12 +43,7 @@ export default function BlogPostsPage() {
           color: "info",
         }}
       />
-      <Parallax
-        style={{
-          backgroundColor: "#6812D1",
-        }}
-        small
-      >
+      <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
           <GridContainer>
             <GridItem
