@@ -1,5 +1,5 @@
 /*eslint-disable*/
-import React from "react";
+import React, { useState, useEffect } from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -15,20 +15,55 @@ import Parallax from "components/Parallax/Parallax.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Footer from "components/Footer/Footer.js";
-// sections for this page
-import SectionPricing from "views/PricingPage/Sections/SectionPricing.js";
-import SectionFeatures from "views/PricingPage/Sections/SectionFeatures.js";
+// sections for this page Added by JOB VIZ TEAM
+import JobManager from "../modules/JobManager";
+import "../styling/Style.css";
+import { Title } from "../title/Title";
+import { Table } from "../table/Table";
+import { addIdPathway } from "../Helper";
+import { LrAutoSearchV2 } from "../search/LRautoSearchV2";
 
 import pricingStyle from "assets/jss/material-kit-pro-react/views/pricingStyle.js";
 
 const useStyles = makeStyles(pricingStyle);
 
-export default function PricingPage() {
+export const Level0List = (props) => {
+  const [originalJobs, setOriginalJobs] = useState([]);
+  const [jobs, setJobs] = useState([]);
+  const [jobTitleList, setJobTitleList] = useState([]);
+
+  useEffect(() => {
+    JobManager.getAll().then((jobs) => {
+      setOriginalJobs(jobs);
+    });
+  }, []);
+
+  useEffect(() => {
+    setJobs(addIdPathway(originalJobs));
+  }, [originalJobs]);
+
+  useEffect(() => {
+    // console.log(jobs);
+    //get all job Titles for AutoSearch
+    const getAllJobNames = (jobs) => {
+      let jobTList = [];
+      jobs.forEach((job) => {
+        if (!jobTList.includes(job.title)) {
+          jobTList.push(job.title);
+        }
+      });
+      setJobTitleList(jobTList);
+    };
+    ////Call the Function
+    getAllJobNames(jobs);
+  }, [jobs]);
+
   React.useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
   });
   const classes = useStyles();
+
   return (
     <div>
       <Header
@@ -42,11 +77,7 @@ export default function PricingPage() {
         }}
       />
 
-      <Parallax
-        image={require("assets/img/GP_Hero_HireUs-02.jpg")}
-        filter="dark"
-        small
-      >
+      <Parallax image="" filter="dark" small>
         <div className={classes.container}>
           <GridContainer>
             <GridItem
@@ -58,13 +89,10 @@ export default function PricingPage() {
                 classes.textCenter
               )}
             >
-              <h1 className={classes.title}>
-                Let{"'"}s build something amazing
-              </h1>
+              <h1 className={classes.title}>JOB VIZ </h1>
               <h4>
-                Whether you are an NSF-funded researcher, a nonprofit, or a
-                socially responsible company, you care about a body of knowledge
-                and you want the public to understand and care about it, too.
+                Explore career possibilites, see how fields relate and overlap,
+                and get a glimpse at industry education and financial data.
               </h4>
             </GridItem>
           </GridContainer>
@@ -72,9 +100,34 @@ export default function PricingPage() {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          <SectionPricing />
-          <hr />
-          <SectionFeatures />
+          <div>
+            <Title />
+          </div>
+          <h6>Level 0 List</h6>
+          <div>
+            <LrAutoSearchV2
+              jobs={jobs}
+              jobTitleList={jobTitleList}
+              {...props}
+            />
+          </div>
+          <div
+            onClick={() => {
+              console.log("YOu clicked me");
+              props.history.push(`/jobviz/1`);
+            }}
+            className=""
+          >
+            <div className="card-parent-container">
+              <div className="card-parent">
+                <p>Jobs</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <Table />
+          </div>
         </div>
       </div>
       <Footer
@@ -132,4 +185,4 @@ export default function PricingPage() {
       />
     </div>
   );
-}
+};
