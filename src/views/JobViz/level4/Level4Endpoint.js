@@ -22,7 +22,7 @@ import JobManager from "../modules/JobManager";
 import "../styling/Style.css";
 import { Title } from "../title/Title";
 import { Table } from "../table/Table";
-import { compare, addIdPathway } from "../Helper";
+import { compare, addIdPathway, makeUrlPath } from "../Helper";
 import { LrAutoSearchV2 } from "../search/LRautoSearchV2";
 import { Level4Card } from "./Level4Card";
 // sections for this page Added by JOB VIZ TEAM
@@ -43,6 +43,7 @@ export const Level4Endpoint = (props) => {
   const [parentName, setParentName] = useState("");
   const [grandparentName, setGrandparentName] = useState("");
   const [jobTitleList, setJobTitleList] = useState([]);
+
   ///Where I set the level job object to state
   const [jobObject, setJobObject] = useState({
     id: 0,
@@ -97,6 +98,12 @@ export const Level4Endpoint = (props) => {
     children: [],
     parent: [],
   });
+
+  //Make Parent and grandparent Names into url frienldy stirng
+  const parentUrl = makeUrlPath(parentName);
+  const grandparentUrl = makeUrlPath(grandparentName);
+  const jobObjectUrl = makeUrlPath(jobObject.ttl);
+
   ////FETCH ORIGINAL JOB DATA
   useEffect(() => {
     JobManager.getAll().then((jobs) => {
@@ -234,19 +241,23 @@ export const Level4Endpoint = (props) => {
             </div>
             <div className="crumbs">
               <small>
-                <Link to={`/jobviz/1/${grandparent}`}>{grandparentName} </Link>
+                <Link to={`/jobviz/1/${grandparent}/${grandparentUrl}`}>
+                  {grandparentName}{" "}
+                </Link>
               </small>
             </div>
             <div className="crumbs">
               <small>
-                <Link to={`/jobviz/1/${grandparent}/${parent}`}>
+                <Link to={`/jobviz/1/${grandparent}/${parent}/${parentUrl}`}>
                   {parentName}
                 </Link>
               </small>
             </div>
             <div className="crumbs">
               <small>
-                <Link to={`/jobviz/1/${grandparent}/${parent}/${jobObject.id}`}>
+                <Link
+                  to={`/jobviz/1/${grandparent}/${parent}/${jobObject.id}/${jobObjectUrl}`}
+                >
                   {jobObject.ttl}
                 </Link>
               </small>

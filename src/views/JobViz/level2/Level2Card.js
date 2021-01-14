@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
+import { makeUrlPath } from "../Helper";
 
 export const Level2Card = (props) => {
   const job = props.job;
-  const category = props.category;
   const grandparent = job.grandparent[0];
   const parent = job.parent[0];
   const jobId = job.id;
-  console.log(category);
+
+  const title = makeUrlPath(job.ttl);
 
   const [hasChildren, setHasChildren] = useState(false);
   const [highlight, setHighlight] = useState(false);
@@ -29,7 +30,9 @@ export const Level2Card = (props) => {
         <div
           className="card-child"
           onClick={() => {
-            props.history.push(`/jobviz/${grandparent}/${parent}/${jobId}`);
+            props.history.push(
+              `/jobviz/${grandparent}/${parent}/${jobId}/${title}`
+            );
           }}
         >
           <p id={job.id} className="listed-categories">
@@ -47,7 +50,7 @@ export const Level2Card = (props) => {
                 setHighlight(false);
               }
               props.history.push(
-                `/jobviz/${grandparent}/${parent}/${jobId}/endpoint`
+                `/jobviz/${grandparent}/${parent}/${jobId}/${title}/endpoint`
               );
             }}
           >

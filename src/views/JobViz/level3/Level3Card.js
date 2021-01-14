@@ -8,7 +8,7 @@ export const Level3Card = (props) => {
   const greatGrandparent = job.greatGrandparent[0];
   const parent = job.parent[0];
   const jobId = job.id;
-
+  const title = makeUrlPath(job.ttl);
   const [hasChildren, setHasChildren] = useState(false);
   const [highlight, setHighlight] = useState(false);
 
@@ -31,7 +31,7 @@ export const Level3Card = (props) => {
           className="card-child"
           onClick={() => {
             props.history.push(
-              `/jobviz/${greatGrandparent}/${grandparent}/${parent}/${jobId}`
+              `/jobviz/${greatGrandparent}/${grandparent}/${parent}/${jobId}/${title}`
             );
           }}
         >
@@ -50,7 +50,7 @@ export const Level3Card = (props) => {
                 setHighlight(false);
               }
               props.history.push(
-                `/jobviz/${greatGrandparent}/${grandparent}/${parent}/${jobId}/endpoint`
+                `/jobviz/${greatGrandparent}/${grandparent}/${parent}/${jobId}/${title}/endpoint`
               );
             }}
           >

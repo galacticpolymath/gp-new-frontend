@@ -22,7 +22,7 @@ import JobManager from "../modules/JobManager";
 import "../styling/Style.css";
 import { Title } from "../title/Title";
 import { Table } from "../table/Table";
-import { compare, addIdPathway } from "../Helper";
+import { compare, addIdPathway, makeUrlPath } from "../Helper";
 import { LrAutoSearchV2 } from "../search/LRautoSearchV2";
 import { Level2Card } from "./Level2Card";
 // sections for this page Added by JOB VIZ TEAM
@@ -33,6 +33,7 @@ const useStyles = makeStyles(pricingStyle);
 
 export const Level2Endpoint = (props) => {
   const level = props.level1;
+  console.log(level);
   const category = props.level2;
   const [originalJobs, setOriginalJobs] = useState([]);
   const [jobs, setJobs] = useState([]);
@@ -93,6 +94,10 @@ export const Level2Endpoint = (props) => {
     children: [],
     parent: [],
   });
+
+  //Make Parent and grandparent Names into url frienldy stirng
+  const jobObjectUrl = makeUrlPath(jobObject.ttl);
+
   ////FETCH ORIGINAL JOB DATA
   useEffect(() => {
     JobManager.getAll().then((jobs) => {
@@ -211,7 +216,9 @@ export const Level2Endpoint = (props) => {
           </div>
           <div className="crumbs">
             <small>
-              <Link to={`/jobviz/1/${level}}`}>{jobObject.ttl}</Link>
+              <Link to={`/jobviz/1/${level}/${jobObjectUrl}`}>
+                {jobObject.ttl}
+              </Link>
             </small>
           </div>
 
@@ -232,7 +239,6 @@ export const Level2Endpoint = (props) => {
                       <div key={k}>
                         <Level2Card
                           key={job.id}
-                          category={category}
                           level={level}
                           job={job}
                           {...props}
