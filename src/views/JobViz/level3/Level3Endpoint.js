@@ -22,7 +22,7 @@ import JobManager from "../modules/JobManager";
 import "../styling/Style.css";
 import { Title } from "../title/Title";
 import { Table } from "../table/Table";
-import { compare, addIdPathway } from "../Helper";
+import { compare, addIdPathway, makeUrlPath } from "../Helper";
 import { LrAutoSearchV2 } from "../search/LRautoSearchV2";
 import { Level3Card } from "./Level3Card";
 // sections for this page Added by JOB VIZ TEAM
@@ -41,6 +41,7 @@ export const Level3Endpoint = (props) => {
   const alphaList = jobs.sort(compare);
   const [parentName, setParentName] = useState("");
   const [jobTitleList, setJobTitleList] = useState([]);
+
   ///Where I set the level job object to state
   const [jobObject, setJobObject] = useState({
     id: 0,
@@ -95,6 +96,11 @@ export const Level3Endpoint = (props) => {
     children: [],
     parent: [],
   });
+
+  //Make Parent and grandparent Names into url frienldy stirng
+  const parentUrl = makeUrlPath(parentName);
+  const jobObjectUrl = makeUrlPath(jobObject.ttl);
+
   ////FETCH ORIGINAL JOB DATA
   useEffect(() => {
     JobManager.getAll().then((jobs) => {
@@ -228,12 +234,14 @@ export const Level3Endpoint = (props) => {
           </div>
           <div className="crumbs">
             <small>
-              <Link to={`/jobviz/1/${parent}`}>{parentName}</Link>
+              <Link to={`/jobviz/1/${parent}/${parentUrl}`}>{parentName}</Link>
             </small>
           </div>
           <div className="crumbs">
             <small>
-              <Link to={`/jobviz/1/${parent}/${level}}`}>{jobObject.ttl}</Link>
+              <Link to={`/jobviz/1/${parent}/${level}/${jobObjectUrl}`}>
+                {jobObject.ttl}
+              </Link>
             </small>
           </div>
 
@@ -253,7 +261,6 @@ export const Level3Endpoint = (props) => {
                     return (
                       <div key={k}>
                         <Level3Card
-                          category={category}
                           parent={parent}
                           key={job.id}
                           level={level}

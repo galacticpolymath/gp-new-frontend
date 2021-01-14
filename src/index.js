@@ -82,7 +82,7 @@ ReactDOM.render(
       />
       <Route
         exact
-        path="/jobviz/:level0/:level1"
+        path="/jobviz/:level0/:level1/:title"
         render={(props) => {
           return (
             <Level2List
@@ -95,7 +95,7 @@ ReactDOM.render(
       />
       <Route
         exact
-        path="/jobviz/:level0/:level1/:level2/endpoint"
+        path="/jobviz/:level0/:level1/:level2/:title/endpoint"
         render={(props) => {
           return (
             <Level2Endpoint
@@ -109,7 +109,7 @@ ReactDOM.render(
       />
       <Route
         exact
-        path="/jobviz/:level0/:level1/:level2"
+        path="/jobviz/:level0/:level1/:level2/:title"
         render={(props) => {
           return (
             <Level3List
@@ -123,7 +123,7 @@ ReactDOM.render(
       />
       <Route
         exact
-        path="/jobviz/:level0/:level1/:level2/:level3/endpoint"
+        path="/jobviz/:level0/:level1/:level2/:level3/:title/endpoint"
         render={(props) => {
           return (
             <Level3Endpoint
@@ -138,7 +138,7 @@ ReactDOM.render(
       />
       <Route
         exact
-        path="/jobviz/:level0/:level1/:level2/:level3"
+        path="/jobviz/:level0/:level1/:level2/:level3/:title"
         render={(props) => {
           return (
             <Level4List
@@ -153,7 +153,7 @@ ReactDOM.render(
       />
       <Route
         exact
-        path="/jobviz/:level0/:level1/:level2/:level3/:level4/endpoint"
+        path="/jobviz/:level0/:level1/:level2/:level3/:level4/:title/endpoint"
         render={(props) => {
           return (
             <Level4Endpoint

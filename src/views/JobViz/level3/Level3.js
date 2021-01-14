@@ -22,7 +22,7 @@ import JobManager from "../modules/JobManager";
 import "../styling/Style.css";
 import { Title } from "../title/Title";
 import { Table } from "../table/Table";
-import { compare, addIdPathway } from "../Helper";
+import { compare, addIdPathway, makeUrlPath } from "../Helper";
 import { LrAutoSearchV2 } from "../search/LRautoSearchV2";
 import { Level3Card } from "./Level3Card";
 // sections for this page Added by JOB VIZ TEAM
@@ -66,6 +66,10 @@ export const Level3List = (props) => {
     children: [],
     parent: [],
   });
+
+  //Make Parent and grandparent Names into url frienldy stirng
+  const parentUrl = makeUrlPath(parentName);
+
   ////FETCH ORIGINAL JOB DATA
   useEffect(() => {
     JobManager.getAll().then((jobs) => {
@@ -202,7 +206,7 @@ export const Level3List = (props) => {
           </div>
           <div className="crumbs">
             <small>
-              <Link to={`/jobviz/1/${parent}`}>{parentName}</Link>
+              <Link to={`/jobviz/1/${parent}/${parentUrl}`}>{parentName}</Link>
             </small>
           </div>
 

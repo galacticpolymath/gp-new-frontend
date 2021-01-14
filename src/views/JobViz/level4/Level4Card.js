@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
+import { makeUrlPath } from "../Helper";
 
 export const Level4Card = (props) => {
   const job = props.job;
@@ -7,6 +8,8 @@ export const Level4Card = (props) => {
   const greatGreatGrandparent = job.greatGreatGrandparent[0];
   const parent = job.parent[0];
   const jobId = job.id;
+
+  const title = makeUrlPath(job.ttl);
 
   const [highlight, setHighlight] = useState(false);
 
@@ -22,7 +25,7 @@ export const Level4Card = (props) => {
               setHighlight(false);
             }
             props.history.push(
-              `/jobviz/${greatGreatGrandparent}/${greatGrandparent}/${grandparent}/${parent}/${jobId}/endpoint`
+              `/jobviz/${greatGreatGrandparent}/${greatGrandparent}/${grandparent}/${parent}/${jobId}/${title}/endpoint`
             );
           }}
         >

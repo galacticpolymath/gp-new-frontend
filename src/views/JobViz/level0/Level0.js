@@ -113,7 +113,7 @@ export const Level0List = (props) => {
           </div>
           <div
             onClick={() => {
-              console.log("YOu clicked me");
+              // console.log("YOu clicked me");
               props.history.push(`/jobviz/1`);
             }}
             className=""
