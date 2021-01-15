@@ -181,12 +181,29 @@ export const Level2List = (props) => {
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container}>
-          {/* <h1>Level2</h1> */}
-          {/* //////////////// S E A R C H  C O M P O N E N T///////////////// */}
-          <LrAutoSearchV2 jobs={jobs} jobTitleList={jobTitleList} {...props} />
+        <div className={classes.main}>
+          <GridContainer>
+            <GridItem
+              md={8}
+              sm={8}
+              className={classNames(
+                classes.mlAuto,
+                classes.mrAuto,
+                classes.textCenter
+              )}
+            >
+              {/* //////////////// S E A R C H  C O M P O N E N T///////////////// */}
+              <LrAutoSearchV2
+                jobs={jobs}
+                jobTitleList={jobTitleList}
+                {...props}
+              />
+            </GridItem>
+          </GridContainer>
+        </div>
 
-          {/* //////////////// C R U M B S////////////////// */}
+        {/* //////////////// C R U M B S////////////////// */}
+        <div className={classes.container}>
           <div className="crumbs">
             <small>
               <Link to={`/jobviz`}>Job Categories</Link>
