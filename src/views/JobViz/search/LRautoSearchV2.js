@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { makeUrlPath } from "../Helper";
 import "../styling/Style.css";
 // @material-ui/core components
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -87,7 +88,7 @@ export const LrAutoSearchV2 = (props) => {
     const goToJobUrl = (selectedJobObj) => {
       // console.log(selectedJobObj);
       const children = selectedJobObj.children;
-      const title = selectedJobObj.title;
+      const title = makeUrlPath(selectedJobObj.title);
       const id = selectedJobObj.id;
       const parent = selectedJobObj.parent;
       const grandparent = selectedJobObj.grandparent;
@@ -193,45 +194,53 @@ export const LrAutoSearchV2 = (props) => {
               type: "text",
             }}
           /> */}
-          <input
-            id="float"
-            type="text"
-            placeholder="Search Jobs"
-            onChange={(e) => onChange(e)}
-            onKeyDown={(e) => onKeyDown(e)}
-            value={userInput}
-          />
+          <div className="searchBoxParent">
+            <div id="search_border" className="search">
+              <input
+                id="search_bar"
+                type="text"
+                placeholder="Search Jobs"
+                className="search-box"
+                onChange={onChange}
+                onKeyDown={onKeyDown}
+                value={userInput}
+              />
+              <div className="searchIcon">
+                <input type="submit" value="" className="search-icon" />
+              </div>
+            </div>
 
-          <div id="float-options">
-            {showOptions &&
-              userInput &&
-              (filteredOptions.length > 0 ? (
-                <Card>
-                  <CardBody>
-                    <ul className="options">
-                      {filteredOptions.map((optionName, index) => {
-                        let className;
-                        if (index === activeOption) {
-                          className = "option-active";
-                        }
-                        return (
-                          <li
-                            className="{className}, option"
-                            key={optionName}
-                            onClick={onClick}
-                          >
-                            {optionName}
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </CardBody>
-                </Card>
-              ) : (
-                <div className="no-options">
-                  <em>No Option!</em>
-                </div>
-              ))}
+            <div id="float-options">
+              {showOptions &&
+                userInput &&
+                (filteredOptions.length > 0 ? (
+                  <Card>
+                    <CardBody>
+                      <ul className="options">
+                        {filteredOptions.map((optionName, index) => {
+                          let className;
+                          if (index === activeOption) {
+                            className = "option-active";
+                          }
+                          return (
+                            <li
+                              className="{className}, option"
+                              key={optionName}
+                              onClick={onClick}
+                            >
+                              {optionName}
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </CardBody>
+                  </Card>
+                ) : (
+                  <div className="no-options">
+                    <em>No Option!</em>
+                  </div>
+                ))}
+            </div>
           </div>
         </GridItem>
       </GridContainer>
