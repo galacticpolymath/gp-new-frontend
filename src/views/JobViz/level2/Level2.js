@@ -267,14 +267,6 @@ export const Level2List = (props) => {
                     className={classes.modalBody}
                   >
                     <div className="table-parent">
-                      {/* <div className="table-top">
-                            <div className="table-title">
-                              <h4>Job id: {jobObject.id}</h4>
-                              <h4>Job: {jobObject.title} </h4>
-                              <h6>Definition: {jobObject.Def}</h6>
-                              <h6>Definition: {jobObject.Def}</h6>
-                            </div>
-                          </div> */}
                       <div className="table-mid">
                         <div className="table-child">
                           <h6>Median 2017 Annual Wage:</h6>

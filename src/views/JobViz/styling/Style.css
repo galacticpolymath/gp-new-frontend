@@ -1,6 +1,12 @@
 input[type="text"] {
   -webkit-appearance: none;
 }
+
+#searchbar-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
 .jobviz-parent,
 .crumbs {
   display: flex;
@@ -446,7 +452,8 @@ input[type="text"] {
 
 .option {
   padding: 1px;
-  border: black 1px solid;
+  border-bottom: solid lightgray 1px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8); */
   background-color: white;
 }
 .option:hover {
@@ -458,12 +465,6 @@ input[type="text"] {
   margin-top: 2rem;
 }
 
-#search_border {
-  display: flex;
-  justify-content: flex-start;
-
-  margin: 25px;
-}
 #search_bar {
   border: 4px solid transparent;
   font-size: 15px;
