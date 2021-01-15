@@ -217,11 +217,28 @@ export const Level3List = (props) => {
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container}>
-          {/* <h1>Level3</h1> */}
-          {/* //////////////// S E A R C H  C O M P O N E N T///////////////// */}
-          <LrAutoSearchV2 jobs={jobs} jobTitleList={jobTitleList} {...props} />
+        <div className={classes.main}>
+          <GridContainer>
+            <GridItem
+              md={8}
+              sm={8}
+              className={classNames(
+                classes.mlAuto,
+                classes.mrAuto,
+                classes.textCenter
+              )}
+            >
+              {/* //////////////// S E A R C H  C O M P O N E N T///////////////// */}
+              <LrAutoSearchV2
+                jobs={jobs}
+                jobTitleList={jobTitleList}
+                {...props}
+              />
+            </GridItem>
+          </GridContainer>
+        </div>
 
+        <div className={classes.container}>
           {/* ///////    C  R  U  M  S      /////////////// */}
 
           <div className="crumbs">

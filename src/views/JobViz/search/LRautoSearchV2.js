@@ -1,6 +1,18 @@
 import React, { useState, useEffect } from "react";
-import "../styling/Style.css";
 import { makeUrlPath } from "../Helper";
+import "../styling/Style.css";
+// @material-ui/core components
+import InputAdornment from "@material-ui/core/InputAdornment";
+// @material-ui icons
+import People from "@material-ui/icons/People";
+// core components
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
+import Card from "components/Card/Card.js";
+import CardBody from "components/Card/CardBody.js";
+
+///Would like to get this working ????
+import CustomInput from "components/CustomInput/CustomInput.js";
 
 export const LrAutoSearchV2 = (props) => {
   const jobs = props.jobs;
@@ -42,6 +54,7 @@ export const LrAutoSearchV2 = (props) => {
 
   ////Here is where you filter through array of listed job titles
   const onChange = (e) => {
+    // console.log(userInput, "This is user input");
     setUserInput(e.currentTarget.value);
     setShowOptions(true);
     setFilteredOptions(
@@ -55,6 +68,7 @@ export const LrAutoSearchV2 = (props) => {
   // console.log(filteredOptions.length, "Filtered Options")
 
   const onClick = (e) => {
+    // console.log(userInput, "This is user input");
     setSelectedJob(e.currentTarget.innerText);
     setShowOptions(false);
   };
@@ -74,7 +88,7 @@ export const LrAutoSearchV2 = (props) => {
     const goToJobUrl = (selectedJobObj) => {
       // console.log(selectedJobObj);
       const children = selectedJobObj.children;
-      const title = selectedJobObj.title;
+      const title = makeUrlPath(selectedJobObj.title);
       const id = selectedJobObj.id;
       const parent = selectedJobObj.parent;
       const grandparent = selectedJobObj.grandparent;
@@ -90,32 +104,34 @@ export const LrAutoSearchV2 = (props) => {
         grandparent.length === 0 &&
         children.length !== 0
       ) {
-        props.history.push(`/jobviz/${parent}/${id}`);
+        props.history.push(`/jobviz/${parent}/${id}/${title}`);
       } else if (
         title !== "" &&
         grandparent.length === 0 &&
         children.length === 0
       ) {
-        props.history.push(`/jobviz/${parent}/${id}/endpoint`);
+        props.history.push(`/jobviz/${parent}/${id}/${title}/endpoint`);
       } else if (
         title !== "" &&
         greatGrandparent.length === 0 &&
         children.length !== 0
       ) {
-        props.history.push(`/jobviz/${grandparent}/${parent}/${id}`);
+        props.history.push(`/jobviz/${grandparent}/${parent}/${id}/${title}`);
       } else if (
         title !== "" &&
         greatGrandparent.length === 0 &&
         children.length === 0
       ) {
-        props.history.push(`/jobviz/${grandparent}/${parent}/${id}/endpoint`);
+        props.history.push(
+          `/jobviz/${grandparent}/${parent}/${id}/${title}/endpoint`
+        );
       } else if (
         title !== "" &&
         greatGreatGrandparent.length === 0 &&
         children.length !== 0
       ) {
         props.history.push(
-          `/jobviz/${greatGrandparent}/${grandparent}/${parent}/${id}`
+          `/jobviz/${greatGrandparent}/${grandparent}/${parent}/${id}/${title}`
         );
       } else if (
         title !== "" &&
@@ -123,7 +139,7 @@ export const LrAutoSearchV2 = (props) => {
         children.length === 0
       ) {
         props.history.push(
-          `/jobviz/${greatGrandparent}/${grandparent}/${parent}/${id}/endpoint`
+          `/jobviz/${greatGrandparent}/${grandparent}/${parent}/${id}/${title}/endpoint`
         );
       } else if (
         title !== "" &&
@@ -131,7 +147,7 @@ export const LrAutoSearchV2 = (props) => {
         children.length === 0
       ) {
         props.history.push(
-          `/jobviz/${greatGreatGrandparent}/${greatGrandparent}/${grandparent}/${parent}/${id}/endpoint`
+          `/jobviz/${greatGreatGrandparent}/${greatGrandparent}/${grandparent}/${parent}/${id}/${title}/endpoint`
         );
       } else {
         return;
@@ -161,7 +177,74 @@ export const LrAutoSearchV2 = (props) => {
 
   return (
     <React.Fragment>
-      <div className="jobviz-parent">
+      <GridContainer>
+        <GridItem xs={12} sm={12} md={4}>
+          {/* ///Cant figure out how this works!!!! */}
+          {/* <CustomInput
+            labelText="Search Jobs"
+            id="float"
+            // value={userInput}
+            formControlProps={{
+              fullWidth: true,
+            }}
+            inputProps={{
+              value: userInput,
+              onChange: { onChange() },
+              onKeyDown: { onKeyDown() },
+              type: "text",
+            }}
+          /> */}
+          <div className="searchBoxParent">
+            <div id="search_border" className="search">
+              <input
+                id="search_bar"
+                type="text"
+                placeholder="Search Jobs"
+                className="search-box"
+                onChange={onChange}
+                onKeyDown={onKeyDown}
+                value={userInput}
+              />
+              <div className="searchIcon">
+                <input type="submit" value="" className="search-icon" />
+              </div>
+            </div>
+
+            <div id="float-options">
+              {showOptions &&
+                userInput &&
+                (filteredOptions.length > 0 ? (
+                  <Card>
+                    <CardBody>
+                      <ul className="options">
+                        {filteredOptions.map((optionName, index) => {
+                          let className;
+                          if (index === activeOption) {
+                            className = "option-active";
+                          }
+                          return (
+                            <li
+                              className="{className}, option"
+                              key={optionName}
+                              onClick={onClick}
+                            >
+                              {optionName}
+                            </li>
+                          );
+                        })}
+                      </ul>
+                    </CardBody>
+                  </Card>
+                ) : (
+                  <div className="no-options">
+                    <em>No Option!</em>
+                  </div>
+                ))}
+            </div>
+          </div>
+        </GridItem>
+      </GridContainer>
+      {/* <div className="jobviz-parent">
         <div className="searchBoxParent">
           <div id="search_border" className="search">
             <input
@@ -205,7 +288,7 @@ export const LrAutoSearchV2 = (props) => {
               ))}
           </div>
         </div>
-      </div>
+      </div> */}
     </React.Fragment>
   );
 };

@@ -225,33 +225,47 @@ export const Level4List = (props) => {
       </Parallax>
 
       <div className={classNames(classes.main, classes.mainRaised)}>
+        <div className={classes.main}>
+          <GridContainer>
+            <GridItem
+              md={8}
+              sm={8}
+              className={classNames(
+                classes.mlAuto,
+                classes.mrAuto,
+                classes.textCenter
+              )}
+            >
+              {/* //////////////// S E A R C H  C O M P O N E N T///////////////// */}
+              <LrAutoSearchV2
+                jobs={jobs}
+                jobTitleList={jobTitleList}
+                {...props}
+              />
+            </GridItem>
+          </GridContainer>
+        </div>
         <div className={classes.container}>
-          {/* <h1>Level4</h1> */}
-          {/* //////////////// S E A R C H  C O M P O N E N T///////////////// */}
-          <LrAutoSearchV2 jobs={jobs} jobTitleList={jobTitleList} {...props} />
+          {/* ///////      C  R  U  M  S      /////////////// */}
 
-          <div className="">
-            {/* ///////      C  R  U  M  S      /////////////// */}
-
-            <div className="crumbs">
-              <small>
-                <Link to={`/jobviz`}>Job Categories </Link>
-              </small>
-            </div>
-            <div className="crumbs">
-              <small>
-                <Link to={`/jobviz/1/${grandparent}/${grandparentUrl}`}>
-                  {grandparentName}{" "}
-                </Link>
-              </small>
-            </div>
-            <div className="crumbs">
-              <small>
-                <Link to={`/jobviz/1/${grandparent}/${parent}/${parentUrl}`}>
-                  {parentName}
-                </Link>
-              </small>
-            </div>
+          <div className="crumbs">
+            <small>
+              <Link to={`/jobviz`}>Job Categories </Link>
+            </small>
+          </div>
+          <div className="crumbs">
+            <small>
+              <Link to={`/jobviz/1/${grandparent}/${grandparentUrl}`}>
+                {grandparentName}{" "}
+              </Link>
+            </small>
+          </div>
+          <div className="crumbs">
+            <small>
+              <Link to={`/jobviz/1/${grandparent}/${parent}/${parentUrl}`}>
+                {parentName}
+              </Link>
+            </small>
           </div>
 
           {/* //////////////// P A R E N T ////////////////// */}

@@ -195,11 +195,29 @@ export const Level1List = (props) => {
           </GridContainer>
         </div>
       </Parallax>
-
       <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container}>
-          <LrAutoSearchV2 jobs={jobs} jobTitleList={jobTitleList} {...props} />
+        <div className={classes.main}>
+          <GridContainer>
+            <GridItem
+              md={8}
+              sm={8}
+              className={classNames(
+                classes.mlAuto,
+                classes.mrAuto,
+                classes.textCenter
+              )}
+            >
+              {/* //////////////// S E A R C H  C O M P O N E N T///////////////// */}
+              <LrAutoSearchV2
+                jobs={jobs}
+                jobTitleList={jobTitleList}
+                {...props}
+              />
+            </GridItem>
+          </GridContainer>
+        </div>
 
+        <div className={classes.container}>
           {/* //////////////// P A R E N T ////////////////// */}
           <div className="crumbs">
             <Card className={classes.textCenter} style={{ width: "20rem" }}>
