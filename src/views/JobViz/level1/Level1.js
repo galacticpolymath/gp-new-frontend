@@ -34,22 +34,6 @@ import Slide from "@material-ui/core/Slide";
 import Close from "@material-ui/icons/Close";
 import { cardTitle } from "assets/jss/material-kit-pro-react.js";
 
-const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="down" ref={ref} {...props} />;
-});
-
-Transition.displayName = "Transition";
-
-const style = {
-  cardTitle,
-  textCenter: {
-    textAlign: "center",
-  },
-  textRight: {
-    textAlign: "right",
-  },
-};
-
 // sections for this page Added by JOB VIZ TEAM \/
 
 import { Link } from "react-router-dom";
@@ -65,6 +49,21 @@ import { Level1Card } from "./Level1Card";
 import pricingStyle from "assets/jss/material-kit-pro-react/views/pricingStyle.js";
 
 const useStyles = makeStyles(pricingStyle);
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="down" ref={ref} {...props} />;
+});
+
+Transition.displayName = "Transition";
+
+const style = {
+  cardTitle,
+  textCenter: {
+    textAlign: "center",
+  },
+  textRight: {
+    textAlign: "right",
+  },
+};
 
 export const Level1List = (props) => {
   const level = props.level0;
@@ -195,6 +194,7 @@ export const Level1List = (props) => {
           </GridContainer>
         </div>
       </Parallax>
+
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.main}>
           <GridContainer>
@@ -271,14 +271,6 @@ export const Level1List = (props) => {
                     className={classes.modalBody}
                   >
                     <div className="table-parent">
-                      {/* <div className="table-top">
-                            <div className="table-title">
-                              <h4>Job id: {jobObject.id}</h4>
-                              <h4>Job: {jobObject.title} </h4>
-                              <h6>Definition: {jobObject.Def}</h6>
-                              <h6>Definition: {jobObject.Def}</h6>
-                            </div>
-                          </div> */}
                       <div className="table-mid">
                         <div className="table-child">
                           <h6>Median 2017 Annual Wage:</h6>
@@ -338,15 +330,13 @@ export const Level1List = (props) => {
                 for (let j = 0; j <= jobObject.children.length; j++) {
                   if (jobObject.children[j] === job.id) {
                     return (
-                      <div key={k}>
-                        <Level1Card
-                          jobs={jobs}
-                          key={job.id}
-                          level={level}
-                          job={job}
-                          {...props}
-                        />
-                      </div>
+                      <Level1Card
+                        jobs={jobs}
+                        key={job.id}
+                        level={level}
+                        job={job}
+                        {...props}
+                      />
                     );
                   }
                 }

@@ -1,20 +1,36 @@
 import React, { useState, useEffect } from "react";
 import { makeUrlPath } from "../Helper";
-import "../styling/Style.css";
+// nodejs library that concatenates classes
+import classNames from "classnames";
 // @material-ui/core components
-import InputAdornment from "@material-ui/core/InputAdornment";
-// @material-ui icons
-import People from "@material-ui/icons/People";
-// core components
+import { makeStyles } from "@material-ui/core/styles";
+// @material-ui/core components
+import "../styling/Style.css";
+
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
+import { cardTitle } from "assets/jss/material-kit-pro-react.js";
+import pricingStyle from "assets/jss/material-kit-pro-react/views/pricingStyle.js";
+
+const style = {
+  cardTitle,
+  textCenter: {
+    textAlign: "center",
+  },
+  textRight: {
+    textAlign: "right",
+  },
+};
+
+const useStyles = makeStyles(pricingStyle);
 
 ///Would like to get this working ????
-import CustomInput from "components/CustomInput/CustomInput.js";
+// import CustomInput from "components/CustomInput/CustomInput.js";
 
 export const LrAutoSearchV2 = (props) => {
+  const classes = useStyles();
   const jobs = props.jobs;
   const [activeOption, setActiveOption] = useState(0);
   const [filteredOptions, setFilteredOptions] = useState([]);
@@ -177,10 +193,8 @@ export const LrAutoSearchV2 = (props) => {
 
   return (
     <React.Fragment>
-      <GridContainer>
-        <GridItem xs={12} sm={12} md={4}>
-          {/* ///Cant figure out how this works!!!! */}
-          {/* <CustomInput
+      {/* ///Cant figure out how this works!!!! */}
+      {/* <CustomInput
             labelText="Search Jobs"
             id="float"
             // value={userInput}
@@ -194,56 +208,51 @@ export const LrAutoSearchV2 = (props) => {
               type: "text",
             }}
           /> */}
-          <div className="searchBoxParent">
-            <div id="search_border" className="search">
-              <input
-                id="search_bar"
-                type="text"
-                placeholder="Search Jobs"
-                className="search-box"
-                onChange={onChange}
-                onKeyDown={onKeyDown}
-                value={userInput}
-              />
-              <div className="searchIcon">
-                <input type="submit" value="" className="search-icon" />
-              </div>
-            </div>
+      <div id="searchbar-container">
+        <input
+          id="search_bar"
+          type="text"
+          placeholder="Search Jobs"
+          onChange={onChange}
+          onKeyDown={onKeyDown}
+          value={userInput}
+        />
 
-            <div id="float-options">
-              {showOptions &&
-                userInput &&
-                (filteredOptions.length > 0 ? (
-                  <Card>
-                    <CardBody>
-                      <ul className="options">
-                        {filteredOptions.map((optionName, index) => {
-                          let className;
-                          if (index === activeOption) {
-                            className = "option-active";
-                          }
-                          return (
-                            <li
-                              className="{className}, option"
-                              key={optionName}
-                              onClick={onClick}
-                            >
-                              {optionName}
-                            </li>
-                          );
-                        })}
-                      </ul>
-                    </CardBody>
-                  </Card>
-                ) : (
-                  <div className="no-options">
-                    <em>No Option!</em>
-                  </div>
-                ))}
+        <div className="searchIcon">
+          <input type="submit" value="" className="search-icon" />
+        </div>
+      </div>
+
+      <div id="">
+        {showOptions &&
+          userInput &&
+          (filteredOptions.length > 0 ? (
+            <Card>
+              <CardBody>
+                {filteredOptions.map((optionName, index) => {
+                  let className;
+                  if (index === activeOption) {
+                    className = "option-active";
+                  }
+                  return (
+                    <div
+                      className="{className}, option"
+                      key={optionName}
+                      onClick={onClick}
+                    >
+                      {optionName}
+                    </div>
+                  );
+                })}
+              </CardBody>
+            </Card>
+          ) : (
+            <div className="no-options">
+              <em>No Option!</em>
             </div>
-          </div>
-        </GridItem>
-      </GridContainer>
+          ))}
+      </div>
+
       {/* <div className="jobviz-parent">
         <div className="searchBoxParent">
           <div id="search_border" className="search">
