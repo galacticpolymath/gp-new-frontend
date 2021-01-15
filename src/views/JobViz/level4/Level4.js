@@ -15,13 +15,44 @@ import Parallax from "components/Parallax/Parallax.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Footer from "components/Footer/Footer.js";
+
+// core components
+import Card from "components/Card/Card.js";
+import CardBody from "components/Card/CardBody.js";
+import Button from "components/CustomButtons/Button.js";
+import CardAvatar from "components/Card/CardAvatar.js";
+import marc from "assets/img/faces/marc.jpg";
+import LibraryBooks from "@material-ui/icons/LibraryBooks";
+import Dialog from "@material-ui/core/Dialog";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogActions from "@material-ui/core/DialogActions";
+import Slide from "@material-ui/core/Slide";
+import Close from "@material-ui/icons/Close";
+import { cardTitle } from "assets/jss/material-kit-pro-react.js";
+
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="down" ref={ref} {...props} />;
+});
+
+Transition.displayName = "Transition";
+
+const style = {
+  cardTitle,
+  textCenter: {
+    textAlign: "center",
+  },
+  textRight: {
+    textAlign: "right",
+  },
+};
+
 // sections for this page Added by JOB VIZ TEAM
 import { Link } from "react-router-dom";
 
 import JobManager from "../modules/JobManager";
 import "../styling/Style.css";
-import { Title } from "../title/Title";
-import { Table } from "../table/Table";
+
 import { compare, addIdPathway, makeUrlPath } from "../Helper";
 import { LrAutoSearchV2 } from "../search/LRautoSearchV2";
 import { Level4Card } from "./Level4Card";
@@ -35,6 +66,7 @@ export const Level4List = (props) => {
   const grandparent = props.level1;
   const parent = props.level2;
   const level = props.level3;
+  const [classicModal, setClassicModal] = React.useState(false);
   const [originalJobs, setOriginalJobs] = useState([]);
   const [jobs, setJobs] = useState([]);
   //alphabatized jobs Array
@@ -74,6 +106,7 @@ export const Level4List = (props) => {
   //Make Parent and grandparent Names into url frienldy stirng
   const parentUrl = makeUrlPath(parentName);
   const grandparentUrl = makeUrlPath(grandparentName);
+  const title = makeUrlPath(jobObject.title);
 
   ////FETCH ORIGINAL JOB DATA
   useEffect(() => {
@@ -154,6 +187,7 @@ export const Level4List = (props) => {
     document.body.scrollTop = 0;
   });
   const classes = useStyles();
+
   return (
     <div>
       <Header
@@ -167,7 +201,7 @@ export const Level4List = (props) => {
         }}
       />
 
-      <Parallax image="" filter="dark" small>
+      <Parallax image={require("assets/img/bg12.jpg")} filter="dark" small>
         <div className={classes.container}>
           <GridContainer>
             <GridItem
@@ -184,33 +218,24 @@ export const Level4List = (props) => {
                 Explore career possibilites, see how fields relate and overlap,
                 and get a glimpse at industry education and financial data.
               </h4>
+              <h4>What do you want to be?</h4>
             </GridItem>
           </GridContainer>
         </div>
       </Parallax>
+
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          <div>
-            <Title />
-          </div>
-          <h6>Level 4 List</h6>
-          <div>
-            <LrAutoSearchV2
-              jobs={jobs}
-              jobTitleList={jobTitleList}
-              {...props}
-            />
-          </div>
+          {/* <h1>Level4</h1> */}
+          {/* //////////////// S E A R C H  C O M P O N E N T///////////////// */}
+          <LrAutoSearchV2 jobs={jobs} jobTitleList={jobTitleList} {...props} />
+
           <div className="">
-            {/* ///////      N  A  V     C  R  U  M  S      /////////////// */}
+            {/* ///////      C  R  U  M  S      /////////////// */}
+
             <div className="crumbs">
               <small>
-                <Link to={"/jobviz"}>Jobs</Link>
-              </small>
-            </div>
-            <div className="crumbs">
-              <small>
-                <Link to={`/jobviz/1`}>Job Categories </Link>
+                <Link to={`/jobviz`}>Job Categories </Link>
               </small>
             </div>
             <div className="crumbs">
@@ -229,17 +254,125 @@ export const Level4List = (props) => {
             </div>
           </div>
 
-          <div className="">
-            {/* //////////////// P A R E N T ////////////////// */}
-          </div>
-          <div className="">
-            <div className="card-parent-container">
-              <div className="card-parent">
-                <p>{jobObject.ttl}</p>
-              </div>
-            </div>
+          {/* //////////////// P A R E N T ////////////////// */}
+
+          <div className="crumbs">
+            <Card className={classes.textCenter} style={{ width: "20rem" }}>
+              <CardAvatar profile>
+                <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                  <img src={marc} alt="..." />
+                </a>
+              </CardAvatar>
+              <CardBody>
+                <h4 className={classes.cardTitle}>{jobObject.title}</h4>
+
+                <Button
+                  onClick={() => {
+                    setClassicModal(true);
+                  }}
+                >
+                  <LibraryBooks />
+                  Details
+                </Button>
+
+                <Dialog
+                  classes={{
+                    root: classes.modalRoot,
+                    paper: classes.modal,
+                  }}
+                  open={classicModal}
+                  TransitionComponent={Transition}
+                  keepMounted
+                  onClose={() => setClassicModal(false)}
+                  aria-labelledby="classic-modal-slide-title"
+                  aria-describedby="classic-modal-slide-description"
+                >
+                  <DialogTitle
+                    id="classic-modal-slide-title"
+                    disableTypography
+                    className={classes.modalHeader}
+                  >
+                    <Button
+                      simple
+                      className={classes.modalCloseButton}
+                      key="close"
+                      aria-label="Close"
+                      onClick={() => setClassicModal(false)}
+                    >
+                      {" "}
+                      <Close className={classes.modalClose} />
+                    </Button>
+                    <h4 className={classes.modalTitle}>
+                      {jobObject.id}: {jobObject.title}
+                    </h4>
+                    <h6>Definition: {jobObject.Def}</h6>
+                  </DialogTitle>
+                  <DialogContent
+                    id="classic-modal-slide-description"
+                    className={classes.modalBody}
+                  >
+                    <div className="table-parent">
+                      {/* <div className="table-top">
+                            <div className="table-title">
+                              <h4>Job id: {jobObject.id}</h4>
+                              <h4>Job: {jobObject.title} </h4>
+                              <h6>Definition: {jobObject.Def}</h6>
+                              <h6>Definition: {jobObject.Def}</h6>
+                            </div>
+                          </div> */}
+                      <div className="table-mid">
+                        <div className="table-child">
+                          <h6>Median 2017 Annual Wage:</h6>
+                          <small>{jobObject.MedianAnnualWage2017}</small>
+                        </div>
+                        <div className="table-child">
+                          <h6>Education Needed:</h6>
+                          <small>
+                            {jobObject.TypicalEducationNeededForEntry}
+                          </small>
+                        </div>
+                        <div className="table-child">
+                          <h6>
+                            Work Experience In a Related Occupation Desired:
+                          </h6>
+                          <small>
+                            {jobObject.WorkExperienceInARelatedOccupation}
+                          </small>
+                        </div>
+                        <div className="table-child">
+                          <h6>On-the-job Training:</h6>
+                          <small>
+                            {
+                              jobObject.TypicalOnTheJobTrainingNeededToAttainCompetencyInTheOccupation
+                            }
+                          </small>
+                        </div>
+                        <div className="table-child">
+                          <h6>2016 Employement:</h6>
+                          <small>{jobObject.Employment2016}</small>
+                        </div>
+                        <div className="table-child">
+                          <h6>2026 Employement:</h6>
+                          <small>{jobObject.Employment2026}</small>
+                        </div>
+                      </div>
+                    </div>
+                  </DialogContent>
+                  <DialogActions className={classes.modalFooter}>
+                    <Button
+                      onClick={() => setClassicModal(false)}
+                      color="danger"
+                      simple
+                    >
+                      Close
+                    </Button>
+                  </DialogActions>
+                </Dialog>
+              </CardBody>
+            </Card>
           </div>
 
+          {/* Where children are mapped out to individual card component */}
           <div className="">
             <div className="card-child-container">
               {alphaList.map((job, k) => {
@@ -247,16 +380,18 @@ export const Level4List = (props) => {
                   if (jobObject.children[j] === job.id) {
                     return (
                       <div key={k}>
-                        <Level4Card key={job.id} job={job} {...props} />
+                        <Level4Card
+                          key={job.id}
+                          titleParent={title}
+                          job={job}
+                          {...props}
+                        />
                       </div>
                     );
                   }
                 }
               })}
             </div>
-          </div>
-          <div>
-            <Table jobObject={jobObject} {...props} />
           </div>
         </div>
       </div>

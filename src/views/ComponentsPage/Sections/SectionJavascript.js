@@ -70,7 +70,7 @@ export default function SectionJavascript() {
   const [smallModal, setSmallModal] = React.useState(false);
   const [loginModal, setLoginModal] = React.useState(false);
   const [signupModal, setSignupModal] = React.useState(false);
-  const handleToggle = value => {
+  const handleToggle = (value) => {
     const currentIndex = checked.indexOf(value);
     const newChecked = [...checked];
 
@@ -102,7 +102,7 @@ export default function SectionJavascript() {
                 <Dialog
                   classes={{
                     root: classes.modalRoot,
-                    paper: classes.modal
+                    paper: classes.modal,
                   }}
                   open={classicModal}
                   TransitionComponent={Transition}
@@ -167,7 +167,7 @@ export default function SectionJavascript() {
                 <Dialog
                   classes={{
                     root: classes.modalRoot,
-                    paper: classes.modal
+                    paper: classes.modal,
                   }}
                   open={noticeModal}
                   TransitionComponent={Transition}
@@ -268,7 +268,7 @@ export default function SectionJavascript() {
                 <Dialog
                   classes={{
                     root: classes.modalRoot,
-                    paper: classes.modal + " " + classes.modalSmall
+                    paper: classes.modal + " " + classes.modalSmall,
                   }}
                   open={smallModal}
                   TransitionComponent={Transition}
@@ -338,7 +338,7 @@ export default function SectionJavascript() {
                 <Dialog
                   classes={{
                     root: classes.modalRoot,
-                    paper: classes.modal + " " + classes.modalLogin
+                    paper: classes.modal + " " + classes.modalLogin,
                   }}
                   open={loginModal}
                   TransitionComponent={Transition}
@@ -412,7 +412,7 @@ export default function SectionJavascript() {
                           <CustomInput
                             id="login-modal-first"
                             formControlProps={{
-                              fullWidth: true
+                              fullWidth: true,
                             }}
                             inputProps={{
                               startAdornment: (
@@ -420,13 +420,13 @@ export default function SectionJavascript() {
                                   <Face className={classes.icon} />
                                 </InputAdornment>
                               ),
-                              placeholder: "First Name..."
+                              placeholder: "First Name...",
                             }}
                           />
                           <CustomInput
                             id="login-modal-email"
                             formControlProps={{
-                              fullWidth: true
+                              fullWidth: true,
                             }}
                             inputProps={{
                               startAdornment: (
@@ -434,13 +434,13 @@ export default function SectionJavascript() {
                                   <Mail className={classes.icon} />
                                 </InputAdornment>
                               ),
-                              placeholder: "Email..."
+                              placeholder: "Email...",
                             }}
                           />
                           <CustomInput
                             id="login-modal-pass"
                             formControlProps={{
-                              fullWidth: true
+                              fullWidth: true,
                             }}
                             inputProps={{
                               startAdornment: (
@@ -450,7 +450,7 @@ export default function SectionJavascript() {
                                   </Icon>
                                 </InputAdornment>
                               ),
-                              placeholder: "Password..."
+                              placeholder: "Password...",
                             }}
                           />
                         </CardBody>
@@ -478,7 +478,7 @@ export default function SectionJavascript() {
                 <Dialog
                   classes={{
                     root: classes.modalRoot,
-                    paper: classes.modal + " " + classes.modalSignup
+                    paper: classes.modal + " " + classes.modalSignup,
                   }}
                   open={signupModal}
                   TransitionComponent={Transition}
@@ -586,7 +586,7 @@ export default function SectionJavascript() {
                             <CustomInput
                               formControlProps={{
                                 fullWidth: true,
-                                className: classes.customFormControlClasses
+                                className: classes.customFormControlClasses,
                               }}
                               inputProps={{
                                 startAdornment: (
@@ -599,13 +599,13 @@ export default function SectionJavascript() {
                                     />
                                   </InputAdornment>
                                 ),
-                                placeholder: "First Name..."
+                                placeholder: "First Name...",
                               }}
                             />
                             <CustomInput
                               formControlProps={{
                                 fullWidth: true,
-                                className: classes.customFormControlClasses
+                                className: classes.customFormControlClasses,
                               }}
                               inputProps={{
                                 startAdornment: (
@@ -618,13 +618,13 @@ export default function SectionJavascript() {
                                     />
                                   </InputAdornment>
                                 ),
-                                placeholder: "Email..."
+                                placeholder: "Email...",
                               }}
                             />
                             <CustomInput
                               formControlProps={{
                                 fullWidth: true,
-                                className: classes.customFormControlClasses
+                                className: classes.customFormControlClasses,
                               }}
                               inputProps={{
                                 startAdornment: (
@@ -639,12 +639,12 @@ export default function SectionJavascript() {
                                     </Icon>
                                   </InputAdornment>
                                 ),
-                                placeholder: "Password..."
+                                placeholder: "Password...",
                               }}
                             />
                             <FormControlLabel
                               classes={{
-                                label: classes.label
+                                label: classes.label,
                               }}
                               control={
                                 <Checkbox
@@ -658,7 +658,7 @@ export default function SectionJavascript() {
                                   }
                                   classes={{
                                     checked: classes.checked,
-                                    root: classes.checkRoot
+                                    root: classes.checkRoot,
                                   }}
                                 />
                               }
@@ -722,23 +722,23 @@ export default function SectionJavascript() {
             <div className={classes.title}>
               <h3>Popovers</h3>
             </div>
-            <Button onClick={event => setAnchorElLeft(event.currentTarget)}>
+            <Button onClick={(event) => setAnchorElLeft(event.currentTarget)}>
               On left
             </Button>
             <Popover
               classes={{
-                paper: classes.popover
+                paper: classes.popover,
               }}
               open={Boolean(anchorElLeft)}
               anchorEl={anchorElLeft}
               onClose={() => setAnchorElLeft(null)}
               anchorOrigin={{
                 vertical: "center",
-                horizontal: "left"
+                horizontal: "left",
               }}
               transformOrigin={{
                 vertical: "center",
-                horizontal: "right"
+                horizontal: "right",
               }}
             >
               <h3 className={classes.popoverHeader}>Popover on left</h3>
@@ -747,23 +747,23 @@ export default function SectionJavascript() {
                 Here will be some very useful information about his popover.
               </div>
             </Popover>
-            <Button onClick={event => setAnchorElTop(event.currentTarget)}>
+            <Button onClick={(event) => setAnchorElTop(event.currentTarget)}>
               On top
             </Button>
             <Popover
               classes={{
-                paper: classes.popover
+                paper: classes.popover,
               }}
               open={Boolean(anchorElTop)}
               anchorEl={anchorElTop}
               onClose={() => setAnchorElTop(null)}
               anchorOrigin={{
                 vertical: "top",
-                horizontal: "center"
+                horizontal: "center",
               }}
               transformOrigin={{
                 vertical: "bottom",
-                horizontal: "center"
+                horizontal: "center",
               }}
             >
               <h3 className={classes.popoverHeader}>Popover on top</h3>
@@ -771,23 +771,23 @@ export default function SectionJavascript() {
                 Here will be some very useful information about his popover.
               </div>
             </Popover>
-            <Button onClick={event => setAnchorElBottom(event.currentTarget)}>
+            <Button onClick={(event) => setAnchorElBottom(event.currentTarget)}>
               On bottom
             </Button>
             <Popover
               classes={{
-                paper: classes.popover
+                paper: classes.popover,
               }}
               open={Boolean(anchorElBottom)}
               anchorEl={anchorElBottom}
               onClose={() => setAnchorElBottom(null)}
               anchorOrigin={{
                 vertical: "bottom",
-                horizontal: "center"
+                horizontal: "center",
               }}
               transformOrigin={{
                 vertical: "top",
-                horizontal: "center"
+                horizontal: "center",
               }}
             >
               <h3 className={classes.popoverHeader}>Popover on bottom</h3>
@@ -795,23 +795,23 @@ export default function SectionJavascript() {
                 Here will be some very useful information about his popover.
               </div>
             </Popover>
-            <Button onClick={event => setAnchorElRight(event.currentTarget)}>
+            <Button onClick={(event) => setAnchorElRight(event.currentTarget)}>
               On right
             </Button>
             <Popover
               classes={{
-                paper: classes.popover
+                paper: classes.popover,
               }}
               open={Boolean(anchorElRight)}
               anchorEl={anchorElRight}
               onClose={() => setAnchorElRight(null)}
               anchorOrigin={{
                 vertical: "center",
-                horizontal: "right"
+                horizontal: "right",
               }}
               transformOrigin={{
                 vertical: "center",
-                horizontal: "left"
+                horizontal: "left",
               }}
             >
               <h3 className={classes.popoverHeader}>Popover on right</h3>
@@ -871,18 +871,18 @@ export default function SectionJavascript() {
                   {
                     title: "Collapsible group Item #1",
                     content:
-                      "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS."
+                      "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.",
                   },
                   {
                     title: "Collapsible group Item #2",
                     content:
-                      "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS."
+                      "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.",
                   },
                   {
                     title: "Collapsible group Item #3",
                     content:
-                      "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS."
-                  }
+                      "Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.",
+                  },
                 ]}
               />
             </GridItem>
@@ -915,45 +915,45 @@ export default function SectionJavascript() {
               <h4>Simple Material Input</h4>
               <CustomFileInput
                 formControlProps={{
-                  fullWidth: true
+                  fullWidth: true,
                 }}
                 inputProps={{
-                  placeholder: "Simple chooser..."
+                  placeholder: "Simple chooser...",
                 }}
               />
               <CustomFileInput
                 formControlProps={{
-                  fullWidth: true
+                  fullWidth: true,
                 }}
                 inputProps={{
-                  placeholder: "Single File..."
+                  placeholder: "Single File...",
                 }}
                 endButton={{
                   buttonProps: {
                     round: true,
                     color: "primary",
                     justIcon: true,
-                    fileButton: true
+                    fileButton: true,
                   },
-                  icon: <AttachFile />
+                  icon: <AttachFile />,
                 }}
               />
               <CustomFileInput
                 multiple
                 formControlProps={{
-                  fullWidth: true
+                  fullWidth: true,
                 }}
                 inputProps={{
-                  placeholder: "Multiple File..."
+                  placeholder: "Multiple File...",
                 }}
                 endButton={{
                   buttonProps: {
                     round: true,
                     color: "info",
                     justIcon: true,
-                    fileButton: true
+                    fileButton: true,
                   },
-                  icon: <Layers />
+                  icon: <Layers />,
                 }}
               />
             </GridItem>

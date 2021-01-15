@@ -101,12 +101,7 @@ export default function HeaderLinks(props) {
           JobViz
         </Link>
       </ListItem>
-      {/* /////THis is for test not to be here for real REMOVE when REAL Launch */}
-      <ListItem className={classes.listItem}>
-        <Link to="/components" className={classes.navLink}>
-          Components
-        </Link>
-      </ListItem>
+
       <ListItem className={classes.listItem}>
         <Link to="/contact-us" className={classes.navLink}>
           Contact Us
