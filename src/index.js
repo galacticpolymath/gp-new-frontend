@@ -28,16 +28,15 @@ import LandingPage from "views/LandingPage/LandingPage.js";
 import PricingPage from "views/PricingPage/PricingPage.js";
 import ContactUsPage from "views/ContactUsPage/ContactUsPage.js";
 // J O B  V I Z
-import { Level0List } from "views/JobViz/level0/Level0.js";
+
 import { Level1List } from "views/JobViz/level1/Level1.js";
 import { Level2List } from "views/JobViz/level2/Level2.js";
-import { Level2Endpoint } from "views/JobViz/level2/Level2Endpoint.js";
+
 import { Level3List } from "views/JobViz/level3/Level3.js";
-import { Level3Endpoint } from "views/JobViz/level3/Level3Endpoint.js";
 import { Level4List } from "views/JobViz/level4/Level4.js";
-import { Level4Endpoint } from "views/JobViz/level4/Level4Endpoint.js";
 // import BlogPostPage from "views/BlogPostPage/BlogPostPage.js";
-import ComponentsPage from "views/ComponentsPage/ComponentsPage.js";
+
+// import ComponentsPage from "views/ComponentsPage/ComponentsPage.js";
 // import ContactUsPage from "views/ContactUsPage/ContactUsPage.js";
 // import EcommercePage from "views/EcommercePage/EcommercePage.js";
 // import LoginPage from "views/LoginPage/LoginPage.js";
@@ -59,25 +58,21 @@ ReactDOM.render(
       <Route path="/contact-us" component={ContactUsPage} />
       <Route path="/hire-us" component={PricingPage} />
       {/* ///This is here to help visulize all of Material Kit React's built in component features */}
-      <Route path="/components" component={ComponentsPage} />
+      {/* <Route path="/components" component={ComponentsPage} /> */}
+
       {/* J O B V I Z */}
-      <Route
+      {/* <Route
         exact
         path="/jobviz"
         render={(props) => {
           return <Level0List {...props} />;
         }}
-      />
+      /> */}
       <Route
         exact
-        path="/jobviz/:level0"
+        path="/jobviz"
         render={(props) => {
-          return (
-            <Level1List
-              level0={parseInt(props.match.params.level0)}
-              {...props}
-            />
-          );
+          return <Level1List level0={1} {...props} />;
         }}
       />
       <Route
@@ -86,7 +81,7 @@ ReactDOM.render(
         render={(props) => {
           return (
             <Level2List
-              level0={parseInt(props.match.params.level0)}
+              level0={1}
               level1={parseInt(props.match.params.level1)}
               {...props}
             />
@@ -98,8 +93,8 @@ ReactDOM.render(
         path="/jobviz/:level0/:level1/:level2/:title/endpoint"
         render={(props) => {
           return (
-            <Level2Endpoint
-              level0={parseInt(props.match.params.level0)}
+            <Level2List
+              level0={1}
               level1={parseInt(props.match.params.level1)}
               level2={parseInt(props.match.params.level2)}
               {...props}
@@ -113,7 +108,7 @@ ReactDOM.render(
         render={(props) => {
           return (
             <Level3List
-              level0={parseInt(props.match.params.level0)}
+              level0={1}
               level1={parseInt(props.match.params.level1)}
               level2={parseInt(props.match.params.level2)}
               {...props}
@@ -126,8 +121,8 @@ ReactDOM.render(
         path="/jobviz/:level0/:level1/:level2/:level3/:title/endpoint"
         render={(props) => {
           return (
-            <Level3Endpoint
-              level0={parseInt(props.match.params.level0)}
+            <Level3List
+              level0={1}
               level1={parseInt(props.match.params.level1)}
               level2={parseInt(props.match.params.level2)}
               level3={parseInt(props.match.params.level3)}
@@ -142,7 +137,7 @@ ReactDOM.render(
         render={(props) => {
           return (
             <Level4List
-              level0={parseInt(props.match.params.level0)}
+              level0={1}
               level1={parseInt(props.match.params.level1)}
               level2={parseInt(props.match.params.level2)}
               level3={parseInt(props.match.params.level3)}
@@ -156,8 +151,8 @@ ReactDOM.render(
         path="/jobviz/:level0/:level1/:level2/:level3/:level4/:title/endpoint"
         render={(props) => {
           return (
-            <Level4Endpoint
-              level0={parseInt(props.match.params.level0)}
+            <Level4List
+              level0={1}
               level1={parseInt(props.match.params.level1)}
               level2={parseInt(props.match.params.level2)}
               level3={parseInt(props.match.params.level3)}
