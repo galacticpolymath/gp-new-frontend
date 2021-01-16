@@ -19,6 +19,8 @@ import Footer from "components/Footer/Footer.js";
 
 // @material-ui/core components
 
+import brick1 from "assets/img/faces/brick1.jpg";
+
 // core components
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
@@ -198,15 +200,7 @@ export const Level1List = (props) => {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.main}>
           <GridContainer>
-            <GridItem
-              md={8}
-              sm={8}
-              className={classNames(
-                classes.mlAuto,
-                classes.mrAuto,
-                classes.textCenter
-              )}
-            >
+            <GridItem>
               {/* //////////////// S E A R C H  C O M P O N E N T///////////////// */}
               <LrAutoSearchV2
                 jobs={jobs}
@@ -223,7 +217,7 @@ export const Level1List = (props) => {
             <Card className={classes.textCenter} style={{ width: "20rem" }}>
               <CardAvatar profile>
                 <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                  <img src={marc} alt="..." />
+                  <img src={brick1} alt="..." />
                 </a>
               </CardAvatar>
               <CardBody>

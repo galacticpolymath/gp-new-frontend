@@ -24,6 +24,8 @@ import CardBody from "components/Card/CardBody.js";
 import Button from "components/CustomButtons/Button.js";
 import CardAvatar from "components/Card/CardAvatar.js";
 import marc from "assets/img/faces/marc.jpg";
+import brick1 from "assets/img/faces/brick1.jpg";
+import branch2 from "assets/img/faces/branch2.jpg";
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import Dialog from "@material-ui/core/Dialog";
 import DialogTitle from "@material-ui/core/DialogTitle";
@@ -174,7 +176,7 @@ export const Level2List = (props) => {
                 Explore career possibilites, see how fields relate and overlap,
                 and get a glimpse at industry education and financial data.
               </h4>
-              <h4>What do you want to be?</h4>
+              <h4 style={{ color: "white" }}>What do you want to be?</h4>
             </GridItem>
           </GridContainer>
         </div>
@@ -183,15 +185,7 @@ export const Level2List = (props) => {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.main}>
           <GridContainer>
-            <GridItem
-              md={8}
-              sm={8}
-              className={classNames(
-                classes.mlAuto,
-                classes.mrAuto,
-                classes.textCenter
-              )}
-            >
+            <GridItem>
               {/* //////////////// S E A R C H  C O M P O N E N T///////////////// */}
               <LrAutoSearchV2
                 jobs={jobs}
@@ -204,18 +198,25 @@ export const Level2List = (props) => {
 
         {/* //////////////// C R U M B S////////////////// */}
         <div className={classes.container}>
-          <div className="crumbs">
-            <small>
-              <Link to={`/jobviz`}>Job Categories</Link>
-            </small>
-          </div>
+          <div id="crumb-container">
+            <div className="crumb-img-container">
+              <img
+                style={{ height: "40px", width: "40px" }}
+                src={brick1}
+                alt="brick nodes"
+              />
 
+              <h6>
+                <Link to={`/jobviz`}>Job Categories</Link>
+              </h6>
+            </div>
+          </div>
           {/* //////////////// P A R E N T ////////////////// */}
           <div className="crumbs">
             <Card className={classes.textCenter} style={{ width: "20rem" }}>
               <CardAvatar profile>
                 <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                  <img src={marc} alt="..." />
+                  <img src={branch2} alt="..." />
                 </a>
               </CardAvatar>
               <CardBody>
@@ -326,15 +327,13 @@ export const Level2List = (props) => {
                 for (let j = 0; j <= jobObject.children.length; j++) {
                   if (jobObject.children[j] === job.id) {
                     return (
-                      <div key={k}>
-                        <Level2Card
-                          titleParent={title}
-                          key={job.id}
-                          level={level}
-                          job={job}
-                          {...props}
-                        />
-                      </div>
+                      <Level2Card
+                        titleParent={title}
+                        key={job.id}
+                        level={level}
+                        job={job}
+                        {...props}
+                      />
                     );
                   }
                 }
