@@ -16,6 +16,7 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Footer from "components/Footer/Footer.js";
 
+import { ModalTable } from "../modalTable/ModalTable";
 // @material-ui/core components
 
 // core components
@@ -23,13 +24,13 @@ import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import Button from "components/CustomButtons/Button.js";
 import CardAvatar from "components/Card/CardAvatar.js";
-import marc from "assets/img/faces/marc.jpg";
+// import marc from "assets/img/faces/marc.jpg";
 import brick1 from "assets/img/faces/brick1.jpg";
 import branch2 from "assets/img/faces/branch2.jpg";
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import Dialog from "@material-ui/core/Dialog";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogContent from "@material-ui/core/DialogContent";
+// import DialogTitle from "@material-ui/core/DialogTitle";
+// import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
 import Slide from "@material-ui/core/Slide";
 import Close from "@material-ui/icons/Close";
@@ -141,10 +142,11 @@ export const Level2List = (props) => {
     getAllJobNames(jobs);
   }, [jobs, level]);
 
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
-  });
+  //THis causes the page to jump to top and it's super not helpful with all the navigation buttons
+  // React.useEffect(() => {
+  //   window.scrollTo(0, 0);
+  //   document.body.scrollTop = 0;
+  // });
   const classes = useStyles();
   return (
     <div>
@@ -243,69 +245,7 @@ export const Level2List = (props) => {
                   aria-labelledby="classic-modal-slide-title"
                   aria-describedby="classic-modal-slide-description"
                 >
-                  <DialogTitle
-                    id="classic-modal-slide-title"
-                    disableTypography
-                    className={classes.modalHeader}
-                  >
-                    <Button
-                      simple
-                      className={classes.modalCloseButton}
-                      key="close"
-                      aria-label="Close"
-                      onClick={() => setClassicModal(false)}
-                    >
-                      {" "}
-                      <Close className={classes.modalClose} />
-                    </Button>
-                    <h4 className={classes.modalTitle}>
-                      {jobObject.id}: {jobObject.title}
-                    </h4>
-                    <h6>Definition: {jobObject.Def}</h6>
-                  </DialogTitle>
-                  <DialogContent
-                    id="classic-modal-slide-description"
-                    className={classes.modalBody}
-                  >
-                    <div className="table-parent">
-                      <div className="table-mid">
-                        <div className="table-child">
-                          <h6>Median 2017 Annual Wage:</h6>
-                          <small>{jobObject.MedianAnnualWage2017}</small>
-                        </div>
-                        <div className="table-child">
-                          <h6>Education Needed:</h6>
-                          <small>
-                            {jobObject.TypicalEducationNeededForEntry}
-                          </small>
-                        </div>
-                        <div className="table-child">
-                          <h6>
-                            Work Experience In a Related Occupation Desired:
-                          </h6>
-                          <small>
-                            {jobObject.WorkExperienceInARelatedOccupation}
-                          </small>
-                        </div>
-                        <div className="table-child">
-                          <h6>On-the-job Training:</h6>
-                          <small>
-                            {
-                              jobObject.TypicalOnTheJobTrainingNeededToAttainCompetencyInTheOccupation
-                            }
-                          </small>
-                        </div>
-                        <div className="table-child">
-                          <h6>2016 Employement:</h6>
-                          <small>{jobObject.Employment2016}</small>
-                        </div>
-                        <div className="table-child">
-                          <h6>2026 Employement:</h6>
-                          <small>{jobObject.Employment2026}</small>
-                        </div>
-                      </div>
-                    </div>
-                  </DialogContent>
+                  <ModalTable jobObject={jobObject} />
                   <DialogActions className={classes.modalFooter}>
                     <Button
                       onClick={() => setClassicModal(false)}
