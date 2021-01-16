@@ -5,21 +5,18 @@ input[type="text"] {
 #searchbar-container {
   display: flex;
   justify-content: center;
-  margin-top: 1em;
-  margin-bottom: 1;
-  margin-left: 0em;
-  margin-right: 0em;
+  padding: 1em;
 }
 
 .crumb-img-container {
   display: flex;
-  justify-content: center;
+
   align-items: center;
 }
 #crumb-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* align-items: flex-start; */
   align-items: center;
 }
 .jobviz-parent,

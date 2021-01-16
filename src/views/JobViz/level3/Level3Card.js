@@ -14,11 +14,12 @@ import CardAvatar from "components/Card/CardAvatar.js";
 import marc from "assets/img/faces/marc.jpg";
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import Dialog from "@material-ui/core/Dialog";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogContent from "@material-ui/core/DialogContent";
+// import DialogTitle from "@material-ui/core/DialogTitle";
+// import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
 import Slide from "@material-ui/core/Slide";
-import Close from "@material-ui/icons/Close";
+// import Close from "@material-ui/icons/Close";
+import { ModalTable } from "../modalTable/ModalTable";
 
 import { cardTitle } from "assets/jss/material-kit-pro-react.js";
 
@@ -165,80 +166,7 @@ export const Level3Card = (props) => {
               aria-labelledby="classic-modal-slide-title"
               aria-describedby="classic-modal-slide-description"
             >
-              <DialogTitle
-                id="classic-modal-slide-title"
-                disableTypography
-                className={classes.modalHeader}
-              >
-                <Button
-                  simple
-                  className={classes.modalCloseButton}
-                  key="close"
-                  aria-label="Close"
-                  onClick={() => {
-                    props.history.push(
-                      `/jobviz/${greatGrandparent}/${grandparent}/${parent}/${titleParent}`
-                    );
-                    setClassicModal(false);
-                  }}
-                >
-                  {" "}
-                  <Close className={classes.modalClose} />
-                </Button>
-                <h4 className={classes.modalTitle}>
-                  {categoryObject.id}: {categoryObject.title}
-                </h4>
-                <h6>Definition: {categoryObject.Def}</h6>
-              </DialogTitle>
-              <DialogContent
-                id="classic-modal-slide-description"
-                className={classes.modalBody}
-              >
-                <div className="table-parent">
-                  {/* <div className="table-top">
-                            <div className="table-title">
-                              <h4>Job id: {categoryObject.id}</h4>
-                              <h4>Job: {categoryObject.title} </h4>
-                              <h6>Definition: {categoryObject.Def}</h6>
-                              <h6>Definition: {categoryObject.Def}</h6>
-                            </div>
-                          </div> */}
-                  <div className="table-mid">
-                    <div className="table-child">
-                      <h6>Median 2017 Annual Wage:</h6>
-                      <small>{categoryObject.MedianAnnualWage2017}</small>
-                    </div>
-                    <div className="table-child">
-                      <h6>Education Needed:</h6>
-                      <small>
-                        {categoryObject.TypicalEducationNeededForEntry}
-                      </small>
-                    </div>
-                    <div className="table-child">
-                      <h6>Work Experience In a Related Occupation Desired:</h6>
-                      <small>
-                        {categoryObject.WorkExperienceInARelatedOccupation}
-                      </small>
-                    </div>
-                    <div className="table-child">
-                      <h6>On-the-job Training:</h6>
-                      <small>
-                        {
-                          categoryObject.TypicalOnTheJobTrainingNeededToAttainCompetencyInTheOccupation
-                        }
-                      </small>
-                    </div>
-                    <div className="table-child">
-                      <h6>2016 Employement:</h6>
-                      <small>{categoryObject.Employment2016}</small>
-                    </div>
-                    <div className="table-child">
-                      <h6>2026 Employement:</h6>
-                      <small>{categoryObject.Employment2026}</small>
-                    </div>
-                  </div>
-                </div>
-              </DialogContent>
+              <ModalTable jobObject={categoryObject} />
               <DialogActions className={classes.modalFooter}>
                 <Button
                   onClick={() => {
