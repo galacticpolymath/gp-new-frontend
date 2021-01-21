@@ -47,7 +47,9 @@ export default function BlogPostsPage() {
         <div className={classes.container}>
           <GridContainer>
             <GridItem
+              xs={12}
               sm={6}
+              md={6}
               className={classes.textCenter}
               style={{ paddingTop: "5%", paddingRight: "25px" }}
             >
@@ -60,7 +62,9 @@ export default function BlogPostsPage() {
               </h4>
             </GridItem>
             <GridItem
+              xs={12}
               sm={6}
+              md={6}
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,

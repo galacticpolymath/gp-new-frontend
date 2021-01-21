@@ -46,7 +46,9 @@ export default function PricingPage() {
         <div className={classes.container}>
           <GridContainer>
             <GridItem
+              xs={12}
               sm={6}
+              md={6}
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,
@@ -62,7 +64,9 @@ export default function PricingPage() {
               </h4>
             </GridItem>
             <GridItem
+              xs={12}
               sm={6}
+              md={6}
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,

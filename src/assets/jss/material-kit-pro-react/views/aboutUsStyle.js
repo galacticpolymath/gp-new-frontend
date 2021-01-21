@@ -65,6 +65,24 @@ const aboutUsStyle = {
   bgColor: {
     backgroundColor: "#2c83c3",
   },
+  "@media (max-width: 991px)": {
+    hideLogo: {
+      display: "none",
+    },
+  },
+
+  "@media (max-width: 992px)": {
+    /* phones */
+    hideLogo: {
+      display: "none",
+      maxWidth: "100%",
+    },
+  },
+  // "@media (max-width: 992px)": {
+  //   width100: {
+  //     width: "200%",
+  //   },
+  // },
 };
 
 export default aboutUsStyle;

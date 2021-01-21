@@ -130,7 +130,9 @@ export default function ContactUsPage() {
         <div className={classes.container}>
           <GridContainer>
             <GridItem
+              xs={12}
               sm={6}
+              md={6}
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,
@@ -148,7 +150,9 @@ export default function ContactUsPage() {
               </h4>
             </GridItem>
             <GridItem
+              xs={12}
               sm={6}
+              md={6}
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,

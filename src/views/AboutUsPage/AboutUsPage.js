@@ -26,7 +26,7 @@ import aboutUsStyle from "assets/jss/material-kit-pro-react/views/aboutUsStyle.j
 
 const useStyles = makeStyles(aboutUsStyle);
 
-export default function AboutUsPage() {
+export default function AboutUsPage(...rest) {
   React.useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
@@ -42,12 +42,15 @@ export default function AboutUsPage() {
           height: 300,
           color: "info",
         }}
+        {...rest}
       />
       <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
           <GridContainer>
             <GridItem
+              xs={12}
               sm={6}
+              md={6}
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,
@@ -67,18 +70,21 @@ export default function AboutUsPage() {
               </h4>
             </GridItem>
             <GridItem
+              xs={12}
               sm={6}
+              md={6}
               className={classNames(
+                classes.hideLogo,
                 classes.mlAuto,
                 classes.mrAuto,
                 classes.textCenter
               )}
             >
-              <img
+              {/* <img
                 src={require("assets/img/hero-images/AboutPage_Bubbles.png")}
                 height="auto"
                 width="120%"
-              />
+              /> */}
             </GridItem>
           </GridContainer>
         </div>
