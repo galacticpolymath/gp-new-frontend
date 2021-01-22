@@ -26,22 +26,49 @@ export const ModalTable = (props) => {
   const jobObject = props.jobObject;
   const classes = useStyles();
   const [classicModal, setClassicModal] = React.useState(false);
+  const [employ2016, setEmploy2016] = useState("");
+  const [employ2026, setEmploy2026] = useState("");
+  const [formatedEmploy2016, setFormatedEmploy2016] = useState("");
+  const [formatedEmploy2026, setFormatedEmploy2026] = useState("");
+  const [percent, setPercent] = useState("");
 
   const makeCorrectValue = (x) => {
-    // console.log(x);
-    x = parseFloat(x);
-    x = x * 1000.0;
-    // x = toString(x);
-    return x;
+    const xVal = x;
+    const newVal = xVal.replace(/,/g, "");
+    let numVal = parseFloat(newVal);
+    numVal = numVal * 1000.0;
+    const stringVal = String(numVal).replace(/^\d+/, (number) =>
+      [...number]
+        .map(
+          (digit, index, digits) =>
+            (!index || (digits.length - index) % 3 ? "" : ",") + digit
+        )
+        .join("")
+    );
+
+    return stringVal;
   };
 
-  const employ2016 = makeCorrectValue(jobObject.Employment2016);
-  const employ2026 = makeCorrectValue(jobObject.Employment2026);
+  function getNumberWithSign(input) {
+    const stringPercent = String(input);
+    if (stringPercent.includes("-")) {
+      return stringPercent;
+    } else {
+      return `+${stringPercent}`;
+    }
+  }
 
-  // const Employment2016 = (
-  //   parseFloat(employ2016.replace(",", "") * 1000.0
-  // ).toLocaleString();
+  useEffect(() => {
+    setEmploy2016(jobObject.Employment2016);
+    setEmploy2026(jobObject.Employment2026);
+    setPercent(jobObject.ChgEmploy2016to26Perc);
 
+    if (employ2016 !== "" && employ2026 !== "") {
+      setFormatedEmploy2016(makeCorrectValue(jobObject.Employment2016));
+      setFormatedEmploy2026(makeCorrectValue(jobObject.Employment2026));
+      setPercent(getNumberWithSign(jobObject.ChgEmploy2016to26Perc));
+    }
+  }, [jobObject]);
   return (
     <>
       <DialogTitle
@@ -60,7 +87,9 @@ export const ModalTable = (props) => {
           <Close className={classes.modalClose} />
         </Button>
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <h2 className={classes.modalTitle}>{jobObject.title}</h2>
+          <h4 className={classes.modalTitle}>
+            {jobObject.id}-{jobObject.title}
+          </h4>
         </div>
       </DialogTitle>
       <DialogContent
@@ -91,16 +120,16 @@ export const ModalTable = (props) => {
               </h5>
             </div>
             <div className="table-child">
-              <h5>2016 Employement:</h5>
-              <h5>{employ2016}</h5>
+              <h5>2016 Employment:</h5>
+              <h5>{formatedEmploy2016}</h5>
             </div>
             <div className="table-child">
-              <h5>2026 Employement:</h5>
-              <h5>{employ2026}</h5>
+              <h5>2026 Employment:</h5>
+              <h5>{formatedEmploy2026}</h5>
             </div>
             <div className="table-child">
               <h5>Percent change in Employment 2016 - 2026:</h5>
-              <h4>{jobObject.ChgEmploy2016to26Perc}%</h4>
+              <h4>{percent}%</h4>
             </div>
           </div>
         </div>
