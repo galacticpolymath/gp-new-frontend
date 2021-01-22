@@ -31,13 +31,20 @@ export const ModalTable = (props) => {
     // console.log(x);
     x = parseFloat(x);
     x = x * 1000.0;
+    // add commas
+    x= x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     // x = toString(x);
     return x;
   };
 
+  const leadingPlus = (x)=> {
+    return((x<0?"":"+")+x)
+  }
+
+
   const employ2016 = makeCorrectValue(jobObject.Employment2016);
   const employ2026 = makeCorrectValue(jobObject.Employment2026);
-
+  const changeEmploy2026= leadingPlus(jobObject.ChgEmploy2016to26Perc);
   // const Employment2016 = (
   //   parseFloat(employ2016.replace(",", "") * 1000.0
   // ).toLocaleString();
@@ -71,19 +78,19 @@ export const ModalTable = (props) => {
           <h4>Definition: {jobObject.Def}</h4>
           <div className="table-mid">
             <div className="table-child">
-              <h5>Median 2017 Annual Wage:</h5>
+              <h5 className="jv-table-header">Median 2017 Annual Wage:</h5>
               <h5>{jobObject.MedianAnnualWage2017}</h5>
             </div>
             <div className="table-child">
-              <h5>Education Needed:</h5>
+              <h5 className="jv-table-header">Education Needed:</h5>
               <h5>{jobObject.TypicalEducationNeededForEntry}</h5>
             </div>
             <div className="table-child">
-              <h5>Work Experience In a Related Occupation Desired:</h5>
+              <h5 className="jv-table-header">Work Experience In a Related Occupation Desired:</h5>
               <h5>{jobObject.WorkExperienceInARelatedOccupation}</h5>
             </div>
             <div className="table-child">
-              <h5>On-the-job Training:</h5>
+              <h5 className="jv-table-header">On-the-job Training:</h5>
               <h5>
                 {
                   jobObject.TypicalOnTheJobTrainingNeededToAttainCompetencyInTheOccupation
@@ -91,16 +98,16 @@ export const ModalTable = (props) => {
               </h5>
             </div>
             <div className="table-child">
-              <h5>2016 Employement:</h5>
+              <h5 className="jv-table-header">2016 Employment:</h5>
               <h5>{employ2016}</h5>
             </div>
             <div className="table-child">
-              <h5>2026 Employement:</h5>
+              <h5 className="jv-table-header">2026 Employment:</h5>
               <h5>{employ2026}</h5>
             </div>
             <div className="table-child">
-              <h5>Percent change in Employment 2016 - 2026:</h5>
-              <h4>{jobObject.ChgEmploy2016to26Perc}%</h4>
+              <h5 className="jv-table-header">Percent change in Employment 2016 - 2026:</h5>
+              <h5>{changeEmploy2026}%</h5>
             </div>
           </div>
         </div>

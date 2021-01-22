@@ -24,7 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="07e823a3-6d9b-490c-82bf-f62006dbc3e8" name="Default Changelist" comment="added a new hero graphic for hire-us page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/PricingPage/PricingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PricingPage/PricingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/JobViz/modalTable/ModalTable.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/JobViz/modalTable/ModalTable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/JobViz/styling/Style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/JobViz/styling/Style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,11 +61,11 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="RunManager" selected="npm.eject">
@@ -119,10 +120,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.install:clean" />
         <item itemvalue="npm.eject" />
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.start" />
       </list>
     </recent_temporary>
   </component>
@@ -140,6 +142,7 @@
       <workItem from="1603902095312" duration="10396000" />
       <workItem from="1603914214296" duration="2213000" />
       <workItem from="1603919468519" duration="19183000" />
+      <workItem from="1611282200536" duration="1884000" />
     </task>
     <task id="LOCAL-00001" summary="changed all refs to Roboto to Montserrat;&#10;All Roboto Slab changed to Cormorant Garamond;&#10;Add GP color defs to _variables.scss">
       <created>1603911254601</created>
@@ -273,11 +276,11 @@
     </state>
     <state x="518" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1603899223165" />
     <state x="518" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603924628884" />
-    <state x="418" y="216" width="604" height="490" key="find.popup" timestamp="1604167395594">
+    <state x="418" y="216" width="604" height="490" key="find.popup" timestamp="1611283488468">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="418" y="216" width="604" height="490" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1604167395594" />
-    <state x="418" y="216" width="604" height="490" key="find.popup/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603910005674" />
+    <state x="418" y="216" width="604" height="490" key="find.popup/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611283488468" />
     <state x="246" y="317" width="670" height="676" key="search.everywhere.popup" timestamp="1604247172971">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
