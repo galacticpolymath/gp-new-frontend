@@ -87,8 +87,8 @@ export const ModalTable = (props) => {
           <Close className={classes.modalClose} />
         </Button>
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <h4 className={classes.modalTitle}>
-            {jobObject.id}-{jobObject.title}
+          <h4 style={{ "font-weight": "bold" }} className={classes.modalTitle}>
+            {jobObject.title}
           </h4>
         </div>
       </DialogTitle>
@@ -97,22 +97,28 @@ export const ModalTable = (props) => {
         className={classes.modalBody}
       >
         <div className="table-parent">
-          <h4>Definition: {jobObject.Def}</h4>
+          <h5>
+            <strong>Definition:</strong> {jobObject.Def}
+          </h5>
           <div className="table-mid">
             <div className="table-child">
-              <h5>Median 2017 Annual Wage:</h5>
+              <h5 style={{ "font-weight": "bold" }}>
+                Median 2017 Annual Wage:
+              </h5>
               <h5>{jobObject.MedianAnnualWage2017}</h5>
             </div>
             <div className="table-child">
-              <h5>Education Needed:</h5>
+              <h5 style={{ "font-weight": "bold" }}>Education Needed:</h5>
               <h5>{jobObject.TypicalEducationNeededForEntry}</h5>
             </div>
             <div className="table-child">
-              <h5>Work Experience In a Related Occupation Desired:</h5>
+              <h5 style={{ "font-weight": "bold" }}>
+                Work Experience In a Related Occupation Desired:
+              </h5>
               <h5>{jobObject.WorkExperienceInARelatedOccupation}</h5>
             </div>
             <div className="table-child">
-              <h5>On-the-job Training:</h5>
+              <h5 style={{ "font-weight": "bold" }}>On-the-job Training:</h5>
               <h5>
                 {
                   jobObject.TypicalOnTheJobTrainingNeededToAttainCompetencyInTheOccupation
@@ -120,15 +126,17 @@ export const ModalTable = (props) => {
               </h5>
             </div>
             <div className="table-child">
-              <h5>2016 Employment:</h5>
+              <h5 style={{ "font-weight": "bold" }}>2016 Employment:</h5>
               <h5>{formatedEmploy2016}</h5>
             </div>
             <div className="table-child">
-              <h5>2026 Employment:</h5>
+              <h5 style={{ "font-weight": "bold" }}>2026 Employment:</h5>
               <h5>{formatedEmploy2026}</h5>
             </div>
             <div className="table-child">
-              <h5>Percent change in Employment 2016 - 2026:</h5>
+              <h5 style={{ "font-weight": "bold" }}>
+                Percent change in Employment 2016 - 2026:
+              </h5>
               <h4>{percent}%</h4>
             </div>
           </div>
