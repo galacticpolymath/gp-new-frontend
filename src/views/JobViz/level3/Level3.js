@@ -24,6 +24,8 @@ import CardAvatar from "components/Card/CardAvatar.js";
 // import marc from "assets/img/faces/marc.jpg";
 import branch2 from "assets/img/faces/branch2.jpg";
 import brick1 from "assets/img/faces/brick1.jpg";
+import vertBracket from "assets/img/jobviz-vert-bracket.png";
+import vertStem from "assets/img/jobviz-vert-stem.png";
 
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import Dialog from "@material-ui/core/Dialog";
@@ -252,6 +254,9 @@ export const Level3List = (props) => {
               </h6>
             </div>
             <div className="crumb-img-container">
+              <img className="vert-stem-img" src={vertStem} alt="..." />
+            </div>
+            <div className="crumb-img-container">
               <img
                 style={{ height: "40px", width: "40px" }}
                 src={branch2}
@@ -262,6 +267,9 @@ export const Level3List = (props) => {
                   {parentName}
                 </Link>
               </h6>
+            </div>
+            <div className="crumb-img-container">
+              <img className="vert-stem-img" src={vertStem} alt="..." />
             </div>
           </div>
           {/* //////////////// P A R E N T ////////////////// */}
@@ -312,7 +320,9 @@ export const Level3List = (props) => {
           </div>
 
           {/* Where children are mapped out to individual card component */}
-          <div className="">
+          <div className={classes.container}>
+            <img className="vert-bracket-img" src={vertBracket} alt="..." />
+
             <div className="card-child-container">
               {alphaList.map((job, k) => {
                 for (let j = 0; j <= jobObject.children.length; j++) {

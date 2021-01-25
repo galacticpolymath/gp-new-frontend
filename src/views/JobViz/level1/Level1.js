@@ -20,6 +20,7 @@ import Footer from "components/Footer/Footer.js";
 // @material-ui/core components
 
 import brick1 from "assets/img/faces/brick1.jpg";
+import vertBracket from "assets/img/jobviz-vert-bracket.png";
 
 // core components
 import Card from "components/Card/Card.js";
@@ -258,6 +259,8 @@ export const Level1List = (props) => {
 
           {/* Where children are mapped out to individual card component */}
           <div className={classes.container}>
+            <img className="vert-bracket-img" src={vertBracket} alt="..." />
+
             <div className="card-child-container">
               {alphaList.map((job, k) => {
                 for (let j = 0; j <= jobObject.children.length; j++) {
