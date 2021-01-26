@@ -67,6 +67,7 @@ import { Level4Card } from "./Level4Card";
 // sections for this page Added by JOB VIZ TEAM
 
 import pricingStyle from "assets/jss/material-kit-pro-react/views/pricingStyle.js";
+import JobVizHeader from "../modules/JobVizComponents";
 
 const useStyles = makeStyles(pricingStyle);
 
@@ -223,12 +224,7 @@ export const Level4List = (props) => {
                 classes.textCenter
               )}
             >
-              <h1 className={classes.title}>JOB VIZ </h1>
-              <h4>
-                Explore career possibilites, see how fields relate and overlap,
-                and get a glimpse at industry education and financial data.
-              </h4>
-              <h4 style={{ color: "white" }}>What do you want to be?</h4>
+              <JobVizHeader/>
             </GridItem>
           </GridContainer>
         </div>
@@ -312,6 +308,7 @@ export const Level4List = (props) => {
                     e.preventDefault();
                     setClassicModal(true);
                   }}
+                  color={"primary"}
                 >
                   <LibraryBooks />
                   Details

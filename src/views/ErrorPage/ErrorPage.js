@@ -49,7 +49,7 @@ export default function ErrorPage({ ...rest }) {
               <h1 className={classes.title}>404</h1>
               <h2 className={classes.subTitle}>Page not found :(</h2>
               <h4 className={classes.description}>
-                Ooooups! Looks like you got lost.
+                Oooops! Looks like you got lost.
               </h4>
             </GridItem>
           </GridContainer>

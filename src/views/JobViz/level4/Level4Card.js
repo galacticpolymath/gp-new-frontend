@@ -6,6 +6,7 @@ import { addIdPathway } from "../Helper";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui icons
+import AccountTreeIcon from "@material-ui/icons/AccountTree";
 // core components
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
@@ -117,7 +118,8 @@ export const Level4Card = (props) => {
                 `/jobviz/${greatGreatGrandparent}/${greatGrandparent}/${grandparent}/${parent}/${jobId}/${title}/endpoint`
               );
               setClassicModal(true);
-            }}
+              }}
+            color={"primary"}
           >
             <LibraryBooks />
             Details
