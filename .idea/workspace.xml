@@ -19,12 +19,29 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07e823a3-6d9b-490c-82bf-f62006dbc3e8" name="Default Changelist" comment="added a new hero graphic for hire-us page">
+    <list default="true" id="07e823a3-6d9b-490c-82bf-f62006dbc3e8" name="Default Changelist" comment="JobViz Tweaks:&#10;-Added icon to button to go to children &amp; changed text from &quot;Select&quot; to &quot;More Jobs&quot;&#10;-Refactored the header in JobViz so there's a reusable JobVizComponents function to add in a header and eventually a footer.">
+      <change afterPath="$PROJECT_DIR$/src/views/JobViz/modules/JobVizComponents.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/PricingPage/PricingPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/PricingPage/PricingPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/jss/material-kit-pro-react.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/jss/material-kit-pro-react.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/scss/core/variables/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/core/variables/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/ErrorPage/ErrorPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ErrorPage/ErrorPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/JobViz/level1/Level1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/JobViz/level1/Level1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/JobViz/level1/Level1Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/JobViz/level1/Level1Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/JobViz/level2/Level2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/JobViz/level2/Level2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/JobViz/level2/Level2Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/JobViz/level2/Level2Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/JobViz/level3/Level3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/JobViz/level3/Level3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/JobViz/level3/Level3Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/JobViz/level3/Level3Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/JobViz/level4/Level4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/JobViz/level4/Level4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/views/JobViz/level4/Level4Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/JobViz/level4/Level4Card.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,11 +49,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="ProjectId" id="1jJ0M6EGOAUhfAkbVz4VGRCrzVS" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -60,14 +84,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/components" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public" />
+    </key>
   </component>
-  <component name="RunManager" selected="npm.eject">
+  <component name="RunManager" selected="Node.js.JobVizComponents.js">
+    <configuration name="JobVizComponents.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/views/JobViz/modules/JobVizComponents.js" working-dir="$PROJECT_DIR$/src/views/JobViz/modules">
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp">
       <node-interpreter>project</node-interpreter>
       <node-options />
@@ -119,6 +146,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.JobVizComponents.js" />
         <item itemvalue="npm.build" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.install:clean" />
@@ -215,7 +243,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -232,29 +272,78 @@
     <MESSAGE value="Did I do it?" />
     <MESSAGE value="modified Castle's Hire-Us page text and styling. Changed primaryColor styling on material-kit-pro-react to reflect GP color palette." />
     <MESSAGE value="added a new hero graphic for hire-us page" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a new hero graphic for hire-us page" />
+    <MESSAGE value="JobViz Tweaks:&#10;-Added icon to button to go to children &amp; changed text from &quot;Select&quot; to &quot;More Jobs&quot;&#10;-Refactored the header in JobViz so there's a reusable JobVizComponents function to add in a header and eventually a footer." />
+    <option name="LAST_COMMIT_MESSAGE" value="JobViz Tweaks:&#10;-Added icon to button to go to children &amp; changed text from &quot;Select&quot; to &quot;More Jobs&quot;&#10;-Refactored the header in JobViz so there's a reusable JobVizComponents function to add in a header and eventually a footer." />
   </component>
   <component name="WindowStateProjectService">
-    <state width="528" height="565" key="GridCell.Tab.0.bottom" timestamp="1604360338386">
+    <state width="385" height="498" key="GridCell.Tab.0.bottom" timestamp="1611622598672">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="528" height="565" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604249992451" />
-    <state width="528" height="565" key="GridCell.Tab.0.bottom/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1604360338386" />
-    <state width="528" height="565" key="GridCell.Tab.0.center" timestamp="1604360338386">
+    <state width="385" height="498" key="GridCell.Tab.0.bottom/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611622598672" />
+    <state width="385" height="498" key="GridCell.Tab.0.center" timestamp="1611622598672">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="528" height="565" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1604249992451" />
-    <state width="528" height="565" key="GridCell.Tab.0.center/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1604360338386" />
-    <state width="528" height="565" key="GridCell.Tab.0.left" timestamp="1604360338385">
+    <state width="385" height="498" key="GridCell.Tab.0.center/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611622598672" />
+    <state width="385" height="498" key="GridCell.Tab.0.left" timestamp="1611622598671">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="528" height="565" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1604249992451" />
-    <state width="528" height="565" key="GridCell.Tab.0.left/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1604360338385" />
-    <state width="528" height="565" key="GridCell.Tab.0.right" timestamp="1604360338386">
+    <state width="385" height="498" key="GridCell.Tab.0.left/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611622598671" />
+    <state width="385" height="498" key="GridCell.Tab.0.right" timestamp="1611622598672">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="528" height="565" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1604249992451" />
-    <state width="528" height="565" key="GridCell.Tab.0.right/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1604360338386" />
+    <state width="385" height="498" key="GridCell.Tab.0.right/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611622598672" />
+    <state width="709" height="286" key="GridCell.Tab.1.bottom" timestamp="1611620193032">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="709" height="286" key="GridCell.Tab.1.bottom/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193032" />
+    <state width="709" height="286" key="GridCell.Tab.1.center" timestamp="1611620193032">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="709" height="286" key="GridCell.Tab.1.center/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193032" />
+    <state width="709" height="286" key="GridCell.Tab.1.left" timestamp="1611620193031">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="709" height="286" key="GridCell.Tab.1.left/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193031" />
+    <state width="709" height="286" key="GridCell.Tab.1.right" timestamp="1611620193032">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="709" height="286" key="GridCell.Tab.1.right/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193032" />
+    <state width="709" height="286" key="GridCell.Tab.2.bottom" timestamp="1611620193034">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="709" height="286" key="GridCell.Tab.2.bottom/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193034" />
+    <state width="709" height="286" key="GridCell.Tab.2.center" timestamp="1611620193033">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="709" height="286" key="GridCell.Tab.2.center/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193033" />
+    <state width="709" height="286" key="GridCell.Tab.2.left" timestamp="1611620193033">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="709" height="286" key="GridCell.Tab.2.left/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193033" />
+    <state width="709" height="286" key="GridCell.Tab.2.right" timestamp="1611620193034">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="709" height="286" key="GridCell.Tab.2.right/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193034" />
+    <state width="709" height="286" key="GridCell.Tab.3.bottom" timestamp="1611620193035">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="709" height="286" key="GridCell.Tab.3.bottom/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193035" />
+    <state width="709" height="286" key="GridCell.Tab.3.center" timestamp="1611620193035">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="709" height="286" key="GridCell.Tab.3.center/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193035" />
+    <state width="709" height="286" key="GridCell.Tab.3.left" timestamp="1611620193034">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="709" height="286" key="GridCell.Tab.3.left/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193034" />
+    <state width="709" height="286" key="GridCell.Tab.3.right" timestamp="1611620193035">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state width="709" height="286" key="GridCell.Tab.3.right/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193035" />
     <state x="221" y="100" key="SettingsEditor" timestamp="1604165830816">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -263,25 +352,45 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="218" y="363" key="VCS.EditChangelistDialog/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603924601925" />
-    <state x="320" y="188" key="Vcs.Push.Dialog.v2" timestamp="1604250242634">
+    <state x="320" y="188" key="Vcs.Push.Dialog.v2" timestamp="1611620238063">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="320" y="188" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1604250242634" />
-    <state x="320" y="188" key="Vcs.Push.Dialog.v2/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603924458561" />
+    <state x="320" y="188" key="Vcs.Push.Dialog.v2/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620238063" />
+    <state x="343" y="79" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1611691540745">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="343" y="79" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611691540745" />
     <state x="518" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1603924628884">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="518" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.877@0.23.1440.877" timestamp="1603899223165" />
     <state x="518" y="382" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603924628884" />
+    <state x="1716" y="39" width="1134" height="544" key="dock-window-1" timestamp="1611689082567">
+      <screen x="1440" y="-157" width="1920" height="1057" />
+    </state>
+    <state x="1716" y="39" width="1134" height="544" key="dock-window-1/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611689082567" />
     <state x="418" y="216" width="604" height="490" key="find.popup" timestamp="1604167395594">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="418" y="216" width="604" height="490" key="find.popup/0.23.1440.877@0.23.1440.877" timestamp="1604167395594" />
     <state x="418" y="216" width="604" height="490" key="find.popup/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603910005674" />
-    <state x="246" y="317" width="670" height="676" key="search.everywhere.popup" timestamp="1604247172971">
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1611617679397">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="246" y="317" width="670" height="676" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1604247172971" />
-    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603923842339" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611617679397" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/views/JobViz/level1/Level1.js</url>
+          <line>192</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
