@@ -23,15 +23,13 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:jobviz-tweaks-matt" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07e823a3-6d9b-490c-82bf-f62006dbc3e8" name="Default Changelist" comment="Site-wide branding color changes; JobViz tweaks for intuitiveness. &#10;•changed material-kit-pro-react.js color schemes to be on-brand&#10;•changed JobViz color scheme to intuitively indicate hierarchy vs details on buttons.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderLinks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderLinks.js" afterDir="false" />
+    <list default="true" id="07e823a3-6d9b-490c-82bf-f62006dbc3e8" name="Default Changelist" comment="adjust size and spacing of stem and bracket graphics in JobViz">
+      <change beforePath="$PROJECT_DIR$/src/views/JobViz/level3/Level3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/JobViz/level3/Level3.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +58,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/img" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -74,11 +72,12 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/components" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/img" />
+      <recent name="$PROJECT_DIR$/src/components" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.JobVizComponents.js">
@@ -229,7 +228,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611693660501</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="adjust size and spacing of stem and bracket graphics in JobViz">
+      <created>1611700194111</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1611700194111</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,7 +252,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="jobviz-tweaks-matt" />
                       </list>
                     </value>
                   </entry>
@@ -271,77 +277,82 @@
     <MESSAGE value="added a new hero graphic for hire-us page" />
     <MESSAGE value="JobViz Tweaks:&#10;-Added icon to button to go to children &amp; changed text from &quot;Select&quot; to &quot;More Jobs&quot;&#10;-Refactored the header in JobViz so there's a reusable JobVizComponents function to add in a header and eventually a footer." />
     <MESSAGE value="Site-wide branding color changes; JobViz tweaks for intuitiveness. &#10;•changed material-kit-pro-react.js color schemes to be on-brand&#10;•changed JobViz color scheme to intuitively indicate hierarchy vs details on buttons." />
-    <option name="LAST_COMMIT_MESSAGE" value="Site-wide branding color changes; JobViz tweaks for intuitiveness. &#10;•changed material-kit-pro-react.js color schemes to be on-brand&#10;•changed JobViz color scheme to intuitively indicate hierarchy vs details on buttons." />
+    <MESSAGE value="adjust size and spacing of stem and bracket graphics in JobViz" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjust size and spacing of stem and bracket graphics in JobViz" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="467" height="498" key="GridCell.Tab.0.bottom" timestamp="1611693799166">
+    <state width="467" height="236" key="GridCell.Tab.0.bottom" timestamp="1611700229077">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="528" height="565" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604249992451" />
-    <state width="467" height="498" key="GridCell.Tab.0.bottom/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611693799166" />
-    <state width="467" height="498" key="GridCell.Tab.0.center" timestamp="1611693799166">
+    <state width="467" height="236" key="GridCell.Tab.0.bottom/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611700229077" />
+    <state width="467" height="236" key="GridCell.Tab.0.center" timestamp="1611700229076">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="528" height="565" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1604249992451" />
-    <state width="467" height="498" key="GridCell.Tab.0.center/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611693799166" />
-    <state width="467" height="498" key="GridCell.Tab.0.left" timestamp="1611693799165">
+    <state width="467" height="236" key="GridCell.Tab.0.center/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611700229076" />
+    <state width="467" height="236" key="GridCell.Tab.0.left" timestamp="1611700229075">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="528" height="565" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1604249992451" />
-    <state width="467" height="498" key="GridCell.Tab.0.left/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611693799165" />
-    <state width="467" height="498" key="GridCell.Tab.0.right" timestamp="1611693799166">
+    <state width="467" height="236" key="GridCell.Tab.0.left/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611700229075" />
+    <state width="467" height="236" key="GridCell.Tab.0.right" timestamp="1611700229076">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="528" height="565" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1604249992451" />
-    <state width="467" height="498" key="GridCell.Tab.0.right/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611693799166" />
-    <state width="709" height="286" key="GridCell.Tab.1.bottom" timestamp="1611620193032">
+    <state width="467" height="236" key="GridCell.Tab.0.right/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611700229076" />
+    <state width="709" height="286" key="GridCell.Tab.1.bottom" timestamp="1611699852234">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="709" height="286" key="GridCell.Tab.1.bottom/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193032" />
-    <state width="709" height="286" key="GridCell.Tab.1.center" timestamp="1611620193032">
+    <state width="709" height="286" key="GridCell.Tab.1.bottom/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611699852234" />
+    <state width="709" height="286" key="GridCell.Tab.1.center" timestamp="1611699852233">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="709" height="286" key="GridCell.Tab.1.center/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193032" />
-    <state width="709" height="286" key="GridCell.Tab.1.left" timestamp="1611620193031">
+    <state width="709" height="286" key="GridCell.Tab.1.center/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611699852233" />
+    <state width="709" height="286" key="GridCell.Tab.1.left" timestamp="1611699852233">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="709" height="286" key="GridCell.Tab.1.left/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193031" />
-    <state width="709" height="286" key="GridCell.Tab.1.right" timestamp="1611620193032">
+    <state width="709" height="286" key="GridCell.Tab.1.left/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611699852233" />
+    <state width="709" height="286" key="GridCell.Tab.1.right" timestamp="1611699852234">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="709" height="286" key="GridCell.Tab.1.right/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193032" />
-    <state width="709" height="286" key="GridCell.Tab.2.bottom" timestamp="1611620193034">
+    <state width="709" height="286" key="GridCell.Tab.1.right/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611699852234" />
+    <state width="709" height="286" key="GridCell.Tab.2.bottom" timestamp="1611699852234">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="709" height="286" key="GridCell.Tab.2.bottom/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193034" />
-    <state width="709" height="286" key="GridCell.Tab.2.center" timestamp="1611620193033">
+    <state width="709" height="286" key="GridCell.Tab.2.bottom/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611699852234" />
+    <state width="709" height="286" key="GridCell.Tab.2.center" timestamp="1611699852234">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="709" height="286" key="GridCell.Tab.2.center/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193033" />
-    <state width="709" height="286" key="GridCell.Tab.2.left" timestamp="1611620193033">
+    <state width="709" height="286" key="GridCell.Tab.2.center/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611699852234" />
+    <state width="709" height="286" key="GridCell.Tab.2.left" timestamp="1611699852234">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="709" height="286" key="GridCell.Tab.2.left/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193033" />
-    <state width="709" height="286" key="GridCell.Tab.2.right" timestamp="1611620193034">
+    <state width="709" height="286" key="GridCell.Tab.2.left/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611699852234" />
+    <state width="709" height="286" key="GridCell.Tab.2.right" timestamp="1611699852234">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="709" height="286" key="GridCell.Tab.2.right/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193034" />
-    <state width="709" height="286" key="GridCell.Tab.3.bottom" timestamp="1611620193035">
+    <state width="709" height="286" key="GridCell.Tab.2.right/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611699852234" />
+    <state width="709" height="286" key="GridCell.Tab.3.bottom" timestamp="1611699852235">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="709" height="286" key="GridCell.Tab.3.bottom/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193035" />
-    <state width="709" height="286" key="GridCell.Tab.3.center" timestamp="1611620193035">
+    <state width="709" height="286" key="GridCell.Tab.3.bottom/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611699852235" />
+    <state width="709" height="286" key="GridCell.Tab.3.center" timestamp="1611699852235">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="709" height="286" key="GridCell.Tab.3.center/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193035" />
-    <state width="709" height="286" key="GridCell.Tab.3.left" timestamp="1611620193034">
+    <state width="709" height="286" key="GridCell.Tab.3.center/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611699852235" />
+    <state width="709" height="286" key="GridCell.Tab.3.left" timestamp="1611699852235">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="709" height="286" key="GridCell.Tab.3.left/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193034" />
-    <state width="709" height="286" key="GridCell.Tab.3.right" timestamp="1611620193035">
+    <state width="709" height="286" key="GridCell.Tab.3.left/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611699852235" />
+    <state width="709" height="286" key="GridCell.Tab.3.right" timestamp="1611699852235">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state width="709" height="286" key="GridCell.Tab.3.right/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620193035" />
+    <state width="709" height="286" key="GridCell.Tab.3.right/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611699852235" />
+    <state x="385" y="189" key="RollbackChangesDialog" timestamp="1611698807846">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="385" y="189" key="RollbackChangesDialog/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611698807846" />
     <state x="221" y="100" key="SettingsEditor" timestamp="1604165830816">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -350,11 +361,15 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="218" y="363" key="VCS.EditChangelistDialog/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603924601925" />
-    <state x="320" y="188" key="Vcs.Push.Dialog.v2" timestamp="1611693664226">
+    <state x="320" y="188" key="Vcs.Push.Dialog.v2" timestamp="1611700220601">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="320" y="188" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1604250242634" />
-    <state x="320" y="188" key="Vcs.Push.Dialog.v2/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611693664226" />
+    <state x="320" y="188" key="Vcs.Push.Dialog.v2/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611700220601" />
+    <state x="100" y="123" width="1240" height="677" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1611700306593">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="100" y="123" width="1240" height="677" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611700306593" />
     <state x="343" y="79" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1611691540745">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -385,7 +400,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/views/JobViz/level1/Level1.js</url>
           <line>192</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
