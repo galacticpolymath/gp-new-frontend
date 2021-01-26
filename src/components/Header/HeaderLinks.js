@@ -300,5 +300,6 @@ HeaderLinks.propTypes = {
     "warning",
     "danger",
     "rose",
+      "blackColor",
   ]),
 };

@@ -28,20 +28,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07e823a3-6d9b-490c-82bf-f62006dbc3e8" name="Default Changelist" comment="JobViz Tweaks:&#10;-Added icon to button to go to children &amp; changed text from &quot;Select&quot; to &quot;More Jobs&quot;&#10;-Refactored the header in JobViz so there's a reusable JobVizComponents function to add in a header and eventually a footer.">
-      <change afterPath="$PROJECT_DIR$/src/views/JobViz/modules/JobVizComponents.js" afterDir="false" />
+    <list default="true" id="07e823a3-6d9b-490c-82bf-f62006dbc3e8" name="Default Changelist" comment="Site-wide branding color changes; JobViz tweaks for intuitiveness. &#10;•changed material-kit-pro-react.js color schemes to be on-brand&#10;•changed JobViz color scheme to intuitively indicate hierarchy vs details on buttons.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/jss/material-kit-pro-react.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/jss/material-kit-pro-react.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/scss/core/variables/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/scss/core/variables/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/ErrorPage/ErrorPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/ErrorPage/ErrorPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/JobViz/level1/Level1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/JobViz/level1/Level1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/JobViz/level1/Level1Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/JobViz/level1/Level1Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/JobViz/level2/Level2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/JobViz/level2/Level2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/JobViz/level2/Level2Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/JobViz/level2/Level2Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/JobViz/level3/Level3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/JobViz/level3/Level3.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/JobViz/level3/Level3Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/JobViz/level3/Level3Card.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/JobViz/level4/Level4.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/JobViz/level4/Level4.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/views/JobViz/level4/Level4Card.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/JobViz/level4/Level4Card.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/Header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/HeaderLinks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/HeaderLinks.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -232,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604250075337</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Site-wide branding color changes; JobViz tweaks for intuitiveness. &#10;•changed material-kit-pro-react.js color schemes to be on-brand&#10;•changed JobViz color scheme to intuitively indicate hierarchy vs details on buttons.">
+      <created>1611693660501</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1611693660501</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,29 +270,30 @@
     <MESSAGE value="modified Castle's Hire-Us page text and styling. Changed primaryColor styling on material-kit-pro-react to reflect GP color palette." />
     <MESSAGE value="added a new hero graphic for hire-us page" />
     <MESSAGE value="JobViz Tweaks:&#10;-Added icon to button to go to children &amp; changed text from &quot;Select&quot; to &quot;More Jobs&quot;&#10;-Refactored the header in JobViz so there's a reusable JobVizComponents function to add in a header and eventually a footer." />
-    <option name="LAST_COMMIT_MESSAGE" value="JobViz Tweaks:&#10;-Added icon to button to go to children &amp; changed text from &quot;Select&quot; to &quot;More Jobs&quot;&#10;-Refactored the header in JobViz so there's a reusable JobVizComponents function to add in a header and eventually a footer." />
+    <MESSAGE value="Site-wide branding color changes; JobViz tweaks for intuitiveness. &#10;•changed material-kit-pro-react.js color schemes to be on-brand&#10;•changed JobViz color scheme to intuitively indicate hierarchy vs details on buttons." />
+    <option name="LAST_COMMIT_MESSAGE" value="Site-wide branding color changes; JobViz tweaks for intuitiveness. &#10;•changed material-kit-pro-react.js color schemes to be on-brand&#10;•changed JobViz color scheme to intuitively indicate hierarchy vs details on buttons." />
   </component>
   <component name="WindowStateProjectService">
-    <state width="385" height="498" key="GridCell.Tab.0.bottom" timestamp="1611622598672">
+    <state width="467" height="498" key="GridCell.Tab.0.bottom" timestamp="1611693799166">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="528" height="565" key="GridCell.Tab.0.bottom/0.23.1440.877@0.23.1440.877" timestamp="1604249992451" />
-    <state width="385" height="498" key="GridCell.Tab.0.bottom/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611622598672" />
-    <state width="385" height="498" key="GridCell.Tab.0.center" timestamp="1611622598672">
+    <state width="467" height="498" key="GridCell.Tab.0.bottom/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611693799166" />
+    <state width="467" height="498" key="GridCell.Tab.0.center" timestamp="1611693799166">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="528" height="565" key="GridCell.Tab.0.center/0.23.1440.877@0.23.1440.877" timestamp="1604249992451" />
-    <state width="385" height="498" key="GridCell.Tab.0.center/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611622598672" />
-    <state width="385" height="498" key="GridCell.Tab.0.left" timestamp="1611622598671">
+    <state width="467" height="498" key="GridCell.Tab.0.center/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611693799166" />
+    <state width="467" height="498" key="GridCell.Tab.0.left" timestamp="1611693799165">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="528" height="565" key="GridCell.Tab.0.left/0.23.1440.877@0.23.1440.877" timestamp="1604249992451" />
-    <state width="385" height="498" key="GridCell.Tab.0.left/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611622598671" />
-    <state width="385" height="498" key="GridCell.Tab.0.right" timestamp="1611622598672">
+    <state width="467" height="498" key="GridCell.Tab.0.left/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611693799165" />
+    <state width="467" height="498" key="GridCell.Tab.0.right" timestamp="1611693799166">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="528" height="565" key="GridCell.Tab.0.right/0.23.1440.877@0.23.1440.877" timestamp="1604249992451" />
-    <state width="385" height="498" key="GridCell.Tab.0.right/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611622598672" />
+    <state width="467" height="498" key="GridCell.Tab.0.right/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611693799166" />
     <state width="709" height="286" key="GridCell.Tab.1.bottom" timestamp="1611620193032">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -352,11 +350,11 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="218" y="363" key="VCS.EditChangelistDialog/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1603924601925" />
-    <state x="320" y="188" key="Vcs.Push.Dialog.v2" timestamp="1611620238063">
+    <state x="320" y="188" key="Vcs.Push.Dialog.v2" timestamp="1611693664226">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="320" y="188" key="Vcs.Push.Dialog.v2/0.23.1440.877@0.23.1440.877" timestamp="1604250242634" />
-    <state x="320" y="188" key="Vcs.Push.Dialog.v2/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611620238063" />
+    <state x="320" y="188" key="Vcs.Push.Dialog.v2/1440.-157.1920.1057/0.23.1440.877@0.23.1440.877" timestamp="1611693664226" />
     <state x="343" y="79" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1611691540745">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
