@@ -6,7 +6,7 @@ input[type="text"] {
   display: flex;
   justify-content: center;
   padding: 1em;
-
+  border-radius: 6px;
 }
 
 .crumb-img-container {
