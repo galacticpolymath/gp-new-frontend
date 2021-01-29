@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { makeUrlPath } from "../Helper";
 import classNames from "classnames";
+//material-ui icons
+import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
+import SchoolIcon from '@material-ui/icons/School';
+import WorkIcon from '@material-ui/icons/Work';
+import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
+import DirectionsWalkIcon from '@material-ui/icons/DirectionsWalk';
+import TransferWithinAStationIcon from '@material-ui/icons/TransferWithinAStation';
+import TrendingUpIcon from '@material-ui/icons/TrendingUp'; //percent change
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -102,22 +110,26 @@ export const ModalTable = (props) => {
           </h5>
           <div className="table-mid">
             <div className="table-child">
+                <AttachMoneyIcon style={{ "color": "#363636" }} />
               <h5 style={{ "font-weight": "bold" }}>
                 Median 2017 Annual Wage:
               </h5>
               <h5>{jobObject.MedianAnnualWage2017}</h5>
             </div>
             <div className="table-child">
+              <SchoolIcon style={{ "color": "#363636" }} />
               <h5 style={{ "font-weight": "bold" }}>Education Needed:</h5>
               <h5>{jobObject.TypicalEducationNeededForEntry}</h5>
             </div>
-            <div className="table-child">
+            {/* <div className="table-child">
+              <WorkIcon style={{ "color": "#363636" }} />
               <h5 style={{ "font-weight": "bold" }}>
                 Work Experience In a Related Occupation Desired:
               </h5>
               <h5>{jobObject.WorkExperienceInARelatedOccupation}</h5>
-            </div>
+            </div> */}
             <div className="table-child">
+              <SupervisedUserCircleIcon style={{ "color": "#363636" }} />
               <h5 style={{ "font-weight": "bold" }}>On-the-job Training:</h5>
               <h5>
                 {
@@ -126,14 +138,17 @@ export const ModalTable = (props) => {
               </h5>
             </div>
             <div className="table-child">
+              <DirectionsWalkIcon style={{ "color": "#363636" }} />
               <h5 style={{ "font-weight": "bold" }}>2016 Employment:</h5>
               <h5>{formatedEmploy2016}</h5>
             </div>
             <div className="table-child">
+              <TransferWithinAStationIcon style={{ "color": "#363636" }} />
               <h5 style={{ "font-weight": "bold" }}>2026 Employment:</h5>
               <h5>{formatedEmploy2026}</h5>
             </div>
             <div className="table-child">
+              <TrendingUpIcon style={{ "color": "#363636" }} />
               <h5 style={{ "font-weight": "bold" }}>
                 Percent change in Employment 2016 - 2026:
               </h5>
