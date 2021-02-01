@@ -71,6 +71,9 @@ export default function Header(props) {
       <Toolbar className={classes.container}>
         <Button className={classes.title}>
           <Link to="/">
+            {/* <div>
+              <img alt="logo" src={logoImage} width="100px" />
+            </div> */}
             <div className={classes.hideLogo}>
               <img alt="logo" src={GpImage} width="400px" />
             </div>
