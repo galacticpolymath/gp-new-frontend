@@ -4,6 +4,8 @@ import {
   main,
   mainRaised,
   whiteColor,
+  mrAuto,
+  mlAuto,
 } from "assets/jss/material-kit-pro-react.js";
 
 const aboutUsStyle = {
@@ -18,6 +20,8 @@ const aboutUsStyle = {
     "&, & + h4": {
       color: whiteColor,
     },
+    mrAuto,
+    mlAuto,
   },
   textCenter: {
     textAlign: "center",

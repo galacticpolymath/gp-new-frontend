@@ -4,6 +4,7 @@ import {
   main,
   whiteColor,
   mainRaised,
+  mlAuto,
 } from "assets/jss/material-kit-pro-react.js";
 
 const blogPostsPageStyle = {
@@ -19,6 +20,7 @@ const blogPostsPageStyle = {
     ...title,
     color: whiteColor,
   },
+  mlAuto,
   main: {
     ...main,
     ...mainRaised,

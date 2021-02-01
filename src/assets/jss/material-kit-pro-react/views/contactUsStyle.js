@@ -4,6 +4,7 @@ import {
   main,
   mainRaised,
   mlAuto,
+  mrAuto,
   description,
   whiteColor,
 } from "assets/jss/material-kit-pro-react.js";
@@ -18,6 +19,7 @@ const contactUsStyle = {
     },
   },
   mlAuto,
+  mrAuto,
   description,
   container: {
     ...container,
