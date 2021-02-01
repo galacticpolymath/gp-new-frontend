@@ -91,16 +91,25 @@ export default function HeaderLinks(props) {
   return (
     <List className={classes.list + " " + classes.mlAuto}>
       <ListItem className={classes.listItem}>
-        <Link to="/lessons" className={classes.navLink}>Lessons</Link>
+        <Link to="/lessons" className={classes.navLink}>
+          Lessons
+        </Link>
+      </ListItem>
+      {/* ///NAV BAR to JobViz */}
+      <ListItem className={classes.listItem}>
+        <Link to="/jobviz" className={classes.navLink}>
+          JobViz
+        </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link to="/jobviz" className={classes.navLink}>JobViz</Link>
+        <Link to="/hire-us" className={classes.navLink}>
+          Hire Us
+        </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link to="/hire-us" className={classes.navLink}>Hire Us</Link>
-      </ListItem>
-      <ListItem className={classes.listItem}>
-        <Link to="/about" className={classes.navLink}>About</Link>
+        <Link to="/about" className={classes.navLink}>
+          About
+        </Link>
       </ListItem>
       {/* <ListItem className={classes.listItem}>
         <CustomDropdown
@@ -273,7 +282,7 @@ export default function HeaderLinks(props) {
 }
 
 HeaderLinks.defaultProps = {
-  hoverColor: "primary"
+  hoverColor: "primary",
 };
 
 HeaderLinks.propTypes = {
@@ -284,6 +293,7 @@ HeaderLinks.propTypes = {
     "success",
     "warning",
     "danger",
-    "rose"
-  ])
+    "rose",
+    "blackColor",
+  ]),
 };

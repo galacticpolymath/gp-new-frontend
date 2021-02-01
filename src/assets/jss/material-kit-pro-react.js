@@ -14,6 +14,7 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+// import variables from "../scss/core/variables/_variables.scss"
 
 // ##############################
 // // // Function that converts from hex color to rgb color
@@ -74,47 +75,52 @@ const primaryColor = [
   "#38a6f5"
 ];
 const secondaryColor = ["#fafafa"];
+
 const warningColor = [
-  "#ff9800",
-  "#ffa726",
-  "#fb8c00",
-  "#ffa21a",
-  "#fcf8e3",
-  "#faf2cc",
-  "#ffe0b2",
-  "#ffb74d"
+  "#6812d1",//"#ff9800",
+  "#6B20C7", //"#ffa726",
+  "#5B10B7", //"#fb8c00",
+  "#7B30D7", //"#ffa21a",
+  "#ECE1F9", //"#fcf8e3",
+  "#D9C4F4", //"#faf2cc",
+  "#C6A6EE", //"#ffe0b2",
+  "#A16BE2", //"#ffb74d"
 ];
 const dangerColor = [
-  "#f44336",
-  "#ef5350",
-  "#e53935",
-  "#f55a4e",
-  "#f2dede",
-  "#ebcccc",
-  "ef9a9a",
+  "#ff3DAC",//"#f44336",
+  "#DF3597",//"#ef5350",
+  "#9F266B",//"#e53935",
+  "#EF45A6",//"#f55a4e",
+  "#FFE7F5",//"#f2dede",
+  "#FFCFEA",//"#ebcccc",
+  "#FF9ED5",//"#ef9a9a",
   "#ef5350"
 ];
 const successColor = [
-  "#4caf50",
-  "#66bb6a",
-  "#43a047",
-  "#5cb860",
-  "#dff0d8",
-  "#d0e9c6",
-  "#a5d6a7",
-  "#66bb6a"
+  "#B798E8",// "#4caf50",
+  "#A085CB",// "#66bb6a",
+  "#8972AE",// "#43a047",
+  "#C0A5EB",// "#5cb860",
+  "#F6F2FC",// "#dff0d8",
+  "#EDE5F9",// "#d0e9c6",
+  "#DBCCF3",// "#a5d6a7",
+  "#C0A5EB",// "#66bb6a"
 ];
 const infoColor = [
-  "#2c83c3",
-  "#26c6da",
-  "#00acc1",
-  "#00d3ee",
-  "#d9edf7",
-  "#c4e3f3",
-  "#b2ebf2",
-  "#4dd0e1"
+  "#6c2d82",// "#2c83c3",
+  "#9c5ab2",  // "#26c6da",
+  "#3e0055",  // "#00acc1",
+  "#83379E", //"#00d3ee",
+  "#EDE5EF", //"#d9edf7",
+  "#DACAE0", //"#c4e3f3",
+  "#C8B0D0", //"#b2ebf2",
+  "#6E3782", //"#4dd0e1"
 ];
-const roseColor = ["#e91e63", "#ec407a", "#d81b60", "#f8bbd0", "#f06292"];
+ // const roseColor = ["#e91e63", "#ec407a", "#d81b60",
+ //   "#f8bbd0", "#f06292"];
+const roseColor = ["#CB1F8E", "#ff3dac","#cb1f8e",
+  "#F2C7E3","#DF73B8"];
+
 const grayColor = [
   "#999",
   "#3C4858",
@@ -143,8 +149,11 @@ const grayColor = [
   "#505050",
   "#1f1f1f"
 ];
+
+
+
 const whiteColor = "#FFF";
-const blackColor = "#000";
+const blackColor = "#363636" //changed to our galactic black "#000";
 const twitterColor = "#55acee";
 const facebookColor = "#3b5998";
 const googleColor = "#dd4b39";

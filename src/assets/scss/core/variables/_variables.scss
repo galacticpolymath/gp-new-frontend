@@ -83,10 +83,10 @@ $colors: map-merge(
 
 $primary: $gp-hydro-blue !default;
 $secondary: $gp-galactic-black !default;
-$success: $green !default;
+$success: green !default;
 $info: $gp-lightning-purple !default;
-$warning: $yellow !default;
-$danger: $red !default;
+$warning: yellow !default;
+$danger: red !default;
 $light: $gray-100 !default;
 $dark: $gray-800 !default;
 
@@ -957,3 +957,19 @@ $pre-scrollable-max-height: 340px !default;
 // Printing
 $print-page-size: a3 !default;
 $print-body-min-width: map-get($grid-breakpoints, "lg") !default;
+
+
+:export {
+  gpHydroBlue: gp-hydro-blue;
+  gpLightningPurple: gp-lightning-purple;
+  gpFuchsia: gp-fuchsia;
+  gpAtomicBlue: gp-atomic-blue;
+  gpBurstPurple: gp-burst-purple;
+  gpGalacticBlack: gp-galactic-black;
+  gpSparkleWhite: gp-sparkle-white;
+  gpMath: math;
+  gpSci: sci;
+  gpSocStudies: socstudies;
+  gpELA:ela;
+  gpExtra:extra;
+}

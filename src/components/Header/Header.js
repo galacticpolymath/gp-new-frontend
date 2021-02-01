@@ -72,7 +72,7 @@ export default function Header(props) {
         <Button className={classes.title}>
           <Link to="/">
             {/* <div>
-              <img alt="logo" src={logoImage} width="100px" />
+              <img alt="logo" src={logoImage} width="50px" />
             </div> */}
             <div className={classes.hideLogo}>
               <img alt="logo" src={GpImage} width="400px" />
@@ -135,6 +135,7 @@ Header.propTypes = {
     "white",
     "rose",
     "dark",
+    "blackColor",
   ]),
   links: PropTypes.node,
   brand: PropTypes.string,
@@ -158,6 +159,7 @@ Header.propTypes = {
       "white",
       "rose",
       "dark",
+      "blackColor",
     ]).isRequired,
   }),
 };
