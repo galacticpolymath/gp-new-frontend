@@ -65,6 +65,19 @@ const pricingStyle = {
   bgColor: {
     backgroundColor: "#6C2D82",
   },
+  "@media (max-width: 991px)": {
+    hideLogo: {
+      display: "none",
+    },
+  },
+
+  "@media only screen and (max-width: 992px)": {
+    /* phones */
+    hideLogo: {
+      display: "none",
+      maxWidth: "100%",
+    },
+  },
 };
 
 export default pricingStyle;

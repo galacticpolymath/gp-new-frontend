@@ -62,6 +62,19 @@ const blogPostsPageStyle = {
   bgColor: {
     backgroundColor: "#6812D1",
   },
+  "@media (max-width: 991px)": {
+    hideLogo: {
+      display: "none",
+    },
+  },
+
+  "@media only screen and (max-width: 992px)": {
+    /* phones */
+    hideLogo: {
+      display: "none",
+      maxWidth: "100%",
+    },
+  },
 };
 
 export default blogPostsPageStyle;

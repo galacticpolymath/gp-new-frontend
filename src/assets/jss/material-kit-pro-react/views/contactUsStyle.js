@@ -5,12 +5,18 @@ import {
   mainRaised,
   mlAuto,
   description,
+  whiteColor,
 } from "assets/jss/material-kit-pro-react.js";
 
 const contactUsStyle = {
   main,
   mainRaised,
-  title,
+  title: {
+    ...title,
+    "&, & + h4": {
+      color: whiteColor,
+    },
+  },
   mlAuto,
   description,
   container: {
@@ -72,6 +78,19 @@ const contactUsStyle = {
   },
   bgColor: {
     backgroundColor: "#CB1F8E",
+  },
+  "@media (max-width: 991px)": {
+    hideLogo: {
+      display: "none",
+    },
+  },
+
+  "@media only screen and (max-width: 992px)": {
+    /* phones */
+    hideLogo: {
+      display: "none",
+      maxWidth: "100%",
+    },
   },
 };
 

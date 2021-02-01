@@ -138,12 +138,13 @@ export default function ContactUsPage() {
                 classes.mrAuto,
                 classes.textLeft
               )}
-              style={{ paddingTop: "5%", paddingRight: "25px", color: "white" }}
+              style={{ paddingTop: "5%", paddingRight: "25px" }}
             >
-              <h1 className={classes.title} style={{ color: "white" }}>
-                JobViz
-              </h1>
-              <h4>
+              <h1 className={classes.title}>JobViz</h1>
+              <h4
+                className={classes.title}
+                style={{ letterSpacing: "1.5px", fontWeight: 500 }}
+              >
                 Whether you are an NSF-funded researcher, a nonprofit, or a
                 socially responsible company, you care about a body of knowledge
                 and you want the public to understand and care about it, too.
@@ -154,6 +155,7 @@ export default function ContactUsPage() {
               sm={6}
               md={6}
               className={classNames(
+                classes.hideLogo,
                 classes.mlAuto,
                 classes.mrAuto,
                 classes.textCenter
@@ -162,7 +164,7 @@ export default function ContactUsPage() {
               <img
                 src={require("assets/img/hero-images/JobViz_Bubble.svg")}
                 height="auto"
-                width="120%"
+                width="150%"
               />
             </GridItem>
           </GridContainer>

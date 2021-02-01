@@ -54,10 +54,13 @@ export default function PricingPage() {
                 classes.mrAuto,
                 classes.textLeft
               )}
-              style={{ paddingTop: "5%", paddingRight: "25px" }}
+              style={{ paddingTop: "3%", paddingRight: "25px" }}
             >
               <h1 className={classes.title}>The cost{"'"}s of impact</h1>
-              <h4>
+              <h4
+                className={classes.title}
+                style={{ letterSpacing: "1.5px", fontWeight: 500 }}
+              >
                 Whether you are an NSF-funded researcher, a nonprofit, or a
                 socially responsible company, you care about a body of knowledge
                 and you want the public to understand and care about it, too.
@@ -68,6 +71,7 @@ export default function PricingPage() {
               sm={6}
               md={6}
               className={classNames(
+                classes.hideLogo,
                 classes.mlAuto,
                 classes.mrAuto,
                 classes.textCenter
@@ -76,7 +80,7 @@ export default function PricingPage() {
               <img
                 src={require("assets/img/hero-images/PricingPage_DotLine.svg")}
                 height="auto"
-                width="120%"
+                width="150%"
               />
             </GridItem>
           </GridContainer>

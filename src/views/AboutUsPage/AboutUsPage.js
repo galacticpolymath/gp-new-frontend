@@ -58,7 +58,7 @@ export default function AboutUsPage(...rest) {
               )}
               style={{ paddingTop: "10%", paddingRight: "25px" }}
             >
-              <h2 className={classes.title}>About Galactic Polymath</h2>
+              <h1 className={classes.title}>About GP</h1>
               <h4
                 className={classes.title}
                 style={{ letterSpacing: "1.5px", fontWeight: 500 }}
@@ -80,11 +80,11 @@ export default function AboutUsPage(...rest) {
                 classes.textCenter
               )}
             >
-              {/* <img
+              <img
                 src={require("assets/img/hero-images/AboutPage_Bubbles.png")}
                 height="auto"
                 width="120%"
-              /> */}
+              />
             </GridItem>
           </GridContainer>
         </div>

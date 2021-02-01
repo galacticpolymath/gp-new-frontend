@@ -50,15 +50,23 @@ export default function BlogPostsPage() {
               xs={12}
               sm={6}
               md={6}
-              className={classes.textCenter}
-              style={{ paddingTop: "5%", paddingRight: "25px" }}
+              className={classNames(
+                classes.mlAuto,
+                classes.mrAuto,
+                classes.textLeft
+              )}
+              style={{ paddingTop: "7%", paddingRight: "25px" }}
             >
-              <h2 className={classes.title}>Galactic Lessons</h2>
-              <h4 className={classes.title}>
-                Galactic Polymath (GP) is a startup education studio that works
-                on behalf of scientists, nonprofits, and sustainable companies
-                with outreach needs to translate complicated, cutting-edge
-                knowledge into mind-blowing lessons for grades 5+.
+              <h1 className={classes.title}>Galactic Lessons</h1>
+              <h4
+                className={classes.title}
+                style={{ letterSpacing: "1.5px", fontWeight: 500 }}
+              >
+                First and foremost, our lessons are free. Next, by using
+                current, real-world scienteific data and studies, our adaptive
+                lessons don't need to be taught by subject-area experts.
+                Developed and tested by a specialized team of scientists,
+                teachers, and science communicators, we stand this.
               </h4>
             </GridItem>
             <GridItem
@@ -66,6 +74,7 @@ export default function BlogPostsPage() {
               sm={6}
               md={6}
               className={classNames(
+                classes.hideLogo,
                 classes.mlAuto,
                 classes.mrAuto,
                 classes.textCenter

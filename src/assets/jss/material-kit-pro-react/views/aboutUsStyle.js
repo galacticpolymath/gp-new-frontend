@@ -3,16 +3,12 @@ import {
   title,
   main,
   mainRaised,
-  mrAuto,
   whiteColor,
-  mlAuto,
 } from "assets/jss/material-kit-pro-react.js";
 
 const aboutUsStyle = {
   main,
   mainRaised,
-  mrAuto,
-  mlAuto,
   container: {
     ...container,
     zIndex: 1,
@@ -71,18 +67,13 @@ const aboutUsStyle = {
     },
   },
 
-  "@media (max-width: 992px)": {
+  "@media only screen and (max-width: 992px)": {
     /* phones */
     hideLogo: {
       display: "none",
       maxWidth: "100%",
     },
   },
-  // "@media (max-width: 992px)": {
-  //   width100: {
-  //     width: "200%",
-  //   },
-  // },
 };
 
 export default aboutUsStyle;
