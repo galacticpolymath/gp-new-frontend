@@ -50,9 +50,9 @@ import { LrAutoSearchV2 } from "../search/LRautoSearchV2";
 import { Level1Card } from "./Level1Card";
 // sections for this page Added by JOB VIZ TEAM^^^^^
 
-import contactUsStyle from "assets/jss/material-kit-pro-react/views/contactUsStyle.js";
+import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle.js";
 
-const useStyles = makeStyles(contactUsStyle);
+const useStyles = makeStyles(JobVizStyle);
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="down" ref={ref} {...props} />;
 });
@@ -237,7 +237,7 @@ export const Level1List = (props) => {
           <div className="crumbs">
             <Card className={classes.textCenter} style={{ width: "20rem" }}>
               <CardAvatar profile>
-                <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                <a href="" onClick={(e) => e.preventDefault()}>
                   <img src={brick1} alt="..." />
                 </a>
               </CardAvatar>

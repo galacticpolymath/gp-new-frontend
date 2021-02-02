@@ -66,11 +66,10 @@ import { LrAutoSearchV2 } from "../search/LRautoSearchV2";
 import { Level4Card } from "./Level4Card";
 // sections for this page Added by JOB VIZ TEAM
 
-import pricingStyle from "assets/jss/material-kit-pro-react/views/pricingStyle.js";
 import JobVizHeader from "../modules/JobVizComponents";
-import contactUsStyle from "../../../assets/jss/material-kit-pro-react/views/contactUsStyle";
+import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle.js";
 
-const useStyles = makeStyles(contactUsStyle);
+const useStyles = makeStyles(JobVizStyle);
 
 export const Level4List = (props) => {
   const grandparent = props.level1;
@@ -215,16 +214,19 @@ export const Level4List = (props) => {
 
       <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
-          <GridContainer>
+          <GridContainer
+            style={{placeItems: "center"}}
+          >
             <GridItem
-                xs={12}
-                md={6}
-                sm={6}
-                className={classNames(
-                    classes.mlAuto,
-                    classes.mrAuto,
-                    classes.textLeft
-                )}
+              xs={12}
+              md={6}
+              sm={6}
+              className={classNames(
+                classes.mlAuto,
+                classes.mrAuto,
+                classes.textLeft
+              )}
+              style={{ paddingLeft:0, paddingRight: "25px" }}
             >
               <JobVizHeader />
             </GridItem>
@@ -244,6 +246,7 @@ export const Level4List = (props) => {
                   height="auto"
                   width="150%"
                   style={{paddingTop:"2rem"}}
+                  alt={"geometric horizontal bubbles on line background pattern"}
               />
             </GridItem>
           </GridContainer>
@@ -317,7 +320,7 @@ export const Level4List = (props) => {
           <div className="crumbs">
             <Card className={classes.textCenter} style={{ width: "20rem" }}>
               <CardAvatar profile>
-                <a href="#pablo" onClick={(e) => e.preventDefault()}></a>
+                <a href="" onClick={(e) => e.preventDefault()}></a>
                 <img src={branch2} alt="nodes" />
               </CardAvatar>
               <CardBody>
