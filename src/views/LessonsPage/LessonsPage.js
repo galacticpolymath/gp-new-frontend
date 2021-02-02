@@ -63,11 +63,9 @@ export default function LessonsPage() {
                 className={classes.title}
                 style={{ letterSpacing: "1.5px", fontWeight: 500 }}
               >
-                First and foremost, our lessons are free. Next, by using
-                current, real-world scienteific data and studies, our adaptive
-                lessons don't need to be taught by subject-area experts.
-                Developed and tested by a specialized team of scientists,
-                teachers, and science communicators, we stand this.
+                Our lessons are free. We strive to create mind-expanding
+                learning experiences that a non-specialist can teach
+                in <em>any G5-12 classroom</em> with 15 minutes of prep time!
               </h4>
             </GridItem>
             <GridItem
@@ -85,6 +83,7 @@ export default function LessonsPage() {
                 src={require("assets/img/hero-images/Lessons_VerticalDotandline.svg")}
                 height="auto"
                 width="120%"
+                alt={"vertical geometric line and dot pattern"}
               />
             </GridItem>
           </GridContainer>

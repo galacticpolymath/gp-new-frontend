@@ -47,7 +47,7 @@ export default function LandingPage({ ...rest }) {
         {...rest}
       />
       <Parallax
-        image={require("assets/img/hero-images/MoscowTinted_Faded-01.jpg")}
+        image={require("assets/img/hero-images/landingPage-CityNetwork@75x-20.jpg")}
       >
         <div className={classes.container}>
           <GridContainer>
