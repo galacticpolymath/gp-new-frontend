@@ -6,7 +6,6 @@ import GridItem from "components/Grid/GridItem.js";
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui icons
 
-
 import featuresStyle from "assets/jss/material-kit-pro-react/views/pricingSections/featuresStyle.js";
 
 import Card from "components/Card/Card.js";
