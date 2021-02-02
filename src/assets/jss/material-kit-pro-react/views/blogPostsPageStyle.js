@@ -3,27 +3,25 @@ import {
   title,
   main,
   whiteColor,
-  mainRaised,
-  mlAuto,
+  mainRaised
 } from "assets/jss/material-kit-pro-react.js";
 
 const blogPostsPageStyle = {
   container: {
     ...container,
     zIndex: "2",
-    position: "relative",
+    position: "relative"
   },
   textCenter: {
-    textAlign: "center",
+    textAlign: "center"
   },
   title: {
     ...title,
-    color: whiteColor,
+    color: whiteColor
   },
-  mlAuto,
   main: {
     ...main,
-    ...mainRaised,
+    ...mainRaised
   },
   block: {
     color: "inherit",
@@ -34,49 +32,33 @@ const blogPostsPageStyle = {
     borderRadius: "3px",
     textDecoration: "none",
     position: "relative",
-    display: "block",
+    display: "block"
   },
   inlineBlock: {
     display: "inline-block",
     padding: "0px",
-    width: "auto",
+    width: "auto"
   },
   list: {
     marginBottom: "0",
     padding: "0",
-    marginTop: "0",
+    marginTop: "0"
   },
   left: {
     float: "left!important",
-    display: "block",
+    display: "block"
   },
   right: {
     padding: "15px 0",
     margin: "0",
-    float: "right",
+    float: "right"
   },
   icon: {
     width: "18px",
     height: "18px",
     top: "3px",
-    position: "relative",
-  },
-  bgColor: {
-    backgroundColor: "#6812D1",
-  },
-  "@media (max-width: 991px)": {
-    hideLogo: {
-      display: "none",
-    },
-  },
-
-  "@media only screen and (max-width: 992px)": {
-    /* phones */
-    hideLogo: {
-      display: "none",
-      maxWidth: "100%",
-    },
-  },
+    position: "relative"
+  }
 };
 
 export default blogPostsPageStyle;

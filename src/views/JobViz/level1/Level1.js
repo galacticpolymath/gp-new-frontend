@@ -50,9 +50,9 @@ import { LrAutoSearchV2 } from "../search/LRautoSearchV2";
 import { Level1Card } from "./Level1Card";
 // sections for this page Added by JOB VIZ TEAM^^^^^
 
-import contactUsStyle from "assets/jss/material-kit-pro-react/views/contactUsStyle.js";
+import pricingStyle from "assets/jss/material-kit-pro-react/views/pricingStyle.js";
 
-const useStyles = makeStyles(contactUsStyle);
+const useStyles = makeStyles(pricingStyle);
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="down" ref={ref} {...props} />;
 });
@@ -172,43 +172,32 @@ export const Level1List = (props) => {
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 200,
-          color: "dark",
+          height: 300,
+          color: "info",
         }}
       />
 
-      <Parallax className={classes.bgColor} small>
+      <Parallax image={require("assets/img/bg12.jpg")} filter="dark" small>
         <div className={classes.container}>
           <GridContainer>
             <GridItem
-              xs={12}
-              md={6}
-              sm={6}
+              md={8}
+              sm={8}
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,
-                classes.textLeft
+                classes.textCenter
               )}
             >
-              <JobVizHeader />
-            </GridItem>
-            <GridItem
-              xs={12}
-              sm={6}
-              md={6}
-              className={classNames(
-                classes.hideLogo,
-                classes.mlAuto,
-                classes.mrAuto,
-                classes.textLeft
-              )}
-            >
-              <img
-                src={require("assets/img/hero-images/JobViz_Bubble.svg")}
-                height="auto"
-                width="150%"
-                style={{paddingTop:"2rem"}}
-              />
+              {/*<>*/}
+              {/*<h1 className={classes.title}>JOBVIZ </h1>*/}
+              {/*<h4>*/}
+              {/*  For middle and high school students to explore career possibilities. See how fields relate and overlap,*/}
+              {/*  and get a glimpse at industry education and financial data.*/}
+              {/*</h4>*/}
+              {/*<h4>What do you want to be?</h4>*/}
+              {/*  </>*/}
+              <JobVizHeader/>
             </GridItem>
           </GridContainer>
         </div>
@@ -240,7 +229,8 @@ export const Level1List = (props) => {
               <CardBody>
                 <h4 className={classes.cardTitle}>Job Categories</h4>
 
-                <Button onClick={() => setClassicModal(true)} color="primary">
+                <Button onClick={() => setClassicModal(true)}
+                  color="primary">
                   <LibraryBooks />
                   Details
                 </Button>

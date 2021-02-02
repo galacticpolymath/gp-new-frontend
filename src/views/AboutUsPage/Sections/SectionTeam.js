@@ -14,8 +14,9 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import teamStyle from "assets/jss/material-kit-pro-react/views/aboutUsSections/teamStyle.js";
 
-import { makeCloudinaryUrl } from "components/shared/constants";
-import grey from "@material-ui/core/colors/grey";
+import { makeCloudinaryUrl } from 'components/shared/constants';
+import grey from '@material-ui/core/colors/grey';
+
 
 const useStyles = makeStyles(teamStyle);
 
@@ -40,13 +41,7 @@ export default function SectionTeam() {
         <GridItem md={3} sm={3}>
           <Card profile plain>
             <CardAvatar profile plain>
-              <img
-                src={makeCloudinaryUrl(
-                  "w_150,c_fill,ar_1:1,q_100,g_auto/v1592966233/Team/Matt_Wilkins_profile_ukorql.jpg"
-                )}
-                alt="profile-pic"
-                className={classes.img}
-              />
+              <img src={makeCloudinaryUrl('w_150,c_fill,ar_1:1,q_100,g_auto/v1592966233/Team/Matt_Wilkins_profile_ukorql.jpg')} alt="profile-pic" className={classes.img} />
             </CardAvatar>
             <CardBody plain>
               <h4 className={classes.cardTitle}>Matt Wilkins, PhD</h4>
@@ -57,22 +52,10 @@ export default function SectionTeam() {
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
-              <Button
-                href="http://www.mattwilkinsbio.com/"
-                target="_blank"
-                justIcon
-                simple
-                style={{ color: grey[900] }}
-              >
-                <i className="fas fa-globe"></i>
+              <Button href="http://www.mattwilkinsbio.com/" target="_blank" justIcon simple style={{color: grey[900]}}>
+                <i class="fas fa-globe"></i>
               </Button>
-              <Button
-                href="https://www.linkedin.com/in/mattwilkinsphd/"
-                target="_blank"
-                justIcon
-                simple
-                color="linkedin"
-              >
+              <Button href="https://www.linkedin.com/in/mattwilkinsphd/" target="_blank" justIcon simple color="linkedin">
                 <i className="fab fa-linkedin" />
               </Button>
             </CardFooter>
@@ -81,32 +64,22 @@ export default function SectionTeam() {
         <GridItem md={3} sm={3}>
           <Card profile plain>
             <CardAvatar profile plain>
-              <img
-                src={makeCloudinaryUrl(
-                  "w_150,c_fill,ar_1:1,q_100,g_auto/v1597113803/Team/StephanieCastillo_mu3bln.jpg"
-                )}
-                alt="profile-pic"
-                className={classes.img}
-              />
+                <img
+                  src={makeCloudinaryUrl('w_150,c_fill,ar_1:1,q_100,g_auto/v1597113803/Team/StephanieCastillo_mu3bln.jpg')}
+                  alt="profile-pic"
+                  className={classes.img}
+                />
             </CardAvatar>
             <CardBody plain>
               <h4 className={classes.cardTitle}>Stephanie Castillo</h4>
-              <h6 className={classes.textMuted}>
-                DIGITAL MULTIMEDIA SPECIALIST
-              </h6>
+              <h6 className={classes.textMuted}>DIGITAL MULTIMEDIA SPECIALIST</h6>
               <p className={classes.cardDescription}>
                 Don{"'"}t be scared of the truth because we need to restart the
                 human foundation. And I love you like Kanye loves Kanye.
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
-              <Button
-                href="https://www.linkedin.com/in/castils/"
-                target="_blank"
-                justIcon
-                simple
-                color="linkedin"
-              >
+              <Button href="https://www.linkedin.com/in/castils/" target="_blank" justIcon simple color="linkedin">
                 <i className="fab fa-linkedin" />
               </Button>
             </CardFooter>
@@ -115,13 +88,11 @@ export default function SectionTeam() {
         <GridItem md={3} sm={3}>
           <Card profile plain>
             <CardAvatar profile plain>
-              <img
-                src={makeCloudinaryUrl(
-                  "w_150,c_fill,ar_1:1,q_100,g_auto/v1595867238/Team/FullSizeRender_Arda_headshot-2_ebakrg.jpg"
-                )}
-                alt="profile-pic"
-                className={classes.img}
-              />
+                <img
+                  src={makeCloudinaryUrl('w_150,c_fill,ar_1:1,q_100,g_auto/v1595867238/Team/FullSizeRender_Arda_headshot-2_ebakrg.jpg')}
+                  alt="profile-pic"
+                  className={classes.img}
+                />
             </CardAvatar>
             <CardBody plain>
               <h4 className={classes.cardTitle}>Arda Turkmen</h4>
@@ -132,13 +103,7 @@ export default function SectionTeam() {
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
-              <Button
-                href="https://www.linkedin.com/in/arda-turkmen-604432113/"
-                target="_blank"
-                justIcon
-                simple
-                color="linkedin"
-              >
+              <Button href="https://www.linkedin.com/in/arda-turkmen-604432113/" target="_blank" justIcon simple color="linkedin">
                 <i className="fab fa-linkedin" />
               </Button>
             </CardFooter>
@@ -147,13 +112,11 @@ export default function SectionTeam() {
         <GridItem md={3} sm={3}>
           <Card profile plain>
             <CardAvatar profile plain>
-              <img
-                src={makeCloudinaryUrl(
-                  "w_150,c_fill,ar_1:1,q_100,g_auto/v1597278923/Team/image_2_jjogfs.png"
-                )}
-                alt="profile-pic"
-                className={classes.img}
-              />
+                <img
+                  src={makeCloudinaryUrl('w_150,c_fill,ar_1:1,q_100,g_auto/v1597278923/Team/image_2_jjogfs.png')}
+                  alt="profile-pic"
+                  className={classes.img}
+                />
             </CardAvatar>
             <CardBody plain>
               <h4 className={classes.cardTitle}>Tyler Lemburg</h4>
@@ -164,22 +127,10 @@ export default function SectionTeam() {
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
-              <Button
-                href="http://tylerlemburg.com/"
-                target="_blank"
-                justIcon
-                simple
-                style={{ color: grey[900] }}
-              >
-                <i className="fas fa-globe"></i>
+              <Button href="http://tylerlemburg.com/" target="_blank" justIcon simple style={{color: grey[900]}}>
+                <i class="fas fa-globe"></i>
               </Button>
-              <Button
-                href="https://www.linkedin.com/in/tylerlemburg/"
-                target="_blank"
-                justIcon
-                simple
-                color="linkedin"
-              >
+              <Button href="https://www.linkedin.com/in/tylerlemburg/" target="_blank" justIcon simple color="linkedin">
                 <i className="fab fa-linkedin" />
               </Button>
             </CardFooter>

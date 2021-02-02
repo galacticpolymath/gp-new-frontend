@@ -66,11 +66,10 @@ import { LrAutoSearchV2 } from "../search/LRautoSearchV2";
 import { Level3Card } from "./Level3Card";
 // sections for this page Added by JOB VIZ TEAM
 
-
+import pricingStyle from "assets/jss/material-kit-pro-react/views/pricingStyle.js";
 import JobVizHeader from "../modules/JobVizComponents";
-import contactUsStyle from "../../../assets/jss/material-kit-pro-react/views/contactUsStyle";
 
-const useStyles = makeStyles(contactUsStyle);
+const useStyles = makeStyles(pricingStyle);
 
 export const Level3List = (props) => {
   const parent = props.level1;
@@ -199,43 +198,24 @@ export const Level3List = (props) => {
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 200,
-          color: "dark",
+          height: 300,
+          color: "info",
         }}
       />
 
-      <Parallax className={classes.bgColor} small>
+      <Parallax image={require("assets/img/bg12.jpg")} filter="dark" small>
         <div className={classes.container}>
           <GridContainer>
             <GridItem
-                xs={12}
-                md={6}
-                sm={6}
-                className={classNames(
-                    classes.mlAuto,
-                    classes.mrAuto,
-                    classes.textLeft
-                )}
+              md={8}
+              sm={8}
+              className={classNames(
+                classes.mlAuto,
+                classes.mrAuto,
+                classes.textCenter
+              )}
             >
-              <JobVizHeader />
-            </GridItem>
-            <GridItem
-                xs={12}
-                sm={6}
-                md={6}
-                className={classNames(
-                    classes.hideLogo,
-                    classes.mlAuto,
-                    classes.mrAuto,
-                    classes.textLeft
-                )}
-            >
-              <img
-                  src={require("assets/img/hero-images/JobViz_Bubble.svg")}
-                  height="auto"
-                  width="150%"
-                  style={{paddingTop:"2rem"}}
-              />
+              <JobVizHeader/>
             </GridItem>
           </GridContainer>
         </div>
