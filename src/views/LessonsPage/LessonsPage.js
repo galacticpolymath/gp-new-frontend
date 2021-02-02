@@ -11,19 +11,21 @@ import Favorite from "@material-ui/icons/Favorite";
 // core components
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
-import Parallax from "components/Parallax/Parallax.js";
+import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Footer from "components/Footer/Footer.js";
+import Parallax from "components/Parallax/Parallax.js";
 // sections for this page
-import SectionPricing from "views/PricingPage/Sections/SectionPricing.js";
-import SectionFeatures from "views/PricingPage/Sections/SectionFeatures.js";
+import SectionPills from "./Sections/SectionPills.js";
+import SectionInterested from "./Sections/SectionInterested.js";
+import SectionImage from "./Sections/SectionImage.js";
+import SubscribeLine from "./Sections/SubscribeLine.js";
 
-import pricingStyle from "assets/jss/material-kit-pro-react/views/pricingStyle.js";
+import blogPostsPageStyle from "assets/jss/material-kit-pro-react/views/blogPostsPageStyle.js";
 
-const useStyles = makeStyles(pricingStyle);
+const useStyles = makeStyles(blogPostsPageStyle);
 
-export default function PricingPage() {
+export default function LessonsPage() {
   React.useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
@@ -41,12 +43,10 @@ export default function PricingPage() {
           color: "dark",
         }}
       />
-
       <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
           <GridContainer
-          style={{placeItems: "center"}}
-          >
+            style={{placeItems: "center"}}>
             <GridItem
               xs={12}
               sm={6}
@@ -56,16 +56,18 @@ export default function PricingPage() {
                 classes.mrAuto,
                 classes.textLeft
               )}
-              // style={{ paddingTop: "3%"}}
+              style={{ paddingTop: "3%", paddingRight: "25px" }}
             >
-              <h1 className={classes.title}>Achieving Real, Lasting Impact</h1>
+              <h1 className={classes.title}>Galactic Lessons</h1>
               <h4
                 className={classes.title}
                 style={{ letterSpacing: "1.5px", fontWeight: 500 }}
               >
-                Whether you are an NSF-funded researcher, a nonprofit, or a
-                socially responsible company, you care about a body of knowledge
-                and you want the public to understand and care about it, too.
+                First and foremost, our lessons are free. Next, by using
+                current, real-world scienteific data and studies, our adaptive
+                lessons don't need to be taught by subject-area experts.
+                Developed and tested by a specialized team of scientists,
+                teachers, and science communicators, we stand this.
               </h4>
             </GridItem>
             <GridItem
@@ -75,24 +77,26 @@ export default function PricingPage() {
               className={classNames(
                 classes.hideLogo,
                 classes.mlAuto,
-                classes.mrAuto
+                classes.mrAuto,
+                classes.textCenter
               )}
-              style={{ height: "130%", width: "100%"}}
             >
               <img
-                src={require("assets/img/hero-images/PricingPage-dot-pattern-01.svg")}
-
+                src={require("assets/img/hero-images/Lessons_VerticalDotandline.svg")}
+                height="auto"
+                width="120%"
               />
             </GridItem>
           </GridContainer>
         </div>
       </Parallax>
-      <div className={classNames(classes.main, classes.mainRaised)}>
+      <div className={classes.main}>
         <div className={classes.container}>
-          <SectionPricing />
-          <hr />
-          <SectionFeatures />
+          <SectionPills />
+          <SectionInterested />
         </div>
+        <SectionImage />
+        <SubscribeLine />
       </div>
       <Footer
         content={
@@ -101,7 +105,7 @@ export default function PricingPage() {
               <List className={classes.list}>
                 <ListItem className={classes.inlineBlock}>
                   <a
-                    href="https://www.creative-tim.com/?ref=mkpr-pricing"
+                    href="https://www.creative-tim.com/?ref=mkpr-blog-posts"
                     target="_blank"
                     className={classes.block}
                   >
@@ -110,7 +114,7 @@ export default function PricingPage() {
                 </ListItem>
                 <ListItem className={classes.inlineBlock}>
                   <a
-                    href="https://www.creative-tim.com/presentation?ref=mkpr-pricing"
+                    href="https://www.creative-tim.com/presentation?ref=mkpr-blog-posts"
                     target="_blank"
                     className={classes.block}
                   >
@@ -124,7 +128,7 @@ export default function PricingPage() {
                 </ListItem>
                 <ListItem className={classes.inlineBlock}>
                   <a
-                    href="https://www.creative-tim.com/license?ref=mkpr-pricing"
+                    href="https://www.creative-tim.com/license?ref=mkpr-blog-posts"
                     target="_blank"
                     className={classes.block}
                   >
@@ -137,7 +141,7 @@ export default function PricingPage() {
               &copy; {1900 + new Date().getYear()} , made with{" "}
               <Favorite className={classes.icon} /> by{" "}
               <a
-                href="https://www.creative-tim.com?ref=mkpr-pricing"
+                href="https://www.creative-tim.com?ref=mkpr-blog-posts"
                 target="_blank"
               >
                 Creative Tim

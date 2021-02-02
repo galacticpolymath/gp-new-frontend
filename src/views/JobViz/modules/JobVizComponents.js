@@ -7,16 +7,16 @@ export default function JobVizHeader() {
   const classes = useStyles();
   return (
     <>
-      <h1 className={classes.title}
-      style={{paddingTop:"4%"}}
+      <h1
+        className={classes.title}
+        // style={{paddingLeft: 0, marginLeft:0}}
       >JobViz </h1>
       <h4
         className={classes.title}
         style={{ letterSpacing: "1.5px", fontWeight: 500 }}
       >
-        For middle and high school students to explore career possibilities. See
-        how fields relate and overlap, and get a glimpse at industry education
-        and financial data.
+        A tool for middle and high school students to explore career possibilities.
+        Browse, search, and share descriptions and stats for over a thousand jobs!
         <br />
         <br />
         What do you want to be?

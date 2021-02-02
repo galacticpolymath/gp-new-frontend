@@ -10,23 +10,20 @@ import ListItem from "@material-ui/core/ListItem";
 import Favorite from "@material-ui/icons/Favorite";
 // core components
 import Header from "components/Header/Header.js";
+import HeaderLinks from "components/Header/HeaderLinks.js";
+import Parallax from "components/Parallax/Parallax.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Parallax from "components/Parallax/Parallax.js";
 import Footer from "components/Footer/Footer.js";
 // sections for this page
-import HeaderLinks from "components/Header/HeaderLinks.js";
-import SectionDescription from "views/AboutUsPage/Sections/SectionDescription.js";
-import SectionTeam from "views/AboutUsPage/Sections/SectionTeam.js";
-import SectionServices from "views/AboutUsPage/Sections/SectionServices.js";
-import SectionOffice from "views/AboutUsPage/Sections/SectionOffice.js";
-import SectionContact from "views/AboutUsPage/Sections/SectionContact.js";
+import SectionPricing from "views/HireUs/Sections/SectionPricing.js";
+import SectionFeatures from "views/HireUs/Sections/SectionFeatures.js";
 
-import aboutUsStyle from "assets/jss/material-kit-pro-react/views/aboutUsStyle.js";
+import pricingStyle from "assets/jss/material-kit-pro-react/views/pricingStyle.js";
 
-const useStyles = makeStyles(aboutUsStyle);
+const useStyles = makeStyles(pricingStyle);
 
-export default function AboutUsPage(...rest) {
+export default function PricingPage() {
   React.useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
@@ -35,19 +32,21 @@ export default function AboutUsPage(...rest) {
   return (
     <div>
       <Header
-        links={<HeaderLinks />}
+        brand="Material Kit PRO React"
+        links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
         color="transparent"
         changeColorOnScroll={{
           height: 200,
           color: "dark",
         }}
-        {...rest}
       />
+
       <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
           <GridContainer
-              style={{placeItems: "center"}}>
+          style={{placeItems: "center"}}
+          >
             <GridItem
               xs={12}
               sm={6}
@@ -57,17 +56,16 @@ export default function AboutUsPage(...rest) {
                 classes.mrAuto,
                 classes.textLeft
               )}
-              style={{ paddingTop: "3", paddingRight: "5px" }}
+              // style={{ paddingTop: "3%"}}
             >
-              <h1 className={classes.title}>About GP</h1>
+              <h1 className={classes.title}>Achieving Real, Lasting Impact</h1>
               <h4
                 className={classes.title}
-                style={{ letterSpacing: "1.5px", fontWeight: 500}}
+                style={{ letterSpacing: "1.5px", fontWeight: 500 }}
               >
-                Galactic Polymath (GP) is an education studio.{"\n"} We help scientists,
-                nonprofits, and sustainable companies
-                with outreach needs to translate complicated, cutting-edge
-                knowledge into mind-blowing lessons for grades 5+.
+                Whether you are an NSF-funded researcher, a nonprofit, or a
+                socially responsible company, you care about a body of knowledge
+                and you want the public to understand and care about it, too.
               </h4>
             </GridItem>
             <GridItem
@@ -77,14 +75,13 @@ export default function AboutUsPage(...rest) {
               className={classNames(
                 classes.hideLogo,
                 classes.mlAuto,
-                classes.mrAuto,
-                classes.textCenter
+                classes.mrAuto
               )}
+              style={{ height: "130%", width: "100%"}}
             >
               <img
-                src={require("assets/img/hero-images/AboutPage_Bubbles.png")}
-                height="auto"
-                width="110%"
+                src={require("assets/img/hero-images/PricingPage-dot-pattern-01.svg")}
+
               />
             </GridItem>
           </GridContainer>
@@ -92,11 +89,9 @@ export default function AboutUsPage(...rest) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          <SectionDescription />
-          <SectionTeam />
-          <SectionServices />
-          {/* <SectionOffice /> */}
-          <SectionContact />
+          <SectionPricing />
+          <hr />
+          <SectionFeatures />
         </div>
       </div>
       <Footer
@@ -106,36 +101,32 @@ export default function AboutUsPage(...rest) {
               <List className={classes.list}>
                 <ListItem className={classes.inlineBlock}>
                   <a
-                    href="https://www.creative-tim.com/?ref=mkpr-about-us"
-                    className={classes.block}
+                    href="https://www.creative-tim.com/?ref=mkpr-pricing"
                     target="_blank"
+                    className={classes.block}
                   >
                     Creative Tim
                   </a>
                 </ListItem>
                 <ListItem className={classes.inlineBlock}>
                   <a
-                    href="https://www.creative-tim.com/presentation?ref=mkpr-about-us"
-                    className={classes.block}
+                    href="https://www.creative-tim.com/presentation?ref=mkpr-pricing"
                     target="_blank"
+                    className={classes.block}
                   >
                     About us
                   </a>
                 </ListItem>
                 <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="//blog.creative-tim.com/"
-                    className={classes.block}
-                    target="_blank"
-                  >
+                  <a href="//blog.creative-tim.com/" className={classes.block}>
                     Blog
                   </a>
                 </ListItem>
                 <ListItem className={classes.inlineBlock}>
                   <a
-                    href="https://www.creative-tim.com/license?ref=mkpr-about-us"
-                    className={classes.block}
+                    href="https://www.creative-tim.com/license?ref=mkpr-pricing"
                     target="_blank"
+                    className={classes.block}
                   >
                     Licenses
                   </a>
@@ -146,7 +137,7 @@ export default function AboutUsPage(...rest) {
               &copy; {1900 + new Date().getYear()} , made with{" "}
               <Favorite className={classes.icon} /> by{" "}
               <a
-                href="https://www.creative-tim.com?ref=mkpr-about-us"
+                href="https://www.creative-tim.com?ref=mkpr-pricing"
                 target="_blank"
               >
                 Creative Tim

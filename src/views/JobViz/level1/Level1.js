@@ -179,7 +179,9 @@ export const Level1List = (props) => {
 
       <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
-          <GridContainer>
+          <GridContainer
+            style={{placeItems: "center"}}
+          >
             <GridItem
               xs={12}
               md={6}
@@ -189,6 +191,7 @@ export const Level1List = (props) => {
                 classes.mrAuto,
                 classes.textLeft
               )}
+              style={{ paddingLeft:0, paddingRight: "25px" }}
             >
               <JobVizHeader />
             </GridItem>
@@ -202,6 +205,7 @@ export const Level1List = (props) => {
                 classes.mrAuto,
                 classes.textLeft
               )}
+              style={{objectFit: "fit"}}
             >
               <img
                 src={require("assets/img/hero-images/JobViz_Bubble.svg")}
