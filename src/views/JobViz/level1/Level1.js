@@ -172,8 +172,8 @@ export const Level1List = (props) => {
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 300,
-          color: "info",
+          height: 200,
+          color: "dark",
         }}
       />
 
@@ -190,14 +190,6 @@ export const Level1List = (props) => {
                 classes.textLeft
               )}
             >
-              {/*<>*/}
-              {/*<h1 className={classes.title}>JOBVIZ </h1>*/}
-              {/*<h4>*/}
-              {/*  For middle and high school students to explore career possibilities. See how fields relate and overlap,*/}
-              {/*  and get a glimpse at industry education and financial data.*/}
-              {/*</h4>*/}
-              {/*<h4>What do you want to be?</h4>*/}
-              {/*  </>*/}
               <JobVizHeader />
             </GridItem>
             <GridItem
@@ -215,6 +207,7 @@ export const Level1List = (props) => {
                 src={require("assets/img/hero-images/JobViz_Bubble.svg")}
                 height="auto"
                 width="150%"
+                style={{paddingTop:"2rem"}}
               />
             </GridItem>
           </GridContainer>

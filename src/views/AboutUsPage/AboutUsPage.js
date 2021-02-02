@@ -39,14 +39,15 @@ export default function AboutUsPage(...rest) {
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 300,
-          color: "info",
+          height: 200,
+          color: "dark",
         }}
         {...rest}
       />
       <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
-          <GridContainer>
+          <GridContainer
+              style={{alignItems: "start"}}>
             <GridItem
               xs={12}
               sm={6}
@@ -56,15 +57,15 @@ export default function AboutUsPage(...rest) {
                 classes.mrAuto,
                 classes.textLeft
               )}
-              style={{ paddingTop: "10%", paddingRight: "25px" }}
+              style={{ paddingTop: "3", paddingRight: "5px" }}
             >
               <h1 className={classes.title}>About GP</h1>
               <h4
                 className={classes.title}
-                style={{ letterSpacing: "1.5px", fontWeight: 500 }}
+                style={{ letterSpacing: "1.5px", fontWeight: 500}}
               >
-                Galactic Polymath (GP) is a startup education studio that works
-                on behalf of scientists, nonprofits, and sustainable companies
+                Galactic Polymath (GP) is an education studio.{"\n"} We help scientists,
+                nonprofits, and sustainable companies
                 with outreach needs to translate complicated, cutting-edge
                 knowledge into mind-blowing lessons for grades 5+.
               </h4>
@@ -83,7 +84,7 @@ export default function AboutUsPage(...rest) {
               <img
                 src={require("assets/img/hero-images/AboutPage_Bubbles.png")}
                 height="auto"
-                width="120%"
+                width="110%"
               />
             </GridItem>
           </GridContainer>

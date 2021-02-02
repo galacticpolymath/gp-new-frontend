@@ -39,8 +39,8 @@ export default function BlogPostsPage() {
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 400,
-          color: "info",
+          height: 200,
+          color: "dark",
         }}
       />
       <Parallax className={classes.bgColor} small>

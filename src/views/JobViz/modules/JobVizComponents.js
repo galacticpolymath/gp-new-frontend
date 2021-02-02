@@ -7,7 +7,9 @@ export default function JobVizHeader() {
   const classes = useStyles();
   return (
     <>
-      <h1 className={classes.title}>JobViz </h1>
+      <h1 className={classes.title}
+      style={{paddingTop:"4%"}}
+      >JobViz </h1>
       <h4
         className={classes.title}
         style={{ letterSpacing: "1.5px", fontWeight: 500 }}

@@ -41,8 +41,8 @@ export default function LandingPage({ ...rest }) {
         links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
         changeColorOnScroll={{
-          height: 300,
-          color: "info",
+          height: 200,
+          color: "dark",
         }}
         {...rest}
       />
