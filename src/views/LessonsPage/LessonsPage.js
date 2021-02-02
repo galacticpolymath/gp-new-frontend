@@ -39,14 +39,15 @@ export default function LessonsPage() {
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 200,
+          height: 50,
           color: "dark",
         }}
       />
       <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
           <GridContainer
-            style={{placeItems: "center"}}>
+            style={{placeItems: "center"}}
+          >
             <GridItem
               xs={12}
               sm={6}

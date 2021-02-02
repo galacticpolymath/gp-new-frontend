@@ -172,7 +172,7 @@ export const Level1List = (props) => {
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 200,
+          height: 50,
           color: "dark",
         }}
       />
@@ -205,13 +205,14 @@ export const Level1List = (props) => {
                 classes.mrAuto,
                 classes.textLeft
               )}
-              style={{objectFit: "fit"}}
+              // style={{objectFit: "fit"}}
             >
               <img
                 src={require("assets/img/hero-images/JobViz_Bubble.svg")}
                 height="auto"
-                width="150%"
+                width="120%"
                 style={{paddingTop:"2rem"}}
+                alt={"horizontal lines with bubbles, background pattern"}
               />
             </GridItem>
           </GridContainer>

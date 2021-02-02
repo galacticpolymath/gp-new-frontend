@@ -199,7 +199,7 @@ export const Level3List = (props) => {
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 200,
+          height: 50,
           color: "dark",
         }}
       />
@@ -236,7 +236,7 @@ export const Level3List = (props) => {
               <img
                   src={require("assets/img/hero-images/JobViz_Bubble.svg")}
                   height="auto"
-                  width="150%"
+                  width="120%"
                   style={{paddingTop:"2rem"}}
                   alt={"geometric horizontal bubbles on line background pattern"}
               />
@@ -296,7 +296,7 @@ export const Level3List = (props) => {
           <div className="crumbs">
             <Card className={classes.textCenter} style={{ width: "20rem" }}>
               <CardAvatar profile>
-                <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                <a href="#" onClick={(e) => e.preventDefault()}>
                   <img src={branch2} alt="..." />
                 </a>
               </CardAvatar>

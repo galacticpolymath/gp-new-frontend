@@ -207,7 +207,7 @@ export const Level4List = (props) => {
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 200,
+          height: 50,
           color: "dark",
         }}
       />
@@ -244,7 +244,7 @@ export const Level4List = (props) => {
               <img
                   src={require("assets/img/hero-images/JobViz_Bubble.svg")}
                   height="auto"
-                  width="150%"
+                  width="120%"
                   style={{paddingTop:"2rem"}}
                   alt={"geometric horizontal bubbles on line background pattern"}
               />

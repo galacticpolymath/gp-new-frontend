@@ -37,7 +37,7 @@ export default function PricingPage() {
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 200,
+          height: 50,
           color: "dark",
         }}
       />
@@ -81,7 +81,7 @@ export default function PricingPage() {
             >
               <img
                 src={require("assets/img/hero-images/PricingPage-dot-pattern-01.svg")}
-
+                alt={"geometric background pattern"}
               />
             </GridItem>
           </GridContainer>
