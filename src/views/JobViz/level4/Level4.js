@@ -68,8 +68,9 @@ import { Level4Card } from "./Level4Card";
 
 import pricingStyle from "assets/jss/material-kit-pro-react/views/pricingStyle.js";
 import JobVizHeader from "../modules/JobVizComponents";
+import contactUsStyle from "../../../assets/jss/material-kit-pro-react/views/contactUsStyle";
 
-const useStyles = makeStyles(pricingStyle);
+const useStyles = makeStyles(contactUsStyle);
 
 export const Level4List = (props) => {
   const grandparent = props.level1;
@@ -207,24 +208,43 @@ export const Level4List = (props) => {
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 300,
-          color: "info",
+          height: 200,
+          color: "dark",
         }}
       />
 
-      <Parallax image={require("assets/img/bg12.jpg")} filter="dark" small>
+      <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
           <GridContainer>
             <GridItem
-              md={8}
-              sm={8}
-              className={classNames(
-                classes.mlAuto,
-                classes.mrAuto,
-                classes.textCenter
-              )}
+                xs={12}
+                md={6}
+                sm={6}
+                className={classNames(
+                    classes.mlAuto,
+                    classes.mrAuto,
+                    classes.textLeft
+                )}
             >
-              <JobVizHeader/>
+              <JobVizHeader />
+            </GridItem>
+            <GridItem
+                xs={12}
+                sm={6}
+                md={6}
+                className={classNames(
+                    classes.hideLogo,
+                    classes.mlAuto,
+                    classes.mrAuto,
+                    classes.textLeft
+                )}
+            >
+              <img
+                  src={require("assets/img/hero-images/JobViz_Bubble.svg")}
+                  height="auto"
+                  width="150%"
+                  style={{paddingTop:"2rem"}}
+              />
             </GridItem>
           </GridContainer>
         </div>

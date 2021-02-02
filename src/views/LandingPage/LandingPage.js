@@ -34,26 +34,35 @@ export default function LandingPage({ ...rest }) {
   });
   const classes = useStyles();
   return (
-    <div>
+    <div style={{ backgroundColor: "#470F2C" }}>
       <Header
         color="transparent"
         brand="Material Kit PRO React"
         links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
         changeColorOnScroll={{
-          height: 300,
-          color: "info"
+          height: 200,
+          color: "dark",
         }}
         {...rest}
       />
-      <Parallax image={require("assets/img/bg8.jpg")} filter="dark">
+      <Parallax
+        image={require("assets/img/hero-images/MoscowTinted_Faded-01.jpg")}
+      >
         <div className={classes.container}>
           <GridContainer>
             <GridItem xs={12} sm={6} md={6}>
-              <h1 className={classes.title}>We are an education studio.</h1>
-              <h4>
-                We translate current research into creative, interdisciplinary lessons for grades 5+ that are <em>free for everyone.</em>
-              </h4>
+              <div>
+                <h1 className={classes.title}>We are an education studio.</h1>
+                <h4
+                  style={{
+                    backgroundColor: "rgba(71, 15, 44, 0.7)",
+                  }}
+                >
+                  We translate current research into creative, interdisciplinary
+                  lessons for grades 5+ that are <em>free for everyone.</em>
+                </h4>
+              </div>
               <br />
               <Button
                 color="info"

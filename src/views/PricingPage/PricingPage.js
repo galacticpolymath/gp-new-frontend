@@ -37,35 +37,52 @@ export default function PricingPage() {
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 300,
-          color: "info",
+          height: 200,
+          color: "dark",
         }}
       />
 
-      <Parallax
-        image={require("assets/img/GP_Hero_HireUs-02.jpg")}
-        filter="dark"
-        small
-      >
+      <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
-          <GridContainer>
+          <GridContainer
+          style={{placeItems: "center"}}
+          >
             <GridItem
-              md={8}
-              sm={8}
+              xs={12}
+              sm={6}
+              md={6}
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,
-                classes.textCenter
+                classes.textLeft
               )}
+              // style={{ paddingTop: "3%"}}
             >
-              <h1 className={classes.title}>
-                Let{"'"}s build something amazing
-              </h1>
-              <h4>
+              <h1 className={classes.title}>Achieving Real, Lasting Impact</h1>
+              <h4
+                className={classes.title}
+                style={{ letterSpacing: "1.5px", fontWeight: 500 }}
+              >
                 Whether you are an NSF-funded researcher, a nonprofit, or a
                 socially responsible company, you care about a body of knowledge
                 and you want the public to understand and care about it, too.
               </h4>
+            </GridItem>
+            <GridItem
+              xs={12}
+              sm={6}
+              md={6}
+              className={classNames(
+                classes.hideLogo,
+                classes.mlAuto,
+                classes.mrAuto
+              )}
+              style={{ height: "130%", width: "100%"}}
+            >
+              <img
+                src={require("assets/img/hero-images/PricingPage-dot-pattern-01.svg")}
+
+              />
             </GridItem>
           </GridContainer>
         </div>
