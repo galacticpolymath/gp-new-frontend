@@ -26,7 +26,7 @@ import aboutUsStyle from "assets/jss/material-kit-pro-react/views/aboutUsStyle.j
 
 const useStyles = makeStyles(aboutUsStyle);
 
-export default function AboutUsPage(...rest) {
+export default function AboutUsPage() {
   React.useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
@@ -39,53 +39,26 @@ export default function AboutUsPage(...rest) {
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 200,
-          color: "dark",
+          height: 300,
+          color: "info"
         }}
-        {...rest}
       />
-      <Parallax className={classes.bgColor} small>
+      <Parallax image={require("assets/img/bg9.jpg")} filter="dark" small>
         <div className={classes.container}>
-          <GridContainer
-              style={{alignItems: "start"}}>
+          <GridContainer justify="center">
             <GridItem
-              xs={12}
-              sm={6}
-              md={6}
+              md={8}
+              sm={8}
               className={classNames(
-                classes.mlAuto,
-                classes.mrAuto,
-                classes.textLeft
-              )}
-              style={{ paddingTop: "3", paddingRight: "5px" }}
-            >
-              <h1 className={classes.title}>About GP</h1>
-              <h4
-                className={classes.title}
-                style={{ letterSpacing: "1.5px", fontWeight: 500}}
-              >
-                Galactic Polymath (GP) is an education studio.{"\n"} We help scientists,
-                nonprofits, and sustainable companies
-                with outreach needs to translate complicated, cutting-edge
-                knowledge into mind-blowing lessons for grades 5+.
-              </h4>
-            </GridItem>
-            <GridItem
-              xs={12}
-              sm={6}
-              md={6}
-              className={classNames(
-                classes.hideLogo,
                 classes.mlAuto,
                 classes.mrAuto,
                 classes.textCenter
               )}
             >
-              <img
-                src={require("assets/img/hero-images/AboutPage_Bubbles.png")}
-                height="auto"
-                width="110%"
-              />
+              <h2 className={classes.title}>Weaving Data Into Memorable Lessons</h2>
+              <h4 className={classes.title} style={{letterSpacing: "1.5px", fontWeight: 500}}>
+              THINK BIGGER - LEARN EVERYTHING
+              </h4>
             </GridItem>
           </GridContainer>
         </div>
