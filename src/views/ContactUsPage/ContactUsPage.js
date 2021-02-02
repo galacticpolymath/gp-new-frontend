@@ -7,7 +7,7 @@ import {
   withScriptjs,
   withGoogleMap,
   GoogleMap,
-  Marker
+  Marker,
 } from "react-google-maps";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -27,83 +27,84 @@ import InfoArea from "components/InfoArea/InfoArea.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
 import Button from "components/CustomButtons/Button.js";
 import Footer from "components/Footer/Footer.js";
+import Parallax from "components/Parallax/Parallax.js";
 
 import contactUsStyle from "assets/jss/material-kit-pro-react/views/contactUsStyle.js";
 
-const CustomSkinMap = withScriptjs(
-  withGoogleMap(() => (
-    <GoogleMap
-      defaultZoom={14}
-      defaultCenter={{ lat: 44.43353, lng: 26.093928 }}
-      defaultOptions={{
-        scrollwheel: false,
-        zoomControl: true,
-        styles: [
-          {
-            featureType: "water",
-            stylers: [
-              { saturation: 43 },
-              { lightness: -11 },
-              { hue: "#0088ff" }
-            ]
-          },
-          {
-            featureType: "road",
-            elementType: "geometry.fill",
-            stylers: [
-              { hue: "#ff0000" },
-              { saturation: -100 },
-              { lightness: 99 }
-            ]
-          },
-          {
-            featureType: "road",
-            elementType: "geometry.stroke",
-            stylers: [{ color: "#808080" }, { lightness: 54 }]
-          },
-          {
-            featureType: "landscape.man_made",
-            elementType: "geometry.fill",
-            stylers: [{ color: "#ece2d9" }]
-          },
-          {
-            featureType: "poi.park",
-            elementType: "geometry.fill",
-            stylers: [{ color: "#ccdca1" }]
-          },
-          {
-            featureType: "road",
-            elementType: "labels.text.fill",
-            stylers: [{ color: "#767676" }]
-          },
-          {
-            featureType: "road",
-            elementType: "labels.text.stroke",
-            stylers: [{ color: "#ffffff" }]
-          },
-          { featureType: "poi", stylers: [{ visibility: "off" }] },
-          {
-            featureType: "landscape.natural",
-            elementType: "geometry.fill",
-            stylers: [{ visibility: "on" }, { color: "#b8cb93" }]
-          },
-          { featureType: "poi.park", stylers: [{ visibility: "on" }] },
-          {
-            featureType: "poi.sports_complex",
-            stylers: [{ visibility: "on" }]
-          },
-          { featureType: "poi.medical", stylers: [{ visibility: "on" }] },
-          {
-            featureType: "poi.business",
-            stylers: [{ visibility: "simplified" }]
-          }
-        ]
-      }}
-    >
-      <Marker position={{ lat: 44.43353, lng: 26.093928 }} />
-    </GoogleMap>
-  ))
-);
+// const CustomSkinMap = withScriptjs(
+//   withGoogleMap(() => (
+//     <GoogleMap
+//       defaultZoom={14}
+//       defaultCenter={{ lat: 44.43353, lng: 26.093928 }}
+//       defaultOptions={{
+//         scrollwheel: false,
+//         zoomControl: true,
+//         styles: [
+//           {
+//             featureType: "water",
+//             stylers: [
+//               { saturation: 43 },
+//               { lightness: -11 },
+//               { hue: "#0088ff" },
+//             ],
+//           },
+//           {
+//             featureType: "road",
+//             elementType: "geometry.fill",
+//             stylers: [
+//               { hue: "#ff0000" },
+//               { saturation: -100 },
+//               { lightness: 99 },
+//             ],
+//           },
+//           {
+//             featureType: "road",
+//             elementType: "geometry.stroke",
+//             stylers: [{ color: "#808080" }, { lightness: 54 }],
+//           },
+//           {
+//             featureType: "landscape.man_made",
+//             elementType: "geometry.fill",
+//             stylers: [{ color: "#ece2d9" }],
+//           },
+//           {
+//             featureType: "poi.park",
+//             elementType: "geometry.fill",
+//             stylers: [{ color: "#ccdca1" }],
+//           },
+//           {
+//             featureType: "road",
+//             elementType: "labels.text.fill",
+//             stylers: [{ color: "#767676" }],
+//           },
+//           {
+//             featureType: "road",
+//             elementType: "labels.text.stroke",
+//             stylers: [{ color: "#ffffff" }],
+//           },
+//           { featureType: "poi", stylers: [{ visibility: "off" }] },
+//           {
+//             featureType: "landscape.natural",
+//             elementType: "geometry.fill",
+//             stylers: [{ visibility: "on" }, { color: "#b8cb93" }],
+//           },
+//           { featureType: "poi.park", stylers: [{ visibility: "on" }] },
+//           {
+//             featureType: "poi.sports_complex",
+//             stylers: [{ visibility: "on" }],
+//           },
+//           { featureType: "poi.medical", stylers: [{ visibility: "on" }] },
+//           {
+//             featureType: "poi.business",
+//             stylers: [{ visibility: "simplified" }],
+//           },
+//         ],
+//       }}
+//     >
+//       <Marker position={{ lat: 44.43353, lng: 26.093928 }} />
+//     </GoogleMap>
+//   ))
+// );
 
 const useStyles = makeStyles(contactUsStyle);
 
@@ -117,11 +118,59 @@ export default function ContactUsPage() {
     <div>
       <Header
         brand="Material Kit PRO React"
-        links={<HeaderLinks dropdownHoverColor="dark" />}
+        links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
-        color="dark"
+        color="transparent"
+        changeColorOnScroll={{
+          height: 300,
+          color: "info",
+        }}
       />
-      <div className={classes.bigMap}>
+      <Parallax className={classes.bgColor} small>
+        <div className={classes.container}>
+          <GridContainer>
+            <GridItem
+              xs={12}
+              sm={6}
+              md={6}
+              className={classNames(
+                classes.mlAuto,
+                classes.mrAuto,
+                classes.textLeft
+              )}
+              style={{ paddingTop: "5%", paddingRight: "25px" }}
+            >
+              <h1 className={classes.title}>JobViz</h1>
+              <h4
+                className={classes.title}
+                style={{ letterSpacing: "1.5px", fontWeight: 500 }}
+              >
+                Whether you are an NSF-funded researcher, a nonprofit, or a
+                socially responsible company, you care about a body of knowledge
+                and you want the public to understand and care about it, too.
+              </h4>
+            </GridItem>
+            <GridItem
+              xs={12}
+              sm={6}
+              md={6}
+              className={classNames(
+                classes.hideLogo,
+                classes.mlAuto,
+                classes.mrAuto,
+                classes.textCenter
+              )}
+            >
+              <img
+                src={require("assets/img/hero-images/JobViz_Bubble.svg")}
+                height="auto"
+                width="150%"
+              />
+            </GridItem>
+          </GridContainer>
+        </div>
+      </Parallax>
+      {/* <div className={classes.bigMap}>
         <CustomSkinMap
           googleMapURL="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"
           loadingElement={<div style={{ height: `100%` }} />}
@@ -130,13 +179,13 @@ export default function ContactUsPage() {
               style={{
                 height: `100%`,
                 borderRadius: "6px",
-                overflow: "hidden"
+                overflow: "hidden",
               }}
             />
           }
           mapElement={<div style={{ height: `100%` }} />}
         />
-      </div>
+      </div> */}
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.contactContent}>
           <div className={classes.container}>
@@ -154,32 +203,32 @@ export default function ContactUsPage() {
                     labelText="Your Name"
                     id="float"
                     formControlProps={{
-                      fullWidth: true
+                      fullWidth: true,
                     }}
                   />
                   <CustomInput
                     labelText="Email address"
                     id="float"
                     formControlProps={{
-                      fullWidth: true
+                      fullWidth: true,
                     }}
                   />
                   <CustomInput
                     labelText="Phone"
                     id="float"
                     formControlProps={{
-                      fullWidth: true
+                      fullWidth: true,
                     }}
                   />
                   <CustomInput
                     labelText="Your message"
                     id="float"
                     formControlProps={{
-                      fullWidth: true
+                      fullWidth: true,
                     }}
                     inputProps={{
                       multiline: true,
-                      rows: 6
+                      rows: 6,
                     }}
                   />
                   <div className={classes.textCenter}>
