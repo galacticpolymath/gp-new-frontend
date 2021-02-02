@@ -68,9 +68,9 @@ import { Level3Card } from "./Level3Card";
 
 
 import JobVizHeader from "../modules/JobVizComponents";
-import contactUsStyle from "../../../assets/jss/material-kit-pro-react/views/contactUsStyle";
+import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle.js";
 
-const useStyles = makeStyles(contactUsStyle);
+const useStyles = makeStyles(JobVizStyle);
 
 export const Level3List = (props) => {
   const parent = props.level1;
@@ -206,16 +206,19 @@ export const Level3List = (props) => {
 
       <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
-          <GridContainer>
+          <GridContainer
+            style={{placeItems: "center"}}
+          >
             <GridItem
-                xs={12}
-                md={6}
-                sm={6}
-                className={classNames(
-                    classes.mlAuto,
-                    classes.mrAuto,
-                    classes.textLeft
-                )}
+              xs={12}
+              md={6}
+              sm={6}
+              className={classNames(
+                classes.mlAuto,
+                classes.mrAuto,
+                classes.textLeft
+              )}
+              style={{ paddingLeft:0, paddingRight: "25px" }}
             >
               <JobVizHeader />
             </GridItem>
@@ -235,6 +238,7 @@ export const Level3List = (props) => {
                   height="auto"
                   width="150%"
                   style={{paddingTop:"2rem"}}
+                  alt={"geometric horizontal bubbles on line background pattern"}
               />
             </GridItem>
           </GridContainer>

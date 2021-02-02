@@ -19,7 +19,7 @@ import Close from "@material-ui/icons/Close";
 // core components
 import styles from "assets/jss/material-kit-pro-react/components/headerStyle.js";
 // import logoImage from "../../assets/img/android-chrome-192x192.png";
-import GpImage from "../../assets/img/GP_horiz_bubbleLogo_whiteGP300ppi_sgjmxc.png";
+import GpImage from "../../assets/img/GP_horiz_bubbleLogo175ppi.png";
 
 const useStyles = makeStyles(styles);
 

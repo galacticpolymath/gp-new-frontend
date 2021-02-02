@@ -24,7 +24,6 @@ import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import Button from "components/CustomButtons/Button.js";
 import CardAvatar from "components/Card/CardAvatar.js";
-// import marc from "assets/img/faces/marc.jpg";
 import brick1 from "assets/img/faces/brick1.jpg";
 import branch2 from "assets/img/faces/branch2.jpg";
 import vertBracket from "assets/img/jobviz-vert-bracket.png";
@@ -36,7 +35,7 @@ import Dialog from "@material-ui/core/Dialog";
 // import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
 import Slide from "@material-ui/core/Slide";
-import Close from "@material-ui/icons/Close";
+// import Close from "@material-ui/icons/Close";
 import { cardTitle } from "assets/jss/material-kit-pro-react.js";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -45,15 +44,15 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 Transition.displayName = "Transition";
 
-const style = {
-  cardTitle,
-  textCenter: {
-    textAlign: "center",
-  },
-  textRight: {
-    textAlign: "right",
-  },
-};
+// const style = {
+//   cardTitle,
+//   textCenter: {
+//     textAlign: "center",
+//   },
+//   textRight: {
+//     textAlign: "right",
+//   },
+// };
 
 // sections for this page Added by JOB VIZ TEAM
 import { Link } from "react-router-dom";
@@ -65,11 +64,11 @@ import { LrAutoSearchV2 } from "../search/LRautoSearchV2";
 import { Level2Card } from "./Level2Card";
 // sections for this page Added by JOB VIZ TEAM
 
-import pricingStyle from "assets/jss/material-kit-pro-react/views/pricingStyle.js";
-import JobVizHeader from "../modules/JobVizComponents";
-import contactUsStyle from "../../../assets/jss/material-kit-pro-react/views/contactUsStyle";
 
-const useStyles = makeStyles(contactUsStyle);
+import JobVizHeader from "../modules/JobVizComponents";
+import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle.js";
+
+const useStyles = makeStyles(JobVizStyle);
 
 export const Level2List = (props) => {
   const level = props.level1;
@@ -168,16 +167,19 @@ export const Level2List = (props) => {
 
       <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
-          <GridContainer>
+          <GridContainer
+            style={{placeItems: "center"}}
+          >
             <GridItem
-                xs={12}
-                md={6}
-                sm={6}
-                className={classNames(
-                    classes.mlAuto,
-                    classes.mrAuto,
-                    classes.textLeft
-                )}
+              xs={12}
+              md={6}
+              sm={6}
+              className={classNames(
+                classes.mlAuto,
+                classes.mrAuto,
+                classes.textLeft
+              )}
+              style={{ paddingLeft:0, paddingRight: "25px" }}
             >
               <JobVizHeader />
             </GridItem>
@@ -197,6 +199,7 @@ export const Level2List = (props) => {
                   height="auto"
                   width="150%"
                   style={{paddingTop:"2rem"}}
+                  alt={"geometrical bubble design for background"}
               />
             </GridItem>
           </GridContainer>
@@ -239,7 +242,7 @@ export const Level2List = (props) => {
           <div className="crumbs">
             <Card className={classes.textCenter} style={{ width: "20rem" }}>
               <CardAvatar profile>
-                <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                <a href="" onClick={(e) => e.preventDefault()}>
                   <img src={branch2} alt="..." />
                 </a>
               </CardAvatar>
