@@ -4,11 +4,10 @@ import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+// import List from "@material-ui/core/List";
+// import ListItem from "@material-ui/core/ListItem";
 // @material-ui/icons
 
-import Favorite from "@material-ui/icons/Favorite";
 // core components
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
@@ -68,6 +67,7 @@ import { Level4Card } from "./Level4Card";
 
 import JobVizHeader from "../modules/JobVizComponents";
 import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle.js";
+import GPcopyrightFooter from "../../../components/Footer/GPcopyrightFooter";
 
 const useStyles = makeStyles(JobVizStyle);
 
@@ -391,53 +391,43 @@ export const Level4List = (props) => {
       <Footer
         content={
           <div>
-            <div className={classes.left}>
-              <List className={classes.list}>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/?ref=mkpr-pricing"
-                    target="_blank"
-                    className={classes.block}
-                  >
-                    Creative Tim
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/presentation?ref=mkpr-pricing"
-                    target="_blank"
-                    className={classes.block}
-                  >
-                    About us
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a href="//blog.creative-tim.com/" className={classes.block}>
-                    Blog
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/license?ref=mkpr-pricing"
-                    target="_blank"
-                    className={classes.block}
-                  >
-                    Licenses
-                  </a>
-                </ListItem>
-              </List>
-            </div>
-            <div className={classes.right}>
-              &copy; {1900 + new Date().getYear()} , made with{" "}
-              <Favorite className={classes.icon} /> by{" "}
-              <a
-                href="https://www.creative-tim.com?ref=mkpr-pricing"
-                target="_blank"
-              >
-                Creative Tim
-              </a>{" "}
-              for a better web.
-            </div>
+            {/*<div className={classes.left}>*/}
+            {/*  <List className={classes.list}>*/}
+            {/*    <ListItem className={classes.inlineBlock}>*/}
+            {/*      <a*/}
+            {/*        href="https://www.creative-tim.com/?ref=mkpr-pricing"*/}
+            {/*        target="_blank"*/}
+            {/*        className={classes.block}*/}
+            {/*      >*/}
+            {/*        Creative Tim*/}
+            {/*      </a>*/}
+            {/*    </ListItem>*/}
+            {/*    <ListItem className={classes.inlineBlock}>*/}
+            {/*      <a*/}
+            {/*        href="https://www.creative-tim.com/presentation?ref=mkpr-pricing"*/}
+            {/*        target="_blank"*/}
+            {/*        className={classes.block}*/}
+            {/*      >*/}
+            {/*        About us*/}
+            {/*      </a>*/}
+            {/*    </ListItem>*/}
+            {/*    <ListItem className={classes.inlineBlock}>*/}
+            {/*      <a href="//blog.creative-tim.com/" className={classes.block}>*/}
+            {/*        Blog*/}
+            {/*      </a>*/}
+            {/*    </ListItem>*/}
+            {/*    <ListItem className={classes.inlineBlock}>*/}
+            {/*      <a*/}
+            {/*        href="https://www.creative-tim.com/license?ref=mkpr-pricing"*/}
+            {/*        target="_blank"*/}
+            {/*        className={classes.block}*/}
+            {/*      >*/}
+            {/*        Licenses*/}
+            {/*      </a>*/}
+            {/*    </ListItem>*/}
+            {/*  </List>*/}
+            {/*</div>*/}
+            <GPcopyrightFooter/>
           </div>
         }
       />

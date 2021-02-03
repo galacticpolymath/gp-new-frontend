@@ -7,7 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 // @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
+import ComputerIcon from "@material-ui/icons/Computer";
 // core components
 import Header from "components/Header/Header.js";
 import GridContainer from "components/Grid/GridContainer.js";
@@ -23,6 +23,7 @@ import SectionOffice from "views/AboutUsPage/Sections/SectionOffice.js";
 import SectionContact from "views/AboutUsPage/Sections/SectionContact.js";
 
 import aboutUsStyle from "assets/jss/material-kit-pro-react/views/aboutUsStyle.js";
+import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 
 const useStyles = makeStyles(aboutUsStyle);
 
@@ -102,57 +103,47 @@ export default function AboutUsPage(...rest) {
       <Footer
         content={
           <div>
-            <div className={classes.left}>
-              <List className={classes.list}>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/?ref=mkpr-about-us"
-                    className={classes.block}
-                    target="_blank"
-                  >
-                    Creative Tim
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/presentation?ref=mkpr-about-us"
-                    className={classes.block}
-                    target="_blank"
-                  >
-                    About us
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="//blog.creative-tim.com/"
-                    className={classes.block}
-                    target="_blank"
-                  >
-                    Blog
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/license?ref=mkpr-about-us"
-                    className={classes.block}
-                    target="_blank"
-                  >
-                    Licenses
-                  </a>
-                </ListItem>
-              </List>
-            </div>
-            <div className={classes.right}>
-              &copy; {1900 + new Date().getYear()} , made with{" "}
-              <Favorite className={classes.icon} /> by{" "}
-              <a
-                href="https://www.creative-tim.com?ref=mkpr-about-us"
-                target="_blank"
-              >
-                Creative Tim
-              </a>{" "}
-              for a better web.
-            </div>
+            {/*<div className={classes.left}>*/}
+            {/*  <List className={classes.list}>*/}
+            {/*    <ListItem className={classes.inlineBlock}>*/}
+            {/*      <a*/}
+            {/*        href="https://www.creative-tim.com/?ref=mkpr-about-us"*/}
+            {/*        className={classes.block}*/}
+            {/*        target="_blank"*/}
+            {/*      >*/}
+            {/*        Creative Tim*/}
+            {/*      </a>*/}
+            {/*    </ListItem>*/}
+            {/*    <ListItem className={classes.inlineBlock}>*/}
+            {/*      <a*/}
+            {/*        href="https://www.creative-tim.com/presentation?ref=mkpr-about-us"*/}
+            {/*        className={classes.block}*/}
+            {/*        target="_blank"*/}
+            {/*      >*/}
+            {/*        About us*/}
+            {/*      </a>*/}
+            {/*    </ListItem>*/}
+            {/*    <ListItem className={classes.inlineBlock}>*/}
+            {/*      <a*/}
+            {/*        href="//blog.creative-tim.com/"*/}
+            {/*        className={classes.block}*/}
+            {/*        target="_blank"*/}
+            {/*      >*/}
+            {/*        Blog*/}
+            {/*      </a>*/}
+            {/*    </ListItem>*/}
+            {/*    <ListItem className={classes.inlineBlock}>*/}
+            {/*      <a*/}
+            {/*        href="https://www.creative-tim.com/license?ref=mkpr-about-us"*/}
+            {/*        className={classes.block}*/}
+            {/*        target="_blank"*/}
+            {/*      >*/}
+            {/*        Licenses*/}
+            {/*      </a>*/}
+            {/*    </ListItem>*/}
+            {/*  </List>*/}
+            {/*</div>*/}
+            <GPcopyrightFooter/>
           </div>
         }
       />
