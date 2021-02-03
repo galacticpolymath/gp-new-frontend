@@ -40,7 +40,7 @@ import { cardTitle } from "assets/jss/material-kit-pro-react.js";
 // sections for this page Added by JOB VIZ TEAM \/
 import JobVizHeader from "../modules/JobVizComponents";
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import JobManager from "../modules/JobManager";
 import "../styling/Style.css";
@@ -51,6 +51,7 @@ import { Level1Card } from "./Level1Card";
 // sections for this page Added by JOB VIZ TEAM^^^^^
 
 import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle.js";
+import GPcopyrightFooter from "../../../components/Footer/GPcopyrightFooter";
 
 const useStyles = makeStyles(JobVizStyle);
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -172,7 +173,7 @@ export const Level1List = (props) => {
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 200,
+          height: 50,
           color: "dark",
         }}
       />
@@ -205,13 +206,14 @@ export const Level1List = (props) => {
                 classes.mrAuto,
                 classes.textLeft
               )}
-              style={{objectFit: "fit"}}
+              // style={{objectFit: "fit"}}
             >
               <img
                 src={require("assets/img/hero-images/JobViz_Bubble.svg")}
                 height="auto"
-                width="150%"
+                width="120%"
                 style={{paddingTop:"2rem"}}
+                alt={"horizontal lines with bubbles, background pattern"}
               />
             </GridItem>
           </GridContainer>
@@ -303,53 +305,43 @@ export const Level1List = (props) => {
       <Footer
         content={
           <div>
-            <div className={classes.left}>
-              <List className={classes.list}>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/?ref=mkpr-pricing"
-                    target="_blank"
-                    className={classes.block}
-                  >
-                    Creative Tim
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/presentation?ref=mkpr-pricing"
-                    target="_blank"
-                    className={classes.block}
-                  >
-                    About us
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a href="//blog.creative-tim.com/" className={classes.block}>
-                    Blog
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/license?ref=mkpr-pricing"
-                    target="_blank"
-                    className={classes.block}
-                  >
-                    Licenses
-                  </a>
-                </ListItem>
-              </List>
-            </div>
-            <div className={classes.right}>
-              &copy; {1900 + new Date().getYear()} , made with{" "}
-              <Favorite className={classes.icon} /> by{" "}
-              <a
-                href="https://www.creative-tim.com?ref=mkpr-pricing"
-                target="_blank"
-              >
-                Creative Tim
-              </a>{" "}
-              for a better web.
-            </div>
+            {/*<div className={classes.left}>*/}
+            {/*  <List className={classes.list}>*/}
+            {/*    <ListItem className={classes.inlineBlock}>*/}
+            {/*      <a*/}
+            {/*        href="https://www.creative-tim.com/?ref=mkpr-pricing"*/}
+            {/*        target="_blank"*/}
+            {/*        className={classes.block}*/}
+            {/*      >*/}
+            {/*        Creative Tim*/}
+            {/*      </a>*/}
+            {/*    </ListItem>*/}
+            {/*    <ListItem className={classes.inlineBlock}>*/}
+            {/*      <a*/}
+            {/*        href="https://www.creative-tim.com/presentation?ref=mkpr-pricing"*/}
+            {/*        target="_blank"*/}
+            {/*        className={classes.block}*/}
+            {/*      >*/}
+            {/*        About us*/}
+            {/*      </a>*/}
+            {/*    </ListItem>*/}
+            {/*    <ListItem className={classes.inlineBlock}>*/}
+            {/*      <a href="//blog.creative-tim.com/" className={classes.block}>*/}
+            {/*        Blog*/}
+            {/*      </a>*/}
+            {/*    </ListItem>*/}
+            {/*    <ListItem className={classes.inlineBlock}>*/}
+            {/*      <a*/}
+            {/*        href="https://www.creative-tim.com/license?ref=mkpr-pricing"*/}
+            {/*        target="_blank"*/}
+            {/*        className={classes.block}*/}
+            {/*      >*/}
+            {/*        Licenses*/}
+            {/*      </a>*/}
+            {/*    </ListItem>*/}
+            {/*  </List>*/}
+            {/*</div>*/}
+            <GPcopyrightFooter/>
           </div>
         }
       />

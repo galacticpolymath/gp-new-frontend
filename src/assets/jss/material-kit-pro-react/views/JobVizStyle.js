@@ -28,11 +28,7 @@ const JobVizStyle = {
     zIndex: "2",
     position: "relative",
   },
-  contactContent: {
-    paddingBottom: "40px",
-    paddingTop: "40px",
-  },
-  bigMap: {
+   bigMap: {
     height: "55vh",
     maxHeight: "550px",
     width: "100%",

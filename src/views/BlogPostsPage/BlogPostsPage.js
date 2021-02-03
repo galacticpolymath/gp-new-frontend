@@ -39,7 +39,7 @@ export default function BlogPostsPage() {
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 200,
+          height: 50,
           color: "dark",
         }}
       />
@@ -84,6 +84,7 @@ export default function BlogPostsPage() {
                 src={require("assets/img/hero-images/Lessons_VerticalDotandline.svg")}
                 height="auto"
                 width="120%"
+                alt={"vertical dot and line geometric pattern"}
               />
             </GridItem>
           </GridContainer>
