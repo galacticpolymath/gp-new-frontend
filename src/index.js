@@ -27,6 +27,7 @@ import Lessons from "views/LessonsPage/LessonsPage.js";
 import LandingPage from "views/LandingPage/LandingPage.js";
 import HireUsPage from "views/HireUs/HireUsPage.js";
 import ContactUsPage from "views/ContactUsPage/ContactUsPage.js";
+import LessonPlanDetailsPage from "views/LessonPlanDetailPage/index.js";
 // J O B  V I Z
 
 import { Level1List } from "views/JobViz/level1/Level1.js";
@@ -54,7 +55,8 @@ ReactDOM.render(
   <Router history={hist}>
     <Switch>
       <Route path="/about" component={AboutUsPage} />
-      <Route path="/lessons" component={Lessons} />
+      <Route exact path="/lessons" component={Lessons} />
+      <Route path="/lessons/:lessonId" component={LessonPlanDetailsPage} />
       <Route path="/contact-us" component={ContactUsPage} />
       <Route path="/hire-us" component={HireUsPage} />
       {/* ///This is here to help visulize all of Material Kit React's built in component features */}

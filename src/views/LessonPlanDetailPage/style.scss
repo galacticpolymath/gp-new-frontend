@@ -1,0 +1,13 @@
+@import './variables';
+
+.LessonPlan {
+  .Header {
+    background: $white;
+    background: linear-gradient(180deg, $sparkle-white 0%, $white 100%);
+  }
+  .SectionHeading {
+    padding: .5rem 0;
+    margin: 2rem 0;
+    background: $sparkle-white;
+  }
+}

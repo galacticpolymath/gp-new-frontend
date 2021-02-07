@@ -1,0 +1,14 @@
+@import '../../variables';
+
+.TeachingMethod {
+  button {
+    padding: 0;
+  }
+  .ResourceSummary {
+    background: $gray;
+    padding: 15px 30px;
+    > .row:not(:last-child) > div {
+      border-bottom: 1px solid rgba($galactic-black, 0.5);
+    }
+  }
+}
