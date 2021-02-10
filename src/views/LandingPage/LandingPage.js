@@ -53,7 +53,9 @@ export default function LandingPage({ ...rest }) {
           <GridContainer>
             <GridItem xs={12} sm={6} md={6}>
               <div>
-                <h1 className={classes.title}>We are an education studio.</h1>
+                <h1 className={classes.title}>
+                  We are an <br></br> education studio.
+                </h1>
                 <h4
                   style={{
                     backgroundColor: "rgba(71, 15, 44, 0.7)",
@@ -65,13 +67,23 @@ export default function LandingPage({ ...rest }) {
               </div>
               <br />
               <Button
-                color="info"
+                color="primary"
+                size="lg"
+                href="https://vimeo.com/448000812"
+                target="_blank"
+                padding="100px"
+              >
+                <i className="fas" />
+                Get Lessons
+              </Button>
+              <Button
+                color="primary"
                 size="lg"
                 href="https://vimeo.com/448000812"
                 target="_blank"
               >
-                <i className="fas fa-play" />
-                Watch video
+                <i className="fas" />
+                Make Lessons
               </Button>
             </GridItem>
           </GridContainer>
@@ -125,8 +137,8 @@ export default function LandingPage({ ...rest }) {
             {/*  </List>*/}
             {/*</div>*/}
 
-            <div style={{color: "white", opacity: ".7"}}>
-            <GPcopyrightFooter />
+            <div style={{ color: "white", opacity: ".7" }}>
+              <GPcopyrightFooter />
             </div>
           </div>
         }
