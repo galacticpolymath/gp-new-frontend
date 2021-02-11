@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { makeStyles } from "@material-ui/core/styles";
 
 import SiteHeader from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
@@ -12,11 +11,7 @@ import Section from "./Section/index";
 import Header from "./Header";
 import { NUMBERED_SECTIONS } from "./constants";
 
-import lessonPlanDetailsStyle from "assets/jss/material-kit-pro-react/views/lessonPlanDetailsStyle.js";
-const useStyles = makeStyles(lessonPlanDetailsStyle);
-
 const LessonPlan = () => {
-  const classes = useStyles();
   const { lessonId } = useParams();
 
   const [lesson, setLesson] = useState(null);
@@ -45,7 +40,7 @@ const LessonPlan = () => {
         fixed
         color="dark"
       />
-      <div className={classes.LessonPlan}>
+      <div className="LessonPlan">
         <Header {...lesson} />
 
         {lesson.Section &&

@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Grid } from "@material-ui/core";
 
 import GridContainer from "components/Grid/GridContainer";
+import GridItem from "components/Grid/GridItem";
 import RichText from "../../../../../components/RichText";
 import ICONS from "../../../icons";
 
@@ -17,7 +17,7 @@ const SimpleResourceDownload = ({
 
     return (
       <GridContainer key={i}>
-        {Name && <Grid>{Name}:</Grid>}
+        {Name && <GridItem>{Name}:</GridItem>}
         {Downloads.map(renderDownload)}
       </GridContainer>
     );
@@ -33,12 +33,12 @@ const SimpleResourceDownload = ({
     }
 
     return (
-      <Grid key={i}>
+      <GridItem key={i}>
         {icon}{" "}
         <a href={Link} target="_blank" rel="noopener noreferrer">
           {Label}
         </a>
-      </Grid>
+      </GridItem>
     );
   };
 

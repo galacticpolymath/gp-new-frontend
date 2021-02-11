@@ -1,9 +1,9 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
-import { Grid } from "@material-ui/core";
 
 import GridContainer from "components/Grid/GridContainer";
+import GridItem from "components/Grid/GridItem";
 import Image from "../../../components/Image";
 import TagCloud from "../../../components/TagCloud";
 import RichText from "../../../components/RichText";
@@ -36,27 +36,27 @@ const Overview = ({
         <Image {...SteamEpaulette} />
 
         <GridContainer className="stats">
-          <Grid md={4} className="border-right">
+          <GridItem md={4} className="border-right">
             <h5>Est. Time: </h5>
             <p>{EstLessonTime}</p>
-          </Grid>
-          <Grid md={4} className="border-right">
+          </GridItem>
+          <GridItem md={4} className="border-right">
             <h5>Grade(s): </h5>
             <p>{ForGrades}</p>
-          </Grid>
-          <Grid md={4}>
+          </GridItem>
+          <GridItem md={4}>
             <h5>Target Subject: </h5>
             <p>{TargetSubject}</p>
-          </Grid>
+          </GridItem>
         </GridContainer>
 
         <RichText content={Text} />
 
         <GridContainer>
-          <Grid className="keywords">
+          <GridItem className="keywords">
             <h5>Keywords:</h5>
-          </Grid>
-          <div className="col">{Tags && <TagCloud tags={Tags} />}</div>
+          </GridItem>
+          <GridItem>{Tags && <TagCloud tags={Tags} />}</GridItem>
         </GridContainer>
       </div>
     </Fragment>

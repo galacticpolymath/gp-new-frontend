@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Grid } from "@material-ui/core";
 
 import GridContainer from "components/Grid/GridContainer";
+import GridItem from "components/Grid/GridItem";
 import RichText from "../../../../components/RichText";
 import ICONS from "../../icons";
 
@@ -22,13 +22,13 @@ const ResourceSummary = ({
     return (
       resourceList.length > 0 && (
         <GridContainer>
-          <Grid md={4}>
+          <GridItem md={4}>
             {resourceList.length} {resourceType}
             {(resourceList.length > 1 || resourceList.length === 0) && "s"}
-          </Grid>
-          <Grid md={8}>
+          </GridItem>
+          <GridItem md={8}>
             {resourceList.map(({ Value }, i) => renderItem(Value, icon, i))}
-          </Grid>
+          </GridItem>
         </GridContainer>
       )
     );
