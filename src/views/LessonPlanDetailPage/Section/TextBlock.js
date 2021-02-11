@@ -17,7 +17,7 @@ const TextBlock = ({ Content }) => {
 };
 
 TextBlock.propTypes = {
-  Content: PropTypes.object,
+  Content: PropTypes.string,
 };
 
 export default TextBlock;

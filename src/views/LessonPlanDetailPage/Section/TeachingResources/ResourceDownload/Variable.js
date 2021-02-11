@@ -22,7 +22,7 @@ const VariableResourceDownload = ({ Title, Description, Variations = [] }) => {
 
 VariableResourceDownload.propTypes = {
   Title: PropTypes.string,
-  Description: PropTypes.object,
+  Description: PropTypes.string,
   Variations: PropTypes.array,
 };
 

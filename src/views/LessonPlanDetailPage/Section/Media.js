@@ -25,9 +25,9 @@ const Media = ({ Title, Media: image, TopCaption, BottomCaption }) => {
 
 Media.propTypes = {
   Title: PropTypes.string,
-  Media: PropTypes.object,
-  TopCaption: PropTypes.object,
-  BottomCaption: PropTypes.object,
+  Media: PropTypes.array,
+  TopCaption: PropTypes.string,
+  BottomCaption: PropTypes.string,
 };
 
 export default Media;

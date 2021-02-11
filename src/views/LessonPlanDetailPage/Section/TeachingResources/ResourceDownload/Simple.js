@@ -52,7 +52,7 @@ const SimpleResourceDownload = ({
 
 SimpleResourceDownload.propTypes = {
   Title: PropTypes.string,
-  Description: PropTypes.object,
+  Description: PropTypes.string,
   DownloadGroups: PropTypes.arrayOf(
     PropTypes.shape({
       Name: PropTypes.string,

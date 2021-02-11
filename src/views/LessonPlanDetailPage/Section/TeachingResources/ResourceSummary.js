@@ -59,7 +59,7 @@ ResourceSummary.propTypes = {
   DigitalItems: PropTypes.array,
   PrintedItems: PropTypes.array,
   OtherRequirements: PropTypes.array,
-  Footnote: PropTypes.object,
+  Footnote: PropTypes.string,
 };
 
 export default ResourceSummary;

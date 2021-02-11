@@ -16,7 +16,7 @@ const RichText = ({ content, className = "" }) => {
 };
 
 RichText.propTypes = {
-  content: PropTypes.object,
+  content: PropTypes.string,
   className: PropTypes.string,
 };
 

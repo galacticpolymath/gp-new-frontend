@@ -69,8 +69,8 @@ Overview.propTypes = {
   ForGrades: PropTypes.string,
   TargetSubject: PropTypes.string,
   SteamEpaulette: PropTypes.object,
-  Text: PropTypes.object,
-  Tags: PropTypes.object,
+  Text: PropTypes.string,
+  Tags: PropTypes.array,
 };
 
 export default Overview;

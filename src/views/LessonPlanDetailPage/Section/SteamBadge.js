@@ -31,8 +31,8 @@ const SteamBadge = ({ Title, Description, Footnote, Badge }) => {
 
 SteamBadge.propTypes = {
   Title: PropTypes.string,
-  Description: PropTypes.object,
-  Footnote: PropTypes.object,
+  Description: PropTypes.string,
+  Footnote: PropTypes.string,
   Badge: PropTypes.object,
 };
 
