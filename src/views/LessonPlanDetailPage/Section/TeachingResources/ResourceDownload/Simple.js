@@ -1,6 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Grid } from "@material-ui/core";
 
+import GridContainer from "components/Grid/GridContainer";
 import RichText from "../../../../../components/RichText";
 import ICONS from "../../../icons";
 
@@ -14,10 +16,10 @@ const SimpleResourceDownload = ({
     if (Downloads.length === 0 && !Name) return null;
 
     return (
-      <div className="row" key={i}>
-        {Name && <div className="col-md-auto">{Name}:</div>}
+      <GridContainer key={i}>
+        {Name && <Grid>{Name}:</Grid>}
         {Downloads.map(renderDownload)}
-      </div>
+      </GridContainer>
     );
   };
 
@@ -31,12 +33,12 @@ const SimpleResourceDownload = ({
     }
 
     return (
-      <div className="col-md-auto" key={i}>
+      <Grid key={i}>
         {icon}{" "}
         <a href={Link} target="_blank" rel="noopener noreferrer">
           {Label}
         </a>
-      </div>
+      </Grid>
     );
   };
 

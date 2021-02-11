@@ -1,10 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import { makeStyles } from "@material-ui/core/styles";
+import { Grid } from "@material-ui/core";
 import moment from "moment";
 
+import GridContainer from "components/Grid/GridContainer";
 import Image from "../../components/Image";
 import RichText from "../../components/RichText";
+
+import lessonPlanDetailsStyle from "assets/jss/material-kit-pro-react/views/lessonPlanDetailsStyle.js";
+const useStyles = makeStyles(lessonPlanDetailsStyle);
 
 const Header = ({
   Title,
@@ -14,9 +19,10 @@ const Header = ({
   CoverImage,
   SponsorImage,
 }) => {
+  const classes = useStyles();
   return (
     <div className="Header">
-      <div className="container">
+      <div className={classes.container}>
         <p>
           Version {Version}{" "}
           {LastUpdated &&
@@ -25,20 +31,20 @@ const Header = ({
               ")"}
         </p>
         <h1>{Title}</h1>
-        <div className="row text-center">
+        <GridContainer className="text-center">
           <div className="col">
             <Image {...CoverImage} className="self-center" />
           </div>
-        </div>
-        <div className="row">
-          <div className="col col-md-8 col-lg-9">
+        </GridContainer>
+        <GridContainer>
+          <Grid md={8} lg={9}>
             <h5>Sponsored by:</h5>
             <RichText content={SponsoredBy} />
-          </div>
-          <div className="col col-md-4 col-lg-3">
+          </Grid>
+          <Grid md={4} lg={3}>
             <Image {...SponsorImage} />
-          </div>
-        </div>
+          </Grid>
+        </GridContainer>
       </div>
     </div>
   );
