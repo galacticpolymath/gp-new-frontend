@@ -24,9 +24,29 @@ const style = {
     fontSize: "16px",
     color: "black",
   },
-  greyBackground: {
-    backgroundColor: "#E0E0E0",
+  purp: {
+    color: "#6C2D82",
   },
+  lightPurp: {
+    color: "#6812D1",
+  },
+  upperCase: {
+    textTransform: "uppercase",
+  },
+  paddingTop: {
+    paddingTop: "30px",
+  },
+  paddingLeft: {
+    paddingLeft: "100px",
+  },
+  imagePadding: {
+    paddingTop: "50px",
+    paddingRight: "70px",
+  },
+
+  // marginRight: {
+  //   marginRight: "20%",
+  // },
 };
 
 const useStyles = makeStyles(style);
@@ -35,22 +55,99 @@ export default function SectionTeam() {
   const classes = useStyles();
   return (
     <div className={classNames(classes.section)}>
-      <h1 className={classNames(classes.title, classes.primaryColor)}>
-        How we do it<span></span>
-      </h1>
+      <GridContainer>
+        <GridItem xs={12} sm={6} md={6}>
+          <h1
+            className={classNames(
+              classes.title,
+              classes.purp,
+              classes.marginRight
+            )}
+          >
+            How we do it
+          </h1>
+        </GridItem>
+        <GridItem xs={12} sm={6} md={6}>
+          <img
+            src={
+              "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357041/assets_marketing/Vector_-_dotten_line_mvnvza.svg"
+            }
+            className={classes.imagePadding}
+            height="auto"
+            width="110%"
+            alt={"Lesson Preview"}
+          />
+        </GridItem>
+      </GridContainer>
       <div>
+        <br></br>
+        <br></br>
         <GridContainer>
-          <GridItem xs={12} sm={7} md={7}>
-            <img
-              src={
-                "https://res.cloudinary.com/galactic-polymath/image/upload/v1612981509/assets_marketing/FemalesSing_banner_title_leniw2.jpg"
-              }
-              height="auto"
-              width="100%"
-              alt={"Lesson Preview"}
-            />
+          <GridItem xs={12} sm={4} md={4}>
+            <div
+              className={classNames(
+                classes.fontStyle,
+                classes.primaryColor,
+                classes.upperCase
+              )}
+            >
+              <div>
+                <p>Researchers</p>
+                <p>non-profits</p>
+                <p>sustainable corps.</p>
+              </div>
+              <br></br>
+              <div>
+                <p>select,</p>
+                <p>award-winning</p>
+                <p>science-communicators</p>
+              </div>
+              <br></br>
+              <div>
+                <p>Implemented by</p>
+                <p>educators</p>
+                <p>in classrooms</p>
+              </div>
+              <br></br>
+              <div>
+                <p>evaluated,</p>
+                <p>revised,</p>
+                <p>repeat</p>
+              </div>
+            </div>
           </GridItem>
-          <GridItem xs={12} sm={5} md={5}>
+          <GridItem xs={12} sm={4} md={4}>
+            <div className={classNames(classes.fontStyle)}>
+              <div className={classes.paddingTop}>
+                <p>
+                  Real scientists complete their research, covering complex
+                  topics on relevant, modern issues.
+                </p>
+              </div>
+              <br></br>
+              <div className={classes.paddingTop}>
+                <p>
+                  Our team of SciComm educators translates those complex topics
+                  into grade 5+ lesson plans accessible to any teacher.
+                </p>
+              </div>
+              <br></br>
+              <div className={classes.paddingTop}>
+                <p>
+                  Working closely with a variety of educators, our lesson plans
+                  are implemented in real classrooms.
+                </p>
+              </div>
+              <br></br>
+              <div className={classes.paddingTop}>
+                <p>
+                  All of our lessons are continously evaluated, updated, and
+                  revised—meaning they are always up-to-date.
+                </p>
+              </div>
+            </div>
+          </GridItem>
+          <GridItem xs={12} sm={2} md={4}>
             <div className={classes.fontStyle}>
               <div>
                 <p>We empower students with agency and critical thinking.</p>
@@ -68,22 +165,26 @@ export default function SectionTeam() {
                   teachers the freedom to adjust the material to fit their plan.
                 </p>
               </div>
-              <div>
-                <br></br>
-                <Button
-                  color="primary"
-                  size="lg"
-                  href="https://vimeo.com/448000812"
-                  target="_blank"
-                  padding="100px"
-                >
-                  <i className="fas" />
-                  See Lessons
-                </Button>
-              </div>
             </div>
           </GridItem>
         </GridContainer>
+      </div>
+      <div>
+        <footer
+          className={classNames(
+            classes.fontStyle,
+            classes.paddingTop,
+            classes.lightPurp,
+            classes.upperCase
+          )}
+        >
+          <h4>
+            <b>
+              Real research + real stories + real data + real careers = Real
+              learning
+            </b>
+          </h4>
+        </footer>
       </div>
     </div>
   );

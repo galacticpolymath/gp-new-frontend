@@ -17,6 +17,9 @@ const style = {
   justifyContentCenter: {
     justifyContent: "center",
   },
+  justifyContentSpaceBetween: {
+    justifyContent: "space-between",
+  },
   primaryColor: {
     color: "#2C83C3",
   },
@@ -35,10 +38,17 @@ export default function SectionTeam() {
   const classes = useStyles();
   return (
     <div className={classNames(classes.section)}>
-      <h1 className={classNames(classes.title, classes.primaryColor)}>
+      <h1
+        className={classNames(
+          classes.title,
+          classes.primaryColor,
+          classes.justifyContentSpaceBetween
+        )}
+      >
         Think Bigger. Learn Everything.
       </h1>
       <div>
+        <br></br>
         <GridContainer>
           <GridItem xs={12} sm={7} md={7}>
             <img
@@ -52,6 +62,8 @@ export default function SectionTeam() {
           </GridItem>
           <GridItem xs={12} sm={5} md={5}>
             <div className={classes.fontStyle}>
+              <br></br>
+              <br></br>
               <div>
                 <p>We empower students with agency and critical thinking.</p>
               </div>
