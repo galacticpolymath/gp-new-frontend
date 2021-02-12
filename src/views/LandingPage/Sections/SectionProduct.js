@@ -19,7 +19,7 @@ export default function SectionProduct() {
   const classes = useStyles();
   return (
     <div className={classes.section}>
-      {/* <GridContainer justify="center">
+      <GridContainer justify="center">
         <GridItem xs={12} sm={8} md={8}>
           <h2 className={classes.title}>Let{"'"}s talk product</h2>
           <h5 className={classes.description}>
@@ -30,48 +30,34 @@ export default function SectionProduct() {
             more.
           </h5>
         </GridItem>
-      </GridContainer> */}
+      </GridContainer>
       <div>
         <GridContainer>
-          <GridItem xs={12} sm={6} md={6}>
-            {/* <InfoArea
-              title="Open Access"
+          <GridItem xs={12} sm={4} md={4}>
+            <InfoArea
+              title="Free Chat"
               description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
               icon={Chat}
               iconColor="info"
               vertical
-            /> */}
-            <div style={{ color: "black", textAlign: "left" }}>
-              <div>
-                <h2 style={{ color: "#6C2D82" }}>Open-Access</h2>
-                <p>We believe in fair and free access for all.</p>
-              </div>
-              <div>
-                <h2 style={{ color: "#6C2D82" }}>Straight from the Source</h2>
-                <p>
-                  Our lessons are pulling data, content, and knowledge from
-                  working scientists, meaning they are as up-to-date as
-                  possible.
-                </p>
-              </div>
-              <div>
-                <h2 style={{ color: "#6C2D82" }}>High-Quality</h2>
-                <p>
-                  We are a team of educators and scientists, vigorously
-                  developing, curating, testing, and revising every lesson to
-                  provide the best possible outcome.
-                </p>
-              </div>
-            </div>
+            />
           </GridItem>
-          <GridItem xs={12} sm={6} md={6}>
-            <img
-              src={
-                "https://res.cloudinary.com/galactic-polymath/image/upload/v1612979771/assets_marketing/Engineering_Together_1_opqz9h.png"
-              }
-              height="auto"
-              width="100%"
-              alt={"Lesson Preview"}
+          <GridItem xs={12} sm={4} md={4}>
+            <InfoArea
+              title="Verified Users"
+              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
+              icon={VerifiedUser}
+              iconColor="success"
+              vertical
+            />
+          </GridItem>
+          <GridItem xs={12} sm={4} md={4}>
+            <InfoArea
+              title="Fingerprint"
+              description="Divide details about your product or agency work into parts. Write a few lines about each one. A paragraph describing a feature will be enough."
+              icon={Fingerprint}
+              iconColor="danger"
+              vertical
             />
           </GridItem>
         </GridContainer>

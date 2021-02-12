@@ -25,8 +25,8 @@ const style = {
   ...teamsStyle,
   ...teamStyle,
   justifyContentCenter: {
-    justifyContent: "center"
-  }
+    justifyContent: "center",
+  },
 };
 
 const useStyles = makeStyles(style);
@@ -43,14 +43,14 @@ export default function SectionTeam() {
               <GridContainer>
                 <GridItem xs={12} sm={5} md={5}>
                   <CardHeader image plain>
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
                       <img src={cardProfile1Square} alt="..." />
                     </a>
                     <div
                       className={classes.coloredShadow}
                       style={{
                         backgroundImage: `url(${cardProfile1Square})`,
-                        opacity: "1"
+                        opacity: "1",
                       }}
                     />
                   </CardHeader>
@@ -86,14 +86,14 @@ export default function SectionTeam() {
               <GridContainer>
                 <GridItem xs={12} sm={5} md={5}>
                   <CardHeader image plain>
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
                       <img src={cardProfile6Square} alt="..." />
                     </a>
                     <div
                       className={classes.coloredShadow}
                       style={{
                         backgroundImage: `url(${cardProfile6Square})`,
-                        opacity: "1"
+                        opacity: "1",
                       }}
                     />
                   </CardHeader>
@@ -132,14 +132,14 @@ export default function SectionTeam() {
               <GridContainer>
                 <GridItem xs={12} sm={5} md={5}>
                   <CardHeader image plain>
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
                       <img src={cardProfile4Square} alt="..." />
                     </a>
                     <div
                       className={classes.coloredShadow}
                       style={{
                         backgroundImage: `url(${cardProfile4Square})`,
-                        opacity: "1"
+                        opacity: "1",
                       }}
                     />
                   </CardHeader>
@@ -175,14 +175,14 @@ export default function SectionTeam() {
               <GridContainer>
                 <GridItem xs={12} sm={5} md={5}>
                   <CardHeader image plain>
-                    <a href="#pablo" onClick={e => e.preventDefault()}>
+                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
                       <img src={cardProfile2Square} alt="..." />
                     </a>
                     <div
                       className={classes.coloredShadow}
                       style={{
                         backgroundImage: `url(${cardProfile2Square})`,
-                        opacity: "1"
+                        opacity: "1",
                       }}
                     />
                   </CardHeader>

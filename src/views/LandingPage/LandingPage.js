@@ -20,9 +20,13 @@ import Parallax from "components/Parallax/Parallax.js";
 import landingPageStyle from "assets/jss/material-kit-pro-react/views/landingPageStyle.js";
 
 // Sections for this page
-import SectionProduct from "./Sections/SectionProduct.js";
-import SectionTeam from "./Sections/SectionTeam.js";
-import SectionWork from "./Sections/SectionWork.js";
+// import SectionProduct from "./Sections/SectionProduct.js";
+// import SectionTeam from "./Sections/SectionTeam.js";
+// import SectionWork from "./Sections/SectionWork.js";
+import SectionAbout from "./Sections/SectionAbout.js";
+import SectionLessons from "./Sections/SectionLessons.js";
+import SectionHow from "./Sections/SectionHow.js";
+
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 
 const useStyles = makeStyles(landingPageStyle);
@@ -91,9 +95,12 @@ export default function LandingPage({ ...rest }) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          <SectionProduct />
+          <SectionAbout />
+          <SectionLessons />
+          <SectionHow />
+          {/* <SectionProduct />
           <SectionTeam />
-          <SectionWork />
+          <SectionWork /> */}
         </div>
       </div>
       <Footer
