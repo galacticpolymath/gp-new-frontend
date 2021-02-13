@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 
 import GridContainer from "components/Grid/GridContainer";
 import GridItem from "components/Grid/GridItem";
+
 import RichText from "../../../../../components/RichText";
 import ICONS from "../../../icons";
 
@@ -17,7 +18,11 @@ const SimpleResourceDownload = ({
 
     return (
       <GridContainer key={i}>
-        {Name && <GridItem>{Name}:</GridItem>}
+        {Name && (
+          <GridItem sm={4} md={3} lg={2}>
+            {Name}:
+          </GridItem>
+        )}
         {Downloads.map(renderDownload)}
       </GridContainer>
     );
@@ -33,7 +38,7 @@ const SimpleResourceDownload = ({
     }
 
     return (
-      <GridItem key={i}>
+      <GridItem sm={4} md={3} lg={2} key={i}>
         {icon}{" "}
         <a href={Link} target="_blank" rel="noopener noreferrer">
           {Label}
