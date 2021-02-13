@@ -1,6 +1,10 @@
-import React, { Fragment } from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
+import ExpansionPanel from "@material-ui/core/ExpansionPanel";
+import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
+import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 import Image from "../../../components/Image";
 import RichText from "../../../components/RichText";
@@ -10,21 +14,24 @@ const useStyles = makeStyles(lessonPlanDetailsStyle);
 
 const SteamBadge = ({ Title, Description, Footnote, Badge }) => {
   const classes = useStyles();
+  const [expanded, expand] = useState(false);
+
   return (
     <div className={classes.container + " SteamBadge"}>
       <Image {...Badge} />
 
-      <div className="accordion" defaultActiveKey={null}>
-        <div className="accordion-toggle" variant="link" eventKey={Title}>
+      <ExpansionPanel expanded={expanded} onChange={() => expand(!expanded)}>
+        <ExpansionPanelSummary
+          className="ExpansionPanelSummary"
+          expandIcon={<ExpandMoreIcon />}
+        >
           <h3>{Title}</h3>
-        </div>
-        <div className="accordion-collapse" eventKey={Title}>
-          <Fragment>
-            <RichText content={Description} />
-            <RichText className="footnote" content={Footnote} />
-          </Fragment>
-        </div>
-      </div>
+        </ExpansionPanelSummary>
+        <ExpansionPanelDetails>
+          <RichText content={Description} />
+          <RichText className="footnote" content={Footnote} />
+        </ExpansionPanelDetails>
+      </ExpansionPanel>
     </div>
   );
 };
