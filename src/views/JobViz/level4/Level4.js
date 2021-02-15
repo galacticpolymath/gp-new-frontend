@@ -4,11 +4,10 @@ import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+// import List from "@material-ui/core/List";
+// import ListItem from "@material-ui/core/ListItem";
 // @material-ui/icons
 
-import Favorite from "@material-ui/icons/Favorite";
 // core components
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
@@ -25,6 +24,8 @@ import CardAvatar from "components/Card/CardAvatar.js";
 // import marc from "assets/img/faces/marc.jpg";
 import branch2 from "assets/img/faces/branch2.jpg";
 import brick1 from "assets/img/faces/brick1.jpg";
+import vertBracket from "assets/img/jobviz-vert-bracket.png";
+import vertStem from "assets/img/jobviz-vert-stem.png";
 
 import { ModalTable } from "../modalTable/ModalTable";
 
@@ -64,9 +65,11 @@ import { LrAutoSearchV2 } from "../search/LRautoSearchV2";
 import { Level4Card } from "./Level4Card";
 // sections for this page Added by JOB VIZ TEAM
 
-import pricingStyle from "assets/jss/material-kit-pro-react/views/pricingStyle.js";
+import JobVizHeader from "../modules/JobVizComponents";
+import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle.js";
+import GPcopyrightFooter from "../../../components/Footer/GPcopyrightFooter";
 
-const useStyles = makeStyles(pricingStyle);
+const useStyles = makeStyles(JobVizStyle);
 
 export const Level4List = (props) => {
   const grandparent = props.level1;
@@ -204,29 +207,47 @@ export const Level4List = (props) => {
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 300,
-          color: "info",
+          height: 50,
+          color: "dark",
         }}
       />
 
-      <Parallax image={require("assets/img/bg12.jpg")} filter="dark" small>
+      <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
-          <GridContainer>
+          <GridContainer
+            style={{placeItems: "center"}}
+          >
             <GridItem
-              md={8}
-              sm={8}
+              xs={12}
+              md={6}
+              sm={6}
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,
-                classes.textCenter
+                classes.textLeft
               )}
+              style={{ paddingLeft:0, paddingRight: "25px" }}
             >
-              <h1 className={classes.title}>JOB VIZ </h1>
-              <h4>
-                Explore career possibilites, see how fields relate and overlap,
-                and get a glimpse at industry education and financial data.
-              </h4>
-              <h4 style={{ color: "white" }}>What do you want to be?</h4>
+              <JobVizHeader />
+            </GridItem>
+            <GridItem
+                xs={12}
+                sm={6}
+                md={6}
+                className={classNames(
+                    classes.hideLogo,
+                    classes.mlAuto,
+                    classes.mrAuto,
+                    classes.textLeft
+                )}
+            >
+              <img
+                  src={require("assets/img/hero-images/JobViz_Bubble.svg")}
+                  height="auto"
+                  width="120%"
+                  style={{paddingTop:"2rem"}}
+                  alt={"geometric horizontal bubbles on line background pattern"}
+              />
             </GridItem>
           </GridContainer>
         </div>
@@ -258,6 +279,9 @@ export const Level4List = (props) => {
                 <Link to={`/jobviz`}>Job Categories </Link>
               </h6>
             </div>
+            <div className="crumb-img-container">
+              <img className="vert-stem-img" src={vertStem} alt="..." />
+            </div>
 
             <div className="crumb-img-container">
               <img
@@ -272,6 +296,9 @@ export const Level4List = (props) => {
               </h6>
             </div>
             <div className="crumb-img-container">
+              <img className="vert-stem-img" src={vertStem} alt="..." />
+            </div>
+            <div className="crumb-img-container">
               <img
                 style={{ height: "40px", width: "40px" }}
                 src={branch2}
@@ -283,6 +310,9 @@ export const Level4List = (props) => {
                 </Link>
               </h6>
             </div>
+            <div className="crumb-img-container">
+              <img className="vert-stem-img" src={vertStem} alt="..." />
+            </div>
           </div>
 
           {/* //////////////// P A R E N T ////////////////// */}
@@ -290,7 +320,7 @@ export const Level4List = (props) => {
           <div className="crumbs">
             <Card className={classes.textCenter} style={{ width: "20rem" }}>
               <CardAvatar profile>
-                <a href="#pablo" onClick={(e) => e.preventDefault()}></a>
+                <a href="" onClick={(e) => e.preventDefault()}></a>
                 <img src={branch2} alt="nodes" />
               </CardAvatar>
               <CardBody>
@@ -301,6 +331,7 @@ export const Level4List = (props) => {
                     e.preventDefault();
                     setClassicModal(true);
                   }}
+                  color={"primary"}
                 >
                   <LibraryBooks />
                   Details
@@ -334,7 +365,9 @@ export const Level4List = (props) => {
           </div>
 
           {/* Where children are mapped out to individual card component */}
-          <div className="">
+          <div className={classes.container}>
+            <img className="vert-bracket-img" src={vertBracket} alt="..." />
+
             <div className="card-child-container">
               {alphaList.map((job, k) => {
                 for (let j = 0; j <= jobObject.children.length; j++) {
@@ -358,53 +391,43 @@ export const Level4List = (props) => {
       <Footer
         content={
           <div>
-            <div className={classes.left}>
-              <List className={classes.list}>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/?ref=mkpr-pricing"
-                    target="_blank"
-                    className={classes.block}
-                  >
-                    Creative Tim
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/presentation?ref=mkpr-pricing"
-                    target="_blank"
-                    className={classes.block}
-                  >
-                    About us
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a href="//blog.creative-tim.com/" className={classes.block}>
-                    Blog
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/license?ref=mkpr-pricing"
-                    target="_blank"
-                    className={classes.block}
-                  >
-                    Licenses
-                  </a>
-                </ListItem>
-              </List>
-            </div>
-            <div className={classes.right}>
-              &copy; {1900 + new Date().getYear()} , made with{" "}
-              <Favorite className={classes.icon} /> by{" "}
-              <a
-                href="https://www.creative-tim.com?ref=mkpr-pricing"
-                target="_blank"
-              >
-                Creative Tim
-              </a>{" "}
-              for a better web.
-            </div>
+            {/*<div className={classes.left}>*/}
+            {/*  <List className={classes.list}>*/}
+            {/*    <ListItem className={classes.inlineBlock}>*/}
+            {/*      <a*/}
+            {/*        href="https://www.creative-tim.com/?ref=mkpr-pricing"*/}
+            {/*        target="_blank"*/}
+            {/*        className={classes.block}*/}
+            {/*      >*/}
+            {/*        Creative Tim*/}
+            {/*      </a>*/}
+            {/*    </ListItem>*/}
+            {/*    <ListItem className={classes.inlineBlock}>*/}
+            {/*      <a*/}
+            {/*        href="https://www.creative-tim.com/presentation?ref=mkpr-pricing"*/}
+            {/*        target="_blank"*/}
+            {/*        className={classes.block}*/}
+            {/*      >*/}
+            {/*        About us*/}
+            {/*      </a>*/}
+            {/*    </ListItem>*/}
+            {/*    <ListItem className={classes.inlineBlock}>*/}
+            {/*      <a href="//blog.creative-tim.com/" className={classes.block}>*/}
+            {/*        Blog*/}
+            {/*      </a>*/}
+            {/*    </ListItem>*/}
+            {/*    <ListItem className={classes.inlineBlock}>*/}
+            {/*      <a*/}
+            {/*        href="https://www.creative-tim.com/license?ref=mkpr-pricing"*/}
+            {/*        target="_blank"*/}
+            {/*        className={classes.block}*/}
+            {/*      >*/}
+            {/*        Licenses*/}
+            {/*      </a>*/}
+            {/*    </ListItem>*/}
+            {/*  </List>*/}
+            {/*</div>*/}
+            <GPcopyrightFooter/>
           </div>
         }
       />

@@ -20,6 +20,7 @@ import Footer from "components/Footer/Footer.js";
 // @material-ui/core components
 
 import brick1 from "assets/img/faces/brick1.jpg";
+import vertBracket from "assets/img/jobviz-vert-bracket.png";
 
 // core components
 import Card from "components/Card/Card.js";
@@ -37,8 +38,9 @@ import Slide from "@material-ui/core/Slide";
 import { cardTitle } from "assets/jss/material-kit-pro-react.js";
 
 // sections for this page Added by JOB VIZ TEAM \/
+import JobVizHeader from "../modules/JobVizComponents";
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 import JobManager from "../modules/JobManager";
 import "../styling/Style.css";
@@ -48,9 +50,10 @@ import { LrAutoSearchV2 } from "../search/LRautoSearchV2";
 import { Level1Card } from "./Level1Card";
 // sections for this page Added by JOB VIZ TEAM^^^^^
 
-import pricingStyle from "assets/jss/material-kit-pro-react/views/pricingStyle.js";
+import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle.js";
+import GPcopyrightFooter from "../../../components/Footer/GPcopyrightFooter";
 
-const useStyles = makeStyles(pricingStyle);
+const useStyles = makeStyles(JobVizStyle);
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="down" ref={ref} {...props} />;
 });
@@ -170,29 +173,48 @@ export const Level1List = (props) => {
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 300,
-          color: "info",
+          height: 50,
+          color: "dark",
         }}
       />
 
-      <Parallax image={require("assets/img/bg12.jpg")} filter="dark" small>
+      <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
-          <GridContainer>
+          <GridContainer
+            style={{placeItems: "center"}}
+          >
             <GridItem
-              md={8}
-              sm={8}
+              xs={12}
+              md={6}
+              sm={6}
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,
-                classes.textCenter
+                classes.textLeft
               )}
+              style={{ paddingLeft:0, paddingRight: "25px" }}
             >
-              <h1 className={classes.title}>JOB VIZ </h1>
-              <h4>
-                Explore career possibilites, see how fields relate and overlap,
-                and get a glimpse at industry education and financial data.
-              </h4>
-              <h4>What do you want to be?</h4>
+              <JobVizHeader />
+            </GridItem>
+            <GridItem
+              xs={12}
+              sm={6}
+              md={6}
+              className={classNames(
+                classes.hideLogo,
+                classes.mlAuto,
+                classes.mrAuto,
+                classes.textLeft
+              )}
+              // style={{objectFit: "fit"}}
+            >
+              <img
+                src={require("assets/img/hero-images/JobViz_Bubble.svg")}
+                height="auto"
+                width="120%"
+                style={{paddingTop:"2rem"}}
+                alt={"horizontal lines with bubbles, background pattern"}
+              />
             </GridItem>
           </GridContainer>
         </div>
@@ -217,14 +239,14 @@ export const Level1List = (props) => {
           <div className="crumbs">
             <Card className={classes.textCenter} style={{ width: "20rem" }}>
               <CardAvatar profile>
-                <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                <a href="" onClick={(e) => e.preventDefault()}>
                   <img src={brick1} alt="..." />
                 </a>
               </CardAvatar>
               <CardBody>
                 <h4 className={classes.cardTitle}>Job Categories</h4>
 
-                <Button onClick={() => setClassicModal(true)}>
+                <Button onClick={() => setClassicModal(true)} color="primary">
                   <LibraryBooks />
                   Details
                 </Button>
@@ -258,6 +280,8 @@ export const Level1List = (props) => {
 
           {/* Where children are mapped out to individual card component */}
           <div className={classes.container}>
+            <img className="vert-bracket-img" src={vertBracket} alt="..." />
+
             <div className="card-child-container">
               {alphaList.map((job, k) => {
                 for (let j = 0; j <= jobObject.children.length; j++) {
@@ -281,53 +305,43 @@ export const Level1List = (props) => {
       <Footer
         content={
           <div>
-            <div className={classes.left}>
-              <List className={classes.list}>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/?ref=mkpr-pricing"
-                    target="_blank"
-                    className={classes.block}
-                  >
-                    Creative Tim
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/presentation?ref=mkpr-pricing"
-                    target="_blank"
-                    className={classes.block}
-                  >
-                    About us
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a href="//blog.creative-tim.com/" className={classes.block}>
-                    Blog
-                  </a>
-                </ListItem>
-                <ListItem className={classes.inlineBlock}>
-                  <a
-                    href="https://www.creative-tim.com/license?ref=mkpr-pricing"
-                    target="_blank"
-                    className={classes.block}
-                  >
-                    Licenses
-                  </a>
-                </ListItem>
-              </List>
-            </div>
-            <div className={classes.right}>
-              &copy; {1900 + new Date().getYear()} , made with{" "}
-              <Favorite className={classes.icon} /> by{" "}
-              <a
-                href="https://www.creative-tim.com?ref=mkpr-pricing"
-                target="_blank"
-              >
-                Creative Tim
-              </a>{" "}
-              for a better web.
-            </div>
+            {/*<div className={classes.left}>*/}
+            {/*  <List className={classes.list}>*/}
+            {/*    <ListItem className={classes.inlineBlock}>*/}
+            {/*      <a*/}
+            {/*        href="https://www.creative-tim.com/?ref=mkpr-pricing"*/}
+            {/*        target="_blank"*/}
+            {/*        className={classes.block}*/}
+            {/*      >*/}
+            {/*        Creative Tim*/}
+            {/*      </a>*/}
+            {/*    </ListItem>*/}
+            {/*    <ListItem className={classes.inlineBlock}>*/}
+            {/*      <a*/}
+            {/*        href="https://www.creative-tim.com/presentation?ref=mkpr-pricing"*/}
+            {/*        target="_blank"*/}
+            {/*        className={classes.block}*/}
+            {/*      >*/}
+            {/*        About us*/}
+            {/*      </a>*/}
+            {/*    </ListItem>*/}
+            {/*    <ListItem className={classes.inlineBlock}>*/}
+            {/*      <a href="//blog.creative-tim.com/" className={classes.block}>*/}
+            {/*        Blog*/}
+            {/*      </a>*/}
+            {/*    </ListItem>*/}
+            {/*    <ListItem className={classes.inlineBlock}>*/}
+            {/*      <a*/}
+            {/*        href="https://www.creative-tim.com/license?ref=mkpr-pricing"*/}
+            {/*        target="_blank"*/}
+            {/*        className={classes.block}*/}
+            {/*      >*/}
+            {/*        Licenses*/}
+            {/*      </a>*/}
+            {/*    </ListItem>*/}
+            {/*  </List>*/}
+            {/*</div>*/}
+            <GPcopyrightFooter/>
           </div>
         }
       />

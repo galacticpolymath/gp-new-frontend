@@ -18,7 +18,8 @@ import Menu from "@material-ui/icons/Menu";
 import Close from "@material-ui/icons/Close";
 // core components
 import styles from "assets/jss/material-kit-pro-react/components/headerStyle.js";
-import logoImage from "../../assets/img/android-chrome-192x192.png"
+// import logoImage from "../../assets/img/android-chrome-192x192.png";
+import GpImage from "../../assets/img/GP_horiz_bubbleLogo175ppi.png";
 
 const useStyles = makeStyles(styles);
 
@@ -63,16 +64,22 @@ export default function Header(props) {
     [classes.appBar]: true,
     [classes[color]]: color,
     [classes.absolute]: absolute,
-    [classes.fixed]: fixed
+    [classes.fixed]: fixed,
   });
   return (
     <AppBar className={appBarClasses}>
       <Toolbar className={classes.container}>
         <Button className={classes.title}>
           <Link to="/">
-          <div>
-          <img alt="logo" src={logoImage} width="100px" />
-        </div>
+            {/* <div>
+              <img alt="logo" src={logoImage} width="50px" />
+            </div> */}
+            <div className={classes.hideLogo}>
+              <img alt="logo" src={GpImage} width="400px" />
+            </div>
+            <div className={classes.showLogo}>
+              <img alt="logo" src={GpImage} width="100%" />
+            </div>
           </Link>
         </Button>
         <Hidden smDown implementation="css" className={classes.hidden}>
@@ -94,7 +101,7 @@ export default function Header(props) {
           anchor={"right"}
           open={mobileOpen}
           classes={{
-            paper: classes.drawerPaper
+            paper: classes.drawerPaper,
           }}
           onClose={handleDrawerToggle}
         >
@@ -114,7 +121,7 @@ export default function Header(props) {
 }
 
 Header.defaultProp = {
-  color: "white"
+  color: "white",
 };
 
 Header.propTypes = {
@@ -127,7 +134,8 @@ Header.propTypes = {
     "transparent",
     "white",
     "rose",
-    "dark"
+    "dark",
+    "blackColor",
   ]),
   links: PropTypes.node,
   brand: PropTypes.string,
@@ -150,7 +158,8 @@ Header.propTypes = {
       "transparent",
       "white",
       "rose",
-      "dark"
-    ]).isRequired
-  })
+      "dark",
+      "blackColor",
+    ]).isRequired,
+  }),
 };

@@ -1,29 +1,45 @@
+// ported from contactUsStyle.js
 import {
   container,
   title,
   main,
-  whiteColor,
   mainRaised,
   mlAuto,
+  mrAuto,
+  description,
+  whiteColor,
 } from "assets/jss/material-kit-pro-react.js";
 
-const blogPostsPageStyle = {
+const JobVizStyle = {
+  main,
+  mainRaised,
+  title: {
+    ...title,
+    "&, & + h4": {
+      color: whiteColor,
+    },
+  },
+  mlAuto,
+  mrAuto,
+  description,
   container: {
     ...container,
+    // maxWidth: "970px !important",
     zIndex: "2",
     position: "relative",
   },
+   bigMap: {
+    height: "55vh",
+    maxHeight: "550px",
+    width: "100%",
+    display: "block",
+  },
+  info: {
+    paddingBottom: "10px",
+    paddingTop: 0,
+  },
   textCenter: {
-    textAlign: "center",
-  },
-  title: {
-    ...title,
-    color: whiteColor,
-  },
-  mlAuto,
-  main: {
-    ...main,
-    ...mainRaised,
+    textAlign: "center !important",
   },
   block: {
     color: "inherit",
@@ -62,7 +78,7 @@ const blogPostsPageStyle = {
     position: "relative",
   },
   bgColor: {
-    backgroundColor: "#6812D1",
+    backgroundColor: "#CB1F8E",
   },
   "@media (max-width: 991px)": {
     hideLogo: {
@@ -79,4 +95,4 @@ const blogPostsPageStyle = {
   },
 };
 
-export default blogPostsPageStyle;
+export default JobVizStyle;

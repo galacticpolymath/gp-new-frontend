@@ -65,7 +65,7 @@ export default function ProfilePage({ ...rest }) {
         links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
         changeColorOnScroll={{
-          height: 200,
+          height: 50,
           color: "info"
         }}
         {...rest}

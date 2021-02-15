@@ -1,5 +1,7 @@
 /*eslint-disable*/
 import React from "react";
+// nodejs library that concatenates classes
+import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
@@ -37,17 +39,53 @@ export default function BlogPostsPage() {
         fixed
         color="transparent"
         changeColorOnScroll={{
-          height: 400,
-          color: "info"
+          height: 50,
+          color: "dark",
         }}
       />
-      <Parallax image={require("assets/img/bg10.jpg")} filter="dark" small>
+      <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
-          <GridContainer justify="center">
-            <GridItem xs={12} sm={12} md={8} className={classes.textCenter}>
-              <h2 className={classes.title}>
-                A Place for Entrepreneurs to Share and Discover New Stories
-              </h2>
+          <GridContainer>
+            <GridItem
+              xs={12}
+              sm={6}
+              md={6}
+              className={classNames(
+                classes.mlAuto,
+                classes.mrAuto,
+                classes.textLeft
+              )}
+              style={{ paddingTop: "7%", paddingRight: "25px" }}
+            >
+              <h1 className={classes.title}>Galactic Lessons</h1>
+              <h4
+                className={classes.title}
+                style={{ letterSpacing: "1.5px", fontWeight: 500 }}
+              >
+                First and foremost, our lessons are free. Next, by using
+                current, real-world scienteific data and studies, our adaptive
+                lessons don't need to be taught by subject-area experts.
+                Developed and tested by a specialized team of scientists,
+                teachers, and science communicators, we stand this.
+              </h4>
+            </GridItem>
+            <GridItem
+              xs={12}
+              sm={6}
+              md={6}
+              className={classNames(
+                classes.hideLogo,
+                classes.mlAuto,
+                classes.mrAuto,
+                classes.textCenter
+              )}
+            >
+              <img
+                src={require("assets/img/hero-images/Lessons_VerticalDotandline.svg")}
+                height="auto"
+                width="120%"
+                alt={"vertical dot and line geometric pattern"}
+              />
             </GridItem>
           </GridContainer>
         </div>

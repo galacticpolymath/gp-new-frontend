@@ -4,6 +4,7 @@ import { makeUrlPath } from "../Helper";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui icons
+import AccountTreeIcon from "@material-ui/icons/AccountTree";
 // core components
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
@@ -40,10 +41,11 @@ export const Level1Card = (props) => {
             onClick={() => {
               props.history.push(`/jobviz/${parent}/${jobId}/${title}`);
             }}
-            color="primary"
+            color="info"
           >
-            {" "}
-            Select
+            {/*{" "}*/}
+            <AccountTreeIcon />
+            More Jobs
           </Button>
         </CardBody>
       </Card>

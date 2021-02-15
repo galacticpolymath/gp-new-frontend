@@ -23,9 +23,9 @@ import "assets/scss/material-kit-pro-react.scss?v=1.9.0";
 
 // pages for this product
 import AboutUsPage from "views/AboutUsPage/AboutUsPage.js";
-import BlogPostsPage from "views/BlogPostsPage/BlogPostsPage.js";
+import Lessons from "views/LessonsPage/LessonsPage.js";
 import LandingPage from "views/LandingPage/LandingPage.js";
-import PricingPage from "views/PricingPage/PricingPage.js";
+import HireUsPage from "views/HireUs/HireUsPage.js";
 import ContactUsPage from "views/ContactUsPage/ContactUsPage.js";
 // J O B  V I Z
 
@@ -54,9 +54,9 @@ ReactDOM.render(
   <Router history={hist}>
     <Switch>
       <Route path="/about" component={AboutUsPage} />
-      <Route path="/lessons" component={BlogPostsPage} />
+      <Route path="/lessons" component={Lessons} />
       <Route path="/contact-us" component={ContactUsPage} />
-      <Route path="/hire-us" component={PricingPage} />
+      <Route path="/hire-us" component={HireUsPage} />
       {/* ///This is here to help visulize all of Material Kit React's built in component features */}
       {/* <Route path="/components" component={ComponentsPage} /> */}
 

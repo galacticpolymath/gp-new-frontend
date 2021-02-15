@@ -101,12 +101,6 @@ export default function HeaderLinks(props) {
           JobViz
         </Link>
       </ListItem>
-
-      <ListItem className={classes.listItem}>
-        <Link to="/contact-us" className={classes.navLink}>
-          Contact Us
-        </Link>
-      </ListItem>
       <ListItem className={classes.listItem}>
         <Link to="/hire-us" className={classes.navLink}>
           Hire Us
@@ -300,5 +294,6 @@ HeaderLinks.propTypes = {
     "warning",
     "danger",
     "rose",
+    "blackColor",
   ]),
 };

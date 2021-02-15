@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { makeUrlPath } from "../Helper";
 import classNames from "classnames";
+//material-ui icons
+import AttachMoneyIcon from "@material-ui/icons/AttachMoney";
+import SchoolIcon from "@material-ui/icons/School";
+import WorkIcon from "@material-ui/icons/Work";
+import SupervisedUserCircleIcon from "@material-ui/icons/SupervisedUserCircle";
+import DirectionsWalkIcon from "@material-ui/icons/DirectionsWalk";
+import TransferWithinAStationIcon from "@material-ui/icons/TransferWithinAStation";
+import TrendingUpIcon from "@material-ui/icons/TrendingUp"; //percent change
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -26,22 +34,49 @@ export const ModalTable = (props) => {
   const jobObject = props.jobObject;
   const classes = useStyles();
   const [classicModal, setClassicModal] = React.useState(false);
+  const [employ2016, setEmploy2016] = useState("");
+  const [employ2026, setEmploy2026] = useState("");
+  const [formatedEmploy2016, setFormatedEmploy2016] = useState("");
+  const [formatedEmploy2026, setFormatedEmploy2026] = useState("");
+  const [percent, setPercent] = useState("");
 
   const makeCorrectValue = (x) => {
-    // console.log(x);
-    x = parseFloat(x);
-    x = x * 1000.0;
-    // x = toString(x);
-    return x;
+    const xVal = x;
+    const newVal = xVal.replace(/,/g, "");
+    let numVal = parseFloat(newVal);
+    numVal = numVal * 1000.0;
+    const stringVal = String(numVal).replace(/^\d+/, (number) =>
+      [...number]
+        .map(
+          (digit, index, digits) =>
+            (!index || (digits.length - index) % 3 ? "" : ",") + digit
+        )
+        .join("")
+    );
+
+    return stringVal;
   };
 
-  const employ2016 = makeCorrectValue(jobObject.Employment2016);
-  const employ2026 = makeCorrectValue(jobObject.Employment2026);
+  function getNumberWithSign(input) {
+    const stringPercent = String(input);
+    if (stringPercent.includes("-")) {
+      return stringPercent;
+    } else {
+      return `+${stringPercent}`;
+    }
+  }
 
-  // const Employment2016 = (
-  //   parseFloat(employ2016.replace(",", "") * 1000.0
-  // ).toLocaleString();
+  useEffect(() => {
+    setEmploy2016(jobObject.Employment2016);
+    setEmploy2026(jobObject.Employment2026);
+    setPercent(jobObject.ChgEmploy2016to26Perc);
 
+    if (employ2016 !== "" && employ2026 !== "") {
+      setFormatedEmploy2016(makeCorrectValue(jobObject.Employment2016));
+      setFormatedEmploy2026(makeCorrectValue(jobObject.Employment2026));
+      setPercent(getNumberWithSign(jobObject.ChgEmploy2016to26Perc));
+    }
+  }, [jobObject]);
   return (
     <>
       <DialogTitle
@@ -60,7 +95,9 @@ export const ModalTable = (props) => {
           <Close className={classes.modalClose} />
         </Button>
         <div style={{ display: "flex", justifyContent: "center" }}>
-          <h2 className={classes.modalTitle}>{jobObject.title}</h2>
+          <h4 style={{ fontWeight: "bold" }} className={classes.modalTitle}>
+            {jobObject.title}
+          </h4>
         </div>
       </DialogTitle>
       <DialogContent
@@ -68,22 +105,30 @@ export const ModalTable = (props) => {
         className={classes.modalBody}
       >
         <div className="table-parent">
-          <h4>Definition: {jobObject.Def}</h4>
+          <h5>
+            <strong>Definition:</strong> {jobObject.Def}
+          </h5>
           <div className="table-mid">
             <div className="table-child">
-              <h5>Median 2017 Annual Wage:</h5>
+              <AttachMoneyIcon style={{ color: "#363636" }} />
+              <h5 style={{ fontWeight: "bold" }}>Median 2017 Annual Wage:</h5>
               <h5>{jobObject.MedianAnnualWage2017}</h5>
             </div>
             <div className="table-child">
-              <h5>Education Needed:</h5>
+              <SchoolIcon style={{ color: "#363636" }} />
+              <h5 style={{ fontWeight: "bold" }}>Education Needed:</h5>
               <h5>{jobObject.TypicalEducationNeededForEntry}</h5>
             </div>
-            <div className="table-child">
-              <h5>Work Experience In a Related Occupation Desired:</h5>
+            {/* <div className="table-child">
+              <WorkIcon style={{ "color": "#363636" }} />
+              <h5 style={{ "fontWeight": "bold" }}>
+                Work Experience In a Related Occupation Desired:
+              </h5>
               <h5>{jobObject.WorkExperienceInARelatedOccupation}</h5>
-            </div>
+            </div> */}
             <div className="table-child">
-              <h5>On-the-job Training:</h5>
+              <SupervisedUserCircleIcon style={{ color: "#363636" }} />
+              <h5 style={{ fontWeight: "bold" }}>On-the-job Training:</h5>
               <h5>
                 {
                   jobObject.TypicalOnTheJobTrainingNeededToAttainCompetencyInTheOccupation
@@ -91,16 +136,21 @@ export const ModalTable = (props) => {
               </h5>
             </div>
             <div className="table-child">
-              <h5>2016 Employement:</h5>
-              <h5>{employ2016}</h5>
+              <DirectionsWalkIcon style={{ color: "#363636" }} />
+              <h5 style={{ fontWeight: "bold" }}>2016 Employment:</h5>
+              <h5>{formatedEmploy2016}</h5>
             </div>
             <div className="table-child">
-              <h5>2026 Employement:</h5>
-              <h5>{employ2026}</h5>
+              <TransferWithinAStationIcon style={{ color: "#363636" }} />
+              <h5 style={{ fontWeight: "bold" }}>2026 Employment:</h5>
+              <h5>{formatedEmploy2026}</h5>
             </div>
             <div className="table-child">
-              <h5>Percent change in Employment 2016 - 2026:</h5>
-              <h4>{jobObject.ChgEmploy2016to26Perc}%</h4>
+              <TrendingUpIcon style={{ color: "#363636" }} />
+              <h5 style={{ fontWeight: "bold" }}>
+                Percent change in Employment 2016 - 2026:
+              </h5>
+              <h4>{percent}%</h4>
             </div>
           </div>
         </div>
