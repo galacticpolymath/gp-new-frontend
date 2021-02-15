@@ -79,11 +79,15 @@ export default function PricingPage() {
                 classes.mlAuto,
                 classes.mrAuto
               )}
-              style={{ height: "130%", width: "100%"}}
+              style={{ }}
             >
               <img
-                src={require("assets/img/hero-images/PricingPage-dot-pattern-01.svg")}
+                src={require("assets/img/hero-images/HireUs_hero.png")}
                 alt={"geometric background pattern"}
+                height="auto"
+                width="120%"
+                style={{float:"left"}}
+
               />
             </GridItem>
           </GridContainer>

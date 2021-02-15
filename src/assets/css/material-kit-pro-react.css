@@ -14,6 +14,21 @@
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 */
+/*theme-color("primary") !default;*/
+/*:export {*/
+/*  gpHydroBlue: #2c83c3;*/
+/*  gpLightningPurple: #6c2d82;*/
+/*  gpFuchsia: #ff3dac;*/
+/*  gpAtomicBlue: #6812d1;*/
+/*  gpBurstPurple: #cb1f8e;*/
+/*  gpGalacticBlack: #363636;*/
+/*  gpSparkleWhite: #f0f4ff;*/
+/*  gpMath: #DB4125;*/
+/*  gpSci: #B798E8;*/
+/*  gpSocStudies: #633A9A;*/
+/*  gpELA: #ECA14D;*/
+/*  gpExtra: #F4F0D9; }*/
+
 .btn-file {
   position: relative;
   overflow: hidden;

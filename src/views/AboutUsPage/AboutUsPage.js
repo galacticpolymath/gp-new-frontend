@@ -85,7 +85,7 @@ export default function AboutUsPage(...rest) {
               <img
                 src={require("assets/img/hero-images/AboutPage_Bubbles.png")}
                 height="auto"
-                width="110%"
+                width="120%"
               />
             </GridItem>
           </GridContainer>
