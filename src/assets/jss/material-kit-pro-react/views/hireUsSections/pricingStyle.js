@@ -25,8 +25,13 @@ const pricingStyle = {
     padding: "80px 0px"
   },
   textInfo: {
-    color: infoColor[0] + " !important"
-  }
+    color: infoColor[0] + " !important",
+  },
+  leadIn:{
+    "& h4": {
+      paddingBottom: "1.5rem",
+    }
+  },
 };
 
 export default pricingStyle;

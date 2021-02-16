@@ -7,7 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 // @material-ui icons
 
 
-import featuresStyle from "assets/jss/material-kit-pro-react/views/pricingSections/featuresStyle.js";
+import featuresStyle from "assets/jss/material-kit-pro-react/views/hireUsSections/featuresStyle.js"
 
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
@@ -21,7 +21,7 @@ export default function SectionFeatures() {
       <div className={classes.textCenter}>
       </div>
       <GridContainer>
-        <GridItem md={12} sm={12} className={classes.mlAuto}>
+        <GridItem md={6} sm={12} className={classes.mlAuto}>
           <Card raised pricing>
             <CardBody pricing>
               <h5
@@ -45,7 +45,7 @@ export default function SectionFeatures() {
         </GridItem>
       </GridContainer>
       <GridContainer>
-        <GridItem md={12} sm={12} className={classes.mlAuto}>
+        <GridItem md={6} sm={12} className={classes.mlAuto}>
           <Card raised pricing>
             <CardBody pricing>
               <h5

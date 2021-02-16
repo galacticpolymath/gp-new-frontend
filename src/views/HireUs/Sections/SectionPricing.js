@@ -10,7 +10,7 @@ import Button from "components/CustomButtons/Button.js";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
-import pricingStyle from "assets/jss/material-kit-pro-react/views/pricingSections/pricingStyle.js";
+import pricingStyle from "assets/jss/material-kit-pro-react/views/hireUsSections/pricingStyle.js";
 
 const useStyles = makeStyles(pricingStyle);
 
@@ -18,14 +18,23 @@ export default function SectionPricing() {
   const classes = useStyles();
   return (
     <div className={classes.pricingSection}>
+      <div className={classes.leadIn}>
       <h4>
         By working with our team, we can translate your area of focus into open-access
-        lessons that inspire and engage students, while also making it easy for teachers to connect
-        abstract learning standards to real world problems involving diverse STEM professionals. Forget
-        the textbook lessons you were taught in school. Each of our lessons is carefully crafted over
-        weeks, imbued with creativity, artistry, authentic data, and storytelling. Let us do the heavy lifting
-        to achieve your outreach goals. <em>Together we can democratize current knowledge for all,</em> and forever change the education status quo!
+        lessons that inspire and engage students.
+       </h4>
+      <h4>
+        Forget the textbook lessons you were taught in school. Each of our lessons is carefully crafted over
+        weeks, imbued with creativity, artistry, authentic data, and storytelling.
         </h4>
+      <h4>
+        Let us do the heavy lifting
+        to achieve your outreach goals.
+      </h4>
+      <h4>
+        <em>Together we can democratize current knowledge for all, and forever change the education status quo!</em>
+        </h4>
+      </div>
       <GridContainer>
         <GridItem md={4} sm={4}>
           <Card plain pricing>
@@ -160,7 +169,7 @@ export default function SectionPricing() {
                 </li>
                 <li>
                   {/* find cleaner fix for multiple line breaks */}
-                  <b>Unlimited </b>Rounds of Revision during Phase I<p></p>
+                  <b>Unlimited </b>Rounds of Revision during Phase I<p> </p>
                 </li>
                 <li>
                   <b>Lifetime</b> Lesson Support

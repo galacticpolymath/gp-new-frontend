@@ -345,7 +345,7 @@ const defaultBoxShadow = {
 };
 
 const title = {
-  color: grayColor[1],
+  color: blackColor, /*grayColor[1],*/
   textDecoration: "none",
   fontWeight: "700",
   marginTop: "30px",
