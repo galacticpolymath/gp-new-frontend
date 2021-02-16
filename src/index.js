@@ -37,14 +37,14 @@ import { Level3List } from "views/JobViz/level3/Level3.js";
 import { Level4List } from "views/JobViz/level4/Level4.js";
 // import BlogPostPage from "views/BlogPostPage/BlogPostPage.js";
 
-// import ComponentsPage from "views/ComponentsPage/ComponentsPage.js";
+import ComponentsPage from "views/ComponentsPage/ComponentsPage.js";
 // import ContactUsPage from "views/ContactUsPage/ContactUsPage.js";
 // import EcommercePage from "views/EcommercePage/EcommercePage.js";
 // import LoginPage from "views/LoginPage/LoginPage.js";
 // import PresentationPage from "views/PresentationPage/PresentationPage.js";
 // import ProfilePage from "views/ProfilePage/ProfilePage.js";
 // import ProductPage from "views/ProductPage/ProductPage.js";
-// import SectionsPage from "views/SectionsPage/SectionsPage.js";
+import SectionsPage from "views/SectionsPage/SectionsPage.js";
 // import ShoppingCartPage from "views/ShoppingCartPage/ShoppingCartPage.js";
 // import SignupPage from "views/SignupPage/SignupPage.js";
 // import ErrorPage from "views/ErrorPage/ErrorPage.js";
@@ -165,14 +165,14 @@ ReactDOM.render(
         }}
       />
 
+      <Route path="/components" component={ComponentsPage} />
+      <Route path="/sections" component={SectionsPage} />
       <Route path="/" component={LandingPage} />
       {/* <Route path="/blog-post" component={BlogPostPage} />
-      <Route path="/components" component={ComponentsPage} />
       <Route path="/ecommerce-page" component={EcommercePage} />
       <Route path="/login-page" component={LoginPage} />
       <Route path="/profile-page" component={ProfilePage} />
       <Route path="/product-page" component={ProductPage} />
-      <Route path="/sections" component={SectionsPage} />
       <Route path="/shopping-cart-page" component={ShoppingCartPage} />
       <Route path="/signup-page" component={SignupPage} />
       <Route path="/error-page" component={ErrorPage} /> */}

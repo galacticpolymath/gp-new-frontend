@@ -5,8 +5,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Image from "../../../components/Image";
 import RichText from "../../../components/RichText";
 
-import lessonPlanDetailsStyle from "assets/jss/material-kit-pro-react/views/lessonPlanDetailsStyle.js";
-const useStyles = makeStyles(lessonPlanDetailsStyle);
+import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
+const useStyles = makeStyles(lessonPlanStyle);
 
 const Media = ({ Title, Media: image, TopCaption, BottomCaption }) => {
   const classes = useStyles();

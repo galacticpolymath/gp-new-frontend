@@ -6,8 +6,8 @@ import TeachingMethod from "./TeachingMethod";
 
 import "./style.scss";
 
-import lessonPlanDetailsStyle from "assets/jss/material-kit-pro-react/views/lessonPlanDetailsStyle.js";
-const useStyles = makeStyles(lessonPlanDetailsStyle);
+import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
+const useStyles = makeStyles(lessonPlanStyle);
 
 const TeachingResources = ({ TeachingMethod: TeachingMethods = [] }) => {
   const classes = useStyles();
