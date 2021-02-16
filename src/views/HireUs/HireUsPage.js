@@ -4,11 +4,6 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-// core components
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
@@ -18,8 +13,6 @@ import Footer from "components/Footer/Footer.js";
 // sections for this page
 import SectionPricing from "views/HireUs/Sections/SectionPricing.js";
 import SectionFeatures from "views/HireUs/Sections/SectionFeatures.js";
-
-import ComputerIcon from "@material-ui/icons/Computer";
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 
 //styles broad material UI components
@@ -37,7 +30,7 @@ export default function PricingPage() {
   return (
     <div>
       <Header
-        brand="Material Kit PRO React"
+        brand="Galactic Polymath"
         links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
         color="transparent"
@@ -54,8 +47,9 @@ export default function PricingPage() {
           >
             <GridItem
               xs={12}
-              sm={6}
+              sm={12}
               md={6}
+              lg={6}
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,
@@ -75,8 +69,9 @@ export default function PricingPage() {
             </GridItem>
             <GridItem
               xs={12}
-              sm={6}
+              sm={12}
               md={6}
+              lg={6}
               className={classNames(
                 classes.hideLogo,
                 classes.mlAuto,

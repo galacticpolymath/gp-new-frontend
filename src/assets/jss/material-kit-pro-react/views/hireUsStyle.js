@@ -70,22 +70,34 @@ const hireUsStyle = {
   //     display: "none",
   //   },
   // },
-  "@media only screen and (max-width: 990px)": {
+  "@media only screen and (max-width: 1280px)": {
     title: {
 
       "&.hireUsTitle": {
-        fontSize: "2.6rem",
+        fontSize: "3rem",
+      },
+    },
+
+  },
+   "@media only screen and (max-width: 1000px)": {
+    title: {
+
+      "&.hireUsTitle": {
+        fontSize: "2.4rem",
       },
     },
 
   },
 
-  "@media only screen and (max-width: 890px)": {
+  "@media only screen and (max-width: 960px)": {
     /* phones */
 
     hideLogo: {
       display: "none",
       maxWidth: "100%",
+      // "&.hireUsTitle": {
+      //   fontSize: "2.6rem",
+      // },
     },
   },
 };

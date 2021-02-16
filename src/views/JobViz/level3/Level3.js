@@ -4,8 +4,7 @@ import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+
 
 // core components
 import Header from "components/Header/Header.js";
@@ -19,7 +18,6 @@ import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import Button from "components/CustomButtons/Button.js";
 import CardAvatar from "components/Card/CardAvatar.js";
-// import marc from "assets/img/faces/marc.jpg";
 import branch2 from "assets/img/faces/branch2.jpg";
 import brick1 from "assets/img/faces/brick1.jpg";
 import vertBracket from "assets/img/jobviz-vert-bracket.png";
@@ -27,12 +25,10 @@ import vertStem from "assets/img/jobviz-vert-stem.png";
 
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import Dialog from "@material-ui/core/Dialog";
-// import DialogTitle from "@material-ui/core/DialogTitle";
-// import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
 import Slide from "@material-ui/core/Slide";
 // import Close from "@material-ui/icons/Close";
-import { cardTitle } from "assets/jss/material-kit-pro-react.js";
+
 
 import { ModalTable } from "../modalTable/ModalTable";
 
@@ -42,15 +38,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 Transition.displayName = "Transition";
 
-const style = {
-  cardTitle,
-  textCenter: {
-    textAlign: "center",
-  },
-  textRight: {
-    textAlign: "right",
-  },
-};
+
 
 // sections for this page Added by JOB VIZ TEAM
 
@@ -210,20 +198,21 @@ export const Level3List = (props) => {
           >
             <GridItem
               xs={12}
+              sm={12}
               md={6}
-              sm={6}
+
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,
                 classes.textLeft
               )}
-              style={{ paddingLeft:0, paddingRight: "25px" }}
+
             >
               <JobVizHeader />
             </GridItem>
             <GridItem
                 xs={12}
-                sm={6}
+                sm={12}
                 md={6}
                 className={classNames(
                     classes.hideLogo,
@@ -344,7 +333,7 @@ export const Level3List = (props) => {
             <img className="vert-bracket-img" src={vertBracket} alt="..." />
 
             <div className="card-child-container">
-              {alphaList.map((job, k) => {
+              {alphaList.map((job) => {
                 for (let j = 0; j <= jobObject.children.length; j++) {
                   if (jobObject.children[j] === job.id) {
                     return (

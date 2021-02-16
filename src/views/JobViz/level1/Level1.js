@@ -4,11 +4,7 @@ import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-// core components
+
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
@@ -35,7 +31,7 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import Slide from "@material-ui/core/Slide";
 // import Close from "@material-ui/icons/Close";
-import { cardTitle } from "assets/jss/material-kit-pro-react.js";
+
 
 // sections for this page Added by JOB VIZ TEAM \/
 import JobVizHeader from "../modules/JobVizComponents";
@@ -61,15 +57,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 Transition.displayName = "Transition";
 
-const style = {
-  cardTitle,
-  textCenter: {
-    textAlign: "center",
-  },
-  textRight: {
-    textAlign: "right",
-  },
-};
 
 export const Level1List = (props) => {
   const level = props.level0;
@@ -186,20 +173,21 @@ export const Level1List = (props) => {
           >
             <GridItem
               xs={12}
+              sm={12}
               md={6}
-              sm={6}
+
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,
                 classes.textLeft
               )}
-              style={{ paddingLeft:0, paddingRight: "25px" }}
+
             >
               <JobVizHeader />
             </GridItem>
             <GridItem
               xs={12}
-              sm={6}
+              sm={12}
               md={6}
               className={classNames(
                 classes.hideLogo,
@@ -284,7 +272,7 @@ export const Level1List = (props) => {
             <img className="vert-bracket-img" src={vertBracket} alt="..." />
 
             <div className="card-child-container">
-              {alphaList.map((job, k) => {
+              {alphaList.map((job) => {
                 for (let j = 0; j <= jobObject.children.length; j++) {
                   if (jobObject.children[j] === job.id) {
                     return (

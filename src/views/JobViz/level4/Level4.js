@@ -4,9 +4,6 @@ import React, { useState, useEffect } from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-// import List from "@material-ui/core/List";
-// import ListItem from "@material-ui/core/ListItem";
-// @material-ui/icons
 
 // core components
 import Header from "components/Header/Header.js";
@@ -36,7 +33,7 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import Slide from "@material-ui/core/Slide";
 // import Close from "@material-ui/icons/Close";
-import { cardTitle } from "assets/jss/material-kit-pro-react.js";
+
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="down" ref={ref} {...props} />;
@@ -44,15 +41,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 Transition.displayName = "Transition";
 
-const style = {
-  cardTitle,
-  textCenter: {
-    textAlign: "center",
-  },
-  textRight: {
-    textAlign: "right",
-  },
-};
 
 // sections for this page Added by JOB VIZ TEAM
 import { Link } from "react-router-dom";
@@ -219,20 +207,20 @@ export const Level4List = (props) => {
           >
             <GridItem
               xs={12}
+              sm={12}
               md={6}
-              sm={6}
+
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,
                 classes.textLeft
               )}
-              style={{ paddingLeft:0, paddingRight: "25px" }}
-            >
+              >
               <JobVizHeader />
             </GridItem>
             <GridItem
                 xs={12}
-                sm={6}
+                sm={12}
                 md={6}
                 className={classNames(
                     classes.hideLogo,
@@ -320,8 +308,9 @@ export const Level4List = (props) => {
           <div className="crumbs">
             <Card className={classes.textCenter} style={{ width: "20rem" }}>
               <CardAvatar profile>
-                <a href="" onClick={(e) => e.preventDefault()}></a>
+                <a href="#" onClick={(e) => e.preventDefault()}>
                 <img src={branch2} alt="nodes" />
+                </a>
               </CardAvatar>
               <CardBody>
                 <h4 className={classes.cardTitle}>{jobObject.title}</h4>
