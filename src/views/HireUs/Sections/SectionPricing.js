@@ -18,7 +18,7 @@ export default function SectionPricing() {
   const classes = useStyles();
   return (
     <div className={classes.pricingSection}>
-      <div className={classes.leadIn}>
+      <div className={classNames(classes.leadIn)}>
       <h4>
         By working with our team, we can translate your area of focus into open-access
         lessons that inspire and engage students.
@@ -46,7 +46,7 @@ export default function SectionPricing() {
               </h5>
 
               <h3 className={classes.cardTitle}>
-                <small>$</small>1,500- 5000
+                <span className={classes.dollar}>1,500 – 5,000</span>
               </h3>
               <ul>
                 <li>
@@ -90,7 +90,7 @@ export default function SectionPricing() {
                 </li>
               </ul>
               <Button href="#pablo" color="primary" round>
-                Get started
+                Build It!
               </Button>
             </CardBody>
           </Card>
@@ -100,7 +100,7 @@ export default function SectionPricing() {
             <CardBody pricing>
               <h5 className={classes.cardCategory}>LASTING IMPACT</h5>
               <h3 className={classes.cardTitleWhite}>
-                <small>$</small>10,000- 18,000
+                <span className={classes.dollar}>10,000 – 18,000</span>
               </h3>
               <ul>
                 <li>
@@ -143,8 +143,8 @@ export default function SectionPricing() {
                   <b>✓</b>  Custom data analysis or <p>synthesis</p>
                 </li>
               </ul>
-              <Button href="#pablo" color="white" round>
-                Get started
+              <Button href="#pablo" color="white" round className={classes.whiteButtonCust}>
+                Build It!
               </Button>
             </CardBody>
           </Card>
@@ -203,7 +203,7 @@ export default function SectionPricing() {
                 </li>
               </ul>
               <Button href="#pablo" color="primary" round>
-                Get started
+                Build It!
               </Button>
             </CardBody>
           </Card>
