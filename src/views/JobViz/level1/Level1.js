@@ -43,6 +43,7 @@ import JobVizHeader from "../modules/JobVizComponents";
 // import { Link } from "react-router-dom";
 
 import JobManager from "../modules/JobManager";
+//custom JobViz Styling
 import "../styling/Style.css";
 import { ModalTable } from "../modalTable/ModalTable";
 import { compare, addIdPathway } from "../Helper";

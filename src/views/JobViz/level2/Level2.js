@@ -58,6 +58,7 @@ Transition.displayName = "Transition";
 import { Link } from "react-router-dom";
 
 import JobManager from "../modules/JobManager";
+//Custom Jobviz Styling
 import "../styling/Style.css";
 import { makeUrlPath, compare, addIdPathway } from "../Helper";
 import { LrAutoSearchV2 } from "../search/LRautoSearchV2";

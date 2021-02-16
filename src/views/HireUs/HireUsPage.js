@@ -19,11 +19,14 @@ import Footer from "components/Footer/Footer.js";
 import SectionPricing from "views/HireUs/Sections/SectionPricing.js";
 import SectionFeatures from "views/HireUs/Sections/SectionFeatures.js";
 
-import pricingStyle from "assets/jss/material-kit-pro-react/views/pricingStyle.js";
 import ComputerIcon from "@material-ui/icons/Computer";
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 
-const useStyles = makeStyles(pricingStyle);
+//styles broad material UI components
+import hireUsStyle from "../../assets/jss/material-kit-pro-react/views/hireUsStyle";
+
+
+const useStyles = makeStyles(hireUsStyle);
 
 export default function PricingPage() {
   React.useEffect(() => {
@@ -60,7 +63,7 @@ export default function PricingPage() {
               )}
               // style={{ paddingTop: "3%"}}
             >
-              <h1 className={classes.title}>Achieving Real, Lasting Impact</h1>
+              <h1 className={classNames(classes.title, "hireUsTitle")}>Achieving Real, Lasting Impact</h1>
               <h4
                 className={classes.title}
                 style={{ letterSpacing: "1.5px", fontWeight: 500 }}
