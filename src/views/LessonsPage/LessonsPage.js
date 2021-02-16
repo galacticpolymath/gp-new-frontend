@@ -1,5 +1,5 @@
 /*eslint-disable*/
-import React from "react";
+import React, {useEffect, useState} from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -13,17 +13,28 @@ import GridItem from "components/Grid/GridItem.js";
 import Parallax from "components/Parallax/Parallax.js";
 // sections for this page
 import SectionPills from "./Sections/SectionPills.js";
+import LessonCards from "./Sections/LessonCards.js";
+
+import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
+import { fetchAll } from "views/LessonPlanDetailPage/modules/lessonsApi.js";
 
 import blogPostsPageStyle from "assets/jss/material-kit-pro-react/views/blogPostsPageStyle.js";
-import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
-
 const useStyles = makeStyles(blogPostsPageStyle);
 
 export default function LessonsPage() {
-  React.useEffect(() => {
+  useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
   });
+
+  const [lessons, setLessons] = useState([])
+
+  useEffect(() => {
+    fetchAll().then((data) => {
+      setLessons(data);
+    });
+  }, [])
+
   const classes = useStyles();
   return (
     <div>
@@ -87,6 +98,7 @@ export default function LessonsPage() {
       <div className={classes.main}>
         <div className={classes.container}>
           <SectionPills />
+          {lessons && <LessonCards lessons={lessons} />}
         </div>
       </div>
       <Footer content={<GPcopyrightFooter/>} />
