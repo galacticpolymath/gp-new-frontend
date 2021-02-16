@@ -4,11 +4,7 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-// core components
+
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Footer from "components/Footer/Footer.js";
@@ -21,10 +17,10 @@ import SectionInterested from "./Sections/SectionInterested.js";
 import SectionImage from "./Sections/SectionImage.js";
 import SubscribeLine from "./Sections/SubscribeLine.js";
 
-import blogPostsPageStyle from "assets/jss/material-kit-pro-react/views/blogPostsPageStyle.js";
+import lessonsPageStyle from "assets/jss/material-kit-pro-react/views/lessonsPageStyle.js";
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 
-const useStyles = makeStyles(blogPostsPageStyle);
+const useStyles = makeStyles(lessonsPageStyle);
 
 export default function LessonsPage() {
   React.useEffect(() => {
@@ -51,7 +47,7 @@ export default function LessonsPage() {
           >
             <GridItem
               xs={12}
-              sm={6}
+              sm={12}
               md={6}
               className={classNames(
                 classes.mlAuto,
@@ -72,7 +68,7 @@ export default function LessonsPage() {
             </GridItem>
             <GridItem
               xs={12}
-              sm={6}
+              sm={12}
               md={6}
               className={classNames(
                 classes.hideLogo,

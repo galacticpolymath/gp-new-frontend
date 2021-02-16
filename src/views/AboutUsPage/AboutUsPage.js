@@ -4,11 +4,7 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-// @material-ui/icons
-import ComputerIcon from "@material-ui/icons/Computer";
-// core components
+
 import Header from "components/Header/Header.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -19,7 +15,6 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 import SectionDescription from "views/AboutUsPage/Sections/SectionDescription.js";
 import SectionTeam from "views/AboutUsPage/Sections/SectionTeam.js";
 import SectionServices from "views/AboutUsPage/Sections/SectionServices.js";
-import SectionOffice from "views/AboutUsPage/Sections/SectionOffice.js";
 import SectionContact from "views/AboutUsPage/Sections/SectionContact.js";
 
 import aboutUsStyle from "assets/jss/material-kit-pro-react/views/aboutUsStyle.js";
@@ -51,7 +46,7 @@ export default function AboutUsPage(...rest) {
               style={{placeItems: "center"}}>
             <GridItem
               xs={12}
-              sm={6}
+              sm={12}
               md={6}
               className={classNames(
                 classes.mlAuto,
@@ -73,7 +68,7 @@ export default function AboutUsPage(...rest) {
             </GridItem>
             <GridItem
               xs={12}
-              sm={6}
+              sm={12}
               md={6}
               className={classNames(
                 classes.hideLogo,
@@ -86,6 +81,7 @@ export default function AboutUsPage(...rest) {
                 src={require("assets/img/hero-images/AboutPage_Bubbles.png")}
                 height="auto"
                 width="120%"
+                alt={"vertical lines with multicolored points threaded"}
               />
             </GridItem>
           </GridContainer>

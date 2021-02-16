@@ -2,29 +2,28 @@ import {
   container,
   title,
   main,
-  mainRaised,
   whiteColor,
-  mrAuto,
+  mainRaised,
   mlAuto,
 } from "assets/jss/material-kit-pro-react.js";
 
-const aboutUsStyle = {
-  main,
-  mainRaised,
+const lessonsPageStyle = {
   container: {
     ...container,
-    zIndex: 1,
-  },
-  title: {
-    ...title,
-    "&, & + h4": {
-      color: whiteColor,
-    },
-    mrAuto,
-    mlAuto,
+    zIndex: "2",
+    position: "relative",
   },
   textCenter: {
     textAlign: "center",
+  },
+  title: {
+    ...title,
+    color: whiteColor,
+  },
+  mlAuto,
+  main: {
+    ...main,
+    ...mainRaised,
   },
   block: {
     color: "inherit",
@@ -63,17 +62,21 @@ const aboutUsStyle = {
     position: "relative",
   },
   bgColor: {
-    backgroundColor: "#2c83c3",
+    backgroundColor: "#6812D1",
   },
 
 
-  "@media only screen and (max-width: 992px)": {
+  "@media only screen and (max-width: 960px)": {
     /* phones */
+
     hideLogo: {
       display: "none",
       maxWidth: "100%",
+      // "&.hireUsTitle": {
+      //   fontSize: "2.6rem",
+      // },
     },
   },
 };
 
-export default aboutUsStyle;
+export default lessonsPageStyle;
