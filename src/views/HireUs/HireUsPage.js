@@ -96,9 +96,12 @@ export default function PricingPage() {
         <div className={classes.container}>
           <SectionPricing />
           <hr />
-          <h2>Order <i>a la carte</i>. Do you just need a fantastic infographic, video, or data visual? We're your
-            one-stop shop for scicomm, education, and outreach! Even if your exact need isn't listed, we can likely make
-            it happen. <a>Start the conversation!</a></h2>
+          <h2>Order <em>a la carte</em>. Do you just need a fantastic infographic, video, or data visual? We're your
+            one-stop shop for scicomm, education, and outreach!
+          </h2>
+          <h2>Even if your exact need isn't listed, we can likely make
+            it happen. <a>Start the conversation!</a>
+          </h2>
           <hr />
           <SectionAddOns />
           <SectionFeatures />

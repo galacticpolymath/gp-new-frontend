@@ -37,8 +37,8 @@ export default function SectionAddOns() {
                   <b><h3><span className={classes.dollar}>500 – 750</span></h3> Simple data interactive</b>
                 </li>
                 <li>
-                  <b><h3><span className={classes.dollar}>650</span>
-                    <small>/finished min</small></h3> Simple video project (e.g. simple video assembly, with voiceover)</b>
+                  <b><h3><span className={classes.dollar}>650 </span>
+                    <small>per&nbsp;finished&nbsp;min</small></h3> Simple video project (e.g. simple video assembly, with voiceover)</b>
                 </li>
                 <li>
                   <b><h3><span className={classes.dollar}>100 – 500</span></h3> Basic infographic or data visual</b>
@@ -64,7 +64,8 @@ export default function SectionAddOns() {
                   <h3 className={classes.cardTitleWhite}><span className={classes.dollar}>1000 – 3000</span></h3> Complex data interactive or web app
                 </li>
                 <li>
-                  <h3 className={classes.cardTitleWhite}><span className={classes.dollar}>1000 – 2000<small>/ finished min</small></span></h3> Complex video project
+                  <h3 className={classes.cardTitleWhite}><span className={classes.dollar}>1000 – 2000
+                    <small> per&nbsp;finished&nbsp;min</small></span></h3> Complex video project
                   (new footage, animations, scripting, narration or complex assembly)
                 </li>
                 <li>
