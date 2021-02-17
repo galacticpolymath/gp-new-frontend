@@ -11,11 +11,12 @@ import {
 
 const featureDetailsStyle = {
   featureDeets:{
-
+  paddingBottom:"4rem",
   },
   keyPhrase1:{
     color: primaryColor[0],
     fontWeight: 700,
+    fontSize: "1.2em",
   },
   keyPhrase2:{
     color: primaryColor[0],

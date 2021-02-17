@@ -36,16 +36,14 @@ export default function FeatureDetails(props) {
   //     break;
   // }
   return (
-     <div className={classes.featureDeets}>
-      <h3>
+      <h3 className={classes.featureDeets}>
         <span>
         <b className={classes.keyPhrase1}>{keyPhrase1}&nbsp;</b>
         <span className={classes.keyPhrase2}>{keyPhrase2}&nbsp;</span>
         <span className={classes.description}>{description}</span>
         </span>
       </h3>
-    </div>
-  );
+      );
 }
 
 // FeatureDetails.defaultProps = {
