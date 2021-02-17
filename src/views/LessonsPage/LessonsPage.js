@@ -56,7 +56,7 @@ export default function LessonsPage() {
               )}
               style={{ paddingTop: "3%", paddingRight: "25px" }}
             >
-              <h1 className={classes.title}>Galactic Lessons</h1>
+              <h1 className={classes.title}>Interdisciplinary Lessons</h1>
               <h4
                 className={classes.title}
                 style={{ letterSpacing: "1.5px", fontWeight: 500 }}

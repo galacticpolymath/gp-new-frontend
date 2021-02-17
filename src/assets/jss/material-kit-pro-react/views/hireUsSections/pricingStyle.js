@@ -23,6 +23,7 @@ const pricingStyle = {
   textCenter: {
     textAlign: "center"
   },
+
   pricingSection: {
     padding: "80px 0px"
   },
@@ -60,6 +61,30 @@ const pricingStyle = {
       color: warningColor[0],
     },
   },
+  valueProps:{
+    paddingTop:"10rem",
+    "& h2":{
+      textAlign: "center",
+    },
+  },
+  valuePropsGridContainer:{
+    gridTemplateColumns: "auto",
+  },
+
+  custInfoArea:{
+    padding:"0",
+    // margin: "2rem 5rem",
+    maxWidth: "45%",
+  },
+  // keep infoAreas wider on smaller devices
+  "@media only screen and (max-width: 1000px)":{
+    custInfoArea:{
+      padding:"0",
+      // margin: "2rem 5rem",
+      maxWidth: "80%",
+    },
+  }
+
 };
 
 export default pricingStyle;

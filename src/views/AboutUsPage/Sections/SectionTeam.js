@@ -50,7 +50,7 @@ export default function SectionTeam() {
             </CardAvatar>
             <CardBody plain>
               <h4 className={classes.cardTitle}>Matt Wilkins, PhD</h4>
-              <h6 className={classes.textMuted}>CEO / Founder</h6>
+              <h6 className={classes.textMuted}>CEO, Founder</h6>
               <p className={classes.cardDescription}>
                 And I love you like Kanye loves Kanye. We need to restart the
                 human foundation.
@@ -64,7 +64,7 @@ export default function SectionTeam() {
                 simple
                 style={{ color: grey[900] }}
               >
-                <i className="fas fa-globe"></i>
+                <i className="fas fa-globe"> </i>
               </Button>
               <Button
                 href="https://www.linkedin.com/in/mattwilkinsphd/"
@@ -171,7 +171,7 @@ export default function SectionTeam() {
                 simple
                 style={{ color: grey[900] }}
               >
-                <i className="fas fa-globe"></i>
+                <i className="fas fa-globe"> </i>
               </Button>
               <Button
                 href="https://www.linkedin.com/in/tylerlemburg/"
