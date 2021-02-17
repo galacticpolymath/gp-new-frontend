@@ -7,6 +7,7 @@ import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import Button from "components/CustomButtons/Button.js";
+import PricingInfoModal from "views/PricingPage/Sections/PricingInfoModal";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -19,19 +20,27 @@ export default function SectionPricing() {
   return (
     <div className={classes.pricingSection}>
       <h4>
-        By working with our team, we can translate your area of focus into open-access
-        lessons that inspire and engage students, while also making it easy for teachers to connect
-        abstract learning standards to real world problems involving diverse STEM professionals. Forget
-        the textbook lessons you were taught in school. Each of our lessons is carefully crafted over
-        weeks, imbued with creativity, artistry, authentic data, and storytelling. Let us do the heavy lifting
-        to achieve your outreach goals. <em>Together we can democratize current knowledge for all,</em> and forever change the education status quo!
-        </h4>
+        By working with our team, we can translate your area of focus
+        into open-access lessons that inspire and engage students, while
+        also making it easy for teachers to connect abstract learning
+        standards to real world problems involving diverse STEM
+        professionals. Forget the textbook lessons you were taught in
+        school. Each of our lessons is carefully crafted over weeks,
+        imbued with creativity, artistry, authentic data, and
+        storytelling. Let us do the heavy lifting to achieve your
+        outreach goals.{" "}
+        <em>Together we can democratize current knowledge for all,</em>{" "}
+        and forever change the education status quo!
+      </h4>
       <GridContainer>
         <GridItem md={4} sm={4}>
           <Card plain pricing>
             <CardBody pricing>
               <h5
-                className={classNames(classes.cardCategory, classes.textInfo)}
+                className={classNames(
+                  classes.cardCategory,
+                  classes.textInfo
+                )}
               >
                 BASIC TRANSLATION
               </h5>
@@ -41,13 +50,24 @@ export default function SectionPricing() {
               </h3>
               <ul>
                 <li>
-                  <b>1</b> Lesson
+                  <b>1</b>
+                  {` Lesson `}
+                  <span>
+                    <img
+                      width="15px"
+                      src="https://cdn.nearpod.com/1610745992723/page/pricing/img/question.svg"
+                      id="goldMobile"
+                      alt="icon"
+                      class="icon"
+                    ></img>
+                  </span>
                 </li>
                 <li>
                   <b>1-3</b> Custom Media Assets
                 </li>
                 <li>
-                  <b>up to 3</b> Rounds of Revision <p>During Phase I</p>
+                  <b>up to 3</b> Rounds of Revision{" "}
+                  <p>During Phase I</p>
                 </li>
                 <li>
                   <b>X</b> Lesson Support
@@ -65,7 +85,8 @@ export default function SectionPricing() {
                   <b>✓</b> Creative, story-based <p>lesson design</p>
                 </li>
                 <li>
-                  <b>✓</b> Alignment to US National <p>standards in all subjects</p>
+                  <b>✓</b> Alignment to US National{" "}
+                  <p>standards in all subjects</p>
                 </li>
                 <li>
                   <b>X</b> Custom standards <p>alignment</p>
@@ -77,7 +98,7 @@ export default function SectionPricing() {
                   <b>✓</b> GP Sensible Lesson Plan
                 </li>
                 <li>
-                  <b>X</b>  Custom data analysis or <p>synthesis</p>
+                  <b>X</b> Custom data analysis or <p>synthesis</p>
                 </li>
               </ul>
               <Button href="#pablo" color="primary" round>
@@ -101,7 +122,8 @@ export default function SectionPricing() {
                   <b>6-10</b> Custom Media Assets
                 </li>
                 <li>
-                  <b>up to 10</b> Rounds of Revision <p>During Phase I</p>
+                  <b>up to 10</b> Rounds of Revision{" "}
+                  <p>During Phase I</p>
                 </li>
                 <li>
                   <b>3 Years</b> Lesson Support
@@ -119,7 +141,8 @@ export default function SectionPricing() {
                   <b>✓</b> Creative, story-based <p>lesson design</p>
                 </li>
                 <li>
-                  <b>✓</b> Alignment to US National <p>standards in all subjects</p>
+                  <b>✓</b> Alignment to US National{" "}
+                  <p>standards in all subjects</p>
                 </li>
                 <li>
                   <b>✓</b> Custom standards <p>alignment</p>
@@ -131,7 +154,7 @@ export default function SectionPricing() {
                   <b>✓</b> GP Sensible Lesson Plan
                 </li>
                 <li>
-                  <b>✓</b>  Custom data analysis or <p>synthesis</p>
+                  <b>✓</b> Custom data analysis or <p>synthesis</p>
                 </li>
               </ul>
               <Button href="#pablo" color="white" round>
@@ -144,13 +167,14 @@ export default function SectionPricing() {
           <Card plain pricing>
             <CardBody pricing>
               <h5
-                className={classNames(classes.cardCategory, classes.textInfo)}
+                className={classNames(
+                  classes.cardCategory,
+                  classes.textInfo
+                )}
               >
                 WORLD CHANGER
               </h5>
-              <h3 className={classes.cardTitle}>
-                Let{"’"}s Talk
-              </h3>
+              <h3 className={classes.cardTitle}>Let{"’"}s Talk</h3>
               <ul>
                 <li>
                   <b>All Lessons Needed</b>
@@ -160,7 +184,8 @@ export default function SectionPricing() {
                 </li>
                 <li>
                   {/* find cleaner fix for multiple line breaks */}
-                  <b>Unlimited </b>Rounds of Revision during Phase I<p></p>
+                  <b>Unlimited </b>Rounds of Revision during Phase I
+                  <p></p>
                 </li>
                 <li>
                   <b>Lifetime</b> Lesson Support
@@ -178,7 +203,8 @@ export default function SectionPricing() {
                   <b>✓</b> Creative, story-based <p>lesson design</p>
                 </li>
                 <li>
-                  <b>✓</b> Alignment to US National <p>standards in all subjects</p>
+                  <b>✓</b> Alignment to US National{" "}
+                  <p>standards in all subjects</p>
                 </li>
                 <li>
                   <b>✓</b> Custom standards <p>alignment</p>
@@ -190,7 +216,7 @@ export default function SectionPricing() {
                   <b>✓</b> GP Sensible Lesson Plan
                 </li>
                 <li>
-                  <b>✓</b>  Custom data analysis or <p>synthesis</p>
+                  <b>✓</b> Custom data analysis or <p>synthesis</p>
                 </li>
               </ul>
               <Button href="#pablo" color="primary" round>

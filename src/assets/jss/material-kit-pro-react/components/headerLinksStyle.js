@@ -58,6 +58,7 @@ const headerLinksStyle = theme => ({
     padding: "0 !important"
   },
   navLink: {
+    whiteSpace: "nowrap",
     color: "inherit",
     position: "relative",
     padding: "0.9375rem",

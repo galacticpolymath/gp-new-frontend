@@ -345,7 +345,7 @@ const defaultBoxShadow = {
 };
 
 const title = {
-  color: grayColor[1],
+  color: blackColor, /*grayColor[1],*/
   textDecoration: "none",
   fontWeight: "700",
   marginTop: "30px",
@@ -420,7 +420,7 @@ const sectionDescription = {
 };
 
 const description = {
-  color: grayColor[0],
+  color: blackColor,/*grayColor[0],*/
   fontFamily: '"Cormorant Garamond", "Times New Roman", serif'
 };
 

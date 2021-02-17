@@ -1,6 +1,5 @@
 /*eslint-disable*/ import React from "react";
 // nodejs library to set properties for components
-import PropTypes from "prop-types";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
@@ -35,7 +34,7 @@ export default function BlogPostPage() {
   return (
     <div>
       <Header
-        brand="Material Kit PRO React"
+        brand="Galactic Polymath"
         links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
         color="transparent"

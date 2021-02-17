@@ -6,14 +6,24 @@ import {
   infoColor,
   roseColor,
   grayColor,
-  title
+  // title
 } from "assets/jss/material-kit-pro-react.js";
 
-const infoStyle = {
-  infoArea: {
-    maxWidth: "360px",
-    margin: "0 auto",
-    padding: "70px 0 30px"
+const featureDetailsStyle = {
+  featureDeets:{
+  paddingBottom:"4rem",
+  },
+  keyPhrase1:{
+    color: primaryColor[0],
+    fontWeight: 700,
+    fontSize: "1.2em",
+  },
+  keyPhrase2:{
+    color: primaryColor[0],
+    fontWeight: 400,
+  },
+  description:{
+
   },
   iconWrapper: {
     float: "left",
@@ -46,24 +56,24 @@ const infoStyle = {
     height: "2.25rem",
     fontSize: "2.25rem"
   },
-  descriptionWrapper: {
-    color: grayColor[3],
-    overflow: "hidden"
-  },
-  title: {
-    ...title,
-    margin: "1.75rem 0 0.875rem !important",
-    minHeight: "unset"
-  },
-  description: {
-    color: grayColor[3],
-    overflow: "hidden",
-    marginTop: "0px",
-    "& p": {
-      color: grayColor[0],
-      fontSize: "14px"
-    }
-  },
+  // descriptionWrapper: {
+  //   color: grayColor[3],
+  //   overflow: "hidden"
+  // },
+  // title: {
+  //   ...title,
+  //   margin: "1.75rem 0 0.875rem !important",
+  //   minHeight: "unset"
+  // },
+  // description: {
+  //   color: grayColor[3],
+  //   overflow: "hidden",
+  //   marginTop: "0px",
+  //   "& p": {
+  //     color: grayColor[0],
+  //     fontSize: "14px"
+  //   }
+  // },
   iconWrapperVertical: {
     float: "none"
   },
@@ -73,4 +83,4 @@ const infoStyle = {
   }
 };
 
-export default infoStyle;
+export default featureDetailsStyle;

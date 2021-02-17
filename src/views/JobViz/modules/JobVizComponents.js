@@ -1,9 +1,10 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import aboutUsStyle from "../../../assets/jss/material-kit-pro-react/views/aboutUsStyle";
+import JobVizStyle from "../../../assets/jss/material-kit-pro-react/views/JobVizStyle.js";
+
 
 export default function JobVizHeader() {
-  const useStyles = makeStyles(aboutUsStyle);
+  const useStyles = makeStyles(JobVizStyle);
   const classes = useStyles();
   return (
     <>

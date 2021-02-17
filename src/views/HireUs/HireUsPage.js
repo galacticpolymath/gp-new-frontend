@@ -4,11 +4,6 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-// @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
-// core components
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
@@ -17,13 +12,16 @@ import GridItem from "components/Grid/GridItem.js";
 import Footer from "components/Footer/Footer.js";
 // sections for this page
 import SectionPricing from "views/HireUs/Sections/SectionPricing.js";
+import SectionAddOns from "views/HireUs/Sections/SectionAddOns.js";
 import SectionFeatures from "views/HireUs/Sections/SectionFeatures.js";
-
-import pricingStyle from "assets/jss/material-kit-pro-react/views/pricingStyle.js";
-import ComputerIcon from "@material-ui/icons/Computer";
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 
-const useStyles = makeStyles(pricingStyle);
+//styles broad material UI components
+import hireUsStyle from "../../assets/jss/material-kit-pro-react/views/hireUsStyle";
+import { makeCloudinaryUrl } from "../../components/shared/constants";
+
+
+const useStyles = makeStyles(hireUsStyle);
 
 export default function PricingPage() {
   React.useEffect(() => {
@@ -34,25 +32,26 @@ export default function PricingPage() {
   return (
     <div>
       <Header
-        brand="Material Kit PRO React"
+        brand="Galactic Polymath"
         links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
         color="transparent"
         changeColorOnScroll={{
           height: 50,
-          color: "dark",
+          color: "dark"
         }}
       />
 
       <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
           <GridContainer
-          style={{placeItems: "center"}}
+            style={{ placeItems: "center" }}
           >
             <GridItem
               xs={12}
-              sm={6}
+              sm={12}
               md={6}
+              lg={6}
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,
@@ -60,9 +59,9 @@ export default function PricingPage() {
               )}
               // style={{ paddingTop: "3%"}}
             >
-              <h1 className={classes.title}>Achieving Real, Lasting Impact</h1>
+              <h1 className={classNames(classes.whiteTitle, "hireUsTitle")}>Achieving Real, Lasting Impact</h1>
               <h4
-                className={classes.title}
+                className={classes.whiteTitle}
                 style={{ letterSpacing: "1.5px", fontWeight: 500 }}
               >
                 Whether you are an NSF-funded researcher, a nonprofit, or a
@@ -72,18 +71,23 @@ export default function PricingPage() {
             </GridItem>
             <GridItem
               xs={12}
-              sm={6}
+              sm={12}
               md={6}
+              lg={6}
               className={classNames(
                 classes.hideLogo,
                 classes.mlAuto,
                 classes.mrAuto
               )}
-              style={{ height: "130%", width: "100%"}}
+
             >
               <img
-                src={require("assets/img/hero-images/PricingPage-dot-pattern-01.svg")}
+                src={require("assets/img/hero-images/HireUs_hero.png")}
                 alt={"geometric background pattern"}
+                height="auto"
+                width="120%"
+                style={{ float: "left" }}
+
               />
             </GridItem>
           </GridContainer>
@@ -93,6 +97,31 @@ export default function PricingPage() {
         <div className={classes.container}>
           <SectionPricing />
           <hr />
+          <h2>Order <em>a la carte</em>. Do you just need a fantastic infographic, video, or data visual? We're your
+            one-stop shop for scicomm, education, and outreach!
+          </h2>
+          <h2>Even if your exact need isn't listed, we can likely make
+            it happen. <a>Start the conversation!</a>
+          </h2>
+          <hr />
+          <SectionAddOns />
+          {/*GP Logo*/}
+          <div className={classes.container}>
+          <img
+            src={makeCloudinaryUrl("v1593304396/logos/GP_logo_grad_transBG_300_tbn4ei.png")}
+            className={classNames(classes.mlAuto,classes.mrAuto,)}
+            style={{
+              // width:"10"
+              maxWidth: "10%", justifySelf:"center"}}
+            alt={"The Galactic Polymath logo. A starburst of lines and dots, in blue, purple and pink."}
+          />
+          <h2 className={classes.title}>
+            The Galactic Polymath Way
+          </h2>
+            <h2 className={classes.subtitle}>
+            (A New Model for Education)
+            </h2>
+          </div>
           <SectionFeatures />
         </div>
       </div>
@@ -135,7 +164,7 @@ export default function PricingPage() {
             {/*    </ListItem>*/}
             {/*  </List>*/}
             {/*</div>*/}
-            <GPcopyrightFooter/>
+            <GPcopyrightFooter />
           </div>
         }
       />

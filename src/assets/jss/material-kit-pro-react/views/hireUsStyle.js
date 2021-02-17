@@ -3,30 +3,41 @@ import {
   title,
   main,
   mainRaised,
+  grayColor,
   whiteColor,
   mrAuto,
   mlAuto,
 } from "assets/jss/material-kit-pro-react.js";
 
-const aboutUsStyle = {
+const hireUsStyle = {
   main,
   mainRaised,
+  mrAuto,
+  mlAuto,
   container: {
     ...container,
     zIndex: 1,
+    display: "grid",
+    placeItems: "center",
+    paddingTop:"4rem",
   },
   title: {
+    ...title,
+
+  },
+  whiteTitle:{
     ...title,
     "&, & + h4": {
       color: whiteColor,
     },
-    mrAuto,
-    mlAuto,
+  },
+  subtitle:{
+    marginTop:"-1.5rem",
+    color: grayColor[3],
   },
   textCenter: {
     textAlign: "center",
   },
-
   block: {
     color: "inherit",
     padding: "0.9375rem",
@@ -64,20 +75,43 @@ const aboutUsStyle = {
     position: "relative",
   },
   bgColor: {
-    backgroundColor: "#2c83c3",
+    backgroundColor: "#6C2D82",
   },
-  missionContainer: {
-    display: "flexContainer",
+  // "@media (max-width: 991px)": {
+  //   hideLogo: {
+  //     display: "none",
+  //   },
+  // },
+  "@media only screen and (max-width: 1280px)": {
+    title: {
+
+      "&.hireUsTitle": {
+        fontSize: "3rem",
+      },
+    },
+
+  },
+   "@media only screen and (max-width: 1000px)": {
+    title: {
+
+      "&.hireUsTitle": {
+        fontSize: "2.4rem",
+      },
+    },
+
   },
 
-
-  "@media only screen and (max-width: 992px)": {
+  "@media only screen and (max-width: 960px)": {
     /* phones */
+
     hideLogo: {
       display: "none",
       maxWidth: "100%",
+      // "&.hireUsTitle": {
+      //   fontSize: "2.6rem",
+      // },
     },
   },
 };
 
-export default aboutUsStyle;
+export default hireUsStyle;

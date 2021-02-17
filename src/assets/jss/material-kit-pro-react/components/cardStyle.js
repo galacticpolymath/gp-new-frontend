@@ -99,7 +99,7 @@ const cardStyle = {
       margin: "10px auto"
     },
     "& ul li": {
-      color: grayColor[0],
+      color: blackColor,/*grayColor[4],*/
       textAlign: "center",
       padding: "12px 0px",
       borderBottom: "1px solid rgba(" + hexToRgb(grayColor[0]) + ",0.3)"
