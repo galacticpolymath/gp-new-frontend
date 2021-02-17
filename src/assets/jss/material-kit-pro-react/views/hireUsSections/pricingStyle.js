@@ -5,7 +5,9 @@ import {
   whiteColor,
   infoColor,
   warningColor,
-  hexToRgb,  blackColor
+  hexToRgb,  blackColor,
+  description,
+  primaryColor,
 } from "assets/jss/material-kit-pro-react.js";
 
 const pricingStyle = {
@@ -21,22 +23,18 @@ const pricingStyle = {
     }
   },
   textCenter: {
-    textAlign: "center"
+    textAlign: "center",
   },
-
+  textLeft: {
+    textAlign: "left !important",
+  },
   pricingSection: {
     padding: "80px 0px"
   },
   textInfo: {
     color: infoColor[0] + " !important",
   },
-  leadIn:{
-    padding: "1% 10%",
 
-    "& h4": {
-      paddingBottom: "1.5rem",
-    }
-  },
   //new class style that makes an elevated, small $ before the number
   dollar:{
     "&:before":{
@@ -67,8 +65,21 @@ const pricingStyle = {
       textAlign: "center",
     },
   },
-  valuePropsGridContainer:{
-    gridTemplateColumns: "auto",
+  appeal:{
+    padding: "5rem 10% 0 10%",
+
+  },
+  boxContainer: {
+    backgroundColor:primaryColor[5],
+    padding: "20px 20px 20px 40px",
+    border: "3px solid" + primaryColor[7],
+
+    "& h2": {
+      ...description,
+
+      fontWeight: "600",
+      color: primaryColor[0],
+    },
   },
 
   custInfoArea:{

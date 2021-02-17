@@ -44,7 +44,7 @@ export default function SectionPricing() {
           <GridItem>
             <InfoArea className={classes.custInfoArea}
                       title={"Level Up Learning"}
-                      description={"Our lessons improve learning and retention by imbuing rigorous, interdisciplinary lessons" +
+                      description={"Our lessons improve learning and retention by imbuing rigorous, interdisciplinary lessons " +
                       "with artistry, authentic data, and storytelling."}
                       icon={PlusOne}
                       iconColor={"rose"}
@@ -70,30 +70,22 @@ export default function SectionPricing() {
                       iconColor={"rose"}
             />
           </GridItem>
+          <GridItem className={classes.appeal}>
+            <div className={classes.boxContainer}>
+            <h2
+              style = {{textAlign: "left"}}>{/*could not get this style to work in pricingStyle*/}
+              Contracting us means having a fully-dedicated team of scientists, educators, and
+              creatives working to achieve your outreach dreams!
+            </h2>
+            </div>
 
+          </GridItem>
 
 
       </GridContainer>
       </div>
   <div className={classes.pricingSection}>
-      <div className={classNames(classes.leadIn)}>
 
-        <h4>
-        By working with our team, we can translate your area of focus into open-access
-        lessons that inspire and engage students.
-       </h4>
-      <h4>
-        Forget the textbook lessons you were taught in school. Each of our lessons is carefully crafted over
-        weeks, imbued with creativity, artistry, authentic data, and storytelling.
-        </h4>
-      <h4>
-        Let us do the heavy lifting
-        to achieve your outreach goals.
-      </h4>
-      <h4>
-        <em>Together we can democratize current knowledge for all, and forever change the education status quo!</em>
-        </h4>
-      </div>
       <GridContainer>
         <GridItem md={4} sm={4}>
           <Card plain pricing>
