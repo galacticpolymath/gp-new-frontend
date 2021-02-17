@@ -37,7 +37,7 @@ export default function LandingPage({ ...rest }) {
     <div style={{ backgroundColor: "#470F2C" }}>
       <Header
         color="transparent"
-        brand="Material Kit PRO React"
+        brand="Galactic Polymath"
         links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
         changeColorOnScroll={{

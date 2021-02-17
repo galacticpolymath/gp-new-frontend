@@ -61,7 +61,7 @@ export default function ProfilePage({ ...rest }) {
     <div>
       <Header
         color="transparent"
-        brand="Material Kit PRO React"
+        brand="Galactic Polymath"
         links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
         changeColorOnScroll={{

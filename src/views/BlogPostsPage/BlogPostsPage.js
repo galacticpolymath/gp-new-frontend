@@ -34,7 +34,7 @@ export default function BlogPostsPage() {
   return (
     <div>
       <Header
-        brand="Material Kit PRO React"
+        brand="Galactic Polymath"
         links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
         color="transparent"

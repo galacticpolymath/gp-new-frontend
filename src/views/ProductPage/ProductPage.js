@@ -71,7 +71,7 @@ export default function ProductPage() {
   return (
     <div className={classes.productPage}>
       <Header
-        brand="Material Kit PRO React"
+        brand="Galactic Polymath"
         links={<HeaderLinks dropdownHoverColor="rose" />}
         fixed
         color="transparent"
