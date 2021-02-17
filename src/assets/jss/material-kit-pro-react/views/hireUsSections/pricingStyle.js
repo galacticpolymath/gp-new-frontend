@@ -6,7 +6,7 @@ import {
   infoColor,
   warningColor,
   hexToRgb,  blackColor,
-  description,
+
   primaryColor,
 } from "assets/jss/material-kit-pro-react.js";
 
@@ -73,11 +73,10 @@ const pricingStyle = {
     backgroundColor:primaryColor[5],
     padding: "20px 20px 20px 40px",
     border: "3px solid" + primaryColor[7],
-
     "& h2": {
-      ...description,
+      // ...description,
 
-      fontWeight: "600",
+      // fontWeight: "600",
       color: primaryColor[0],
     },
   },

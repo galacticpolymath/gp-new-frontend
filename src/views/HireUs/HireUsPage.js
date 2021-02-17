@@ -18,6 +18,7 @@ import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 
 //styles broad material UI components
 import hireUsStyle from "../../assets/jss/material-kit-pro-react/views/hireUsStyle";
+import { makeCloudinaryUrl } from "../../components/shared/constants";
 
 
 const useStyles = makeStyles(hireUsStyle);
@@ -58,9 +59,9 @@ export default function PricingPage() {
               )}
               // style={{ paddingTop: "3%"}}
             >
-              <h1 className={classNames(classes.title, "hireUsTitle")}>Achieving Real, Lasting Impact</h1>
+              <h1 className={classNames(classes.whiteTitle, "hireUsTitle")}>Achieving Real, Lasting Impact</h1>
               <h4
-                className={classes.title}
+                className={classes.whiteTitle}
                 style={{ letterSpacing: "1.5px", fontWeight: 500 }}
               >
                 Whether you are an NSF-funded researcher, a nonprofit, or a
@@ -104,6 +105,23 @@ export default function PricingPage() {
           </h2>
           <hr />
           <SectionAddOns />
+          {/*GP Logo*/}
+          <div className={classes.container}>
+          <img
+            src={makeCloudinaryUrl("v1593304396/logos/GP_logo_grad_transBG_300_tbn4ei.png")}
+            className={classNames(classes.mlAuto,classes.mrAuto,)}
+            style={{
+              // width:"10"
+              maxWidth: "10%", justifySelf:"center"}}
+            alt={"The Galactic Polymath logo. A starburst of lines and dots, in blue, purple and pink."}
+          />
+          <h2 className={classes.title}>
+            The Galactic Polymath Way
+          </h2>
+            <h2 className={classes.subtitle}>
+            (A New Model for Education)
+            </h2>
+          </div>
           <SectionFeatures />
         </div>
       </div>

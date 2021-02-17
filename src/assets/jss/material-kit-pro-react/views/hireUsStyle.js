@@ -3,6 +3,7 @@ import {
   title,
   main,
   mainRaised,
+  grayColor,
   whiteColor,
   mrAuto,
   mlAuto,
@@ -16,12 +17,23 @@ const hireUsStyle = {
   container: {
     ...container,
     zIndex: 1,
+    display: "grid",
+    placeItems: "center",
+    paddingTop:"4rem",
   },
   title: {
     ...title,
-    // "&, & + h4": {
+
+  },
+  whiteTitle:{
+    ...title,
+    "&, & + h4": {
       color: whiteColor,
-    // },
+    },
+  },
+  subtitle:{
+    marginTop:"-1.5rem",
+    color: grayColor[3],
   },
   textCenter: {
     textAlign: "center",
