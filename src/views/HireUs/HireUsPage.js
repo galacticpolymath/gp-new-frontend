@@ -77,7 +77,7 @@ export default function PricingPage() {
                 classes.mlAuto,
                 classes.mrAuto
               )}
-              style={{ }}
+
             >
               <img
                 src={require("assets/img/hero-images/HireUs_hero.png")}

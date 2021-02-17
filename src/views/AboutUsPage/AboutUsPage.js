@@ -17,6 +17,7 @@ import SectionTeam from "views/AboutUsPage/Sections/SectionTeam.js";
 import SectionServices from "views/AboutUsPage/Sections/SectionServices.js";
 import SectionContact from "views/AboutUsPage/Sections/SectionContact.js";
 
+// styling
 import aboutUsStyle from "assets/jss/material-kit-pro-react/views/aboutUsStyle.js";
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 
@@ -81,7 +82,7 @@ export default function AboutUsPage(...rest) {
                 src={require("assets/img/hero-images/AboutPage_Bubbles.png")}
                 height="auto"
                 width="120%"
-                alt={"vertical lines with multicolored points threaded"}
+                alt={"vertical lines with multicolored points threaded on them in a wavy pattern"}
               />
             </GridItem>
           </GridContainer>

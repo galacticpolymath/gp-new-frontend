@@ -420,7 +420,7 @@ const sectionDescription = {
 };
 
 const description = {
-  color: grayColor[0],
+  color: blackColor,/*grayColor[0],*/
   fontFamily: '"Cormorant Garamond", "Times New Roman", serif'
 };
 

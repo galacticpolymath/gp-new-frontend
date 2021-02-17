@@ -26,6 +26,7 @@ const aboutUsStyle = {
   textCenter: {
     textAlign: "center",
   },
+
   block: {
     color: "inherit",
     padding: "0.9375rem",
@@ -64,6 +65,9 @@ const aboutUsStyle = {
   },
   bgColor: {
     backgroundColor: "#2c83c3",
+  },
+  missionContainer: {
+    display: "flexContainer",
   },
 
 

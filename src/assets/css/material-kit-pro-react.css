@@ -29,6 +29,13 @@
 /*  gpELA: #ECA14D;*/
 /*  gpExtra: #F4F0D9; }*/
 
+/*$purple !default;*/
+/*$green !default;*/
+/*$red !default;*/
+/*$orange !default;*/
+/*$cyan !default;*/
+/*$pink !default;*/
+/*#3c4858 !default;*/
 .btn-file {
   position: relative;
   overflow: hidden;
@@ -170,7 +177,7 @@ html * {
   letter-spacing: normal !important; }
 
 body {
-  font-size: 1rem; }
+  font-size: 1.3rem; }
 
 body,
 h1,
@@ -262,11 +269,11 @@ legend {
     outline: 0; }
 
 a {
-  color: #9c27b0;
+  color: #6812d1;
   text-decoration: none;
   background-color: transparent; }
   a:hover, a:focus {
-    color: #89229b;
+    color: #5c10ba;
     text-decoration: none; }
 
 label {
@@ -1131,7 +1138,7 @@ td.rdtYear:hover {
       width: 24px; } }
   .image-gallery-left-nav[disabled],
   .image-gallery-right-nav[disabled] {
-    cursor: disabled;
+    /*cursor: disabled;*/
     opacity: .6;
     pointer-events: none; }
 
@@ -1145,7 +1152,7 @@ td.rdtYear:hover {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  -o-user-select: none;
+  /*-o-user-select: none;*/
   user-select: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   position: relative; }
