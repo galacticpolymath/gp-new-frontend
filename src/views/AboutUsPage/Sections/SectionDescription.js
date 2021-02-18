@@ -76,7 +76,7 @@ export default function SectionDescription() {
           className={classes.textLeft}
         >
           <Primary><h2>Our Vision</h2></Primary>
-          <h4>Our company was not founded to make a big profit (it probably won't). We were founded
+          <h4>Our company was not founded just to make a big profit. We were founded
             to improve the lives of teachers, students, and researchers–because we have been in all
             of those roles. We envision a future where education is bolder, more creative, more equitable,
             and where organizational outreach truly has Broader Impacts.
