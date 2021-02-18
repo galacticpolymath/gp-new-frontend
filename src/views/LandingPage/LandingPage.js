@@ -26,6 +26,7 @@ import landingPageStyle from "assets/jss/material-kit-pro-react/views/landingPag
 import SectionAbout from "./Sections/SectionAbout.js";
 import SectionLessons from "./Sections/SectionLessons.js";
 import SectionHow from "./Sections/SectionHow.js";
+import SectionLessonData from "./Sections/SectionLessonData.js";
 
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 
@@ -98,6 +99,7 @@ export default function LandingPage({ ...rest }) {
           <SectionAbout />
           <SectionLessons />
           <SectionHow />
+          <SectionLessonData />
           {/* <SectionProduct />
           <SectionTeam />
           <SectionWork /> */}

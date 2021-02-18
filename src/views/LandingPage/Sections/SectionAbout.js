@@ -5,13 +5,13 @@ import { makeStyles } from "@material-ui/core/styles";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import InfoArea from "components/InfoArea/InfoArea.js";
+// import InfoArea from "components/InfoArea/InfoArea.js";
 
 import productStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/productStyle.js";
 
 const useStyles = makeStyles(productStyle);
 
-export default function SectionProduct() {
+export default function SectionAbout() {
   const classes = useStyles();
   return (
     <div className={classes.section}>

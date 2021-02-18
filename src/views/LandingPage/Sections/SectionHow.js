@@ -47,7 +47,7 @@ const style = {
 
 const useStyles = makeStyles(style);
 
-export default function SectionTeam() {
+export default function SectionHow() {
   const classes = useStyles();
   return (
     <div className={classNames(classes.section)}>
