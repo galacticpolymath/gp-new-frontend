@@ -24,4 +24,9 @@ const RichText = ({ content, className = "" }) => {
   );
 };
 
+RichText.propTypes = {
+  content: PropTypes.string,
+  className: PropTypes.string,
+};
+
 export default RichText;
