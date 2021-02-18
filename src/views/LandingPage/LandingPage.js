@@ -27,6 +27,7 @@ import SectionAbout from "./Sections/SectionAbout.js";
 import SectionLessons from "./Sections/SectionLessons.js";
 import SectionHow from "./Sections/SectionHow.js";
 import SectionLessonData from "./Sections/SectionLessonData.js";
+import SectionContact from "./Sections/SectionContact.js";
 
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 
@@ -100,6 +101,7 @@ export default function LandingPage({ ...rest }) {
           <SectionLessons />
           <SectionHow />
           <SectionLessonData />
+          <SectionContact />
           {/* <SectionProduct />
           <SectionTeam />
           <SectionWork /> */}
