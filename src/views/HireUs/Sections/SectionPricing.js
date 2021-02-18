@@ -72,11 +72,11 @@ export default function SectionPricing() {
           </GridItem>
           <GridItem className={classes.appeal}>
             <div className={classes.boxContainer}>
-            <h2
+            <h3
               style = {{textAlign: "left"}}>{/*could not get this style to work in pricingStyle*/}
               Contracting us means having a fully-dedicated team of scientists, educators, and
               creatives working to achieve your outreach dreams!
-            </h2>
+            </h3>
             </div>
 
           </GridItem>
@@ -100,9 +100,11 @@ export default function SectionPricing() {
                 <span className={classes.dollar}>1,500 – 5,000</span>
               </h3>
               <ul>
+                <Link to={{hash:"#x"}}/>
                 <li>
                   <b>1</b> Lesson
                 </li>
+
                 <li>
                   <b>1-3</b> Custom Media Assets
                 </li>

@@ -11,7 +11,7 @@ import featureDetailStyle from "assets/jss/material-kit-pro-react/components/fea
 const useStyles = makeStyles(featureDetailStyle);
 
 export default function FeatureDetails(props) {
-  const { keyPhrase1, keyPhrase2,  description } = props;/*iconColor, className,*/
+  const { id,keyPhrase1, keyPhrase2,  description } = props;/*iconColor, className,*/
   const classes = useStyles();
   // const iconWrapper = classNames({
   //   [classes.iconWrapper]: true,
@@ -36,7 +36,7 @@ export default function FeatureDetails(props) {
   //     break;
   // }
   return (
-      <h3 className={classes.featureDeets}>
+      <h3 className={classes.featureDeets} id={id}>
         <span>
         <b className={classes.keyPhrase1}>{keyPhrase1}&nbsp;</b>
         <span className={classes.keyPhrase2}>{keyPhrase2}&nbsp;</span>

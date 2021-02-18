@@ -17,6 +17,7 @@ export default function SectionFeatures() {
   return (
     <div className={classes.featuresSection}>
       <FeatureDetails
+        id={"x"}
         keyPhrase1={"1 Lesson"}
         keyPhrase2={"means hundreds of hours of skilled labor."}
         description={"Our basic lesson includes standards alignment, presentations, differentiation, and more. " +

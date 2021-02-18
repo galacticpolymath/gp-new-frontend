@@ -95,14 +95,25 @@ export default function PricingPage() {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
+
+          {/*Price List */}
           <SectionPricing />
-          <hr />
-          <h2>Order <em>a la carte</em>. Do you just need a fantastic infographic, video, or data visual? We're your
-            one-stop shop for scicomm, education, and outreach!
-          </h2>
-          <h2>Even if your exact need isn't listed, we can likely make
-            it happen. <a>Start the conversation!</a>
-          </h2>
+
+          {/*Add on Section Appeal Box*/}
+          <GridItem className={classes.appeal}>
+            <div className={classes.boxContainer}>
+              <h3>Order <span style={{fontWeight:100, fontStyle:"italic"}}>a la carte</span>. Looking for a fantastic infographic, video, or data visual? We're your
+                one-stop shop for scicomm, education, and outreach!
+              </h3>
+              <h3>Even if your exact need isn't listed, we can likely make
+                it happen. <a>Start the conversation!</a>
+              </h3>
+            </div>
+
+          </GridItem>
+          <hr/>
+
+
           <hr />
           <SectionAddOns />
           {/*GP Logo*/}

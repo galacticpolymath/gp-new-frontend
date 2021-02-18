@@ -29,8 +29,11 @@ const pricingStyle = {
     textAlign: "left !important",
   },
   pricingSection: {
-    padding: "80px 0px"
+    padding: "80px 0px",
+    overflowY: "scroll",
+    scrollBehavior: "smooth",
   },
+
   textInfo: {
     color: infoColor[0] + " !important",
   },
@@ -64,6 +67,9 @@ const pricingStyle = {
     "& h2":{
       textAlign: "center",
     },
+  },
+  valuePropsGridContainer:{
+
   },
   appeal:{
     padding: "5rem 10% 0 10%",
