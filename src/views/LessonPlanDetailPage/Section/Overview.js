@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import GridContainer from "components/Grid/GridContainer";
 import GridItem from "components/Grid/GridItem";
-import Image from "../../../components/Image";
+import Image from "../../../components/StrapiImage";
 import TagCloud from "../../../components/TagCloud";
 import RichText from "../../../components/RichText";
 
@@ -52,12 +52,8 @@ const Overview = ({
 
         <RichText content={Text} />
 
-        <GridContainer>
-          <GridItem className="keywords">
-            <h5>Keywords:</h5>
-          </GridItem>
-          <GridItem>{Tags && <TagCloud tags={Tags} />}</GridItem>
-        </GridContainer>
+        <h5>Keywords:</h5>
+        {Tags && <TagCloud tags={Tags} />}
       </div>
     </Fragment>
   );

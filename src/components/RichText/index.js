@@ -2,6 +2,8 @@ import React from "react";
 import showdown from "showdown";
 import PropTypes from "prop-types";
 
+import "./styles.scss";
+
 const { REACT_APP_API_URL } = process.env;
 
 const converter = new showdown.Converter();
@@ -12,7 +14,12 @@ const RichText = ({ content, className = "" }) => {
   let __html = converter.makeHtml(content);
   __html = __html.replace('src="/', 'src="' + REACT_APP_API_URL + "/");
 
-  return <div className={className} dangerouslySetInnerHTML={{ __html }} />;
+  return (
+    <div
+      className={"RichText " + className}
+      dangerouslySetInnerHTML={{ __html }}
+    />
+  );
 };
 
 RichText.propTypes = {

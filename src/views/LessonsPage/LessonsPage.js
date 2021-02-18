@@ -55,7 +55,6 @@ export default function LessonsPage() {
           >
             <GridItem
               xs={12}
-              sm={12}
               md={6}
               className={classNames(
                 classes.mlAuto,
@@ -76,7 +75,6 @@ export default function LessonsPage() {
             </GridItem>
             <GridItem
               xs={12}
-              sm={12}
               md={6}
               className={classNames(
                 classes.hideLogo,

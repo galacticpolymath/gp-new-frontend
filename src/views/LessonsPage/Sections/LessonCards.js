@@ -9,7 +9,7 @@ import CardBody from "components/Card/CardBody.js";
 import CardHeader from "components/Card/CardHeader.js";
 
 import blogPostsPageStyle from "assets/jss/material-kit-pro-react/views/blogPostsPageStyle.js";
-import Image from "components/Image";
+import Image from "components/StrapiImage";
 import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(blogPostsPageStyle);

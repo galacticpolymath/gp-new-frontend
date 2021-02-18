@@ -5,7 +5,7 @@ import moment from "moment";
 
 import GridContainer from "components/Grid/GridContainer";
 import GridItem from "components/Grid/GridItem";
-import Image from "../../components/Image";
+import Image from "../../components/StrapiImage";
 import RichText from "../../components/RichText";
 
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
