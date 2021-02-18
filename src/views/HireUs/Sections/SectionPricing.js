@@ -11,10 +11,10 @@ import InfoArea from "../../../components/InfoArea/InfoArea";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 // import icons
-import LockOpen from "@material-ui/icons/LockOpen"
-import PlusOne from "@material-ui/icons/PlusOne"
-import BlurOn from "@material-ui/icons/BlurOn"
-import InsertChartOutlinedOutlined from "@material-ui/icons/InsertChartOutlinedOutlined"
+import LockOpen from "@material-ui/icons/LockOpen";
+import PlusOne from "@material-ui/icons/PlusOne";
+import BlurOn from "@material-ui/icons/BlurOn";
+import InsertChartOutlinedOutlined from "@material-ui/icons/InsertChartOutlinedOutlined";
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
