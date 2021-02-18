@@ -102,7 +102,7 @@ export default function SectionLessonData() {
                   padding="100px"
                 >
                   <i className="fas" />
-                  <b className={classes.darkGreyFont}>Get Lessons</b>
+                  <b className={classes.darkGreyFont}>GET LESSONS</b>
                 </Button>
               </div>
               <div className={classes.topPadding}></div>
@@ -136,7 +136,7 @@ export default function SectionLessonData() {
                   padding="100px"
                 >
                   <i className="fas" />
-                  <b className={classes.darkGreyFont}>Get Lessons</b>
+                  <b className={classes.darkGreyFont}>SUBMIT DATA</b>
                 </Button>
               </div>
               <div className={classes.topPadding}></div>
