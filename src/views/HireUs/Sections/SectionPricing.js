@@ -8,12 +8,13 @@ import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import Button from "components/CustomButtons/Button.js";
 import InfoArea from "../../../components/InfoArea/InfoArea";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 // import icons
-import LockOpen from "@material-ui/icons/LockOpen"
-import PlusOne from "@material-ui/icons/PlusOne"
-import BlurOn from "@material-ui/icons/BlurOn"
-import InsertChartOutlinedOutlined from "@material-ui/icons/InsertChartOutlinedOutlined"
+import LockOpen from "@material-ui/icons/LockOpen";
+import PlusOne from "@material-ui/icons/PlusOne";
+import BlurOn from "@material-ui/icons/BlurOn";
+import InsertChartOutlinedOutlined from "@material-ui/icons/InsertChartOutlinedOutlined";
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -72,11 +73,11 @@ export default function SectionPricing() {
           </GridItem>
           <GridItem className={classes.appeal}>
             <div className={classes.boxContainer}>
-            <h2
+            <h3
               style = {{textAlign: "left"}}>{/*could not get this style to work in pricingStyle*/}
               Contracting us means having a fully-dedicated team of scientists, educators, and
               creatives working to achieve your outreach dreams!
-            </h2>
+            </h3>
             </div>
 
           </GridItem>
@@ -100,9 +101,12 @@ export default function SectionPricing() {
                 <span className={classes.dollar}>1,500 – 5,000</span>
               </h3>
               <ul>
+                <AnchorLink href="#x" offset={"110"}>
                 <li>
                   <b>1</b> Lesson
                 </li>
+                </AnchorLink>
+
                 <li>
                   <b>1-3</b> Custom Media Assets
                 </li>

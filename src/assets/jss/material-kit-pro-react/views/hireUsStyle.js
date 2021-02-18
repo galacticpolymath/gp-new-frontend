@@ -6,7 +6,7 @@ import {
   grayColor,
   whiteColor,
   mrAuto,
-  mlAuto,
+  mlAuto, primaryColor
 } from "assets/jss/material-kit-pro-react.js";
 
 const hireUsStyle = {
@@ -77,11 +77,21 @@ const hireUsStyle = {
   bgColor: {
     backgroundColor: "#6C2D82",
   },
-  // "@media (max-width: 991px)": {
-  //   hideLogo: {
-  //     display: "none",
-  //   },
-  // },
+  appeal:{
+    padding: "5rem 10% 0 10%",
+
+  },
+  boxContainer: {
+    backgroundColor:grayColor[2],
+    padding: "20px 20px 20px 40px",
+    border: "1px solid" + grayColor[6],
+    "& h2": {
+      // ...description,
+
+      // fontWeight: "600",
+      color: primaryColor[0],
+    },
+  },
   "@media only screen and (max-width: 1280px)": {
     title: {
 

@@ -17,6 +17,7 @@ export default function SectionFeatures() {
   return (
     <div className={classes.featuresSection}>
       <FeatureDetails
+        id={"x"}
         keyPhrase1={"1 Lesson"}
         keyPhrase2={"means hundreds of hours of skilled labor."}
         description={"Our basic lesson includes standards alignment, presentations, differentiation, and more. " +
@@ -47,14 +48,14 @@ export default function SectionFeatures() {
       />
       <FeatureDetails
         keyPhrase1={"Impact Reports"}
-        keyPhrase2={"to measure your outreach"}
+        keyPhrase2={"to measure your outreach."}
         description={"Often necessary for grant proposals or public campaigns, we take the hard work out of measuring " +
         "your outreach. We monitor lesson site visits, downloads, teacher and student ratings and feedback, and deliver " +
         "reports upon request. "}
       />
       <FeatureDetails
         keyPhrase1={"Beta Testing"}
-        keyPhrase2={"ensures your lesson is ready for the classroom"}
+        keyPhrase2={"ensures your lesson is ready for the classroom."}
         description={"After production, we test your lesson in a variety of G5-12 classrooms, gathering and " +
         "incorporating feedback before we release the lesson publicly. This can give you the confidence that your work " +
         "is being used in high-quality lessons and not simply released to classrooms untested."}
@@ -67,7 +68,7 @@ export default function SectionFeatures() {
       />
       <FeatureDetails
         keyPhrase1={"US National Standards Alignment"}
-        keyPhrase2={"easy implementation for teachers across the nation"}
+        keyPhrase2={"easy implementation for teachers across the nation."}
         description={"Built with Understanding by Design, our lessons are aligned with the leading US educational " +
         "standards—Next Generation Science Standards, Common Core Math and ELA, and the College, Career, and Civic Life " +
         "Social Studies Framework. This alignment means that regardless of the district, our lessons will fit the curriculum. "}
@@ -87,7 +88,7 @@ export default function SectionFeatures() {
       />
       <FeatureDetails
         keyPhrase1={"GP Sensible Lesson Plans"}
-        keyPhrase2={"are built for fast and easy implementation"}
+        keyPhrase2={"are built for fast and easy implementation."}
         description={"As we said, the goal is 15 minutes or less of prep even for non-subject area teachers. We do " +
         "this by designing lessons to be largely student-run and activated, by embedding scaffolding into presentations " +
         "and videos that support student understanding, and by providing quick prep tutorials for teachers that are " +

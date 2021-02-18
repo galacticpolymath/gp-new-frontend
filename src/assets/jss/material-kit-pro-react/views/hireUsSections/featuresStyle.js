@@ -9,9 +9,13 @@ import {
 } from "assets/jss/material-kit-pro-react.js";
 
 const featuresStyle = {
+
   featuresSection: {
-    padding: "80px 0px"
+    padding: "80px 0px",
+    overflowY: "scroll",
+    scrollBehavior: "smooth",
   },
+
   textCenter: {
     textAlign: "center"
   },

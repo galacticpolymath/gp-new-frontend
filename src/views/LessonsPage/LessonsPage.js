@@ -18,8 +18,8 @@ import LessonCards from "./Sections/LessonCards.js";
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 import { fetchAll } from "views/LessonPlanDetailPage/modules/lessonsApi.js";
 
-import blogPostsPageStyle from "assets/jss/material-kit-pro-react/views/blogPostsPageStyle.js";
-const useStyles = makeStyles(blogPostsPageStyle);
+import lessonsPageStyle from "assets/jss/material-kit-pro-react/views/lessonsPageStyle.js";
+const useStyles = makeStyles(lessonsPageStyle);
 
 export default function LessonsPage() {
   useEffect(() => {
@@ -63,7 +63,7 @@ export default function LessonsPage() {
               )}
               style={{ paddingTop: "3%", paddingRight: "25px" }}
             >
-              <h1 className={classes.title}>Interdisciplinary Lessons</h1>
+              <h1 className={classNames(classes.title,classes.longTitle)}>Interdisciplinary Lessons</h1>
               <h4
                 className={classes.title}
                 style={{ letterSpacing: "1.5px", fontWeight: 500 }}

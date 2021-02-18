@@ -65,16 +65,23 @@ const lessonsPageStyle = {
     backgroundColor: "#6812D1",
   },
 
+  "@media only screen and (max-width: 600px)": {
+    /* iphones (material UI "sm" break) */
+    hideLogo: {
+      display: "none",
+      maxWidth: "100%",
+    },
+    longTitle: {
+      fontSize: "2.5rem",
+    },
+  },
 
   "@media only screen and (max-width: 960px)": {
-    /* phones */
+    /* tablets (material UI "med" break) */
 
     hideLogo: {
       display: "none",
       maxWidth: "100%",
-      // "&.hireUsTitle": {
-      //   fontSize: "2.6rem",
-      // },
     },
   },
 };
