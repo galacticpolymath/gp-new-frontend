@@ -174,7 +174,7 @@ ReactDOM.render(
       <Route path="/sections" component={SectionsPage} />
       <Route path="/shopping-cart-page" component={ShoppingCartPage} />
       <Route path="/signup-page" component={SignupPage} />
-    <Route path="/error-page" component={ErrorPage} /> */}
+      <Route path="/error-page" component={ErrorPage} /> */}
 
       {/* This path matches anything, so it goes last. */}
       <Route path="/" component={LandingPage} />
