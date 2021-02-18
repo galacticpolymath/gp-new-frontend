@@ -26,6 +26,7 @@ const aboutUsStyle = {
   textCenter: {
     textAlign: "center",
   },
+
   block: {
     color: "inherit",
     padding: "0.9375rem",
@@ -65,11 +66,10 @@ const aboutUsStyle = {
   bgColor: {
     backgroundColor: "#2c83c3",
   },
-  "@media (max-width: 991px)": {
-    hideLogo: {
-      display: "none",
-    },
+  missionContainer: {
+    display: "flexContainer",
   },
+
 
   "@media only screen and (max-width: 992px)": {
     /* phones */

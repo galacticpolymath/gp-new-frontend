@@ -69,14 +69,14 @@ $pale-bg: #f9f7f3 !default;
 $font-color: #66615b !default;
 
 $brand-default: #cecece !default;
-$brand-primary: $purple !default;
-$brand-success: $green !default;
-$brand-danger: $red !default;
-$brand-warning: $orange !default;
-$brand-info: $cyan !default;
-$brand-rose: $pink !default;
+$brand-primary: $gp-hydro-blue !default; /*$purple !default;*/
+$brand-success: $sci !default; /*$green !default;*/
+$brand-danger: $gp-burst-purple !default; /*$red !default;*/
+$brand-warning: $ela !default; /*$orange !default;*/
+$brand-info: $gp-lightning-purple !default; /*$cyan !default;*/
+$brand-rose: $gp-fuchsia !default; /*$pink !default;*/
 
-$black-color: #3c4858 !default;
+$black-color: $gp-galactic-black !default; /*#3c4858 !default;*/
 
 // Dropdowns
 
@@ -125,7 +125,7 @@ $white-color: #fff !default;
 $navbar-color: #555 !default;
 $pills-color: $navbar-color !default;
 $black-color: #3c4858 !default;
-$link-color: $brand-primary;
+$link-color: $gp-atomic-blue;
 $white-transparent: rgba($white-color, 0.8);
 $transparent: transparent;
 

@@ -47,7 +47,7 @@ const infoStyle = {
     fontSize: "2.25rem"
   },
   descriptionWrapper: {
-    color: grayColor[0],
+    color: grayColor[3],
     overflow: "hidden"
   },
   title: {
@@ -56,7 +56,7 @@ const infoStyle = {
     minHeight: "unset"
   },
   description: {
-    color: grayColor[0],
+    color: grayColor[3],
     overflow: "hidden",
     marginTop: "0px",
     "& p": {
