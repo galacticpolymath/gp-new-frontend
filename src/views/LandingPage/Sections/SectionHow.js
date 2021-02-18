@@ -43,10 +43,6 @@ const style = {
     paddingTop: "50px",
     paddingRight: "70px",
   },
-
-  // marginRight: {
-  //   marginRight: "20%",
-  // },
 };
 
 const useStyles = makeStyles(style);
@@ -147,23 +143,47 @@ export default function SectionTeam() {
               </div>
             </div>
           </GridItem>
-          <GridItem xs={12} sm={2} md={4}>
+          <GridItem xs={12} sm={4} md={4}>
             <div className={classes.fontStyle}>
               <div>
-                <p>We empower students with agency and critical thinking.</p>
+                <img
+                  src={
+                    "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357034/assets_marketing/GP__Research_Purple_1_b6pfbv.svg"
+                  }
+                  height="auto"
+                  width="33%"
+                  alt={"logo"}
+                />
               </div>
               <div>
-                <p>
-                  Students learn better when lessons are contextualized in
-                  real-world scenarios and concepts are connected across
-                  subjects—so that’s what we do.
-                </p>
+                <img
+                  src={
+                    "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357034/assets_marketing/GP__SciComm_Purple_1_qyl1nn.svg"
+                  }
+                  height="auto"
+                  width="33%"
+                  alt={"logo"}
+                />
               </div>
               <div>
-                <p>
-                  Our lessons are flexible and adaptive, giving classroom
-                  teachers the freedom to adjust the material to fit their plan.
-                </p>
+                <img
+                  src={
+                    "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357034/assets_marketing/GP__Teachers_Purple_1_pksgwr.svg"
+                  }
+                  height="auto"
+                  width="33%"
+                  alt={"logo"}
+                />
+              </div>
+              <div>
+                <img
+                  src={
+                    "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357034/assets_marketing/GP__Revise_Purple_1_u0yanp.svg"
+                  }
+                  height="auto"
+                  width="33%"
+                  alt={"logo"}
+                />
               </div>
             </div>
           </GridItem>
