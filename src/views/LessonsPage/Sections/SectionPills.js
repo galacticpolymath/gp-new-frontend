@@ -32,6 +32,10 @@ export default function SectionPills() {
               onClick={() => activateCategory(Id)}
               color="primary"
               round
+              style={{
+                fontWeight: 500,
+                color: activeCategory === Id ? "white" : "inherit",
+              }}
               simple={activeCategory !== Id}
             >
               {Label}

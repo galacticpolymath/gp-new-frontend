@@ -17,7 +17,7 @@ const useStyles = makeStyles(blogPostsPageStyle);
 const LessonCards = ({ lessons }) => {
   const classes = useStyles();
   return (
-    <div className={classes.container}>
+    <div className={classes.container} style={{ padding: "40px 0" }}>
       <GridContainer>
         {lessons.map(({ id, CoverImage, Title, Description }) => (
           <GridItem key={id} xs={12} sm={6} md={6}>
