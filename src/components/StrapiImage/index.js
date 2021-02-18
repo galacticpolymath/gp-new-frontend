@@ -2,12 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./style.scss";
+const URL = "https://lessondirectory-api.herokuapp.com";
 
 const Image = ({ className = "", url, alternativeText }) => {
   if (!url) return null;
 
   if (url[0] === "/") {
-    url = process.env.REACT_APP_API_URL + url;
+    url = URL + url;
   }
 
   return (
