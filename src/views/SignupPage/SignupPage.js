@@ -56,7 +56,7 @@ export default function SignUpPage({ ...rest }) {
       <Header
         absolute
         color="transparent"
-        brand="Material Kit PRO React"
+        brand="Galactic Polymath"
         links={<HeaderLinks dropdownHoverColor="rose" />}
         {...rest}
       />

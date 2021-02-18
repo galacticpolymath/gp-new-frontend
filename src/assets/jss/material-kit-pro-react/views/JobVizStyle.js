@@ -3,7 +3,6 @@ import {
   container,
   title,
   main,
-  mainRaised,
   mlAuto,
   mrAuto,
   description,
@@ -12,7 +11,6 @@ import {
 
 const JobVizStyle = {
   main,
-  mainRaised,
   title: {
     ...title,
     "&, & + h4": {
@@ -24,22 +22,19 @@ const JobVizStyle = {
   description,
   container: {
     ...container,
+    zIndex: 1,
     // maxWidth: "970px !important",
-    zIndex: "2",
-    position: "relative",
+    // zIndex: "2",
+    // position: "relative",
   },
-   bigMap: {
-    height: "55vh",
-    maxHeight: "550px",
-    width: "100%",
-    display: "block",
-  },
+
   info: {
     paddingBottom: "10px",
     paddingTop: 0,
   },
   textCenter: {
     textAlign: "center !important",
+
   },
   block: {
     color: "inherit",
@@ -80,17 +75,34 @@ const JobVizStyle = {
   bgColor: {
     backgroundColor: "#CB1F8E",
   },
-  "@media (max-width: 991px)": {
-    hideLogo: {
-      display: "none",
+  "@media only screen and (max-width: 1280px)": {
+    title: {
+
+      "&.hireUsTitle": {
+        fontSize: "3rem",
+      },
     },
+
+  },
+  "@media only screen and (max-width: 1000px)": {
+    title: {
+
+      "&.hireUsTitle": {
+        fontSize: "2.4rem",
+      },
+    },
+
   },
 
-  "@media only screen and (max-width: 992px)": {
+  "@media only screen and (max-width: 960px)": {
     /* phones */
+
     hideLogo: {
       display: "none",
       maxWidth: "100%",
+      // "&.hireUsTitle": {
+      //   fontSize: "2.6rem",
+      // },
     },
   },
 };

@@ -39,7 +39,7 @@ export default function LessonsPage() {
   return (
     <div>
       <Header
-        brand="Material Kit PRO React"
+        brand="Galactic Polymath"
         links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
         color="transparent"
@@ -55,7 +55,7 @@ export default function LessonsPage() {
           >
             <GridItem
               xs={12}
-              sm={6}
+              sm={12}
               md={6}
               className={classNames(
                 classes.mlAuto,
@@ -64,7 +64,7 @@ export default function LessonsPage() {
               )}
               style={{ paddingTop: "3%", paddingRight: "25px" }}
             >
-              <h1 className={classes.title}>Galactic Lessons</h1>
+              <h1 className={classes.title}>Interdisciplinary Lessons</h1>
               <h4
                 className={classes.title}
                 style={{ letterSpacing: "1.5px", fontWeight: 500 }}
@@ -76,7 +76,7 @@ export default function LessonsPage() {
             </GridItem>
             <GridItem
               xs={12}
-              sm={6}
+              sm={12}
               md={6}
               className={classNames(
                 classes.hideLogo,
