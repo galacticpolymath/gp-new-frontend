@@ -88,8 +88,8 @@ const hireUsStyle = {
     "& h2": {
       // ...description,
 
-      // fontWeight: "600",
-      color: primaryColor[0],
+      fontWeight: "500",
+      // color: primaryColor[0],
     },
   },
   "@media only screen and (max-width: 1280px)": {
