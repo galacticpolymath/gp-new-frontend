@@ -21,9 +21,9 @@ export default function SectionFeatures() {
         keyPhrase1={"1 Lesson"}
         keyPhrase2={"means hundreds of hours of skilled labor."}
         description={"Our basic lesson includes standards alignment, presentations, differentiation, and more. " +
-        "On top of that, whether your lesson needs animations, videos with voiceovers, infographics, short podcasts, " +
-        "or something else, our team will custom create it. The number of assets per price point depends on the " +
-        "complexity of each piece and the needs of the lesson. "}
+        "On top of that, we will generate all the custom media assets (see below), teacher guides, custom puzzle hooks," +
+        "or data syntheses necessary to create an amazing and easy-to-teach learning experience that mobilizes" +
+        "the knowledge you care about."}
       />
 
       <FeatureDetails

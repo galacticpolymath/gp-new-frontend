@@ -101,7 +101,7 @@ export default function SectionPricing() {
                 <span className={classes.dollar}>1,500 – 5,000</span>
               </h3>
               <ul>
-                <AnchorLink href="#x" offset={"110"}>
+                <AnchorLink href="#x" offset={"125"}>
                 <li>
                   <b>1</b> Lesson
                 </li>
