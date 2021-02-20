@@ -3,11 +3,10 @@ import {
   mlAuto,
   cardTitle,
   whiteColor,
-  infoColor,
   warningColor,
-  hexToRgb,  blackColor,
+  hexToRgb, blackColor,
 
-  primaryColor,
+  primaryColor, roseColor
 } from "assets/jss/material-kit-pro-react.js";
 
 const pricingStyle = {
@@ -35,7 +34,10 @@ const pricingStyle = {
   },
 
   textInfo: {
-    color: infoColor[0] + " !important",
+    color: primaryColor[0] + " !important"
+  },
+  cardCategory:{
+    fontWeight: 400
   },
 
   //new class style that makes an elevated, small $ before the number
@@ -92,6 +94,32 @@ const pricingStyle = {
     // margin: "2rem 5rem",
     maxWidth: "45%",
   },
+
+  pfContainer:{
+    color:roseColor[0]+" important!",
+    "& > *:hover":{
+      textShadow: "-.5px .5px 1px " +"rgba(" +
+        hexToRgb(warningColor[0]) +
+        ", 0.7)",
+      fontSize: "1.1em"
+    }
+  },
+  pfLink:{},
+  pfListItem:{
+  },
+  pfTXT:{
+
+  },
+  boldedLabel:{
+
+  },
+  pfDescription:{
+
+  },
+
+
+
+
   // keep infoAreas wider on smaller devices
   "@media only screen and (max-width: 1000px)":{
     custInfoArea:{

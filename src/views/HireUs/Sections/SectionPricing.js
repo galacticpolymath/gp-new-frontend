@@ -20,6 +20,7 @@ import InsertChartOutlinedOutlined from "@material-ui/icons/InsertChartOutlinedO
 import { makeStyles } from "@material-ui/core/styles";
 
 import pricingStyle from "assets/jss/material-kit-pro-react/views/hireUsSections/pricingStyle.js";
+import PricingFeature from "../../../components/HireUsComponents/PricingFeature";
 
 const useStyles = makeStyles(pricingStyle);
 
@@ -106,7 +107,12 @@ export default function SectionPricing() {
                   <b>1</b> Lesson
                 </li>
                 </AnchorLink>
+                <PricingFeature
+                boldedLabel={"1"}
+                description={"some stuff here now"}
+                linkTarget={"#x"}
 
+                />
                 <li>
                   <b>1-3</b> Custom Media Assets
                 </li>

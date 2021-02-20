@@ -3,7 +3,7 @@ import React from "react";
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import FeatureDetails from "../../../components/FeatureDetails/FeatureDetails";
+import FeatureDetails from "../../../components/HireUsComponents/FeatureDetails";
 // @material-ui icons
 
 
