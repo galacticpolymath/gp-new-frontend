@@ -8,7 +8,7 @@ import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import Button from "components/CustomButtons/Button.js";
 import InfoArea from "../../../components/InfoArea/InfoArea";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+
 
 // import icons
 import LockOpen from "@material-ui/icons/LockOpen";
@@ -102,16 +102,15 @@ export default function SectionPricing() {
                 <span className={classes.dollar}>1,500 – 5,000</span>
               </h3>
               <ul>
-                <AnchorLink href="#x" offset={"125"}>
-                <li>
-                  <b>1</b> Lesson
-                </li>
-                </AnchorLink>
                 <PricingFeature
                 boldedLabel={"1"}
                 description={"some stuff here now"}
                 linkTarget={"#x"}
-
+                />
+                <PricingFeature
+                  boldedLabel={"1"}
+                  description={"some stuff here now"}
+                  linkTarget={"#x"}
                 />
                 <li>
                   <b>1-3</b> Custom Media Assets

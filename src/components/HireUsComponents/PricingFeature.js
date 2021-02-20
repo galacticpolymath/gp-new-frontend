@@ -12,8 +12,8 @@ import pricingStyle from "assets/jss/material-kit-pro-react/views/hireUsSections
 const useStyles = makeStyles(pricingStyle);
 
 export default function PricingFeature(props) {
-  const { boldedLabel, description, linkTarget, scrollOffset, minHeight } = props;/*iconColor, className,*/
-  const classes = useStyles();
+  const { boldedLabel, description, linkTarget, scrollOffset, minHeight } = props
+  const classes = useStyles()
   // const iconWrapper = classNames({
   //   [classes.iconWrapper]: true,
   //   [classes[iconColor]]: true,
@@ -37,28 +37,31 @@ export default function PricingFeature(props) {
   //     break;
   // }
   return (
-    <div className={classes.pfContainer}
-    style={{ minHeight: {minHeight} }}>
+    <li className={classes.pfContainer}
+    style={{
+      minHeight: props.minHeight}}
+      // borderBottom: "1px solid rgba("+hexToRgb(props.bottomBorderCol)+"0.6"}}
+    >
       <AnchorLink
         href={linkTarget}
         offset={scrollOffset}
         className={classes.pfLink}>
-        <li className={classes.pfListItem}>
-      <span className={classes.pfTXT}>
+        <span className={classes.pfTXT}>
       <b className={classes.boldedLabel}>{boldedLabel}&nbsp;</b>
         <span className={classes.pfDescription}>{description}</span>
       </span>
-        </li>
       </AnchorLink>
-    </div>
+    </li>
 
   )
+
 }
 
 PricingFeature.defaultProps = {
   scrollOffset: "125px",
-  minHeight: "0", //This default doesn't seem to work for some reason
+  minHeight: "0"
 }
+
 
 
 // {/*// HireUsComponents.propTypes = {*/}

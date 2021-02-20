@@ -6,7 +6,7 @@ import {
   warningColor,
   hexToRgb, blackColor,
 
-  primaryColor, roseColor
+  primaryColor
 } from "assets/jss/material-kit-pro-react.js";
 
 const pricingStyle = {
@@ -96,11 +96,11 @@ const pricingStyle = {
   },
 
   pfContainer:{
-    color:roseColor[0]+" important!",
+
     "& > *:hover":{
-      textShadow: "-.5px .5px 1px " +"rgba(" +
+      textShadow: "0px 0px 15px " +"rgba(" +
         hexToRgb(warningColor[0]) +
-        ", 0.7)",
+        ", 0.8)",
       fontSize: "1.1em"
     }
   },
