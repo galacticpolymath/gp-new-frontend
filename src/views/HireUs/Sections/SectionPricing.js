@@ -74,11 +74,11 @@ export default function SectionPricing() {
           </GridItem>
           <GridItem className={classes.appeal}>
             <div className={classes.boxContainer}>
-            <h3
+            <h4
               style = {{textAlign: "left"}}>{/*could not get this style to work in pricingStyle*/}
               Contracting us means having a fully-dedicated team of scientists, educators, and
               creatives working to achieve your outreach dreams!
-            </h3>
+            </h4>
             </div>
 
           </GridItem>

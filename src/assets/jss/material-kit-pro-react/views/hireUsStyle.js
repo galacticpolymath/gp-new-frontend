@@ -6,7 +6,7 @@ import {
   grayColor,
   whiteColor,
   mrAuto,
-  mlAuto, primaryColor
+  mlAuto
 } from "assets/jss/material-kit-pro-react.js";
 
 const hireUsStyle = {
@@ -85,7 +85,8 @@ const hireUsStyle = {
     backgroundColor:grayColor[2],
     padding: "20px 20px 20px 40px",
     border: "1px solid" + grayColor[6],
-    "& h2": {
+    borderRadius: "5px",
+    "& h3": {
       // ...description,
 
       fontWeight: "500",
