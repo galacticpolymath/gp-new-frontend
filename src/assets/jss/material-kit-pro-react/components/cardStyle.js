@@ -133,7 +133,10 @@ const cardStyle = {
   },
   cardPricingColor: {
     "& ul li": {
-      color: whiteColor,
+      //this selects all the lower structures introduced with the <PricingFeature> component
+      "& > *": {
+        color: whiteColor,/*grayColor[4],*/
+      },
       borderColor: "rgba(" + hexToRgb(whiteColor) + ",0.3)",
       "& b, & svg,& .fab,& .fas,& .far,& .fal,& .material-icons": {
         color: whiteColor,

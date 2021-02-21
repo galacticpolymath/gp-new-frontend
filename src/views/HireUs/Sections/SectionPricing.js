@@ -99,55 +99,74 @@ export default function SectionPricing() {
               </h5>
 
               <h3 className={classes.cardTitle}>
-                <span className={classes.dollar}>1,500 – 5,000</span>
+                <span className={classes.dollar}>1,500&nbsp;– 5,000</span>
               </h3>
               <ul>
                 <PricingFeature
                 boldedLabel={"1"}
-                description={"some stuff here now"}
-                linkTarget={"#x"}
+                description={"Lesson"}
+                linkTarget={"#1lesson"}
                 />
                 <PricingFeature
-                  boldedLabel={"1"}
-                  description={"some stuff here now"}
-                  linkTarget={"#x"}
+                  boldedLabel={"1-3"}
+                  description={"Custom Media Assets"}
+                  linkTarget={"#customMedia"}
                 />
-                <li>
-                  <b>1-3</b> Custom Media Assets
-                </li>
-                <li>
-                  <b>up to 3</b> Rounds of Revision <p>During Phase I</p>
-                </li>
-                <li>
-                  <b>X</b> Lesson Support
-                </li>
-                <li>
-                  <b>X</b> Impact Reports
-                </li>
-                <li>
-                  <b>✓</b> Published Open Access For All
-                </li>
-                <li>
-                  <b>X</b> Beta testing before <p>publication</p>
-                </li>
-                <li>
-                  <b>✓</b> Creative, story-based <p>lesson design</p>
-                </li>
-                <li>
-                  <b>✓</b> Alignment to US National <p>standards in all subjects</p>
-                </li>
-                <li>
-                  <b>X</b> Custom standards <p>alignment</p>
-                </li>
-                <li>
-                  <b>✓</b> Non-subject-expert <p>Teacher Supported</p>
-                </li>
-                <li>
-                  <b>✓</b> GP Sensible Lesson Plan
-                </li>
-                <li>
-                  <b>X</b>  Custom data analysis or <p>synthesis</p>
-                </li>
+                <PricingFeature
+                  boldedLabel={"up to 3"}
+                  description={"Rounds of Revision"}
+                  linkTarget={"#revisions"}
+                />
+                <PricingFeature
+                  boldedLabel={"✘"}
+                  description={"Lesson Support"}
+                  linkTarget={"#lessonSupport"}
+                />
+                <PricingFeature
+                  boldedLabel={"✘"}
+                  description={"Impact Reports"}
+                  linkTarget={"#impactReports"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Published Open Access For All"}
+                  linkTarget={"#openAccess"}
+                />
+                <PricingFeature
+                  boldedLabel={"✘"}
+                  description={"Beta Testing"}
+                  linkTarget={"#betaTesting"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Creative, Story-Based Lesson Design"}
+                  linkTarget={"#learningThrough"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Alignment to US National Standards in 4 Subjects"}
+                  linkTarget={"#USnational"}
+                />
+                <PricingFeature
+                  boldedLabel={"✘"}
+                  description={"Custom Standards Alignment"}
+                  linkTarget={"#customStandards"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Designed for Non-Subject-Expert Teachers"}
+                  linkTarget={"#designedFor"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"GP Sensible Lesson Plan"}
+                  linkTarget={"#GPsensible"}
+                />
+                <PricingFeature
+                  boldedLabel={"✘"}
+                  description={"Custom Data Analysis"}
+                  linkTarget={"#customData"}
+                />
               </ul>
               <Button href="#pablo" color="primary" round>
                 Build It!
@@ -160,48 +179,74 @@ export default function SectionPricing() {
             <CardBody pricing>
               <h5 className={classes.cardCategory}>LASTING IMPACT</h5>
               <h3 className={classes.cardTitleWhite}>
-                <span className={classes.dollar}>10,000 – 18,000</span>
+                <span className={classes.dollar}>10,000&nbsp;– 18,000</span>
               </h3>
               <ul>
-                <li>
-                  <b>4</b> Lesson Unit
-                </li>
-                <li>
-                  <b>6-10</b> Custom Media Assets
-                </li>
-                <li>
-                  <b>up to 10</b> Rounds of Revision <p>During Phase I</p>
-                </li>
-                <li>
-                  <b>3 Years</b> Lesson Support
-                </li>
-                <li>
-                  <b>✓</b> Impact Reports
-                </li>
-                <li>
-                  <b>✓</b> Published Open Access For All
-                </li>
-                <li>
-                  <b>✓</b> Beta testing before <p>publication</p>
-                </li>
-                <li>
-                  <b>✓</b> Creative, story-based <p>lesson design</p>
-                </li>
-                <li>
-                  <b>✓</b> Alignment to US National <p>standards in all subjects</p>
-                </li>
-                <li>
-                  <b>✓</b> Custom standards <p>alignment</p>
-                </li>
-                <li>
-                  <b>✓</b> Non-subject-expert <p>Teacher Supported</p>
-                </li>
-                <li>
-                  <b>✓</b> GP Sensible Lesson Plan
-                </li>
-                <li>
-                  <b>✓</b>  Custom data analysis or <p>synthesis</p>
-                </li>
+                <PricingFeature
+                  boldedLabel={"4"}
+                  description={"Lesson Unit"}
+                  linkTarget={"#1lesson"}
+                />
+                <PricingFeature
+                  boldedLabel={"6–10"}
+                  description={"Custom Media Assets"}
+                  linkTarget={"#customMedia"}
+                />
+                <PricingFeature
+                  boldedLabel={"up to 10"}
+                  description={"Rounds of Revision"}
+                  linkTarget={"#revisions"}
+                />
+                <PricingFeature
+                  boldedLabel={"3 Years"}
+                  description={"Lesson Support"}
+                  linkTarget={"#lessonSupport"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Impact Reports"}
+                  linkTarget={"#impactReports"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Published Open Access for All"}
+                  linkTarget={"#openAccess"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Beta Testing"}
+                  linkTarget={"#betaTesting"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Creative, Story-Based Lesson Design"}
+                  linkTarget={"#learningThrough"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Alignment to US National Standards in 4 Subjects"}
+                  linkTarget={"#USnational"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Custom Standards Alignment"}
+                  linkTarget={"#customStandards"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Designed for Non-Subject-Expert Teachers"}
+                  linkTarget={"#designedFor"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"GP Sensible Lesson Plan"}
+                  linkTarget={"#GPsensible"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Custom Data Analysis"}
+                  linkTarget={"#customData"}
+                />
               </ul>
               <Button href="#pablo" color="white" round className={classes.whiteButtonCust}>
                 Build It!
@@ -221,46 +266,71 @@ export default function SectionPricing() {
                 Let{"’"}s Talk
               </h3>
               <ul>
-                <li>
-                  <b>All Lessons Needed</b>
-                </li>
-                <li>
-                  <b>All Media Assets</b>
-                </li>
-                <li>
-                  {/* find cleaner fix for multiple line breaks */}
-                  <b>Unlimited </b>Rounds of Revision during Phase I<p> </p>
-                </li>
-                <li>
-                  <b>Lifetime</b> Lesson Support
-                </li>
-                <li>
-                  <b>✓</b> Impact Reports
-                </li>
-                <li>
-                  <b>✓</b> Published Open Access For All
-                </li>
-                <li>
-                  <b>✓</b> Beta testing before <p>publication</p>
-                </li>
-                <li>
-                  <b>✓</b> Creative, story-based <p>lesson design</p>
-                </li>
-                <li>
-                  <b>✓</b> Alignment to US National <p>standards in all subjects</p>
-                </li>
-                <li>
-                  <b>✓</b> Custom standards <p>alignment</p>
-                </li>
-                <li>
-                  <b>✓</b> Non-subject-expert <p>Teacher Supported</p>
-                </li>
-                <li>
-                  <b>✓</b> GP Sensible Lesson Plan
-                </li>
-                <li>
-                  <b>✓</b>  Custom data analysis or <p>synthesis</p>
-                </li>
+                <PricingFeature
+                  boldedLabel={"All Lessons Needed"}
+                  description={""}
+                  linkTarget={"#1lesson"}
+                />
+                <PricingFeature
+                  boldedLabel={"All Media Assets Needed"}
+                  description={""}
+                  linkTarget={"#customMedia"}
+                />
+                <PricingFeature
+                  boldedLabel={"Unlimited"}
+                  description={"Rounds of Revision"}
+                  linkTarget={"#revisions"}
+                />
+                <PricingFeature
+                  boldedLabel={"Lifetime"}
+                  description={"Lesson Support"}
+                  linkTarget={"#lessonSupport"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Impact Reports"}
+                  linkTarget={"#impactReports"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Published Open Access For All"}
+                  linkTarget={"#openAccess"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Beta Testing"}
+                  linkTarget={"#betaTesting"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Creative, Story-Based Lesson Design"}
+                  linkTarget={"#learningThrough"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Alignment to US National Standards in 4 Subjects"}
+                  linkTarget={"#USnational"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Custom Standards Alignment"}
+                  linkTarget={"#customStandards"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Designed for Non-Subject-Expert Teachers"}
+                  linkTarget={"#designedFor"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"GP Sensible Lesson Plan"}
+                  linkTarget={"#GPsensible"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Custom Data Analysis"}
+                  linkTarget={"#customData"}
+                />
               </ul>
               <Button href="#pablo" color="primary" round>
                 Build It!
