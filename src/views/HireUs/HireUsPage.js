@@ -112,10 +112,7 @@ export default function PricingPage() {
             </div>
 
           </GridItem>
-          <hr/>
 
-
-          <hr />
           <SectionAddOns />
           {/*GP Logo*/}
           <div className={classNames(classes.container,classes.textCenter)}>

@@ -218,8 +218,8 @@ const headerStyle = (theme) => ({
       display: "block",
       justifySelf: "left",
       alignSelf: "center",
-      height: "auto",
-      maxWidth: "30vw",
+      // height: "auto",
+      maxHeight: "5vh",
       objectFit: "contain",
     }
   },
@@ -242,7 +242,7 @@ const headerStyle = (theme) => ({
     showLogo: {
       "& img": {
         display: "inherit",
-        width: "50vw",
+        maxHeight: "6vh",
       }
       },
   },

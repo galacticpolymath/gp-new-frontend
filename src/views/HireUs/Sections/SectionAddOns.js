@@ -80,7 +80,7 @@ export default function SectionAddOns() {
           </Card>
         </GridItem>
         <GridItem>
-          *These prices are listed as a rough estimate of costs. Once you reach out, we will discuss your exact needs
+          *These prices are a rough estimate of costs. Once you reach out, we will discuss your exact needs
           and constraints and provide a more precise estimate which may be higher or lower, depending on the labor entailed.
         </GridItem>
       </GridContainer>

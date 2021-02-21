@@ -19,24 +19,24 @@ const hireUsStyle = {
     zIndex: 1,
     display: "grid",
     placeItems: "center",
-    paddingTop:"4rem",
+    paddingTop: "4rem"
   },
   title: {
-    ...title,
+    ...title
 
   },
-  whiteTitle:{
+  whiteTitle: {
     ...title,
     "&, & + h4": {
-      color: whiteColor,
-    },
+      color: whiteColor
+    }
   },
-  subtitle:{
-    marginTop:"-1.5rem",
-    color: grayColor[3],
+  subtitle: {
+    marginTop: "-1.5rem",
+    color: grayColor[3]
   },
   textCenter: {
-    textAlign: "center",
+    textAlign: "center"
   },
   block: {
     color: "inherit",
@@ -47,82 +47,99 @@ const hireUsStyle = {
     borderRadius: "3px",
     textDecoration: "none",
     position: "relative",
-    display: "block",
+    display: "block"
   },
   inlineBlock: {
     display: "inline-block",
     padding: "0px",
-    width: "auto",
+    width: "auto"
   },
   list: {
     marginBottom: "0",
     padding: "0",
-    marginTop: "0",
+    marginTop: "0"
   },
   left: {
     float: "left!important",
-    display: "block",
+    display: "block"
   },
   right: {
     padding: "15px 0",
     margin: "0",
-    float: "right",
+    float: "right"
   },
   icon: {
     width: "18px",
     height: "18px",
     top: "3px",
-    position: "relative",
+    position: "relative"
   },
   bgColor: {
-    backgroundColor: "#6C2D82",
+    backgroundColor: "#6C2D82"
   },
-  appeal:{
-    padding: "5rem 10% 0 10%",
+  appeal: {
+    padding: "5rem 10% 0 10%"
 
   },
   boxContainer: {
-    backgroundColor:grayColor[2],
+    backgroundColor: grayColor[2],
     padding: "20px 20px 20px 40px",
     border: "1px solid" + grayColor[6],
     borderRadius: "5px",
     "& h3": {
       // ...description,
 
-      fontWeight: "500",
+      fontWeight: "500"
       // color: primaryColor[0],
-    },
+    }
   },
   "@media only screen and (max-width: 1280px)": {
-    title: {
+    whiteTitle: {
 
       "&.hireUsTitle": {
-        fontSize: "3rem",
-      },
-    },
+        fontSize: "3rem"
+      }
+    }
 
   },
-   "@media only screen and (max-width: 1000px)": {
-    title: {
-
+  "@media only screen and (max-width: 1000px)": {
+    whiteTitle: {
       "&.hireUsTitle": {
-        fontSize: "2.4rem",
-      },
-    },
+        fontSize: "2.4rem"
+      }
+    }
 
   },
 
   "@media only screen and (max-width: 960px)": {
-    /* phones */
+    /* tablets */
 
     hideLogo: {
       display: "none",
       maxWidth: "100%",
-      // "&.hireUsTitle": {
-      //   fontSize: "2.6rem",
-      // },
     },
+      whiteTitle: {
+        "&.hireUsTitle": {
+          fontSize: "3.2rem"
+        }
+    }
+
+
   },
+  "@media only screen and (max-width: 600px)": {
+    /* sm phones */
+
+    hideLogo: {
+      display: "none",
+      maxWidth: "100%"
+    },
+    whiteTitle: {
+      "&.hireUsTitle": {
+        fontSize: "2.6rem"
+
+      }
+    }
+  }
 };
 
 export default hireUsStyle;
