@@ -96,13 +96,18 @@ const pricingStyle = {
   },
 
   pfContainer:{
+    "&:hover":{
+      backgroundColor: "rgba("+hexToRgb(blackColor) +
+                        ", .1)",
+      fontSize: "1.1em",
+      },
 
-    "& > *:hover":{
-      textShadow: "0px 0px 15px " +"rgba(" +
-        hexToRgb(warningColor[0]) +
-        ", 0.8)",
-      fontSize: "1.1em"
-    }
+    // "& > *:hover":{
+    //   // textShadow: "1px 1px 15px " +"rgba(" +
+    //   //   hexToRgb(warningColor[0]) +
+    //   //   ", 1)",
+    //   fontSize: "1.1em"
+    // }
   },
   pfLink:{},
   pfListItem:{
