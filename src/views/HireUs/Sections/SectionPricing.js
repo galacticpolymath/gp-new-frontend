@@ -28,7 +28,7 @@ export default function SectionPricing() {
   const classes = useStyles();
   return (
     <>
-      <div className={classes.valueProps}>
+      <div className={classes.valueProps} >
         <GridContainer className={classes.valuePropsGridContainer}>
           <GridItem>
           <h2>Benefits of working with us</h2>
@@ -88,7 +88,7 @@ export default function SectionPricing() {
       </div>
   <div className={classes.pricingSection}>
 
-      <GridContainer>
+      <GridContainer id={"priceList"}>
         <GridItem md={4} sm={4}>
           <Card plain pricing>
             <CardBody pricing>

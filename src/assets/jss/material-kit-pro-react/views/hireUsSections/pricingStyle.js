@@ -29,7 +29,7 @@ const pricingStyle = {
   },
   pricingSection: {
     padding: "80px 0px",
-    overflowY: "scroll",
+    // overflowX: "scroll",
     scrollBehavior: "smooth",
   },
 

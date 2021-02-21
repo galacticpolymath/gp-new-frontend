@@ -11,8 +11,8 @@ import {
 const featuresStyle = {
 
   featuresSection: {
-    padding: "80px 0px",
-    overflowY: "scroll",
+    padding: "80px 10%",
+    // overflowY: "scroll",
     scrollBehavior: "smooth",
   },
 
