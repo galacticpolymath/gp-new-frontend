@@ -184,6 +184,11 @@ const headerStyle = (theme) => ({
     paddingRight: "0px",
     paddingLeft: "0",
     ...transition,
+    "& li:hover":{
+      backgroundColor: "rgba("+hexToRgb(blackColor) +
+        ", .2)"
+    },
+
   },
   hidden: {
     width: "100%",
