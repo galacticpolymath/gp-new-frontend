@@ -118,20 +118,21 @@ export default function PricingPage() {
           <hr />
           <SectionAddOns />
           {/*GP Logo*/}
-          <div className={classes.container}>
+          <div className={classNames(classes.container,classes.textCenter)}>
           <img
-            src={makeCloudinaryUrl("v1593304396/logos/GP_logo_grad_transBG_300_tbn4ei.png")}
-            className={classNames(classes.mlAuto,classes.mrAuto,)}
+            src={makeCloudinaryUrl("v1593304396/logos/GP_logo_grad_transBG_300_tbn4ei.jpeg")}
+            className={classNames(classes.mlAuto,classes.mrAuto)}
             style={{
               // width:"10"
-              maxWidth: "10%", justifySelf:"center"}}
+              width: "25vw",
+              maxWidth: "150px", justifySelf:"center"}}
             alt={"The Galactic Polymath logo. A starburst of lines and dots, in blue, purple and pink."}
           />
           <h2 className={classes.title}>
             The Galactic Polymath Way
           </h2>
             <h2 className={classes.subtitle}>
-            (A New Model for Education)
+            A New Model for Education
             </h2>
           </div>
           <SectionFeatures />

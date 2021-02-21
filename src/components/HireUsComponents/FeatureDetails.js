@@ -46,11 +46,11 @@ export default function FeatureDetails(props) {
       );
 }
 
-// FeatureDetails.defaultProps = {
+// HireUsComponents.defaultProps = {
 //   // color: "primary"
 // };
 
-// FeatureDetails.propTypes = {
+// HireUsComponents.propTypes = {
 //   icon: PropTypes.oneOfType([PropTypes.object, PropTypes.string]).isRequired,
 //   title: PropTypes.string.isRequired,
 //   description: PropTypes.node.isRequired,

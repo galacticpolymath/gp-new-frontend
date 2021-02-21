@@ -23,7 +23,7 @@ const featureDetailsStyle = {
     fontWeight: 400,
   },
   description:{
-
+  color: "black"
   },
   iconWrapper: {
     float: "left",

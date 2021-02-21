@@ -99,17 +99,20 @@ const cardStyle = {
       margin: "10px auto"
     },
     "& ul li": {
-      color: blackColor,/*grayColor[4],*/
+      //override link color for text
+      "& > *": {
+        color: blackColor,/*grayColor[4],*/
+      },
       textAlign: "center",
       padding: "12px 0px",
       borderBottom: "1px solid rgba(" + hexToRgb(grayColor[0]) + ",0.3)"
     },
-    "& ul li:last-child": {
-      border: 0
+    "& ul li:last-of-type": {
+      border: 0,
     },
-    "& ul li b": {
-      color: grayColor[1]
-    },
+    // "& ul li b": {
+    //   color: grayColor[1]
+    // },
     "& h1": {
       marginTop: "30px"
     },
@@ -130,7 +133,10 @@ const cardStyle = {
   },
   cardPricingColor: {
     "& ul li": {
-      color: whiteColor,
+      //this selects all the lower structures introduced with the <PricingFeature> component
+      "& > *": {
+        color: whiteColor,/*grayColor[4],*/
+      },
       borderColor: "rgba(" + hexToRgb(whiteColor) + ",0.3)",
       "& b, & svg,& .fab,& .fas,& .far,& .fal,& .material-icons": {
         color: whiteColor,
