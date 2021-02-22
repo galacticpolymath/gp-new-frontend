@@ -28,7 +28,7 @@ export default function SectionPricing() {
   const classes = useStyles();
   return (
     <>
-      <div className={classes.valueProps}>
+      <div className={classes.valueProps} >
         <GridContainer className={classes.valuePropsGridContainer}>
           <GridItem>
           <h2>Benefits of working with us</h2>
@@ -74,11 +74,11 @@ export default function SectionPricing() {
           </GridItem>
           <GridItem className={classes.appeal}>
             <div className={classes.boxContainer}>
-            <h3
+            <h4
               style = {{textAlign: "left"}}>{/*could not get this style to work in pricingStyle*/}
               Contracting us means having a fully-dedicated team of scientists, educators, and
               creatives working to achieve your outreach dreams!
-            </h3>
+            </h4>
             </div>
 
           </GridItem>
@@ -88,7 +88,7 @@ export default function SectionPricing() {
       </div>
   <div className={classes.pricingSection}>
 
-      <GridContainer>
+      <GridContainer id={"priceList"}>
         <GridItem md={4} sm={4}>
           <Card plain pricing>
             <CardBody pricing>
@@ -339,7 +339,7 @@ export default function SectionPricing() {
           </Card>
         </GridItem>
         <GridItem>
-          *These prices are listed as a rough estimate of costs. Once you reach out, we will discuss your exact needs
+          *These prices are a rough estimate of costs. Once you reach out, we will discuss your exact needs
           and constraints and provide a more precise estimate which may be higher or lower, depending on the labor entailed.
         </GridItem>
       </GridContainer>

@@ -59,7 +59,7 @@ export default function Header(props) {
         .classList.remove(classes[changeColorOnScroll.color]);
     }
   };
-  const { color, links, brand, fixed, absolute } = props;
+  const { color, links,  fixed, absolute } = props;
   const appBarClasses = classNames({
     [classes.appBar]: true,
     [classes[color]]: color,
@@ -75,10 +75,10 @@ export default function Header(props) {
               <img alt="logo" src={logoImage} width="50px" />
             </div> */}
             <div className={classes.hideLogo}>
-              <img alt="logo" src={GpImage} width="400px" />
+              <img alt="logo" src={GpImage} />
             </div>
             <div className={classes.showLogo}>
-              <img alt="logo" src={GpImage} width="100%" />
+              <img alt="logo" src={GpImage}  />
             </div>
           </Link>
         </Button>

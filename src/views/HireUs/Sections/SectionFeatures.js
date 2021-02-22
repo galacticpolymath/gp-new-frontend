@@ -30,9 +30,9 @@ export default function SectionFeatures() {
         id={"1lesson"}
         keyPhrase1={"1 Lesson"}
         keyPhrase2={"means hundreds of hours of skilled labor."}
-        description={"Our basic lesson includes standards alignment, presentations, differentiation, and more. " +
+        description={"Our basic lesson includes standards alignment, presentations, differentiation for grades 5-12, and more. " +
         "On top of that, we will generate all the custom media assets (see below), teacher guides, custom puzzle hooks," +
-        "or data syntheses necessary to create an amazing and easy-to-teach learning experience that mobilizes" +
+        "or data syntheses necessary to create an amazing and easy-to-teach learning experience that mobilizes " +
         "the knowledge you care about."}
       />
 
@@ -50,7 +50,7 @@ export default function SectionFeatures() {
         keyPhrase1={"Revisions"}
         keyPhrase2={"are how perfection is achieved."}
         description={"Whether it’s a typo, a misinterpreted graph, or an activity that’s not turning out as expected, " +
-        "Galactic Polymath is committed to creating quality materials and quality materials require time, effort, and revisions. "}
+        "Galactic Polymath is committed to creating quality materials and that takes time, effort, and revisions. "}
       />
       <FeatureDetails
         id={"lessonSupport"}

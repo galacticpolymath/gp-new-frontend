@@ -82,17 +82,19 @@ export default function SectionDescription() {
             and where organizational outreach truly has Broader Impacts.
            </h4>
         </GridItem>
-        <GridItem
-          xs={12}
-          sm={12}
-          med={12}
-          className={classNames(classes.thinkBigger,classes.mlAuto,classes.mrAuto)}
+        <div
+          // xs={12}
+          // sm={12}
+          // med={12}
+          className={classNames(classes.container,classes.thinkBigger)}
         >
-          <Warning><h1>
-            <span style={{whiteSpace:"nowrap",paddingRight:"15%"}}>Think <b>bigger</b>.</span>
-            <span style={{whiteSpace:"nowrap",paddingLeft:"15%"}}>Learn everything.</span>
-            </h1></Warning>
-        </GridItem>
+          <h1>
+            <span style={{whiteSpace:"nowrap",textAlign: "left"}}>Think <b>bigger</b>.</span>
+          </h1>
+          <h1>
+            <span style={{whiteSpace:"nowrap"}}>Learn everything.</span>
+          </h1>
+        </div>
       </GridContainer>
     </div>
   );

@@ -29,7 +29,7 @@ const pricingStyle = {
   },
   pricingSection: {
     padding: "80px 0px",
-    overflowY: "scroll",
+    // overflowX: "scroll",
     scrollBehavior: "smooth",
   },
 
@@ -65,7 +65,7 @@ const pricingStyle = {
     },
   },
   valueProps:{
-    paddingTop:"10rem",
+    paddingTop:"3rem",
     "& h2":{
       textAlign: "center",
     },
@@ -81,6 +81,7 @@ const pricingStyle = {
     backgroundColor:primaryColor[5],
     padding: "20px 20px 20px 40px",
     border: "3px solid" + primaryColor[7],
+    borderRadius: "5px",
     "& h2": {
       // ...description,
 

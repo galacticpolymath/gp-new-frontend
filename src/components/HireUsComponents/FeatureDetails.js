@@ -5,6 +5,7 @@ import React from "react";
 // import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 import featureDetailStyle from "assets/jss/material-kit-pro-react/components/featureDetailsStyle.js";
 
@@ -40,7 +41,9 @@ export default function FeatureDetails(props) {
         <span>
         <b className={classes.keyPhrase1}>{keyPhrase1}&nbsp;</b>
         <span className={classes.keyPhrase2}>{keyPhrase2}&nbsp;</span>
-        <span className={classes.description}>{description}</span>
+        <span className={classes.description}>{description}&nbsp;
+          <AnchorLink href={"#priceList"} offset={"125px"}>⤴ Back to Top</AnchorLink> </span>
+
         </span>
       </h3>
       );

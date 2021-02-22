@@ -184,6 +184,11 @@ const headerStyle = (theme) => ({
     paddingRight: "0px",
     paddingLeft: "0",
     ...transition,
+    "& li:hover":{
+      backgroundColor: "rgba("+hexToRgb(blackColor) +
+        ", .2)"
+    },
+
   },
   hidden: {
     width: "100%",
@@ -207,32 +212,55 @@ const headerStyle = (theme) => ({
     top: "9px",
     zIndex: "1",
   },
-  "@media (max-width: 991px)": {
+  //the logo shown at large screen sizes
+  hideLogo:{
+    "& img": {
+      display: "block",
+      justifySelf: "left",
+      alignSelf: "center",
+      // height: "auto",
+      maxHeight: "5vh",
+      objectFit: "contain",
+    }
+  },
+  //this is the logo shown at small screen sizes
+  showLogo:{
+    "& img": {
+     display: "none",
+     justifySelf: "left",
+      alignSelf: "center",
+      objectFit: "contain"
+    }
+  },
+
+
+  //tablets
+  "@media only screen and (max-width: 960px)": {
     hideLogo: {
       display: "none",
     },
+    showLogo: {
+      "& img": {
+        display: "inherit",
+        maxHeight: "6vh",
+      }
+      },
   },
-
-  "@media only screen and (max-width: 992px)": {
+  "@media only screen and (max-width: 600px)": {
     /* phones */
     hideLogo: {
       display: "none",
-      maxWidth: "100%",
     },
-  },
-  "@media (min-width: 991px)": {
     showLogo: {
-      display: "none",
-    },
-  },
+      "& img": {
+        display: "block",
+        width: "75vw",
+      }
+    }
 
-  "@media only screen and (min-width: 992px)": {
-    /* phones */
-    showLogo: {
-      display: "none",
-      maxWidth: "100%",
-    },
-  },
+  }
+
+
 });
 
 export default headerStyle;
