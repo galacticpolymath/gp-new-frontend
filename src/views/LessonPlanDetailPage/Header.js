@@ -13,6 +13,7 @@ const useStyles = makeStyles(lessonPlanStyle);
 
 const Header = ({
   Title,
+  Subtitle,
   Version,
   LastUpdated,
   SponsoredBy,
@@ -31,6 +32,7 @@ const Header = ({
               ")"}
         </p>
         <h1>{Title}</h1>
+        <h2>{Subtitle}</h2>
         <GridContainer className="text-center">
           <div className="col">
             <Image {...CoverImage} className="self-center" />
@@ -52,6 +54,7 @@ const Header = ({
 
 Header.propTypes = {
   Title: PropTypes.string,
+  Subtitle: PropTypes.string,
   Version: PropTypes.string,
   LastUpdated: PropTypes.string,
   SponsoredBy: PropTypes.string,

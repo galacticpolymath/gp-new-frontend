@@ -4,7 +4,8 @@ import PropTypes from "prop-types";
 
 import "./styles.scss";
 
-const URL = "https://lessondirectory-api.herokuapp.com";
+const URL =
+  process.env.REACT_APP_API_URL || "https://lessondirectory-api.herokuapp.com";
 
 const converter = new showdown.Converter();
 
