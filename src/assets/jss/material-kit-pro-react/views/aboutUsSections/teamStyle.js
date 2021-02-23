@@ -23,9 +23,7 @@ const teamStyle = {
   team: {
     // padding: "80px 0px",
   },
-  alumGridContainer: {
 
-  },
   sectionLabel:{
     padding: "3vh 2vh 2vh",
     "& >*":{
@@ -50,12 +48,6 @@ const teamStyle = {
   },
   bgColor: {
     backgroundColor: "#2c83c3",
-  },
-  centeredGridContainer: {
-    display: "grid",
-    justifyItems: "center",
-    // gridTemplateColumns: "1fr 1fr 1fr"
-    // gridTemplateRows: "content auto"
   }
 };
 

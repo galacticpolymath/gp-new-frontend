@@ -47,10 +47,10 @@ export default function SectionTeam() {
           to focus on
           GP full time.</h4>
       </div>
-      <GridContainer className={classes.centeredGridContainer}>
+      <GridContainer className={classes.justifyContent}>
 
         {/*MATT*/}
-        <GridItem  sm={10}>
+        <GridItem sm={10}>
           <Card profile plain>
             <CardAvatar profile plain>
               <img
@@ -119,232 +119,242 @@ export default function SectionTeam() {
                 color={"primary"}
 
               >
-                <Scholar  />
+                <Scholar />
               </Button>
             </CardFooter>
           </Card>
         </GridItem>
       </GridContainer>
 
-        {/*PRODUCT TEAM*/}
+      {/*PRODUCT TEAM*/}
       <div className={classes.sectionLabel}>
         <h3>PRODUCT TEAM</h3>
         <h4>The incredible group of multitalented scientists, communicators, and education experts responsible for
           bringing each Galactic Polymath lesson to life.</h4>
       </div>
-      <GridContainer >
+      <GridContainer className={classes.justifyContent}>
         {/*STEPH*/}
-      <GridItem md={4} sm={12}>
-        <Card profile plain>
-          <CardAvatar profile plain>
-            <img
-              src={makeCloudinaryUrl(
-                "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1597113803/Team/StephanieCastillo_mu3bln.jpg"
-              )}
-              alt="profile-pic"
-              className={classes.img}
-            />
-          </CardAvatar>
-          <CardBody plain>
-            <h4 className={classes.cardTitle}>
-              Stephanie Castillo
-            </h4>
-            <h6 className={classes.textMuted}>
-              DIGITAL MULTIMEDIA SPECIALIST
-            </h6>
-            <p className={classes.cardDescription}>
-              A PhD candidate in science communication, award winning video producer,and previous Jackson Wild Media
-              Lab Fellow. She is also founder of Phuture Doctors—a media company showcasing diverse voices in STEM.
-            </p>
-          </CardBody>
-          <CardFooter className={classes.justifyContent}>
-            <Button
-              href="https://phuturedoctors.com/"
-              target="_blank"
-              justIcon
-              simple
-              color={"primary"}
-            >
-              <i className="fas fa-globe" />
-            </Button>
-            <Button
-              href="https://www.linkedin.com/in/castils/"
-              target="_blank"
-              justIcon
-              simple
-              color={"primary"}
-            >
-              <i className="fab fa-linkedin" />
-            </Button>
-            <Button
-              href="https://twitter.com/PhutureDoctors"
-              target="_blank"
-              justIcon
-              simple
-              color={"primary"}
-            >
-              <i className="fab fa-twitter" />
-            </Button>
-            <Button
-              href="https://www.youtube.com/channel/UCyvY9PeDHl-CW_nuGn2Caug"
-              target="_blank"
-              justIcon
-              simple
-              color={"primary"}
-            >
-              <i className="fab fa-youtube" />
-            </Button>
-            <Button
-              href="http://instagram.com/phuturedoctors"
-              target="_blank"
-              justIcon
-              simple
-              color={"primary"}
-            >
-              <i className="fab fa-instagram" />
-            </Button>
-          </CardFooter>
-        </Card>
-      </GridItem>
+        <GridItem md={4} sm={12}>
+          <Card profile plain>
+            <CardAvatar profile plain>
+              <img
+                src={makeCloudinaryUrl(
+                  "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1597113803/Team/StephanieCastillo_mu3bln.jpg"
+                )}
+                alt="profile-pic"
+                className={classes.img}
+              />
+            </CardAvatar>
+            <CardBody plain>
+              <h4 className={classes.cardTitle}>
+                Stephanie Castillo
+              </h4>
+              <h6 className={classes.textMuted}>
+                DIGITAL MULTIMEDIA SPECIALIST
+              </h6>
+              <p className={classes.cardDescription}>
+                A PhD candidate in science communication, award winning video producer,and previous Jackson Wild Media
+                Lab Fellow. She is also founder of Phuture Doctors—a media company showcasing diverse voices in STEM.
+              </p>
+            </CardBody>
+            <CardFooter className={classes.justifyContent}>
+              <Button
+                href="https://phuturedoctors.com/"
+                target="_blank"
+                justIcon
+                simple
+                color={"primary"}
+              >
+                <i className="fas fa-globe" />
+              </Button>
+              <Button
+                href="https://www.linkedin.com/in/castils/"
+                target="_blank"
+                justIcon
+                simple
+                color={"primary"}
+              >
+                <i className="fab fa-linkedin" />
+              </Button>
+              <Button
+                href="https://twitter.com/PhutureDoctors"
+                target="_blank"
+                justIcon
+                simple
+                color={"primary"}
+              >
+                <i className="fab fa-twitter" />
+              </Button>
+              <Button
+                href="https://www.youtube.com/channel/UCyvY9PeDHl-CW_nuGn2Caug"
+                target="_blank"
+                justIcon
+                simple
+                color={"primary"}
+              >
+                <i className="fab fa-youtube" />
+              </Button>
+              <Button
+                href="http://instagram.com/phuturedoctors"
+                target="_blank"
+                justIcon
+                simple
+                color={"primary"}
+              >
+                <i className="fab fa-instagram" />
+              </Button>
+            </CardFooter>
+          </Card>
+        </GridItem>
 
         {/*ELAINE*/}
-      <GridItem md={4} sm={12}>
-        <Card profile plain>
-          <CardAvatar profile plain>
-            <img
-              src={makeCloudinaryUrl(
-                "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1613059086/Team/E.Perignat_Headshot_1_h4avls.jpg"
-              )}
-              alt="profile-pic"
-              className={classes.img}
-            />
-          </CardAvatar>
-          <CardBody plain>
-            <h4 className={classes.cardTitle}>
-              Elaine Perignat, PhD
-            </h4>
-            <h6 className={classes.textMuted}>
-              Education Specialist
-            </h6>
-            <p className={classes.cardDescription}>
-              A spirited over-thinker with genuine enthusiasm for teaching and learning. She loves to paint, create,
-              build, and play if it means getting her hands dirty. Literally.
-            </p>
-          </CardBody>
-          <CardFooter className={classes.justifyContent}>
-            <Button
-              href="https://scholar.google.com/citations?user=G12SJQoAAAAJ&hl=en&oi=ao"
-              target="_blank"
-              justIcon
-              simple
-              color={"primary"}
-            >
-              <Scholar  />
-            </Button>
-            {/*<Button*/}
-            {/*  href=""*/}
-            {/*  target="_blank"*/}
-            {/*  justIcon*/}
-            {/*  simple*/}
-            {/*  color={"primary"}*/}
-            {/*>*/}
-            {/*  <i className="fab fa-linkedin" />*/}
-            {/*</Button>*/}
-            {/*<Button*/}
-            {/*  href=""*/}
-            {/*  target="_blank"*/}
-            {/*  justIcon*/}
-            {/*  simple*/}
-            {/*  color={"primary"}*/}
-            {/*>*/}
-            {/*  <i className="fab fa-twitter" />*/}
-            {/*</Button>*/}
-            {/*<Button*/}
-            {/*  href=""*/}
-            {/*  target="_blank"*/}
-            {/*  justIcon*/}
-            {/*  simple*/}
-            {/*  color={"primary"}*/}
-            {/*>*/}
-            {/*  <i className="fab fa-youtube" />*/}
-            {/*</Button>*/}
-            {/*<Button*/}
-            {/*  href=""*/}
-            {/*  target="_blank"*/}
-            {/*  justIcon*/}
-            {/*  simple*/}
-            {/*  color={"primary"}*/}
-            {/*>*/}
-            {/*  <i className="fab fa-instagram" />*/}
-            {/*</Button>*/}
-          </CardFooter>
-        </Card>
-      </GridItem>
+        <GridItem md={4} sm={12}>
+          <Card profile plain>
+            <CardAvatar profile plain>
+              <img
+                src={makeCloudinaryUrl(
+                  "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1613059086/Team/E.Perignat_Headshot_1_h4avls.jpg"
+                )}
+                alt="profile-pic"
+                className={classes.img}
+              />
+            </CardAvatar>
+            <CardBody plain>
+              <h4 className={classes.cardTitle}>
+                Elaine Perignat, PhD
+              </h4>
+              <h6 className={classes.textMuted}>
+                Education Specialist
+              </h6>
+              <p className={classes.cardDescription}>
+                A spirited over-thinker with genuine enthusiasm for teaching and learning. She loves to paint, create,
+                build, and play if it means getting her hands dirty. Literally.
+              </p>
+            </CardBody>
+            <CardFooter className={classes.justifyContent}>
+              <Button
+                href="https://scholar.google.com/citations?user=G12SJQoAAAAJ&hl=en&oi=ao"
+                target="_blank"
+                justIcon
+                simple
+                color={"primary"}
+              >
+                <Scholar />
+              </Button>
+              {/*<Button*/}
+              {/*  href=""*/}
+              {/*  target="_blank"*/}
+              {/*  justIcon*/}
+              {/*  simple*/}
+              {/*  color={"primary"}*/}
+              {/*>*/}
+              {/*  <i className="fab fa-linkedin" />*/}
+              {/*</Button>*/}
+              {/*<Button*/}
+              {/*  href=""*/}
+              {/*  target="_blank"*/}
+              {/*  justIcon*/}
+              {/*  simple*/}
+              {/*  color={"primary"}*/}
+              {/*>*/}
+              {/*  <i className="fab fa-twitter" />*/}
+              {/*</Button>*/}
+              {/*<Button*/}
+              {/*  href=""*/}
+              {/*  target="_blank"*/}
+              {/*  justIcon*/}
+              {/*  simple*/}
+              {/*  color={"primary"}*/}
+              {/*>*/}
+              {/*  <i className="fab fa-youtube" />*/}
+              {/*</Button>*/}
+              {/*<Button*/}
+              {/*  href=""*/}
+              {/*  target="_blank"*/}
+              {/*  justIcon*/}
+              {/*  simple*/}
+              {/*  color={"primary"}*/}
+              {/*>*/}
+              {/*  <i className="fab fa-instagram" />*/}
+              {/*</Button>*/}
+            </CardFooter>
+          </Card>
+        </GridItem>
 
         {/*CARVER*/}
-      <GridItem md={4} sm={12}>
-        <Card profile plain>
-          <CardAvatar profile plain>
-            <img
-              src={makeCloudinaryUrl(
-                "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1613059065/Team/Carver_Lee_copy_fcxfg7.jpg"
-              )}
-              alt="profile-pic"
-              className={classes.img}
-            />
-          </CardAvatar>
-          <CardBody plain>
-            <h4 className={classes.cardTitle}>
-              Carver Lee, MSc
-            </h4>
-            <h6 className={classes.textMuted}>
-              Graphic Design + Marketing Lead
-            </h6>
-            <p className={classes.cardDescription}>
-              A geologist, sailor, teacher, and designer all rolled into one, Carver believes that learning and
-              creating is always the way forward.
-            </p>
-          </CardBody>
-          <CardFooter className={classes.justifyContent}>
-            <Button
-              href="https://www.csaltdesign.co/"
-              target="_blank"
-              justIcon
-              simple
-              color={"primary"}
-            >
-              <i className="fas fa-globe" />
-            </Button>
-            <Button
-              href="https://www.linkedin.com/in/carverelee/"
-              target="_blank"
-              justIcon
-              simple
-              color={"primary"}
-            >
-              <i className="fab fa-linkedin" />
-            </Button>
-            <Button
-              href="https://twitter.com/basalticcraver"
-              target="_blank"
-              justIcon
-              simple
-              color={"primary"}
-            >
-              <i className="fab fa-twitter" />
-            </Button>
-            <Button
-              href="https://www.instagram.com/carver.carve/"
-              target="_blank"
-              justIcon
-              simple
-              color={"primary"}
-            >
-              <i className="fab fa-instagram" />
-            </Button>
-          </CardFooter>
-        </Card>
-      </GridItem>
+        <GridItem md={4} sm={12}>
+          <Card profile plain>
+            <CardAvatar profile plain>
+              <img
+                src={makeCloudinaryUrl(
+                  "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1613059065/Team/Carver_Lee_copy_fcxfg7.jpg"
+                )}
+                alt="profile-pic"
+                className={classes.img}
+              />
+            </CardAvatar>
+            <CardBody plain>
+              <h4 className={classes.cardTitle}>
+                Carver Lee, MSc
+              </h4>
+              <h6 className={classes.textMuted}>
+                Graphic Design + Marketing Lead
+              </h6>
+              <p className={classes.cardDescription}>
+                A geologist, sailor, teacher, and designer all rolled into one, Carver believes that learning and
+                creating is always the way forward.
+              </p>
+            </CardBody>
+            <CardFooter className={classes.justifyContent}>
+              <Button
+                href="https://www.csaltdesign.co/"
+                target="_blank"
+                justIcon
+                simple
+                color={"primary"}
+              >
+                <i className="fas fa-globe" />
+              </Button>
+              <Button
+                href="https://www.linkedin.com/in/carverelee/"
+                target="_blank"
+                justIcon
+                simple
+                color={"primary"}
+              >
+                <i className="fab fa-linkedin" />
+              </Button>
+              <Button
+                href="https://twitter.com/basalticcraver"
+                target="_blank"
+                justIcon
+                simple
+                color={"primary"}
+              >
+                <i className="fab fa-twitter" />
+              </Button>
+              <Button
+                href="https://www.instagram.com/carver.carve/"
+                target="_blank"
+                justIcon
+                simple
+                color={"primary"}
+              >
+                <i className="fab fa-instagram" />
+              </Button>
+            </CardFooter>
+          </Card>
+        </GridItem>
+      </GridContainer>
+
+      {/*---------------*/}
+      {/*WEB DEV*/}
+      <GridContainer className={classes.justifyContent}>
+      <div className={classes.sectionLabel}>
+        <h3>DEV TEAM</h3>
+        <h4>The talented group building and maintaining our site and a growing variety of publishing and teaching tools.
+          Programming in React.js, SASS, CSS, HTML, R and more.</h4>
+      </div>
 
         {/*KENZIE*/}
       <GridItem md={4} sm={12}>
@@ -815,7 +825,7 @@ export default function SectionTeam() {
     <h3>ALUMNI</h3>
     <h4>We wouldn't be here without the hard work of these amazing folks!</h4>
   </div>;
-  <GridContainer className={classes.alumGridContainer}>
+  <GridContainer className={classes.justifyContent}>
     <GridItem md={4} sm={12}>
       <Card profile plain>
         <CardAvatar profile plain>
