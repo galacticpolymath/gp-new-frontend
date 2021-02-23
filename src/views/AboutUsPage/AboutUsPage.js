@@ -92,7 +92,7 @@ export default function AboutUsPage(...rest) {
         <div className={classes.container}>
           <SectionDescription />
           <SectionTeam />
-          <SectionServices />
+          {/*<SectionServices />*/}
           {/* <SectionOffice /> */}
           <SectionContact />
         </div>

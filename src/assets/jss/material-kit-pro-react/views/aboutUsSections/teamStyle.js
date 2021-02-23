@@ -23,6 +23,18 @@ const teamStyle = {
   team: {
     // padding: "80px 0px",
   },
+  alumGridContainer: {
+
+  },
+  sectionLabel:{
+    padding: "3vh 2vh 2vh",
+    "& >*":{
+      textAlign: "center",
+    },
+    "& h4":{
+      margin: "0 10vw"
+    }
+  },
   textCenter: {
     textAlign: "center!important",
   },
@@ -39,8 +51,10 @@ const teamStyle = {
   bgColor: {
     backgroundColor: "#2c83c3",
   },
-  teamGridContainer: {
-    // display: "grid",
+  centeredGridContainer: {
+    display: "grid",
+    justifyItems: "center",
+    // gridTemplateColumns: "1fr 1fr 1fr"
     // gridTemplateRows: "content auto"
   }
 };
