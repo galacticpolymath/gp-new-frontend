@@ -18,14 +18,16 @@ const teamStyle = {
   cardTitle,
   cardDescription: {
     color: grayColor[3],
-    padding: "1rem"
+    padding: "1rem",
+    paddingBottom: "0",
+    marginBottom: 0
   },
   team: {
     // padding: "80px 0px",
   },
 
   sectionLabel:{
-    padding: "3vh 2vh 2vh",
+    padding: "12vh 2vh 2vh",
     "& >*":{
       textAlign: "center",
     },
@@ -33,6 +35,7 @@ const teamStyle = {
       margin: "0 10vw"
     }
   },
+
   textCenter: {
     textAlign: "center!important",
   },

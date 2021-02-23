@@ -39,7 +39,9 @@ export default function SectionTeam() {
         </GridItem>
       </GridContainer>
       {/*LEADERSHIP*/}
-      <div className={classes.sectionLabel}>
+      <div className={classes.sectionLabel}
+      style={{paddingTop: "0"}}
+      >
         <h3>LEADERSHIP</h3>
         <h4>After doing biological research for over a decade and teaching in Nashville public middle schools for
           3&nbsp;1&frasl;2 years, Matt
