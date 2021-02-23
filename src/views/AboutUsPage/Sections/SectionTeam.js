@@ -15,6 +15,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import teamStyle from "assets/jss/material-kit-pro-react/views/aboutUsSections/teamStyle.js";
 
 import { makeCloudinaryUrl } from "components/shared/constants";
+// import {ReactComponent as ScholarIcon} from "assets/img/google_scholar.svg";
+// import SvgIcon from "@material-ui/core";
+import Scholar from "components/CustomIcons/googleScholar.js";
 import grey from "@material-ui/core/colors/grey";
 
 const useStyles = makeStyles(teamStyle);
@@ -37,12 +40,14 @@ export default function SectionTeam() {
         </GridItem>
       </GridContainer>
       <GridContainer>
-        <GridItem md={3} sm={3}>
+
+        {/*MATT*/}
+        <GridItem md={4} sm={4}>
           <Card profile plain>
             <CardAvatar profile plain>
               <img
                 src={makeCloudinaryUrl(
-                  "w_150,c_fill,ar_1:1,q_100,g_auto/v1592966233/Team/Matt_Wilkins_profile_ukorql.jpg"
+                  "q_auto:best,f_auto,w_300/v1592966233/Team/Matt_Wilkins_profile_ukorql.jpg"
                 )}
                 alt="profile-pic"
                 className={classes.img}
@@ -50,10 +55,10 @@ export default function SectionTeam() {
             </CardAvatar>
             <CardBody plain>
               <h4 className={classes.cardTitle}>Matt Wilkins, PhD</h4>
-              <h6 className={classes.textMuted}>CEO, Founder</h6>
+              <h6 className={classes.textMuted}>Founder, CEO</h6>
               <p className={classes.cardDescription}>
-                And I love you like Kanye loves Kanye. We need to restart the
-                human foundation.
+                A scientist, teacher, writer, and pusher of boulders. Matt wants to live in a world where critical
+                thinking and curiosity are as essential as breathing.
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
@@ -62,23 +67,43 @@ export default function SectionTeam() {
                 target="_blank"
                 justIcon
                 simple
-                style={{ color: grey[900] }}
+                color={"primary"}
               >
-                <i className="fas fa-globe"> </i>
+                <i className="fas fa-globe" />
               </Button>
               <Button
                 href="https://www.linkedin.com/in/mattwilkinsphd/"
                 target="_blank"
                 justIcon
                 simple
-                color="linkedin"
+                color={"primary"}
               >
                 <i className="fab fa-linkedin" />
+              </Button>
+              <Button
+                href="https://twitter.com/mattwilkinsbio"
+                target="_blank"
+                justIcon
+                simple
+                color={"primary"}
+              >
+                <i className="fab fa-twitter" />
+              </Button>
+              <Button
+                href="https://twitter.com/mattwilkinsbio"
+                target="_blank"
+                justIcon
+                simple
+                color={"primary"}
+
+              >
+                <Scholar style={{transform: "scale(2)"}}/>
               </Button>
             </CardFooter>
           </Card>
         </GridItem>
-        <GridItem md={3} sm={3}>
+        {/*STEPH*/}
+        <GridItem md={4} sm={4}>
           <Card profile plain>
             <CardAvatar profile plain>
               <img
@@ -112,7 +137,7 @@ export default function SectionTeam() {
             </CardFooter>
           </Card>
         </GridItem>
-        <GridItem md={3} sm={3}>
+        <GridItem md={4} sm={4}>
           <Card profile plain>
             <CardAvatar profile plain>
               <img
@@ -144,7 +169,7 @@ export default function SectionTeam() {
             </CardFooter>
           </Card>
         </GridItem>
-        <GridItem md={3} sm={3}>
+        <GridItem md={4} sm={4}>
           <Card profile plain>
             <CardAvatar profile plain>
               <img
