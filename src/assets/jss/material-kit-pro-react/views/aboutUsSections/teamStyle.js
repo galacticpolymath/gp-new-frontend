@@ -17,7 +17,8 @@ const teamStyle = {
   },
   cardTitle,
   cardDescription: {
-    color: grayColor[0],
+    color: grayColor[3],
+    padding: "1rem"
   },
   team: {
     // padding: "80px 0px",
@@ -27,7 +28,7 @@ const teamStyle = {
   },
   img: {
     width: "100%",
-    height: "auto",
+    height: "100%",
   },
   textMuted: {
     color: grayColor[7] + " !important",
@@ -38,6 +39,10 @@ const teamStyle = {
   bgColor: {
     backgroundColor: "#2c83c3",
   },
+  teamGridContainer: {
+    // display: "grid",
+    // gridTemplateRows: "content auto"
+  }
 };
 
 export default teamStyle;
