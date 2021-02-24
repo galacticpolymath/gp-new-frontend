@@ -12,7 +12,10 @@ const imgFluid = imagesStyles.imgFluid;
 
 const servicesStyle = {
   title,
-  description,
+  description:{
+    ...description,
+
+  },
   mrAuto,
   mlAuto,
   textCenter: {

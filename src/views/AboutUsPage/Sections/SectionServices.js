@@ -4,8 +4,10 @@ import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui/icons
-import Gesture from "@material-ui/icons/Gesture";
-import Build from "@material-ui/icons/Build";
+import InsertChartOutlinedOutlined from "@material-ui/icons/InsertChartOutlinedOutlined";
+import CloudUploadIcon from '@material-ui/icons/CloudUpload';
+import ArtTrackIcon from '@material-ui/icons/ArtTrack';
+
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -29,14 +31,11 @@ export default function SectionServices() {
             classes.textCenter
           )}
         >
-          <h2 className={classes.title}>We Build Awesome Lessons</h2>
-          <h4 className={classes.description}>
-          They are creative, interdisciplinary, and weave real
-          world data and puzzles into memorable learning experiences.
-          We work tirelessly with teachers to make lessons better and
-          easier to teach so they can spend less time planning and more
-          time empowering students to think bigger – learn everything!
-          </h4>
+          <h2 className={classes.title}>Achieve Real, Lasting Impact</h2>
+          <h3>
+            We translate any complex body of knowledge into open-access,
+            interdisciplinary lessons that weave real world data and puzzles into memorable learning experiences.
+          </h3>
         </GridItem>
       </GridContainer>
       <GridContainer>
@@ -45,52 +44,50 @@ export default function SectionServices() {
             title="1. Design"
             description={
               <span>
-                <p>
-                  The moment you use Material Kit, you know you’ve never felt
-                  anything like it. With a single use, this powerfull UI Kit
-                  lets you do more than ever before.{" "}
-                </p>
-                <a href="#pablo">Find more...</a>
+                <h4>
+                  We define what knowledge you want to convey, align it to learning
+                  standards in each subject, and build lesson(s) that will improve
+                  public understanding and engagement in your focus area.
+                </h4>
               </span>
             }
-            icon={Gesture}
+            icon={ArtTrackIcon}
             iconColor="rose"
           />
         </GridItem>
         <GridItem md={4} sm={4}>
           <InfoArea
-            title="2. Develop"
+            title="2. Publish"
             description={
               <span>
-                <p>
-                  Divide details about your product or agency work into parts.
-                  Write a few lines about each one. A paragraph describing a
-                  feature will be enough.{" "}
-                </p>
-                <a href="#pablo">Find more...</a>
+                <h4>
+                  We publish lessons on our site and will do the hard work of getting them out to teachers through
+                  a growing network of educators, districts, and professional organizations.
+                </h4>
               </span>
             }
-            icon={Build}
+            icon={CloudUploadIcon}
             iconColor="rose"
           />
         </GridItem>
         <GridItem md={4} sm={4}>
           <InfoArea
-            title="3. Make Edits"
+            title="3. Revise & Report"
             description={
               <span>
-                <p>
-                  Divide details about your product or agency work into parts.
-                  Write a few lines about each one. A paragraph describing a
-                  feature will be enough.{" "}
-                </p>
-                <a href="#pablo">Find more...</a>
+                <h4>
+                  As we hear back from teachers, we improve the lessons through transparent versioning, and collect
+                  impact data, which we will summarize and report back to you upon request.
+                </h4>
               </span>
             }
-            icon="mode_edit"
+            icon={InsertChartOutlinedOutlined}
             iconColor="rose"
           />
         </GridItem>
+        <h3 className={classNames(classes.textCenter,classes.mrAuto,classes.mlAuto)}>
+          <b>Learn how we can level up your outreach in <a href={"hire-us/"}>Hire Us</a></b>
+        </h3>
       </GridContainer>
     </div>
   );
