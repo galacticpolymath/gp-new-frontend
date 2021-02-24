@@ -89,7 +89,7 @@ export default function SectionPricing() {
   <div className={classes.pricingSection}>
 
       <GridContainer id={"priceList"}>
-        <GridItem md={4} sm={4}>
+        <GridItem md={4} sm={12}>
           <Card plain pricing>
             <CardBody pricing>
               <h5
@@ -174,7 +174,7 @@ export default function SectionPricing() {
             </CardBody>
           </Card>
         </GridItem>
-        <GridItem md={4} sm={4}>
+        <GridItem md={4} sm={12}>
           <Card raised pricing color="primary">
             <CardBody pricing>
               <h5 className={classes.cardCategory}>LASTING IMPACT</h5>
@@ -254,7 +254,7 @@ export default function SectionPricing() {
             </CardBody>
           </Card>
         </GridItem>
-        <GridItem md={4} sm={4}>
+        <GridItem md={4} sm={12}>
           <Card plain pricing>
             <CardBody pricing>
               <h5
@@ -267,13 +267,13 @@ export default function SectionPricing() {
               </h3>
               <ul>
                 <PricingFeature
-                  boldedLabel={"All Lessons Needed"}
-                  description={""}
+                  boldedLabel={"All"}
+                  description={" Lessons Needed"}
                   linkTarget={"#1lesson"}
                 />
                 <PricingFeature
-                  boldedLabel={"All Media Assets Needed"}
-                  description={""}
+                  boldedLabel={"All"}
+                  description={"Custom Assets Needed"}
                   linkTarget={"#customMedia"}
                 />
                 <PricingFeature

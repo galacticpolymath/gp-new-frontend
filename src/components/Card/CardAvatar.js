@@ -18,6 +18,7 @@ export default function CardAvatar(props) {
     className,
     plain,
     profile,
+    profileSq,
     testimonial,
     testimonialFooter,
     ...rest
@@ -26,6 +27,7 @@ export default function CardAvatar(props) {
   const cardAvatarClasses = classNames({
     [classes.cardAvatar]: true,
     [classes.cardAvatarProfile]: profile,
+    [classes.cardAvatarProfileSq]: profileSq,
     [classes.cardAvatarPlain]: plain,
     [classes.cardAvatarTestimonial]: testimonial,
     [classes.cardAvatarTestimonialFooter]: testimonialFooter,
@@ -42,6 +44,7 @@ CardAvatar.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   profile: PropTypes.bool,
+  profileSq: PropTypes.bool,
   plain: PropTypes.bool,
   testimonial: PropTypes.bool,
   testimonialFooter: PropTypes.bool

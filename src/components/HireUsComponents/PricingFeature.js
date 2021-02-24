@@ -12,8 +12,8 @@ import pricingStyle from "assets/jss/material-kit-pro-react/views/hireUsSections
 const useStyles = makeStyles(pricingStyle);
 
 export default function PricingFeature(props) {
-  const { boldedLabel, description, linkTarget, scrollOffset, minHeight } = props
-  const classes = useStyles()
+  const { boldedLabel, description, linkTarget, scrollOffset, minHeight } = props;
+  const classes = useStyles();
   // const iconWrapper = classNames({
   //   [classes.iconWrapper]: true,
   //   [classes[iconColor]]: true,
@@ -38,30 +38,36 @@ export default function PricingFeature(props) {
   // }
   return (
     <li className={classes.pfContainer}
-    style={{
-      minHeight: props.minHeight}}
+        style={{
+          minHeight: props.minHeight
+        }}
       // borderBottom: "1px solid rgba("+hexToRgb(props.bottomBorderCol)+"0.6"}}
     >
       <AnchorLink
         href={linkTarget}
         offset={scrollOffset}
         className={classes.pfLink}>
-        <span className={classes.pfTXT}>
-      <b className={classes.boldedLabel}>{boldedLabel}&nbsp;</b>
-        <span className={classes.pfDescription}>{description}</span>
-      </span>
+        <div className={classes.gridCont}>
+          <div className={classes.pfTXT}>
+            <h4><b className={classes.boldedLabel}>{boldedLabel}&nbsp;</b>
+            </h4>
+          </div>
+          <div className={classes.pfDescription}>
+            <h4>{description}</h4>
+          </div>
+        </div>
+
       </AnchorLink>
     </li>
 
-  )
+  );
 
 }
 
 PricingFeature.defaultProps = {
   scrollOffset: "125px",
   minHeight: "0"
-}
-
+};
 
 
 // {/*// HireUsComponents.propTypes = {*/}

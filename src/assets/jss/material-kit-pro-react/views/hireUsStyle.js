@@ -83,7 +83,8 @@ const hireUsStyle = {
   },
   boxContainer: {
     backgroundColor: grayColor[2],
-    padding: "20px 20px 20px 40px",
+    padding: "5vh 5vw ",
+    margin: "0 2vw",
     border: "1px solid" + grayColor[6],
     borderRadius: "5px",
     "& h3": {
