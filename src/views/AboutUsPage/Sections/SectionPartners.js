@@ -6,8 +6,8 @@ import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
 import CardAvatar from "components/Card/CardAvatar.js";
 import CardBody from "components/Card/CardBody.js";
-import CardFooter from "components/Card/CardFooter.js";
-import Button from "components/CustomButtons/Button.js";
+// import CardFooter from "components/Card/CardFooter.js";
+// import Button from "components/CustomButtons/Button.js";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -24,10 +24,8 @@ export default function SectionPartners() {
     <div className={classes.partners}>
 
       {/*SciComm Alliance Partners*/}
-      <div className={classes.sectionLabel}
-           style={{ paddingTop: "0" }}
-      >
-        <h3>STEM Advocacy Institute</h3>
+      <div className={classes.sectionLabel}    >
+        <h3>PARTNERS</h3>
         <h4>The amazing organizations we work with to generate high quality multimedia, develop new education tools,
           and improve access to STEM careers for underserved communities.</h4>
       </div>
@@ -36,16 +34,20 @@ export default function SectionPartners() {
         {/*SAI*/}
         <GridItem xs={12} sm={6} md={4}>
           <Card pricing plain>
-            <CardAvatar profileSq plain>
+
+            <CardAvatar profileSq>
+              <a href={"https://stemadvocacy.org/"}>
               <img
                 src={makeCloudinaryUrl(
                   "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1597115866/Partners/SAiLogo_ikbcl5.jpg"
                 )}
                 alt="profile-pic"
-                className={classes.img}
+                className={classes.logo}
                 style={{padding: "0 1rem"}}
               />
+            </a>
             </CardAvatar>
+
             <CardBody plain>
               <h4 className={classes.cardTitle}>
                 STEM Advocacy Institute
@@ -58,23 +60,13 @@ export default function SectionPartners() {
                 and connect with underserved audiences.
               </p>
             </CardBody>
-            <CardFooter className={classes.justifyContent}>
-              <Button
-                href="https://stemadvocacy.org/"
-                target="_blank"
-                justIcon
-                simple
-                color={"primary"}
-              >
-                <i className="fas fa-globe" />
-              </Button>
-            </CardFooter>
           </Card>
         </GridItem>
         {/*SAI*/}
         <GridItem xs={12} sm={6} md={4}>
           <Card pricing plain>
-            <CardAvatar profileSq plain>
+            <CardAvatar profileSq>
+              <a href={"https://phuturedoctors.com/"}>
               <img
                 src={makeCloudinaryUrl(
                   "q_auto:best,f_auto,w_300,h_300/v1597114912/Partners/phutureDoctorsLogo_eylt5h.png"
@@ -83,6 +75,7 @@ export default function SectionPartners() {
                 className={classes.img}
                 style={{padding: "6% 10% 6% 8%"}}
               />
+              </a>
             </CardAvatar>
             <CardBody plain>
               <h4 className={classes.cardTitle}>
@@ -96,17 +89,6 @@ export default function SectionPartners() {
                 curiosity and critical thinking in everyone.
               </p>
             </CardBody>
-            <CardFooter className={classes.justifyContent}>
-              <Button
-                href="https://phuturedoctors.com/"
-                target="_blank"
-                justIcon
-                simple
-                color={"primary"}
-              >
-                <i className="fas fa-globe" />
-              </Button>
-            </CardFooter>
           </Card>
         </GridItem>
       </GridContainer>

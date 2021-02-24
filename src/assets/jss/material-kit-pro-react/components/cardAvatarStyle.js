@@ -33,13 +33,14 @@ const cardAvatarStyle = {
     maxHeight: "130px",
     height: "10rem",
     width: "auto",
-    margin: "auto auto",
+    margin: "auto",
     borderRadius: "5%",
     display: "flex",
-    alignContents: "center",
+    alignContents: "middle",
+
     // overflow: "hidden",
     objectFit: "contain",
-    // padding: "auto",
+    padding: "auto",
     boxShadow:
       "0 16px 38px -12px rgba(" +
       hexToRgb(blackColor) +
@@ -49,15 +50,21 @@ const cardAvatarStyle = {
       hexToRgb(blackColor) +
       ", 0.2)",
     "&$cardAvatarPlain": {
-      marginTop: "0",
+      marginTop: "0"
     },
-      "& img": {
-        maxWidth: "130px",
-        maxHeight: "130px",
-        height: "10rem",
-        width: "auto",
-        margin: "auto auto",
-      }
+    "& a": {
+      display: "flex",
+      alignContents: "middle",
+      margin: "auto"
+    },
+    "& img": {
+      maxWidth: "130px",
+      maxHeight: "130px"
+    },
+    // Hover effects
+    "&::hover":{
+
+    }
 
   },
 

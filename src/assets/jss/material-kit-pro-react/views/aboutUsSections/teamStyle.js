@@ -39,14 +39,14 @@ const teamStyle = {
   textCenter: {
     textAlign: "center!important",
   },
-  img: {
-    width: "100%",
-    height: "100%",
-  },
+  // img: {
+  //   width: "100%",
+  //   height: "100%",
+  // },
 
-  imgSquare: {
-    borderRadius: "0%"
-  },
+  // imgSquare: {
+  //   borderRadius: "0%"
+  // },
 
   textMuted: {
     color: grayColor[7] + " !important",
