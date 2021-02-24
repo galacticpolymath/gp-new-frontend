@@ -555,10 +555,22 @@ const buttonStyle = {
     }
   },
   simple: {
+    borderRadius: "50%",
     "&,&:focus,&:hover": {
       color: whiteColor,
       background: "transparent",
       boxShadow: "none"
+    },
+    "&:hover":{
+      boxShadow:
+        "0 16px 38px -6px rgba(" +
+        hexToRgb(blackColor) +
+        ", 0.56), 0 4px 28px 0px rgba(" +
+        hexToRgb(blackColor) +
+        ", 0.12), 0 8px 12px -2px rgba(" +
+        hexToRgb(blackColor) +
+        ", 0.2)",
+
     },
     "&$primary": {
       "&,&:focus,&:hover,&:visited": {

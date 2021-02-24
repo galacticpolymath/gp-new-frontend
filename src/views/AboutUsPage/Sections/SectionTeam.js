@@ -607,7 +607,7 @@ export default function SectionTeam() {
               Front End Web Developer
             </h6>
             <p className={classes.cardDescription}>
-              A Software Developer who loves problem solving, puzzles, and art. Loves gaming, learning, and crocheting
+              A Software Developer who loves problem solving, puzzles, and art. Fan of gaming, learning, and crocheting
               adorable, nerdy things. Powered by coffee.
             </p>
           </CardBody>
@@ -618,6 +618,7 @@ export default function SectionTeam() {
               justIcon
               simple
               color={"primary"}
+              className={classes.social}
             >
               <i className="fas fa-globe" />
             </Button>
