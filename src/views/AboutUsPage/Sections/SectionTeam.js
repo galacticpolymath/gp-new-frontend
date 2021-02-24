@@ -826,7 +826,7 @@ export default function SectionTeam() {
   <div className={classes.sectionLabel}>
     <h3>ALUMNI</h3>
     <h4>We wouldn't be here without the hard work of these amazing folks!</h4>
-  </div>;
+  </div>
   <GridContainer className={classes.justifyContent}>
     <GridItem md={4} sm={12}>
       <Card profile plain>
@@ -859,7 +859,7 @@ export default function SectionTeam() {
           </Button>
         </CardFooter>
       </Card>
-    </GridItem>;
+    </GridItem>
     {/*TYLER*/
     }
     <GridItem md={4} sm={12}>
@@ -903,7 +903,7 @@ export default function SectionTeam() {
         </CardFooter>
       </Card>
     </GridItem>
-  </GridContainer>;
+  </GridContainer>
 </div>
 )
 ;

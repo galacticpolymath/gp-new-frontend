@@ -2,7 +2,7 @@ import { blackColor, hexToRgb } from "assets/jss/material-kit-pro-react.js";
 
 const cardAvatarStyle = {
   cardAvatar: {
-    "&$cardAvatarProfile img,&$cardAvatarTestimonial img": {
+    "&$cardAvatarProfile img, &$cardAvatarProfileSq img, &$cardAvatarTestimonial img": {
       width: "100%",
       height: "auto"
     }
@@ -26,6 +26,41 @@ const cardAvatarStyle = {
       marginTop: "0"
     }
   },
+
+  //custom fork of cardAvatarProfile
+  cardAvatarProfileSq: {
+    maxWidth: "80%", /*"130px",*/
+    maxHeight: "130px",
+    height: "10rem",
+    width: "auto",
+    margin: "auto auto",
+    borderRadius: "5%",
+    display: "flex",
+    alignContents: "center",
+    // overflow: "hidden",
+    objectFit: "contain",
+    // padding: "auto",
+    boxShadow:
+      "0 16px 38px -12px rgba(" +
+      hexToRgb(blackColor) +
+      ", 0.56), 0 4px 25px 0px rgba(" +
+      hexToRgb(blackColor) +
+      ", 0.12), 0 8px 10px -5px rgba(" +
+      hexToRgb(blackColor) +
+      ", 0.2)",
+    "&$cardAvatarPlain": {
+      marginTop: "0",
+    },
+      "& img": {
+        maxWidth: "130px",
+        maxHeight: "130px",
+        height: "10rem",
+        width: "auto",
+        margin: "auto auto",
+      }
+
+  },
+
   cardAvatarPlain: {},
   cardAvatarTestimonial: {
     margin: "-50px auto 0",

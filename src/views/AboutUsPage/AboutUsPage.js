@@ -14,12 +14,15 @@ import Footer from "components/Footer/Footer.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import SectionDescription from "views/AboutUsPage/Sections/SectionDescription.js";
 import SectionTeam from "views/AboutUsPage/Sections/SectionTeam.js";
+import SectionPartners from "./Sections/SectionPartners";
 import SectionServices from "views/AboutUsPage/Sections/SectionServices.js";
 import SectionContact from "views/AboutUsPage/Sections/SectionContact.js";
+
 
 // styling
 import aboutUsStyle from "assets/jss/material-kit-pro-react/views/aboutUsStyle.js";
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
+
 
 const useStyles = makeStyles(aboutUsStyle);
 
@@ -92,8 +95,9 @@ export default function AboutUsPage(...rest) {
         <div className={classes.container}>
           <SectionDescription />
           <SectionTeam />
-          {/*<SectionServices />*/}
-          {/* <SectionOffice /> */}
+          <SectionPartners />
+          <SectionServices />
+           {/*<SectionOffice />*/}
           <SectionContact />
         </div>
       </div>
