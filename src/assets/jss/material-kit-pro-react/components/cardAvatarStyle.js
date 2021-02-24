@@ -1,4 +1,4 @@
-import { blackColor, hexToRgb } from "assets/jss/material-kit-pro-react.js";
+import { blackColor,warningColor, hexToRgb } from "assets/jss/material-kit-pro-react.js";
 
 const cardAvatarStyle = {
   cardAvatar: {
@@ -62,8 +62,16 @@ const cardAvatarStyle = {
       maxHeight: "130px"
     },
     // Hover effects
-    "&::hover":{
-
+    "&:hover": {
+      // border: "4px solid red",
+      boxShadow:
+        "0 16px 38px -12px rgba(" +
+        hexToRgb(warningColor[0]) +
+        ", 0.56), 0 4px 25px 0px rgba(" +
+        hexToRgb(warningColor[0]) +
+        ", 0.12), 0 8px 10px -5px rgba(" +
+        hexToRgb(warningColor[0]) +
+        ", 0.2)"
     }
 
   },
