@@ -749,7 +749,8 @@ const buttonStyle = {
   },
   fileButton: {
     // display: "inline-block"
-  }
+  },
+
 };
 
 export default buttonStyle;

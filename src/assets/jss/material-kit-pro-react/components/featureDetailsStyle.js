@@ -11,7 +11,8 @@ import {
 
 const featureDetailsStyle = {
   featureDeets:{
-  paddingBottom:"4rem",
+    margin: 0,
+    paddingBottom:"4rem",
   },
   keyPhrase1:{
     color: primaryColor[0],
