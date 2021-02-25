@@ -7,6 +7,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import InsertChartOutlinedOutlined from "@material-ui/icons/InsertChartOutlinedOutlined";
 import CloudUploadIcon from '@material-ui/icons/CloudUpload';
 import ArtTrackIcon from '@material-ui/icons/ArtTrack';
+import BlurOn from "@material-ui/icons/BlurOn";
+
+import { roseColor } from "assets/jss/material-kit-pro-react.js";
 
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
@@ -31,7 +34,10 @@ export default function SectionServices() {
             classes.textCenter
           )}
         >
-          <h2 className={classes.title}>Achieve Real, Lasting Impact</h2>
+          <h2 className={classes.title}>
+            <BlurOn
+               style={{ color: roseColor[0], fontSize:"2.6rem",marginLeft:"-2.6rem" }}/>
+            Achieve Real, Lasting Impact</h2>
           <h3>
             We translate any complex body of knowledge into open-access,
             interdisciplinary lessons that weave real world data and puzzles into memorable learning experiences.

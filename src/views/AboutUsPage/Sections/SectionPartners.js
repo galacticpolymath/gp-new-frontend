@@ -82,7 +82,7 @@ export default function SectionPartners() {
                 PhutureDoctors
               </h4>
               <h6 className={classes.textMuted}>
-                Collaborator
+                Multimedia Partner
               </h6>
               <p className={classes.cardDescription}>
                 Phuture Doctors and Galactic Polymath are both committed to amplifying diverse voices in STEM and

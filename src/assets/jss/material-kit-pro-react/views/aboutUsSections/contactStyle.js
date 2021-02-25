@@ -25,7 +25,16 @@ const contactStyle = {
   },
   aboutUs: {
     padding: "80px 0px"
+  },
+  justifyContent: {
+    justifyContent: "center!important",
+    textAlign: "center",
+
+  },
+  emailButton:{
+    paddingTop: "2rem"
   }
+
 };
 
 export default contactStyle;

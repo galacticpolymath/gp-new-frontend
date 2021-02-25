@@ -28,7 +28,7 @@ export default function SectionDescription() {
           className={classNames(
             classes.mlAuto,
             classes.mrAuto,
-            classes.textLeft)}
+            classes.textCenter)}
         >
           {/*Note warning just changes to the warning color--atomic blue*/}
           <Warning><h2>Our Mission</h2></Warning>
@@ -43,7 +43,7 @@ export default function SectionDescription() {
         >
           <h4
           className={classes.textLeft}>
-            To create a direct pipeline between scientists and G5-12 classrooms by translating complex topics from
+            To create a direct pipeline between the sources of Knowledge and G5-12 classrooms by translating complex topics from
             researchers, non-profits, and sustainable corporations, into high-quality, open-access educational
             materials.</h4>
         </GridItem>
