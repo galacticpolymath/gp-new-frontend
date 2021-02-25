@@ -9,16 +9,6 @@ import FeatureDetails from "../../../components/HireUsComponents/FeatureDetails"
 
 import addOnsStyle from "assets/jss/material-kit-pro-react/views/hireUsSections/featuresStyle.js";
 
-// function concatenates descriptor text with an embedded link. Couldn't figure a way
-// to do this without this function...
-export function buildLink(text,href,linkText,text2) {
-  return(
-    <span className={"description"}>
-      {text} <a href={href} target={"_blank"}>{linkText}</a> {text2}
-    </span>
-  );
-}
-
 
 const useStyles = makeStyles(addOnsStyle);
 
@@ -42,7 +32,7 @@ export default function SectionFeatures() {
         keyPhrase2={"are the key components in multimedia storytelling."}
         description={"Whether your lesson needs animations, videos with voiceovers, infographics, short podcasts, or " +
         "something else, our team will custom create it. The number of assets per price point depends on the complexity " +
-        "of each piece and the needs of the lesson. "}
+        "of each piece and the needs of the lesson."}
 
       />
       <FeatureDetails
@@ -50,14 +40,14 @@ export default function SectionFeatures() {
         keyPhrase1={"Revisions"}
         keyPhrase2={"are how perfection is achieved."}
         description={"Whether it’s a typo, a misinterpreted graph, or an activity that’s not turning out as expected, " +
-        "Galactic Polymath is committed to creating quality materials and that takes time, effort, and revisions. "}
+        "Galactic Polymath is committed to creating quality materials and that takes time, effort, and revisions."}
       />
       <FeatureDetails
         id={"lessonSupport"}
         keyPhrase1={"Lesson Support,"}
         keyPhrase2={"like tech support for your lessons."}
         description={"This means working to improve usability, correct issues, and help teachers. Galactic Polymath is " +
-        "here to ensure that the lesson you paid for works perfectly. "}
+        "here to ensure that the lesson you paid for works perfectly."}
       />
       <FeatureDetails
         id={"impactReports"}
@@ -65,21 +55,21 @@ export default function SectionFeatures() {
         keyPhrase2={"to measure your outreach."}
         description={"Often necessary for grant proposals or public campaigns, we take the hard work out of measuring " +
         "your outreach. We monitor lesson site visits, downloads, teacher and student ratings and feedback, and deliver " +
-        "reports upon request. "}
+        "reports upon request."}
       />
       <FeatureDetails
         id={"openAccess"}
         keyPhrase1={"Open Access"}
         // a bit messy, but I couldn't figure a better way to do this
-        keyPhrase2={"Means you, teachers, and anyone else anywhere in the world are able to access and use the lessons we create."}
+        keyPhrase2={"means you, teachers, and anyone else anywhere in the world are able to access and use the lessons we create."}
         description={
-          buildLink(
-              "What is more, they are published with the ",
-              "https://creativecommons.org/licenses/by-nc/2.0/",
-            "CC-BY-NC 2.0 license",
-              "and distributed in editable formats so teachers can adapt and remix materials to meet their " +
-                "teaching styles and classroom needs."
-          )}
+          <span>What is more, they are published with the
+            <a href={"https://creativecommons.org/licenses/by-nc/2.0/"}>
+            CC-BY-NC 2.0 license</a>
+            and distributed in editable formats so teachers can adapt and remix materials to meet their
+            teaching styles and classroom needs.
+          </span>
+        }
       />
       <FeatureDetails
         id={"betaTesting"}
@@ -93,16 +83,44 @@ export default function SectionFeatures() {
         id={"learningThrough"}
         keyPhrase1={"Learning through Stories"}
         keyPhrase2={"leads to long-term knowledge retention."}
-        description={"Science has shown that when students learn new material and skills in the context of stories, it " +
-        "leads to better retention and understanding. "}
+        description={
+          <span>Research shows that when students learn new material and skills in the context of concrete applications and stories, it
+            leads to improved engagement, understanding, and learning retention.
+            <span>
+            <a
+              href="https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1559-1816.1977.tb00750.x"><sup>1,&nbsp;</sup> </a>
+            <a href="https://link.springer.com/article/10.3758%2FBF03332778"><sup>2,&nbsp;</sup> </a>
+            <a
+              href="https://www.researchgate.net/publication/272591393_The_use_of_narrative_to_promote_primary_school_children's_understanding_of_evolution"><sup>3,&nbsp;</sup> </a>
+            <a href="https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.991.568&rep=rep1&type=pdf"><sup>4</sup> </a>
+            </span>
+          </span>}
       />
       <FeatureDetails
         id={"USnational"}
         keyPhrase1={"US National Standards Alignment"}
-        keyPhrase2={"easy implementation for teachers across the nation."}
-        description={"Built with Understanding by Design, our lessons are aligned with the leading US educational " +
-        "standards—Next Generation Science Standards, Common Core Math and ELA, and the College, Career, and Civic Life " +
-        "Social Studies Framework. This alignment means that regardless of the district, our lessons will fit the curriculum. "}
+        keyPhrase2={"means teachers across the country can seamlessly incorporate your lesson into their curriculum."}
+        description={
+          <span>Built using
+              <a href={"https://cft.vanderbilt.edu/guides-sub-pages/understanding-by-design/"}> {"\""}Backward
+              Design{"\""} </a>
+            best practices, our lessons are aligned with the leading US educational standards in all four subjects, and are truly interdisciplinary!
+            <ul>
+              <li>
+                <span>ELA – <a href={"http://www.corestandards.org/ELA-Literacy/"}>Common Core ELA (CC-ELA)</a></span>
+              </li>
+              <li>
+                <span>Math – <a href={"http://www.corestandards.org/Math/"}>Common Core Math (CC-Math)</a></span>
+              </li>
+              <li>
+                <span>Science – <a href={"https://www.nextgenscience.org/"}>Next Generation Science Standards (NGSS)</a></span>
+              </li>
+              <li>
+                <span>Social Studies – <a href={"https://www.nextgenscience.org/"}>College, Career, and Civic Life Framework (C3)</a></span>
+              </li>
+            </ul>
+          </span>
+        }
       />
       <FeatureDetails
         id={"customStandards"}
@@ -110,23 +128,23 @@ export default function SectionFeatures() {
         keyPhrase2={"means a more specific focus, catered directly to your region."}
         description={"If you have a target district in mind that doesn’t use the standards we align to, or a target " +
         "audience that is not restricted by standards, we can work with you to align to any custom set of learning " +
-        "targets, standards, or goals. "}
+        "targets, standards, or goals."}
       />
       <FeatureDetails
         id={"designedFor"}
-        keyPhrase1={"Designed for Non-Subject Expert Teachers"}
+        keyPhrase1={"Designed for Non-Subject-Expert Teachers"}
         keyPhrase2={"means you don’t need a Master’s in biology to feel prepared to teach Galactic Polymath lessons. "}
         description={"Our aim is for a teacher with no formal training in the particular lesson topic to be able to " +
-        "prep each lesson within 15 minutes. "}
+        "prep each lesson within 15 minutes."}
       />
       <FeatureDetails
         id={"GPsensible"}
         keyPhrase1={"GP Sensible Lesson Plans"}
         keyPhrase2={"are built for fast and easy implementation."}
-        description={"As we said, the goal is 15 minutes or less of prep even for non-subject area teachers. We do " +
+        description={"As we said, the goal is 15 minutes or less of prep even for teachers with new training in the content. We do " +
         "this by designing lessons to be largely student-run and activated, by embedding scaffolding into presentations " +
         "and videos that support student understanding, and by providing quick prep tutorials for teachers that are " +
-        "prepared by people with real classroom experience. "}
+        "prepared by people with real classroom experience."}
       />
       <FeatureDetails
         id={"customData"}
@@ -134,7 +152,7 @@ export default function SectionFeatures() {
         keyPhrase2={"provide new, unforeseen knowledge."}
         description={"Our team includes professional scientists and data analysts who can compile new data, conduct new " +
         "analyses, and offer new, direct access to information in classrooms to inform the next generation of leaders. " +
-        "Whatever your dream lesson is, we can make it happen. "}
+        "Whatever your dream lesson is, we can make it happen."}
       />
     </div>
 

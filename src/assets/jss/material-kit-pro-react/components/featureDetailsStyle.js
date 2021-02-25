@@ -23,7 +23,18 @@ const featureDetailsStyle = {
     fontWeight: 400,
   },
   description:{
-  color: "black"
+  color: "black",
+    "& a sup":{
+        lineHeight: 0,
+        fontSize: "0.7em",
+    },
+    "& i":{
+    fontWeight: "200"
+    },
+    "& ul":{
+    paddingTop: "1.1rem"
+    }
+
   },
   iconWrapper: {
     float: "left",
@@ -80,6 +91,11 @@ const featureDetailsStyle = {
   iconVertical: {
     width: "61px",
     height: "61px"
+  },
+
+  toTop: {
+    paddingLeft: "1.1rem",
+    paddingTop: "1rem"
   }
 };
 

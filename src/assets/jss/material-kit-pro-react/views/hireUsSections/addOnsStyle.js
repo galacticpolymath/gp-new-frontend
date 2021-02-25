@@ -56,6 +56,7 @@ const addOnsStyle = {
         color: warningColor[0],
       },
     },
+
 };
 
 export default addOnsStyle;
