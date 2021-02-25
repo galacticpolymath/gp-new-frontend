@@ -41,10 +41,12 @@ export default function FeatureDetails(props) {
         <span>
         <b className={classes.keyPhrase1}>{keyPhrase1}&nbsp;</b>
         <span className={classes.keyPhrase2}>{keyPhrase2}&nbsp;</span>
-        <span className={classes.description}>{description}&nbsp;
-          <AnchorLink href={"#priceList"} offset={"125px"}>⤴ Back to Top</AnchorLink> </span>
-
+        <span className={classes.description}>{description}&nbsp;</span>
         </span>
+        <div className={classes.toTop}>
+          <AnchorLink href={"#priceList"} offset={"125px"}>⤴ To Top</AnchorLink>
+        </div>
+
       </h3>
       );
 }

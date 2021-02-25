@@ -72,7 +72,7 @@ export default function SectionTeam() {
               </h6>
               <p className={classes.cardDescription}>
                 A scientist, teacher, writer, and pusher of boulders. Matt wants to live in a world where critical
-                thinking and curiosity are as essential as breathing. Likes rock climbing, wildlife photography, and
+                thinking and curiosity are as essential as breathing. Enjoys rock climbing, wildlife photography, and
                 doing silly voices.
               </p>
             </CardBody>
@@ -131,7 +131,7 @@ export default function SectionTeam() {
       {/*PRODUCT TEAM*/}
       <div className={classes.sectionLabel}>
         <h3>PRODUCT TEAM</h3>
-        <h4>The incredible group of multitalented scientists, communicators, and education experts responsible for
+        <h4>The multitalented group of scientists, artists, communicators, and education experts responsible for
           bringing each Galactic Polymath lesson to life.</h4>
       </div>
       <GridContainer className={classes.justifyContent}>
@@ -156,7 +156,7 @@ export default function SectionTeam() {
               </h6>
               <p className={classes.cardDescription}>
                 A PhD candidate in science communication, award winning video producer,and previous Jackson Wild Media
-                Lab Fellow. She is also founder of Phuture Doctors—a media company showcasing diverse voices in STEM.
+                Lab Fellow. Stephanie is also founder of Phuture Doctors—a media company showcasing diverse voices in STEM.
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
@@ -229,7 +229,7 @@ export default function SectionTeam() {
                 Education Specialist
               </h6>
               <p className={classes.cardDescription}>
-                A spirited over-thinker with genuine enthusiasm for teaching and learning. She loves to paint, create,
+                A spirited over-thinker with genuine enthusiasm for teaching and learning. Elaine loves to paint, create,
                 build, and play if it means getting her hands dirty. Literally.
               </p>
             </CardBody>
@@ -304,7 +304,7 @@ export default function SectionTeam() {
               </h6>
               <p className={classes.cardDescription}>
                 A geologist, sailor, teacher, and designer all rolled into one, Carver believes that learning and
-                creating is always the way forward.
+                creating are always the way forward.
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
@@ -354,8 +354,8 @@ export default function SectionTeam() {
       <GridContainer className={classes.justifyContent}>
       <div className={classes.sectionLabel}>
         <h3>DEV TEAM</h3>
-        <h4>The talented group building and maintaining our site and a growing variety of publishing and teaching tools.
-          Programming in React.js, SASS, CSS, HTML, R and more.</h4>
+        <h4>The intrepid group building and maintaining our site, as well as a growing variety of publishing and teaching tools.
+          Fluent in React.js, SASS, CSS, HTML, R and other languages.</h4>
       </div>
 
         {/*KENZIE*/}
@@ -607,7 +607,7 @@ export default function SectionTeam() {
               Front End Web Developer
             </h6>
             <p className={classes.cardDescription}>
-              A Software Developer who loves problem solving, puzzles, and art. Loves gaming, learning, and crocheting
+              A Software Developer who loves problem solving, puzzles, and art. Fan of gaming, learning, and crocheting
               adorable, nerdy things. Powered by coffee.
             </p>
           </CardBody>
@@ -618,6 +618,7 @@ export default function SectionTeam() {
               justIcon
               simple
               color={"primary"}
+              className={classes.social}
             >
               <i className="fas fa-globe" />
             </Button>
@@ -874,7 +875,7 @@ export default function SectionTeam() {
           />
         </CardAvatar>
         <CardBody plain>
-          <h4 className={classes.cardTitle}>Tyler Lemburg</h4>
+          <h4 className={classes.cardTitle}>Tyler Lemburg, MSc</h4>
           <h6 className={classes.textMuted}>Previous Lead Developer, JobViz</h6>
           <p className={classes.cardDescription}>
             A Senior Software Engineer working remotely for Cognito. Tyler built the first iteration of JobViz. He

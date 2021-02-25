@@ -19,6 +19,7 @@ import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 //styles broad material UI components
 import hireUsStyle from "../../assets/jss/material-kit-pro-react/views/hireUsStyle";
 import { makeCloudinaryUrl } from "../../components/shared/constants";
+import SectionHeardEnough from "./Sections/SectionHeardEnough";
 
 
 const useStyles = makeStyles(hireUsStyle);
@@ -133,6 +134,7 @@ export default function PricingPage() {
             </h2>
           </div>
           <SectionFeatures />
+          <SectionHeardEnough />
         </div>
       </div>
       <Footer

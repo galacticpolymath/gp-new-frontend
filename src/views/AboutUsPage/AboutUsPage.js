@@ -66,8 +66,8 @@ export default function AboutUsPage(...rest) {
               >
                 Galactic Polymath (GP) is an education studio.{"\n"} We help scientists,
                 nonprofits, and sustainable companies
-                with outreach needs to translate complicated, cutting-edge
-                knowledge into mind-blowing lessons for grades 5+.
+                achieve outreach at scale by translating complex, cutting-edge
+                research into mind-blowing lessons for grades 5+.
               </h4>
             </GridItem>
             <GridItem
