@@ -28,7 +28,9 @@ const Header = ({
           Version {Version}{" "}
           {LastUpdated &&
             "(Updated " +
-              moment(new Date(LastUpdated)).format("MMM d, yyyy") +
+              moment(new Date(LastUpdated))
+                .add({ day: 1 })
+                .format("MMM D, yyyy") +
               ")"}
         </p>
         <h1>{Title}</h1>
