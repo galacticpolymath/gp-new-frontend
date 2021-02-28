@@ -20,14 +20,18 @@ const SteamBadge = ({ Title, Description, Footnote, Badge }) => {
     <div className={classes.container + " SteamBadge"}>
       <Image {...Badge} />
 
-      <ExpansionPanel expanded={expanded} onChange={() => expand(!expanded)}>
+      <ExpansionPanel
+        className="ExpansionPanel"
+        expanded={expanded}
+        onChange={() => expand(!expanded)}
+      >
         <ExpansionPanelSummary
           className="ExpansionPanelSummary"
           expandIcon={<ExpandMoreIcon />}
         >
           <h3>{Title}</h3>
         </ExpansionPanelSummary>
-        <ExpansionPanelDetails>
+        <ExpansionPanelDetails className="ExpansionPanelDetails">
           <RichText content={Description} />
           <RichText className="footnote" content={Footnote} />
         </ExpansionPanelDetails>
