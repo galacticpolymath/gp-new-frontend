@@ -23,7 +23,7 @@ const StandardsGroup = ({ codes, alignmentNotes, statements }) => {
       </ExpansionPanelSummary>
 
       <ExpansionPanelDetails>
-        <h5>How does the lesson align to this standard?</h5>
+        <h6>How does the lesson align to this standard?</h6>
         <RichText content={alignmentNotes.replace("•", "-")} />
       </ExpansionPanelDetails>
     </ExpansionPanel>

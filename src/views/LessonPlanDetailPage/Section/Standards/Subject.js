@@ -16,7 +16,9 @@ const Subject = ({ sets, subject }) => {
         className="ExpansionPanelSummary"
         expandIcon={<ExpandMoreIcon />}
       >
-        <h4>{subject}</h4>
+        <h4>
+          {subject} - {sets[0].name}
+        </h4>
       </ExpansionPanelSummary>
 
       <ExpansionPanelDetails>
