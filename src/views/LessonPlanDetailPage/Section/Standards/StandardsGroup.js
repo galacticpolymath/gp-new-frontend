@@ -31,8 +31,8 @@ const StandardsGroup = ({ codes, alignmentNotes, statements }) => {
 };
 
 StandardsGroup.propTypes = {
-  codes: PropTypes.oneOf([PropTypes.string, PropTypes.array]),
-  statements: PropTypes.oneOf([PropTypes.string, PropTypes.array]),
+  codes: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  statements: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   alignmentNotes: PropTypes.string,
 };
 

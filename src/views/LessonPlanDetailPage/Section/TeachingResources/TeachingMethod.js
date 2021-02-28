@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import ExpansionPanel from "@material-ui/core/ExpansionPanel";
@@ -16,14 +16,13 @@ const TeachingMethod = ({
   Title,
   ResourceSummary: Summary,
   ResourceDownloads = [],
-  expanded,
-  onChange,
 }) => {
+  const [expanded, expand] = useState(false);
   const classes = useStyles();
   return (
     <ExpansionPanel
       className={"TeachingMethod"}
-      onChange={onChange}
+      onChange={() => expand(!expanded)}
       expanded={expanded}
     >
       <ExpansionPanelSummary
@@ -45,12 +44,9 @@ const TeachingMethod = ({
 };
 
 TeachingMethod.propTypes = {
-  index: PropTypes.number,
   Title: PropTypes.string,
   ResourceSummary: PropTypes.object,
   ResourceDownloads: PropTypes.array,
-  expanded: PropTypes.bool,
-  onChange: PropTypes.func,
 };
 
 export default TeachingMethod;
