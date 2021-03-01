@@ -37,7 +37,7 @@ const useStyles = makeStyles(style);
 export default function SectionTeam() {
   const classes = useStyles();
   return (
-    <div className={classNames(classes.section)}>
+    <div className={classNames(classes.section, classes.greyBackground)}>
       <h1
         className={classNames(
           classes.title,

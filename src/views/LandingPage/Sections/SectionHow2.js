@@ -17,12 +17,12 @@ const style = {
   justifyContentCenter: {
     justifyContent: "center",
   },
+  primaryColor: {
+    color: "#2C83C3",
+  },
   fontStyle: {
     fontSize: "16px",
     color: "black",
-  },
-  galacticBlue: {
-    color: "#005892",
   },
   purp: {
     color: "#6C2D82",
@@ -79,130 +79,112 @@ export default function SectionHow() {
         <br></br>
         <br></br>
         <GridContainer>
-          <GridItem xs={12} sm={3} md={3}>
+          <GridItem xs={12} sm={4} md={4}>
             <div
-              className={classNames(classes.fontStyle, classes.primaryColor)}
+              className={classNames(
+                classes.fontStyle,
+                classes.primaryColor,
+                classes.upperCase
+              )}
             >
+              <div>
+                <p>Researchers</p>
+                <p>non-profits</p>
+                <p>sustainable corps.</p>
+              </div>
+              <br></br>
+              <div>
+                <p>select,</p>
+                <p>award-winning</p>
+                <p>science-communicators</p>
+              </div>
+              <br></br>
+              <div>
+                <p>Implemented by</p>
+                <p>educators</p>
+                <p>in classrooms</p>
+              </div>
+              <br></br>
+              <div>
+                <p>evaluated,</p>
+                <p>revised,</p>
+                <p>repeat</p>
+              </div>
+            </div>
+          </GridItem>
+          <GridItem xs={12} sm={4} md={4}>
+            <div className={classNames(classes.fontStyle)}>
+              <div className={classes.paddingTop}>
+                <p>
+                  Real scientists complete their research, covering complex
+                  topics on relevant, modern issues.
+                </p>
+              </div>
+              <br></br>
+              <div className={classes.paddingTop}>
+                <p>
+                  Our team of SciComm educators translates those complex topics
+                  into grade 5+ lesson plans accessible to any teacher.
+                </p>
+              </div>
+              <br></br>
+              <div className={classes.paddingTop}>
+                <p>
+                  Working closely with a variety of educators, our lesson plans
+                  are implemented in real classrooms.
+                </p>
+              </div>
+              <br></br>
+              <div className={classes.paddingTop}>
+                <p>
+                  All of our lessons are continously evaluated, updated, and
+                  revised—meaning they are always up-to-date.
+                </p>
+              </div>
+            </div>
+          </GridItem>
+          <GridItem xs={12} sm={4} md={4}>
+            <div className={classes.fontStyle}>
               <div>
                 <img
                   src={
                     "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357034/assets_marketing/GP__Research_Purple_1_b6pfbv.svg"
                   }
                   height="auto"
-                  width="50%"
+                  width="33%"
                   alt={"logo"}
                 />
               </div>
-              <div
-                className={classNames(
-                  classes.paddingTop,
-                  classes.upperCase,
-                  classes.galacticBlue
-                )}
-              >
-                <p>Researchers</p>
-                <p>non-profits</p>
-                <p>sustainable corps.</p>
-              </div>
-              <div className={classes.paddingTop}></div>
-              Real scientists complete their research, covering complex topics
-              on relevant, modern issues.
-              <br></br>
-              <br></br>
-            </div>
-          </GridItem>
-          <GridItem xs={12} sm={3} md={3}>
-            <div
-              className={classNames(classes.fontStyle, classes.primaryColor)}
-            >
               <div>
                 <img
                   src={
                     "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357034/assets_marketing/GP__SciComm_Purple_1_qyl1nn.svg"
                   }
                   height="auto"
-                  width="50%"
+                  width="33%"
                   alt={"logo"}
                 />
               </div>
-              <div
-                className={classNames(
-                  classes.paddingTop,
-                  classes.upperCase,
-                  classes.galacticBlue
-                )}
-              >
-                <p>select,</p>
-                <p>award-winning</p>
-                <p>science-communicators</p>
-              </div>
-              <div className={classes.paddingTop}></div>
-              Our team of SciComm educators translates those complex topics into
-              grade 5+ lesson plans accessible to any teacher.
-              <br></br>
-              <br></br>
-            </div>
-          </GridItem>
-          <GridItem xs={12} sm={3} md={3}>
-            <div
-              className={classNames(classes.fontStyle, classes.primaryColor)}
-            >
               <div>
                 <img
                   src={
                     "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357034/assets_marketing/GP__Teachers_Purple_1_pksgwr.svg"
                   }
                   height="auto"
-                  width="50%"
+                  width="33%"
                   alt={"logo"}
                 />
               </div>
-              <div
-                className={classNames(
-                  classes.paddingTop,
-                  classes.upperCase,
-                  classes.galacticBlue
-                )}
-              >
-                <p>Implemented by</p>
-                <p>educators</p>
-                <p>in classrooms</p>
-              </div>
-              <div className={classes.paddingTop}></div>
-              Working closely with a variety of educators, our lesson plans are
-              implemented in real classrooms.
-              <br></br>
-              <br></br>
-            </div>
-          </GridItem>
-          <GridItem xs={12} sm={3} md={3}>
-            <div className={classNames(classes.fontStyle)}>
               <div>
                 <img
                   src={
                     "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357034/assets_marketing/GP__Revise_Purple_1_u0yanp.svg"
                   }
                   height="auto"
-                  width="50%"
+                  width="33%"
                   alt={"logo"}
                 />
               </div>
-              <div
-                className={classNames(
-                  classes.paddingTop,
-                  classes.upperCase,
-                  classes.galacticBlue
-                )}
-              >
-                <p>evaluated,</p>
-                <p>revised,</p>
-                <p>repeat</p>
-              </div>
-              <div className={classes.paddingTop}></div>
-              All of our lessons are continously evaluated, updated, and
-              revised—meaning they are always up-to-date.
-              <br></br>
-              <br></br>
             </div>
           </GridItem>
         </GridContainer>

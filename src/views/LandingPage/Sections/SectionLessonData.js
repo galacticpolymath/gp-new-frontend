@@ -73,7 +73,7 @@ const useStyles = makeStyles(style);
 export default function SectionLessonData() {
   const classes = useStyles();
   return (
-    <div className={classNames(classes.section)}>
+    <div className={classNames(classes.section, classes.greyBackground)}>
       <h2
         className={classNames(
           classes.title,
