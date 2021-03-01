@@ -12,6 +12,7 @@ import Heading from "./Heading";
 import Procedure from "./Procedure";
 import TeachingResources from "./TeachingResources/index";
 import SteamBadge from "./SteamBadge";
+import Standards from "./Standards/index";
 
 export const sectionTypeMap = {
   [SECTIONS.OVERVIEW]: Overview,
@@ -21,6 +22,7 @@ export const sectionTypeMap = {
   [SECTIONS.PROCEDURE]: Procedure,
   [SECTIONS.TEACHING_RESOURCES]: TeachingResources,
   [SECTIONS.STEAM_BADGE]: SteamBadge,
+  [SECTIONS.STANDARDS]: Standards,
 };
 
 const Section = ({ index, section }) => {

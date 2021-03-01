@@ -35,3 +35,12 @@
     padding: 1rem;
   }
 }
+
+.Standards {
+  .MuiExpansionPanelDetails-root {
+    display: block;
+  }
+  .MuiExpansionPanelSummary-content {
+    display: block;
+  }
+}
