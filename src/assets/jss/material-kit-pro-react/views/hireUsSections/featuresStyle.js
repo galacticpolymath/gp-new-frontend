@@ -11,7 +11,7 @@ import {
 const featuresStyle = {
 
   featuresSection: {
-    padding: "80px 10%",
+    padding: "80px 10% 0",
     // overflowY: "scroll",
     scrollBehavior: "smooth",
   },
@@ -60,6 +60,9 @@ const featuresStyle = {
         color: warningColor[0],
       },
     },
+  "&.featureDeets:last-of-type":{
+    color: "blue"
+  }
 };
 
 export default featuresStyle;

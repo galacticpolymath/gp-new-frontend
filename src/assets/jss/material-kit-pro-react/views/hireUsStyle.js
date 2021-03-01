@@ -5,6 +5,7 @@ import {
   mainRaised,
   grayColor,
   whiteColor,
+  primaryColor,
   mrAuto,
   mlAuto
 } from "assets/jss/material-kit-pro-react.js";
@@ -94,6 +95,21 @@ const hireUsStyle = {
       // color: primaryColor[0],
     }
   },
+  interjection:{
+    margin: "15% 0 25%",
+    padding: "-15px",
+    width: "calc(100% + 30px)",
+    transform: "translateX(-15px)",
+    alignItems: "center",
+    justifyContent: "center",
+    display: "flex",
+    backgroundColor: primaryColor[5],
+    "& > *":{
+      margin: "1rem",
+      textShadow: "2px 2px 3px rgba(0,0,0,.3)"
+    }
+  },
+
   "@media only screen and (max-width: 1280px)": {
     whiteTitle: {
 
