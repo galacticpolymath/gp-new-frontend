@@ -10,6 +10,7 @@ import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 import teamsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/teamsStyle.js";
 import teamStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.js";
+import CardMedia from "@material-ui/core/CardMedia";
 
 const style = {
   ...teamsStyle,
@@ -55,6 +56,16 @@ const style = {
     textAlign: "left",
     paddingLeft: "70px",
   },
+  backgroundImgPencil: {
+    backgroundImage: `url(${"https://res.cloudinary.com/galactic-polymath/image/upload/v1614120447/assets_marketing/Pencil_Pink_zlrglm.png"})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+  },
+  backgroundImgCircuit: {
+    backgroundImage: `url(${"https://res.cloudinary.com/galactic-polymath/image/upload/v1614120418/assets_marketing/Circuit_Purple_rc3hmy.png"})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "center",
+  },
 };
 
 const useStyles = makeStyles(style);
@@ -74,7 +85,12 @@ export default function SectionLessonData() {
       <div>
         <GridContainer>
           <GridItem xs={12} sm={6} md={6}>
-            <div className={classNames(classes.pinkBackground)}>
+            <div
+              className={classNames(
+                classes.pinkBackground,
+                classes.backgroundImgPencil
+              )}
+            >
               <h3 className={classes.headerPadding}>FOR TEACHERS</h3>
               <div className={classes.textLeft}>
                 <div>
@@ -109,7 +125,12 @@ export default function SectionLessonData() {
             </div>
           </GridItem>
           <GridItem xs={12} sm={6} md={6}>
-            <div className={classNames(classes.purpleBackground)}>
+            <div
+              className={classNames(
+                classes.purpleBackground,
+                classes.backgroundImgCircuit
+              )}
+            >
               <h3 className={classes.headerPadding}>FOR RESEARCHERS</h3>
               <div className={classes.textLeft}>
                 <div>
