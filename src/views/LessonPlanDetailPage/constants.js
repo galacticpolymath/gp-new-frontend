@@ -6,6 +6,7 @@ export const SECTIONS = {
   PROCEDURE: "lesson-plan.procedure",
   TEACHING_RESOURCES: "teaching-resources.teaching-resources",
   STEAM_BADGE: "lesson-plan.steam-badge",
+  STANDARDS: "lesson-plan.standards",
 };
 
 export const NUMBERED_SECTIONS = [

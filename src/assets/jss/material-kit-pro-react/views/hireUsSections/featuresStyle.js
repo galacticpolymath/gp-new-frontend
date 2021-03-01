@@ -9,9 +9,13 @@ import {
 } from "assets/jss/material-kit-pro-react.js";
 
 const featuresStyle = {
+
   featuresSection: {
-    padding: "80px 0px"
+    padding: "80px 10% 0",
+    // overflowY: "scroll",
+    scrollBehavior: "smooth",
   },
+
   textCenter: {
     textAlign: "center"
   },
@@ -56,6 +60,9 @@ const featuresStyle = {
         color: warningColor[0],
       },
     },
+  "&.featureDeets:last-of-type":{
+    color: "blue"
+  }
 };
 
 export default featuresStyle;

@@ -9,16 +9,18 @@ import CardBody from "components/Card/CardBody.js";
 import Button from "components/CustomButtons/Button.js";
 import InfoArea from "../../../components/InfoArea/InfoArea";
 
+
 // import icons
-import LockOpen from "@material-ui/icons/LockOpen"
-import PlusOne from "@material-ui/icons/PlusOne"
-import BlurOn from "@material-ui/icons/BlurOn"
-import InsertChartOutlinedOutlined from "@material-ui/icons/InsertChartOutlinedOutlined"
+import LockOpen from "@material-ui/icons/LockOpen";
+import PlusOne from "@material-ui/icons/PlusOne";
+import BlurOn from "@material-ui/icons/BlurOn";
+import InsertChartOutlinedOutlined from "@material-ui/icons/InsertChartOutlinedOutlined";
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
 import pricingStyle from "assets/jss/material-kit-pro-react/views/hireUsSections/pricingStyle.js";
+import PricingFeature from "../../../components/HireUsComponents/PricingFeature";
 
 const useStyles = makeStyles(pricingStyle);
 
@@ -26,7 +28,7 @@ export default function SectionPricing() {
   const classes = useStyles();
   return (
     <>
-      <div className={classes.valueProps}>
+      <div className={classes.valueProps} >
         <GridContainer className={classes.valuePropsGridContainer}>
           <GridItem>
           <h2>Benefits of working with us</h2>
@@ -72,11 +74,11 @@ export default function SectionPricing() {
           </GridItem>
           <GridItem className={classes.appeal}>
             <div className={classes.boxContainer}>
-            <h2
+            <h4
               style = {{textAlign: "left"}}>{/*could not get this style to work in pricingStyle*/}
               Contracting us means having a fully-dedicated team of scientists, educators, and
               creatives working to achieve your outreach dreams!
-            </h2>
+            </h4>
             </div>
 
           </GridItem>
@@ -86,8 +88,8 @@ export default function SectionPricing() {
       </div>
   <div className={classes.pricingSection}>
 
-      <GridContainer>
-        <GridItem md={4} sm={4}>
+      <GridContainer id={"priceList"}>
+        <GridItem md={4} sm={12}>
           <Card plain pricing>
             <CardBody pricing>
               <h5
@@ -97,48 +99,74 @@ export default function SectionPricing() {
               </h5>
 
               <h3 className={classes.cardTitle}>
-                <span className={classes.dollar}>1,500 – 5,000</span>
+                <span className={classes.dollar}>1,500&nbsp;– 5,000</span>
               </h3>
               <ul>
-                <li>
-                  <b>1</b> Lesson
-                </li>
-                <li>
-                  <b>1-3</b> Custom Media Assets
-                </li>
-                <li>
-                  <b>up to 3</b> Rounds of Revision <p>During Phase I</p>
-                </li>
-                <li>
-                  <b>X</b> Lesson Support
-                </li>
-                <li>
-                  <b>X</b> Impact Reports
-                </li>
-                <li>
-                  <b>✓</b> Published Open Access For All
-                </li>
-                <li>
-                  <b>X</b> Beta testing before <p>publication</p>
-                </li>
-                <li>
-                  <b>✓</b> Creative, story-based <p>lesson design</p>
-                </li>
-                <li>
-                  <b>✓</b> Alignment to US National <p>standards in all subjects</p>
-                </li>
-                <li>
-                  <b>X</b> Custom standards <p>alignment</p>
-                </li>
-                <li>
-                  <b>✓</b> Non-subject-expert <p>Teacher Supported</p>
-                </li>
-                <li>
-                  <b>✓</b> GP Sensible Lesson Plan
-                </li>
-                <li>
-                  <b>X</b>  Custom data analysis or <p>synthesis</p>
-                </li>
+                <PricingFeature
+                boldedLabel={"1"}
+                description={"Lesson"}
+                linkTarget={"#1lesson"}
+                />
+                <PricingFeature
+                  boldedLabel={"1-3"}
+                  description={"Custom Media Assets"}
+                  linkTarget={"#customMedia"}
+                />
+                <PricingFeature
+                  boldedLabel={"up to 3"}
+                  description={"Rounds of Revision"}
+                  linkTarget={"#revisions"}
+                />
+                <PricingFeature
+                  boldedLabel={"✘"}
+                  description={"Lesson Support"}
+                  linkTarget={"#lessonSupport"}
+                />
+                <PricingFeature
+                  boldedLabel={"✘"}
+                  description={"Impact Reports"}
+                  linkTarget={"#impactReports"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Published Open Access For All"}
+                  linkTarget={"#openAccess"}
+                />
+                <PricingFeature
+                  boldedLabel={"✘"}
+                  description={"Beta Testing"}
+                  linkTarget={"#betaTesting"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Creative, Story-Based Lesson Design"}
+                  linkTarget={"#learningThrough"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Alignment to US National Standards in 4 Subjects"}
+                  linkTarget={"#USnational"}
+                />
+                <PricingFeature
+                  boldedLabel={"✘"}
+                  description={"Custom Standards Alignment"}
+                  linkTarget={"#customStandards"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Designed for Non-Subject-Expert Teachers"}
+                  linkTarget={"#designedFor"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"GP Sensible Lesson Plan"}
+                  linkTarget={"#GPsensible"}
+                />
+                <PricingFeature
+                  boldedLabel={"✘"}
+                  description={"Custom Data Analysis"}
+                  linkTarget={"#customData"}
+                />
               </ul>
               <Button href="#pablo" color="primary" round>
                 Build It!
@@ -146,53 +174,79 @@ export default function SectionPricing() {
             </CardBody>
           </Card>
         </GridItem>
-        <GridItem md={4} sm={4}>
+        <GridItem md={4} sm={12}>
           <Card raised pricing color="primary">
             <CardBody pricing>
               <h5 className={classes.cardCategory}>LASTING IMPACT</h5>
               <h3 className={classes.cardTitleWhite}>
-                <span className={classes.dollar}>10,000 – 18,000</span>
+                <span className={classes.dollar}>10,000&nbsp;– 18,000</span>
               </h3>
               <ul>
-                <li>
-                  <b>4</b> Lesson Unit
-                </li>
-                <li>
-                  <b>6-10</b> Custom Media Assets
-                </li>
-                <li>
-                  <b>up to 10</b> Rounds of Revision <p>During Phase I</p>
-                </li>
-                <li>
-                  <b>3 Years</b> Lesson Support
-                </li>
-                <li>
-                  <b>✓</b> Impact Reports
-                </li>
-                <li>
-                  <b>✓</b> Published Open Access For All
-                </li>
-                <li>
-                  <b>✓</b> Beta testing before <p>publication</p>
-                </li>
-                <li>
-                  <b>✓</b> Creative, story-based <p>lesson design</p>
-                </li>
-                <li>
-                  <b>✓</b> Alignment to US National <p>standards in all subjects</p>
-                </li>
-                <li>
-                  <b>✓</b> Custom standards <p>alignment</p>
-                </li>
-                <li>
-                  <b>✓</b> Non-subject-expert <p>Teacher Supported</p>
-                </li>
-                <li>
-                  <b>✓</b> GP Sensible Lesson Plan
-                </li>
-                <li>
-                  <b>✓</b>  Custom data analysis or <p>synthesis</p>
-                </li>
+                <PricingFeature
+                  boldedLabel={"4"}
+                  description={"Lesson Unit"}
+                  linkTarget={"#1lesson"}
+                />
+                <PricingFeature
+                  boldedLabel={"6–10"}
+                  description={"Custom Media Assets"}
+                  linkTarget={"#customMedia"}
+                />
+                <PricingFeature
+                  boldedLabel={"up to 10"}
+                  description={"Rounds of Revision"}
+                  linkTarget={"#revisions"}
+                />
+                <PricingFeature
+                  boldedLabel={"3 Years"}
+                  description={"Lesson Support"}
+                  linkTarget={"#lessonSupport"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Impact Reports"}
+                  linkTarget={"#impactReports"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Published Open Access for All"}
+                  linkTarget={"#openAccess"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Beta Testing"}
+                  linkTarget={"#betaTesting"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Creative, Story-Based Lesson Design"}
+                  linkTarget={"#learningThrough"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Alignment to US National Standards in 4 Subjects"}
+                  linkTarget={"#USnational"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Custom Standards Alignment"}
+                  linkTarget={"#customStandards"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Designed for Non-Subject-Expert Teachers"}
+                  linkTarget={"#designedFor"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"GP Sensible Lesson Plan"}
+                  linkTarget={"#GPsensible"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Custom Data Analysis"}
+                  linkTarget={"#customData"}
+                />
               </ul>
               <Button href="#pablo" color="white" round className={classes.whiteButtonCust}>
                 Build It!
@@ -200,7 +254,7 @@ export default function SectionPricing() {
             </CardBody>
           </Card>
         </GridItem>
-        <GridItem md={4} sm={4}>
+        <GridItem md={4} sm={12}>
           <Card plain pricing>
             <CardBody pricing>
               <h5
@@ -212,46 +266,71 @@ export default function SectionPricing() {
                 Let{"’"}s Talk
               </h3>
               <ul>
-                <li>
-                  <b>All Lessons Needed</b>
-                </li>
-                <li>
-                  <b>All Media Assets</b>
-                </li>
-                <li>
-                  {/* find cleaner fix for multiple line breaks */}
-                  <b>Unlimited </b>Rounds of Revision during Phase I<p> </p>
-                </li>
-                <li>
-                  <b>Lifetime</b> Lesson Support
-                </li>
-                <li>
-                  <b>✓</b> Impact Reports
-                </li>
-                <li>
-                  <b>✓</b> Published Open Access For All
-                </li>
-                <li>
-                  <b>✓</b> Beta testing before <p>publication</p>
-                </li>
-                <li>
-                  <b>✓</b> Creative, story-based <p>lesson design</p>
-                </li>
-                <li>
-                  <b>✓</b> Alignment to US National <p>standards in all subjects</p>
-                </li>
-                <li>
-                  <b>✓</b> Custom standards <p>alignment</p>
-                </li>
-                <li>
-                  <b>✓</b> Non-subject-expert <p>Teacher Supported</p>
-                </li>
-                <li>
-                  <b>✓</b> GP Sensible Lesson Plan
-                </li>
-                <li>
-                  <b>✓</b>  Custom data analysis or <p>synthesis</p>
-                </li>
+                <PricingFeature
+                  boldedLabel={"All"}
+                  description={" Lessons Needed"}
+                  linkTarget={"#1lesson"}
+                />
+                <PricingFeature
+                  boldedLabel={"All"}
+                  description={"Custom Assets Needed"}
+                  linkTarget={"#customMedia"}
+                />
+                <PricingFeature
+                  boldedLabel={"Unlimited"}
+                  description={"Rounds of Revision"}
+                  linkTarget={"#revisions"}
+                />
+                <PricingFeature
+                  boldedLabel={"Lifetime"}
+                  description={"Lesson Support"}
+                  linkTarget={"#lessonSupport"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Impact Reports"}
+                  linkTarget={"#impactReports"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Published Open Access For All"}
+                  linkTarget={"#openAccess"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Beta Testing"}
+                  linkTarget={"#betaTesting"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Creative, Story-Based Lesson Design"}
+                  linkTarget={"#learningThrough"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Alignment to US National Standards in 4 Subjects"}
+                  linkTarget={"#USnational"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Custom Standards Alignment"}
+                  linkTarget={"#customStandards"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Designed for Non-Subject-Expert Teachers"}
+                  linkTarget={"#designedFor"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"GP Sensible Lesson Plan"}
+                  linkTarget={"#GPsensible"}
+                />
+                <PricingFeature
+                  boldedLabel={"✔"}
+                  description={"Custom Data Analysis"}
+                  linkTarget={"#customData"}
+                />
               </ul>
               <Button href="#pablo" color="primary" round>
                 Build It!
@@ -260,7 +339,7 @@ export default function SectionPricing() {
           </Card>
         </GridItem>
         <GridItem>
-          *These prices are listed as a rough estimate of costs. Once you reach out, we will discuss your exact needs
+          *These prices are a rough estimate of costs. Once you reach out, we will discuss your exact needs
           and constraints and provide a more precise estimate which may be higher or lower, depending on the labor entailed.
         </GridItem>
       </GridContainer>

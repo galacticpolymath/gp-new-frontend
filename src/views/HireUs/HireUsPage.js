@@ -19,6 +19,7 @@ import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 //styles broad material UI components
 import hireUsStyle from "../../assets/jss/material-kit-pro-react/views/hireUsStyle";
 import { makeCloudinaryUrl } from "../../components/shared/constants";
+import SectionHeardEnough from "./Sections/SectionHeardEnough";
 
 
 const useStyles = makeStyles(hireUsStyle);
@@ -95,34 +96,45 @@ export default function PricingPage() {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
+
+          {/*Price List */}
           <SectionPricing />
-          <hr />
-          <h2>Order <em>a la carte</em>. Do you just need a fantastic infographic, video, or data visual? We're your
-            one-stop shop for scicomm, education, and outreach!
-          </h2>
-          <h2>Even if your exact need isn't listed, we can likely make
-            it happen. <a>Start the conversation!</a>
-          </h2>
-          <hr />
+
+          {/*Add on Section Appeal Box*/}
+          <GridItem className={classes.appeal}>
+            <div className={classes.boxContainer}>
+              <h3>Order <span style={{fontWeight:100, fontStyle:"italic"}}>a la carte</span></h3>
+              <h4> Looking for a fantastic infographic, video, or data visual? We're your
+                one-stop shop for scicomm, education, and outreach!
+              </h4>
+              <h4>Even if your exact need isn't listed, we can likely make
+                it happen. <a>Start the conversation!</a>
+              </h4>
+            </div>
+
+          </GridItem>
+
           <SectionAddOns />
           {/*GP Logo*/}
-          <div className={classes.container}>
+          <div className={classNames(classes.container,classes.textCenter)}>
           <img
-            src={makeCloudinaryUrl("v1593304396/logos/GP_logo_grad_transBG_300_tbn4ei.png")}
-            className={classNames(classes.mlAuto,classes.mrAuto,)}
+            src={makeCloudinaryUrl("v1593304396/logos/GP_logo_grad_transBG_300_tbn4ei.jpeg")}
+            className={classNames(classes.mlAuto,classes.mrAuto)}
             style={{
               // width:"10"
-              maxWidth: "10%", justifySelf:"center"}}
+              width: "25vw",
+              maxWidth: "150px", justifySelf:"center"}}
             alt={"The Galactic Polymath logo. A starburst of lines and dots, in blue, purple and pink."}
           />
           <h2 className={classes.title}>
             The Galactic Polymath Way
           </h2>
             <h2 className={classes.subtitle}>
-            (A New Model for Education)
+            A New Model for Education
             </h2>
           </div>
           <SectionFeatures />
+          <SectionHeardEnough />
         </div>
       </div>
       <Footer

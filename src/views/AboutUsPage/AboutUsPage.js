@@ -14,12 +14,15 @@ import Footer from "components/Footer/Footer.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import SectionDescription from "views/AboutUsPage/Sections/SectionDescription.js";
 import SectionTeam from "views/AboutUsPage/Sections/SectionTeam.js";
+import SectionPartners from "./Sections/SectionPartners";
 import SectionServices from "views/AboutUsPage/Sections/SectionServices.js";
 import SectionContact from "views/AboutUsPage/Sections/SectionContact.js";
+
 
 // styling
 import aboutUsStyle from "assets/jss/material-kit-pro-react/views/aboutUsStyle.js";
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
+
 
 const useStyles = makeStyles(aboutUsStyle);
 
@@ -63,8 +66,8 @@ export default function AboutUsPage(...rest) {
               >
                 Galactic Polymath (GP) is an education studio.{"\n"} We help scientists,
                 nonprofits, and sustainable companies
-                with outreach needs to translate complicated, cutting-edge
-                knowledge into mind-blowing lessons for grades 5+.
+                achieve outreach at scale by translating complex, cutting-edge
+                research into mind-blowing lessons for grades 5+.
               </h4>
             </GridItem>
             <GridItem
@@ -92,8 +95,9 @@ export default function AboutUsPage(...rest) {
         <div className={classes.container}>
           <SectionDescription />
           <SectionTeam />
+          <SectionPartners />
           <SectionServices />
-          {/* <SectionOffice /> */}
+           {/*<SectionOffice />*/}
           <SectionContact />
         </div>
       </div>

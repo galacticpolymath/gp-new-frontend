@@ -28,7 +28,7 @@ export default function SectionDescription() {
           className={classNames(
             classes.mlAuto,
             classes.mrAuto,
-            classes.textLeft)}
+            classes.textCenter)}
         >
           {/*Note warning just changes to the warning color--atomic blue*/}
           <Warning><h2>Our Mission</h2></Warning>
@@ -43,7 +43,7 @@ export default function SectionDescription() {
         >
           <h4
           className={classes.textLeft}>
-            To create a direct pipeline between scientists and G5-12 classrooms by translating complex topics from
+            To create a direct pipeline between the sources of Knowledge and G5-12 classrooms by translating complex topics from
             researchers, non-profits, and sustainable corporations, into high-quality, open-access educational
             materials.</h4>
         </GridItem>
@@ -76,23 +76,25 @@ export default function SectionDescription() {
           className={classes.textLeft}
         >
           <Primary><h2>Our Vision</h2></Primary>
-          <h4>Our company was not founded to make a big profit (it probably won't). We were founded
+          <h4>Our company was not founded just to make a big profit. We were founded
             to improve the lives of teachers, students, and researchers–because we have been in all
             of those roles. We envision a future where education is bolder, more creative, more equitable,
             and where organizational outreach truly has Broader Impacts.
            </h4>
         </GridItem>
-        <GridItem
-          xs={12}
-          sm={12}
-          med={12}
-          className={classNames(classes.thinkBigger,classes.mlAuto,classes.mrAuto)}
+        <div
+          // xs={12}
+          // sm={12}
+          // med={12}
+          className={classNames(classes.container,classes.thinkBigger)}
         >
-          <Warning><h1>
-            <span style={{whiteSpace:"nowrap",paddingRight:"15%"}}>Think <b>bigger</b>.</span>
-            <span style={{whiteSpace:"nowrap",paddingLeft:"15%"}}>Learn everything.</span>
-            </h1></Warning>
-        </GridItem>
+          <h1>
+            <span style={{whiteSpace:"nowrap",textAlign: "left"}}>Think <b>bigger</b>.</span>
+          </h1>
+          <h1>
+            <span style={{whiteSpace:"nowrap"}}>Learn everything.</span>
+          </h1>
+        </div>
       </GridContainer>
     </div>
   );
