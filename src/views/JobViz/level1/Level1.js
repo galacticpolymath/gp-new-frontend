@@ -32,7 +32,6 @@ import DialogActions from "@material-ui/core/DialogActions";
 import Slide from "@material-ui/core/Slide";
 // import Close from "@material-ui/icons/Close";
 
-
 // sections for this page Added by JOB VIZ TEAM \/
 import JobVizHeader from "../modules/JobVizComponents";
 
@@ -56,7 +55,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 });
 
 Transition.displayName = "Transition";
-
 
 export const Level1List = (props) => {
   const level = props.level0;
@@ -168,20 +166,16 @@ export const Level1List = (props) => {
 
       <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
-          <GridContainer
-            style={{placeItems: "center"}}
-          >
+          <GridContainer style={{ placeItems: "center" }}>
             <GridItem
               xs={12}
               sm={12}
               md={6}
-
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,
                 classes.textLeft
               )}
-
             >
               <JobVizHeader />
             </GridItem>
@@ -198,10 +192,12 @@ export const Level1List = (props) => {
               // style={{objectFit: "fit"}}
             >
               <img
-                src={require("assets/img/hero-images/JobViz_Bubble.svg")}
+                src={
+                  "https://res.cloudinary.com/galactic-polymath/image/upload/v1614120470/assets_marketing/JobViz_updated_hqn1rz.png"
+                }
                 height="auto"
                 width="120%"
-                style={{paddingTop:"2rem"}}
+                style={{ paddingTop: "2rem" }}
                 alt={"horizontal lines with bubbles, background pattern"}
               />
             </GridItem>
@@ -330,7 +326,7 @@ export const Level1List = (props) => {
             {/*    </ListItem>*/}
             {/*  </List>*/}
             {/*</div>*/}
-            <GPcopyrightFooter/>
+            <GPcopyrightFooter />
           </div>
         }
       />
