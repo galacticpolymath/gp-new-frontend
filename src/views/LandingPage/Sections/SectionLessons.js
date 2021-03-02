@@ -15,22 +15,28 @@ const style = {
   ...teamsStyle,
   ...teamStyle,
   justifyContentCenter: {
-    justifyContent: "center",
+    justifyContent: "center"
   },
   justifyContentSpaceBetween: {
-    justifyContent: "space-between",
+    justifyContent: "space-between"
+  },
+  justifyContentLeft: {
+    textAlign: "left"
   },
   primaryColor: {
-    color: "#2C83C3",
+    color: "#2C83C3"
   },
   fontStyle: {
     fontSize: "16px",
-    color: "black",
+    color: "black"
   },
   greyBackground: {
     backgroundColor: "#E0E0E0",
-    padding: "50px",
+    padding: "4rem 2rem 6rem"
   },
+  doubleSpaced: {
+    paddingBottom: ".5em"
+  }
 };
 
 const useStyles = makeStyles(style);
@@ -38,18 +44,18 @@ const useStyles = makeStyles(style);
 export default function SectionTeam() {
   const classes = useStyles();
   return (
-    <div className={classNames(classes.section, classes.greyBackground)}>
-      <h1
+    <div className={classNames(classes.section, classes.greyBackground,
+      classes.justifyContentCenter)}>
+      <h2
         className={classNames(
           classes.title,
-          classes.primaryColor,
-          classes.justifyContentSpaceBetween
+          classes.primaryColor
         )}
       >
-        Think Bigger. Learn Everything.
-      </h1>
+        Think&nbsp;Bigger. Learn&nbsp;Everything.
+      </h2>
       <div>
-        <br></br>
+        <br />
         <GridContainer>
           <GridItem xs={12} sm={7} md={7}>
             <img
@@ -62,27 +68,28 @@ export default function SectionTeam() {
             />
           </GridItem>
           <GridItem xs={12} sm={5} md={5}>
-            <div className={classes.fontStyle}>
-              <br></br>
-              <br></br>
-              <div>
-                <p>We empower students with agency and critical thinking.</p>
+            <div className={classNames(classes.fontStyle, classes.justifyContentLeft)}>
+              <br/>
+              <br/>
+              <div className={classes.doubleSpaced}>
+                <h4>We empower students with agency and critical thinking.</h4>
               </div>
-              <div>
-                <p>
+              <div className={classes.doubleSpaced}>
+                <h4>
                   Students learn better when lessons are contextualized in
                   real-world scenarios and concepts are connected across
                   subjects—so that’s what we do.
-                </p>
+                </h4>
               </div>
               <div>
-                <p>
-                  Our lessons are flexible and adaptive, giving classroom
-                  teachers the freedom to adjust the material to fit their plan.
-                </p>
+                <h4>
+                  Our lessons are designed to save teachers time, with a goal of 15 min prep,
+                  and delivered in open formats so teachers have the freedom to adjust and remix the material to fit
+                  their needs.
+                </h4>
               </div>
               <div>
-                <br></br>
+                <br/>
                 <Button
                   color="primary"
                   size="lg"

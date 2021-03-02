@@ -21,23 +21,23 @@ export default function SectionAbout() {
             <div style={{ color: "black" }}>
               <div>
                 <h2 style={{ color: "#6C2D82" }}>Open-Access</h2>
-                <p>We believe in fair and free access for all.</p>
+                <h4>We believe in fair and free access for all.</h4>
               </div>
               <div>
                 <h2 style={{ color: "#6C2D82" }}>Straight from the Source</h2>
-                <p>
+                <h4>
                   Our lessons are pulling data, content, and knowledge from
                   working scientists, meaning they are as up-to-date as
                   possible.
-                </p>
+                </h4>
               </div>
               <div>
                 <h2 style={{ color: "#6C2D82" }}>High-Quality</h2>
-                <p>
+                <h4>
                   We are a team of educators and scientists, vigorously
                   developing, curating, testing, and revising every lesson to
                   provide the best possible outcome.
-                </p>
+                </h4>
               </div>
             </div>
           </GridItem>
