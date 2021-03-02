@@ -29,7 +29,7 @@ const style = {
   },
   greyBackground: {
     backgroundColor: "#E0E0E0",
-    padding: "50px",
+    padding: "20px",
   },
 };
 

@@ -30,8 +30,7 @@ const style = {
   },
   greyBackground: {
     backgroundColor: "#E0E0E0",
-    // margin: "-100px",
-    padding: "50px",
+    padding: "20px",
   },
   pinkBackground: {
     backgroundColor: "#FF3DAC",
