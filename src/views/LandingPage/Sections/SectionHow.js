@@ -7,42 +7,43 @@ import classNames from "classnames";
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Button from "components/CustomButtons/Button.js";
+// import Button from "components/CustomButtons/Button.js";
 import teamsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/teamsStyle.js";
 import teamStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.js";
+import { makeCloudinaryUrl } from "../../../components/shared/constants";
 
 const style = {
   ...teamsStyle,
   ...teamStyle,
   justifyContentCenter: {
-    justifyContent: "center",
+    justifyContent: "center"
   },
   fontStyle: {
     fontSize: "16px",
-    color: "black",
+    color: "black"
   },
   galacticBlue: {
-    color: "#005892",
+    color: "#005892"
   },
   purp: {
-    color: "#6C2D82",
+    color: "#6C2D82"
   },
   lightPurp: {
-    color: "#6812D1",
+    color: "#6812D1"
   },
   upperCase: {
-    textTransform: "uppercase",
+    textTransform: "uppercase"
   },
   paddingTop: {
-    paddingTop: "30px",
+    paddingTop: "30px"
   },
   paddingLeft: {
-    paddingLeft: "100px",
+    paddingLeft: "100px"
   },
   imagePadding: {
     paddingTop: "50px",
-    paddingRight: "70px",
-  },
+    paddingRight: "70px"
+  }
 };
 
 const useStyles = makeStyles(style);
@@ -52,7 +53,7 @@ export default function SectionHow() {
   return (
     <div className={classNames(classes.section)}>
       <GridContainer>
-        <GridItem xs={12} sm={6} md={6}>
+        <GridItem xs={12} sm={12} md={6}>
           <h1
             className={classNames(
               classes.title,
@@ -63,7 +64,7 @@ export default function SectionHow() {
             How we do it
           </h1>
         </GridItem>
-        <GridItem xs={12} sm={6} md={6}>
+        <GridItem xs={12} sm={12} md={6}>
           <img
             src={
               "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357041/assets_marketing/Vector_-_dotten_line_mvnvza.svg"
@@ -76,10 +77,10 @@ export default function SectionHow() {
         </GridItem>
       </GridContainer>
       <div>
-        <br></br>
-        <br></br>
+        <br/>
+        <br/>
         <GridContainer>
-          <GridItem xs={12} sm={3} md={3}>
+          <GridItem xs={12} sm={12} md={3}>
             <div
               className={classNames(classes.fontStyle, classes.primaryColor)}
             >
@@ -100,18 +101,20 @@ export default function SectionHow() {
                   classes.galacticBlue
                 )}
               >
-                <p>Researchers</p>
-                <p>non-profits</p>
-                <p>sustainable corps.</p>
+                <h3>Researchers,</h3>
+                <h3>non-profits,</h3>
+                <h3>sustainable corps.</h3>
               </div>
-              <div className={classes.paddingTop}></div>
-              Real scientists complete their research, covering complex topics
-              on relevant, modern issues.
-              <br></br>
-              <br></br>
+              {/*<div className={classes.paddingTop}></div>*/}
+              <h4>
+                Government-funded researchers and organizations that want to support research impacts on society,
+                hire us to make a body of knowledge available to the public.
+              </h4>
+              <br />
+              <br />
             </div>
           </GridItem>
-          <GridItem xs={12} sm={3} md={3}>
+          <GridItem xs={12} sm={12} md={3}>
             <div
               className={classNames(classes.fontStyle, classes.primaryColor)}
             >
@@ -132,18 +135,20 @@ export default function SectionHow() {
                   classes.galacticBlue
                 )}
               >
-                <p>select,</p>
-                <p>award-winning</p>
-                <p>science-communicators</p>
+                <h3>select,</h3>
+                <h3>award-winning</h3>
+                <h3>science communicators</h3>
               </div>
-              <div className={classes.paddingTop}></div>
-              Our team of SciComm educators translates those complex topics into
-              grade 5+ lesson plans accessible to any teacher.
-              <br></br>
-              <br></br>
+              {/*<div className={classes.paddingTop}></div>*/}
+              <h4>
+                Our team of science commnicators, educators, and artists translates these complex topics into
+                grade 5-12 lesson plans that can be taught in any subject by a non-expert.
+              </h4>
+              <br />
+              <br />
             </div>
           </GridItem>
-          <GridItem xs={12} sm={3} md={3}>
+          <GridItem xs={12} sm={12} md={3}>
             <div
               className={classNames(classes.fontStyle, classes.primaryColor)}
             >
@@ -164,18 +169,20 @@ export default function SectionHow() {
                   classes.galacticBlue
                 )}
               >
-                <p>Implemented by</p>
-                <p>educators</p>
-                <p>in classrooms</p>
+                <h3>Taught by</h3>
+                <h3>educators</h3>
+                <h3>anywhere</h3>
               </div>
-              <div className={classes.paddingTop}></div>
-              Working closely with a variety of educators, our lesson plans are
-              implemented in real classrooms.
-              <br></br>
-              <br></br>
+              {/*<div className={classes.paddingTop}></div>*/}
+              <h4>
+                Working closely with educators and districts in our growing network, lessons are
+                taught in real classrooms across the US.
+              </h4>
+              <br />
+              <br />
             </div>
           </GridItem>
-          <GridItem xs={12} sm={3} md={3}>
+          <GridItem xs={12} sm={12} md={3}>
             <div className={classNames(classes.fontStyle)}>
               <div>
                 <img
@@ -194,15 +201,17 @@ export default function SectionHow() {
                   classes.galacticBlue
                 )}
               >
-                <p>evaluated,</p>
-                <p>revised,</p>
-                <p>repeat</p>
+                <h3>evaluate,</h3>
+                <h3>revise,</h3>
+                <h3>repeat</h3>
               </div>
-              <div className={classes.paddingTop}></div>
-              All of our lessons are continously evaluated, updated, and
-              revised—meaning they are always up-to-date.
-              <br></br>
-              <br></br>
+              {/*<div className={classes.paddingTop}></div>*/}
+              <h4>All of our lessons are continuously evaluated, updated, and
+                revised—meaning they are always up-to-date and working to make the jobs of teaching
+                and outreach easier!
+              </h4>
+              <br/>
+              <br/>
             </div>
           </GridItem>
         </GridContainer>
@@ -216,12 +225,23 @@ export default function SectionHow() {
             classes.upperCase
           )}
         >
-          <h4>
-            <b>
-              Real research + real stories + real data + real careers = Real
-              learning
-            </b>
-          </h4>
+          <h3>
+
+              Real&nbsp;research&nbsp;+ real&nbsp;stories&nbsp;+ real&nbsp;data&nbsp;+ real&nbsp;careers&nbsp;=
+              <span
+              style={{marginTop: "0.75rem",display:"inline-block"}}>
+                <img
+                  src={makeCloudinaryUrl("v1593304396/logos/GP_logo_grad_transBG_300_tbn4ei.jpeg")}
+                  className={classNames(classes.mlAuto, classes.mrAuto)}
+                  style={{
+                    // width:"10"
+                    width: "2rem", display: "inline-block", marginLeft: "1rem",marginRight: "0.25rem"
+                  }}
+                  alt={"The Galactic Polymath logo. A starburst of lines and dots, in blue, purple and pink."}
+                /><b>Real&nbsp;learning</b>
+              </span>
+
+          </h3>
         </footer>
       </div>
     </div>

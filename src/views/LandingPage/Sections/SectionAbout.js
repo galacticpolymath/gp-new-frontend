@@ -17,17 +17,17 @@ export default function SectionAbout() {
     <div className={classes.section}>
       <div>
         <GridContainer>
-          <GridItem xs={12} sm={6} md={6}>
+          <GridItem xs={12} sm={12} md={5}>
             <div style={{ color: "black" }}>
               <div>
                 <h2 style={{ color: "#6C2D82" }}>Open-Access</h2>
-                <h4>We believe in fair and free access for all.</h4>
+                <h4>We believe in fair and free educational access for all.</h4>
               </div>
               <div>
                 <h2 style={{ color: "#6C2D82" }}>Straight from the Source</h2>
                 <h4>
-                  Our lessons are pulling data, content, and knowledge from
-                  working scientists, meaning they are as up-to-date as
+                  Our lessons are designed with extensive input from
+                  working scientists and other STEM experts, meaning they are as up-to-date as
                   possible.
                 </h4>
               </div>
@@ -41,7 +41,7 @@ export default function SectionAbout() {
               </div>
             </div>
           </GridItem>
-          <GridItem xs={12} sm={6} md={6}>
+          <GridItem xs={12} sm={12} md={7}>
             <img
               src={
                 "https://res.cloudinary.com/galactic-polymath/image/upload/v1612979771/assets_marketing/Engineering_Together_1_opqz9h.png"

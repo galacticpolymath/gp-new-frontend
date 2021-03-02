@@ -57,7 +57,7 @@ export default function SectionTeam() {
       <div>
         <br />
         <GridContainer>
-          <GridItem xs={12} sm={7} md={7}>
+          <GridItem xs={12} sm={12} md={7}>
             <img
               src={
                 "https://res.cloudinary.com/galactic-polymath/image/upload/v1612981509/assets_marketing/FemalesSing_banner_title_leniw2.jpg"
@@ -67,7 +67,7 @@ export default function SectionTeam() {
               alt={"Lesson Preview"}
             />
           </GridItem>
-          <GridItem xs={12} sm={5} md={5}>
+          <GridItem xs={12} sm={12} md={5}>
             <div className={classNames(classes.fontStyle, classes.justifyContentLeft)}>
               <br/>
               <br/>
@@ -93,12 +93,12 @@ export default function SectionTeam() {
                 <Button
                   color="primary"
                   size="lg"
-                  href="https://vimeo.com/448000812"
+                  href="/lessons/1"
                   target="_blank"
                   padding="100px"
                 >
                   <i className="fas" />
-                  See Lessons
+                  See Our First Lesson
                 </Button>
               </div>
             </div>
