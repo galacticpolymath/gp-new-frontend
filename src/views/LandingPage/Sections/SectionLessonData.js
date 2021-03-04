@@ -10,7 +10,8 @@ import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 import teamsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/teamsStyle.js";
 import teamStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.js";
-import CardMedia from "@material-ui/core/CardMedia";
+// import CardMedia from "@material-ui/core/CardMedia";
+
 
 const style = {
   ...teamsStyle,
@@ -84,8 +85,10 @@ export default function SectionLessonData() {
         Bridging the gap between classroom and lab
       </h2>
       <div>
-        <GridContainer>
-          <GridItem xs={12} sm={6} md={6}>
+        <GridContainer
+          style={{gridAutoRows: "1fr",  gridColumnGap: "0",display: "flexContainer"}}
+        >
+          <GridItem xs={12} sm={6} md={6}  style={{display: "grid"}}>
             <div
               className={classNames(
                 classes.pinkBackground,
@@ -95,19 +98,19 @@ export default function SectionLessonData() {
               <h3 className={classes.headerPadding}>FOR TEACHERS</h3>
               <div className={classes.textLeft}>
                 <div>
-                  <p>Free, open-access lessons</p>
+                  <h4>Free, open-access lessons</h4>
                 </div>
                 <div>
-                  <p>Regularly updated based on your feedback</p>
+                  <h4>Regularly updated based on your feedback</h4>
                 </div>
                 <div>
-                  <p>Appropriate for grades 5-12</p>
+                  <h4>Appropriate for grades 5-12</h4>
                 </div>
                 <div>
-                  <p>
+                  <h4>
                     Adaptable for different time lengths, extension activities,
                     etc.
-                  </p>
+                  </h4>
                 </div>
               </div>
               <div className={classes.topPadding2}>
@@ -122,10 +125,10 @@ export default function SectionLessonData() {
                   <b className={classes.darkGreyFont}>GET LESSONS</b>
                 </Button>
               </div>
-              <div className={classes.topPadding}></div>
+              {/*<div className={classes.topPadding}></div>*/}
             </div>
           </GridItem>
-          <GridItem xs={12} sm={6} md={6}>
+          <GridItem xs={12} sm={6} md={6}  style={{display: "grid"}}>
             <div
               className={classNames(
                 classes.purpleBackground,
@@ -135,33 +138,29 @@ export default function SectionLessonData() {
               <h3 className={classes.headerPadding}>FOR RESEARCHERS</h3>
               <div className={classes.textLeft}>
                 <div>
-                  <p>Contribute to lower-academic success</p>
+                  <h4>Magnify the impact of your research and outreach efforts</h4>
                 </div>
                 <div>
-                  <p>Increase impact of your research</p>
+                  <h4>Get detailed impact metrics to report to funders</h4>
                 </div>
                 <div>
-                  <p>Include community outreach in scope of work</p>
-                </div>
-                <div>
-                  <p>
-                    Various levels of contribution and involvement available.
-                  </p>
+                  <h4>
+                    If you don't have the funds to hire us, <a href="/About#getInvolved">there are many avenues for collaboration!</a>
+                  </h4>
                 </div>
               </div>
               <div className={classes.topPadding2}>
                 <Button
                   color="white"
                   size="md"
-                  href="https://vimeo.com/448000812"
-                  target="_blank"
+                  href="/hire-us"
                   padding="100px"
                 >
                   <i className="fas" />
-                  <b className={classes.darkGreyFont}>SUBMIT DATA</b>
+                  <b className={classes.darkGreyFont}>Learn More</b>
                 </Button>
               </div>
-              <div className={classes.topPadding}></div>
+              {/*<div className={classes.topPadding}></div>*/}
             </div>
           </GridItem>
         </GridContainer>

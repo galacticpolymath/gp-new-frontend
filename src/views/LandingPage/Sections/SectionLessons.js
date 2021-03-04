@@ -20,6 +20,9 @@ const style = {
   justifyContentSpaceBetween: {
     justifyContent: "space-between",
   },
+  justifyContentLeft: {
+    textAlign: "left",
+  },
   primaryColor: {
     color: "#2C83C3",
   },
@@ -29,7 +32,10 @@ const style = {
   },
   greyBackground: {
     backgroundColor: "#E0E0E0",
-    padding: "20px",
+    padding: "4rem 2rem 6rem",
+  },
+  doubleSpaced: {
+    paddingBottom: ".5em",
   },
 };
 
@@ -38,20 +44,20 @@ const useStyles = makeStyles(style);
 export default function SectionTeam() {
   const classes = useStyles();
   return (
-    <div className={classNames(classes.section, classes.greyBackground)}>
-      <h1
-        className={classNames(
-          classes.title,
-          classes.primaryColor,
-          classes.justifyContentSpaceBetween
-        )}
-      >
-        Think Bigger. Learn Everything.
-      </h1>
+    <div
+      className={classNames(
+        classes.section,
+        classes.greyBackground,
+        classes.justifyContentCenter
+      )}
+    >
+      <h2 className={classNames(classes.title, classes.primaryColor)}>
+        Think&nbsp;Bigger. Learn&nbsp;Everything.
+      </h2>
       <div>
-        <br></br>
+        <br />
         <GridContainer>
-          <GridItem xs={12} sm={7} md={7}>
+          <GridItem xs={12} sm={12} md={7}>
             <img
               src={
                 "https://res.cloudinary.com/galactic-polymath/image/upload/v1612981509/assets_marketing/FemalesSing_banner_title_leniw2.jpg"
@@ -61,37 +67,44 @@ export default function SectionTeam() {
               alt={"Lesson Preview"}
             />
           </GridItem>
-          <GridItem xs={12} sm={5} md={5}>
-            <div className={classes.fontStyle}>
-              <br></br>
-              <br></br>
-              <div>
-                <p>We empower students with agency and critical thinking.</p>
+          <GridItem xs={12} sm={12} md={5}>
+            <div
+              className={classNames(
+                classes.fontStyle,
+                classes.justifyContentLeft
+              )}
+            >
+              <br />
+              <br />
+              <div className={classes.doubleSpaced}>
+                <h4>We empower students with agency and critical thinking.</h4>
               </div>
-              <div>
-                <p>
+              <div className={classes.doubleSpaced}>
+                <h4>
                   Students learn better when lessons are contextualized in
                   real-world scenarios and concepts are connected across
                   subjects—so that’s what we do.
-                </p>
+                </h4>
               </div>
               <div>
-                <p>
-                  Our lessons are flexible and adaptive, giving classroom
-                  teachers the freedom to adjust the material to fit their plan.
-                </p>
+                <h4>
+                  Our lessons are designed to save teachers time, with a goal of
+                  15 min prep, and delivered in open formats so teachers have
+                  the freedom to adjust and remix the material to fit their
+                  needs.
+                </h4>
               </div>
               <div>
-                <br></br>
+                <br />
                 <Button
                   color="primary"
                   size="lg"
-                  href="https://vimeo.com/448000812"
+                  href="/lessons/1"
                   target="_blank"
                   padding="100px"
                 >
                   <i className="fas" />
-                  See Lessons
+                  See Our First Lesson
                 </Button>
               </div>
             </div>

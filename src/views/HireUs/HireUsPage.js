@@ -134,7 +134,13 @@ export default function PricingPage() {
             </h2>
           </div>
           <SectionFeatures />
+        </div>
+        <div className={classes.interjection}>
+          <h2>Excited yet? We are!</h2>
+        </div>
+        <div className={classes.container}>
           <SectionHeardEnough />
+
         </div>
       </div>
       <Footer

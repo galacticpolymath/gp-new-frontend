@@ -4,10 +4,12 @@
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+// import List from "@material-ui/core/List";
+// import ListItem from "@material-ui/core/ListItem";
 // @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
+import BlurOn from "@material-ui/icons/BlurOn";
+import CreateIcon from '@material-ui/icons/Create';
+
 // core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
@@ -60,7 +62,7 @@ export default function LandingPage({ ...rest }) {
             <GridItem xs={12} sm={6} md={6}>
               <div>
                 <h1 className={classes.title}>
-                  We are an <br></br> education studio.
+                  We are an <br/> education studio.
                 </h1>
                 <h4
                   style={{
@@ -75,21 +77,19 @@ export default function LandingPage({ ...rest }) {
               <Button
                 color="primary"
                 size="lg"
-                href="https://vimeo.com/448000812"
-                target="_blank"
+                href="/lessons/"
                 padding="100px"
               >
-                <i className="fas" />
+                <CreateIcon />
                 Get Lessons
               </Button>
               <Button
                 color="primary"
                 size="lg"
-                href="https://vimeo.com/448000812"
-                target="_blank"
+                href="/hire-us/"
               >
-                <i className="fas" />
-                Make Lessons
+                <BlurOn />
+                Do Outreach
               </Button>
             </GridItem>
           </GridContainer>
@@ -98,9 +98,13 @@ export default function LandingPage({ ...rest }) {
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
           <SectionAbout />
+        </div>
           <SectionLessons />
+        <div className={classes.container}>
           <SectionHow />
+        </div>
           <SectionLessonData />
+        <div className={classes.container}>
           <SectionContact />
           {/* <SectionProduct />
           <SectionTeam />
