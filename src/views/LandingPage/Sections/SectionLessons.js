@@ -81,7 +81,7 @@ export default function SectionTeam() {
               )}
             >
               <h1 className={classNames(classes.title, classes.primaryColor)}>
-                Think Bigger. Learn Everything.
+                Think Bigger. <br /> Learn Everything.
               </h1>
               <div className={classes.doubleSpaced}>
                 <h3>
