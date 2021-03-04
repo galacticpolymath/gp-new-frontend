@@ -129,7 +129,7 @@ export default function SectionPricing() {
                 />
                 <PricingFeature
                   boldedLabel={"✔"}
-                  description={"Published Open Access For All"}
+                  description={"Published Open Access"}
                   linkTarget={"#openAccess"}
                 />
                 <PricingFeature
@@ -209,7 +209,7 @@ export default function SectionPricing() {
                 />
                 <PricingFeature
                   boldedLabel={"✔"}
-                  description={"Published Open Access for All"}
+                  description={"Published Open Access"}
                   linkTarget={"#openAccess"}
                 />
                 <PricingFeature
@@ -293,7 +293,7 @@ export default function SectionPricing() {
                 />
                 <PricingFeature
                   boldedLabel={"✔"}
-                  description={"Published Open Access For All"}
+                  description={"Published Open Access"}
                   linkTarget={"#openAccess"}
                 />
                 <PricingFeature

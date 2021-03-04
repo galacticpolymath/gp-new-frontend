@@ -35,7 +35,7 @@ export default function SectionContact() {
           className={classNames(classes.mrAuto, classes.mlAuto)}
         >
 
-          <h2 className={classNames(classes.title, classes.textCenter)}>
+          <h2 className={classNames(classes.title, classes.textCenter)} id="getInvolved">
             Want to get involved?
             <EmojiPeopleIcon
               style={{

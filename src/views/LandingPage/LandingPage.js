@@ -4,10 +4,12 @@
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
+// import List from "@material-ui/core/List";
+// import ListItem from "@material-ui/core/ListItem";
 // @material-ui/icons
-import Favorite from "@material-ui/icons/Favorite";
+import BlurOn from "@material-ui/icons/BlurOn";
+import CreateIcon from '@material-ui/icons/Create';
+
 // core components
 import Header from "components/Header/Header.js";
 import Footer from "components/Footer/Footer.js";
@@ -20,9 +22,15 @@ import Parallax from "components/Parallax/Parallax.js";
 import landingPageStyle from "assets/jss/material-kit-pro-react/views/landingPageStyle.js";
 
 // Sections for this page
-import SectionProduct from "./Sections/SectionProduct.js";
-import SectionTeam from "./Sections/SectionTeam.js";
-import SectionWork from "./Sections/SectionWork.js";
+// import SectionProduct from "./Sections/SectionProduct.js";
+// import SectionTeam from "./Sections/SectionTeam.js";
+// import SectionWork from "./Sections/SectionWork.js";
+import SectionAbout from "./Sections/SectionAbout.js";
+import SectionLessons from "./Sections/SectionLessons.js";
+import SectionHow from "./Sections/SectionHow.js";
+import SectionLessonData from "./Sections/SectionLessonData.js";
+import SectionContact from "./Sections/SectionContact.js";
+
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 
 const useStyles = makeStyles(landingPageStyle);
@@ -53,7 +61,9 @@ export default function LandingPage({ ...rest }) {
           <GridContainer>
             <GridItem xs={12} sm={6} md={6}>
               <div>
-                <h1 className={classes.title}>We are an education studio.</h1>
+                <h1 className={classes.title}>
+                  We are an <br/> education studio.
+                </h1>
                 <h4
                   style={{
                     backgroundColor: "rgba(71, 15, 44, 0.7)",
@@ -65,13 +75,21 @@ export default function LandingPage({ ...rest }) {
               </div>
               <br />
               <Button
-                color="info"
+                color="primary"
                 size="lg"
-                href="https://vimeo.com/448000812"
-                target="_blank"
+                href="/lessons/"
+                padding="100px"
               >
-                <i className="fas fa-play" />
-                Watch video
+                <CreateIcon />
+                Get Lessons
+              </Button>
+              <Button
+                color="primary"
+                size="lg"
+                href="/hire-us/"
+              >
+                <BlurOn />
+                Do Outreach
               </Button>
             </GridItem>
           </GridContainer>
@@ -79,9 +97,18 @@ export default function LandingPage({ ...rest }) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-          <SectionProduct />
+          <SectionAbout />
+        </div>
+          <SectionLessons />
+        <div className={classes.container}>
+          <SectionHow />
+        </div>
+          <SectionLessonData />
+        <div className={classes.container}>
+          <SectionContact />
+          {/* <SectionProduct />
           <SectionTeam />
-          <SectionWork />
+          <SectionWork /> */}
         </div>
       </div>
       <Footer
@@ -125,8 +152,8 @@ export default function LandingPage({ ...rest }) {
             {/*  </List>*/}
             {/*</div>*/}
 
-            <div style={{color: "white", opacity: ".7"}}>
-            <GPcopyrightFooter />
+            <div style={{ color: "white", opacity: ".7" }}>
+              <GPcopyrightFooter />
             </div>
           </div>
         }

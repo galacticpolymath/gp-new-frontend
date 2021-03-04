@@ -96,10 +96,10 @@ const hireUsStyle = {
     }
   },
   interjection:{
-    margin: "15% 0 25%",
-    padding: "-15px",
-    width: "calc(100% + 30px)",
-    transform: "translateX(-15px)",
+    width: "100%",
+    position: "relative",
+    padding: "15px",
+    margin: "15% 0 15%",
     alignItems: "center",
     justifyContent: "center",
     display: "flex",
