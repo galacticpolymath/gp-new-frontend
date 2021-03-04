@@ -12,7 +12,6 @@ import teamsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections
 import teamStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.js";
 // import CardMedia from "@material-ui/core/CardMedia";
 
-
 const style = {
   ...teamsStyle,
   ...teamStyle,
@@ -31,7 +30,7 @@ const style = {
   },
   greyBackground: {
     backgroundColor: "#E0E0E0",
-    padding: "20px",
+    padding: "30px",
   },
   pinkBackground: {
     backgroundColor: "#FF3DAC",
@@ -44,6 +43,9 @@ const style = {
   darkGreyFont: {
     color: "#828282",
   },
+  whiteFont: {
+    color: "white",
+  },
   headerPadding: {
     paddingTop: "40px",
     paddingBottom: "20px",
@@ -53,6 +55,9 @@ const style = {
   },
   topPadding2: {
     paddingTop: "50px",
+  },
+  bottomPadding: {
+    paddingBottom: "30px",
   },
   textLeft: {
     textAlign: "left",
@@ -68,6 +73,12 @@ const style = {
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
   },
+  // buttonOnBottom: {
+  //   position: "absolute",
+  //   // right: "-1",
+  //   // left: "px",
+  //   bottom: "0",
+  // },
 };
 
 const useStyles = makeStyles(style);
@@ -76,23 +87,23 @@ export default function SectionLessonData() {
   const classes = useStyles();
   return (
     <div className={classNames(classes.section, classes.greyBackground)}>
-      <h2
-        className={classNames(
-          classes.title,
-          classes.justifyContentSpaceBetween
-        )}
-      >
+      <h2 className={classNames(classes.justifyContentSpaceBetween)}>
         Bridging the gap between classroom and lab
       </h2>
-      <div>
+      <div className={classes.topPadding}>
         <GridContainer
-          style={{gridAutoRows: "1fr",  gridColumnGap: "0",display: "flexContainer"}}
+          style={{
+            gridAutoRows: "1fr",
+            gridColumnGap: "0",
+            display: "flexContainer",
+          }}
         >
-          <GridItem xs={12} sm={6} md={6}  style={{display: "grid"}}>
+          <GridItem xs={12} sm={6} md={6} style={{ display: "grid" }}>
             <div
               className={classNames(
                 classes.pinkBackground,
-                classes.backgroundImgPencil
+                classes.backgroundImgPencil,
+                classes.whiteFont
               )}
             >
               <h3 className={classes.headerPadding}>FOR TEACHERS</h3>
@@ -116,51 +127,53 @@ export default function SectionLessonData() {
               <div className={classes.topPadding2}>
                 <Button
                   color="white"
-                  size="md"
                   href="https://vimeo.com/448000812"
                   target="_blank"
-                  padding="100px"
+                  className={classes.buttonOnBottom}
                 >
                   <i className="fas" />
                   <b className={classes.darkGreyFont}>GET LESSONS</b>
                 </Button>
               </div>
-              {/*<div className={classes.topPadding}></div>*/}
             </div>
           </GridItem>
-          <GridItem xs={12} sm={6} md={6}  style={{display: "grid"}}>
+          <GridItem xs={12} sm={6} md={6} style={{ display: "grid" }}>
             <div
               className={classNames(
                 classes.purpleBackground,
-                classes.backgroundImgCircuit
+                classes.backgroundImgCircuit,
+                classes.whiteFont
               )}
             >
               <h3 className={classes.headerPadding}>FOR RESEARCHERS</h3>
               <div className={classes.textLeft}>
                 <div>
-                  <h4>Magnify the impact of your research and outreach efforts</h4>
+                  <h4>
+                    Magnify the impact of your research and outreach efforts
+                  </h4>
                 </div>
                 <div>
                   <h4>Get detailed impact metrics to report to funders</h4>
                 </div>
                 <div>
                   <h4>
-                    If you don't have the funds to hire us, <a href="/About#getInvolved">there are many avenues for collaboration!</a>
+                    If you don't have the funds to hire us,{" "}
+                    <a href="/About#getInvolved">
+                      <b>there are many avenues for collaboration!</b>
+                    </a>
                   </h4>
                 </div>
               </div>
               <div className={classes.topPadding2}>
                 <Button
                   color="white"
-                  size="md"
                   href="/hire-us"
-                  padding="100px"
+                  className={classes.buttonOnBottom}
                 >
                   <i className="fas" />
                   <b className={classes.darkGreyFont}>Learn More</b>
                 </Button>
               </div>
-              {/*<div className={classes.topPadding}></div>*/}
             </div>
           </GridItem>
         </GridContainer>
