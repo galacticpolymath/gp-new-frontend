@@ -30,9 +30,9 @@ export default function SectionHeardEnough() {
   const classes = useStyles();
   return (
     <div >
-      <div className={classes.interjection}>
-      <h2>Excited yet? We are!</h2>
-      </div>
+      {/*<div className={classes.interjection}>*/}
+      {/*<h2>Excited yet? We are!</h2>*/}
+      {/*</div>*/}
       <Card blog>
         <CardHeader image>
           <div className={"vignette"}>
