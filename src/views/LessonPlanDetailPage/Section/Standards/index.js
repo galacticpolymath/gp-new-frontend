@@ -10,6 +10,8 @@ import Subject from "./Subject";
 
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
 
+import "./style.scss";
+
 const useStyles = makeStyles(lessonPlanStyle);
 
 const Standards = ({ Data }) => {

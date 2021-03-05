@@ -5,7 +5,7 @@ import StandardsGroup from "./StandardsGroup";
 
 const Dimension = ({ name, standardsGroup }) => {
   return (
-    <div>
+    <div className="Dimension">
       <p>
         <strong>Dimension:</strong>: {name}
       </p>

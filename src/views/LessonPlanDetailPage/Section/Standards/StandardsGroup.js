@@ -10,9 +10,13 @@ const StandardsGroup = ({ codes, alignmentNotes, statements }) => {
   const [expanded, expand] = useState(false);
 
   return (
-    <ExpansionPanel expanded={expanded} onChange={() => expand(!expanded)}>
+    <ExpansionPanel
+      className="StandardsGroup"
+      expanded={expanded}
+      onChange={() => expand(!expanded)}
+    >
       <ExpansionPanelSummary
-        className="ExpansionPanelSummary"
+        className="ExpansionPanelSummary codes"
         expandIcon={<ExpandMoreIcon />}
       >
         {[].concat(codes).map((code, i) => (
@@ -22,7 +26,7 @@ const StandardsGroup = ({ codes, alignmentNotes, statements }) => {
         ))}
       </ExpansionPanelSummary>
 
-      <ExpansionPanelDetails>
+      <ExpansionPanelDetails className="alignmentNotes">
         <h6>How does the lesson align to this standard?</h6>
         <RichText content={alignmentNotes.replace("•", "-")} />
       </ExpansionPanelDetails>
