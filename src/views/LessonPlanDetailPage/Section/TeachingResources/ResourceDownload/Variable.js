@@ -11,7 +11,7 @@ const VariableResourceDownload = ({ Title, Description, Variations = [] }) => {
     <div className="VariableResourceDownload">
       <RichText content={"**" + Title + ":** " + Description} />
       <div className="variations">
-        <p>Differentiated versions:</p>
+        <h5>Differentiated versions:</h5>
         {Variations.map((item, i) => (
           <SimpleResourceDownload key={i} {...item} />
         ))}
