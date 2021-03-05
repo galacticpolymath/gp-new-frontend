@@ -18,11 +18,26 @@
   }
 }
 
-.ExpansionPanelSummary {
-  margin: 0;
-  min-height: 0 !important;
+.Procedure {
+  h3 {
+    color: $hydrogen-blue;
+    text-transform: uppercase;
+  }
+  .RichText {
+    img {
+      display: block;
+      max-width: 45rem;
+      margin: 2rem auto 1rem auto;
+    }
+  }
+}
+
+.Standards {
+  .MuiExpansionPanelDetails-root {
+    display: block;
+  }
   .MuiExpansionPanelSummary-content {
-    margin: 0 !important;
+    display: block;
   }
 }
 
@@ -33,14 +48,5 @@
   .footnote {
     background: $gray;
     padding: 1rem;
-  }
-}
-
-.Standards {
-  .MuiExpansionPanelDetails-root {
-    display: block;
-  }
-  .MuiExpansionPanelSummary-content {
-    display: block;
   }
 }

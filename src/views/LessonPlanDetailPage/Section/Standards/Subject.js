@@ -11,12 +11,18 @@ const Subject = ({ sets, subject }) => {
   const [expanded, expand] = useState(true);
 
   return (
-    <ExpansionPanel expanded={expanded} onChange={() => expand(!expanded)}>
+    <ExpansionPanel
+      className={"Subject " + subject.toLowerCase().replace(/\s/g, "")}
+      expanded={expanded}
+      onChange={() => expand(!expanded)}
+    >
       <ExpansionPanelSummary
         className="ExpansionPanelSummary"
         expandIcon={<ExpandMoreIcon />}
       >
-        <h4>{subject}</h4>
+        <h4>
+          {subject} - {sets[0].name}
+        </h4>
       </ExpansionPanelSummary>
 
       <ExpansionPanelDetails>

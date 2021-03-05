@@ -10,6 +10,8 @@ import Subject from "./Subject";
 
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
 
+import "./style.scss";
+
 const useStyles = makeStyles(lessonPlanStyle);
 
 const Standards = ({ Data }) => {
@@ -18,7 +20,11 @@ const Standards = ({ Data }) => {
 
   return (
     <div className={"Standards " + classes.container}>
-      <ExpansionPanel expanded={expanded} onChange={() => expand(!expanded)}>
+      <ExpansionPanel
+        className="ExpansionPanel"
+        expanded={expanded}
+        onChange={() => expand(!expanded)}
+      >
         <ExpansionPanelSummary
           className="ExpansionPanelSummary"
           expandIcon={<ExpandMoreIcon />}
@@ -26,7 +32,7 @@ const Standards = ({ Data }) => {
           <h3>Standards and Assessments</h3>
         </ExpansionPanelSummary>
 
-        <ExpansionPanelDetails>
+        <ExpansionPanelDetails className="ExpansionPanelDetails">
           <h3>Target Standard(s)</h3>
           {Data.filter(({ target }) => target).map((subject, i) => (
             <Subject key={"target-" + i} {...subject} />

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -11,22 +11,11 @@ const useStyles = makeStyles(lessonPlanStyle);
 
 const TeachingResources = ({ TeachingMethod: TeachingMethods = [] }) => {
   const classes = useStyles();
-  const [expandedMethod, expandMethod] = useState(0);
-
-  const handleChange = (method) => {
-    expandMethod(method === expandedMethod ? null : method);
-  };
 
   return (
     <div className={classes.container}>
       {TeachingMethods.map((method, i) => (
-        <TeachingMethod
-          expanded={expandedMethod === i}
-          onChange={() => handleChange(i)}
-          index={i + 1} // Accordion keys must be positive
-          key={i}
-          {...method}
-        />
+        <TeachingMethod key={i} {...method} />
       ))}
     </div>
   );

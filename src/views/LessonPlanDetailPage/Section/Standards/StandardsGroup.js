@@ -10,9 +10,13 @@ const StandardsGroup = ({ codes, alignmentNotes, statements }) => {
   const [expanded, expand] = useState(false);
 
   return (
-    <ExpansionPanel expanded={expanded} onChange={() => expand(!expanded)}>
+    <ExpansionPanel
+      className="StandardsGroup"
+      expanded={expanded}
+      onChange={() => expand(!expanded)}
+    >
       <ExpansionPanelSummary
-        className="ExpansionPanelSummary"
+        className="ExpansionPanelSummary codes"
         expandIcon={<ExpandMoreIcon />}
       >
         {[].concat(codes).map((code, i) => (
@@ -22,8 +26,8 @@ const StandardsGroup = ({ codes, alignmentNotes, statements }) => {
         ))}
       </ExpansionPanelSummary>
 
-      <ExpansionPanelDetails>
-        <h5>How does the lesson align to this standard?</h5>
+      <ExpansionPanelDetails className="alignmentNotes">
+        <h6>How does the lesson align to this standard?</h6>
         <RichText content={alignmentNotes.replace("•", "-")} />
       </ExpansionPanelDetails>
     </ExpansionPanel>
@@ -31,8 +35,8 @@ const StandardsGroup = ({ codes, alignmentNotes, statements }) => {
 };
 
 StandardsGroup.propTypes = {
-  codes: PropTypes.oneOf([PropTypes.string, PropTypes.array]),
-  statements: PropTypes.oneOf([PropTypes.string, PropTypes.array]),
+  codes: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
+  statements: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   alignmentNotes: PropTypes.string,
 };
 

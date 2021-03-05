@@ -1,10 +1,19 @@
+@import '../../../variables';
+
 .VariableResourceDownload {
   .variations {
     padding-left: 2rem;
   }
 }
 .SimpleResourceDownload {
-  > div > div {
-    padding-left: 2rem;
+  margin: 1rem 0 2rem 0;
+  > div {
+    &:not(.RichText) {
+      color: rgba($charcoal, .8);
+      margin: 0.15rem 0;
+    }
+    > div {
+      padding-left: 2rem;
+    }
   }
 }
