@@ -6,9 +6,16 @@
   }
   .ResourceSummary {
     background: $gray;
-    padding: 15px 30px;
-    > div:not(:last-child) > div {
-      border-bottom: 1px solid rgba($galactic-black, 0.5);
+    padding: 0.5rem 2rem;
+    > div {
+      > div {
+        padding: 0.75rem 0;
+        line-height: 1.7;
+        font-size: 1.1em;
+      }
+      &:not(:last-child) > div {
+        border-bottom: 1px solid rgba($galactic-black, 0.5);
+      }
     }
   }
 }
