@@ -42,6 +42,11 @@
 }
 
 .SteamBadge {
+  > .Image {
+    display: block;
+    max-height: 60vh;
+    margin: auto;
+  }
   .MuiExpansionPanelDetails-root {
     display: block;
   }

@@ -7,8 +7,8 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 import Dimension from "./Dimension";
 
-const Subject = ({ sets, subject }) => {
-  const [expanded, expand] = useState(true);
+const Subject = ({ sets, subject, initiallyExpanded }) => {
+  const [expanded, expand] = useState(initiallyExpanded);
 
   return (
     <ExpansionPanel
@@ -37,6 +37,7 @@ const Subject = ({ sets, subject }) => {
 Subject.propTypes = {
   sets: PropTypes.array,
   subject: PropTypes.string,
+  initiallyExpanded: PropTypes.bool,
 };
 
 export default Subject;
