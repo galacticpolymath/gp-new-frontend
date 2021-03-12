@@ -83,11 +83,24 @@ export const Level4Card = (props) => {
     parent: [],
   });
 
+  //If URL path has word enpoint the modal for that endpoint will now be open on page load
+  const checkIfUrlStringHasEndpoint = () => {
+    // console.log(typeof props.location.pathname);
+    let e = props.location.pathname.includes("endpoint");
+
+    let j = props.location.pathname.includes(title);
+
+    if (e === true && j === true) {
+      setClassicModal(true);
+    }
+  };
+
   useEffect(() => {
+    checkIfUrlStringHasEndpoint(props.location);
     JobManager.getAll().then((jobs) => {
       setOriginalJobs(jobs);
     });
-  }, []);
+  }, [props.location]);
 
   useEffect(() => {
     setJobs(addIdPathway(originalJobs));
@@ -118,7 +131,7 @@ export const Level4Card = (props) => {
                 `/jobviz/${greatGreatGrandparent}/${greatGrandparent}/${grandparent}/${parent}/${jobId}/${title}/endpoint`
               );
               setClassicModal(true);
-              }}
+            }}
             color={"primary"}
           >
             <LibraryBooks />

@@ -82,11 +82,24 @@ export const Level3Card = (props) => {
     parent: [],
   });
 
+  //If URL path has word enpoint the modal for that endpoint will now be open on page load
+  const checkIfUrlStringHasEndpoint = () => {
+    // console.log(typeof props.location.pathname);
+    let e = props.location.pathname.includes("endpoint");
+
+    let j = props.location.pathname.includes(title);
+
+    if (e === true && j === true) {
+      setClassicModal(true);
+    }
+  };
+
   useEffect(() => {
     JobManager.getAll().then((jobs) => {
       setOriginalJobs(jobs);
+      checkIfUrlStringHasEndpoint(props.location);
     });
-  }, []);
+  }, [props.location]);
 
   useEffect(() => {
     setJobs(addIdPathway(originalJobs));
