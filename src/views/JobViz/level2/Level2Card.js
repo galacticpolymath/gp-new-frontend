@@ -84,11 +84,24 @@ export const Level2Card = (props) => {
     parent: [],
   });
 
+  //If URL path has word enpoint the modal for that endpoint will now be open on page load
+  const checkIfUrlStringHasEndpoint = () => {
+    // console.log(typeof props.location.pathname);
+    let e = props.location.pathname.includes("endpoint");
+
+    let j = props.location.pathname.includes(title);
+
+    if (e === true && j === true) {
+      setClassicModal(true);
+    }
+  };
+
   useEffect(() => {
+    checkIfUrlStringHasEndpoint(props.pathname);
     JobManager.getAll().then((jobs) => {
       setOriginalJobs(jobs);
     });
-  }, []);
+  }, [props.location]);
 
   useEffect(() => {
     setJobs(addIdPathway(originalJobs));
@@ -162,14 +175,24 @@ export const Level2Card = (props) => {
               open={classicModal}
               TransitionComponent={Transition}
               keepMounted
-              onClose={() => setClassicModal(false)}
+              onClose={() => {
+                props.history.push(
+                  `/jobviz/${grandparent}/${parent}/${titleParent}`
+                );
+                setClassicModal(false);
+              }}
               aria-labelledby="classic-modal-slide-title"
               aria-describedby="classic-modal-slide-description"
             >
               <ModalTable jobObject={categoryObject} />
               <DialogActions className={classes.modalFooter}>
                 <Button
-                  onClick={() => setClassicModal(false)}
+                  onClick={() => {
+                    props.history.push(
+                      `/jobviz/${grandparent}/${parent}/${titleParent}`
+                    );
+                    setClassicModal(false);
+                  }}
                   color="danger"
                   simple
                 >
