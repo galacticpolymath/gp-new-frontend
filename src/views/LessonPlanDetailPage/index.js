@@ -1,12 +1,12 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment } from "react";
 import { useParams } from "react-router-dom";
 
 import SiteHeader from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 
 import "./style.scss";
+import lessons from "./data/lesson-plans.json";
 
-import { fetchOne } from "./modules/lessonsApi";
 import Section from "./Section/index";
 import Header from "./Header";
 import { NUMBERED_SECTIONS } from "./constants";
@@ -14,15 +14,11 @@ import { NUMBERED_SECTIONS } from "./constants";
 const LessonPlan = () => {
   const { lessonId } = useParams();
 
-  const [lesson, setLesson] = useState(null);
+  const lesson = lessons.find(
+    ({ id }) => id.toString() === lessonId.toString()
+  );
 
   let numberedElements = 0;
-
-  useEffect(() => {
-    fetchOne(lessonId).then((data) => {
-      setLesson(data);
-    });
-  }, [lessonId]);
 
   if (!lesson) return null;
 

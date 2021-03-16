@@ -1,5 +1,4 @@
-/*eslint-disable*/
-import React, {useEffect, useState} from "react";
+import React, { useEffect } from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -16,8 +15,8 @@ import SectionPills from "./Sections/SectionPills.js";
 import LessonCards from "./Sections/LessonCards.js";
 
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
-import { fetchAll } from "views/LessonPlanDetailPage/modules/lessonsApi.js";
 
+import lessons from "../LessonPlanDetailPage/data/lesson-plans.json";
 import lessonsPageStyle from "assets/jss/material-kit-pro-react/views/lessonsPageStyle.js";
 const useStyles = makeStyles(lessonsPageStyle);
 
@@ -26,14 +25,6 @@ export default function LessonsPage() {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
   });
-
-  const [lessons, setLessons] = useState([])
-
-  useEffect(() => {
-    fetchAll().then((data) => {
-      setLessons(data);
-    });
-  }, [])
 
   const classes = useStyles();
   return (
@@ -50,9 +41,7 @@ export default function LessonsPage() {
       />
       <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
-          <GridContainer
-            style={{placeItems: "center"}}
-          >
+          <GridContainer style={{ placeItems: "center" }}>
             <GridItem
               xs={12}
               md={6}
@@ -63,14 +52,16 @@ export default function LessonsPage() {
               )}
               style={{ paddingTop: "3%", paddingRight: "25px" }}
             >
-              <h1 className={classNames(classes.title,classes.longTitle)}>Interdisciplinary Lessons</h1>
+              <h1 className={classNames(classes.title, classes.longTitle)}>
+                Interdisciplinary Lessons
+              </h1>
               <h4
                 className={classes.title}
                 style={{ letterSpacing: "1.5px", fontWeight: 500 }}
               >
                 Our lessons are free. We strive to create mind-expanding
-                learning experiences that a non-specialist can teach
-                in <em>any G5-12 classroom</em> with 15 minutes of prep time!
+                learning experiences that a non-specialist can teach in{" "}
+                <em>any G5-12 classroom</em> with 15 minutes of prep time!
               </h4>
             </GridItem>
             <GridItem
@@ -99,7 +90,7 @@ export default function LessonsPage() {
           {lessons && <LessonCards lessons={lessons} />}
         </div>
       </div>
-      <Footer content={<GPcopyrightFooter/>} />
+      <Footer content={<GPcopyrightFooter />} />
     </div>
   );
 }

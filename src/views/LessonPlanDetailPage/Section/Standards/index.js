@@ -35,7 +35,7 @@ const Standards = ({ Data }) => {
         <ExpansionPanelDetails className="ExpansionPanelDetails">
           <h3>Target Standard(s)</h3>
           {Data.filter(({ target }) => target).map((subject, i) => (
-            <Subject key={"target-" + i} {...subject} />
+            <Subject initiallyExpanded key={"target-" + i} {...subject} />
           ))}
           <h3>Connected Standard(s)</h3>
           {Data.filter(({ target }) => !target).map((subject, i) => (
