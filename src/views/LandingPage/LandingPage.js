@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 // nodejs library to set properties for components
 // nodejs library that concatenates classes
 import classNames from "classnames";
@@ -44,12 +43,6 @@ export default function LandingPage({ ...rest }) {
   const classes = useStyles();
   return (
     <div style={{ backgroundColor: "#470F2C" }}>
-      <Helmet>
-        <meta
-          name="description"
-          content="We are an education studio. We translate current research into creative, interdisciplinary lessons for grades 5+ that are free for everyone."
-        />
-      </Helmet>
       <Header
         color="transparent"
         brand="Galactic Polymath"

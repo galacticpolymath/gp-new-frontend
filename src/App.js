@@ -41,6 +41,10 @@ const App = () => (
       <meta charSet="utf-8" />
       <title>Galactic Polymath</title>
       <link rel="canonical" href="http://mysite.com/example" />
+      <meta
+        name="description"
+        content="We are an education studio. We translate current research into creative, interdisciplinary lessons for grades 5+ that are free for everyone."
+      />
     </Helmet>
     <Switch>
       <Route exact path="/" component={LandingPage} />
