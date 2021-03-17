@@ -1,4 +1,4 @@
-/*eslint-disable*/ import React from "react";
+import React from "react";
 // nodejs library to set properties for components
 // nodejs library that concatenates classes
 import classNames from "classnames";
@@ -8,7 +8,7 @@ import { makeStyles } from "@material-ui/core/styles";
 // import ListItem from "@material-ui/core/ListItem";
 // @material-ui/icons
 import BlurOn from "@material-ui/icons/BlurOn";
-import CreateIcon from '@material-ui/icons/Create';
+import CreateIcon from "@material-ui/icons/Create";
 
 // core components
 import Header from "components/Header/Header.js";
@@ -62,7 +62,7 @@ export default function LandingPage({ ...rest }) {
             <GridItem xs={12} sm={6} md={6}>
               <div>
                 <h1 className={classes.title}>
-                  We are an <br/> education studio.
+                  We are an <br /> education studio.
                 </h1>
                 <h4
                   style={{
@@ -83,11 +83,7 @@ export default function LandingPage({ ...rest }) {
                 <CreateIcon />
                 Get Lessons
               </Button>
-              <Button
-                color="primary"
-                size="lg"
-                href="/hire-us/"
-              >
+              <Button color="primary" size="lg" href="/hire-us/">
                 <BlurOn />
                 Do Outreach
               </Button>
@@ -99,11 +95,11 @@ export default function LandingPage({ ...rest }) {
         <div className={classes.container}>
           <SectionAbout />
         </div>
-          <SectionLessons />
+        <SectionLessons />
         <div className={classes.container}>
           <SectionHow />
         </div>
-          <SectionLessonData />
+        <SectionLessonData />
         <div className={classes.container}>
           <SectionContact />
           {/* <SectionProduct />
