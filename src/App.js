@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router";
 
@@ -36,6 +37,11 @@ var hist = createBrowserHistory();
 /* eslint-disable react/prop-types */
 const App = () => (
   <Router history={hist}>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Galactic Polymath</title>
+      <link rel="canonical" href="http://mysite.com/example" />
+    </Helmet>
     <Switch>
       <Route exact path="/" component={LandingPage} />
       <Route path="/about" component={AboutUsPage} />
