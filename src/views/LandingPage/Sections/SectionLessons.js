@@ -21,21 +21,13 @@ import {
   hexToRgb,
   blackColor,
 } from "../../../assets/jss/material-kit-pro-react";
+import CreateIcon from "@material-ui/icons/Create";
 
 const style = {
   ...teamsStyle,
   ...teamStyle,
-  justifyContentCenter: {
-    justifyContent: "center"
-  },
-  justifyContentSpaceBetween: {
-    justifyContent: "space-between"
-  },
-  justifyContentLeft: {
-    textAlign: "left"
-  },
-  primaryColor: {
-    color: primaryColor[0]
+  doubleSpaced: {
+    paddingBottom: ".5em"
   },
   featuredLessonLabel:{
     float: "left",
@@ -67,8 +59,14 @@ const style = {
     backgroundColor: "#E0E0E0",
     padding: "4rem 2rem 6rem"
   },
-  doubleSpaced: {
-    paddingBottom: ".5em"
+  justifyContentCenter: {
+    justifyContent: "center"
+  },
+  justifyContentSpaceBetween: {
+    justifyContent: "space-between"
+  },
+  justifyContentLeft: {
+    textAlign: "left"
   },
   lessonCover:{
     // border: "2px solid" + grayColor[6],
@@ -76,14 +74,21 @@ const style = {
     zIndex: "0",
     paddingTop: "20px",
     boxShadow:
-    "0 16px 38px -12px rgba(" +
-        hexToRgb(blackColor) +
+      "0 16px 38px -12px rgba(" +
+      hexToRgb(blackColor) +
       ", 0.56), 0 4px 25px 0px rgba(" +
       hexToRgb(blackColor) +
       ", 0.12), 0 8px 10px -5px rgba(" +
       hexToRgb(blackColor) +
       ", 0.2)"
   },
+  lessonDescriptors:{
+    padding: "20px 1rem"
+  },
+  primaryColor: {
+    color: primaryColor[0]
+  },
+
   purpleUnderline: {
     textDecoration: "underline #6912D1"
   },
@@ -158,7 +163,7 @@ export default function SectionTeam() {
 
         {/*Featured lesson*/}
         <GridContainer >
-          <GridItem xs={12} sm={12} md={7}>
+          <GridItem xs={12} sm={12} md={12} lg={5}>
             <Card   style={{paddingBottom: "20px",}}>
               <CardBody style={{backgroundColor: "transparent",}}>
                 <GridContainer
@@ -198,19 +203,17 @@ export default function SectionTeam() {
             </Card>
 
           </GridItem>
-          <GridItem xs={12} sm={12} md={5}>
-            <div
-              className={classNames(
-                classes.fontStyle,
-                classes.justifyContentLeft
-              )}
-            >
-              {/*<h1 className={classNames(classes.title, classes.primaryColor)}>*/}
-              {/*  Think Bigger. <br /> Learn Everything.*/}
-              {/*</h1>*/}
+
+          {/*Lesson descriptor/ add copy*/}
+          <GridItem xs={12} sm={12} md={12} lg={5}
+                    className={classNames(
+                      classes.fontStyle,
+                      classes.justifyContentLeft,
+                      classes.lessonDescriptors,
+                    )}>
               <div className={classes.doubleSpaced}>
                 <h3>
-                  We empower students with <br />{" "}
+                  We empower students with{" "}
                   <span className={classes.purpleUnderline}>agency</span> and{" "}
                   <span className={classes.pinkUnderline}>
                     critical thinking.
@@ -219,41 +222,37 @@ export default function SectionTeam() {
               </div>
               <div className={classes.doubleSpaced}>
                 <h4>
-                  Students learn better when lessons are <br />
-                  contextualized in real-world scenarios and <br />
-                  concepts are connected across subjects— <br />
+                  Students learn better when lessons are
+                  contextualized in real-world scenarios and
+                  concepts are connected across subjects—
                   <span className={classes.blueUnderline}>
-                    so that’s what we do.
+                    and that's what our lessons achieve.
                   </span>
                 </h4>
               </div>
               <div>
                 <h4>
-                  We use current, real-world scientific studies and <br />
-                  data submitted to us by real-life scientists and <br />
-                  labs.
+                  We build lessons around real, current research and data, and the stories of diverse STEM experts.
                 </h4>
               </div>
               <div>
                 <h4>
-                  Our lessons are flexible and adaptive, giving <br />
-                  classroom teachers the freedom to adjust the <br />
-                  material to fit their plan.
+                  Our lessons are free and ready-to-launch in person or virtually! And teachers have access to editable
+                  files, so they can edit and remix to their liking.
                 </h4>
               </div>
-              <div>
+              <div
+              style={{padding:"1.5rem 0 "}}>
                 <Button
                   color="primary"
                   size="lg"
                   href="/lessons/1"
-                  target="_blank"
-                  padding="100px"
                 >
+                  <CreateIcon />
                   <i className="fas" />
                   See Our First Lesson
                 </Button>
               </div>
-            </div>
           </GridItem>
         </GridContainer>
       </div>
