@@ -20,7 +20,12 @@ const style = {
   },
   fontStyle: {
     fontSize: "16px",
-    color: "black"
+    color: "black",
+ // Format triplet descriptor text
+    "& h4":{
+      textAlign:"left",
+      padding: "2rem 1.5rem 2rem 2rem",
+    }
   },
   galacticBlue: {
     color: "#005892"
@@ -43,6 +48,19 @@ const style = {
   imagePadding: {
     paddingTop: "50px",
     paddingRight: "70px"
+  },
+  triplet:{
+    paddingBottom: "1rem",
+    "& h3":{
+      marginBottom: 0,
+      marginTop: "0.7rem",
+    },
+    tripletDescriptor:{
+      "& ": {
+        textAlign: "left"
+      }
+    },
+
   }
 };
 
@@ -61,7 +79,7 @@ export default function SectionHow() {
               classes.marginRight
             )}
           >
-            How we do it
+            What We Do
           </h1>
         </GridItem>
         <GridItem xs={12} sm={12} md={6}>
@@ -90,7 +108,7 @@ export default function SectionHow() {
                     "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357034/assets_marketing/GP__Research_Purple_1_b6pfbv.svg"
                   }
                   height="auto"
-                  width="50%"
+                  width="25%"
                   alt={"logo"}
                 />
               </div>
@@ -98,12 +116,14 @@ export default function SectionHow() {
                 className={classNames(
                   classes.paddingTop,
                   classes.upperCase,
-                  classes.galacticBlue
+                  classes.galacticBlue,
+                  classes.triplet,
+
                 )}
               >
                 <h3>Researchers,</h3>
                 <h3>non-profits,</h3>
-                <h3>sustainable corps.</h3>
+                <h3>sustainable companies</h3>
               </div>
               {/*<div className={classes.paddingTop}></div>*/}
               <h4>
@@ -124,7 +144,7 @@ export default function SectionHow() {
                     "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357034/assets_marketing/GP__SciComm_Purple_1_qyl1nn.svg"
                   }
                   height="auto"
-                  width="50%"
+                  width="25%"
                   alt={"logo"}
                 />
               </div>
@@ -132,17 +152,19 @@ export default function SectionHow() {
                 className={classNames(
                   classes.paddingTop,
                   classes.upperCase,
-                  classes.galacticBlue
+                  classes.galacticBlue,
+                  classes.triplet,
                 )}
               >
-                <h3>select,</h3>
-                <h3>award-winning</h3>
-                <h3>science communicators</h3>
+                <h3>complex research</h3>
+                <h3>transformed into</h3>
+                <h3>amazing lessons</h3>
               </div>
               {/*<div className={classes.paddingTop}></div>*/}
-              <h4>
-                Our team of science commnicators, educators, and artists translates these complex topics into
-                grade 5-12 lesson plans that can be taught in any subject by a non-expert.
+              <h4 className={classes.tripletDescriptor}>
+                Our team of science commnicators, educators, and artists works directly with subject experts to translate
+                any body of research into free lessons for grades 5-12. <em>Our goal is for every lesson to be ready to teach
+                in any subject classroom by a non-expert with 15 min. of prep time.</em>
               </h4>
               <br />
               <br />
@@ -158,7 +180,7 @@ export default function SectionHow() {
                     "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357034/assets_marketing/GP__Teachers_Purple_1_pksgwr.svg"
                   }
                   height="auto"
-                  width="50%"
+                  width="25%"
                   alt={"logo"}
                 />
               </div>
@@ -166,7 +188,8 @@ export default function SectionHow() {
                 className={classNames(
                   classes.paddingTop,
                   classes.upperCase,
-                  classes.galacticBlue
+                  classes.galacticBlue,
+                  classes.triplet,
                 )}
               >
                 <h3>Taught by</h3>
@@ -174,7 +197,7 @@ export default function SectionHow() {
                 <h3>anywhere</h3>
               </div>
               {/*<div className={classes.paddingTop}></div>*/}
-              <h4>
+              <h4 className={classes.tripletDescriptor}>
                 Working closely with educators and districts in our growing network, lessons are
                 taught in real classrooms across the US.
               </h4>
@@ -190,7 +213,7 @@ export default function SectionHow() {
                     "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357034/assets_marketing/GP__Revise_Purple_1_u0yanp.svg"
                   }
                   height="auto"
-                  width="50%"
+                  width="25%"
                   alt={"logo"}
                 />
               </div>
@@ -205,11 +228,12 @@ export default function SectionHow() {
                 <h3>revise,</h3>
                 <h3>repeat</h3>
               </div>
-              {/*<div className={classes.paddingTop}></div>*/}
-              <h4>All of our lessons are continuously evaluated, updated, and
+              <div className={classes.tripletDescriptor}>
+              <h4 >All of our lessons are continuously evaluated, updated, and
                 revised—meaning they are always up-to-date and working to make the jobs of teaching
                 and outreach easier!
               </h4>
+              </div>
               <br/>
               <br/>
             </div>
