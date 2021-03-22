@@ -12,63 +12,88 @@ import teamsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections
 import teamStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.js";
 // import CardMedia from "@material-ui/core/CardMedia";
 
-
 const style = {
   ...teamsStyle,
   ...teamStyle,
   justifyContentCenter: {
-    justifyContent: "center",
+    justifyContent: "center"
   },
   justifyContentSpaceBetween: {
-    justifyContent: "space-between",
+    justifyContent: "space-between"
   },
   primaryColor: {
-    color: "#2C83C3",
+    color: "#2C83C3"
   },
   fontStyle: {
     fontSize: "16px",
-    color: "black",
+    color: "black"
   },
   greyBackground: {
     backgroundColor: "#E0E0E0",
-    // margin: "-100px",
-    padding: "50px",
+    padding: "30px"
   },
   pinkBackground: {
     backgroundColor: "#FF3DAC",
-    borderRadius: "25px",
+    borderRadius: "25px"
   },
   purpleBackground: {
     backgroundColor: "#9F4BFF",
-    borderRadius: "25px",
+    borderRadius: "25px"
   },
   darkGreyFont: {
-    color: "#828282",
+    color: "#828282"
+  },
+  whiteFont: {
+    color: "white"
   },
   headerPadding: {
-    paddingTop: "40px",
-    paddingBottom: "20px",
+    fontWeight: "bold",
+    paddingTop: "2rem",
+    paddingBottom: 0,
+    marginBottom: 0
   },
   topPadding: {
-    paddingTop: "30px",
+    paddingTop: "30px"
   },
-  topPadding2: {
-    paddingTop: "50px",
+  boxContainer:{
+  display: "grid"
+
   },
-  textLeft: {
+  buttonAtBottom: {
+    alignSelf: "end",
+    paddingTop: "1rem",
+    paddingBottom: "2rem",
+    justifySelf: "center",
+    gridAutoRows: "1fr"
+    // padding: "2rem 0",
+  },
+  bottomPadding: {
+    paddingBottom: "30px"
+  },
+  bullets: {
     textAlign: "left",
-    paddingLeft: "70px",
+    paddingBottom: "1rem",
+    "& *": {
+      padding: "0.25rem 1rem",
+      lineHeight: "1.1"
+    }
   },
   backgroundImgPencil: {
     backgroundImage: `url(${"https://res.cloudinary.com/galactic-polymath/image/upload/v1614120447/assets_marketing/Pencil_Pink_zlrglm.png"})`,
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
+    backgroundPosition: "center"
   },
   backgroundImgCircuit: {
     backgroundImage: `url(${"https://res.cloudinary.com/galactic-polymath/image/upload/v1614120418/assets_marketing/Circuit_Purple_rc3hmy.png"})`,
     backgroundRepeat: "no-repeat",
-    backgroundPosition: "center",
-  },
+    backgroundPosition: "center"
+  }
+  // buttonOnBottom: {
+  //   position: "absolute",
+  //   // right: "-1",
+  //   // left: "px",
+  //   bottom: "0",
+  // },
 };
 
 const useStyles = makeStyles(style);
@@ -77,35 +102,31 @@ export default function SectionLessonData() {
   const classes = useStyles();
   return (
     <div className={classNames(classes.section, classes.greyBackground)}>
-      <h2
-        className={classNames(
-          classes.title,
-          classes.justifyContentSpaceBetween
-        )}
-      >
-        Bridging the gap between classroom and lab
+      <h2 className={classNames(classes.justifyContentSpaceBetween)}>
+        Connecting classrooms to the world of Academia
       </h2>
-      <div>
+      <div className={classes.topPadding}>
         <GridContainer
-          style={{gridAutoRows: "1fr",  gridColumnGap: "0",display: "flexContainer"}}
-        >
-          <GridItem xs={12} sm={6} md={6}  style={{display: "grid"}}>
+        className={classes.justifyContentCenter}>
+          <GridItem xs={12} sm={6} md={6} lg={4}>
             <div
               className={classNames(
                 classes.pinkBackground,
-                classes.backgroundImgPencil
+                classes.backgroundImgPencil,
+                classes.whiteFont,
+                classes.boxContainer,
               )}
             >
               <h3 className={classes.headerPadding}>FOR TEACHERS</h3>
-              <div className={classes.textLeft}>
+              <div className={classes.bullets}>
                 <div>
-                  <h4>Free, open-access lessons</h4>
+                  <h4>Free, open-access, high-quality lessons</h4>
                 </div>
                 <div>
                   <h4>Regularly updated based on your feedback</h4>
                 </div>
                 <div>
-                  <h4>Appropriate for grades 5-12</h4>
+                  <h4>Differentiated for grades 5-6, 7-8 & 9-12</h4>
                 </div>
                 <div>
                   <h4>
@@ -114,54 +135,59 @@ export default function SectionLessonData() {
                   </h4>
                 </div>
               </div>
-              <div className={classes.topPadding2}>
+              <div className={classes.buttonAtBottom}>
                 <Button
                   color="white"
-                  size="md"
-                  href="https://vimeo.com/448000812"
-                  target="_blank"
-                  padding="100px"
+                  href="lessons/"
                 >
                   <i className="fas" />
                   <b className={classes.darkGreyFont}>GET LESSONS</b>
                 </Button>
               </div>
-              {/*<div className={classes.topPadding}></div>*/}
             </div>
           </GridItem>
-          <GridItem xs={12} sm={6} md={6}  style={{display: "grid"}}>
+          <GridItem xs={12} sm={6} md={6} lg={4}
+                    style={{
+                      display: "grid",
+                    }}>
             <div
               className={classNames(
                 classes.purpleBackground,
-                classes.backgroundImgCircuit
+                classes.backgroundImgCircuit,
+                classes.whiteFont,
+                classes.boxContainer,
               )}
             >
               <h3 className={classes.headerPadding}>FOR RESEARCHERS</h3>
-              <div className={classes.textLeft}>
+              <div className={classes.bullets}>
                 <div>
-                  <h4>Magnify the impact of your research and outreach efforts</h4>
+                  <h4>
+                    Magnify the impact of your research and outreach efforts
+                  </h4>
                 </div>
                 <div>
                   <h4>Get detailed impact metrics to report to funders</h4>
                 </div>
                 <div>
                   <h4>
-                    If you don't have the funds to hire us, <a href="/About#getInvolved">there are many avenues for collaboration!</a>
+                    If you love GP, but don't have the funds to hire us,&nbsp;
+                    <a href="/About#getInvolved" style={{ paddingLeft: 0 }}>
+                      <b style={{ color: "white", paddingLeft: 0 }}>there are also many avenues for collaboration!</b>
+                    </a>
+
                   </h4>
                 </div>
               </div>
-              <div className={classes.topPadding2}>
+              <div className={classes.buttonAtBottom}>
                 <Button
                   color="white"
-                  size="md"
                   href="/hire-us"
-                  padding="100px"
+                  // className={classes.buttonOnBottom}
                 >
                   <i className="fas" />
                   <b className={classes.darkGreyFont}>Learn More</b>
                 </Button>
               </div>
-              {/*<div className={classes.topPadding}></div>*/}
             </div>
           </GridItem>
         </GridContainer>

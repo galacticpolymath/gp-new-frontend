@@ -10,6 +10,7 @@ import GridItem from "components/Grid/GridItem.js";
 // import Button from "components/CustomButtons/Button.js";
 import teamsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/teamsStyle.js";
 import teamStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.js";
+import { primaryColor } from "assets/jss/material-kit-pro-react.js";
 import { makeCloudinaryUrl } from "../../../components/shared/constants";
 
 const style = {
@@ -20,10 +21,26 @@ const style = {
   },
   fontStyle: {
     fontSize: "16px",
-    color: "black"
+    color: "black",
+    // Format triplet descriptor text
+    "& h4": {
+      textAlign: "left",
+      padding: "2rem 1.5rem 2rem 2rem"
+    }
   },
-  galacticBlue: {
-    color: "#005892"
+  gridItemStyle: {
+    display: "grid",
+    justifySelf: "left",
+    alignContent: "center",
+    "& img": {
+      alignSelf: "start",
+      justifySelf: "left",
+      // marginLeft: "-1rem"
+    },
+    "& h4": {
+      padding: 0
+    }
+
   },
   purp: {
     color: "#6C2D82"
@@ -43,6 +60,53 @@ const style = {
   imagePadding: {
     paddingTop: "50px",
     paddingRight: "70px"
+  },
+  triplet: {
+    paddingBottom: "1rem",
+    marginLeft: "0",
+    textAlign: "left",
+    color: primaryColor[0],
+    "& h3:first-of-type": {
+      marginLeft: "-2rem",
+      marginBottom: "0.5rem"
+    },
+    "& h3": {
+      marginBottom: 0,
+      marginTop: "0"
+    }
+  },
+  "@media only screen and (min-width: 0px) and (max-width: 959px)":{
+    triplet:{
+      "& h3": {
+        marginLeft: "2rem"
+      },
+      "& h3:first-of-type": {
+        marginLeft: "0"
+      }
+
+    },
+    gridItemStyle:{
+      marginLeft: "1rem"
+    },
+  // Correct H3 size for medium screens where 4 columns are first displayed
+  "@media only screen and (min-width: 960px) and (max-width: 1279px)": {
+    triplet: {
+      "& h3": {
+        fontSize: ".9rem"
+      },
+      "& h3:first-of-type": {
+        marginLeft: "-1rem"
+      }
+    },
+    gridItemStyle: {
+      "& h4": {
+        fontSize: "0.9rem",
+      }
+    }
+    }
+
+    // "& h3:"
+
   }
 };
 
@@ -61,7 +125,7 @@ export default function SectionHow() {
               classes.marginRight
             )}
           >
-            How we do it
+            What We Do
           </h1>
         </GridItem>
         <GridItem xs={12} sm={12} md={6}>
@@ -77,143 +141,162 @@ export default function SectionHow() {
         </GridItem>
       </GridContainer>
       <div>
-        <br/>
-        <br/>
-        <GridContainer>
-          <GridItem xs={12} sm={12} md={3}>
-            <div
-              className={classNames(classes.fontStyle, classes.primaryColor)}
+
+        <GridContainer
+          style={{
+            display: "gridContainer", gridAutoRows: "1fr",
+            paddingTop: "2.5rem"
+          }}>
+
+          {/*Clients: Researchers, etc*/}
+          <GridItem xs={12} sm={12} md={3}
+                    className={classNames(classes.fontStyle)}
+          >
+            <GridItem className={classes.gridItemStyle}>
+              <img
+                src={
+                  "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357034/assets_marketing/GP__Research_Purple_1_b6pfbv.svg"
+                }
+                width={"70%"}
+                alt={"logo"}
+
+              />
+            </GridItem>
+            <GridItem
+              className={classNames(
+                classes.paddingTop,
+                classes.upperCase,
+                classes.galacticBlue,
+                classes.triplet,
+                classes.gridItemStyle
+              )}
             >
-              <div>
-                <img
-                  src={
-                    "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357034/assets_marketing/GP__Research_Purple_1_b6pfbv.svg"
-                  }
-                  height="auto"
-                  width="50%"
-                  alt={"logo"}
-                />
-              </div>
-              <div
-                className={classNames(
-                  classes.paddingTop,
-                  classes.upperCase,
-                  classes.galacticBlue
-                )}
-              >
-                <h3>Researchers,</h3>
-                <h3>non-profits,</h3>
-                <h3>sustainable corps.</h3>
-              </div>
-              {/*<div className={classes.paddingTop}></div>*/}
+              <h3><b>1.&nbsp;Clients&nbsp;Hire&nbsp;Us</b></h3>
+              <h3>Researchers,</h3>
+              <h3>non-profits,</h3>
+              <h3>companies</h3>
+            </GridItem>
+            {/*<div className={classes.paddingTop}></div>*/}
+            <GridItem className={classes.gridItemStyle}>
               <h4>
                 Government-funded researchers and organizations that want to support research impacts on society,
                 hire us to make a body of knowledge available to the public.
               </h4>
-              <br />
-              <br />
-            </div>
+            </GridItem>
           </GridItem>
-          <GridItem xs={12} sm={12} md={3}>
-            <div
-              className={classNames(classes.fontStyle, classes.primaryColor)}
+
+          {/*translation: complex research, etc*/}
+          <GridItem xs={12} sm={12} md={3}
+                    className={classNames(classes.fontStyle)}
+          >
+            <GridItem className={classes.gridItemStyle}>
+              <img
+                src={
+                  "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357034/assets_marketing/GP__SciComm_Purple_1_qyl1nn.svg"
+                }
+                height="auto"
+                width="70%"
+                alt={"logo"}
+
+              />
+            </GridItem>
+            <GridItem
+              className={classNames(
+                classes.paddingTop,
+                classes.upperCase,
+                classes.galacticBlue,
+                classes.triplet
+              )}
             >
-              <div>
-                <img
-                  src={
-                    "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357034/assets_marketing/GP__SciComm_Purple_1_qyl1nn.svg"
-                  }
-                  height="auto"
-                  width="50%"
-                  alt={"logo"}
-                />
-              </div>
-              <div
-                className={classNames(
-                  classes.paddingTop,
-                  classes.upperCase,
-                  classes.galacticBlue
-                )}
-              >
-                <h3>select,</h3>
-                <h3>award-winning</h3>
-                <h3>science communicators</h3>
-              </div>
-              {/*<div className={classes.paddingTop}></div>*/}
+              <h3><b>2.&nbsp;We&nbsp;translate</b></h3>
+              <h3>research</h3>
+              <h3>into</h3>
+              <h3>lessons</h3>
+            </GridItem>
+            <GridItem className={classes.gridItemStyle}>
               <h4>
-                Our team of science commnicators, educators, and artists translates these complex topics into
-                grade 5-12 lesson plans that can be taught in any subject by a non-expert.
+                Our team of science commnicators, educators, and artists works directly with subject experts to
+                translate
+                any body of research into free lessons for grades 5-12. <em>Our goal is for every lesson to be ready to
+                teach
+                in any subject classroom by a non-expert with 15 min. of prep time.</em>
               </h4>
-              <br />
-              <br />
-            </div>
+            </GridItem>
           </GridItem>
-          <GridItem xs={12} sm={12} md={3}>
-            <div
-              className={classNames(classes.fontStyle, classes.primaryColor)}
+
+          {/*Educators, etc*/}
+          <GridItem xs={12} sm={12} md={3} className={classes.fontStyle}>
+            <GridItem
+              className={classNames(classes.gridItemStyle)}
             >
-              <div>
-                <img
-                  src={
-                    "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357034/assets_marketing/GP__Teachers_Purple_1_pksgwr.svg"
-                  }
-                  height="auto"
-                  width="50%"
-                  alt={"logo"}
-                />
-              </div>
-              <div
-                className={classNames(
-                  classes.paddingTop,
-                  classes.upperCase,
-                  classes.galacticBlue
-                )}
-              >
-                <h3>Taught by</h3>
-                <h3>educators</h3>
-                <h3>anywhere</h3>
-              </div>
-              {/*<div className={classes.paddingTop}></div>*/}
+              <img
+                src={
+                  "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357034/assets_marketing/GP__Teachers_Purple_1_pksgwr.svg"
+                }
+                height="auto"
+                width="70%"
+                alt={"logo"}
+
+              />
+            </GridItem>
+            <GridItem
+              className={classNames(
+                classes.paddingTop,
+                classes.upperCase,
+                classes.galacticBlue,
+                classes.triplet
+              )}
+            >
+              <h3><b>3.&nbsp;We&nbsp;Publish</b></h3>
+              <h3>Free lessons</h3>
+              <h3>for</h3>
+              <h3>everyone</h3>
+            </GridItem>
+            <GridItem className={classes.gridItemStyle}>
               <h4>
                 Working closely with educators and districts in our growing network, lessons are
                 taught in real classrooms across the US.
               </h4>
-              <br />
-              <br />
-            </div>
+            </GridItem>
           </GridItem>
-          <GridItem xs={12} sm={12} md={3}>
-            <div className={classNames(classes.fontStyle)}>
-              <div>
-                <img
-                  src={
-                    "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357034/assets_marketing/GP__Revise_Purple_1_u0yanp.svg"
-                  }
-                  height="auto"
-                  width="50%"
-                  alt={"logo"}
-                />
-              </div>
-              <div
-                className={classNames(
-                  classes.paddingTop,
-                  classes.upperCase,
-                  classes.galacticBlue
-                )}
-              >
-                <h3>evaluate,</h3>
-                <h3>revise,</h3>
-                <h3>repeat</h3>
-              </div>
-              {/*<div className={classes.paddingTop}></div>*/}
+
+          {/*Evaluate, etc*/}
+          <GridItem xs={12} sm={12} md={3} className={classes.fontStyle}>
+            <GridItem className={classNames(classes.gridItemStyle)}>
+              <img
+                src={
+                  "https://res.cloudinary.com/galactic-polymath/image/upload/v1611357034/assets_marketing/GP__Revise_Purple_1_u0yanp.svg"
+                }
+                height="auto"
+                width="70%"
+                alt={"logo"}
+
+              />
+            </GridItem>
+            <GridItem
+              className={classNames(
+                classes.paddingTop,
+                classes.upperCase,
+                classes.triplet,
+                classes.galacticBlue,
+                classes.gridItemStyle
+              )}
+            >
+              <h3><b>4.&nbsp;We&nbsp;Improve</b></h3>
+              <h3>evaluate,</h3>
+              <h3>revise,</h3>
+              <h3>repeat</h3>
+            </GridItem>
+            <GridItem
+              className={classNames(classes.gridItemStyle)}
+            >
               <h4>All of our lessons are continuously evaluated, updated, and
                 revised—meaning they are always up-to-date and working to make the jobs of teaching
                 and outreach easier!
               </h4>
-              <br/>
-              <br/>
-            </div>
+            </GridItem>
           </GridItem>
+
         </GridContainer>
       </div>
       <div>
@@ -227,15 +310,15 @@ export default function SectionHow() {
         >
           <h3>
 
-              Real&nbsp;research&nbsp;+ real&nbsp;stories&nbsp;+ real&nbsp;data&nbsp;+ real&nbsp;careers&nbsp;=
-              <span
-              style={{marginTop: "0.75rem",display:"inline-block"}}>
+            Real&nbsp;research&nbsp;+ real&nbsp;stories&nbsp;+ real&nbsp;data&nbsp;+ real&nbsp;careers&nbsp;=
+            <span
+              style={{ marginTop: "0.75rem", display: "inline-block" }}>
                 <img
                   src={makeCloudinaryUrl("v1593304396/logos/GP_logo_grad_transBG_300_tbn4ei.jpeg")}
                   className={classNames(classes.mlAuto, classes.mrAuto)}
                   style={{
                     // width:"10"
-                    width: "2rem", display: "inline-block", marginLeft: "1rem",marginRight: "0.25rem"
+                    width: "2rem", display: "inline-block", marginLeft: "1rem", marginRight: "0.25rem"
                   }}
                   alt={"The Galactic Polymath logo. A starburst of lines and dots, in blue, purple and pink."}
                 /><b>Real&nbsp;learning</b>

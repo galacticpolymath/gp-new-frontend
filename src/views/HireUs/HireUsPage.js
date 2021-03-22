@@ -11,6 +11,7 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Footer from "components/Footer/Footer.js";
 // sections for this page
+import SectionBenefitsOfGP from "./Sections/SectionBenefitsOfGP";
 import SectionPricing from "views/HireUs/Sections/SectionPricing.js";
 import SectionAddOns from "views/HireUs/Sections/SectionAddOns.js";
 import SectionFeatures from "views/HireUs/Sections/SectionFeatures.js";
@@ -20,6 +21,7 @@ import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 import hireUsStyle from "../../assets/jss/material-kit-pro-react/views/hireUsStyle";
 import { makeCloudinaryUrl } from "../../components/shared/constants";
 import SectionHeardEnough from "./Sections/SectionHeardEnough";
+import Button from "../../components/CustomButtons/Button";
 
 
 const useStyles = makeStyles(hireUsStyle);
@@ -63,12 +65,18 @@ export default function PricingPage() {
               <h1 className={classNames(classes.whiteTitle, "hireUsTitle")}>Achieving Real, Lasting Impact</h1>
               <h4
                 className={classes.whiteTitle}
-                style={{ letterSpacing: "1.5px", fontWeight: 500 }}
+                style={{ fontWeight: 500,marginBottom:"0.5rem" }}
               >
                 Whether you are an NSF-funded researcher, a nonprofit, or a
                 socially responsible company, you care about a body of knowledge
                 and you want the public to understand and care about it, too.
               </h4>
+              <a href="https://portal.galacticpolymath.com/public/form/view/604d904c80fecb0cd51e2529" color="primary"
+              style={{color: "white", textDecoration: "underline"}}
+              ><b>
+                LET{"\'"}S GET STARTED!
+              </b>
+              </a>
             </GridItem>
             <GridItem
               xs={12}
@@ -94,25 +102,47 @@ export default function PricingPage() {
           </GridContainer>
         </div>
       </Parallax>
+
+      {/*Beginning of main card, extending for most of the page*/}
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-
+        <SectionBenefitsOfGP/>
+        </div>
+        <div className={classes.interjection}>
+          <h3
+            style = {{textAlign: "left",marginBottom:0}}>{/*could not get this style to work in pricingStyle*/}
+            Contracting us means having a fully-dedicated team of scientists, educators, and
+            creatives working to achieve your outreach dreams!
+          </h3>
+        </div>
+        <div className={classes.container}>
           {/*Price List */}
           <SectionPricing />
 
-          {/*Add on Section Appeal Box*/}
-          <GridItem className={classes.appeal}>
-            <div className={classes.boxContainer}>
-              <h3>Order <span style={{fontWeight:100, fontStyle:"italic"}}>a la carte</span></h3>
-              <h4> Looking for a fantastic infographic, video, or data visual? We're your
-                one-stop shop for scicomm, education, and outreach!
+          {/*Add on Section Appeal Banner*/}
+
+        </div>
+        {/*Break container to add interjection section at full width*/}
+
+            <div className={classes.interjection}>
+              <h3>Order <span style={{fontStyle:"italic"}}>a la carte</span></h3>
+              <h4> Looking for a fantastic infographic, video, or data visual?</h4>
+                <h4>We're your one-stop shop for scicomm, education, and outreach!
               </h4>
-              <h4>Even if your exact need isn't listed, we can likely make
-                it happen. <a>Start the conversation!</a>
+              <h4><em>Even if your exact need isn't listed, we can likely make
+                it happen!</em>
               </h4>
+              <Button
+                href="https://portal.galacticpolymath.com/public/form/view/604d904c80fecb0cd51e2529" color="primary" round
+                style={{alignText: "center"}}
+              >
+                Let{"\'"}s Get Started!
+              </Button>
             </div>
 
-          </GridItem>
+        {/*restart container*/}
+        <div className={classes.container}>
+          {/*</GridItem>*/}
 
           <SectionAddOns />
           {/*GP Logo*/}
@@ -123,7 +153,7 @@ export default function PricingPage() {
             style={{
               // width:"10"
               width: "25vw",
-              maxWidth: "150px", justifySelf:"center"}}
+              maxWidth: "150px", justifySelf:"center",paddingTop:"10%"}}
             alt={"The Galactic Polymath logo. A starburst of lines and dots, in blue, purple and pink."}
           />
           <h2 className={classes.title}>
@@ -135,13 +165,19 @@ export default function PricingPage() {
           </div>
           <SectionFeatures />
         </div>
+        {/*Break the container class to add interjection*/}
         <div className={classes.interjection}>
           <h2>Excited yet? We are!</h2>
         </div>
+        {/*Restart container*/}
         <div className={classes.container}>
           <SectionHeardEnough />
-
+        <br/>
+          <br/>
+          <br/>
+          <br/>
         </div>
+
       </div>
       <Footer
         content={

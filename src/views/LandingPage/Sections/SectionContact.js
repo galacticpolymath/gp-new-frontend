@@ -73,8 +73,7 @@ export default function SectionLessonData() {
               classes.justifyContentSpaceBetween
             )}
           >
-            Get us in your inbox—get lessons, updates, and funding
-            opportunities.
+            Join our mailing list—get lessons, updates, and influence our next project as a beta tester.
           </h2>
           <form>
             <GridContainer>

@@ -9,8 +9,8 @@ import {
 } from "assets/jss/material-kit-pro-react.js";
 
 const addOnsStyle = {
-  featuresSection: {
-    padding: "80px 0px"
+  addOnSection: {
+    padding: 0
   },
   textCenter: {
     textAlign: "center"

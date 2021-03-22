@@ -88,6 +88,7 @@ export default function SectionDescription() {
           // med={12}
           className={classNames(classes.container,classes.thinkBigger)}
         >
+          {/*Think Bigger Tagline*/}
           <h1>
             <span style={{whiteSpace:"nowrap",textAlign: "left"}}>Think <b>bigger</b>.</span>
           </h1>
