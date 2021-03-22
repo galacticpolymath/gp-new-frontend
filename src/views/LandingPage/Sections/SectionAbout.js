@@ -21,22 +21,21 @@ export default function SectionAbout() {
             <div style={{ color: "black" }}>
               <div>
                 <h2 style={{ color: "#6C2D82" }}>Open-Access</h2>
-                <h4>We believe in fair and free educational access for all.</h4>
+                <h4>We believe that every student deserves access to free, high-quality learning content.</h4>
               </div>
               <div>
                 <h2 style={{ color: "#6C2D82" }}>Straight from the Source</h2>
                 <h4>
                   Our lessons are designed with extensive input from
-                  working scientists and other STEM experts, meaning they are as up-to-date as
-                  possible.
+                  working scientists and other STEM experts, meaning they are current and authentic.
                 </h4>
               </div>
               <div>
                 <h2 style={{ color: "#6C2D82" }}>High-Quality</h2>
                 <h4>
-                  We are a team of educators and scientists, vigorously
-                  developing, curating, testing, and revising every lesson to
-                  provide the best possible outcome.
+                  We are a team of educators, scientists, and artists focused on
+                  publishing mind-expanding lessons
+                  that are also easy to teach.
                 </h4>
               </div>
             </div>

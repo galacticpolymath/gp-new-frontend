@@ -47,6 +47,7 @@ const style = {
     color: "white"
   },
   headerPadding: {
+    fontWeight: "bold",
     paddingTop: "2rem",
     paddingBottom: 0,
     marginBottom: 0
@@ -148,7 +149,6 @@ export default function SectionLessonData() {
           <GridItem xs={12} sm={6} md={6} lg={4}
                     style={{
                       display: "grid",
-
                     }}>
             <div
               className={classNames(

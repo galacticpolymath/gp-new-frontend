@@ -103,7 +103,7 @@ export default function PricingPage() {
           {/*Add on Section Appeal Box*/}
           <GridItem className={classes.appeal}>
             <div className={classes.boxContainer}>
-              <h3>Order <span style={{fontWeight:100, fontStyle:"italic"}}>a la carte</span></h3>
+              <h3>Order <span style={{fontStyle:"italic"}}>a la carte</span></h3>
               <h4> Looking for a fantastic infographic, video, or data visual? We're your
                 one-stop shop for scicomm, education, and outreach!
               </h4>
