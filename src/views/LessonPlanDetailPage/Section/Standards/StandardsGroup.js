@@ -6,6 +6,8 @@ import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import RichText from "components/RichText";
 
+import { formatAlignmentNotes } from "./utils";
+
 const StandardsGroup = ({ codes, alignmentNotes, statements }) => {
   const [expanded, expand] = useState(false);
 
@@ -28,7 +30,7 @@ const StandardsGroup = ({ codes, alignmentNotes, statements }) => {
 
       <ExpansionPanelDetails className="alignmentNotes">
         <h6>How does the lesson align to this standard?</h6>
-        <RichText content={alignmentNotes.replace("•", "-")} />
+        <RichText content={formatAlignmentNotes(alignmentNotes)} />
       </ExpansionPanelDetails>
     </ExpansionPanel>
   );
