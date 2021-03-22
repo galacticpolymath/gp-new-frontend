@@ -15,7 +15,7 @@ import teamsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections
 import teamStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.js";
 import {
   warningColor,
-  grayColor,
+  // grayColor,
   primaryColor,
   roseColor,
   hexToRgb,
@@ -57,7 +57,8 @@ const style = {
   },
   greyBackground: {
     backgroundColor: "#E0E0E0",
-    padding: "4rem 2rem 6rem"
+    padding: "4rem 2rem 6rem",
+    border: "1px solid #c0c1c2"
   },
   justifyContentCenter: {
     justifyContent: "center"
@@ -119,6 +120,9 @@ const style = {
       "& h1":{
         fontSize: "2.6rem"
       }
+    },
+    lessonCover:{
+      marginBottom:"3rem"
     }
 
   },
@@ -171,7 +175,7 @@ export default function SectionTeam() {
                   <span className={classes.featuredLessonLabel}>
                       <StarIcon/> <h4> Featured Lesson</h4>
                     </span>
-                  <GridItem xs={10}>
+                  <GridItem xs={12} md={10}>
                     {/*Featured Lesson Label*/}
 
                     {/*lesson cover image*/}
@@ -186,9 +190,9 @@ export default function SectionTeam() {
                     />
                   </GridItem>
                   {/*Sponsor Logo*/}
-                  <GridItem xs={2}
+                  <GridItem xs={12} md={2}
                             style={{ alignSelf: "center" }}>
-                    <h4>Sponsor:</h4>
+                    <h4>Sponsor</h4>
                     <img
                       src={
                         "https://res.cloudinary.com/galactic-polymath/image/upload/v1616347064/ClientLogos/sponsor-logo_ABS_xsfosa.png"
@@ -196,6 +200,7 @@ export default function SectionTeam() {
                       height="auto"
                       width="100%"
                       alt={"Lesson Preview"}
+                      style={{maxWidth:"100px"}}
                     />
                   </GridItem>
                 </GridContainer>
