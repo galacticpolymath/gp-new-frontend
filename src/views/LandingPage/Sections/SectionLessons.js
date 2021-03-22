@@ -27,7 +27,10 @@ const style = {
   ...teamsStyle,
   ...teamStyle,
   doubleSpaced: {
-    paddingBottom: ".5em"
+    "& h3, h4":{
+      paddingBottom: ".8rem"
+    },
+
   },
   featuredLessonLabel:{
     float: "left",
@@ -61,12 +64,13 @@ const style = {
     border: "1px solid #c0c1c2"
   },
   justifyContentCenter: {
-    justifyContent: "center"
+    justifyContents: "center",
+    display: "gridContainer"
   },
   justifyContentSpaceBetween: {
     justifyContent: "space-between"
   },
-  justifyContentLeft: {
+  justifyTextLeft: {
     textAlign: "left"
   },
   lessonCover:{
@@ -84,20 +88,32 @@ const style = {
       ", 0.2)"
   },
   lessonDescriptors:{
+    marginRight: "auto",
+    marginLeft: "auto",
     padding: "20px 1rem"
   },
   primaryColor: {
     color: primaryColor[0]
   },
 
-  purpleUnderline: {
-    textDecoration: "underline #6912D1"
+  purpleText: {
+    color: "#6912D1",
+    fontWeight: "500",
+    fontStyle:"italic"
   },
-  pinkUnderline: {
-    textDecoration: "underline #FF3DAC"
+  pinkText: {
+    color: "#FF3DAC",
+    fontWeight: "500",
+    fontStyle:"italic"
   },
-  blueUnderline: {
-    textDecoration: "underline #2C83C3"
+  blueText: {
+    color: "#2C83C3",
+    fontWeight: "500",
+    fontStyle:"italic"
+  },
+  blackText:{
+    fontWeight: "500",
+    fontStyle:"italic"
   },
   thinkBigger: {
     display: "block",
@@ -210,17 +226,20 @@ export default function SectionTeam() {
           </GridItem>
 
           {/*Lesson descriptor/ add copy*/}
-          <GridItem xs={12} sm={12} md={12} lg={5}
+          <GridItem xs={12} sm={10} md={8} lg={5}
                     className={classNames(
                       classes.fontStyle,
-                      classes.justifyContentLeft,
+                      classes.justifyTextLeft,
+                      classes.justifyContentCenter,
                       classes.lessonDescriptors,
                     )}>
               <div className={classes.doubleSpaced}>
-                <h3>
-                  We empower students with{" "}
-                  <span className={classes.purpleUnderline}>agency</span> and{" "}
-                  <span className={classes.pinkUnderline}>
+                <h3 style={{fontWeight:500}}>
+                  Our goal is to <span>empower&nbsp;students </span>
+                  with{" "}
+                  <span className={classes.purpleText}>
+                    agency</span> and{" "}
+                  <span className={classes.pinkText}>
                     critical thinking.
                   </span>
                 </h3>
@@ -229,20 +248,20 @@ export default function SectionTeam() {
                 <h4>
                   Students learn better when lessons are
                   contextualized in real-world scenarios and
-                  concepts are connected across subjects—
-                  <span className={classes.blueUnderline}>
-                    and that's what our lessons achieve.
+                  concepts are connected across subjects.&nbsp;
+                  <span className={classes.blackText}>
+                    This informs every lesson we design!
                   </span>
                 </h4>
               </div>
-              <div>
+              <div className={classes.doubleSpaced}>
                 <h4>
-                  We build lessons around real, current research and data, and the stories of diverse STEM experts.
+                  We build lessons around <span className={classes.blackText}>real research, data, and stories</span> from diverse STEM experts.
                 </h4>
               </div>
-              <div>
+              <div className={classes.doubleSpaced}>
                 <h4>
-                  Our lessons are free and ready-to-launch in person or virtually! And teachers have access to editable
+                  Our lessons are <span className={classes.blackText}>free and ready-to-launch in person or virtually!</span> And teachers have access to editable
                   files, so they can edit and remix to their liking.
                 </h4>
               </div>
