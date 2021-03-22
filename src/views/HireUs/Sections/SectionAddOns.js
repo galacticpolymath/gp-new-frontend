@@ -18,7 +18,7 @@ const useStyles = makeStyles(addOnsStyle);
 export default function SectionAddOns() {
   const classes = useStyles();
   return (
-    <div className={classes.featuresSection}>
+    <div className={classes.addOnSection}>
       <div className={classes.textCenter}>
       </div>
       <GridContainer

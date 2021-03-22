@@ -98,15 +98,21 @@ const hireUsStyle = {
   interjection:{
     width: "100%",
     position: "relative",
-    padding: "15px",
-    margin: "15% 0 15%",
-    alignItems: "center",
+    padding: "4% 15%",
+    margin: "10% 0 10%",
+    textAlign: "center",
     justifyContent: "center",
-    display: "flex",
+    display: "block",
     backgroundColor: primaryColor[5],
-    "& > *":{
-      margin: "1rem",
+    "& h2,h3":{
+      marginTop: 0,
+      marginBottom: "1rem",
+      // margin: "1.5rem 0",
       textShadow: "2px 2px 3px rgba(0,0,0,.3)"
+    },
+    // Custom spacing on the last element of the A la carte banner
+    "& h4:last-of-type":{
+      marginBottom: "1rem"
     }
   },
 

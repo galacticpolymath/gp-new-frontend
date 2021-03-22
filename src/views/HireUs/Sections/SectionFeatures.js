@@ -7,10 +7,10 @@ import FeatureDetails from "../../../components/HireUsComponents/FeatureDetails"
 // @material-ui icons
 
 
-import addOnsStyle from "assets/jss/material-kit-pro-react/views/hireUsSections/featuresStyle.js";
+import featuresStyle from "assets/jss/material-kit-pro-react/views/hireUsSections/featuresStyle.js";
 
 
-const useStyles = makeStyles(addOnsStyle);
+const useStyles = makeStyles(featuresStyle);
 
 export default function SectionFeatures() {
   const classes = useStyles();

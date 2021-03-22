@@ -27,7 +27,7 @@ const pricingStyle = {
     textAlign: "left !important"
   },
   pricingSection: {
-    padding: "80px 0px",
+    padding: "0",
     // overflowX: "scroll",
     scrollBehavior: "smooth"
   },
