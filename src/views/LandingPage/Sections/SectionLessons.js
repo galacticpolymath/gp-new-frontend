@@ -163,7 +163,7 @@ export default function SectionTeam() {
 
         {/*Featured lesson*/}
         <GridContainer >
-          <GridItem xs={12} sm={12} md={12} lg={5}>
+          <GridItem xs={12} sm={12} md={12} lg={7}>
             <Card   style={{paddingBottom: "20px",}}>
               <CardBody style={{backgroundColor: "transparent",}}>
                 <GridContainer
