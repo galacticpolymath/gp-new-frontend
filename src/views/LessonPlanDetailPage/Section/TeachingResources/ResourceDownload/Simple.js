@@ -16,7 +16,7 @@ const SimpleResourceDownload = ({
     if (Downloads.length === 0 && !Name) return null;
 
     return (
-      <Box display="flex">
+      <Box display="flex" key={i}>
         {Name && <div>{Name}:</div>}
         {Downloads.map(renderDownload)}
       </Box>
@@ -33,7 +33,7 @@ const SimpleResourceDownload = ({
     }
 
     return (
-      <Box display="flex">
+      <Box display="flex" key={i}>
         {icon}{" "}
         <a href={Link} target="_blank" rel="noopener noreferrer">
           {Label}
