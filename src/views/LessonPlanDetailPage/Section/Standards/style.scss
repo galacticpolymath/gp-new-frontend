@@ -59,6 +59,12 @@
       }    
     }
     .Dimension {
+      &:not(:first-child) {
+        margin-top: 1.25rem;
+      }
+      > p {
+        margin: 0.5rem 0;
+      }
       .StandardsGroup {
         &:not(:last-child) {
           border-bottom: 2px solid rgba($charcoal, .4);
