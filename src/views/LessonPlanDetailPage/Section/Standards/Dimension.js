@@ -7,7 +7,7 @@ const Dimension = ({ name, standardsGroup }) => {
   return (
     <div className="Dimension">
       <p>
-        <strong>Dimension:</strong>: {name}
+        <strong>Dimension:</strong> {name}
       </p>
       {standardsGroup.map((group, i) => (
         <StandardsGroup key={i} {...group} />
