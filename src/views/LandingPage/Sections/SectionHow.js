@@ -10,7 +10,7 @@ import GridItem from "components/Grid/GridItem.js";
 // import Button from "components/CustomButtons/Button.js";
 import teamsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/teamsStyle.js";
 import teamStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.js";
-import { primaryColor } from "assets/jss/material-kit-pro-react.js";
+import { primaryColor, grayColor } from "assets/jss/material-kit-pro-react.js";
 import { makeCloudinaryUrl } from "../../../components/shared/constants";
 
 const style = {
@@ -32,9 +32,11 @@ const style = {
     display: "grid",
     justifySelf: "left",
     alignContent: "center",
+    // customize How Section logo images
     "& img": {
       alignSelf: "start",
       justifySelf: "left",
+      maxWidth: "250px"
       // marginLeft: "-1rem"
     },
     "& h4": {
@@ -75,8 +77,11 @@ const style = {
       marginTop: "0"
     }
   },
-  "@media only screen and (min-width: 0px) and (max-width: 959px)":{
-    triplet:{
+
+  //Special styling for sm to medium devices
+  "@media only screen and (min-width: 0px) and (max-width: 959px)": {
+    triplet: {
+      paddingTop: 0,
       "& h3": {
         marginLeft: "2rem"
       },
@@ -85,9 +90,33 @@ const style = {
       }
 
     },
-    gridItemStyle:{
-      marginLeft: "1rem"
-    },
+    gridItemStyle: {
+      marginLeft: "1rem",
+      "& img": {
+        paddingTop: "8rem",
+        paddingBottom: 0,
+        "&.firstImg": {
+          paddingTop: "1rem"
+        }
+      },
+      "& h4": {
+        paddingBottom: 0
+        //Add partial width borders between divs
+      },
+      "& h4::after": {
+        content: "\"↓\"",
+        color: grayColor[6],
+        fontSize: "12rem",
+        fontWeight: "600",
+        position: "absolute",
+        bottom: "-4rem",
+        left: "3rem"
+      },
+      "& h4.last::after": {
+        content: '""'
+      }
+    }
+  },
   // Correct H3 size for medium screens where 4 columns are first displayed
   "@media only screen and (min-width: 960px) and (max-width: 1279px)": {
     triplet: {
@@ -100,14 +129,14 @@ const style = {
     },
     gridItemStyle: {
       "& h4": {
-        fontSize: "0.9rem",
+        fontSize: "0.9rem"
       }
     }
-    }
+  },
 
-    // "& h3:"
 
-  }
+
+
 };
 
 const useStyles = makeStyles(style);
@@ -159,14 +188,14 @@ export default function SectionHow() {
                 }
                 width={"70%"}
                 alt={"logo"}
-
+                className={"firstImg"}
               />
             </GridItem>
             <GridItem
               className={classNames(
                 classes.paddingTop,
                 classes.upperCase,
-                classes.galacticBlue,
+
                 classes.triplet,
                 classes.gridItemStyle
               )}
@@ -179,7 +208,7 @@ export default function SectionHow() {
             {/*<div className={classes.paddingTop}></div>*/}
             <GridItem className={classes.gridItemStyle}>
               <h4>
-                Government-funded researchers and organizations that want to support research impacts on society,
+                Government-funded researchers and organizations that want to support research impacts on society
                 hire us to make a body of knowledge available to the public.
               </h4>
             </GridItem>
@@ -204,7 +233,7 @@ export default function SectionHow() {
               className={classNames(
                 classes.paddingTop,
                 classes.upperCase,
-                classes.galacticBlue,
+
                 classes.triplet
               )}
             >
@@ -243,7 +272,7 @@ export default function SectionHow() {
               className={classNames(
                 classes.paddingTop,
                 classes.upperCase,
-                classes.galacticBlue,
+
                 classes.triplet
               )}
             >
@@ -278,7 +307,6 @@ export default function SectionHow() {
                 classes.paddingTop,
                 classes.upperCase,
                 classes.triplet,
-                classes.galacticBlue,
                 classes.gridItemStyle
               )}
             >
@@ -290,7 +318,7 @@ export default function SectionHow() {
             <GridItem
               className={classNames(classes.gridItemStyle)}
             >
-              <h4>All of our lessons are continuously evaluated, updated, and
+              <h4 className={"last"}>All of our lessons are continuously evaluated, updated, and
                 revised—meaning they are always up-to-date and working to make the jobs of teaching
                 and outreach easier!
               </h4>

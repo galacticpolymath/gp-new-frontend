@@ -10,6 +10,7 @@ import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 import teamsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/teamsStyle.js";
 import teamStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.js";
+// import { grayColor } from "../../../assets/jss/material-kit-pro-react";
 // import CardMedia from "@material-ui/core/CardMedia";
 
 const style = {
@@ -30,7 +31,8 @@ const style = {
   },
   greyBackground: {
     backgroundColor: "#E0E0E0",
-    padding: "30px"
+    padding: "30px",
+    border: "1px solid #c0c1c2"
   },
   pinkBackground: {
     backgroundColor: "#FF3DAC",
@@ -87,13 +89,13 @@ const style = {
     backgroundImage: `url(${"https://res.cloudinary.com/galactic-polymath/image/upload/v1614120418/assets_marketing/Circuit_Purple_rc3hmy.png"})`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center"
+  },
+  "@media only screen and (min-width: 0px) and (max-width: 959px)":{
+    boxContainer: {
+      marginBottom:"2rem"
+    }
   }
-  // buttonOnBottom: {
-  //   position: "absolute",
-  //   // right: "-1",
-  //   // left: "px",
-  //   bottom: "0",
-  // },
+
 };
 
 const useStyles = makeStyles(style);
