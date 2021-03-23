@@ -1,7 +1,10 @@
 import { container } from "assets/jss/material-kit-pro-react.js";
 
 const lessonPlanStyle = {
-  container,
+  container: {
+    ...container,
+    "@media (min-width: 1200px)": null,
+  },
   LessonPlan: {
     "padding-top": "70px",
   },
