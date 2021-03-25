@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -16,7 +16,9 @@ import LessonCards from "./Sections/LessonCards.js";
 
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 
-import lessons from "../LessonPlanDetailPage/data/lesson-plans.json";
+import cachedLessons from "../LessonPlanDetailPage/data/lesson-plans.json";
+import { fetchAll } from "../LessonPlanDetailPage/modules/lessonsApi.js";
+
 import lessonsPageStyle from "assets/jss/material-kit-pro-react/views/lessonsPageStyle.js";
 const useStyles = makeStyles(lessonsPageStyle);
 
@@ -25,6 +27,12 @@ export default function LessonsPage() {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
   });
+
+  const [lessons, setLessons] = useState(cachedLessons);
+
+  useEffect(() => {
+    fetchAll(3000).then(setLessons).catch(console.log);
+  }, []);
 
   const classes = useStyles();
   return (
