@@ -15,7 +15,7 @@ import teamsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections
 import teamStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.js";
 import {
   warningColor,
-  grayColor,
+  // grayColor,
   primaryColor,
   roseColor,
   hexToRgb,
@@ -27,7 +27,10 @@ const style = {
   ...teamsStyle,
   ...teamStyle,
   doubleSpaced: {
-    paddingBottom: ".5em"
+    "& h3, h4":{
+      paddingBottom: ".8rem"
+    },
+
   },
   featuredLessonLabel:{
     float: "left",
@@ -57,15 +60,17 @@ const style = {
   },
   greyBackground: {
     backgroundColor: "#E0E0E0",
-    padding: "4rem 2rem 6rem"
+    padding: "4rem 2rem 6rem",
+    border: "1px solid #c0c1c2"
   },
   justifyContentCenter: {
-    justifyContent: "center"
+    justifyContents: "center",
+    display: "gridContainer"
   },
   justifyContentSpaceBetween: {
     justifyContent: "space-between"
   },
-  justifyContentLeft: {
+  justifyTextLeft: {
     textAlign: "left"
   },
   lessonCover:{
@@ -83,20 +88,32 @@ const style = {
       ", 0.2)"
   },
   lessonDescriptors:{
+    marginRight: "auto",
+    marginLeft: "auto",
     padding: "20px 1rem"
   },
   primaryColor: {
     color: primaryColor[0]
   },
 
-  purpleUnderline: {
-    textDecoration: "underline #6912D1"
+  purpleText: {
+    color: "#6912D1",
+    fontWeight: "500",
+    fontStyle:"italic"
   },
-  pinkUnderline: {
-    textDecoration: "underline #FF3DAC"
+  pinkText: {
+    color: roseColor[0],
+    fontWeight: "500",
+    fontStyle:"italic"
   },
-  blueUnderline: {
-    textDecoration: "underline #2C83C3"
+  blueText: {
+    color: "#2C83C3",
+    fontWeight: "500",
+    fontStyle:"italic"
+  },
+  blackText:{
+    fontWeight: "500",
+    fontStyle:"italic"
   },
   thinkBigger: {
     display: "block",
@@ -119,6 +136,9 @@ const style = {
       "& h1":{
         fontSize: "2.6rem"
       }
+    },
+    lessonCover:{
+      marginBottom:"3rem"
     }
 
   },
@@ -171,7 +191,7 @@ export default function SectionTeam() {
                   <span className={classes.featuredLessonLabel}>
                       <StarIcon/> <h4> Featured Lesson</h4>
                     </span>
-                  <GridItem xs={10}>
+                  <GridItem xs={12} md={10}>
                     {/*Featured Lesson Label*/}
 
                     {/*lesson cover image*/}
@@ -186,9 +206,9 @@ export default function SectionTeam() {
                     />
                   </GridItem>
                   {/*Sponsor Logo*/}
-                  <GridItem xs={2}
+                  <GridItem xs={12} md={2}
                             style={{ alignSelf: "center" }}>
-                    <h4>Sponsor:</h4>
+                    <h4>Sponsor</h4>
                     <img
                       src={
                         "https://res.cloudinary.com/galactic-polymath/image/upload/v1616347064/ClientLogos/sponsor-logo_ABS_xsfosa.png"
@@ -196,6 +216,7 @@ export default function SectionTeam() {
                       height="auto"
                       width="100%"
                       alt={"Lesson Preview"}
+                      style={{maxWidth:"100px"}}
                     />
                   </GridItem>
                 </GridContainer>
@@ -205,17 +226,20 @@ export default function SectionTeam() {
           </GridItem>
 
           {/*Lesson descriptor/ add copy*/}
-          <GridItem xs={12} sm={12} md={12} lg={5}
+          <GridItem xs={12} sm={10} md={8} lg={5}
                     className={classNames(
                       classes.fontStyle,
-                      classes.justifyContentLeft,
+                      classes.justifyTextLeft,
+                      classes.justifyContentCenter,
                       classes.lessonDescriptors,
                     )}>
               <div className={classes.doubleSpaced}>
-                <h3>
-                  We empower students with{" "}
-                  <span className={classes.purpleUnderline}>agency</span> and{" "}
-                  <span className={classes.pinkUnderline}>
+                <h3 style={{fontWeight:500}}>
+                  Our goal is to <span>empower&nbsp;students </span>
+                  with{" "}
+                  <span className={classes.purpleText}>
+                    agency</span> and{" "}
+                  <span className={classes.pinkText}>
                     critical thinking.
                   </span>
                 </h3>
@@ -224,20 +248,20 @@ export default function SectionTeam() {
                 <h4>
                   Students learn better when lessons are
                   contextualized in real-world scenarios and
-                  concepts are connected across subjects—
-                  <span className={classes.blueUnderline}>
-                    and that's what our lessons achieve.
+                  concepts are connected across subjects.&nbsp;
+                  <span className={classes.blackText}>
+                    This informs every lesson we design!
                   </span>
                 </h4>
               </div>
-              <div>
+              <div className={classes.doubleSpaced}>
                 <h4>
-                  We build lessons around real, current research and data, and the stories of diverse STEM experts.
+                  We build lessons around <span className={classes.blackText}>real research, data, and stories</span> from diverse STEM experts.
                 </h4>
               </div>
-              <div>
+              <div className={classes.doubleSpaced}>
                 <h4>
-                  Our lessons are free and ready-to-launch in person or virtually! And teachers have access to editable
+                  Our lessons are <span className={classes.blackText}>FREE and ready-to-launch, in person or virtually!</span> And teachers have access to editable
                   files, so they can edit and remix to their liking.
                 </h4>
               </div>

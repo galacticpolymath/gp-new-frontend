@@ -10,6 +10,7 @@ import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 import teamsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/teamsStyle.js";
 import teamStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.js";
+// import { grayColor } from "../../../assets/jss/material-kit-pro-react";
 // import CardMedia from "@material-ui/core/CardMedia";
 
 const style = {
@@ -30,7 +31,8 @@ const style = {
   },
   greyBackground: {
     backgroundColor: "#E0E0E0",
-    padding: "30px"
+    padding: "30px",
+    border: "1px solid #c0c1c2"
   },
   pinkBackground: {
     backgroundColor: "#FF3DAC",
@@ -87,13 +89,13 @@ const style = {
     backgroundImage: `url(${"https://res.cloudinary.com/galactic-polymath/image/upload/v1614120418/assets_marketing/Circuit_Purple_rc3hmy.png"})`,
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center"
+  },
+  "@media only screen and (min-width: 0px) and (max-width: 959px)":{
+    boxContainer: {
+      marginBottom:"2rem"
+    }
   }
-  // buttonOnBottom: {
-  //   position: "absolute",
-  //   // right: "-1",
-  //   // left: "px",
-  //   bottom: "0",
-  // },
+
 };
 
 const useStyles = makeStyles(style);
@@ -103,7 +105,7 @@ export default function SectionLessonData() {
   return (
     <div className={classNames(classes.section, classes.greyBackground)}>
       <h2 className={classNames(classes.justifyContentSpaceBetween)}>
-        Connecting classrooms to the world of Academia
+        Benefits of connecting classrooms to the world of Academia
       </h2>
       <div className={classes.topPadding}>
         <GridContainer
@@ -120,7 +122,7 @@ export default function SectionLessonData() {
               <h3 className={classes.headerPadding}>FOR TEACHERS</h3>
               <div className={classes.bullets}>
                 <div>
-                  <h4>Free, open-access, high-quality lessons</h4>
+                  <h4>Free (open-access), high-quality lessons</h4>
                 </div>
                 <div>
                   <h4>Regularly updated based on your feedback</h4>
@@ -158,7 +160,7 @@ export default function SectionLessonData() {
                 classes.boxContainer,
               )}
             >
-              <h3 className={classes.headerPadding}>FOR RESEARCHERS</h3>
+              <h3 className={classes.headerPadding}>FOR CLIENTS</h3>
               <div className={classes.bullets}>
                 <div>
                   <h4>

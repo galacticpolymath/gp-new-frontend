@@ -10,7 +10,7 @@ import GridItem from "components/Grid/GridItem.js";
 // import Button from "components/CustomButtons/Button.js";
 import teamsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/teamsStyle.js";
 import teamStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.js";
-import { primaryColor } from "assets/jss/material-kit-pro-react.js";
+import { primaryColor, grayColor } from "assets/jss/material-kit-pro-react.js";
 import { makeCloudinaryUrl } from "../../../components/shared/constants";
 
 const style = {
@@ -32,9 +32,11 @@ const style = {
     display: "grid",
     justifySelf: "left",
     alignContent: "center",
+    // customize How Section logo images
     "& img": {
       alignSelf: "start",
       justifySelf: "left",
+      maxWidth: "250px"
       // marginLeft: "-1rem"
     },
     "& h4": {
@@ -61,6 +63,9 @@ const style = {
     paddingTop: "50px",
     paddingRight: "70px"
   },
+  subtitle:{
+    paddingTop: 0,
+  },
   triplet: {
     paddingBottom: "1rem",
     marginLeft: "0",
@@ -75,8 +80,11 @@ const style = {
       marginTop: "0"
     }
   },
-  "@media only screen and (min-width: 0px) and (max-width: 959px)":{
-    triplet:{
+
+  //Special styling for sm to medium devices
+  "@media only screen and (min-width: 0px) and (max-width: 959px)": {
+    triplet: {
+      paddingTop: 0,
       "& h3": {
         marginLeft: "2rem"
       },
@@ -85,9 +93,33 @@ const style = {
       }
 
     },
-    gridItemStyle:{
-      marginLeft: "1rem"
-    },
+    gridItemStyle: {
+      marginLeft: "1rem",
+      "& img": {
+        paddingTop: "8rem",
+        paddingBottom: 0,
+        "&.firstImg": {
+          paddingTop: "1rem"
+        }
+      },
+      "& h4": {
+        paddingBottom: 0
+        //Add partial width borders between divs
+      },
+      "& h4::after": {
+        content: "\"↓\"",
+        color: grayColor[6],
+        fontSize: "12rem",
+        fontWeight: "600",
+        position: "absolute",
+        bottom: "-4rem",
+        left: "3rem"
+      },
+      "& h4.last::after": {
+        content: '""'
+      }
+    }
+  },
   // Correct H3 size for medium screens where 4 columns are first displayed
   "@media only screen and (min-width: 960px) and (max-width: 1279px)": {
     triplet: {
@@ -100,14 +132,14 @@ const style = {
     },
     gridItemStyle: {
       "& h4": {
-        fontSize: "0.9rem",
+        fontSize: "0.9rem"
       }
     }
-    }
+  },
 
-    // "& h3:"
 
-  }
+
+
 };
 
 const useStyles = makeStyles(style);
@@ -127,6 +159,12 @@ export default function SectionHow() {
           >
             What We Do
           </h1>
+          <h3
+            className={classNames(classes.purp,classes.subtitle)}
+            >
+            (And how we make it free for teachers)
+          </h3>
+
         </GridItem>
         <GridItem xs={12} sm={12} md={6}>
           <img
@@ -159,27 +197,27 @@ export default function SectionHow() {
                 }
                 width={"70%"}
                 alt={"logo"}
-
+                className={"firstImg"}
               />
             </GridItem>
             <GridItem
               className={classNames(
                 classes.paddingTop,
                 classes.upperCase,
-                classes.galacticBlue,
+
                 classes.triplet,
                 classes.gridItemStyle
               )}
             >
               <h3><b>1.&nbsp;Clients&nbsp;Hire&nbsp;Us</b></h3>
               <h3>Researchers,</h3>
-              <h3>non-profits,</h3>
-              <h3>companies</h3>
+              <h3>nonprofits &</h3>
+              <h3>companies pay</h3>
             </GridItem>
             {/*<div className={classes.paddingTop}></div>*/}
             <GridItem className={classes.gridItemStyle}>
               <h4>
-                Government-funded researchers and organizations that want to support research impacts on society,
+                Government-funded researchers and organizations that want to support research impacts on society
                 hire us to make a body of knowledge available to the public.
               </h4>
             </GridItem>
@@ -204,7 +242,7 @@ export default function SectionHow() {
               className={classNames(
                 classes.paddingTop,
                 classes.upperCase,
-                classes.galacticBlue,
+
                 classes.triplet
               )}
             >
@@ -215,11 +253,9 @@ export default function SectionHow() {
             </GridItem>
             <GridItem className={classes.gridItemStyle}>
               <h4>
-                Our team of science commnicators, educators, and artists works directly with subject experts to
-                translate
-                any body of research into free lessons for grades 5-12. <em>Our goal is for every lesson to be ready to
-                teach
-                in any subject classroom by a non-expert with 15 min. of prep time.</em>
+                Our team of science communicators, educators, and artists work directly with subject experts to
+                translate our clients' area of focus into free lessons for grades 5-12. <em>Our goal is for every lesson to be ready to
+                teach in any subject classroom by a non-expert with 15 min. of prep time.</em>
               </h4>
             </GridItem>
           </GridItem>
@@ -243,7 +279,7 @@ export default function SectionHow() {
               className={classNames(
                 classes.paddingTop,
                 classes.upperCase,
-                classes.galacticBlue,
+
                 classes.triplet
               )}
             >
@@ -255,7 +291,8 @@ export default function SectionHow() {
             <GridItem className={classes.gridItemStyle}>
               <h4>
                 Working closely with educators and districts in our growing network, lessons are
-                taught in real classrooms across the US.
+                tested and taught in classrooms. Equal access to lessons means more of the
+                public can connect with the body of knowledge our clients care about.
               </h4>
             </GridItem>
           </GridItem>
@@ -278,7 +315,6 @@ export default function SectionHow() {
                 classes.paddingTop,
                 classes.upperCase,
                 classes.triplet,
-                classes.galacticBlue,
                 classes.gridItemStyle
               )}
             >
@@ -290,7 +326,7 @@ export default function SectionHow() {
             <GridItem
               className={classNames(classes.gridItemStyle)}
             >
-              <h4>All of our lessons are continuously evaluated, updated, and
+              <h4 className={"last"}>All of our lessons are continuously evaluated, updated, and
                 revised—meaning they are always up-to-date and working to make the jobs of teaching
                 and outreach easier!
               </h4>
