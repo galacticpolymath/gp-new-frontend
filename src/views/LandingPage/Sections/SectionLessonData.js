@@ -105,7 +105,7 @@ export default function SectionLessonData() {
   return (
     <div className={classNames(classes.section, classes.greyBackground)}>
       <h2 className={classNames(classes.justifyContentSpaceBetween)}>
-        Connecting classrooms to the world of Academia
+        Benefits of connecting classrooms to the world of Academia
       </h2>
       <div className={classes.topPadding}>
         <GridContainer
@@ -122,7 +122,7 @@ export default function SectionLessonData() {
               <h3 className={classes.headerPadding}>FOR TEACHERS</h3>
               <div className={classes.bullets}>
                 <div>
-                  <h4>Free, open-access, high-quality lessons</h4>
+                  <h4>Free (open-access), high-quality lessons</h4>
                 </div>
                 <div>
                   <h4>Regularly updated based on your feedback</h4>
@@ -160,7 +160,7 @@ export default function SectionLessonData() {
                 classes.boxContainer,
               )}
             >
-              <h3 className={classes.headerPadding}>FOR RESEARCHERS</h3>
+              <h3 className={classes.headerPadding}>FOR CLIENTS</h3>
               <div className={classes.bullets}>
                 <div>
                   <h4>

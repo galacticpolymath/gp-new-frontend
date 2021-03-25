@@ -28,6 +28,7 @@ const hireUsStyle = {
   },
   whiteTitle: {
     ...title,
+    marginTop: 0,
     "&, & + h4": {
       color: whiteColor
     }

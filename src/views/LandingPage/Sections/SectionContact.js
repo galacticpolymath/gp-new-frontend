@@ -11,52 +11,60 @@ import Button from "components/CustomButtons/Button.js";
 import teamsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/teamsStyle.js";
 import teamStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.js";
 import CustomInput from "components/CustomInput/CustomInput.js";
-import TextField from "@material-ui/core/TextField";
+// import TextField from "@material-ui/core/TextField";
+import { blackColor } from "../../../assets/jss/material-kit-pro-react";
 
 const style = {
   ...teamsStyle,
   ...teamStyle,
   justifyContentCenter: {
-    justifyContent: "center",
+    justifyContent: "center"
   },
   justifyContentSpaceBetween: {
-    justifyContent: "space-between",
+    justifyContent: "space-between"
   },
   primaryColor: {
-    color: "#2C83C3",
+    color: "#2C83C3"
   },
   fontStyle: {
     fontSize: "16px",
-    color: "black",
+    color: "black"
   },
   greyBackground: {
-    backgroundColor: "#E0E0E0",
+    backgroundColor: "#E0E0E0"
   },
   pinkBackground: {
     backgroundColor: "#FF3DAC",
-    borderRadius: "25px",
+    borderRadius: "25px"
   },
   purpleBackground: {
     backgroundColor: "#9F4BFF",
-    borderRadius: "25px",
+    borderRadius: "25px"
   },
   darkGreyFont: {
-    color: "#828282",
+    color: "#828282"
   },
   headerPadding: {
     paddingTop: "40px",
-    paddingBottom: "20px",
+    paddingBottom: "20px"
   },
   topPadding: {
-    paddingTop: "30px",
+    paddingTop: "30px"
   },
   topPadding2: {
-    paddingTop: "50px",
+    paddingTop: "50px"
+  },
+  teaching:{
+    paddingRight: "1rem"
   },
   textLeft: {
     textAlign: "left",
-    paddingLeft: "70px",
+    paddingLeft: "70px"
   },
+  title: {
+    color: blackColor,
+    paddingBottom: "0.5rem",
+  }
 };
 
 const useStyles = makeStyles(style);
@@ -82,7 +90,7 @@ export default function SectionLessonData() {
                   labelText="Tell us your name"
                   id="name"
                   formControlProps={{
-                    fullWidth: true,
+                    fullWidth: true
                   }}
                 />
               </GridItem>
@@ -91,25 +99,30 @@ export default function SectionLessonData() {
                   labelText="What's your email address?"
                   id="email"
                   formControlProps={{
-                    fullWidth: true,
+                    fullWidth: true
                   }}
                 />
               </GridItem>
               <div>
+                <div className={classes.title}>Your interest in Galactic Polymath:</div>
                 <input
-                  type="radio"
-                  id="teacher"
-                  name="title"
-                  value="teacher"
-                ></input>
-                <label for="teacher">Are you a Teacher?</label>
+                  type="checkBox"
+                  id="teaching"
+                  name="teaching"
+                />
+                <label htmlFor="teaching"
+                       className={classes.teaching}>
+                  Teaching
+                </label>
                 <input
-                  type="radio"
-                  id="researcher"
-                  name="title"
-                  value="researcher"
-                ></input>
-                <label for="researcher">Researcher?</label>
+                  type="checkBox"
+                  id="outreach"
+                  name="outreach"
+                />
+                <label htmlFor="outreach"
+                       className={classes.teaching}>
+                  Outreach
+                </label>
               </div>
               <GridItem
                 xs={12}

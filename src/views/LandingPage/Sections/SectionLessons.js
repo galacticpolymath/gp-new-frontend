@@ -102,7 +102,7 @@ const style = {
     fontStyle:"italic"
   },
   pinkText: {
-    color: "#FF3DAC",
+    color: roseColor[0],
     fontWeight: "500",
     fontStyle:"italic"
   },
@@ -261,7 +261,7 @@ export default function SectionTeam() {
               </div>
               <div className={classes.doubleSpaced}>
                 <h4>
-                  Our lessons are <span className={classes.blackText}>free and ready-to-launch in person or virtually!</span> And teachers have access to editable
+                  Our lessons are <span className={classes.blackText}>FREE and ready-to-launch, in person or virtually!</span> And teachers have access to editable
                   files, so they can edit and remix to their liking.
                 </h4>
               </div>
