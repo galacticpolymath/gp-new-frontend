@@ -9,7 +9,20 @@ import GridItem from "components/Grid/GridItem.js";
 
 import productStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/productStyle.js";
 
-const useStyles = makeStyles(productStyle);
+const style = {
+  ...productStyle,
+
+  descriptor:{
+    textAlign:"center",
+
+  },
+  classPhoto:{
+    margin: "auto"
+  }
+
+}
+
+const useStyles=makeStyles(style)
 
 export default function SectionAbout() {
   const classes = useStyles();
@@ -20,19 +33,23 @@ export default function SectionAbout() {
           <GridItem xs={12} sm={12} md={5}>
             <div style={{ color: "black" }}>
               <div>
-                <h2 style={{ color: "#6C2D82" }}>Open-Access</h2>
-                <h4>We believe that every student deserves access to free, high-quality learning content.</h4>
+                <h2 style={{ color: "#6C2D82",marginTop:"10px"}}>Open-Access</h2>
+                <h4
+                className={classes.descriptor}
+                ><em>We do not sell to schools.</em> We believe every student deserves access to free, high-quality learning content.</h4>
               </div>
               <div>
                 <h2 style={{ color: "#6C2D82" }}>Straight from the Source</h2>
-                <h4>
+                <h4
+                  className={classes.descriptor}>
                   Our lessons are designed with extensive input from
                   working scientists and other STEM experts, meaning they are current and authentic.
                 </h4>
               </div>
               <div>
                 <h2 style={{ color: "#6C2D82" }}>High-Quality</h2>
-                <h4>
+                <h4
+                  className={classes.descriptor}>
                   We are a team of educators, scientists, and artists focused on
                   publishing mind-expanding lessons
                   that are also easy to teach.
@@ -40,7 +57,8 @@ export default function SectionAbout() {
               </div>
             </div>
           </GridItem>
-          <GridItem xs={12} sm={12} md={7}>
+          <GridItem xs={12} sm={12} md={7}
+          className={classes.classPhoto}>
             <img
               src={
                 "https://res.cloudinary.com/galactic-polymath/image/upload/v1612979771/assets_marketing/Engineering_Together_1_opqz9h.png"

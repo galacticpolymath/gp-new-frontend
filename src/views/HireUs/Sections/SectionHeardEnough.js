@@ -75,7 +75,7 @@ export default function SectionHeardEnough() {
                   justifyContent: "center",
                   display: "flex"}}>
           <Button
-            href="https://portal.galacticpolymath.com/public/form/view/604d904c80fecb0cd51e2529" color="primary" round
+            href="https://portal.galacticpolymath.com/public/form/view/604d904c80fecb0cd51e2529" color="rose" round
           style={{alignText: "center"}}
           >
             Let{"\'"}s Get Started!

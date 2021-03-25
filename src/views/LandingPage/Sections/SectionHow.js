@@ -63,6 +63,9 @@ const style = {
     paddingTop: "50px",
     paddingRight: "70px"
   },
+  subtitle:{
+    paddingTop: 0,
+  },
   triplet: {
     paddingBottom: "1rem",
     marginLeft: "0",
@@ -156,6 +159,12 @@ export default function SectionHow() {
           >
             What We Do
           </h1>
+          <h3
+            className={classNames(classes.purp,classes.subtitle)}
+            >
+            (And how we make it free for teachers)
+          </h3>
+
         </GridItem>
         <GridItem xs={12} sm={12} md={6}>
           <img
@@ -202,8 +211,8 @@ export default function SectionHow() {
             >
               <h3><b>1.&nbsp;Clients&nbsp;Hire&nbsp;Us</b></h3>
               <h3>Researchers,</h3>
-              <h3>non-profits,</h3>
-              <h3>companies</h3>
+              <h3>nonprofits &</h3>
+              <h3>companies pay</h3>
             </GridItem>
             {/*<div className={classes.paddingTop}></div>*/}
             <GridItem className={classes.gridItemStyle}>
@@ -244,11 +253,9 @@ export default function SectionHow() {
             </GridItem>
             <GridItem className={classes.gridItemStyle}>
               <h4>
-                Our team of science commnicators, educators, and artists works directly with subject experts to
-                translate
-                any body of research into free lessons for grades 5-12. <em>Our goal is for every lesson to be ready to
-                teach
-                in any subject classroom by a non-expert with 15 min. of prep time.</em>
+                Our team of science communicators, educators, and artists work directly with subject experts to
+                translate our clients' area of focus into free lessons for grades 5-12. <em>Our goal is for every lesson to be ready to
+                teach in any subject classroom by a non-expert with 15 min. of prep time.</em>
               </h4>
             </GridItem>
           </GridItem>
@@ -284,7 +291,8 @@ export default function SectionHow() {
             <GridItem className={classes.gridItemStyle}>
               <h4>
                 Working closely with educators and districts in our growing network, lessons are
-                taught in real classrooms across the US.
+                tested and taught in classrooms. Equal access to lessons means more of the
+                public can connect with the body of knowledge our clients care about.
               </h4>
             </GridItem>
           </GridItem>
