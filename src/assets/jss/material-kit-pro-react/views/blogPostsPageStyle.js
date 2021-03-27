@@ -77,6 +77,10 @@ const blogPostsPageStyle = {
       maxWidth: "100%",
     },
   },
+  card: {
+    "border-radius": "4px",
+    color: "#3c4858",
+  },
 };
 
 export default blogPostsPageStyle;

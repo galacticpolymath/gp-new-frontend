@@ -84,6 +84,9 @@ const lessonsPageStyle = {
       maxWidth: "100%",
     },
   },
+  infoArea: {
+    padding: "2rem 0 0 0",
+  },
 };
 
 export default lessonsPageStyle;
