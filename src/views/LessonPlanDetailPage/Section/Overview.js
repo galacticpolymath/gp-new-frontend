@@ -36,15 +36,15 @@ const Overview = ({
         <Image {...SteamEpaulette} />
 
         <GridContainer className="stats">
-          <GridItem md={4} className="border-right">
+          <GridItem sm={4} className="border-right">
             <h5>Est. Time: </h5>
             <p>{EstLessonTime}</p>
           </GridItem>
-          <GridItem md={4} className="border-right">
+          <GridItem sm={4} className="border-right">
             <h5>Grade(s): </h5>
             <p>{ForGrades}</p>
           </GridItem>
-          <GridItem md={4}>
+          <GridItem sm={4}>
             <h5>Target Subject: </h5>
             <p>{TargetSubject}</p>
           </GridItem>

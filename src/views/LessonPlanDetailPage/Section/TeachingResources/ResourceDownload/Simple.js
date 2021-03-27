@@ -1,8 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import Box from "@material-ui/core/Box";
-
 import RichText from "../../../../../components/RichText";
 import ICONS from "../../../icons";
 
@@ -16,10 +14,10 @@ const SimpleResourceDownload = ({
     if (Downloads.length === 0 && !Name) return null;
 
     return (
-      <Box display="flex" key={i}>
+      <div className="DownloadGroup" xs={12} lg={6} key={i}>
         {Name && <div>{Name}:</div>}
         {Downloads.map(renderDownload)}
-      </Box>
+      </div>
     );
   };
 
@@ -33,12 +31,12 @@ const SimpleResourceDownload = ({
     }
 
     return (
-      <Box display="flex" key={i}>
+      <div className="Download" key={i}>
         {icon}{" "}
         <a href={Link} target="_blank" rel="noopener noreferrer">
           {Label}
         </a>
-      </Box>
+      </div>
     );
   };
 

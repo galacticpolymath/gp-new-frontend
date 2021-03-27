@@ -40,12 +40,12 @@ const Header = ({
             <Image {...CoverImage} className="self-center" />
           </div>
         </GridContainer>
-        <GridContainer>
-          <GridItem md={8} lg={9}>
+        <GridContainer className="sponsor">
+          <GridItem xs={8} md={9}>
             <h5>Sponsored by:</h5>
             <RichText content={SponsoredBy} />
           </GridItem>
-          <GridItem md={4} lg={3}>
+          <GridItem xs={4} md={3}>
             <Image {...SponsorImage} />
           </GridItem>
         </GridContainer>

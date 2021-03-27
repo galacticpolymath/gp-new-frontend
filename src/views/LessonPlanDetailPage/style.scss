@@ -6,6 +6,16 @@
     padding-top: 120px;
     background: $white;
     background: linear-gradient(180deg, $sparkle-white 0%, $white 100%);
+    .Image {
+      margin: 1rem auto;
+    }
+    .sponsor {
+      align-items: center;
+      margin: 1rem 0;
+      .Image {
+        margin: 0;
+      }
+    }
   }
   .SectionHeading {
     padding: .5rem 0;
@@ -18,6 +28,7 @@
   p {
     font-size: 1rem;
     line-height: 1.6;
+    margin: 1.4rem 0;
   }
   a {
     color: $atomic-blue;

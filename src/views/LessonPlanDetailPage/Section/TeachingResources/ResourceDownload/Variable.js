@@ -9,9 +9,10 @@ import "./style.scss";
 const VariableResourceDownload = ({ Title, Description, Variations = [] }) => {
   return (
     <div className="VariableResourceDownload">
-      <RichText content={"**" + Title + ":** " + Description} />
+      <h4>{Title}</h4>
+      <RichText content={Description} />
       <div className="variations">
-        <h5>Differentiated versions:</h5>
+        <h5>Differentiated versions</h5>
         {Variations.map((item, i) => (
           <SimpleResourceDownload key={i} {...item} />
         ))}
