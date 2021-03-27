@@ -7,10 +7,14 @@ export const SECTIONS = {
   TEACHING_RESOURCES: "teaching-resources.teaching-resources",
   STEAM_BADGE: "lesson-plan.steam-badge",
   STANDARDS: "lesson-plan.standards",
+  ACKNOWLEDGMENTS: "lesson-plan.acknowledgments",
+  VERSIONS: "lesson-plan.versions",
 };
 
 export const NUMBERED_SECTIONS = [
   SECTIONS.OVERVIEW,
   SECTIONS.HEADING,
   SECTIONS.PROCEDURE,
+  SECTIONS.ACKNOWLEDGMENTS,
+  SECTIONS.VERSIONS,
 ];

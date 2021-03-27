@@ -62,3 +62,76 @@
     padding: 1rem;
   }
 }
+
+.CollapsibleSection.ExpansionPanel {
+  margin: 2rem 0 !important;
+  border: none !important;
+  &.MuiExpansionPanel-root {
+    &::before {
+      display: none;
+    }
+    .SectionHeading {
+      margin: 0;
+      .MuiExpansionPanelSummary-root {
+        padding: 0;
+        .MuiExpansionPanelSummary-content {
+          margin: 0 !important;
+          h2 {
+            margin: 0;
+          }
+        }
+        > .MuiExpansionPanelSummary-expandIcon .MuiSvgIcon-root {
+          font-size: 2.25rem;
+          color: $charcoal;
+        }
+      }
+    }
+    .MuiCollapse-wrapper {
+      padding-top: 2rem;
+    }
+    .ExpansionPanelDetails {
+      padding: 0 !important;
+    }
+  }
+}
+
+.Acknowledgments {
+  .role {
+    margin-bottom: 2rem;
+    p {
+      margin: 0.5rem 0;
+    }
+    .record {
+      margin: 1.25rem 0;
+      h5 {
+        margin-bottom: 0.25rem;
+        a {
+          color: $burst-purple;
+          &:hover {
+            color: $flare-fuschia;
+          }
+        }
+      }
+    }
+  }
+}
+
+.Versions {
+  p {
+    margin: 0 0 0.3rem 0 !important;
+  }
+  .date {
+    font-style: italic;
+    color: rgba($charcoal, 0.8);
+    margin: 0;
+  }
+  .major {
+    margin-bottom: 2rem;
+    .minor {
+      h5 {
+        margin-bottom: 0;
+      }
+      margin-bottom: 1rem;
+    }
+  }
+}

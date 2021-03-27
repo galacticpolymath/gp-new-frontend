@@ -1,7 +1,9 @@
 @import './variables';
 
-.LessonPlan {
+body {
   background: $white;
+}
+.LessonPlan {
   .Header {
     padding-top: 120px;
     background: $white;
@@ -21,6 +23,7 @@
     padding: .5rem 0;
     margin: 2rem 0;
     background: $sparkle-white;
+    color: $charcoal;
   }
   h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
