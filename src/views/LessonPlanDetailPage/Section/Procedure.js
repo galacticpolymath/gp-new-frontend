@@ -11,7 +11,7 @@ const Procedure = ({ index, SectionTitle, LessonDuration, Chunks }) => {
   const classes = useStyles();
   return (
     <div className="Procedure">
-      <h2 className="SectionHeading">
+      <h2 className="SectionHeading" id="procedure">
         <div className={classes.container}>
           {index}. {SectionTitle}
         </div>

@@ -9,7 +9,10 @@ const Heading = ({ index, SectionTitle }) => {
   const classes = useStyles();
 
   return (
-    <h2 className="SectionHeading">
+    <h2
+      className="SectionHeading"
+      id={SectionTitle.replace(/\s+/g, "_").toLowerCase()}
+    >
       <div className={classes.container}>
         {index}. {SectionTitle}
       </div>

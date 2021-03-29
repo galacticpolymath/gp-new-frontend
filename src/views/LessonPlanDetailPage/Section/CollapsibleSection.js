@@ -25,7 +25,10 @@ const CollapsibleSection = ({
       expanded={expanded}
       onChange={() => expand(!expanded)}
     >
-      <div className="SectionHeading">
+      <div
+        className="SectionHeading"
+        id={SectionTitle.replace(/\s+/g, "_").toLowerCase()}
+      >
         <div className={classes.container}>
           <ExpansionPanelSummary
             className="ExpansionPanelSummary"

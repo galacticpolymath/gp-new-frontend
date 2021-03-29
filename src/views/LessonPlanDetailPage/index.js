@@ -41,7 +41,7 @@ const LessonPlan = () => {
         fixed
         color="dark"
       />
-      <div className="LessonPlan">
+      <div className="LessonPlan" id="top">
         <Header {...lesson} />
 
         {lesson.Section &&

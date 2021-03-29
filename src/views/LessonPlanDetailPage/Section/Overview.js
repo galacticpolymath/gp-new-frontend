@@ -23,7 +23,7 @@ const Overview = ({
   const classes = useStyles();
   return (
     <Fragment>
-      <h2 className="SectionHeading">
+      <h2 className="SectionHeading" id="overview">
         <div className={classes.container}>{index}. Overview</div>
       </h2>
 
