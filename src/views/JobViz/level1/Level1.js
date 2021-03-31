@@ -223,9 +223,9 @@ export const Level1List = (props) => {
           <div className="crumbs">
             <Card className={classes.textCenter} style={{ width: "20rem" }}>
               <CardAvatar profile>
-                <a href="" onClick={(e) => e.preventDefault()}>
+                {/*<a href="" onClick={(e) => e.preventDefault()}>*/}
                   <img src={brick1} alt="..." />
-                </a>
+                {/*</a>*/}
               </CardAvatar>
               <CardBody>
                 <h4 className={classes.cardTitle}>Job Categories</h4>
