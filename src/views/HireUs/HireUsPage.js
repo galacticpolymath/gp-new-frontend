@@ -22,6 +22,7 @@ import hireUsStyle from "../../assets/jss/material-kit-pro-react/views/hireUsSty
 import { makeCloudinaryUrl } from "../../components/shared/constants";
 import SectionHeardEnough from "./Sections/SectionHeardEnough";
 import Button from "../../components/CustomButtons/Button";
+import SectionSubscribe from "../LandingPage/Sections/SectionSubscribe";
 
 
 const useStyles = makeStyles(hireUsStyle);
@@ -179,6 +180,7 @@ export default function PricingPage() {
         </div>
 
       </div>
+      <SectionSubscribe/>
       <Footer
         content={
           <div>

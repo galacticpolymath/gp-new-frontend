@@ -27,7 +27,7 @@ import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import Slide from "@material-ui/core/Slide";
-// import Close from "@material-ui/icons/Close";
+
 
 
 import { ModalTable } from "../modalTable/ModalTable";
@@ -56,6 +56,8 @@ import { Level3Card } from "./Level3Card";
 import JobVizHeader from "../modules/JobVizComponents";
 import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle.js";
 import GPcopyrightFooter from "../../../components/Footer/GPcopyrightFooter";
+import SectionSubscribe from "../../LandingPage/Sections/SectionSubscribe";
+import Close from "@material-ui/icons/Close";
 
 const useStyles = makeStyles(JobVizStyle);
 
@@ -81,7 +83,7 @@ export const Level3List = (props) => {
     PercentSelfEmployed2016: 0,
     OccupationalOpenings2016to2026AnnualAverage: 0,
     MedianAnnualWage2017: "",
-    TypicalEducationNeededForEntr: "",
+    TypicalEducationNeededForEntry: "",
     WorkExperienceInARelatedOccupation: "",
     TypicalOnTheJobTrainingNeededToAttainCompetencyInTheOccupation: "",
     ttl: "",
@@ -284,9 +286,9 @@ export const Level3List = (props) => {
           <div className="crumbs">
             <Card className={classes.textCenter} style={{ width: "20rem" }}>
               <CardAvatar profile>
-                <a href="#" onClick={(e) => e.preventDefault()}>
+                {/*<a href="#" onClick={(e) => e.preventDefault()}>*/}
                   <img src={branch2} alt="..." />
-                </a>
+                {/*</a>*/}
               </CardAvatar>
               <CardBody>
                 <h4 className={classes.cardTitle}>{jobObject.title}</h4>
@@ -320,6 +322,7 @@ export const Level3List = (props) => {
                       color="danger"
                       simple
                     >
+                      <Close />
                       Close
                     </Button>
                   </DialogActions>
@@ -351,8 +354,17 @@ export const Level3List = (props) => {
               })}
             </div>
           </div>
+          <div className={classes.attribution}>
+            <h5><b>Data Source: </b>
+              <a href={"https://www.bls.gov/emp/tables/occupational-projections-and-characteristics.htm"}
+                 target="_blank" rel="noopener noreferrer" >US Bureau of Labor Statistics</a></h5>
+          </div>
         </div>
       </div>
+
+
+      <hr/>
+      <SectionSubscribe />
       <Footer
         content={
           <div>

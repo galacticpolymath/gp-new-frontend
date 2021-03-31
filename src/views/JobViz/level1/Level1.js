@@ -23,11 +23,9 @@ import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import Button from "components/CustomButtons/Button.js";
 import CardAvatar from "components/Card/CardAvatar.js";
-// import marc from "assets/img/faces/marc.jpg";
+
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import Dialog from "@material-ui/core/Dialog";
-// import DialogTitle from "@material-ui/core/DialogTitle";
-// import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
 import Slide from "@material-ui/core/Slide";
 // import Close from "@material-ui/icons/Close";
@@ -48,6 +46,8 @@ import { Level1Card } from "./Level1Card";
 
 import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle.js";
 import GPcopyrightFooter from "../../../components/Footer/GPcopyrightFooter";
+import SectionSubscribe from "../../LandingPage/Sections/SectionSubscribe";
+import Close from "@material-ui/icons/Close";
 
 const useStyles = makeStyles(JobVizStyle);
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -77,7 +77,7 @@ export const Level1List = (props) => {
     PercentSelfEmployed2016: 0,
     OccupationalOpenings2016to2026AnnualAverage: 0,
     MedianAnnualWage2017: "",
-    TypicalEducationNeededForEntr: "",
+    TypicalEducationNeededForEntry: "",
     WorkExperienceInARelatedOccupation: "",
     TypicalOnTheJobTrainingNeededToAttainCompetencyInTheOccupation: "",
     ttl: "",
@@ -224,9 +224,9 @@ export const Level1List = (props) => {
           <div className="crumbs">
             <Card className={classes.textCenter} style={{ width: "20rem" }}>
               <CardAvatar profile>
-                <a href="" onClick={(e) => e.preventDefault()}>
+                {/*<a href="" onClick={(e) => e.preventDefault()}>*/}
                   <img src={brick1} alt="..." />
-                </a>
+                {/*</a>*/}
               </CardAvatar>
               <CardBody>
                 <h4 className={classes.cardTitle}>Job Categories</h4>
@@ -240,7 +240,9 @@ export const Level1List = (props) => {
                   classes={{
                     root: classes.modalRoot,
                     paper: classes.modal,
+                    // fullWidth: true
                   }}
+                  maxWidth={'lg'}
                   open={classicModal}
                   TransitionComponent={Transition}
                   keepMounted
@@ -255,6 +257,7 @@ export const Level1List = (props) => {
                       color="danger"
                       simple
                     >
+                      <Close className={classes.modalClose} />
                       Close
                     </Button>
                   </DialogActions>
@@ -285,8 +288,17 @@ export const Level1List = (props) => {
               })}
             </div>
           </div>
+          <div className={classes.attribution}>
+            <h5><b>Data Source: </b>
+              <a href={"https://www.bls.gov/emp/tables/occupational-projections-and-characteristics.htm"}
+                 target="_blank" rel="noopener noreferrer" >US Bureau of Labor Statistics</a></h5>
+          </div>
         </div>
       </div>
+
+
+      <hr/>
+      <SectionSubscribe />
       <Footer
         content={
           <div>

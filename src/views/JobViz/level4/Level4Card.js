@@ -6,17 +6,12 @@ import { addIdPathway } from "../Helper";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 // @material-ui icons
-import AccountTreeIcon from "@material-ui/icons/AccountTree";
 // core components
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import Button from "components/CustomButtons/Button.js";
-import CardAvatar from "components/Card/CardAvatar.js";
-import marc from "assets/img/faces/marc.jpg";
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import Dialog from "@material-ui/core/Dialog";
-import DialogTitle from "@material-ui/core/DialogTitle";
-import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
 import Slide from "@material-ui/core/Slide";
 import Close from "@material-ui/icons/Close";
@@ -167,6 +162,7 @@ export const Level4Card = (props) => {
                 color="danger"
                 simple
               >
+                <Close className={classes.modalClose} />
                 Close
               </Button>
             </DialogActions>

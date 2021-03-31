@@ -40,15 +40,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 Transition.displayName = "Transition";
 
-// const style = {
-//   cardTitle,
-//   textCenter: {
-//     textAlign: "center",
-//   },
-//   textRight: {
-//     textAlign: "right",
-//   },
-// };
 
 // sections for this page Added by JOB VIZ TEAM
 import { Link } from "react-router-dom";
@@ -65,6 +56,8 @@ import { Level2Card } from "./Level2Card";
 import JobVizHeader from "../modules/JobVizComponents";
 import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle.js";
 import GPcopyrightFooter from "../../../components/Footer/GPcopyrightFooter";
+import SectionSubscribe from "../../LandingPage/Sections/SectionSubscribe";
+import Close from "@material-ui/icons/Close";
 
 const useStyles = makeStyles(JobVizStyle);
 
@@ -88,7 +81,7 @@ export const Level2List = (props) => {
     PercentSelfEmployed2016: 0,
     OccupationalOpenings2016to2026AnnualAverage: 0,
     MedianAnnualWage2017: "",
-    TypicalEducationNeededForEntr: "",
+    TypicalEducationNeededForEntry: "",
     WorkExperienceInARelatedOccupation: "",
     TypicalOnTheJobTrainingNeededToAttainCompetencyInTheOccupation: "",
     ttl: "",
@@ -103,11 +96,18 @@ export const Level2List = (props) => {
     parent: [],
   });
 
+  const isModalSetToTrue = () => {
+    if (classicModal === false) {
+      console.log('False')
+    } else {console.log('True')}
+  }
+
   //Make Parent and grandparent Names into url frienldy stirng
   const title = makeUrlPath(jobObject.title);
 
   ////FETCH ORIGINAL JOB DATA
   useEffect(() => {
+    isModalSetToTrue();
     JobManager.getAll().then((jobs) => {
       setOriginalJobs(jobs);
     });
@@ -123,10 +123,12 @@ export const Level2List = (props) => {
   };
 
   useEffect(() => {
+    isModalSetToTrue();
     setJobs(addIdPathway(originalJobs));
   }, [originalJobs]);
 
   useEffect(() => {
+    isModalSetToTrue();
     ///Set job object to state
     getJobObject(level);
 
@@ -241,9 +243,9 @@ export const Level2List = (props) => {
           <div className="crumbs">
             <Card className={classes.textCenter} style={{ width: "20rem" }}>
               <CardAvatar profile>
-                <a href="" onClick={(e) => e.preventDefault()}>
+                {/*<a href="" onClick={(e) => e.preventDefault()}>*/}
                   <img src={branch2} alt="..." />
-                </a>
+                {/*</a>*/}
               </CardAvatar>
               <CardBody>
                 <h4 className={classes.cardTitle}>{jobObject.title}</h4>
@@ -263,6 +265,7 @@ export const Level2List = (props) => {
                     root: classes.modalRoot,
                     paper: classes.modal,
                   }}
+                  maxWidth={"lg"}
                   open={classicModal}
                   TransitionComponent={Transition}
                   keepMounted
@@ -277,6 +280,7 @@ export const Level2List = (props) => {
                       color="danger"
                       simple
                     >
+                      <Close className={classes.modalClose} />
                       Close
                     </Button>
                   </DialogActions>
@@ -307,8 +311,17 @@ export const Level2List = (props) => {
               })}
             </div>
           </div>
+          <div className={classes.attribution}>
+            <h5><b>Data Source: </b>
+              <a href={"https://www.bls.gov/emp/tables/occupational-projections-and-characteristics.htm"}
+                 target="_blank" rel="noopener noreferrer" >US Bureau of Labor Statistics</a></h5>
+          </div>
         </div>
       </div>
+
+
+      <hr/>
+      <SectionSubscribe />
       <Footer
         content={
           <div>

@@ -20,7 +20,7 @@ import { roseColor } from "../../../assets/jss/material-kit-pro-react";
 
 const useStyles = makeStyles(contactStyle);
 
-export default function SectionContact() {
+export default function GetInvolved() {
   // const [specialitySelect, setSpecialitySelect] = React.useState("1");
   // const handleSpeciality = event => {
   //   setSpecialitySelect(event.target.value);

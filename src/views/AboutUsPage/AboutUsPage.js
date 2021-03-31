@@ -16,12 +16,13 @@ import SectionDescription from "views/AboutUsPage/Sections/SectionDescription.js
 import SectionTeam from "views/AboutUsPage/Sections/SectionTeam.js";
 import SectionPartners from "./Sections/SectionPartners";
 import SectionServices from "views/AboutUsPage/Sections/SectionServices.js";
-import SectionContact from "views/AboutUsPage/Sections/SectionContact.js";
+import GetInvolved from "views/AboutUsPage/Sections/GetInvolved.js";
 
 
 // styling
 import aboutUsStyle from "assets/jss/material-kit-pro-react/views/aboutUsStyle.js";
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
+import SectionSubscribe from "../LandingPage/Sections/SectionSubscribe";
 
 
 const useStyles = makeStyles(aboutUsStyle);
@@ -98,9 +99,10 @@ export default function AboutUsPage(...rest) {
           <SectionPartners />
           <SectionServices />
            {/*<SectionOffice />*/}
-          <SectionContact />
+          <GetInvolved />
         </div>
       </div>
+      <SectionSubscribe/>
       <Footer
         content={
           <div>

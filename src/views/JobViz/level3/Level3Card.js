@@ -11,18 +11,15 @@ import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import Button from "components/CustomButtons/Button.js";
-import CardAvatar from "components/Card/CardAvatar.js";
-import marc from "assets/img/faces/marc.jpg";
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import Dialog from "@material-ui/core/Dialog";
-// import DialogTitle from "@material-ui/core/DialogTitle";
-// import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
 import Slide from "@material-ui/core/Slide";
 // import Close from "@material-ui/icons/Close";
 import { ModalTable } from "../modalTable/ModalTable";
 
 import { cardTitle } from "assets/jss/material-kit-pro-react.js";
+import Close from "@material-ui/icons/Close";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="down" ref={ref} {...props} />;
@@ -194,6 +191,7 @@ export const Level3Card = (props) => {
                   color="danger"
                   simple
                 >
+                  <Close className={classes.modalClose} />
                   Close
                 </Button>
               </DialogActions>
