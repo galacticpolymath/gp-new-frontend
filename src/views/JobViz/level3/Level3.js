@@ -27,7 +27,7 @@ import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import Slide from "@material-ui/core/Slide";
-// import Close from "@material-ui/icons/Close";
+
 
 
 import { ModalTable } from "../modalTable/ModalTable";
@@ -57,6 +57,7 @@ import JobVizHeader from "../modules/JobVizComponents";
 import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle.js";
 import GPcopyrightFooter from "../../../components/Footer/GPcopyrightFooter";
 import SectionSubscribe from "../../LandingPage/Sections/SectionSubscribe";
+import Close from "@material-ui/icons/Close";
 
 const useStyles = makeStyles(JobVizStyle);
 
@@ -321,6 +322,7 @@ export const Level3List = (props) => {
                       color="danger"
                       simple
                     >
+                      <Close />
                       Close
                     </Button>
                   </DialogActions>

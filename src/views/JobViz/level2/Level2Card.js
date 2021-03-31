@@ -23,6 +23,7 @@ import Slide from "@material-ui/core/Slide";
 import { ModalTable } from "../modalTable/ModalTable";
 
 import { cardTitle } from "assets/jss/material-kit-pro-react.js";
+import Close from "@material-ui/icons/Close";
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="down" ref={ref} {...props} />;
@@ -196,6 +197,7 @@ export const Level2Card = (props) => {
                   color="danger"
                   simple
                 >
+                  <Close className={classes.modalClose} />
                   Close
                 </Button>
               </DialogActions>

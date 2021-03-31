@@ -57,6 +57,7 @@ import JobVizHeader from "../modules/JobVizComponents";
 import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle.js";
 import GPcopyrightFooter from "../../../components/Footer/GPcopyrightFooter";
 import SectionSubscribe from "../../LandingPage/Sections/SectionSubscribe";
+import Close from "@material-ui/icons/Close";
 
 const useStyles = makeStyles(JobVizStyle);
 
@@ -279,6 +280,7 @@ export const Level2List = (props) => {
                       color="danger"
                       simple
                     >
+                      <Close className={classes.modalClose} />
                       Close
                     </Button>
                   </DialogActions>

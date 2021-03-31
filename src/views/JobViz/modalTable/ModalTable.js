@@ -30,20 +30,10 @@ export const ModalTable = (props) => {
   const [percent, setPercent] = useState("");
 
   const makeCorrectValue = (x) => {
-    const xVal = x;
-    const newVal = xVal.replace(/,/g, "");
-    let numVal = parseFloat(newVal);
-    numVal = numVal * 1000.0;
-    const stringVal = String(numVal).replace(/^\d+/, (number) =>
-      [...number]
-        .map(
-          (digit, index, digits) =>
-            (!index || (digits.length - index) % 3 ? "" : ",") + digit
-        )
-        .join("")
-    );
-
-    return stringVal;
+    let newVal = parseFloat(x)*1000;
+    let out;
+    out= newVal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return out; /*stringVal;*/
   };
 
   function getNumberWithSign(input) {
