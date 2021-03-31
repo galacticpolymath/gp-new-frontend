@@ -43,6 +43,9 @@ const style = {
     backgroundColor: "#9F4BFF",
     borderRadius: "25px"
   },
+  gradientBackground:{
+    background: "linear-gradient(148deg, rgba(94,94,94,0.6) 0%, rgba(240,244,255,1) 100%)"
+  },
   darkGreyFont: {
     color: "#828282"
   },
@@ -80,13 +83,13 @@ export default function SectionSubscribe() {
           <h2
             className={classNames(
               classes.title,
-              classes.justifyContentSpaceBetween
+              classes.justifyContentSpaceBetween,
             )}
           >
             <b>Join our mailing list</b>—get updates and insider access to our latest free lessons and learning tools.
           </h2>
 
-          <Button color="info" size="lg" href="https://eepurl.com/g_kQ4T">
+          <Button color="primary" size="lg" href="https://eepurl.com/g_kQ4T">
 
             <MailOutlineIcon
             style={{marginRight:"0.75rem"}}

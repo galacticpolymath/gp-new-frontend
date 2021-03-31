@@ -22,6 +22,7 @@ import GetInvolved from "views/AboutUsPage/Sections/GetInvolved.js";
 // styling
 import aboutUsStyle from "assets/jss/material-kit-pro-react/views/aboutUsStyle.js";
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
+import SectionSubscribe from "../LandingPage/Sections/SectionSubscribe";
 
 
 const useStyles = makeStyles(aboutUsStyle);
@@ -101,6 +102,7 @@ export default function AboutUsPage(...rest) {
           <GetInvolved />
         </div>
       </div>
+      <SectionSubscribe/>
       <Footer
         content={
           <div>

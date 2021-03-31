@@ -22,6 +22,7 @@ import cachedLessons from "../LessonPlanDetailPage/data/lesson-plans.json";
 import { fetchAll } from "../LessonPlanDetailPage/modules/lessonsApi.js";
 
 import lessonsPageStyle from "assets/jss/material-kit-pro-react/views/lessonsPageStyle.js";
+import SectionSubscribe from "../LandingPage/Sections/SectionSubscribe";
 const useStyles = makeStyles(lessonsPageStyle);
 
 export default function LessonsPage() {
@@ -106,6 +107,7 @@ export default function LessonsPage() {
           {lessons && <LessonCards lessons={lessons} />}
         </div>
       </div>
+      <SectionSubscribe/>
       <Footer content={<GPcopyrightFooter />} />
     </div>
   );
