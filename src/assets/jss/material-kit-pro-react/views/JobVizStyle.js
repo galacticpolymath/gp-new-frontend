@@ -52,6 +52,10 @@ const JobVizStyle = {
     padding: "0px",
     width: "auto"
   },
+  jobDefHeader:{
+    paddingBottom: "1.5rem",
+
+  },
   list: {
     marginBottom: "0",
     padding: "0",
@@ -75,10 +79,29 @@ const JobVizStyle = {
   attribution: {
     textAlign: "right",
     paddingLeft: "0",
-    paddingTop: "8%",
+    paddingTop: "8%"
   },
   bgColor: {
     backgroundColor: "#CB1F8E"
+  },
+  modalContainer: {},
+  tileContainer: {
+    display: "grid-container",
+    justifyContent: "center",
+    rowGap: "4px",
+    // columnGap: "4px"
+  },
+  jobTile: {
+    display: "grid",
+    minWidth: 0,
+    // alignContent: "center",
+    // flexDirection: "column",
+    boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
+    transition: "0.3s",
+    background: "aliceblue",
+    // margin: "4px",
+    padding: "1rem"
+    // flex: "1 1 15%",
   },
   "@media only screen and (max-width: 1280px)": {
     title: {

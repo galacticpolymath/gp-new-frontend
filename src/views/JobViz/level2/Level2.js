@@ -273,6 +273,7 @@ export const Level2List = (props) => {
                     root: classes.modalRoot,
                     paper: classes.modal,
                   }}
+                  maxWidth={"lg"}
                   open={classicModal}
                   TransitionComponent={Transition}
                   keepMounted
