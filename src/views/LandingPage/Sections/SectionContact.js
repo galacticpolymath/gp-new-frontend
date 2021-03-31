@@ -3,16 +3,18 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import classNames from "classnames";
 // @material-ui/icons
-// import  from "@material-ui/icons/";
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
+
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
 import teamsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/teamsStyle.js";
 import teamStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.js";
-import CustomInput from "components/CustomInput/CustomInput.js";
+
 // import TextField from "@material-ui/core/TextField";
 import { blackColor } from "../../../assets/jss/material-kit-pro-react";
+
 
 const style = {
   ...teamsStyle,
@@ -81,60 +83,74 @@ export default function SectionLessonData() {
               classes.justifyContentSpaceBetween
             )}
           >
-            Join our mailing list—get lessons, updates, and influence our next project as a beta tester.
+            <b>Join our mailing list</b>—get updates and insider access to our latest free lessons and learning tools.
           </h2>
-          <form>
-            <GridContainer>
-              <GridItem xs={12} sm={6} md={6}>
-                <CustomInput
-                  labelText="Tell us your name"
-                  id="name"
-                  formControlProps={{
-                    fullWidth: true
-                  }}
-                />
-              </GridItem>
-              <GridItem xs={12} sm={6} md={6}>
-                <CustomInput
-                  labelText="What's your email address?"
-                  id="email"
-                  formControlProps={{
-                    fullWidth: true
-                  }}
-                />
-              </GridItem>
-              <div>
-                <div className={classes.title}>Your interest in Galactic Polymath:</div>
-                <input
-                  type="checkBox"
-                  id="teaching"
-                  name="teaching"
-                />
-                <label htmlFor="teaching"
-                       className={classes.teaching}>
-                  Teaching
-                </label>
-                <input
-                  type="checkBox"
-                  id="outreach"
-                  name="outreach"
-                />
-                <label htmlFor="outreach"
-                       className={classes.teaching}>
-                  Outreach
-                </label>
-              </div>
-              <GridItem
-                xs={12}
-                sm={4}
-                md={4}
-                className={classes.mrAuto + " " + classes.mlAuto}
-              >
-                <Button>SUBMIT</Button>
-              </GridItem>
-            </GridContainer>
-          </form>
+
+          <Button color="info" size="lg" href="https://eepurl.com/g_kQ4T">
+
+            <MailOutlineIcon
+            style={{marginRight:"0.75rem"}}
+            />
+            Subscribe
+          </Button>
         </GridItem>
+
+
+
+          {/*THE ABOVE BUTTON IS A PLACEHOLDER TILL WE CAN CONNECT THE BELOW FORM TO SENDGRID*/}
+
+          {/*<form>*/}
+          {/*  <GridContainer>*/}
+          {/*    <GridItem xs={12} sm={6} md={6}>*/}
+          {/*      <CustomInput*/}
+          {/*        labelText="Tell us your name"*/}
+          {/*        id="name"*/}
+          {/*        formControlProps={{*/}
+          {/*          fullWidth: true*/}
+          {/*        }}*/}
+          {/*      />*/}
+          {/*    </GridItem>*/}
+          {/*    <GridItem xs={12} sm={6} md={6}>*/}
+          {/*      <CustomInput*/}
+          {/*        labelText="What's your email address?"*/}
+          {/*        id="email"*/}
+          {/*        formControlProps={{*/}
+          {/*          fullWidth: true*/}
+          {/*        }}*/}
+          {/*      />*/}
+          {/*    </GridItem>*/}
+          {/*    <div>*/}
+          {/*      <div className={classes.title}>Your interest in Galactic Polymath:</div>*/}
+          {/*      <input*/}
+          {/*        type="checkBox"*/}
+          {/*        id="teaching"*/}
+          {/*        name="teaching"*/}
+          {/*      />*/}
+          {/*      <label htmlFor="teaching"*/}
+          {/*             className={classes.teaching}>*/}
+          {/*        Teaching*/}
+          {/*      </label>*/}
+          {/*      <input*/}
+          {/*        type="checkBox"*/}
+          {/*        id="outreach"*/}
+          {/*        name="outreach"*/}
+          {/*      />*/}
+          {/*      <label htmlFor="outreach"*/}
+          {/*             className={classes.teaching}>*/}
+          {/*        Outreach*/}
+          {/*      </label>*/}
+          {/*    </div>*/}
+          {/*    <GridItem*/}
+          {/*      xs={12}*/}
+          {/*      sm={4}*/}
+          {/*      md={4}*/}
+          {/*      className={classes.mrAuto + " " + classes.mlAuto}*/}
+          {/*    >*/}
+          {/*      <Button>SUBMIT</Button>*/}
+          {/*    </GridItem>*/}
+          {/*  </GridContainer>*/}
+          {/*</form>*/}
+
       </GridContainer>
     </div>
   );
