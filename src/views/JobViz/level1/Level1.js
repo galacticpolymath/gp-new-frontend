@@ -23,11 +23,9 @@ import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import Button from "components/CustomButtons/Button.js";
 import CardAvatar from "components/Card/CardAvatar.js";
-// import marc from "assets/img/faces/marc.jpg";
+
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import Dialog from "@material-ui/core/Dialog";
-// import DialogTitle from "@material-ui/core/DialogTitle";
-// import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
 import Slide from "@material-ui/core/Slide";
 // import Close from "@material-ui/icons/Close";
@@ -48,6 +46,7 @@ import { Level1Card } from "./Level1Card";
 
 import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle.js";
 import GPcopyrightFooter from "../../../components/Footer/GPcopyrightFooter";
+import SectionSubscribe from "../../LandingPage/Sections/SectionSubscribe";
 
 const useStyles = makeStyles(JobVizStyle);
 const Transition = React.forwardRef(function Transition(props, ref) {
@@ -285,8 +284,17 @@ export const Level1List = (props) => {
               })}
             </div>
           </div>
+          <div className={classes.attribution}>
+            <h5><b>Data Source: </b>
+              <a href={"https://www.bls.gov/emp/tables/occupational-projections-and-characteristics.htm"}
+                 target="_blank" rel="noopener noreferrer" >US Bureau of Labor Statistics</a></h5>
+          </div>
         </div>
       </div>
+
+
+      <hr/>
+      <SectionSubscribe />
       <Footer
         content={
           <div>

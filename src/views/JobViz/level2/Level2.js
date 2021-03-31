@@ -65,6 +65,7 @@ import { Level2Card } from "./Level2Card";
 import JobVizHeader from "../modules/JobVizComponents";
 import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle.js";
 import GPcopyrightFooter from "../../../components/Footer/GPcopyrightFooter";
+import SectionSubscribe from "../../LandingPage/Sections/SectionSubscribe";
 
 const useStyles = makeStyles(JobVizStyle);
 
@@ -316,8 +317,17 @@ export const Level2List = (props) => {
               })}
             </div>
           </div>
+          <div className={classes.attribution}>
+            <h5><b>Data Source: </b>
+              <a href={"https://www.bls.gov/emp/tables/occupational-projections-and-characteristics.htm"}
+                 target="_blank" rel="noopener noreferrer" >US Bureau of Labor Statistics</a></h5>
+          </div>
         </div>
       </div>
+
+
+      <hr/>
+      <SectionSubscribe />
       <Footer
         content={
           <div>

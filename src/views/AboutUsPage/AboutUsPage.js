@@ -16,7 +16,7 @@ import SectionDescription from "views/AboutUsPage/Sections/SectionDescription.js
 import SectionTeam from "views/AboutUsPage/Sections/SectionTeam.js";
 import SectionPartners from "./Sections/SectionPartners";
 import SectionServices from "views/AboutUsPage/Sections/SectionServices.js";
-import SectionContact from "views/AboutUsPage/Sections/SectionContact.js";
+import GetInvolved from "views/AboutUsPage/Sections/GetInvolved.js";
 
 
 // styling
@@ -98,7 +98,7 @@ export default function AboutUsPage(...rest) {
           <SectionPartners />
           <SectionServices />
            {/*<SectionOffice />*/}
-          <SectionContact />
+          <GetInvolved />
         </div>
       </div>
       <Footer

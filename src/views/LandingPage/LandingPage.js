@@ -29,7 +29,7 @@ import SectionAbout from "./Sections/SectionAbout.js";
 import SectionLessons from "./Sections/SectionLessons.js";
 import SectionHow from "./Sections/SectionHow.js";
 import SectionLessonData from "./Sections/SectionLessonData.js";
-import SectionContact from "./Sections/SectionContact.js";
+import SectionContact from "./Sections/SectionSubscribe.js";
 
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 

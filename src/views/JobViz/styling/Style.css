@@ -156,6 +156,8 @@ input[type="text"] {
   margin: -0.5rem 0;
 }
 
+
+
 /* Media styling break points */
 @media screen and (max-width: 768px) {
   .table-parent {

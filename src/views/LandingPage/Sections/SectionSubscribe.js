@@ -71,7 +71,7 @@ const style = {
 
 const useStyles = makeStyles(style);
 
-export default function SectionLessonData() {
+export default function SectionSubscribe() {
   const classes = useStyles();
   return (
     <div className={classNames(classes.section)}>
