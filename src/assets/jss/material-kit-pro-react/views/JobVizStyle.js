@@ -52,8 +52,8 @@ const JobVizStyle = {
     padding: "0px",
     width: "auto"
   },
-  jobDefHeader:{
-    paddingBottom: "1.5rem",
+  jobDefHeader: {
+    paddingBottom: "1.5rem"
 
   },
   list: {
@@ -88,7 +88,10 @@ const JobVizStyle = {
   tileContainer: {
     display: "grid-container",
     justifyContent: "center",
-    rowGap: "4px",
+    rowGap: "4px"
+
+    // Cannot for the life of me figure out why
+    // columnGap causes overflow! Can't fix it'
     // columnGap: "4px"
   },
   jobTile: {

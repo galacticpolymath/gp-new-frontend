@@ -82,7 +82,7 @@ export const Level3List = (props) => {
     PercentSelfEmployed2016: 0,
     OccupationalOpenings2016to2026AnnualAverage: 0,
     MedianAnnualWage2017: "",
-    TypicalEducationNeededForEntr: "",
+    TypicalEducationNeededForEntry: "",
     WorkExperienceInARelatedOccupation: "",
     TypicalOnTheJobTrainingNeededToAttainCompetencyInTheOccupation: "",
     ttl: "",

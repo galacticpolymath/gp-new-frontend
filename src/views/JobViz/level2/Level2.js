@@ -40,15 +40,6 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 
 Transition.displayName = "Transition";
 
-// const style = {
-//   cardTitle,
-//   textCenter: {
-//     textAlign: "center",
-//   },
-//   textRight: {
-//     textAlign: "right",
-//   },
-// };
 
 // sections for this page Added by JOB VIZ TEAM
 import { Link } from "react-router-dom";
@@ -89,7 +80,7 @@ export const Level2List = (props) => {
     PercentSelfEmployed2016: 0,
     OccupationalOpenings2016to2026AnnualAverage: 0,
     MedianAnnualWage2017: "",
-    TypicalEducationNeededForEntr: "",
+    TypicalEducationNeededForEntry: "",
     WorkExperienceInARelatedOccupation: "",
     TypicalOnTheJobTrainingNeededToAttainCompetencyInTheOccupation: "",
     ttl: "",
