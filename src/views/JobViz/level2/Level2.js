@@ -103,11 +103,18 @@ export const Level2List = (props) => {
     parent: [],
   });
 
+  const isModalSetToTrue = () => {
+    if (classicModal === false) {
+      console.log('False')
+    } else {console.log('True')}
+  }
+
   //Make Parent and grandparent Names into url frienldy stirng
   const title = makeUrlPath(jobObject.title);
 
   ////FETCH ORIGINAL JOB DATA
   useEffect(() => {
+    isModalSetToTrue();
     JobManager.getAll().then((jobs) => {
       setOriginalJobs(jobs);
     });
@@ -123,10 +130,12 @@ export const Level2List = (props) => {
   };
 
   useEffect(() => {
+    isModalSetToTrue();
     setJobs(addIdPathway(originalJobs));
   }, [originalJobs]);
 
   useEffect(() => {
+    isModalSetToTrue();
     ///Set job object to state
     getJobObject(level);
 

@@ -17,6 +17,8 @@ import { cardTitle } from "assets/jss/material-kit-pro-react.js";
 import pricingStyle from "assets/jss/material-kit-pro-react/views/pricingStyle.js";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import Button from "components/CustomButtons/Button.js";
+import GridContainer from "components/Grid/GridContainer.js";
+import GridItem from "components/Grid/GridItem.js";
 // import DialogActions from "@material-ui/core/DialogActions";
 import Close from "@material-ui/icons/Close";
 const useStyles = makeStyles(pricingStyle);
@@ -27,6 +29,11 @@ const style = {
   },
   textRight: {
     textAlign: "right",
+  },
+  gridItemStyle: {
+    display: "grid",
+    justifySelf: "left",
+    alignContent: "end",
   },
 };
 
@@ -100,6 +107,7 @@ export const ModalTable = (props) => {
           </h4>
         </div>
       </DialogTitle>
+
       <DialogContent
         id="classic-modal-slide-description"
         className={classes.modalBody}
@@ -109,16 +117,31 @@ export const ModalTable = (props) => {
             <strong>Definition:</strong> {jobObject.Def}
           </h5>
           <div className="table-mid">
+
+        <GridContainer 
+        className= "container1"
+        >
+
+          <GridItem
+            xs={12} sm={12} md={4}
+          >
             <div className="table-child">
               <AttachMoneyIcon style={{ color: "#363636" }} />
               <h5 style={{ fontWeight: "bold" }}>Median 2017 Annual Wage:</h5>
               <h5>{jobObject.MedianAnnualWage2017}</h5>
             </div>
+          </GridItem>
+
+          <GridItem
+          xs={12} sm={12} md={4}
+          >
             <div className="table-child">
               <SchoolIcon style={{ color: "#363636" }} />
               <h5 style={{ fontWeight: "bold" }}>Education Needed:</h5>
               <h5>{jobObject.TypicalEducationNeededForEntry}</h5>
             </div>
+          </GridItem>
+
             {/* <div className="table-child">
               <WorkIcon style={{ "color": "#363636" }} />
               <h5 style={{ "fontWeight": "bold" }}>
@@ -126,25 +149,48 @@ export const ModalTable = (props) => {
               </h5>
               <h5>{jobObject.WorkExperienceInARelatedOccupation}</h5>
             </div> */}
-            <div className="table-child">
-              <SupervisedUserCircleIcon style={{ color: "#363636" }} />
-              <h5 style={{ fontWeight: "bold" }}>On-the-job Training:</h5>
-              <h5>
-                {
-                  jobObject.TypicalOnTheJobTrainingNeededToAttainCompetencyInTheOccupation
-                }
-              </h5>
-            </div>
+
+            <GridItem
+            xs={12} sm={12} md={4}
+            >
+              <div className="table-child">
+                <SupervisedUserCircleIcon style={{ color: "#363636" }} />
+                <h5 style={{ fontWeight: "bold" }}>On-the-job Training:</h5>
+                <h5>
+                  {
+                    jobObject.TypicalOnTheJobTrainingNeededToAttainCompetencyInTheOccupation
+                  }
+                </h5>
+              </div>
+            </GridItem>
+          </GridContainer>
+
+        <GridContainer 
+        className= "container2"
+        >
+          <GridItem
+          xs={12} sm={12} md={4}
+          >
             <div className="table-child">
               <DirectionsWalkIcon style={{ color: "#363636" }} />
               <h5 style={{ fontWeight: "bold" }}>2016 Employment:</h5>
               <h5>{formatedEmploy2016}</h5>
             </div>
+          </GridItem>
+            
+          <GridItem
+          xs={12} sm={12} md={4}
+          >
             <div className="table-child">
               <TransferWithinAStationIcon style={{ color: "#363636" }} />
               <h5 style={{ fontWeight: "bold" }}>2026 Employment:</h5>
               <h5>{formatedEmploy2026}</h5>
             </div>
+          </GridItem>
+            
+          <GridItem
+          xs={12} sm={12} md={4}
+          >
             <div className="table-child">
               <TrendingUpIcon style={{ color: "#363636" }} />
               <h5 style={{ fontWeight: "bold" }}>
@@ -152,6 +198,9 @@ export const ModalTable = (props) => {
               </h5>
               <h4>{percent}%</h4>
             </div>
+          </GridItem>
+            </GridContainer>
+          
           </div>
         </div>
       </DialogContent>

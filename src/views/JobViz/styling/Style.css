@@ -59,6 +59,7 @@ input[type="text"] {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+
 .table-child {
   display: flex;
   flex-direction: column;
@@ -66,10 +67,9 @@ input[type="text"] {
   transition: 0.3s;
   background: aliceblue;
   margin: 2.5px;
-  padding: 2.5px;
+  padding: .5em;
   flex: 1 1 15%;
 }
-
 
 
 /* ///search bar */
