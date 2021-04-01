@@ -140,7 +140,7 @@ export default function SectionFeatures() {
         id={"GPsensible"}
         keyPhrase1={"GP Sensible Lesson Plans"}
         keyPhrase2={"are built for fast and easy implementation."}
-        description={"The goal is 15 minutes or less of prep, even for teachers with no training in lesson topic. We do " +
+        description={"The goal is 15 minutes or less of prep, even for teachers with no training in the lesson topic. We do " +
         "this by designing lessons to be largely student-run and activated, by embedding scaffolding into presentations " +
         "and videos that support student understanding, and by providing quick prep tutorials for teachers that are " +
         "created by people with real classroom experience."}

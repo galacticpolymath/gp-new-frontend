@@ -33,7 +33,8 @@ const featureDetailsStyle = {
     fontWeight: "200"
     },
     "& ul":{
-    paddingTop: "1.1rem"
+    paddingTop: "1.1rem",
+      marginBottom: "-1rem",
     }
 
   },
