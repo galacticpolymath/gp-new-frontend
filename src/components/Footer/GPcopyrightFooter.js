@@ -13,7 +13,7 @@ export default function GPcopyrightFooter () {
     <div className={classes.right} >
        made with{" "}
       <ComputerIcon className={classes.icon} /> by{" "}
-      Galactic Polymath &copy; {1900 + new Date().getYear()}
+      Galactic Polymath &copy;&nbsp;{1900 + new Date().getYear()}
 
     </div>
   )
