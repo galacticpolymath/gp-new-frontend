@@ -63,9 +63,9 @@ export default function SectionFeatures() {
         // a bit messy, but I couldn't figure a better way to do this
         keyPhrase2={"means you, teachers, and anyone else anywhere in the world can access and use the lessons we create."}
         description={
-          <span>What is more, they are published with the
+          <span>What is more, they are published with the&nbsp;
             <a href={"https://creativecommons.org/licenses/by-nc/2.0/"}>
-            CC-BY-NC 2.0 license</a>
+            CC-BY-NC 2.0 license</a>&nbsp;
             and distributed in editable formats so teachers can adapt and remix materials to meet their
             teaching styles and classroom needs.
           </span>
