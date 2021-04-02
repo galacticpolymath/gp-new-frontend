@@ -25,6 +25,10 @@ const style = {
   justifyContentSpaceBetween: {
     justifyContent: "space-between"
   },
+  subscribeContainer:{
+    paddingLeft: "10px",
+    paddingRight: "10px",
+  },
   primaryColor: {
     color: "#2C83C3"
   },
@@ -77,7 +81,7 @@ const useStyles = makeStyles(style);
 export default function SectionSubscribe() {
   const classes = useStyles();
   return (
-    <div className={classNames(classes.section)}>
+    <div className={classNames(classes.section,classes.subscribeContainer)}>
       <GridContainer justify="center">
         <GridItem cs={12} sm={8} md={8}>
           <h2
