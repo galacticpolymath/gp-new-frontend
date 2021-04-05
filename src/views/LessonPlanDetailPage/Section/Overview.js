@@ -8,18 +8,24 @@ import Image from "../../../components/StrapiImage";
 import TagCloud from "../../../components/TagCloud";
 import RichText from "../../../components/RichText";
 
+// Material UI Icons
+import FaceIcon from "@material-ui/icons/Face";
+import MenuBookIcon from "@material-ui/icons/MenuBook";
+import ScheduleIcon from "@material-ui/icons/Schedule";
+
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
+
 const useStyles = makeStyles(lessonPlanStyle);
 
 const Overview = ({
-  index,
-  EstLessonTime,
-  ForGrades,
-  TargetSubject,
-  SteamEpaulette,
-  Text,
-  Tags,
-}) => {
+                    index,
+                    EstLessonTime,
+                    ForGrades,
+                    TargetSubject,
+                    SteamEpaulette,
+                    Text,
+                    Tags
+                  }) => {
   const classes = useStyles();
   return (
     <Fragment>
@@ -28,25 +34,29 @@ const Overview = ({
       </h2>
 
       <div className={classes.container + " Overview"}>
-        <p>
-          <strong>STEAM Epaulette:</strong> lesson interdisciplinarity by
-          standards
-        </p>
-
         <Image {...SteamEpaulette} />
 
         <GridContainer className="stats">
           <GridItem sm={4} className="border-right">
-            <h5>Est. Time: </h5>
-            <p>{EstLessonTime}</p>
+            <MenuBookIcon fontSize="large" className={"statIcon"} />
+            <h5>Target Subject: </h5>
+            <div className="statContainer">
+              <h5>{TargetSubject}</h5>
+            </div>
           </GridItem>
           <GridItem sm={4} className="border-right">
-            <h5>Grade(s): </h5>
-            <p>{ForGrades}</p>
+            <FaceIcon fontSize="large" className={"statIcon"} />
+            <h5>Grades: </h5>
+            <div className="statContainer">
+              <h5>{ForGrades}</h5>
+            </div>
           </GridItem>
           <GridItem sm={4}>
-            <h5>Target Subject: </h5>
-            <p>{TargetSubject}</p>
+            <ScheduleIcon fontSize="large" className={"statIcon"} />
+            <h5>Estimated Time: </h5>
+            <div className="statContainer">
+              <h5>{EstLessonTime}</h5>
+            </div>
           </GridItem>
         </GridContainer>
 
@@ -66,7 +76,7 @@ Overview.propTypes = {
   TargetSubject: PropTypes.string,
   SteamEpaulette: PropTypes.object,
   Text: PropTypes.string,
-  Tags: PropTypes.array,
+  Tags: PropTypes.array
 };
 
 export default Overview;
