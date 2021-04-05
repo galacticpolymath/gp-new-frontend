@@ -2,12 +2,33 @@
 @import '../../../assets/scss/core/variables';
 
 .Overview {
+  #targetSubj {
+    margin-bottom: 2rem;
+    >* {
+      display: inline-block;
+    }
+    p{
+      padding-left: 1rem;
+    }
+  }
   .stats {
-    margin: 1rem 0;
-    [class*='col'] {
-      padding: 0.35rem 1.25rem;
-      > * {
-        margin: 0.5rem 0;
+    margin-top: 1.5rem;
+    text-align: center;
+        //[class*='col'] {
+    //  padding: 0.35rem 1.25rem;
+    //  > * {
+    //    margin: 0.5rem 0;
+    //  }
+    //}
+    .statIcon{
+      margin-bottom: 0rem;
+    }
+    .statContainer{
+      display: inline-block;
+      color: $hydrogen-blue;
+     h5 {
+        margin: 0;
+       font-weight: 700;
       }
     }
     .border-right {
@@ -15,9 +36,25 @@
         border-right: 1px solid $charcoal !important;
       }
     }
+
+    h5{
+      margin-top: 0;
+    }
     p {
       margin: 0 0 0.5rem 0;
     }
+    @media (max-width: map-get($grid-breakpoints, "sm")){
+      text-align: left;
+      .statContainer {
+        margin-bottom: 1.5rem;
+        padding-bottom: 1.5rem;
+        width: 100%;
+        border-bottom: 1px solid $charcoal
+      }
+    }
+  }
+  #lessonhook {
+    padding-top: 1.5rem;
   }
   .keywords {
     padding: 0.85rem 0;
