@@ -34,7 +34,7 @@ const Header = ({
               ")"}
         </p>
         <h1>{Title}</h1>
-        <h2>{Subtitle}</h2>
+        <h3>{Subtitle}</h3>
         <GridContainer className="text-center">
           <div className="col">
             <Image {...CoverImage} className="self-center" />
