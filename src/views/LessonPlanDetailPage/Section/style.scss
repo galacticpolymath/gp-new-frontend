@@ -12,8 +12,10 @@
     }
   }
   .stats {
-    margin-top: 1.5rem;
+    margin: 2rem 0;
+    padding: 1rem 0.5rem 2rem;
     text-align: center;
+    background-color: $gray;
         //[class*='col'] {
     //  padding: 0.35rem 1.25rem;
     //  > * {
@@ -21,19 +23,19 @@
     //  }
     //}
     .statIcon{
-      margin-bottom: 0rem;
+      margin-bottom: 0;
     }
     .statContainer{
       display: inline-block;
-      color: $hydrogen-blue;
-     h5 {
+      //color: $hydrogen-blue;
+     h3 {
         margin: 0;
-       font-weight: 700;
+       font-weight: 300;
       }
     }
     .border-right {
-      @media (min-width: map-get($grid-breakpoints, "sm")) {
-        border-right: 1px solid $charcoal !important;
+      @media (min-width: 600px) {
+        border-right: 1px solid $charcoal ;
       }
     }
 
@@ -43,13 +45,24 @@
     p {
       margin: 0 0 0.5rem 0;
     }
-    @media (max-width: map-get($grid-breakpoints, "sm")){
-      text-align: left;
-      .statContainer {
+    .epaulette {
+      padding: 2rem 0;
+    }
+    @media (max-width: 600px){
+      .statContainer{
+        border-bottom: 1px solid $charcoal;
         margin-bottom: 1.5rem;
         padding-bottom: 1.5rem;
         width: 100%;
-        border-bottom: 1px solid $charcoal
+      }
+    }
+    @media (max-width: map-get($grid-breakpoints, "md")){
+      .statContainer {
+        //margin-bottom: 1.5rem;
+        //padding-bottom: 1.5rem;
+        h3{
+          font-size: 1.3rem;
+        }
       }
     }
   }
