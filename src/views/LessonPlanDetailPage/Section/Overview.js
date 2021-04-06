@@ -34,31 +34,37 @@ const Overview = ({
       </h2>
 
       <div className={classes.container + " Overview"}>
-        <Image {...SteamEpaulette} />
 
         <GridContainer className="stats">
+          <Image {...SteamEpaulette} className="epaulette"/>
           <GridItem sm={4} className="border-right">
             <MenuBookIcon fontSize="large" className={"statIcon"} />
             <h5>Target Subject: </h5>
             <div className="statContainer">
-              <h5>{TargetSubject}</h5>
+              <h3>{TargetSubject}</h3>
             </div>
           </GridItem>
           <GridItem sm={4} className="border-right">
             <FaceIcon fontSize="large" className={"statIcon"} />
             <h5>Grades: </h5>
             <div className="statContainer">
-              <h5>{ForGrades}</h5>
+              <h3>{ForGrades}</h3>
             </div>
           </GridItem>
           <GridItem sm={4}>
             <ScheduleIcon fontSize="large" className={"statIcon"} />
             <h5>Estimated Time: </h5>
             <div className="statContainer">
-              <h5>{EstLessonTime}</h5>
+              <h3>{EstLessonTime}</h3>
             </div>
           </GridItem>
+
+
         </GridContainer>
+
+
+
+
 
         <RichText content={Text} />
 
