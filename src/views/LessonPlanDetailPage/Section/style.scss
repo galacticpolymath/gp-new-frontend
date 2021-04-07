@@ -55,6 +55,9 @@
         padding-bottom: 1.5rem;
         width: 100%;
       }
+      #lastGridItem{
+        border-bottom: none;
+      }
     }
     @media (max-width: map-get($grid-breakpoints, "md")){
       .statContainer {

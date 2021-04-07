@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 
 import GridContainer from "components/Grid/GridContainer";
+import Card from "components/Card/Card.js";
 import GridItem from "components/Grid/GridItem";
 import Image from "../../../components/StrapiImage";
 import TagCloud from "../../../components/TagCloud";
@@ -35,35 +36,33 @@ const Overview = ({
 
       <div className={classes.container + " Overview"}>
 
-        <GridContainer className="stats">
-          <Image {...SteamEpaulette} className="epaulette"/>
-          <GridItem sm={4} className="border-right">
-            <MenuBookIcon fontSize="large" className={"statIcon"} />
-            <h5>Target Subject: </h5>
-            <div className="statContainer">
-              <h3>{TargetSubject}</h3>
-            </div>
-          </GridItem>
-          <GridItem sm={4} className="border-right">
-            <FaceIcon fontSize="large" className={"statIcon"} />
-            <h5>Grades: </h5>
-            <div className="statContainer">
-              <h3>{ForGrades}</h3>
-            </div>
-          </GridItem>
-          <GridItem sm={4}>
-            <ScheduleIcon fontSize="large" className={"statIcon"} />
-            <h5>Estimated Time: </h5>
-            <div className="statContainer">
-              <h3>{EstLessonTime}</h3>
-            </div>
-          </GridItem>
+        <Card className="stats">
+          <GridContainer>
+            <Image {...SteamEpaulette} className="epaulette" />
+            <GridItem sm={4} className="border-right">
+              <MenuBookIcon fontSize="large" className={"statIcon"} />
+              <h5>Target Subject: </h5>
+              <div className="statContainer">
+                <h3>{TargetSubject}</h3>
+              </div>
+            </GridItem>
+            <GridItem sm={4} className="border-right">
+              <FaceIcon fontSize="large" className={"statIcon"} />
+              <h5>Grades: </h5>
+              <div className="statContainer">
+                <h3>{ForGrades}</h3>
+              </div>
+            </GridItem>
+            <GridItem sm={4} >
+              <ScheduleIcon fontSize="large" className={"statIcon"} />
+              <h5>Estimated Time: </h5>
+              <div className="statContainer" id="lastGridItem">
+                <h3>{EstLessonTime}</h3>
+              </div>
+            </GridItem>
 
-
-        </GridContainer>
-
-
-
+          </GridContainer>
+        </Card>
 
 
         <RichText content={Text} />
