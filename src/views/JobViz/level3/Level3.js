@@ -111,31 +111,20 @@ export const Level3List = (props) => {
     //the argument jobs has ben set
     getJobObject(level);
 
-    //get all job Title values for AutoSearch bar
-    const getAllJobNames = (jobs) => {
-      let jobTList = [];
-      jobs.forEach((job) => {
-        if (!jobTList.includes(job.title)) {
-          jobTList.push(job.title);
-        }
-      });
-      setJobTitleList(jobTList);
-    };
-    //all the Function
     getAllJobNames(jobs);
   }, [jobs, level, parent]);
 
+  //get all job Titles for AutoSearch
+  const getAllJobNames = (jobs) => {
+    let jobTList = [];
+    jobs.forEach((job) => {
+      if (!jobTList.includes(job.title)) {
+        jobTList.push(job.title);
+      }
+    });
+    setJobTitleList(jobTList);
+  };
   useEffect(() => {
-    //get all job Titles for AutoSearch
-    const getAllJobNames = (jobs) => {
-      let jobTList = [];
-      jobs.forEach((job) => {
-        if (!jobTList.includes(job.title)) {
-          jobTList.push(job.title);
-        }
-      });
-      setJobTitleList(jobTList);
-    };
     getAllJobNames(jobs);
   }, [jobs]);
 

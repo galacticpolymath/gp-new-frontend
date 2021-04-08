@@ -111,6 +111,16 @@ export const Level4List = (props) => {
     setJobs(addIdPathway(originalJobs));
   }, [originalJobs]);
 
+  //get all job Title values for AutoSearch bar
+  const getAllJobNames = (jobs) => {
+    let jobTList = [];
+    jobs.forEach((job) => {
+      if (!jobTList.includes(job.title)) {
+        jobTList.push(job.title);
+      }
+    });
+    setJobTitleList(jobTList);
+  };
   useEffect(() => {
     // set get parent name from Id and then set name string to state
     setParentName(getJobTitles(parent));
@@ -122,16 +132,6 @@ export const Level4List = (props) => {
     //the argument jobs has ben set
     getJobObject(level);
 
-    //get all job Title values for AutoSearch bar
-    const getAllJobNames = (jobs) => {
-      let jobTList = [];
-      jobs.forEach((job) => {
-        if (!jobTList.includes(job.title)) {
-          jobTList.push(job.title);
-        }
-      });
-      setJobTitleList(jobTList);
-    };
     getAllJobNames(jobs);
   }, [jobs, level, parent, grandparent]);
 

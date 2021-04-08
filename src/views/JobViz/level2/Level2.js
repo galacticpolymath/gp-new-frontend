@@ -71,7 +71,6 @@ export const Level2List = (props) => {
 
   //FETCH ORIGINAL JOB DATA
   useEffect(() => {
-    isModalSetToTrue();
     JobManager.getAll().then((jobs) => {
       setOriginalJobs(jobs);
     });
@@ -86,25 +85,23 @@ export const Level2List = (props) => {
   };
 
   useEffect(() => {
-    isModalSetToTrue();
     setJobs(addIdPathway(originalJobs));
   }, [originalJobs]);
 
+  //get all job Titles for AutoSearch
+  const getAllJobNames = (jobs) => {
+    let jobTList = [];
+    jobs.forEach((job) => {
+      if (!jobTList.includes(job.title)) {
+        jobTList.push(job.title);
+      }
+    });
+    setJobTitleList(jobTList);
+  };
   useEffect(() => {
-    isModalSetToTrue();
     //Set job object to state
     getJobObject(level);
 
-    //get all job Titles for AutoSearch
-    const getAllJobNames = (jobs) => {
-      let jobTList = [];
-      jobs.forEach((job) => {
-        if (!jobTList.includes(job.title)) {
-          jobTList.push(job.title);
-        }
-      });
-      setJobTitleList(jobTList);
-    };
     getAllJobNames(jobs);
   }, [jobs, level]);
 

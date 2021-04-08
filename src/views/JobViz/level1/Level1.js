@@ -84,35 +84,21 @@ export const Level1List = (props) => {
     setJobs(addIdPathway(originalJobs));
   }, [originalJobs]);
 
+  //get all job Titles for AutoSearch
+  const getAllJobNames = (jobs) => {
+    let jobTList = [];
+    jobs.forEach((job) => {
+      if (!jobTList.includes(job.title)) {
+        jobTList.push(job.title);
+      }
+    });
+    setJobTitleList(jobTList);
+  };
   useEffect(() => {
     //Set job object to state
     getJobObject(jobs);
 
     //get all job Titles for AutoSearch
-    const getAllJobNames = (jobs) => {
-      let jobTList = [];
-      jobs.forEach((job) => {
-        if (!jobTList.includes(job.title)) {
-          jobTList.push(job.title);
-        }
-      });
-      setJobTitleList(jobTList);
-    };
-    getAllJobNames(jobs);
-  }, [jobs]);
-
-  useEffect(() => {
-    //get all job Titles for AutoSearch
-    const getAllJobNames = (jobs) => {
-      let jobTList = [];
-      jobs.forEach((job) => {
-        if (!jobTList.includes(job.title)) {
-          jobTList.push(job.title);
-        }
-      });
-      setJobTitleList(jobTList);
-    };
-    //Call the Function
     getAllJobNames(jobs);
   }, [jobs]);
 

@@ -75,75 +75,75 @@ export const LrAutoSearchV2 = (props) => {
     getSelectedJobObject();
   }, [selectedJob, jobs]);
 
+  const goToJobUrl = (selectedJobObj) => {
+    const children = selectedJobObj.children;
+    const title = makeUrlPath(selectedJobObj.title);
+    const id = selectedJobObj.id;
+    const parent = selectedJobObj.parent;
+    const grandparent = selectedJobObj.grandparent;
+    const greatGrandparent = selectedJobObj.greatGrandparent;
+    const greatGreatGrandparent = selectedJobObj.greatGreatGrandparent;
+
+    if (title === "" && parent.length === 0) {
+      return;
+    } else if (title !== "" && parent.length === 0) {
+      props.history.push(`/jobviz/1`);
+    } else if (
+      title !== "" &&
+      grandparent.length === 0 &&
+      children.length !== 0
+    ) {
+      props.history.push(`/jobviz/${parent}/${id}/${title}`);
+    } else if (
+      title !== "" &&
+      grandparent.length === 0 &&
+      children.length === 0
+    ) {
+      props.history.push(`/jobviz/${parent}/${id}/${title}/endpoint`);
+    } else if (
+      title !== "" &&
+      greatGrandparent.length === 0 &&
+      children.length !== 0
+    ) {
+      props.history.push(`/jobviz/${grandparent}/${parent}/${id}/${title}`);
+    } else if (
+      title !== "" &&
+      greatGrandparent.length === 0 &&
+      children.length === 0
+    ) {
+      props.history.push(
+        `/jobviz/${grandparent}/${parent}/${id}/${title}/endpoint`
+      );
+    } else if (
+      title !== "" &&
+      greatGreatGrandparent.length === 0 &&
+      children.length !== 0
+    ) {
+      props.history.push(
+        `/jobviz/${greatGrandparent}/${grandparent}/${parent}/${id}/${title}`
+      );
+    } else if (
+      title !== "" &&
+      greatGreatGrandparent.length === 0 &&
+      children.length === 0
+    ) {
+      props.history.push(
+        `/jobviz/${greatGrandparent}/${grandparent}/${parent}/${id}/${title}/endpoint`
+      );
+    } else if (
+      title !== "" &&
+      greatGreatGrandparent.length !== 0 &&
+      children.length === 0
+    ) {
+      props.history.push(
+        `/jobviz/${greatGreatGrandparent}/${greatGrandparent}/${grandparent}/${parent}/${id}/${title}/endpoint`
+      );
+    } else {
+      return;
+    }
+  };
+
   useEffect(() => {
-    const goToJobUrl = (selectedJobObj) => {
-      const children = selectedJobObj.children;
-      const title = makeUrlPath(selectedJobObj.title);
-      const id = selectedJobObj.id;
-      const parent = selectedJobObj.parent;
-      const grandparent = selectedJobObj.grandparent;
-      const greatGrandparent = selectedJobObj.greatGrandparent;
-      const greatGreatGrandparent = selectedJobObj.greatGreatGrandparent;
-
-      if (title === "" && parent.length === 0) {
-        return;
-      } else if (title !== "" && parent.length === 0) {
-        props.history.push(`/jobviz/1`);
-      } else if (
-        title !== "" &&
-        grandparent.length === 0 &&
-        children.length !== 0
-      ) {
-        props.history.push(`/jobviz/${parent}/${id}/${title}`);
-      } else if (
-        title !== "" &&
-        grandparent.length === 0 &&
-        children.length === 0
-      ) {
-        props.history.push(`/jobviz/${parent}/${id}/${title}/endpoint`);
-      } else if (
-        title !== "" &&
-        greatGrandparent.length === 0 &&
-        children.length !== 0
-      ) {
-        props.history.push(`/jobviz/${grandparent}/${parent}/${id}/${title}`);
-      } else if (
-        title !== "" &&
-        greatGrandparent.length === 0 &&
-        children.length === 0
-      ) {
-        props.history.push(
-          `/jobviz/${grandparent}/${parent}/${id}/${title}/endpoint`
-        );
-      } else if (
-        title !== "" &&
-        greatGreatGrandparent.length === 0 &&
-        children.length !== 0
-      ) {
-        props.history.push(
-          `/jobviz/${greatGrandparent}/${grandparent}/${parent}/${id}/${title}`
-        );
-      } else if (
-        title !== "" &&
-        greatGreatGrandparent.length === 0 &&
-        children.length === 0
-      ) {
-        props.history.push(
-          `/jobviz/${greatGrandparent}/${grandparent}/${parent}/${id}/${title}/endpoint`
-        );
-      } else if (
-        title !== "" &&
-        greatGreatGrandparent.length !== 0 &&
-        children.length === 0
-      ) {
-        props.history.push(
-          `/jobviz/${greatGreatGrandparent}/${greatGrandparent}/${grandparent}/${parent}/${id}/${title}/endpoint`
-        );
-      } else {
-        return;
-      }
-    };
-
     goToJobUrl(selectedJobObj);
   }, [selectedJobObj]);
 
