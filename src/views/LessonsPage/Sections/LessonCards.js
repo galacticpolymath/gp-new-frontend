@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
-import { shadows } from "@material-ui/system";
 
 import Badge from "components/Badge/Badge";
 import GridContainer from "components/Grid/GridContainer.js";

@@ -145,7 +145,7 @@ export const LrAutoSearchV2 = (props) => {
 
   useEffect(() => {
     goToJobUrl(selectedJobObj);
-  }, [selectedJobObj]);
+  }, [goToJobUrl, selectedJobObj]);
 
   const onKeyDown = (e) => {
     if (e.keyCode === 13) {
