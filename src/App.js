@@ -6,41 +6,28 @@ import { Router, Route, Switch } from "react-router";
 import "assets/scss/material-kit-pro-react.scss?v=1.9.0";
 
 // Lesson Directory
-import LessonPlanDetailsPage from "views/LessonPlanDetailPage/index.js";
+import LessonPlanDetailsPage from "views/LessonPlanDetailPage";
 
 // JobViz
-import { Level1List } from "views/JobViz/level1/Level1.js";
-import { Level2List } from "views/JobViz/level2/Level2.js";
-import { Level3List } from "views/JobViz/level3/Level3.js";
-import { Level4List } from "views/JobViz/level4/Level4.js";
+import { Level1List } from "views/JobViz/level1/Level1";
+import { Level2List } from "views/JobViz/level2/Level2";
+import { Level3List } from "views/JobViz/level3/Level3";
+import { Level4List } from "views/JobViz/level4/Level4";
 
 // UiKit
-import AboutUsPage from "views/AboutUsPage/AboutUsPage.js";
-import Lessons from "views/LessonsPage/LessonsPage.js";
-import LandingPage from "views/LandingPage/LandingPage.js";
-import HireUsPage from "views/HireUs/HireUsPage.js";
-import ContactUsPage from "views/ContactUsPage/ContactUsPage.js"; // import BlogPostPage from "views/BlogPostPage/BlogPostPage.js";
-// import ComponentsPage from "views/ComponentsPage/ComponentsPage.js";
-// import ContactUsPage from "views/ContactUsPage/ContactUsPage.js";
-// import EcommercePage from "views/EcommercePage/EcommercePage.js";
-// import LoginPage from "views/LoginPage/LoginPage.js";
-// import PresentationPage from "views/PresentationPage/PresentationPage.js";
-// import ProfilePage from "views/ProfilePage/ProfilePage.js";
-// import ProductPage from "views/ProductPage/ProductPage.js";
-// import SectionsPage from "views/SectionsPage/SectionsPage.js";
-// import ShoppingCartPage from "views/ShoppingCartPage/ShoppingCartPage.js";
-// import SignupPage from "views/SignupPage/SignupPage.js";
-// import ErrorPage from "views/ErrorPage/ErrorPage.js";
+import AboutUsPage from "views/AboutUsPage/AboutUsPage";
+import Lessons from "views/LessonsPage/LessonsPage";
+import LandingPage from "views/LandingPage/LandingPage";
+import HireUsPage from "views/HireUs/HireUsPage";
+import ContactUsPage from "views/ContactUsPage/ContactUsPage";
 
 var hist = createBrowserHistory();
 
-/* eslint-disable react/prop-types */
 const App = () => (
   <Router history={hist}>
     <Helmet>
       <meta charSet="utf-8" />
       <title>Galactic Polymath</title>
-      <link rel="canonical" href="http://mysite.com/example" />
       <meta
         name="description"
         content="We are an education studio. We translate current research into creative, interdisciplinary lessons for grades 5+ that are free for everyone."
@@ -152,17 +139,6 @@ const App = () => (
         }}
       />
       {/* End JobViz */}
-
-      {/* <Route path="/blog-post" component={BlogPostPage} />
-      <Route path="/components" component={ComponentsPage} />
-      <Route path="/ecommerce-page" component={EcommercePage} />
-      <Route path="/login-page" component={LoginPage} />
-      <Route path="/profile-page" component={ProfilePage} />
-      <Route path="/product-page" component={ProductPage} />
-      <Route path="/sections" component={SectionsPage} />
-      <Route path="/shopping-cart-page" component={ShoppingCartPage} />
-      <Route path="/signup-page" component={SignupPage} />
-      <Route path="/error-page" component={ErrorPage} /> */}
 
       {/* This path matches anything, so it goes last. */}
       <Route path="/" component={LandingPage} />
