@@ -13,12 +13,11 @@ module.exports = {
     },
   },
   plugins: ["react"],
-  extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended",
-  ],
+  extends: ["eslint:recommended", "plugin:react/recommended"],
   rules: {
     "react/prop-types": "off",
+    "array-callback-return": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "prettier/prettier": "off"
   },
 };
