@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { makeUrlPath } from "../Helper";
+import React, { useState, useEffect, forwardRef } from "react";
+import { jobData, makeUrlPath } from "../Helper";
 import JobManager from "../modules/JobManager";
 import { addIdPathway } from "../Helper";
 
@@ -11,21 +11,16 @@ import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
 import Button from "components/CustomButtons/Button.js";
-// import CardAvatar from "components/Card/CardAvatar.js";
-// import marc from "assets/img/faces/marc.jpg";
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import Dialog from "@material-ui/core/Dialog";
-// import DialogTitle from "@material-ui/core/DialogTitle";
-// import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
 import Slide from "@material-ui/core/Slide";
-// import Close from "@material-ui/icons/Close";
 import { ModalTable } from "../modalTable/ModalTable";
 
 import { cardTitle } from "assets/jss/material-kit-pro-react.js";
 import Close from "@material-ui/icons/Close";
 
-const Transition = React.forwardRef(function Transition(props, ref) {
+const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="down" ref={ref} {...props} />;
 });
 
@@ -58,36 +53,10 @@ export const Level2Card = (props) => {
   const [jobs, setJobs] = useState([]);
   const [hasChildren, setHasChildren] = useState(false);
 
-  const [categoryObject, setCategoryObject] = useState({
-    id: 0,
-    title: "",
-    Hierarchy: "",
-    OccupationType: "",
-    Employment2016: 0,
-    Employment2026: 0,
-    ChgEmploy2016to26Num: 0,
-    ChgEmploy2016to26Perc: 0,
-    PercentSelfEmployed2016: 0,
-    OccupationalOpenings2016to2026AnnualAverage: 0,
-    MedianAnnualWage2017: "",
-    TypicalEducationNeededForEntr: "",
-    WorkExperienceInARelatedOccupation: "",
-    TypicalOnTheJobTrainingNeededToAttainCompetencyInTheOccupation: "",
-    ttl: "",
-    Level0: "",
-    Level4: "",
-    Level3: "",
-    Level2: "",
-    Level1: "",
-    pathString: "",
-    Def: "",
-    children: [],
-    parent: [],
-  });
+  const [categoryObject, setCategoryObject] = useState(jobData);
 
   //If URL path has word enpoint the modal for that endpoint will now be open on page load
   const checkIfUrlStringHasEndpoint = () => {
-    // console.log(typeof props.location.pathname);
     let e = props.location.pathname.includes("endpoint");
 
     let j = props.location.pathname.includes(title);
@@ -108,7 +77,7 @@ export const Level2Card = (props) => {
     setJobs(addIdPathway(originalJobs));
   }, [originalJobs]);
 
-  /////// I need to get the Endpoint job object
+  // I need to get the Endpoint job object
   const getCategoryObject = (jobId) => {
     jobs.map((job) => {
       if (jobId === job.id) {
@@ -145,7 +114,6 @@ export const Level2Card = (props) => {
               }}
               color="info"
             >
-              {/*{" "}*/}
               <AccountTreeIcon />
               More Jobs
             </Button>

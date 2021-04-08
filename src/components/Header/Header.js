@@ -18,7 +18,6 @@ import Menu from "@material-ui/icons/Menu";
 import Close from "@material-ui/icons/Close";
 // core components
 import styles from "assets/jss/material-kit-pro-react/components/headerStyle.js";
-// import logoImage from "../../assets/img/android-chrome-192x192.png";
 import GpImage from "../../assets/img/GP_horiz_bubbleLogo175ppi.png";
 
 const useStyles = makeStyles(styles);
@@ -59,7 +58,7 @@ export default function Header(props) {
         .classList.remove(classes[changeColorOnScroll.color]);
     }
   };
-  const { color, links,  fixed, absolute } = props;
+  const { color, links, fixed, absolute } = props;
   const appBarClasses = classNames({
     [classes.appBar]: true,
     [classes[color]]: color,
@@ -78,7 +77,7 @@ export default function Header(props) {
               <img alt="logo" src={GpImage} />
             </div>
             <div className={classes.showLogo}>
-              <img alt="logo" src={GpImage}  />
+              <img alt="logo" src={GpImage} />
             </div>
           </Link>
         </Button>

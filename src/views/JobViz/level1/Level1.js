@@ -1,17 +1,16 @@
-/*eslint-disable*/
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
-import Header from "components/Header/Header.js";
-import HeaderLinks from "components/Header/HeaderLinks.js";
-import Parallax from "components/Parallax/Parallax.js";
+import Header from "components/Header/Header";
+import HeaderLinks from "components/Header/HeaderLinks";
+import Parallax from "components/Parallax/Parallax";
 
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
-import Footer from "components/Footer/Footer.js";
+import GridContainer from "components/Grid/GridContainer";
+import GridItem from "components/Grid/GridItem";
+import Footer from "components/Footer/Footer";
 
 // @material-ui/core components
 
@@ -19,16 +18,16 @@ import brick1 from "assets/img/faces/brick1.jpg";
 import vertBracket from "assets/img/jobviz-vert-bracket.png";
 
 // core components
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
-import Button from "components/CustomButtons/Button.js";
-import CardAvatar from "components/Card/CardAvatar.js";
+import Card from "components/Card/Card";
+import CardBody from "components/Card/CardBody";
+import Button from "components/CustomButtons/Button";
+import CardAvatar from "components/Card/CardAvatar";
 
+import Close from "@material-ui/icons/Close";
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import Slide from "@material-ui/core/Slide";
-// import Close from "@material-ui/icons/Close";
 
 // sections for this page Added by JOB VIZ TEAM \/
 import JobVizHeader from "../modules/JobVizComponents";
@@ -44,13 +43,13 @@ import { LrAutoSearchV2 } from "../search/LRautoSearchV2";
 import { Level1Card } from "./Level1Card";
 // sections for this page Added by JOB VIZ TEAM^^^^^
 
-import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle.js";
+import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle";
 import GPcopyrightFooter from "../../../components/Footer/GPcopyrightFooter";
 import SectionSubscribe from "../../LandingPage/Sections/SectionSubscribe";
-import Close from "@material-ui/icons/Close";
+import { jobData } from "../Helper";
 
 const useStyles = makeStyles(JobVizStyle);
-const Transition = React.forwardRef(function Transition(props, ref) {
+const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="down" ref={ref} {...props} />;
 });
 
@@ -58,47 +57,21 @@ Transition.displayName = "Transition";
 
 export const Level1List = (props) => {
   const level = props.level0;
-  const [classicModal, setClassicModal] = React.useState(false);
+  const [classicModal, setClassicModal] = useState(false);
   const classes = useStyles();
   const [originalJobs, setOriginalJobs] = useState([]);
   const [jobs, setJobs] = useState([]);
   //alphabatized jobs Array
   const alphaList = jobs.sort(compare);
   const [jobTitleList, setJobTitleList] = useState([]);
-  const [jobObject, setJobObject] = useState({
-    id: 0,
-    title: "",
-    Hierarchy: "",
-    OccupationType: "",
-    Employment2016: 0,
-    Employment2026: 0,
-    ChgEmploy2016to26Num: 0,
-    ChgEmploy2016to26Perc: 0,
-    PercentSelfEmployed2016: 0,
-    OccupationalOpenings2016to2026AnnualAverage: 0,
-    MedianAnnualWage2017: "",
-    TypicalEducationNeededForEntry: "",
-    WorkExperienceInARelatedOccupation: "",
-    TypicalOnTheJobTrainingNeededToAttainCompetencyInTheOccupation: "",
-    ttl: "",
-    Level0: "",
-    Level4: "",
-    Level3: "",
-    Level2: "",
-    Level1: "",
-    pathString: "",
-    Def: "",
-    children: [],
-    parent: [],
-  });
-  ////FETCH ORIGINAL JOB DATA
+  const [jobObject, setJobObject] = useState(jobData);
+  //FETCH ORIGINAL JOB DATA
   useEffect(() => {
     JobManager.getAll().then((jobs) => {
       setOriginalJobs(jobs);
     });
-  }, []);
+  }, [setOriginalJobs]);
 
-  /////// I need to get the jobObject
   const getJobObject = (jobs) => {
     jobs.map((job) => {
       if (parseInt(level) === job.id) {
@@ -111,37 +84,21 @@ export const Level1List = (props) => {
     setJobs(addIdPathway(originalJobs));
   }, [originalJobs]);
 
+  //get all job Titles for AutoSearch
+  const getAllJobNames = (jobs) => {
+    let jobTList = [];
+    jobs.forEach((job) => {
+      if (!jobTList.includes(job.title)) {
+        jobTList.push(job.title);
+      }
+    });
+    setJobTitleList(jobTList);
+  };
   useEffect(() => {
-    ///Set job object to state
+    //Set job object to state
     getJobObject(jobs);
 
     //get all job Titles for AutoSearch
-    const getAllJobNames = (jobs) => {
-      let jobTList = [];
-      jobs.forEach((job) => {
-        if (!jobTList.includes(job.title)) {
-          jobTList.push(job.title);
-        }
-      });
-      setJobTitleList(jobTList);
-    };
-    ////Call the Function
-    getAllJobNames(jobs);
-  }, [jobs]);
-
-  useEffect(() => {
-    // console.log(jobs);
-    //get all job Titles for AutoSearch
-    const getAllJobNames = (jobs) => {
-      let jobTList = [];
-      jobs.forEach((job) => {
-        if (!jobTList.includes(job.title)) {
-          jobTList.push(job.title);
-        }
-      });
-      setJobTitleList(jobTList);
-    };
-    ////Call the Function
     getAllJobNames(jobs);
   }, [jobs]);
 
@@ -189,7 +146,6 @@ export const Level1List = (props) => {
                 classes.mrAuto,
                 classes.textLeft
               )}
-              // style={{objectFit: "fit"}}
             >
               <img
                 src={
@@ -224,9 +180,7 @@ export const Level1List = (props) => {
           <div className="crumbs">
             <Card className={classes.textCenter} style={{ width: "20rem" }}>
               <CardAvatar profile>
-                {/*<a href="" onClick={(e) => e.preventDefault()}>*/}
-                  <img src={brick1} alt="..." />
-                {/*</a>*/}
+                <img src={brick1} alt="..." />
               </CardAvatar>
               <CardBody>
                 <h4 className={classes.cardTitle}>Job Categories</h4>
@@ -240,9 +194,8 @@ export const Level1List = (props) => {
                   classes={{
                     root: classes.modalRoot,
                     paper: classes.modal,
-                    // fullWidth: true
                   }}
-                  maxWidth={'lg'}
+                  maxWidth={"lg"}
                   open={classicModal}
                   TransitionComponent={Transition}
                   keepMounted
@@ -289,55 +242,27 @@ export const Level1List = (props) => {
             </div>
           </div>
           <div className={classes.attribution}>
-            <h5><b>Data Source: </b>
-              <a href={"https://www.bls.gov/emp/tables/occupational-projections-and-characteristics.htm"}
-                 target="_blank" rel="noopener noreferrer" >US Bureau of Labor Statistics</a></h5>
+            <h5>
+              <b>Data Source: </b>
+              <a
+                href={
+                  "https://www.bls.gov/emp/tables/occupational-projections-and-characteristics.htm"
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                US Bureau of Labor Statistics
+              </a>
+            </h5>
           </div>
         </div>
       </div>
 
-
-      <hr/>
+      <hr />
       <SectionSubscribe />
       <Footer
         content={
           <div>
-            {/*<div className={classes.left}>*/}
-            {/*  <List className={classes.list}>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="https://www.creative-tim.com/?ref=mkpr-pricing"*/}
-            {/*        target="_blank"*/}
-            {/*        className={classes.block}*/}
-            {/*      >*/}
-            {/*        Creative Tim*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="https://www.creative-tim.com/presentation?ref=mkpr-pricing"*/}
-            {/*        target="_blank"*/}
-            {/*        className={classes.block}*/}
-            {/*      >*/}
-            {/*        About us*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a href="//blog.creative-tim.com/" className={classes.block}>*/}
-            {/*        Blog*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="https://www.creative-tim.com/license?ref=mkpr-pricing"*/}
-            {/*        target="_blank"*/}
-            {/*        className={classes.block}*/}
-            {/*      >*/}
-            {/*        Licenses*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*  </List>*/}
-            {/*</div>*/}
             <GPcopyrightFooter />
           </div>
         }

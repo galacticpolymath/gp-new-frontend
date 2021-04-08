@@ -144,3 +144,30 @@ export function compare(a, b) {
   }
   return comparison;
 }
+
+export const jobData = {
+  id: 0,
+  title: "",
+  Hierarchy: "",
+  OccupationType: "",
+  Employment2016: 0,
+  Employment2026: 0,
+  ChgEmploy2016to26Num: 0,
+  ChgEmploy2016to26Perc: 0,
+  PercentSelfEmployed2016: 0,
+  OccupationalOpenings2016to2026AnnualAverage: 0,
+  MedianAnnualWage2017: "",
+  TypicalEducationNeededForEntry: "",
+  WorkExperienceInARelatedOccupation: "",
+  TypicalOnTheJobTrainingNeededToAttainCompetencyInTheOccupation: "",
+  ttl: "",
+  Level0: "",
+  Level4: "",
+  Level3: "",
+  Level2: "",
+  Level1: "",
+  pathString: "",
+  Def: "",
+  children: [],
+  parent: [],
+};
