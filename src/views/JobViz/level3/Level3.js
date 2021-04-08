@@ -1,5 +1,5 @@
 /*eslint-disable*/
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -28,30 +28,24 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import Slide from "@material-ui/core/Slide";
 
-
-
 import { ModalTable } from "../modalTable/ModalTable";
 
-const Transition = React.forwardRef(function Transition(props, ref) {
+const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="down" ref={ref} {...props} />;
 });
 
 Transition.displayName = "Transition";
 
-
-
 // sections for this page Added by JOB VIZ TEAM
-
 import { Link } from "react-router-dom";
 
 import JobManager from "../modules/JobManager";
 import "../styling/Style.css";
 
-import { compare, addIdPathway, makeUrlPath } from "../Helper";
+import { compare, addIdPathway, makeUrlPath, jobData } from "../Helper";
 import { LrAutoSearchV2 } from "../search/LRautoSearchV2";
 import { Level3Card } from "./Level3Card";
 // sections for this page Added by JOB VIZ TEAM
-
 
 import JobVizHeader from "../modules/JobVizComponents";
 import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle.js";
@@ -71,45 +65,19 @@ export const Level3List = (props) => {
   const alphaList = jobs.sort(compare);
   const [parentName, setParentName] = useState("");
   const [jobTitleList, setJobTitleList] = useState([]);
-  const [jobObject, setJobObject] = useState({
-    id: 0,
-    title: "",
-    Hierarchy: "",
-    OccupationType: "",
-    Employment2016: 0,
-    Employment2026: 0,
-    ChgEmploy2016to26Num: 0,
-    ChgEmploy2016to26Perc: 0,
-    PercentSelfEmployed2016: 0,
-    OccupationalOpenings2016to2026AnnualAverage: 0,
-    MedianAnnualWage2017: "",
-    TypicalEducationNeededForEntry: "",
-    WorkExperienceInARelatedOccupation: "",
-    TypicalOnTheJobTrainingNeededToAttainCompetencyInTheOccupation: "",
-    ttl: "",
-    Level0: "",
-    Level4: "",
-    Level3: "",
-    Level2: "",
-    Level1: "",
-    pathString: "",
-    Def: "",
-    children: [],
-    parent: [],
-  });
+  const [jobObject, setJobObject] = useState(jobData);
 
   //Make Parent and grandparent Names into url frienldy stirng
   const parentUrl = makeUrlPath(parentName);
   const title = makeUrlPath(jobObject.title);
 
-  ////FETCH ORIGINAL JOB DATA
+  //FETCH ORIGINAL JOB DATA
   useEffect(() => {
     JobManager.getAll().then((jobs) => {
       setOriginalJobs(jobs);
     });
   }, []);
 
-  /////// I need to get the jobObject
   const getJobObject = (level) => {
     jobs.map((job) => {
       if (parseInt(level) === job.id) {
@@ -117,8 +85,8 @@ export const Level3List = (props) => {
       }
     });
   };
-  ///Where I get name the parent from its Id
-  ///THe name I get here I use for the navigation hyperlink crumbs
+  //Where I get name the parent from its Id
+  //THe name I get here I use for the navigation hyperlink crumbs
   const getJobTitles = (j) => {
     let nameStr = "";
     jobs.map((job) => {
@@ -129,8 +97,8 @@ export const Level3List = (props) => {
     return nameStr;
   };
 
-  ///Function that takes original data from Jobs and adds the Key:Value pair for
-  ///Children, Parent, Grandparent
+  //Function that takes original data from Jobs and adds the Key:Value pair for
+  //Children, Parent, Grandparent
   useEffect(() => {
     setJobs(addIdPathway(originalJobs));
   }, [originalJobs]);
@@ -139,8 +107,8 @@ export const Level3List = (props) => {
     // set get parent name from Id and then set name string to state
     setParentName(getJobTitles(parent));
 
-    ///////Set jobObject to state as long as
-    ////the argument jobs has ben set
+    //Set jobObject to state as long as
+    //the argument jobs has ben set
     getJobObject(level);
 
     //get all job Title values for AutoSearch bar
@@ -153,12 +121,11 @@ export const Level3List = (props) => {
       });
       setJobTitleList(jobTList);
     };
-    ////Call the Function
+    //all the Function
     getAllJobNames(jobs);
   }, [jobs, level, parent]);
 
   useEffect(() => {
-    // console.log(jobs);
     //get all job Titles for AutoSearch
     const getAllJobNames = (jobs) => {
       let jobTList = [];
@@ -169,7 +136,6 @@ export const Level3List = (props) => {
       });
       setJobTitleList(jobTList);
     };
-    ////Call the Function
     getAllJobNames(jobs);
   }, [jobs]);
 
@@ -286,9 +252,7 @@ export const Level3List = (props) => {
           <div className="crumbs">
             <Card className={classes.textCenter} style={{ width: "20rem" }}>
               <CardAvatar profile>
-                {/*<a href="#" onClick={(e) => e.preventDefault()}>*/}
-                  <img src={branch2} alt="..." />
-                {/*</a>*/}
+                <img src={branch2} alt="..." />
               </CardAvatar>
               <CardBody>
                 <h4 className={classes.cardTitle}>{jobObject.title}</h4>
@@ -368,42 +332,6 @@ export const Level3List = (props) => {
       <Footer
         content={
           <div>
-            {/*<div className={classes.left}>*/}
-            {/*  <List className={classes.list}>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="https://www.creative-tim.com/?ref=mkpr-pricing"*/}
-            {/*        target="_blank"*/}
-            {/*        className={classes.block}*/}
-            {/*      >*/}
-            {/*        Creative Tim*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="https://www.creative-tim.com/presentation?ref=mkpr-pricing"*/}
-            {/*        target="_blank"*/}
-            {/*        className={classes.block}*/}
-            {/*      >*/}
-            {/*        About us*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a href="//blog.creative-tim.com/" className={classes.block}>*/}
-            {/*        Blog*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="https://www.creative-tim.com/license?ref=mkpr-pricing"*/}
-            {/*        target="_blank"*/}
-            {/*        className={classes.block}*/}
-            {/*      >*/}
-            {/*        Licenses*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*  </List>*/}
-            {/*</div>*/}
             <GPcopyrightFooter/>
           </div>
         }

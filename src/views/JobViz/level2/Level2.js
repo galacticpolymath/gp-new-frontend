@@ -1,5 +1,5 @@
 /*eslint-disable*/
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef } from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -13,7 +13,6 @@ import GridItem from "components/Grid/GridItem.js";
 import Footer from "components/Footer/Footer.js";
 
 import { ModalTable } from "../modalTable/ModalTable";
-// @material-ui/core components
 
 // core components
 import Card from "components/Card/Card.js";
@@ -27,14 +26,10 @@ import vertStem from "assets/img/jobviz-vert-stem.png";
 
 import LibraryBooks from "@material-ui/icons/LibraryBooks";
 import Dialog from "@material-ui/core/Dialog";
-// import DialogTitle from "@material-ui/core/DialogTitle";
-// import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
 import Slide from "@material-ui/core/Slide";
-// import Close from "@material-ui/icons/Close";
-// import { cardTitle } from "assets/jss/material-kit-pro-react.js";
 
-const Transition = React.forwardRef(function Transition(props, ref) {
+const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="down" ref={ref} {...props} />;
 });
 
@@ -47,7 +42,7 @@ import { Link } from "react-router-dom";
 import JobManager from "../modules/JobManager";
 //Custom Jobviz Styling
 import "../styling/Style.css";
-import { makeUrlPath, compare, addIdPathway } from "../Helper";
+import { makeUrlPath, compare, addIdPathway, jobData } from "../Helper";
 import { LrAutoSearchV2 } from "../search/LRautoSearchV2";
 import { Level2Card } from "./Level2Card";
 // sections for this page Added by JOB VIZ TEAM
@@ -63,49 +58,18 @@ const useStyles = makeStyles(JobVizStyle);
 
 export const Level2List = (props) => {
   const level = props.level1;
-  const [classicModal, setClassicModal] = React.useState(false);
+  const [classicModal, setClassicModal] = useState(false);
   const [originalJobs, setOriginalJobs] = useState([]);
   const [jobs, setJobs] = useState([]);
   //alphabatized jobs Array
   const alphaList = jobs.sort(compare);
   const [jobTitleList, setJobTitleList] = useState([]);
-  const [jobObject, setJobObject] = useState({
-    id: 0,
-    title: "",
-    Hierarchy: "",
-    OccupationType: "",
-    Employment2016: 0,
-    Employment2026: 0,
-    ChgEmploy2016to26Num: 0,
-    ChgEmploy2016to26Perc: 0,
-    PercentSelfEmployed2016: 0,
-    OccupationalOpenings2016to2026AnnualAverage: 0,
-    MedianAnnualWage2017: "",
-    TypicalEducationNeededForEntry: "",
-    WorkExperienceInARelatedOccupation: "",
-    TypicalOnTheJobTrainingNeededToAttainCompetencyInTheOccupation: "",
-    ttl: "",
-    Level0: "",
-    Level4: "",
-    Level3: "",
-    Level2: "",
-    Level1: "",
-    pathString: "",
-    Def: "",
-    children: [],
-    parent: [],
-  });
-
-  const isModalSetToTrue = () => {
-    if (classicModal === false) {
-      console.log('False')
-    } else {console.log('True')}
-  }
+  const [jobObject, setJobObject] = useState(jobData);
 
   //Make Parent and grandparent Names into url frienldy stirng
   const title = makeUrlPath(jobObject.title);
 
-  ////FETCH ORIGINAL JOB DATA
+  //FETCH ORIGINAL JOB DATA
   useEffect(() => {
     isModalSetToTrue();
     JobManager.getAll().then((jobs) => {
@@ -113,7 +77,6 @@ export const Level2List = (props) => {
     });
   }, []);
 
-  /////// I need to get the jobObject
   const getJobObject = (level) => {
     jobs.map((job) => {
       if (parseInt(level) === job.id) {
@@ -129,7 +92,7 @@ export const Level2List = (props) => {
 
   useEffect(() => {
     isModalSetToTrue();
-    ///Set job object to state
+    //Set job object to state
     getJobObject(level);
 
     //get all job Titles for AutoSearch
@@ -142,7 +105,6 @@ export const Level2List = (props) => {
       });
       setJobTitleList(jobTList);
     };
-    ////Call the Function
     getAllJobNames(jobs);
   }, [jobs, level]);
 

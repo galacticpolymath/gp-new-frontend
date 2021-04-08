@@ -43,7 +43,6 @@ export const Level1Card = (props) => {
             }}
             color="info"
           >
-            {/*{" "}*/}
             <AccountTreeIcon />
             More Jobs
           </Button>

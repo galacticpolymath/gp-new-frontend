@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { makeUrlPath } from "../Helper";
+import React, { useState, useEffect, forwardRef } from "react";
+import { jobData, makeUrlPath } from "../Helper";
 import JobManager from "../modules/JobManager";
 import { addIdPathway } from "../Helper";
 
@@ -20,7 +20,7 @@ import { ModalTable } from "../modalTable/ModalTable";
 
 import { cardTitle } from "assets/jss/material-kit-pro-react.js";
 
-const Transition = React.forwardRef(function Transition(props, ref) {
+const Transition = forwardRef(function Transition(props, ref) {
   return <Slide direction="down" ref={ref} {...props} />;
 });
 
@@ -51,36 +51,10 @@ export const Level4Card = (props) => {
   const [originalJobs, setOriginalJobs] = useState([]);
   const [jobs, setJobs] = useState([]);
 
-  const [categoryObject, setCategoryObject] = useState({
-    id: 0,
-    title: "",
-    Hierarchy: "",
-    OccupationType: "",
-    Employment2016: 0,
-    Employment2026: 0,
-    ChgEmploy2016to26Num: 0,
-    ChgEmploy2016to26Perc: 0,
-    PercentSelfEmployed2016: 0,
-    OccupationalOpenings2016to2026AnnualAverage: 0,
-    MedianAnnualWage2017: "",
-    TypicalEducationNeededForEntr: "",
-    WorkExperienceInARelatedOccupation: "",
-    TypicalOnTheJobTrainingNeededToAttainCompetencyInTheOccupation: "",
-    ttl: "",
-    Level0: "",
-    Level4: "",
-    Level3: "",
-    Level2: "",
-    Level1: "",
-    pathString: "",
-    Def: "",
-    children: [],
-    parent: [],
-  });
+  const [categoryObject, setCategoryObject] = useState(jobData);
 
   //If URL path has word enpoint the modal for that endpoint will now be open on page load
   const checkIfUrlStringHasEndpoint = () => {
-    // console.log(typeof props.location.pathname);
     let e = props.location.pathname.includes("endpoint");
 
     let j = props.location.pathname.includes(title);
@@ -101,7 +75,7 @@ export const Level4Card = (props) => {
     setJobs(addIdPathway(originalJobs));
   }, [originalJobs]);
 
-  /////// I need to get the Endpoint job object
+  // I need to get the Endpoint job object
   const getCategoryObject = (jobId) => {
     jobs.map((job) => {
       if (jobId === job.id) {

@@ -1,36 +1,15 @@
 import React, { useState, useEffect } from "react";
 import { makeUrlPath } from "../Helper";
 // nodejs library that concatenates classes
-import classNames from "classnames";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-// @material-ui/core components
 import "../styling/Style.css";
 
-import GridContainer from "components/Grid/GridContainer.js";
-import GridItem from "components/Grid/GridItem.js";
 import Card from "components/Card/Card.js";
 import CardBody from "components/Card/CardBody.js";
-import { cardTitle } from "assets/jss/material-kit-pro-react.js";
-import pricingStyle from "assets/jss/material-kit-pro-react/views/pricingStyle.js";
-
-const style = {
-  cardTitle,
-  textCenter: {
-    textAlign: "center",
-  },
-  textRight: {
-    textAlign: "right",
-  },
-};
-
-const useStyles = makeStyles(pricingStyle);
 
 ///Would like to get this working ????
 // import CustomInput from "components/CustomInput/CustomInput.js";
 
 export const LrAutoSearchV2 = (props) => {
-  const classes = useStyles();
   const jobs = props.jobs;
   const [activeOption, setActiveOption] = useState(0);
   const [filteredOptions, setFilteredOptions] = useState([]);
@@ -68,9 +47,8 @@ export const LrAutoSearchV2 = (props) => {
     Def: "",
   });
 
-  ////Here is where you filter through array of listed job titles
+  //Here is where you filter through array of listed job titles
   const onChange = (e) => {
-    // console.log(userInput, "This is user input");
     setUserInput(e.currentTarget.value);
     setShowOptions(true);
     setFilteredOptions(
@@ -81,10 +59,7 @@ export const LrAutoSearchV2 = (props) => {
     );
   };
 
-  // console.log(filteredOptions.length, "Filtered Options")
-
   const onClick = (e) => {
-    // console.log(userInput, "This is user input");
     setSelectedJob(e.currentTarget.innerText);
     setShowOptions(false);
   };
@@ -102,7 +77,6 @@ export const LrAutoSearchV2 = (props) => {
 
   useEffect(() => {
     const goToJobUrl = (selectedJobObj) => {
-      // console.log(selectedJobObj);
       const children = selectedJobObj.children;
       const title = makeUrlPath(selectedJobObj.title);
       const id = selectedJobObj.id;
@@ -184,7 +158,6 @@ export const LrAutoSearchV2 = (props) => {
       setActiveOption({ activeOption: activeOption - 1 });
     } else if (e.keyCode === 40) {
       if (activeOption === filteredOptions.length - 1) {
-        // console.log(activeOption, "activeOption");
         return;
       }
       setActiveOption({ activeOption: activeOption + 1 });
@@ -195,19 +168,19 @@ export const LrAutoSearchV2 = (props) => {
     <React.Fragment>
       {/* ///Cant figure out how this works!!!! */}
       {/* <CustomInput
-            labelText="Search Jobs"
-            id="float"
-            // value={userInput}
-            formControlProps={{
-              fullWidth: true,
-            }}
-            inputProps={{
-              value: userInput,
-              onChange: { onChange() },
-              onKeyDown: { onKeyDown() },
-              type: "text",
-            }}
-          /> */}
+          labelText="Search Jobs"
+          id="float"
+          // value={userInput}
+          formControlProps={{
+            fullWidth: true,
+          }}
+          inputProps={{
+            value: userInput,
+            onChange: { onChange() },
+            onKeyDown: { onKeyDown() },
+            type: "text",
+          }}
+        /> */}
       <div id="searchbar-container">
         <input
           id="search_bar"
@@ -229,11 +202,7 @@ export const LrAutoSearchV2 = (props) => {
           (filteredOptions.length > 0 ? (
             <Card>
               <CardBody>
-                {filteredOptions.map((optionName, index) => {
-                  let className;
-                  if (index === activeOption) {
-                    className = "option-active";
-                  }
+                {filteredOptions.map((optionName) => {
                   return (
                     <div
                       className="{className}, option"
@@ -252,52 +221,6 @@ export const LrAutoSearchV2 = (props) => {
             </div>
           ))}
       </div>
-
-      {/* <div className="jobviz-parent">
-        <div className="searchBoxParent">
-          <div id="search_border" className="search">
-            <input
-              id="search_bar"
-              type="text"
-              placeholder="Search Jobs"
-              className="search-box"
-              onChange={onChange}
-              onKeyDown={onKeyDown}
-              value={userInput}
-            />
-            <div className="searchIcon">
-              <input type="submit" value="" className="search-icon" />
-            </div>
-          </div>
-          <div id="float-options">
-            {showOptions &&
-              userInput &&
-              (filteredOptions.length > 0 ? (
-                <ul className="options">
-                  {filteredOptions.map((optionName, index) => {
-                    let className;
-                    if (index === activeOption) {
-                      className = "option-active";
-                    }
-                    return (
-                      <li
-                        className="{className}, option"
-                        key={optionName}
-                        onClick={onClick}
-                      >
-                        {optionName}
-                      </li>
-                    );
-                  })}
-                </ul>
-              ) : (
-                <div className="no-options">
-                  <em>No Option!</em>
-                </div>
-              ))}
-          </div>
-        </div>
-      </div> */}
     </React.Fragment>
   );
 };

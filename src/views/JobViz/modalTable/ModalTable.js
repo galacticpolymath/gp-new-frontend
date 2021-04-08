@@ -14,15 +14,12 @@ import jobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle.js"
 import DialogTitle from "@material-ui/core/DialogTitle";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-// import DialogActions from "@material-ui/core/DialogActions";
-
 
 const useStyles = makeStyles(jobVizStyle);
 
 export const ModalTable = (props) => {
   const jobObject = props.jobObject;
   const classes = useStyles();
-  // const [setClassicModal] = React.useState(false);
   const [employ2016, setEmploy2016] = useState("");
   const [employ2026, setEmploy2026] = useState("");
   const [formattedEmploy2016, setFormattedEmploy2016] = useState("");
@@ -30,9 +27,9 @@ export const ModalTable = (props) => {
   const [percent, setPercent] = useState("");
 
   const makeCorrectValue = (x) => {
-    let newVal = parseFloat(x)*1000;
+    let newVal = parseFloat(x) * 1000;
     let out;
-    out= newVal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    out = newVal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     return out; /*stringVal;*/
   };
 
@@ -70,84 +67,63 @@ export const ModalTable = (props) => {
         </div>
       </DialogTitle>
 
-      <DialogContent
-        // id="classic-modal-slide-description"
-        className={classes.modalBody}
-      >
+      <DialogContent className={classes.modalBody}>
         <div className={classes.jobDefHeader}>
           <h5>
             <strong>Definition:</strong> {jobObject.Def}
           </h5>
         </div>
-          {/*<div className="table-mid">*/}
 
-            {/*MAIN STATS TABLE*/}
-            <GridContainer
-              className={classes.tileContainer}
-            >
+        {/*MAIN STATS TABLE*/}
+        <GridContainer className={classes.tileContainer}>
+          <GridItem xs={12} sm={6} md={4} lg={4} className={classes.jobTile}>
+            <AttachMoneyIcon style={{ color: "#363636" }} fontSize="large" />
+            <h5 style={{ fontWeight: "bold" }}>Median 2017 Annual Wage:</h5>
+            <h5>{jobObject.MedianAnnualWage2017}</h5>
+          </GridItem>
 
-                <GridItem
-                  xs={12} sm={6} md={4} lg={4}
-                  className={classes.jobTile}
-                >
-                    <AttachMoneyIcon style={{ color: "#363636" }} fontSize="large"/>
-                    <h5 style={{ fontWeight: "bold" }}>Median 2017 Annual Wage:</h5>
-                    <h5>{jobObject.MedianAnnualWage2017}</h5>
-                </GridItem>
+          <GridItem xs={12} sm={6} md={4} lg={4} className={classes.jobTile}>
+            <SchoolIcon style={{ color: "#363636" }} fontSize="large" />
+            <h5 style={{ fontWeight: "bold" }}>Education Needed:</h5>
+            <h5>{jobObject.TypicalEducationNeededForEntry}</h5>
+          </GridItem>
 
-                <GridItem
-                  xs={12} sm={6} md={4} lg={4}
-                  className={classes.jobTile}
-                >
-                    <SchoolIcon style={{ color: "#363636" }}  fontSize="large"/>
-                    <h5 style={{ fontWeight: "bold" }}>Education Needed:</h5>
-                    <h5>{jobObject.TypicalEducationNeededForEntry}</h5>
-                </GridItem>
+          <GridItem xs={12} sm={6} md={4} lg={4} className={classes.jobTile}>
+            <SupervisedUserCircleIcon
+              style={{ color: "#363636" }}
+              fontSize="large"
+            />
+            <h5 style={{ fontWeight: "bold" }}>On-the-job Training:</h5>
+            <h5>
+              {
+                jobObject.TypicalOnTheJobTrainingNeededToAttainCompetencyInTheOccupation
+              }
+            </h5>
+          </GridItem>
 
-                <GridItem
-                  xs={12} sm={6} md={4} lg={4}
-                  className={classes.jobTile}
-                >
-                    <SupervisedUserCircleIcon style={{ color: "#363636" }}  fontSize="large"/>
-                    <h5 style={{ fontWeight: "bold" }}>On-the-job Training:</h5>
-                    <h5>
-                      {
-                        jobObject.TypicalOnTheJobTrainingNeededToAttainCompetencyInTheOccupation
-                      }
-                    </h5>
-                </GridItem>
+          <GridItem xs={12} sm={6} md={4} lg={4} className={classes.jobTile}>
+            <DirectionsWalkIcon style={{ color: "#363636" }} fontSize="large" />
+            <h5 style={{ fontWeight: "bold" }}>2016 Employment:</h5>
+            <h5>{formattedEmploy2016}</h5>
+          </GridItem>
 
-                <GridItem
-                  xs={12} sm={6} md={4} lg={4}
-                  className={classes.jobTile}
-                >
-                    <DirectionsWalkIcon style={{ color: "#363636" }}  fontSize="large"/>
-                    <h5 style={{ fontWeight: "bold" }}>2016 Employment:</h5>
-                    <h5>{formattedEmploy2016}</h5>
-                </GridItem>
+          <GridItem xs={12} sm={6} md={4} lg={4} className={classes.jobTile}>
+            <TransferWithinAStationIcon
+              style={{ color: "#363636" }}
+              fontSize="large"
+            />
+            <h5 style={{ fontWeight: "bold" }}>2026 Employment:</h5>
+            <h5>{formattedEmploy2026}</h5>
+          </GridItem>
 
-                <GridItem
-                  xs={12} sm={6} md={4} lg={4}
-                  className={classes.jobTile}
-                >
-                    <TransferWithinAStationIcon style={{ color: "#363636" }} fontSize="large" />
-                    <h5 style={{ fontWeight: "bold" }}>2026 Employment:</h5>
-                    <h5>{formattedEmploy2026}</h5>
-                </GridItem>
-
-                <GridItem
-                  xs={12} sm={6} md={4} lg={4}
-                  className={classes.jobTile}
-                >
-                    <TrendingUpIcon style={{ color: "#363636" }}  fontSize="large"/>
-                    <h5 style={{ fontWeight: "bold" }}>
-                      Percent change in Employment 2016&nbsp;-&nbsp;2026:
-                    </h5>
-                    <h4>{percent}%</h4>
-                </GridItem>
-
-            </GridContainer>
-
+          <GridItem xs={12} sm={6} md={4} lg={4} className={classes.jobTile}>
+            <TrendingUpIcon style={{ color: "#363636" }} fontSize="large" />
+            <h5 style={{ fontWeight: "bold" }}>
+              Percent change in Employment 2016&nbsp;-&nbsp;2026:
+            </h5>
+            <h4>{percent}%</h4>
+          </GridItem>
+        </GridContainer>
       </DialogContent>
     </div>
   );
