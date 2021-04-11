@@ -94,10 +94,10 @@ export default function AboutUsPage(...rest) {
       </Parallax>
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
+          <SectionServices />
           <SectionDescription />
           <SectionTeam />
           <SectionPartners />
-          <SectionServices />
            {/*<SectionOffice />*/}
           <GetInvolved />
         </div>
