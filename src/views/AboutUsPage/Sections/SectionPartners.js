@@ -85,7 +85,7 @@ export default function SectionPartners() {
                 Multimedia Partner
               </h6>
               <p className={classes.cardDescription}>
-                Phuture Doctors and Galactic Polymath are both committed to amplifying diverse voices in STEM and
+                Galactic Polymath and Phuture Doctors are both committed to amplifying diverse voices in STEM and
                 nurturing
                 curiosity and critical thinking in everyone.
               </p>
