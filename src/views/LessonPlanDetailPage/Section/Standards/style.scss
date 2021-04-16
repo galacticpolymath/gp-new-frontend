@@ -15,6 +15,7 @@
   .MuiPaper-elevation1 {
     box-shadow: none;
   }
+
   .Subject {
     h4 {
       margin: 0;
@@ -56,7 +57,7 @@
       background-color: $royal-purple-hhl;
       > .ExpansionPanelSummary {
         background-color: $royal-purple;
-      }    
+      }
     }
     .Dimension {
       &:not(:first-child) {
@@ -71,6 +72,9 @@
         }
         .MuiCollapse-entered {
           border-top: 1px solid rgba($charcoal, .2);
+          .MuiCollapse-wrapperInner{
+            //background-color: $gray;
+          }
         }
         .codes {
           margin: 0;
@@ -87,9 +91,15 @@
         }
         .alignmentNotes {
           padding: 1rem 1rem 0 1rem;
-          margin: 0;
+          border-left: 1px solid $charcoal;
+          margin-left: 1rem;
+          background-color: $gray;
           h6 {
             margin-top: 0;
+          }
+          ul:last-of-type {
+            //margin-bottom: 0;
+            padding-bottom: 1rem;
           }
         }
       }
