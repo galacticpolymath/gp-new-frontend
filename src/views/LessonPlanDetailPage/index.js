@@ -12,6 +12,9 @@ import Header from "./Header";
 import { NUMBERED_SECTIONS } from "./constants";
 
 import "./style.scss";
+import SectionSubscribe from "../LandingPage/Sections/SectionSubscribe";
+import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
+import Footer from "../../components/Footer/Footer";
 
 const LessonPlan = () => {
   const { lessonId } = useParams();
@@ -47,7 +50,10 @@ const LessonPlan = () => {
         {lesson.Section &&
           lesson.Section.map((section, i) => renderSection(section, i))}
       </div>
+      <SectionSubscribe/>
+      <Footer content={<GPcopyrightFooter />} />
     </Fragment>
+
   );
 };
 
