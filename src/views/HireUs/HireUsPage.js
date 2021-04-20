@@ -24,6 +24,9 @@ import SectionHeardEnough from "./Sections/SectionHeardEnough";
 import Button from "../../components/CustomButtons/Button";
 import SectionSubscribe from "../LandingPage/Sections/SectionSubscribe";
 
+//for scroll dots
+import { scrollIndiClicked } from "../../scrolldots/scrollDots";
+import '../../scrolldots/scrollDots.css'
 
 const useStyles = makeStyles(hireUsStyle);
 
@@ -33,7 +36,8 @@ export default function PricingPage() {
     document.body.scrollTop = 0;
   });
   const classes = useStyles();
-  return (
+
+    return (
     <div>
       <Header
         brand="Galactic Polymath"
@@ -107,6 +111,7 @@ export default function PricingPage() {
       {/*Beginning of main card, extending for most of the page*/}
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
+          <div className="scroll-indicator" id="section01"></div>
         <SectionBenefitsOfGP/>
         </div>
         <div className={classes.interjection}>
@@ -116,7 +121,9 @@ export default function PricingPage() {
             creatives working to achieve your outreach dreams!
           </h3>
         </div>
-        <div className={classes.container}>
+        <div className={[classes.container, "scroll-indicator"].join(' ')}
+        id="section02">
+
           {/*Price List */}
           <SectionPricing />
 
@@ -142,12 +149,14 @@ export default function PricingPage() {
             </div>
 
         {/*restart container*/}
-        <div className={classes.container}>
+        <div className={[classes.container, "scroll-indicator"].join(' ')}
+        id="section03">
           {/*</GridItem>*/}
 
           <SectionAddOns />
           {/*GP Logo*/}
-          <div className={classNames(classes.container,classes.textCenter)}>
+          <div className={classNames(classes.container,classes.textCenter)}
+          id="section04">
           <img
             src={makeCloudinaryUrl("v1593304396/logos/GP_logo_grad_transBG_300_tbn4ei.jpeg")}
             className={classNames(classes.mlAuto,classes.mrAuto)}
@@ -164,6 +173,7 @@ export default function PricingPage() {
             A New Model for Education
             </h2>
           </div>
+          <div className="scroll-indicator" id="section04"></div>
           <SectionFeatures />
         </div>
         {/*Break the container class to add interjection*/}
@@ -172,6 +182,7 @@ export default function PricingPage() {
         </div>
         {/*Restart container*/}
         <div className={classes.container}>
+        <div className="scroll-indicator" id="section05"></div>
           <SectionHeardEnough />
         <br/>
           <br/>
@@ -224,6 +235,27 @@ export default function PricingPage() {
           </div>
         }
       />
+      <div className="scroll-indicator-controller">
+      <span></span>
+      <div className="section01 activeDot" onClick={()=>scrollIndiClicked('section01')}>
+        <span>Benefits</span>
+        <div></div>
+      </div>
+      <div className="section02" onClick={()=>scrollIndiClicked('section02')}>
+        <span>Pricing</span>
+        <div></div>
+      </div>
+      <div className="section03" onClick={()=>scrollIndiClicked('section03')}><span>Add-ons</span>
+        <div></div>
+      </div>
+      <div className="section04" onClick={()=>scrollIndiClicked('section04')}><span>Features</span>
+        <div></div>
+      </div>
+      <div className="section05" onClick={()=>scrollIndiClicked('section05')}><span>Heard enough?</span>
+        <div></div>
+      </div>
+      </div>
+  
     </div>
   );
 }
