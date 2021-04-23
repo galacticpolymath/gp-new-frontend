@@ -17,7 +17,7 @@ export default {
   present: (
     <span role="img" aria-label="present">
       {/*📽️*/}
-      <i className="far fa-play-circle" style={{fontSize:"1.3rem"}}/>
+      <i className="far fa-play-circle" style={{fontSize:"1.1rem"}}/>
     </span>
   ),
   nearpod: (
