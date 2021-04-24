@@ -38,23 +38,21 @@ export default function PricingPage() {
   });
   const classes = useStyles();
 
-  function handleIntersection (e,asdf) {
+  function handleIntersection (e,entry) {
     if (e == true){
-      const activeNode = document.querySelector(`.${asdf.target.firstChild.id}`)
+      const activeNode = document.querySelector(`.${entry.target.firstChild.id}`)
       activeNode.classList.add('activeDot')
-      console.log('in view...')
     }
     else {
-      const activeNode = document.querySelector(`.${asdf.target.firstChild.id}`)
+      const activeNode = document.querySelector(`.${entry.target.firstChild.id}`)
       activeNode.classList.remove('activeDot')
-      console.log('out of view...')
     }
   }
 
   const options = {
     onChange: handleIntersection,
     root: null,
-    rootMargin: '-400px',
+    rootMargin: '-100px',
   };
 
     return (
