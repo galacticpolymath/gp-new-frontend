@@ -54,10 +54,8 @@ export default function PricingPage() {
   const options = {
     onChange: handleIntersection,
     root: null,
-    rootMargin: '150px',
+    rootMargin: '-400px',
   };
-
-
 
     return (
     <div>
@@ -179,6 +177,7 @@ export default function PricingPage() {
 
           <SectionAddOns /></Observer>
           {/*GP Logo*/}
+          
           <div className={classNames(classes.container,classes.textCenter)}>
           <img
             src={makeCloudinaryUrl("v1593304396/logos/GP_logo_grad_transBG_300_tbn4ei.jpeg")}
@@ -196,8 +195,10 @@ export default function PricingPage() {
             A New Model for Education
             </h2>
           </div>
-          <Observer {...options}><div className="scroll-indicator" id="section04"></div>
-          <SectionFeatures /></Observer>
+          <Observer {...options}>
+          <div className="scroll-indicator" id="section04"></div>
+          <SectionFeatures />
+          </Observer>
         </div>
         {/*Break the container class to add interjection*/}
         <div className={classes.interjection}>
