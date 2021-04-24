@@ -24,6 +24,10 @@ import SectionHeardEnough from "./Sections/SectionHeardEnough";
 import Button from "../../components/CustomButtons/Button";
 import SectionSubscribe from "../LandingPage/Sections/SectionSubscribe";
 
+//for scroll dots
+import '../../components/NavDots/Dots.css'
+import DotPanel from '../../components/NavDots/DotPanel';
+import Observer from 'react-intersection-observer';
 
 const useStyles = makeStyles(hireUsStyle);
 
@@ -33,7 +37,27 @@ export default function PricingPage() {
     document.body.scrollTop = 0;
   });
   const classes = useStyles();
-  return (
+
+  function handleIntersection (e,asdf) {
+    if (e == true){
+      const activeNode = document.querySelector(`.${asdf.target.firstChild.id}`)
+      activeNode.classList.add('activeDot')
+      console.log('in view...')
+    }
+    else {
+      const activeNode = document.querySelector(`.${asdf.target.firstChild.id}`)
+      activeNode.classList.remove('activeDot')
+      console.log('out of view...')
+    }
+  }
+
+  const options = {
+    onChange: handleIntersection,
+    root: null,
+    rootMargin: '-400px',
+  };
+
+    return (
     <div>
       <Header
         brand="Galactic Polymath"
@@ -107,7 +131,8 @@ export default function PricingPage() {
       {/*Beginning of main card, extending for most of the page*/}
       <div className={classNames(classes.main, classes.mainRaised)}>
         <div className={classes.container}>
-        <SectionBenefitsOfGP/>
+        <Observer {...options}><div className="scroll-indicator" id="section01"></div>
+        <SectionBenefitsOfGP/></Observer>
         </div>
         <div className={classes.interjection}>
           <h3
@@ -117,8 +142,10 @@ export default function PricingPage() {
           </h3>
         </div>
         <div className={classes.container}>
+        <Observer {...options}><div className="scroll-indicator" id="section02"></div>
+
           {/*Price List */}
-          <SectionPricing />
+          <SectionPricing /></Observer>
 
           {/*Add on Section Appeal Banner*/}
 
@@ -143,10 +170,14 @@ export default function PricingPage() {
 
         {/*restart container*/}
         <div className={classes.container}>
+        <Observer {...options}><div className={"scroll-indicator"} id="section03"></div>
+                
+
           {/*</GridItem>*/}
 
-          <SectionAddOns />
+          <SectionAddOns /></Observer>
           {/*GP Logo*/}
+          
           <div className={classNames(classes.container,classes.textCenter)}>
           <img
             src={makeCloudinaryUrl("v1593304396/logos/GP_logo_grad_transBG_300_tbn4ei.jpeg")}
@@ -164,7 +195,10 @@ export default function PricingPage() {
             A New Model for Education
             </h2>
           </div>
+          <Observer {...options}>
+          <div className="scroll-indicator" id="section04"></div>
           <SectionFeatures />
+          </Observer>
         </div>
         {/*Break the container class to add interjection*/}
         <div className={classes.interjection}>
@@ -172,7 +206,8 @@ export default function PricingPage() {
         </div>
         {/*Restart container*/}
         <div className={classes.container}>
-          <SectionHeardEnough />
+        <Observer {...options}><div className="scroll-indicator" id="section05"></div>
+          <SectionHeardEnough /></Observer>
         <br/>
           <br/>
           <br/>
@@ -181,6 +216,8 @@ export default function PricingPage() {
 
       </div>
       <SectionSubscribe/>
+      <DotPanel />
+
       <Footer
         content={
           <div>
@@ -224,6 +261,9 @@ export default function PricingPage() {
           </div>
         }
       />
+
+
+  
     </div>
   );
 }
