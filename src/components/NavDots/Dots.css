@@ -2,7 +2,7 @@
   position: fixed;
   top: 50vh;
   transform: translate(0, -50%);
-  right: 10px;
+  right: 12px;
   z-index: 999;
 }
 .scroll-indicator-controller.indi-mobile > div span {
@@ -10,17 +10,17 @@
 }
 @media (min-width: 1025px) {
   .scroll-indicator-controller {
-    right: 20px;
+    right: 12px;
   }
 }
 .scroll-indicator-controller > div {
-  width: 17px;
-  height: 17px;
+  width: 12px;
+  height: 12px;
   position: relative;
   border-radius: 50%;
   border: 1px solid rgb(190, 190, 190);
-  background: rgba(0, 0, 0, 0.25);
-  margin: 0 0 10px 0;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 0 0 20px 0;
   cursor: pointer;
   transition: background 0.4s ease;
   will-change: transition;
@@ -28,10 +28,10 @@
 .scroll-indicator-controller > div span {
   color: rgb(0, 0, 0);
   position: absolute;
-  right: calc(100% + 8px);
+  right: calc(100% + 10px);
   white-space: nowrap;
   top: 50%;
-  font-family: "Barlow", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 17px;
   width: 0;
@@ -50,7 +50,7 @@
   content: "-----";
   padding-left: 5px;
   letter-spacing: -2px;
-  font-family: arial, sans-serif;
+  font-family: Montserrat, sans-serif;
   vertical-align: text-top;
   line-height: 14px;
 }
@@ -63,8 +63,8 @@
   }
 }
 .scroll-indicator-controller > div.activeDot {
-  background: rgb(255, 255, 255);
-  border-color: rgba(0, 0, 0, 0.25);
+  background: #2c83c3;
+  border-color: rgba(255, 255, 255, 1);
 }
 @supports (-ms-ime-align:auto) {
   .scroll-indicator-controller > div span {
