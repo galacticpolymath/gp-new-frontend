@@ -41,11 +41,6 @@
   transition: all 0.4s ease;
   will-change: transition;
 }
-@media (hover: none) {
-  .scroll-indicator-controller > div span {
-    display: none;
-  }
-}
 .scroll-indicator-controller > div span:after {
   content: "-----";
   padding-left: 5px;
@@ -54,14 +49,23 @@
   vertical-align: text-top;
   line-height: 14px;
 }
-@media (hover: hover), (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .scroll-indicator-controller > div:hover span {
+
+@media (hover:hover) {
+.scroll-indicator-controller > div:hover span {
     width: auto;
     opacity: 1;
     overflow: visible;
     transform: translateY(-50%) translateX(0px);
   }
 }
+
+.scroll-indicator-controller > div:active span {
+    width: auto;
+    opacity: 1;
+    overflow: visible;
+    transform: translateY(-50%) translateX(0px);
+}
+
 .scroll-indicator-controller > div.activeDot {
   background: rgb(255, 255, 255);
   border-color: rgba(0, 0, 0, 0.25);
