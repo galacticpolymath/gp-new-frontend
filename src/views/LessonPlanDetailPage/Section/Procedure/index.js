@@ -4,11 +4,18 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
 import RichText from "components/RichText";
-import CollapsibleSection from "./CollapsibleSection";
+import CollapsibleSection from "../CollapsibleSection";
+
+import "./style.scss"
 
 const useStyles = makeStyles(lessonPlanStyle);
 
-const Procedure = ({ index, SectionTitle, LessonDuration, Chunks }) => {
+const Procedure = ({ 
+  index, 
+  SectionTitle, 
+  LessonDuration, 
+  Chunks
+}) => {
   const classes = useStyles();
   return (
     <CollapsibleSection
