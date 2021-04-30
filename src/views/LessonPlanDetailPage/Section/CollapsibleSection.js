@@ -15,9 +15,10 @@ const CollapsibleSection = ({
   SectionTitle,
   className = "",
   children,
+  initiallyExpanded = false
 }) => {
   const classes = useStyles();
-  const [expanded, expand] = useState(false);
+  const [expanded, expand] = useState(initiallyExpanded);
 
   return (
     <ExpansionPanel
@@ -52,6 +53,7 @@ CollapsibleSection.propTypes = {
   SectionTitle: PropTypes.string,
   className: PropTypes.string,
   children: PropTypes.object,
+  initiallyExpanded: PropTypes.bool
 };
 
 export default CollapsibleSection;

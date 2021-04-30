@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -15,27 +15,28 @@ import MenuBookIcon from "@material-ui/icons/MenuBook";
 import ScheduleIcon from "@material-ui/icons/Schedule";
 
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
+import CollapsibleSection from "./CollapsibleSection";
 
 const useStyles = makeStyles(lessonPlanStyle);
 
 const Overview = ({
-                    index,
-                    EstLessonTime,
-                    ForGrades,
-                    TargetSubject,
-                    SteamEpaulette,
-                    Text,
-                    Tags
-                  }) => {
+  index,
+  EstLessonTime,
+  ForGrades,
+  TargetSubject,
+  SteamEpaulette,
+  Text,
+  Tags
+}) => {
   const classes = useStyles();
   return (
-    <Fragment>
-      <h2 className="SectionHeading" id="overview">
-        <div className={classes.container}>{index}. Overview</div>
-      </h2>
-
-      <div className={classes.container + " Overview"}>
-
+    <CollapsibleSection
+      className={"Overview"}
+      index={index}
+      SectionTitle={`Overview`}
+      initiallyExpanded
+    >
+      <div className={classes.container}>
         <Card className="stats">
           <GridContainer>
             <Image {...SteamEpaulette} className="epaulette" />
@@ -70,7 +71,7 @@ const Overview = ({
         <h5>Keywords:</h5>
         {Tags && <TagCloud tags={Tags} />}
       </div>
-    </Fragment>
+    </CollapsibleSection>
   );
 };
 
