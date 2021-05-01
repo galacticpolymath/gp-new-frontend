@@ -4,19 +4,19 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
 import RichText from "components/RichText";
+import CollapsibleSection from "./CollapsibleSection";
 
 const useStyles = makeStyles(lessonPlanStyle);
 
 const Procedure = ({ index, SectionTitle, LessonDuration, Chunks }) => {
   const classes = useStyles();
   return (
-    <div className="Procedure">
-      <h2 className="SectionHeading" id="procedure">
-        <div className={classes.container}>
-          {index}. {SectionTitle}
-        </div>
-      </h2>
-
+    <CollapsibleSection
+      className="Procedure"
+      index={index}
+      SectionTitle={SectionTitle}
+      initiallyExpanded
+    >
       <div className={classes.container}>
         <h4>
           <span role="img" aria-label="clock">
@@ -27,7 +27,7 @@ const Procedure = ({ index, SectionTitle, LessonDuration, Chunks }) => {
 
         <RichText content={Chunks} />
       </div>
-    </div>
+    </CollapsibleSection>
   );
 };
 
