@@ -44,7 +44,7 @@ const Versions = ({ index, SectionTitle, Data = [] }) => {
 Versions.propTypes = {
   index: PropTypes.number,
   SectionTitle: PropTypes.string,
-  Data: PropTypes.object,
+  Data: PropTypes.array,
 };
 
 export default Versions;
