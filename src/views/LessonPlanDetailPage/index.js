@@ -29,9 +29,9 @@ const LessonPlan = () => {
   );
 
   useEffect(()=> {
-    window.addEventListener('scroll',throttle(scrollHandler,500))
+    window.addEventListener('scroll',throttle(scrollHandler,100))
     return () => {
-      window.removeEventListener('scroll',throttle(scrollHandler,500))
+      window.removeEventListener('scroll',throttle(scrollHandler,100))
     }
   },[])
 

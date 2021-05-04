@@ -1,3 +1,5 @@
+
+
 let lastOffset = window.pageYOffset
 
 const getOffset = function(element) {
@@ -21,14 +23,16 @@ const activateDot = function(index, elemIds){
 
     let notActive = elemIds.slice()
     notActive.splice(index,1)
-    notActive.forEach((id)=>document.querySelector(`.${id}`).classList.remove('activeDot'))
+    notActive.forEach((id)=>{
+        document.querySelector(`.${id}`).classList.remove('activeDot')
+    })
 }
 
 const scrollDown = function(cursorBottom, elemOffsets, elemIds) {
     // you have the offset tops. find nearest one above current position by..
     // filtering out the ones below it and taking the last elem
     // filter:
-    const removeBelow = elemOffsets.filter(function (x) { return x < cursorBottom - window.innerHeight/3 ; });
+    const removeBelow = elemOffsets.filter(function (x) { return x < cursorBottom - window.innerHeight/4 ; });
     const index = removeBelow.length > 0 ? removeBelow.length - 1 : 0
 
     activateDot(index, elemIds)
@@ -36,13 +40,13 @@ const scrollDown = function(cursorBottom, elemOffsets, elemIds) {
 
 const scrollUp = function(cursorTop, elemOffsets, elemIds) {
     // when you're scrolling up you want the nearest previous top.... find index - 1
-    const removeBelow = elemOffsets.filter(function (x) { return x < (cursorTop + window.innerHeight/3); });
+    const removeBelow = elemOffsets.filter(function (x) { return x < (cursorTop + window.innerHeight/4); });
     const index = removeBelow.length > 0 ? removeBelow.length - 1 : 0
 
     activateDot(index, elemIds)
 }
 
-export default function scrollHandler(){
+const scrollAction = function(){
     const scrollElems = Array.prototype.slice.call(document.querySelectorAll('.SectionHeading'))
 
     let elemOffsets = []
@@ -63,4 +67,8 @@ export default function scrollHandler(){
         scrollDown(cursorBottom, elemOffsets, elemIds)
     }
     lastOffset = window.pageYOffset
+}
+
+export default function scrollHandler() {
+    scrollAction()
 }

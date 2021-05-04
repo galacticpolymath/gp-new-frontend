@@ -1,8 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
+import debounce from 'lodash/debounce'
 
-class Dot extends Component{
+function Dot(props){
 
-   getPosition(element) {
+   const getPosition = function (element) {
         var yPosition = 0;
     
         while(element) {
@@ -13,22 +14,49 @@ class Dot extends Component{
         return yPosition
     }
 
-    render(){
+    const classNames = `navDot ${props.section}`
 
-    const classNames = `navDot ${this.props.section}`
+    const doneScrolling = function() {
+        console.log('DONE SCROLLING')
+        window.removeEventListener('scroll',callback)
+        document.querySelectorAll('.navDot').forEach(el => el.classList.remove('activeDot'))
+        console.log('activating ' + `${props.section}`)
+        document.querySelector(`.${props.section}`).classList.add('activeDot')
+    }
+
+    let done 
+    const callback = function() {
+        // this is the new callback to replace the old one, need to add monitoring functionality here    
+    
+        if (typeof done != "undefined"){
+            clearTimeout(done)
+        }
+        done = setTimeout(doneScrolling, 100)
+
+    }
+
+    const scrollWait = function () {
+        window.addEventListener('scroll',callback)
+
+    }
         
     return(
-        <div className={classNames} onClick={()=>
+        <div className={classNames} onClick={()=>{
+            scrollWait()
+            document.querySelectorAll('.navDot').forEach(el => el.classList.remove('activeDot'))
+            console.log('activating ' + `${props.section}`)
+            document.querySelector(`.${props.section}`).classList.add('activeDot')
+
             window.scrollTo({
-                top: this.getPosition(document.getElementById(this.props.section)) -110,
+                top: getPosition(document.getElementById(props.section)) -110,
                 left: 0,
                 behavior: 'smooth'
             })
-        }>
-        <span>{this.props.title}</span>
+        }}>
+        <span>{props.title}</span>
         </div>
     )
-    }
 }
+
 
 export default Dot;
