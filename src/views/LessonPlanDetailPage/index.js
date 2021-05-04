@@ -35,29 +35,6 @@ const LessonPlan = () => {
     }
   },[])
 
-  /*
-  
-  function handleIntersection (e,entry) {
-    const node = entry.target.querySelector('.SectionHeading')
-    if (node != null) {
-      const id = node.id.replace('&','\\&')
-      if (e == true){
-        document.querySelectorAll('.navDot').forEach((node)=>node.classList.remove('activeDot'))
-        document.querySelector(`.${id}`).classList.add('activeDot')
-      }
-      if (e == false){
-        document.querySelector(`.${id}`).classList.remove('activeDot')
-      }
-    } 
-  }
-  
-  const options = {
-    onChange: handleIntersection,
-    root: null,
-    rootMargin: '-100px',
-  };
-  */
-
   useEffect(() => {
     fetchOne(lessonId, 3000).then(setLesson).catch(console.log);
     
