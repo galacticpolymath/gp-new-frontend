@@ -17,13 +17,13 @@ class Dot extends Component{
         
     return(
 
-        
-
-        <div className={this.props.section} onClick={()=>window.scrollTo({
-            top: this.getPosition(document.getElementById(this.props.section)) -70,
-            left: 0,
-            behavior: 'smooth'
-        })}>
+        <div className={this.props.section} onClick={
+            ()=>window.scrollTo({
+                top: this.getPosition(document.getElementById(this.props.section)) -70,
+                left: 0,
+                behavior: 'smooth'
+            })
+        }>
         <span>{this.props.title}</span>
         </div>
     )

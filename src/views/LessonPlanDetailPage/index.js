@@ -18,13 +18,24 @@ import Footer from "../../components/Footer/Footer";
 
 import '../../components/LessonDots/Dots.css'
 import DotPanel from '../../components/LessonDots/DotPanel';
-import Observer from 'react-intersection-observer';
+import scrollHandler from '../../components/LessonDots/obs';
+
+import throttle from 'lodash.throttle'
 
 const LessonPlan = () => {
   const { lessonId } = useParams();
   const [lesson, setLesson] = useState(
     cachedLessons.find(({ id }) => id.toString() === lessonId.toString())
   );
+
+  useEffect(()=> {
+    window.addEventListener('scroll',throttle(scrollHandler,500))
+    return () => {
+      window.removeEventListener('scroll',throttle(scrollHandler,500))
+    }
+  },[])
+
+  /*
   
   function handleIntersection (e,entry) {
     const node = entry.target.querySelector('.SectionHeading')
@@ -45,6 +56,7 @@ const LessonPlan = () => {
     root: null,
     rootMargin: '-100px',
   };
+  */
 
   useEffect(() => {
     fetchOne(lessonId, 3000).then(setLesson).catch(console.log);
@@ -74,11 +86,7 @@ const LessonPlan = () => {
         <Header {...lesson} />
           
         {lesson.Section &&
-          lesson.Section.map((section, i) => 
-            <Observer {...options}>
-            {renderSection(section, i)}
-            </Observer>
-          )
+          lesson.Section.map((section, i) => renderSection(section, i))
         }
       </div>
       <SectionSubscribe/>

@@ -4,12 +4,6 @@ import React, { useEffect, useState } from 'react';
 function Panel(props){
 
     const [titles, setTitles] = useState([])
-        /*
-        console.log('anything???')
-        const title = id.replace(/_/g,' ').replace(/\b\w/g, l => l.toUpperCase())
-        titles.push(title)
-        console.log(title) //formatted ids
-        */
 
     // big assumption, all section headings start off with a number
     // have to do this because sectionheading structure is at uneven nesting levels so querySelectorAll brings them up out of order
