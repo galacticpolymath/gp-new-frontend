@@ -14,12 +14,13 @@ class Dot extends Component{
     }
 
     render(){
+
+    const classNames = `navDot ${this.props.section}`
         
     return(
-
-        <div className={this.props.section} onClick={
-            ()=>window.scrollTo({
-                top: this.getPosition(document.getElementById(this.props.section)) -70,
+        <div className={classNames} onClick={()=>
+            window.scrollTo({
+                top: this.getPosition(document.getElementById(this.props.section)) -110,
                 left: 0,
                 behavior: 'smooth'
             })
