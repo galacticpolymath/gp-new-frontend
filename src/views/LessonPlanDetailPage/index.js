@@ -16,15 +16,29 @@ import SectionSubscribe from "../LandingPage/Sections/SectionSubscribe";
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 import Footer from "../../components/Footer/Footer";
 
+import '../../components/LessonDots/Dots.css'
+import DotPanel from '../../components/LessonDots/DotPanel';
+import scrollHandler from '../../components/LessonDots/obs';
+
+import throttle from 'lodash.throttle'
+
 const LessonPlan = () => {
   const { lessonId } = useParams();
   const [lesson, setLesson] = useState(
     cachedLessons.find(({ id }) => id.toString() === lessonId.toString())
   );
 
+  useEffect(()=> {
+    window.addEventListener('scroll',throttle(scrollHandler,100))
+    return () => {
+      window.removeEventListener('scroll',throttle(scrollHandler,100))
+    }
+  },[])
+
   useEffect(() => {
     fetchOne(lessonId, 3000).then(setLesson).catch(console.log);
-  }, [lessonId]);
+    
+  }, [lessonId])
 
   let numberedElements = 0;
 
@@ -34,8 +48,9 @@ const LessonPlan = () => {
     if (NUMBERED_SECTIONS.indexOf(section.__component) !== -1) {
       numberedElements++;
     }
-    return <Section key={i} index={numberedElements} section={section} />;
+    return <Section key={i} index={numberedElements} section={section} />
   };
+
 
   return (
     <Fragment>
@@ -46,11 +61,14 @@ const LessonPlan = () => {
       />
       <div className="LessonPlan" id="top">
         <Header {...lesson} />
-
+          
         {lesson.Section &&
-          lesson.Section.map((section, i) => renderSection(section, i))}
+          lesson.Section.map((section, i) => renderSection(section, i))
+        }
       </div>
       <SectionSubscribe/>
+      <DotPanel />
+
       <Footer content={<GPcopyrightFooter />} />
     </Fragment>
 
