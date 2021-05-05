@@ -67,7 +67,7 @@ const LessonPlan = () => {
         }
       </div>
       <SectionSubscribe/>
-      <DotPanel />
+      <DotPanel sections={lesson.Section} />
 
       <Footer content={<GPcopyrightFooter />} />
     </Fragment>
