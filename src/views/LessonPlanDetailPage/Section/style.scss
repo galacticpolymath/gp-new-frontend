@@ -66,6 +66,11 @@
   .keywords {
     padding: 0.85rem 0;
   }
+  .ExpansionPanelSummary {
+    &:active {
+      background: inherit;
+    }
+  }
 }
 
 .Standards {

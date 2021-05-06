@@ -9,7 +9,7 @@ import Overview from "./Overview";
 import Media from "./Media";
 import TextBlock from "./TextBlock";
 import Heading from "./Heading";
-import Procedure from "./Procedure";
+import Procedure from "./Procedure/index";
 import TeachingResources from "./TeachingResources/index";
 import SteamBadge from "./SteamBadge";
 import Standards from "./Standards/index";

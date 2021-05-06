@@ -21,6 +21,9 @@
     }
     padding: 0;
     margin: 0;
+    &.Mui-expanded {
+      margin: 2rem 0 !important;
+    }
     p {
       margin: 0.8rem 0;
     }
@@ -34,15 +37,32 @@
       .MuiExpansionPanelSummary-content {
         margin: 0;
       }
+      .ExpansionPanelSummary {
+        align-items: flex-end;
+      }
     }
     .MuiCollapse-wrapper {
       padding-top: 0 !important;
     }
     .PartBody {
-      margin: 0 1rem 0.5rem 1rem;
-      border-left: 0.5rem solid rgba($charcoal, 0.08);
+      margin: 0 1rem 1rem 1rem;
+      border-left: 2px solid rgba($charcoal, 0.08);
       > * {
         padding: 0 1rem;
+      }
+    }
+
+    .MuiExpansionPanelSummary-root {
+      padding: 0;
+      .MuiExpansionPanelSummary-content {
+        margin: 0 !important;
+        h2 {
+          margin: 0;
+        }
+      }
+      > .MuiExpansionPanelSummary-expandIcon .MuiSvgIcon-root {
+        font-size: 2.25rem;
+        color: $charcoal;
       }
     }
   }
