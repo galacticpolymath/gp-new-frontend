@@ -8,14 +8,19 @@ import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanS
 import CollapsibleSection from "./CollapsibleSection";
 const useStyles = makeStyles(lessonPlanStyle);
 
-const CollapsibleTextSection = ({ index, SectionTitle, Content }) => {
+const CollapsibleTextSection = ({
+  index,
+  SectionTitle,
+  Content,
+  InitiallyExpanded,
+}) => {
   const classes = useStyles();
   return (
     <CollapsibleSection
       className="CollapsibleTextSection"
       index={index}
       SectionTitle={SectionTitle}
-      initiallyExpanded
+      initiallyExpanded={InitiallyExpanded !== false}
     >
       <div className={classes.container}>
         <RichText content={Content} />
