@@ -2,7 +2,7 @@
   position: fixed;
   top: 50vh;
   transform: translate(0, -50%);
-  right: 12px;
+  right: 10px;
   z-index: 999;
 }
 .scroll-indicator-controller.indi-mobile > div span {
@@ -10,25 +10,24 @@
 }
 @media (min-width: 1025px) {
   .scroll-indicator-controller {
-    right: 12px;
+    right: 20px;
   }
 }
 .scroll-indicator-controller > div {
-  width: 12px;
-  height: 12px;
+  width: 17px;
+  height: 17px;
   position: relative;
   border-radius: 50%;
   border: 1px solid rgb(190, 190, 190);
-  background: rgba(0, 0, 0, 0.1);
-  margin: 0 0 20px 0;
+  background: rgba(0, 0, 0, 0.25);
+  margin: 0 0 10px 0;
   cursor: pointer;
   transition: background 0.4s ease;
   will-change: transition;
 }
 .scroll-indicator-controller > div span {
-  color: rgb(0, 0, 0);
   position: absolute;
-  right: calc(100% + 10px);
+  right: calc(100% + 8px);
   white-space: nowrap;
   top: 50%;
   font-family: "Montserrat", sans-serif;
@@ -40,14 +39,13 @@
   transform: translateY(-50%) translateX(10px);
   transition: all 0.4s ease;
   will-change: transition;
-}
-.scroll-indicator-controller > div span:after {
-  content: "-----";
-  padding-left: 5px;
-  letter-spacing: -2px;
-  font-family: Montserrat, sans-serif;
-  vertical-align: text-top;
-  line-height: 14px;
+  color: #363636;
+  background-color: #D5E6F3;
+  border: 1px solid #363636;
+  border-radius: 6px;
+  box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  font-weight: 400;
+  padding: 6px;
 }
 
 @media (hover:hover) {
@@ -57,6 +55,7 @@
     overflow: visible;
     transform: translateY(-50%) translateX(0px);
   }
+
 }
 
 .scroll-indicator-controller > div:active span {
@@ -67,8 +66,8 @@
 }
 
 .scroll-indicator-controller > div.activeDot {
-  background: #2c83c3;
-  border-color: rgba(255, 255, 255, 1);
+  background: rgb(255, 255, 255);
+  border-color: rgba(0, 0, 0, 0.25);
 }
 @supports (-ms-ime-align:auto) {
   .scroll-indicator-controller > div span {
