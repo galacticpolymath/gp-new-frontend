@@ -15,6 +15,7 @@ import SteamBadge from "./SteamBadge";
 import Standards from "./Standards/index";
 import Acknowledgments from "./Acknowledgments";
 import Versions from "./Versions";
+import CollapsibleTextSection from "./CollapsibleTextSection";
 
 export const sectionTypeMap = {
   [SECTIONS.OVERVIEW]: Overview,
@@ -27,6 +28,7 @@ export const sectionTypeMap = {
   [SECTIONS.STANDARDS]: Standards,
   [SECTIONS.ACKNOWLEDGMENTS]: Acknowledgments,
   [SECTIONS.VERSIONS]: Versions,
+  [SECTIONS.COLLAPSIBLE_TEXT]: CollapsibleTextSection,
 };
 
 const Section = ({ index, section }) => {

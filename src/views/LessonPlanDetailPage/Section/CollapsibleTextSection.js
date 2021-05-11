@@ -2,40 +2,35 @@ import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 
-import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
-import RichText from "components/RichText";
-import CollapsibleSection from "./CollapsibleSection";
+import RichText from "../../../components/RichText";
 
+import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
+import CollapsibleSection from "./CollapsibleSection";
 const useStyles = makeStyles(lessonPlanStyle);
 
-const Procedure = ({ index, SectionTitle, LessonDuration, Chunks }) => {
+const CollapsibleTextSection = ({
+  index,
+  SectionTitle,
+  Content,
+  InitiallyExpanded,
+}) => {
   const classes = useStyles();
   return (
     <CollapsibleSection
-      className="Procedure"
+      className="CollapsibleTextSection"
       index={index}
       SectionTitle={SectionTitle}
-      initiallyExpanded
+      initiallyExpanded={InitiallyExpanded !== false}
     >
       <div className={classes.container}>
-        <h4>
-          <span role="img" aria-label="clock">
-            ⏰
-          </span>{" "}
-          {LessonDuration}
-        </h4>
-
-        <RichText content={Chunks} />
+        <RichText content={Content} />
       </div>
     </CollapsibleSection>
   );
 };
 
-Procedure.propTypes = {
-  index: PropTypes.number,
-  SectionTitle: PropTypes.string,
-  LessonDuration: PropTypes.string,
-  Chunks: PropTypes.string,
+CollapsibleTextSection.propTypes = {
+  Content: PropTypes.string,
 };
 
-export default Procedure;
+export default CollapsibleTextSection;
