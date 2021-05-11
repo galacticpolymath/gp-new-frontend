@@ -26,12 +26,11 @@
   will-change: transition;
 }
 .scroll-indicator-controller > div span {
-  color: rgb(0, 0, 0);
   position: absolute;
   right: calc(100% + 8px);
   white-space: nowrap;
   top: 50%;
-  font-family: "Barlow", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 17px;
   width: 0;
@@ -56,6 +55,7 @@
     overflow: visible;
     transform: translateY(-50%) translateX(0px);
   }
+
 }
 
 .scroll-indicator-controller > div:active span {
