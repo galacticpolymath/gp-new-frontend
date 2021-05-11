@@ -40,14 +40,13 @@
   transform: translateY(-50%) translateX(10px);
   transition: all 0.4s ease;
   will-change: transition;
-}
-.scroll-indicator-controller > div span:after {
-  content: "-----";
-  padding-left: 5px;
-  letter-spacing: -2px;
-  font-family: arial, sans-serif;
-  vertical-align: text-top;
-  line-height: 14px;
+  color: #363636;
+  background-color: #D5E6F3;
+  border: 1px solid #363636;
+  border-radius: 6px;
+  box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+  font-weight: 400;
+  padding: 6px;
 }
 
 @media (hover:hover) {
