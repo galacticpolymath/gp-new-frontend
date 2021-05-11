@@ -2,7 +2,7 @@
   position: fixed;
   top: 50vh;
   transform: translate(0, -50%);
-  right: 10px;
+  right: 12px;
   z-index: 999;
 }
 .scroll-indicator-controller.indi-mobile > div span {
@@ -10,24 +10,24 @@
 }
 @media (min-width: 1025px) {
   .scroll-indicator-controller {
-    right: 20px;
+    right: 12px;
   }
 }
 .scroll-indicator-controller > div {
-  width: 17px;
-  height: 17px;
+  width: 12px;
+  height: 12px;
   position: relative;
   border-radius: 50%;
   border: 1px solid rgb(190, 190, 190);
-  background: rgba(0, 0, 0, 0.25);
-  margin: 0 0 10px 0;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 0 0 20px 0;
   cursor: pointer;
   transition: background 0.4s ease;
   will-change: transition;
 }
-.scroll-indicator-controller > div span {
+.scroll-indicator-controller > div span{
   position: absolute;
-  right: calc(100% + 8px);
+  right: calc(100% + 10px);
   white-space: nowrap;
   top: 50%;
   font-family: "Montserrat", sans-serif;
@@ -47,27 +47,32 @@
   font-weight: 400;
   padding: 6px;
 }
+.scroll-indicator-controller > div span:after {
+  /*content: "-----";*/
+  padding-left: 5px;
+  vertical-align: text-top;
+  line-height: 14px;
+}
 
 @media (hover:hover) {
-.scroll-indicator-controller > div:hover span {
+  .scroll-indicator-controller > div:hover span {
     width: auto;
     opacity: 1;
     overflow: visible;
     transform: translateY(-50%) translateX(0px);
   }
-
 }
 
 .scroll-indicator-controller > div:active span {
-    width: auto;
-    opacity: 1;
-    overflow: visible;
-    transform: translateY(-50%) translateX(0px);
+  width: auto;
+  opacity: 1;
+  overflow: visible;
+  transform: translateY(-50%) translateX(0px);
 }
 
 .scroll-indicator-controller > div.activeDot {
-  background: rgb(255, 255, 255);
-  border-color: rgba(0, 0, 0, 0.25);
+  background: #2c83c3;
+  border-color: rgba(255, 255, 255, 1);
 }
 @supports (-ms-ime-align:auto) {
   .scroll-indicator-controller > div span {
