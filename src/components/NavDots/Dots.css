@@ -30,7 +30,7 @@
   right: calc(100% + 10px);
   white-space: nowrap;
   top: 50%;
-  font-family: "Montserrat", sans-serif;
+
   font-size: 16px;
   line-height: 17px;
   width: 0;
@@ -46,12 +46,40 @@
   box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
   font-weight: 400;
   padding: 6px;
+  /*  disable text highlighting on long press for mobile*/
+  pointer-events: none;
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
 }
 .scroll-indicator-controller > div span:after {
   /*content: "-----";*/
+  font-family: "Barlow", sans-serif;
   padding-left: 5px;
   vertical-align: text-top;
   line-height: 14px;
+}
+
+/*make space to see labels around your thumb on mobile */
+@media only screen and (max-width: 600px){
+  .scroll-indicator-controller > div span {
+    right: calc(100% + 60px);
+  }
+  .scroll-indicator-controller > div span:after {
+    content: "";
+    border-bottom: 1px dashed #363636;
+    position: absolute;
+    width: 52px;
+    left: 101%;
+    bottom: 50%;
+    padding-left: 5px;
+    vertical-align: text-top;
+    line-height: 14px;
+
+  }
 }
 
 @media (hover:hover) {
