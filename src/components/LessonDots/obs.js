@@ -17,14 +17,15 @@ const activateDot = function(index, elemIds){
 
     const activeNode = document.querySelector(`.${activeNodeid}`)
 
-    if (!activeNode.classList.contains('activeDot')){
-        activeNode.classList.add('activeDot')
+    if (!activeNode || !activeNode.classList.contains('activeDot')){
+        activeNode && activeNode.classList.add('activeDot')
     }
 
     let notActive = elemIds.slice()
     notActive.splice(index,1)
     notActive.forEach((id)=>{
-        document.querySelector(`.${id}`).classList.remove('activeDot')
+        let div = document.querySelector(`.${id}`)
+        div && div.classList.remove('activeDot')
     })
 }
 
