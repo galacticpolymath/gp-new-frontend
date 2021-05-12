@@ -1,6 +1,10 @@
 @import "../../variables";
+@import "../../../../assets/scss/core/variables";
 
 .Standards {
+  @media (max-width: map-get($grid-breakpoints, "md")) {
+    padding-right: 2rem !important;
+  }
   * {
     min-height: 0 !important;
   }

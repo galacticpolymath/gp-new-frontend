@@ -1,13 +1,13 @@
-@import '../variables';
-@import '../../../assets/scss/core/variables';
+@import "../variables";
+@import "../../../assets/scss/core/variables";
 
 .Overview {
   #targetSubj {
     margin-bottom: 2rem;
-    >* {
+    > * {
       display: inline-block;
     }
-    p{
+    p {
       padding-left: 1rem;
     }
   }
@@ -16,30 +16,23 @@
     padding: 1rem 0.5rem 1rem;
     text-align: center;
     background-color: $gray;
-        //[class*='col'] {
-    //  padding: 0.35rem 1.25rem;
-    //  > * {
-    //    margin: 0.5rem 0;
-    //  }
-    //}
-    .statIcon{
+    .statIcon {
       margin-bottom: 0;
     }
-    .statContainer{
+    .statContainer {
       display: inline-block;
-      //color: $hydrogen-blue;
-     h3 {
+      h3 {
         margin: 0;
-       font-weight: 300;
+        font-weight: 300;
       }
     }
     .border-right {
-      @media (min-width: 600px) {
-        border-right: 1px solid $charcoal ;
+      @media (min-width: map-get($grid-breakpoints, "sm")) {
+        border-right: 1px solid $charcoal;
       }
     }
 
-    h5{
+    h5 {
       margin-top: 0;
     }
     p {
@@ -48,22 +41,20 @@
     .epaulette {
       padding: 0.5rem 0;
     }
-    @media (max-width: 600px){
-      .statContainer{
+    @media (max-width: map-get($grid-breakpoints, "sm")) {
+      .statContainer {
         border-bottom: 1px solid $charcoal;
         margin-bottom: 1.5rem;
         padding-bottom: 1.5rem;
         width: 100%;
       }
-      #lastGridItem{
+      #lastGridItem {
         border-bottom: none;
       }
     }
-    @media (max-width: map-get($grid-breakpoints, "md")){
+    @media (max-width: map-get($grid-breakpoints, "md")) {
       .statContainer {
-        //margin-bottom: 1.5rem;
-        //padding-bottom: 1.5rem;
-        h3{
+        h3 {
           font-size: 1.3rem;
         }
       }
@@ -76,7 +67,6 @@
     padding: 0.85rem 0;
   }
 }
-
 
 .Procedure {
   h3 {
@@ -103,6 +93,9 @@
 }
 
 .SteamBadge {
+  @media (max-width: map-get($grid-breakpoints, "md")) {
+    padding-right: 2rem !important;
+  }
   > .Image {
     display: block;
     max-height: 60vh;
@@ -120,6 +113,11 @@
 .CollapsibleSection.ExpansionPanel {
   margin: 2rem 0 !important;
   border: none !important;
+  @media (max-width: map-get($grid-breakpoints, "md")) {
+    > * {
+      padding-right: 2rem !important;
+    }
+  }
   &.MuiExpansionPanel-root {
     &::before {
       display: none;
