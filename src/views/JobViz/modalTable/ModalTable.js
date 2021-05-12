@@ -27,7 +27,7 @@ export const ModalTable = (props) => {
   const [percent, setPercent] = useState("");
 
   const makeCorrectValue = (x) => {
-    let newVal = parseFloat(x) * 1000;
+    let newVal = Math.round(parseFloat(x) * 1000);
     let out;
     out = newVal.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     return out; /*stringVal;*/
