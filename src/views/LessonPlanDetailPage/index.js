@@ -16,7 +16,7 @@ import SectionSubscribe from "../LandingPage/Sections/SectionSubscribe";
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 import Footer from "../../components/Footer/Footer";
 
-import '../../components/LessonDots/Dots.css'
+import '../../components/NavDots/Dots.css'
 import DotPanel from '../../components/LessonDots/DotPanel';
 import scrollHandler from '../../components/LessonDots/obs';
 
@@ -37,7 +37,7 @@ const LessonPlan = () => {
 
   useEffect(() => {
     fetchOne(lessonId, 3000).then(setLesson).catch(console.log);
-    
+
   }, [lessonId])
 
   let numberedElements = 0;
@@ -61,7 +61,7 @@ const LessonPlan = () => {
       />
       <div className="LessonPlan" id="top">
         <Header {...lesson} />
-          
+
         {lesson.Section &&
           lesson.Section.map((section, i) => renderSection(section, i))
         }

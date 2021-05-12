@@ -9,6 +9,7 @@ export const SECTIONS = {
   STANDARDS: "lesson-plan.standards",
   ACKNOWLEDGMENTS: "lesson-plan.acknowledgments",
   VERSIONS: "lesson-plan.versions",
+  COLLAPSIBLE_TEXT: "lesson-plan.collapsible-text-section",
 };
 
 export const NUMBERED_SECTIONS = [
@@ -17,4 +18,5 @@ export const NUMBERED_SECTIONS = [
   SECTIONS.PROCEDURE,
   SECTIONS.ACKNOWLEDGMENTS,
   SECTIONS.VERSIONS,
+  SECTIONS.COLLAPSIBLE_TEXT,
 ];

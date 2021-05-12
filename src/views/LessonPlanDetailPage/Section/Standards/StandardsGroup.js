@@ -8,7 +8,19 @@ import RichText from "components/RichText";
 
 import { formatAlignmentNotes } from "./utils";
 
-const StandardsGroup = ({ codes, alignmentNotes, statements }) => {
+const formatGrades = (grades) => {
+  if (!grades) return "";
+
+  const parsedGrades = grades.split(",").map((x) => x.replace(/^0/, ""));
+  if (parsedGrades.length === 1) {
+    return "Grade: " + parsedGrades[0];
+  }
+  return (
+    "Grades: " + parsedGrades[0] + "-" + parsedGrades[parsedGrades.length - 1]
+  );
+};
+
+const StandardsGroup = ({ codes, grades, alignmentNotes, statements }) => {
   const [expanded, expand] = useState(false);
 
   return (
@@ -21,11 +33,14 @@ const StandardsGroup = ({ codes, alignmentNotes, statements }) => {
         className="ExpansionPanelSummary codes"
         expandIcon={<ExpandMoreIcon />}
       >
-        {[].concat(codes).map((code, i) => (
-          <p key={i}>
-            <strong>{code}:</strong> {[].concat(statements)[i]}
-          </p>
-        ))}
+        <div>
+          <p className="grades">{formatGrades(grades)}</p>
+          {[].concat(codes).map((code, i) => (
+            <p key={i}>
+              <strong>{code}:</strong> {[].concat(statements)[i]}
+            </p>
+          ))}
+        </div>
       </ExpansionPanelSummary>
 
       <ExpansionPanelDetails className="alignmentNotes">

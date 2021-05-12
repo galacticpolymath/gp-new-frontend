@@ -20,7 +20,7 @@ const hireUsStyle = {
     zIndex: 1,
     display: "grid",
     placeItems: "center",
-    paddingTop: "4rem"
+    // paddingTop: "4rem"
   },
   title: {
     ...title

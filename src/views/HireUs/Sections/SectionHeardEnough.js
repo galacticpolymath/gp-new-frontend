@@ -25,7 +25,7 @@ export default function SectionHeardEnough() {
           <div className={"vignette"}>
             <img
               src={makeCloudinaryUrl(
-                "q_auto:best,f_auto,c_fill,g_face,w_2000/v1614277500/Photos/classroom/UnclearPermissions_ReplaceWhenPossible/classroom_w_laptops_HMMS_g7_uem7hc.jpg"
+                "w_1000/v1614277500/Photos/classroom/UnclearPermissions_ReplaceWhenPossible/classroom_w_laptops_HMMS_g7_uem7hc.jpg"
               )}
               alt="A diverse classroom of seventh graders working at laptops."
             />

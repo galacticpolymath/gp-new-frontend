@@ -39,7 +39,7 @@ export default function PricingPage() {
   const classes = useStyles();
 
   function handleIntersection (e,entry) {
-    if (e == true){
+    if (e === true){
       const activeNode = document.querySelector(`.${entry.target.firstChild.id}`)
       activeNode.classList.add('activeDot')
     }
@@ -169,13 +169,13 @@ export default function PricingPage() {
         {/*restart container*/}
         <div className={classes.container}>
         <Observer {...options}><div className={"scroll-indicator"} id="section03"></div>
-                
+
 
           {/*</GridItem>*/}
 
           <SectionAddOns /></Observer>
           {/*GP Logo*/}
-          
+
           <div className={classNames(classes.container,classes.textCenter)}>
           <img
             src={makeCloudinaryUrl("v1593304396/logos/GP_logo_grad_transBG_300_tbn4ei.jpeg")}
@@ -261,7 +261,7 @@ export default function PricingPage() {
       />
 
 
-  
+
     </div>
   );
 }

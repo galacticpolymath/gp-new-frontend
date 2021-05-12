@@ -1,8 +1,12 @@
-@import '../../variables';
+@import "../../variables";
+@import "../../../../assets/scss/core/variables";
 
 .TeachingMethod {
   button {
     padding: 0;
+  }
+  @media (max-width: map-get($grid-breakpoints, "md")) {
+    padding-right: 2rem;
   }
   .ResourceSummary {
     background: $gray;

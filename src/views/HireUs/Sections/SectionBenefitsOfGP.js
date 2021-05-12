@@ -27,7 +27,17 @@ export default function SectionBenefitsOfGP() {
         <GridItem>
           <h2>Benefits of working with us</h2>
         </GridItem>
-
+        <GridItem>
+          <InfoArea
+            className={classes.custInfoArea}
+            title={"Expand Your Outreach"}
+            description={
+              "Make grant proposals more impactful and achieve much broader impacts, while reducing your own workload."
+            }
+            icon={BlurOn}
+            iconColor={"rose"}
+          />
+        </GridItem>
         <GridItem>
           <InfoArea
             className={classes.custInfoArea}
@@ -49,19 +59,6 @@ export default function SectionBenefitsOfGP() {
               "with artistry, authentic data, and storytelling."
             }
             icon={PlusOne}
-            iconColor={"rose"}
-          />
-        </GridItem>
-
-        <GridItem>
-          <InfoArea
-            className={classes.custInfoArea}
-            title={"Expand Your Outreach"}
-            description={
-              "Achieve much broader impacts by reaching classrooms across the United States, with " +
-              "a fraction of the hassle of doing it all on your own."
-            }
-            icon={BlurOn}
             iconColor={"rose"}
           />
         </GridItem>

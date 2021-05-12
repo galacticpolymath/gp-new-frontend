@@ -1,6 +1,10 @@
-@import '../../variables';
+@import "../../variables";
+@import "../../../../assets/scss/core/variables";
 
 .Standards {
+  @media (max-width: map-get($grid-breakpoints, "md")) {
+    padding-right: 2rem !important;
+  }
   * {
     min-height: 0 !important;
   }
@@ -68,13 +72,14 @@
       }
       .StandardsGroup {
         &:not(:last-child) {
-          border-bottom: 2px solid rgba($charcoal, .4);
+          border-bottom: 2px solid rgba($charcoal, 0.4);
         }
         .MuiCollapse-entered {
-          border-top: 1px solid rgba($charcoal, .2);
-          .MuiCollapse-wrapperInner{
-            //background-color: $gray;
-          }
+          border-top: 1px solid rgba($charcoal, 0.2);
+        }
+        .grades {
+          color: rgba($charcoal, 0.6);
+          font-weight: bold;
         }
         .codes {
           margin: 0;
