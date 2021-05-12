@@ -48,7 +48,7 @@ const descriptionStyle = {
 
   },
   "@media only screen and (max-width: 600px)": {
-    /* tablets */
+    /* sm phones */
 
     thinkBigger: {
       "& h1": {
