@@ -68,6 +68,7 @@ const landingPageStyle = {
     top: "3px",
     position: "relative"
   }
+
 };
 
 export default landingPageStyle;

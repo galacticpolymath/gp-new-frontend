@@ -29,7 +29,7 @@ import SectionAbout from "./Sections/SectionAbout.js";
 import SectionLessons from "./Sections/SectionLessons.js";
 import SectionHow from "./Sections/SectionHow.js";
 import SectionLessonData from "./Sections/SectionLessonData.js";
-import SectionContact from "./Sections/SectionSubscribe.js";
+import SectionSubscribe from "./Sections/SectionSubscribe.js";
 
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 
@@ -100,12 +100,13 @@ export default function LandingPage({ ...rest }) {
           <SectionHow />
         </div>
         <SectionLessonData />
-        <div className={classes.container}>
-          <SectionContact />
+
+          <SectionSubscribe />
+          <br/>
           {/* <SectionProduct />
           <SectionTeam />
           <SectionWork /> */}
-        </div>
+
       </div>
       <Footer
         theme={"transparent"}
