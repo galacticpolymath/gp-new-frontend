@@ -350,7 +350,7 @@ export default function SectionHow() {
             <span
               style={{ marginTop: "0.75rem", display: "inline-block" }}>
                 <img
-                  src={makeCloudinaryUrl("v1593304396/logos/GP_logo_grad_transBG_300_tbn4ei.jpeg")}
+                  src={makeCloudinaryUrl("w_600/v1593304396/logos/GP_logo_grad_transBG_300_tbn4ei.jpeg")}
                   className={classNames(classes.mlAuto, classes.mrAuto)}
                   style={{
                     // width:"10"

@@ -61,7 +61,7 @@ export default function SectionAbout() {
           className={classes.classPhoto}>
             <img
               src={
-                "https://res.cloudinary.com/galactic-polymath/image/upload/v1612979771/assets_marketing/Engineering_Together_1_opqz9h.png"
+                "https://res.cloudinary.com/galactic-polymath/image/upload/w_1000/v1612979771/assets_marketing/Engineering_Together_1_opqz9h.jpeg"
               }
               height="auto"
               width="100%"

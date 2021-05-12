@@ -214,17 +214,20 @@ const headerStyle = (theme) => ({
   },
   //the logo shown at large screen sizes
   hideLogo:{
+    flex: 1,
     "& img": {
-      display: "block",
+      // display: "block",
+      padding:"1px",
       justifySelf: "left",
       alignSelf: "center",
       // height: "auto",
-      maxHeight: "5vh",
-      objectFit: "contain",
+      maxHeight: "40px",
+      // objectFit: "contain",
     }
   },
   //this is the logo shown at small screen sizes
   showLogo:{
+    // flex: 1,
     "& img": {
      display: "none",
      justifySelf: "left",
@@ -252,12 +255,33 @@ const headerStyle = (theme) => ({
       display: "none",
     },
     showLogo: {
+      display: "grid",
+      justifyItems: "left",
       "& img": {
-        display: "block",
-        width: "75vw",
+        justifySelf: "left",
+        objectFit: "contain",
+        marginRight: "auto",
+        // display: "block",
+        // width: "75vw",
+      }
+    },
+    "@media only screen and (max-width: 400px)": {
+      /* tiny phones (iphone x) */
+      hideLogo: {
+        display: "none",
+      },
+      showLogo: {
+        display: "grid",
+        justifyItems: "left",
+        "& img": {
+          justifySelf: "left",
+          objectFit: "contain",
+          marginRight: "auto",
+          // display: "block",
+          width: "75vw",
+        }
       }
     }
-
   }
 
 
