@@ -5,6 +5,10 @@
     color: $hydrogen-blue;
     text-transform: uppercase;
   }
+  h4 {
+    padding: 0 2rem;
+    font-size: 1.25rem;
+  }
   .RichText {
     img {
       display: block;
@@ -13,14 +17,20 @@
       margin: 2rem auto 1rem auto;
     }
   }
+  .ExpansionPanelDetails > div > .RichText {
+    padding: 0 2rem;
+    p {
+      font-size: 1.1rem;
+    }
+  }
 
   .LessonPart {
     border: none;
+    padding: 0;
+    margin: 0;
     &::before {
       display: none;
     }
-    padding: 0;
-    margin: 0;
     &.Mui-expanded {
       margin: 2rem 0 !important;
     }
@@ -44,12 +54,8 @@
     .MuiCollapse-wrapper {
       padding-top: 0 !important;
     }
-    .PartBody {
-      margin: 0 1rem 1rem 1rem;
-      border-left: 2px solid rgba($charcoal, 0.08);
-      > * {
-        padding: 0 1rem;
-      }
+    .PartBody > * {
+      padding: 0 2rem;
     }
 
     .MuiExpansionPanelSummary-root {
