@@ -7,8 +7,11 @@ import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
 import RichText from "components/RichText";
+
+import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
+import Step from "./Step";
+
 const useStyles = makeStyles(lessonPlanStyle);
 
 const LessonPart = ({ partNum, partTitle, partDur, partPreface, chunks }) => {
@@ -37,7 +40,17 @@ const LessonPart = ({ partNum, partTitle, partDur, partPreface, chunks }) => {
         </ExpansionPanelSummary>
       </div>
       <ExpansionPanelDetails className="ExpansionPanelDetails PartBody">
-        <RichText content={partPreface} />
+        <div>
+          {chunks &&
+            chunks.map((chunk, i) => (
+              <div key={i} className="chunk">
+                <div>part duration graphic placeholder</div>
+                <h5>{chunk.chunkTitle}</h5>
+                {chunk.steps &&
+                  chunk.steps.map((step, i) => <Step key={i} {...step} />)}
+              </div>
+            ))}
+        </div>
       </ExpansionPanelDetails>
     </ExpansionPanel>
   );
