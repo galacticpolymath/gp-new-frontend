@@ -80,7 +80,10 @@ export default function SectionDescription() {
             to improve the lives of teachers, students, and researchers–because we have been in all
             of those roles. We envision a future where education is bolder, more creative, more equitable,
             and where organizational outreach truly has Broader Impacts.
-           </h4>
+            <a href={"https://vimeo.com/manage/videos/448000812"} rel="noopener noreferrer" target="_blank">
+              &nbsp;See this talk by our founder to learn more.
+            </a>
+            </h4>
         </GridItem>
         <div
           // xs={12}
