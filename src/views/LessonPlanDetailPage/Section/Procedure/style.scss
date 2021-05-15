@@ -24,6 +24,12 @@
     }
   }
 
+  .RichText.tldr {
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
   .LessonPart {
     border: none;
     padding: 0;
@@ -36,6 +42,21 @@
     }
     p {
       margin: 0.8rem 0;
+    }
+    .iconNote {
+      font-size: 0.9rem;
+      margin: 1rem 0 0 0;
+      display: flex;
+      p {
+        margin: 0;
+      }
+      .bulletIcon {
+        height: 2rem;
+        width: 3rem;
+        box-sizing: border-box;
+        padding: 0 1rem 0 0;
+        float: left;
+      }
     }
     .PartPreface {
       padding: 0;
@@ -59,7 +80,9 @@
         padding: 0 2rem;
         margin-left: 1rem;
         border-left: 1px solid rgba($hydrogen-blue, 0.5);
+        padding-bottom: 2rem;
         h5 {
+          margin: 0;
           padding: 0;
         }
         .step {
@@ -78,6 +101,10 @@
         }
         .vocab {
           padding: 0.5rem 1rem;
+          margin: 1.5rem 0 2rem 0;
+          ul {
+            padding-left: 1.5rem;
+          }
         }
       }
     }
