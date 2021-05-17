@@ -1,3 +1,4 @@
+import { Box } from "@material-ui/core";
 import React from "react";
 
 import Step from "./Step";
@@ -9,11 +10,13 @@ const orderSteps = (steps) => {
   );
 };
 
-const LessonChunk = ({ chunkTitle, steps = [] }) => {
+const LessonChunk = ({ chunkTitle, chunkDur, steps = [] }) => {
   return (
     <div className="LessonChunk">
-      <div>part duration graphic placeholder</div>
-      <h5>{chunkTitle}</h5>
+      <Box boxShadow={3} className="duration">
+        <p>{chunkDur} minutes</p>
+        <h5>{chunkTitle}</h5>
+      </Box>
       {orderSteps(steps).map((step, i) => (
         <Step key={i} {...step} />
       ))}

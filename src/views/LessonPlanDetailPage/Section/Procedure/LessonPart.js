@@ -14,13 +14,7 @@ import Chunk from "./Chunk";
 
 const useStyles = makeStyles(lessonPlanStyle);
 
-const LessonPart = ({
-  partNum,
-  partTitle,
-  partDur,
-  partPreface,
-  chunks = [],
-}) => {
+const LessonPart = ({ partNum, partTitle, partPreface, chunks = [] }) => {
   const classes = useStyles();
   const [expanded, expand] = useState(false);
   return (

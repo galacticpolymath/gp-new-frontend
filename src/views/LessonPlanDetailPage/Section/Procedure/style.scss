@@ -76,8 +76,21 @@
       padding-top: 0 !important;
     }
     .PartBody {
+      .duration {
+        background: #eee;
+        border-radius: 0.5rem;
+        padding: 0.25rem 1rem;
+        margin: 0;
+        p {
+          color: $hydrogen-blue;
+          font-weight: bold;
+        }
+        h5 {
+          color: rgba($charcoal, 0.9);
+        }
+      }
       .LessonStep {
-        padding: 0 2rem;
+        padding: 1.5rem 2rem;
         margin-left: 1rem;
         border-left: 1px solid rgba($hydrogen-blue, 0.5);
         padding-bottom: 2rem;
