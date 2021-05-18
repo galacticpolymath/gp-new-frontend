@@ -89,11 +89,17 @@
           color: rgba($charcoal, 0.9);
         }
       }
+      > div {
+        padding-top: 1rem;
+      }
       .LessonStep {
         padding: 1.5rem 2rem;
         margin-left: 1rem;
         border-left: 1px solid rgba($hydrogen-blue, 0.5);
         padding-bottom: 2rem;
+        > *:last-child {
+          margin-bottom: 0 !important;
+        }
         h5 {
           margin: 0;
           padding: 0;
