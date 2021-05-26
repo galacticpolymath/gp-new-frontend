@@ -102,7 +102,7 @@ export default function Graph({durList, chunkNum}){
         .attr("style", "fill:rgb(50,132,193)")
         .attr("class","lightbar");
 
-        // TITLE 
+        // TITLE -- "if" switch is for alignment
         /*
         if (chunkNum == 0) {
             svg.selectAll('text.title').data(blueCoords).enter().append('text')
