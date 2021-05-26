@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 
 import { makeStyles } from "@material-ui/core/styles";
@@ -17,7 +17,14 @@ const useStyles = makeStyles(lessonPlanStyle);
 const LessonPart = ({ partNum, partTitle, partPreface, chunks = [] }) => {
   const classes = useStyles();
   const [expanded, expand] = useState(false);
-  return (
+  
+
+  let durList = []
+  chunks.forEach(chunk=>{
+    durList.push(chunk.chunkDur)
+  })
+
+    return (
     <ExpansionPanel
       className={"ExpansionPanel LessonPart"}
       expanded={expanded}
@@ -42,7 +49,7 @@ const LessonPart = ({ partNum, partTitle, partPreface, chunks = [] }) => {
       <ExpansionPanelDetails className="ExpansionPanelDetails PartBody">
         <div>
           {chunks.map((chunk, i) => (
-            <Chunk key={i} {...chunk} />
+            <Chunk key={i} chunkNum={i} durList={durList} {...chunk} />
           ))}
         </div>
       </ExpansionPanelDetails>

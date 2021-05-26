@@ -1,14 +1,18 @@
 import { Box } from "@material-ui/core";
-import React from "react";
+import React, {useState, useEffect} from "react";
 
 import Step from "./Step";
+import Graph from '../../../../components/ChunkGraph/Graph'
 
-const LessonChunk = ({ chunkTitle, chunkDur, steps = [] }) => {
+
+
+const LessonChunk = ({ chunkTitle, steps = [], chunkNum, durList }) => {
+  
   return (
     <div className="LessonChunk">
       <Box boxShadow={3} className="duration">
-        <p>{chunkDur} minutes</p>
-        <h5>{chunkTitle}</h5>
+        <Graph durList={durList} chunkNum={chunkNum} chunkTitle={chunkTitle} />
+        
       </Box>
       {steps.map((step, i) => (
         <Step key={i} {...step} />
