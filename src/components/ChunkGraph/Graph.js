@@ -1,7 +1,7 @@
 import React, {useRef, useEffect} from 'react';
 import * as d3 from 'd3';
 
-export default function Graph({durList, chunkNum, chunkTitle}){
+export default function Graph({durList, chunkNum}){
     const container = useRef()
     
     useEffect(()=>{
@@ -10,20 +10,21 @@ export default function Graph({durList, chunkNum, chunkTitle}){
 
     function update(){
     
+        const plotDisplace = 0
         const svgWidth = 900;
         const width = svgWidth - 5
-        const height = 120;
+        const height = 90 + plotDisplace;
 
         let svg = d3.select(container.current).append("svg")
-        .attr("width", svgWidth)
-        .attr("height", height);
+        .attr("viewBox","0 0 " + svgWidth + " " + height)
+        .classed("svg-content-responsive", true)
 
         /* 1 bar space for each minute, width is 900
         (barSpacing + 3px gap) * minutes = 900
         */
 
         //const testList = [15, 15, 15, 15, 15]
-        const plotDisplace = 32
+        
         const barHeight = 40
         const endGap = 10 // gap on either side of the axis before first/last ticks
         const minutes = durList.reduce((a, b) => a + b, 0); // total minutes
@@ -102,7 +103,7 @@ export default function Graph({durList, chunkNum, chunkTitle}){
         .attr("class","lightbar");
 
         // TITLE 
-        
+        /*
         if (chunkNum == 0) {
             svg.selectAll('text.title').data(blueCoords).enter().append('text')
             .attr('x', blueCoords[0] + 2 + gap / 2)
@@ -137,7 +138,7 @@ export default function Graph({durList, chunkNum, chunkTitle}){
             .attr("font-weight","bold")
             .text(chunkTitle)
         }
-        
+        */
         
     }
     //"Montserrat", "Helvetica", "Arial", sans-serif
