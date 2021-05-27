@@ -1,7 +1,7 @@
 import React, {useRef, useEffect} from 'react';
 import * as d3 from 'd3';
 
-export default function Graph({durList, chunkNum}){
+export default function Graph({durList, chunkNum, chunkTitle}){
     const container = useRef()
     
     useEffect(()=>{
@@ -10,7 +10,7 @@ export default function Graph({durList, chunkNum}){
 
     function update(){
     
-        const plotDisplace = 0
+        const plotDisplace = 30
         const svgWidth = 900;
         const width = svgWidth - 5
         const height = 90 + plotDisplace;
@@ -71,6 +71,7 @@ export default function Graph({durList, chunkNum}){
         svg.selectAll('text').data(numCoords).enter().append('text')
         .attr('x', d => (d.coord -4))
         .attr('y', plotDisplace + 80)
+        .attr('stroke','none')
         .attr('style','fill:black')
         .attr('font-weight','bold')
         .text(d =>d.value)
@@ -102,16 +103,19 @@ export default function Graph({durList, chunkNum}){
         .attr("style", "fill:rgb(50,132,193)")
         .attr("class","lightbar");
 
-        // TITLE -- "if" switch is for alignment
+        // TITLE -- "if" switch is for alignment but causes a bug on the first plot
+        
         /*
         if (chunkNum == 0) {
             svg.selectAll('text.title').data(blueCoords).enter().append('text')
-            .attr('x', blueCoords[0] + 2 + gap / 2)
+            .attr('x', blueCoords[0] + 2 + gap)
             .attr('y', plotDisplace)
             .attr('fill', 'black')
+            .text(currentDuration + " minutes")
             .attr("font-family", '"Montserrat", "Helvetica", "Arial", sans-serif')
+            .attr("font-size","1em")
             .attr("font-weight","bold")
-            .text(chunkTitle)
+            .attr("stroke","none")
         }
         
         
@@ -120,28 +124,31 @@ export default function Graph({durList, chunkNum}){
             svg.selectAll('text.title').data(anchorPoint).enter().append('text')
             .attr('x', anchorPoint[0] + 2 + gap / 2)
             .attr('y', plotDisplace)
+            .text(currentDuration + " minutes")
             .attr('text-anchor','end')
             .attr('fill', 'black')
             .attr("font-family", '"Montserrat", "Helvetica", "Arial", sans-serif')
             .attr("font-weight","bold")
-            .text(chunkTitle)
+
         }
 
-        else {
+        else {*/
             const anchorPoint = [(blueCoords[blueCoords.length-1] - blueCoords[0] + barSpacing) / 2 + blueCoords[0]]
             svg.selectAll('text.title').data(anchorPoint).enter().append('text')            
             .attr('x', anchorPoint[0] + 2 + gap / 2)
             .attr('y', plotDisplace)
+            .text(currentDuration + " minutes")
             .attr('text-anchor','middle')
             .attr('fill', 'black')
             .attr("font-family", '"Montserrat", "Helvetica", "Arial", sans-serif')
             .attr("font-weight","bold")
-            .text(chunkTitle)
-        }
-        */
+
+        //}
+        
+        
         
     }
-    //"Montserrat", "Helvetica", "Arial", sans-serif
+
     return (
         <div ref={container}>
 
