@@ -1,7 +1,7 @@
 import React, {useRef, useEffect} from 'react';
 import * as d3 from 'd3';
 
-export default function Graph({durList, chunkNum, chunkTitle}){
+export default function Graph({durList, chunkNum}){
     const container = useRef()
     
     useEffect(()=>{

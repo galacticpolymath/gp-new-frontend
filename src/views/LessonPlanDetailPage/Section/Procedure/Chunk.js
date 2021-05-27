@@ -11,8 +11,8 @@ const LessonChunk = ({ chunkTitle, steps = [], chunkNum, durList }) => {
   return (
     <div className="LessonChunk">
       <Box boxShadow={3} className="duration">
-        <Graph durList={durList} chunkNum={chunkNum} chunkTitle={chunkTitle} />
-        
+        <h5>{chunkTitle}</h5>
+        <Graph durList={durList} chunkNum={chunkNum} />        
       </Box>
       {steps.map((step, i) => (
         <Step key={i} {...step} />
