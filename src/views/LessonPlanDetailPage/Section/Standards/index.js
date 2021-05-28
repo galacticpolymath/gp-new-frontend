@@ -22,33 +22,40 @@ const Standards = ({ Data }) => {
     <div className={"Standards " + classes.container}>
       <ExpansionPanel
         className="ExpansionPanel"
-        expanded={expanded}
+        expanded={!expanded}
         onChange={() => expand(!expanded)}
       >
         <ExpansionPanelSummary
           className="ExpansionPanelSummary"
           expandIcon={<ExpandMoreIcon />}
         >
-          <h3>Standards and Assessments</h3>
+          <h3>Learning Standards</h3>
         </ExpansionPanelSummary>
-
-        <ExpansionPanelDetails className="ExpansionPanelDetails">
-          <h3>Target Standard(s)</h3>
-          {Data.filter(({ target }) => target).map((subject, i) => (
-            <Subject initiallyExpanded key={"target-" + i} {...subject} />
-          ))}
-          <h3>Connected Standard(s)</h3>
-          {Data.filter(({ target }) => !target).map((subject, i) => (
-            <Subject key={"connected-" + i} {...subject} />
-          ))}
-        </ExpansionPanelDetails>
-      </ExpansionPanel>
+        <div className={"clickInvitation"}>
+          Note:&nbsp;
+            <span className={"clickOn"}>
+             Click on any standard
+            <i className="fas fa-mouse-pointer" />
+          </span>
+        for details on how the lesson aligns to it.
     </div>
-  );
+  <ExpansionPanelDetails className="ExpansionPanelDetails">
+    <h3>Target Standard(s)</h3>
+    {Data.filter(({ target }) => target).map((subject, i) => (
+      <Subject initiallyExpanded key={"target-" + i} {...subject} />
+    ))}
+    <h3>Connected Standard(s)</h3>
+    {Data.filter(({ target }) => !target).map((subject, i) => (
+      <Subject key={"connected-" + i} {...subject} />
+    ))}
+  </ExpansionPanelDetails>;
+</ExpansionPanel>
+</div>
+);
 };
 
 Standards.propTypes = {
-  Data: PropTypes.array,
+Data: PropTypes.array,
 };
 
 export default Standards;
