@@ -8,6 +8,7 @@ import GridItem from "components/Grid/GridItem";
 import Image from "../../../components/StrapiImage";
 import TagCloud from "../../../components/TagCloud";
 import RichText from "../../../components/RichText";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 // Material UI Icons
 import FaceIcon from "@material-ui/icons/Face";
@@ -39,7 +40,9 @@ const Overview = ({
       <div className={classes.container}>
         <Card className="stats">
           <GridContainer>
+            <AnchorLink href={"#standards"} offset={"125px"}>
             <Image {...SteamEpaulette} className="epaulette" />
+          </AnchorLink>
             <GridItem sm={4} className="border-right">
               <MenuBookIcon fontSize="large" className={"statIcon"} />
               <h5>Target Subject: </h5>
