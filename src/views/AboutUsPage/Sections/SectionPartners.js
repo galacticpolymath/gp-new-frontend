@@ -97,7 +97,7 @@ export default function SectionPartners() {
         <GridItem xs={12} sm={6} md={4}>
           <Card pricing plain>
             <CardAvatar profileSq>
-              <a href={"https://phuturedoctors.com/"}>
+              <a href={"https://www.onezoom.org/"}>
                 <img
                   src={makeCloudinaryUrl(
                     "q_auto:best,f_auto,w_300/v1597116048/Partners/onezoom_fkx7s8.jpg"

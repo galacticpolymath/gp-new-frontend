@@ -499,7 +499,6 @@ export default function SectionTeam() {
             </CardFooter>
           </Card>
         </GridItem>
-
         {/*LEIGHA*/}
         <GridItem md={4} sm={12}>
           <Card profile plain>
@@ -582,6 +581,81 @@ export default function SectionTeam() {
             </CardFooter>
           </Card>
         </GridItem>
+
+
+        {/*PATRICK*/}
+        <GridItem md={4} sm={12}>
+          <Card profile plain>
+            <CardAvatar profile plain>
+              <img
+                src={makeCloudinaryUrl(
+                  "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1622225781/Team/Patrick-Cheng_urlc4o.jpg"
+                )}
+                alt="profile-pic"
+                className={classes.img}
+              />
+            </CardAvatar>
+            <CardBody plain>
+              <h4 className={classes.cardTitle}>
+                Patrick Cheng
+              </h4>
+              <h6 className={classes.textMuted}>
+                Lesson Plan UI/UX Lead
+              </h6>
+              <p className={classes.cardDescription}>
+                An earnest problem solver that loves to break things down and build things up. Loves food, beer, and communing with the great outdoors.
+              </p>
+            </CardBody>
+            <CardFooter className={classes.justifyContent}>
+              <Button
+                href="https://github.com/chengp3"
+                target="_blank"
+                justIcon
+                simple
+                color={"primary"}
+              >
+                <i className="fab fa-github" />
+              </Button>
+              <Button
+                href="https://www.linkedin.com/in/patrick-cheng-05172912/"
+                target="_blank"
+                justIcon
+                simple
+                color={"primary"}
+              >
+                <i className="fab fa-linkedin" />
+              </Button>
+              {/*<Button*/}
+              {/*  href=""*/}
+              {/*  target="_blank"*/}
+              {/*  justIcon*/}
+              {/*  simple*/}
+              {/*  color={"primary"}*/}
+              {/*>*/}
+              {/*  <i className="fab fa-twitter" />*/}
+              {/*</Button>*/}
+              {/*<Button*/}
+              {/*  href=""*/}
+              {/*  target="_blank"*/}
+              {/*  justIcon*/}
+              {/*  simple*/}
+              {/*  color={"primary"}*/}
+              {/*>*/}
+              {/*  <i className="fab fa-youtube" />*/}
+              {/*</Button>*/}
+              <Button
+                href="https://www.instagram.com/misterrunout/"
+                target="_blank"
+                justIcon
+                simple
+                color={"primary"}
+              >
+                <i className="fab fa-instagram" />
+              </Button>
+            </CardFooter>
+          </Card>
+        </GridItem>
+
         {/*CASTLE*/}
         <GridItem md={4} sm={12}>
           <Card profile plain>
