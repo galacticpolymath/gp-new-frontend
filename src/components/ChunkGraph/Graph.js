@@ -108,7 +108,6 @@ export default function Graph({ durList, chunkNum }) {
 
     // BLUE BARS
     const currentDuration = durList[chunkNum];
-    //console.log(xcoords.slice(pastduration, pastduration + currentDuration))
     const blueCoords = xcoords.slice(
       pastduration,
       pastduration + currentDuration
