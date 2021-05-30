@@ -1,111 +1,132 @@
-import React, {useRef, useEffect} from 'react';
-import * as d3 from 'd3';
+import React, { useRef, useEffect } from "react";
+import * as d3 from "d3";
 
-export default function Graph({durList, chunkNum}){
-    const container = useRef()
-    
-    useEffect(()=>{
-        update();
-    },[])
+export default function Graph({ durList, chunkNum }) {
+  const container = useRef();
 
-    function update(){
-    
-        const plotDisplace = 30
-        const svgWidth = 900;
-        const width = svgWidth - 5
-        const height = 90 + plotDisplace;
+  useEffect(() => {
+    update();
+  }, []);
 
-        let svg = d3.select(container.current).append("svg")
-        .attr("viewBox","0 0 " + svgWidth + " " + height)
-        .classed("svg-content-responsive", true)
+  function update() {
+    const plotDisplace = 30;
+    const svgWidth = 900;
+    const width = svgWidth - 5;
+    const height = 90 + plotDisplace;
 
-        /* 1 bar space for each minute, width is 900
+    let svg = d3
+      .select(container.current)
+      .append("svg")
+      .attr("viewBox", "0 0 " + svgWidth + " " + height)
+      .classed("svg-content-responsive", true);
+
+    /* 1 bar space for each minute, width is 900
         (barSpacing + 3px gap) * minutes = 900
         */
 
-        //const testList = [15, 15, 15, 15, 15]
-        
-        const barHeight = 40
-        const endGap = 10 // gap on either side of the axis before first/last ticks
-        const minutes = durList.reduce((a, b) => a + b, 0); // total minutes
-        const gap = 1
-        const barSpacing = (width - endGap * 2) / minutes - gap
-        const range = [...Array(minutes + 1).keys()] // array of ints 0:minutes
-        
-        // x coords for every bar and tick
-        let xcoords = []
-        for (let i = 0; i < minutes + 1; i++) {
-            xcoords[i] = range[i] * barSpacing + gap * i + endGap;
-        }
+    //const testList = [15, 15, 15, 15, 15]
 
-        // x coords for numbers
-        let numCoords = []
-        for (let i = 0; i < minutes + 1; i++) {
-            if (i % 5 == 0 && i < 10) {
-                numCoords.push({value: i, coord: xcoords[i]})
-            }
-            if (i % 5 == 0 && i >= 10) {
-                numCoords.push({value: i, coord: xcoords[i] - 4})
-            }
-        }
+    const barHeight = 40;
+    const endGap = 10; // gap on either side of the axis before first/last ticks
+    const minutes = durList.reduce((a, b) => a + b, 0); // total minutes
+    const gap = 1;
+    const barSpacing = (width - endGap * 2) / minutes - gap;
+    const range = [...Array(minutes + 1).keys()]; // array of ints 0:minutes
 
-        // AXIS
-        svg.append('rect')
-        .attr('x',0)
-        .attr('y', plotDisplace + barHeight + 15)
-        .attr('width',width)
-        .attr('height',2)
-        .attr('style',"fill:black")
-        .attr('class','axis')
+    // x coords for every bar and tick
+    let xcoords = [];
+    for (let i = 0; i < minutes + 1; i++) {
+      xcoords[i] = range[i] * barSpacing + gap * i + endGap;
+    }
 
-        // TICK MARKS 
-        svg.selectAll('rect.tick').data(xcoords).enter().append('rect')
-        .attr('x',d=>d)
-        .attr('y', plotDisplace + 56)
-        .attr("width", 2)
-        .attr("height", 7)
-        .attr("style", "fill:black)")
-        .attr("class", "tick")
+    // x coords for numbers
+    let numCoords = [];
+    for (let i = 0; i < minutes + 1; i++) {
+      if (i % 5 == 0 && i < 10) {
+        numCoords.push({ value: i, coord: xcoords[i] });
+      }
+      if (i % 5 == 0 && i >= 10) {
+        numCoords.push({ value: i, coord: xcoords[i] - 4 });
+      }
+    }
 
-        // NUMBERS <text class="heavy" x="8" y="65" fill="black">0</text>
-        svg.selectAll('text').data(numCoords).enter().append('text')
-        .attr('x', d => (d.coord -4))
-        .attr('y', plotDisplace + 80)
-        .attr('stroke','none')
-        .attr('style','fill:black')
-        .attr('font-weight','bold')
-        .text(d =>d.value)
+    // AXIS
+    svg
+      .append("rect")
+      .attr("x", 0)
+      .attr("y", plotDisplace + barHeight + 15)
+      .attr("width", width)
+      .attr("height", 2)
+      .attr("style", "fill:black")
+      .attr("class", "axis");
 
-        // GRAY BARS 
-        let pastduration = 0
+    // TICK MARKS
+    svg
+      .selectAll("rect.tick")
+      .data(xcoords)
+      .enter()
+      .append("rect")
+      .attr("x", (d) => d)
+      .attr("y", plotDisplace + 56)
+      .attr("width", 2)
+      .attr("height", 7)
+      .attr("style", "fill:black)")
+      .attr("class", "tick");
 
-        for (let i = 0; i < chunkNum; i++){
-            pastduration += durList[i]
-        }
+    // NUMBERS <text class="heavy" x="8" y="65" fill="black">0</text>
+    svg
+      .selectAll("text")
+      .data(numCoords)
+      .enter()
+      .append("text")
+      .attr("x", (d) => d.coord - 4)
+      .attr("y", plotDisplace + 80)
+      .attr("stroke", "none")
+      .attr("style", "fill:black")
+      .attr("font-weight", "bold")
+      .text((d) => d.value);
 
-        svg.selectAll('rect.darkbar').data(xcoords.slice(0,pastduration)).enter().append('rect')
-        .attr('x',d => d + 2 + gap / 2)
-        .attr('y', plotDisplace + barHeight + 5)
-        .attr("width", barSpacing-gap)
-        .attr("height", 10)
-        .attr("style", "fill:rgb(30,79,116)")
-        .attr("class", "darkbar")
+    // GRAY BARS
+    let pastduration = 0;
 
-        // BLUE BARS 
-        const currentDuration = durList[chunkNum]
-        //console.log(xcoords.slice(pastduration, pastduration + currentDuration))
-        const blueCoords = xcoords.slice(pastduration, pastduration + currentDuration)
-        svg.selectAll('rect.lightbar').data(blueCoords).enter().append('rect')
-        .attr('x',d => d + 2 + gap / 2)
-        .attr('y', plotDisplace + 15)
-        .attr("width", barSpacing-gap)
-        .attr("height", 40)
-        .attr("style", "fill:rgb(50,132,193)")
-        .attr("class","lightbar");
+    for (let i = 0; i < chunkNum; i++) {
+      pastduration += durList[i];
+    }
 
-        // TITLE -- "if" switch is for alignment but causes a bug on the first plot
-        
-        /*
+    svg
+      .selectAll("rect.darkbar")
+      .data(xcoords.slice(0, pastduration))
+      .enter()
+      .append("rect")
+      .attr("x", (d) => d + 2 + gap / 2)
+      .attr("y", plotDisplace + barHeight + 5)
+      .attr("width", barSpacing - gap)
+      .attr("height", 10)
+      .attr("style", "fill:rgb(30,79,116)")
+      .attr("class", "darkbar");
+
+    // BLUE BARS
+    const currentDuration = durList[chunkNum];
+    //console.log(xcoords.slice(pastduration, pastduration + currentDuration))
+    const blueCoords = xcoords.slice(
+      pastduration,
+      pastduration + currentDuration
+    );
+    svg
+      .selectAll("rect.lightbar")
+      .data(blueCoords)
+      .enter()
+      .append("rect")
+      .attr("x", (d) => d + 2 + gap / 2)
+      .attr("y", plotDisplace + 15)
+      .attr("width", barSpacing - gap)
+      .attr("height", 40)
+      .attr("style", "fill:rgb(50,132,193)")
+      .attr("class", "lightbar");
+
+    // TITLE -- "if" switch is for alignment but causes a bug on the first plot
+
+    /*
         if (chunkNum == 0) {
             svg.selectAll('text.title').data(blueCoords).enter().append('text')
             .attr('x', blueCoords[0] + 2 + gap)
@@ -133,25 +154,25 @@ export default function Graph({durList, chunkNum}){
         }
 
         else {*/
-            const anchorPoint = [(blueCoords[blueCoords.length-1] - blueCoords[0] + barSpacing) / 2 + blueCoords[0]]
-            svg.selectAll('text.title').data(anchorPoint).enter().append('text')            
-            .attr('x', anchorPoint[0] + 2 + gap / 2)
-            .attr('y', plotDisplace)
-            .text(currentDuration + " minutes")
-            .attr('text-anchor','middle')
-            .attr('fill', 'black')
-            .attr("font-family", '"Montserrat", "Helvetica", "Arial", sans-serif')
-            .attr("font-weight","bold")
+    const anchorPoint = [
+      (blueCoords[blueCoords.length - 1] - blueCoords[0] + barSpacing) / 2 +
+        blueCoords[0],
+    ];
+    svg
+      .selectAll("text.title")
+      .data(anchorPoint)
+      .enter()
+      .append("text")
+      .attr("x", anchorPoint[0] + 2 + gap / 2)
+      .attr("y", plotDisplace)
+      .text(currentDuration + " minutes")
+      .attr("text-anchor", "middle")
+      .attr("fill", "black")
+      .attr("font-family", '"Montserrat", "Helvetica", "Arial", sans-serif')
+      .attr("font-weight", "bold");
 
-        //}
-        
-        
-        
-    }
+    //}
+  }
 
-    return (
-        <div ref={container}>
-
-        </div>
-    )
+  return <div ref={container}></div>;
 }
