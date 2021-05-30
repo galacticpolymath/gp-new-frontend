@@ -83,6 +83,12 @@
   }
 }
 
+.ExpansionPanelSummary {
+  &:active {
+    background: inherit;
+  }
+}
+
 .Standards {
   .MuiExpansionPanelDetails-root {
     display: block;

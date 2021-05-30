@@ -43,7 +43,7 @@ const Acknowledgments = ({ index, SectionTitle, Data = [] }) => {
 Acknowledgments.propTypes = {
   index: PropTypes.number,
   SectionTitle: PropTypes.string,
-  Data: PropTypes.object,
+  Data: PropTypes.array,
 };
 
 export default Acknowledgments;

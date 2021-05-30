@@ -19,7 +19,7 @@ import LessonCards from "./Sections/LessonCards.js";
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 
 import cachedLessons from "../LessonPlanDetailPage/data/lesson-plans.json";
-import { fetchAll } from "../LessonPlanDetailPage/modules/lessonsApi.js";
+import { fetchAll } from "../LessonPlanDetailPage/data/lessonsApi.js";
 
 import lessonsPageStyle from "assets/jss/material-kit-pro-react/views/lessonsPageStyle.js";
 import SectionSubscribe from "../LandingPage/Sections/SectionSubscribe";
@@ -107,7 +107,7 @@ export default function LessonsPage() {
           {lessons && <LessonCards lessons={lessons} />}
         </div>
       </div>
-      <SectionSubscribe/>
+      <SectionSubscribe />
       <Footer content={<GPcopyrightFooter />} />
     </div>
   );

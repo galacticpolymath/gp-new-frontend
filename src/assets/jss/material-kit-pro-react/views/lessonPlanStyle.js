@@ -17,6 +17,9 @@ const lessonPlanStyle = {
   },
   LessonCategories: {
     fontSize: "11pt"
+  },
+  inlineIcon: {
+    verticalAlign: "sub"
   }
 };
 export default lessonPlanStyle;

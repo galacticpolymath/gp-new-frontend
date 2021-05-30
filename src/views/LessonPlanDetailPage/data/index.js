@@ -1,6 +1,6 @@
 /**
  * Fetch but abandon the request after `timeout` milliseconds.
- * Source: https://dmitripavlutin.com/timeout-fetch-request/
+ * {@link Source|https://dmitripavlutin.com/timeout-fetch-request/}
  */
 export const fetchWithTimeout = async (url, timeout = 3000) => {
   if (!timeout) {
