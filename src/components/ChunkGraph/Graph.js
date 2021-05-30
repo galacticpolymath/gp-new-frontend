@@ -9,8 +9,12 @@ export default function Graph({ durList, chunkNum }) {
   }, []);
 
   function update() {
-    const plotDisplace = 30;
+    /**
+     * 1 bar space for each minute, width is 900
+     * (barSpacing + 3px gap) * minutes = 900
+     */
     const svgWidth = 900;
+    const plotDisplace = 30;
     const width = svgWidth - 5;
     const height = 90 + plotDisplace;
 
@@ -20,18 +24,15 @@ export default function Graph({ durList, chunkNum }) {
       .attr("viewBox", "0 0 " + svgWidth + " " + height)
       .classed("svg-content-responsive", true);
 
-    /* 1 bar space for each minute, width is 900
-        (barSpacing + 3px gap) * minutes = 900
-        */
-
-    //const testList = [15, 15, 15, 15, 15]
-
     const barHeight = 40;
-    const endGap = 10; // gap on either side of the axis before first/last ticks
-    const minutes = durList.reduce((a, b) => a + b, 0); // total minutes
+    // gap on either side of the axis before first/last ticks
+    const endGap = 10;
+    // total minutes
+    const minutes = durList.reduce((a, b) => a + b, 0);
     const gap = 1;
     const barSpacing = (width - endGap * 2) / minutes - gap;
-    const range = [...Array(minutes + 1).keys()]; // array of ints 0:minutes
+    // array of ints 0:minutes
+    const range = [...Array(minutes + 1).keys()];
 
     // x coords for every bar and tick
     let xcoords = [];
@@ -73,7 +74,7 @@ export default function Graph({ durList, chunkNum }) {
       .attr("style", "fill:black)")
       .attr("class", "tick");
 
-    // NUMBERS <text class="heavy" x="8" y="65" fill="black">0</text>
+    // NUMBERS
     svg
       .selectAll("text")
       .data(numCoords)
@@ -112,6 +113,7 @@ export default function Graph({ durList, chunkNum }) {
       pastduration,
       pastduration + currentDuration
     );
+
     svg
       .selectAll("rect.lightbar")
       .data(blueCoords)
@@ -124,40 +126,11 @@ export default function Graph({ durList, chunkNum }) {
       .attr("style", "fill:rgb(50,132,193)")
       .attr("class", "lightbar");
 
-    // TITLE -- "if" switch is for alignment but causes a bug on the first plot
-
-    /*
-        if (chunkNum == 0) {
-            svg.selectAll('text.title').data(blueCoords).enter().append('text')
-            .attr('x', blueCoords[0] + 2 + gap)
-            .attr('y', plotDisplace)
-            .attr('fill', 'black')
-            .text(currentDuration + " minutes")
-            .attr("font-family", '"Montserrat", "Helvetica", "Arial", sans-serif')
-            .attr("font-size","1em")
-            .attr("font-weight","bold")
-            .attr("stroke","none")
-        }
-        
-        
-        else if (chunkNum == durList.length - 1) {
-            const anchorPoint = [blueCoords[blueCoords.length-1] + barSpacing - gap]
-            svg.selectAll('text.title').data(anchorPoint).enter().append('text')
-            .attr('x', anchorPoint[0] + 2 + gap / 2)
-            .attr('y', plotDisplace)
-            .text(currentDuration + " minutes")
-            .attr('text-anchor','end')
-            .attr('fill', 'black')
-            .attr("font-family", '"Montserrat", "Helvetica", "Arial", sans-serif')
-            .attr("font-weight","bold")
-
-        }
-
-        else {*/
     const anchorPoint = [
       (blueCoords[blueCoords.length - 1] - blueCoords[0] + barSpacing) / 2 +
         blueCoords[0],
     ];
+
     svg
       .selectAll("text.title")
       .data(anchorPoint)
@@ -170,8 +143,6 @@ export default function Graph({ durList, chunkNum }) {
       .attr("fill", "black")
       .attr("font-family", '"Montserrat", "Helvetica", "Arial", sans-serif')
       .attr("font-weight", "bold");
-
-    //}
   }
 
   return <div ref={container}></div>;
