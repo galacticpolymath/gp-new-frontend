@@ -8,6 +8,7 @@ import EmojiObjectsIcon from "@material-ui/icons/EmojiObjects";
 import blogPostsPageStyle from "assets/jss/material-kit-pro-react/views/blogPostsPageStyle.js";
 import RichText from "components/RichText";
 import Badge from "components/Badge/Badge";
+import {blackColor} from "../../../../assets/jss/material-kit-pro-react";
 
 const useStyles = makeStyles(blogPostsPageStyle);
 
@@ -35,13 +36,13 @@ const LessonStep = ({
       )}
       {VariantNotes && (
         <div className="iconNote">
-          <VariationsIcon className="bulletIcon" />
+          <VariationsIcon className="bulletIcon" style={{color: blackColor }} />
           <RichText content={VariantNotes} />
         </div>
       )}
       {TeachingTips && (
         <div className="iconNote">
-          <EmojiObjectsIcon className="bulletIcon" />
+          <EmojiObjectsIcon className="bulletIcon" style={{color: blackColor }} />
           <RichText content={TeachingTips} />
         </div>
       )}

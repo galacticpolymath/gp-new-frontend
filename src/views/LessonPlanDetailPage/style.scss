@@ -19,7 +19,6 @@ body {
   }
 
 
-
   .Header {
     padding-top: 6rem;
     //background: $white;
@@ -27,7 +26,7 @@ body {
 
     @media (max-width: map-get($grid-breakpoints, "md")) {
       margin-right: 2rem;
-      .container{
+      .container {
         padding: 0;
       }
     }
@@ -72,6 +71,7 @@ body {
     overflow: hidden;
     position: relative;
     width: 100%;
+
     iframe {
       display: block;
       position: absolute;
@@ -82,6 +82,7 @@ body {
       max-width: 800px;
     }
   }
+
   .iframeContainer::after {
     padding-top: 56.25%;
     display: block;
@@ -102,12 +103,15 @@ body {
   h5,
   h6 {
     font-weight: bold;
+    color: $galactic-black;
   }
+
 
   p {
     font-size: 1rem;
     line-height: 1.6;
     margin: 0 0 1.4rem;
+    color: $galactic-black;
   }
 
   a {

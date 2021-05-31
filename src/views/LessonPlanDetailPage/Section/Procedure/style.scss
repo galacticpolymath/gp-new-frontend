@@ -2,7 +2,7 @@
 
 .Procedure {
   h3 {
-    color: $hydrogen-blue;
+    color: $hydrogen-blue !important;
     text-transform: uppercase;
   }
 
@@ -53,7 +53,7 @@
 
     .iconNote {
       font-size: 0.9rem;
-      margin: 1rem 0 0 0;
+      margin: 0.5rem 0 0.5rem;
       display: flex;
 
       p {
@@ -86,7 +86,9 @@
         align-items: flex-end;
       }
     }
-
+    .chunkTitle{
+      margin-bottom: 0.5rem;
+    }
     .chunkGraphAxisLabels{
     font-size: 1.1rem;
       font-weight: bold;
@@ -133,12 +135,11 @@
       }
 
       .LessonStep {
-        padding: 1.5rem 2rem;
+        padding: 2rem 1rem 0 2rem;
         margin-left: 1rem;
         border-left: 1px solid rgba($hydrogen-blue, 0.5);
-        padding-bottom: 2rem;
 
-        > *:last-child {
+         *:last-child {
           margin-bottom: 0 !important;
         }
 
@@ -164,12 +165,15 @@
 
         .vocab {
           padding: 0.5rem 1rem;
-          margin: 1.5rem 0 2rem 0;
+          margin: 1rem 0 2rem 0;
 
           ul {
             padding-left: 1.5rem;
           }
         }
+      } /*End LessonStep*/
+      .LessonStep:last-of-type {
+        padding-bottom: 2rem;
       }
     }
 
