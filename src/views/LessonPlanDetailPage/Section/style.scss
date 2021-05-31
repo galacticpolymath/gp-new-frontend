@@ -4,40 +4,56 @@
 .Overview {
   #targetSubj {
     margin-bottom: 2rem;
+
     > * {
       display: inline-block;
     }
+
     p {
+      margin-top: 0;
       padding-left: 1rem;
     }
   }
+
+  h4 {
+    margin-bottom: 0;
+  }
+
   .stats {
     margin: 2rem 0;
     padding: 1rem 0.5rem 1rem;
     text-align: center;
     background-color: $gray;
+
     .statIcon {
       margin-bottom: 0;
     }
+
     .statContainer {
       display: inline-block;
+
       h3 {
         margin: 0;
         font-weight: 300;
       }
     }
+
     .border-right {
       @media (min-width: map-get($grid-breakpoints, "sm")) {
         border-right: 1px solid $charcoal;
       }
     }
 
+
     h5 {
       margin-top: 0;
+
     }
+
     p {
       margin: 0 0 0.5rem 0;
     }
+
     .epaulette {
       padding: 0.5rem 0;
     }
@@ -60,20 +76,23 @@
         }
       }
     }
-  }
+  }/*End .stats*/
+
   #lessonhook {
-    padding-top: 1.5rem;
+    //padding-top: 1.5rem;
   }
+
   .keywords {
     padding: 0.85rem 0;
   }
-}
+} /*End .overview*/
 
 .Procedure {
   h3 {
     color: $hydrogen-blue;
     text-transform: uppercase;
   }
+
   .RichText {
     img {
       display: block;
@@ -94,6 +113,7 @@
   .MuiExpansionPanelDetails-root {
     display: block;
   }
+
   .MuiExpansionPanelSummary-content {
     display: block;
   }
@@ -103,14 +123,17 @@
   @media (max-width: map-get($grid-breakpoints, "md")) {
     padding-right: 2rem !important;
   }
+
   > .Image {
     display: block;
     max-height: 60vh;
     margin: auto;
   }
+
   .MuiExpansionPanelDetails-root {
     display: block;
   }
+
   .footnote {
     background: $gray;
     padding: 1rem;
@@ -125,29 +148,37 @@
       padding-right: 2rem !important;
     }
   }
+
   &.MuiExpansionPanel-root {
     &::before {
       display: none;
     }
+
     .SectionHeading {
       margin: 0;
+
       .MuiExpansionPanelSummary-root {
         padding: 0;
+
         .MuiExpansionPanelSummary-content {
           margin: 0 !important;
+
           h2 {
             margin: 0;
           }
         }
+
         > .MuiExpansionPanelSummary-expandIcon .MuiSvgIcon-root {
           font-size: 2.25rem;
           color: $charcoal;
         }
       }
     }
+
     .MuiCollapse-wrapper {
       padding-top: 2rem;
     }
+
     .ExpansionPanelDetails {
       padding: 0 !important;
     }
@@ -157,15 +188,20 @@
 .Acknowledgments {
   .role {
     margin-bottom: 2rem;
+
     p {
       margin: 0.5rem 0;
     }
+
     .record {
       margin: 1.25rem 0;
+
       h5 {
         margin-bottom: 0.25rem;
+
         a {
           color: $burst-purple;
+
           &:hover {
             color: $flare-fuschia;
           }
@@ -179,17 +215,21 @@
   p {
     margin: 0 0 0.3rem 0 !important;
   }
+
   .date {
     font-style: italic;
     color: rgba($charcoal, 0.8);
     margin: 0;
   }
+
   .major {
     margin-bottom: 2rem;
+
     .minor {
       h5 {
         margin-bottom: 0;
       }
+
       margin-bottom: 1rem;
     }
   }
