@@ -41,19 +41,19 @@ const Header = ({
               ")"}
         </p>
         </AnchorLink>
-        <h1>{Title}</h1>
-        <h3>{Subtitle}</h3>
+        <h2>{Title}</h2>
+        <h4>{Subtitle}</h4>
         <GridContainer className="text-center">
           <div className="col">
             <Image {...CoverImage} className="self-center" />
           </div>
         </GridContainer>
         <GridContainer className="sponsor">
-          <GridItem xs={8} md={9}>
+          <GridItem xs={12} sm={9} md={9}>
             <h5>Sponsored by:</h5>
             <RichText content={SponsoredBy} />
           </GridItem>
-          <GridItem xs={4} md={3}>
+          <GridItem xs={5} sm={3} md={2}>
             <Image {...SponsorImage} />
           </GridItem>
         </GridContainer>
