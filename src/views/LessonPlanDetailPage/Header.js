@@ -49,11 +49,11 @@ const Header = ({
           </div>
         </GridContainer>
         <GridContainer className="sponsor">
-          <GridItem xs={12} sm={9} md={9}>
+          <GridItem xs={12} sm={9} md={9} className={"sponsorDescr"}>
             <h5>Sponsored by:</h5>
             <RichText content={SponsoredBy} />
           </GridItem>
-          <GridItem xs={5} sm={3} md={2}>
+          <GridItem xs={4} sm={3} md={2} className={"sponsorLogo"}>
             <Image {...SponsorImage} />
           </GridItem>
         </GridContainer>

@@ -43,7 +43,7 @@ const Overview = ({
             <AnchorLink href={"#standards"} offset={"125px"}>
             <Image {...SteamEpaulette} className="epaulette" />
           </AnchorLink>
-            <GridItem sm={4} className="border-right">
+            <GridItem sm={4} className="border-right" id={"firstGridItem"}>
               <MenuBookIcon fontSize="large" className={"statIcon"} />
               <h5>Target Subject: </h5>
               <div className="statContainer">
