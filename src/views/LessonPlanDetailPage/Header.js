@@ -7,7 +7,7 @@ import GridContainer from "components/Grid/GridContainer";
 import GridItem from "components/Grid/GridItem";
 import Image from "../../components/StrapiImage";
 import RichText from "../../components/RichText";
-
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
 const useStyles = makeStyles(lessonPlanStyle);
 
@@ -30,6 +30,7 @@ const Header = ({
           {/*Dots nav text; not displayed on page*/}
           <span style={{display:"none"}}>Title</span>
         </div>
+        <AnchorLink href={"#version_notes"} offset={"125px"}>
         <p>
           Version {Version}{" "}
           {LastUpdated &&
@@ -39,6 +40,7 @@ const Header = ({
                 .format("MMM D, yyyy") +
               ")"}
         </p>
+        </AnchorLink>
         <h1>{Title}</h1>
         <h3>{Subtitle}</h3>
         <GridContainer className="text-center">
