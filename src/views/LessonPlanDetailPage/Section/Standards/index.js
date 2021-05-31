@@ -48,7 +48,7 @@ const Standards = ({ Data }) => {
     {Data.filter(({ target }) => !target).map((subject, i) => (
       <Subject key={"connected-" + i} {...subject} />
     ))}
-  </ExpansionPanelDetails>;
+  </ExpansionPanelDetails>
 </ExpansionPanel>
 </div>
 );
