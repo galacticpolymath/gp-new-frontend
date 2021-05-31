@@ -11,6 +11,15 @@ body {
   li {
     font-weight: 400;
   }
+
+
+  li::marker, ul::marker {
+    color: $gp-burst-purple;
+    font-family: "Roboto", sans-serif;
+  }
+
+
+
   .Header {
     padding-top: 6rem;
     background: $white;
