@@ -51,16 +51,25 @@ body {
     }
 
     .sponsor {
-      justify-content: left;
       align-items: center;
       margin: 0 0 2rem;
 
-      h5 {
-        margin-bottom: 0;
+      > * {
+        padding: 0;
+      }
+      .sponsorDescr {
+        h5 {
+          margin-bottom: 0;
+        }
+
+        .RichText p {
+          margin-top: 1rem;
+        }
       }
 
-      .RichText p {
-        margin-top: 1rem;
+      .sponsorLogo > * {
+        justify-Content: center;
+        margin: 0 auto;
       }
 
       .Image {
@@ -176,14 +185,21 @@ body {
       //background-color: blue;
       margin: 40px;
     }
-    .Header p:first-of-type {
-      margin-top: 0;
-    }
     h2 {
-      font-size: 2rem;
+      font-size: 1.4rem;
     }
     h4 {
       font-size: 1.2em;
     }
+    .Header h2 {
+      font-size: 1.9rem;
+    }
+    .Header p:first-of-type {
+      margin-top: 0;
+    }
+    .sponsor {
+      justify-content: center;
+    }
+
   }
 }
