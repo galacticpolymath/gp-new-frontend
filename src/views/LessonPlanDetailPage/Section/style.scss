@@ -41,6 +41,7 @@
     .epaulette {
       padding: 0.5rem 0;
     }
+
     @media (max-width: map-get($grid-breakpoints, "sm")) {
       .statContainer {
         border-bottom: 1px solid $charcoal;
