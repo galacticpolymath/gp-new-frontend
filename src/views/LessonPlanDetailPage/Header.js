@@ -24,6 +24,12 @@ const Header = ({
   return (
     <div className="Header">
       <div className={classes.container}>
+        {/*SectionHeading Div used for nav dots*/}
+        <div className={"SectionHeading"} id={"Title"}
+             style={{padding: 0, margin: 0}}>
+          {/*Dots nav text; not displayed on page*/}
+          <span style={{display:"none"}}>Title</span>
+        </div>
         <p>
           Version {Version}{" "}
           {LastUpdated &&
@@ -49,7 +55,8 @@ const Header = ({
             <Image {...SponsorImage} />
           </GridItem>
         </GridContainer>
-      </div>
+
+        </div>
     </div>
   );
 };

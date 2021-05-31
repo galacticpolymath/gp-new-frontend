@@ -22,11 +22,14 @@ body {
 
   .Header {
     padding-top: 6rem;
-    background: $white;
-    background: linear-gradient(180deg, $sparkle-white 0%, $white 100%);
+    //background: $white;
+    background: linear-gradient(180deg, $sparkle-white 0%, $white 100%) !important;
 
     @media (max-width: map-get($grid-breakpoints, "md")) {
-      padding-right: 2rem;
+      margin-right: 2rem;
+      .container{
+        padding: 0;
+      }
     }
 
     p:first-of-type {
@@ -164,7 +167,7 @@ body {
   @media only screen and (max-width: 600px) {
     /* sm phones */
     .LessonPlan {
-      background-color: blue;
+      //background-color: blue;
       margin: 40px;
     }
     .Header p:first-of-type {
