@@ -7,7 +7,7 @@ import GridContainer from "components/Grid/GridContainer";
 import GridItem from "components/Grid/GridItem";
 import Image from "../../components/StrapiImage";
 import RichText from "../../components/RichText";
-
+import AnchorLink from "react-anchor-link-smooth-scroll";
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
 const useStyles = makeStyles(lessonPlanStyle);
 
@@ -24,6 +24,13 @@ const Header = ({
   return (
     <div className="Header">
       <div className={classes.container}>
+        {/*SectionHeading Div used for nav dots*/}
+        <div className={"SectionHeading"} id={"Title"}
+             style={{padding: 0, margin: 0}}>
+          {/*Dots nav text; not displayed on page*/}
+          <span style={{display:"none"}}>Title</span>
+        </div>
+        <AnchorLink href={"#version_notes"} offset={"125px"}>
         <p>
           Version {Version}{" "}
           {LastUpdated &&
@@ -33,23 +40,25 @@ const Header = ({
                 .format("MMM D, yyyy") +
               ")"}
         </p>
-        <h1>{Title}</h1>
-        <h3>{Subtitle}</h3>
+        </AnchorLink>
+        <h2>{Title}</h2>
+        <h4>{Subtitle}</h4>
         <GridContainer className="text-center">
           <div className="col">
             <Image {...CoverImage} className="self-center" />
           </div>
         </GridContainer>
         <GridContainer className="sponsor">
-          <GridItem xs={8} md={9}>
+          <GridItem xs={12} sm={9} md={9}>
             <h5>Sponsored by:</h5>
             <RichText content={SponsoredBy} />
           </GridItem>
-          <GridItem xs={4} md={3}>
+          <GridItem xs={5} sm={3} md={2}>
             <Image {...SponsorImage} />
           </GridItem>
         </GridContainer>
-      </div>
+
+        </div>
     </div>
   );
 };

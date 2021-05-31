@@ -1,13 +1,13 @@
 @import '../../views/LessonPlanDetailPage/variables';
 
 .Tag {
-  font-size: 12pt;
+  font-size: 1rem;
   font-weight: 400;
   color: $atomic-blue;
   border: 2px solid $atomic-blue;
   border-radius: 5rem;
-  padding: .35rem .65rem;
-  margin: .35rem; 
+  padding: .15rem .65rem;
+  margin: .25rem;
   white-space: nowrap;
   display: inline-block;
 }

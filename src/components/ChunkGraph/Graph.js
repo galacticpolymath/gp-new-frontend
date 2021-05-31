@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import * as d3 from "d3";
+import {blackColor} from "assets/jss/material-kit-pro-react.js";
 
 export default function Graph({ durList, chunkNum }) {
   const container = useRef();
@@ -14,7 +15,7 @@ export default function Graph({ durList, chunkNum }) {
      * (barSpacing + 3px gap) * minutes = 900
      */
     const svgWidth = 900;
-    const plotDisplace = 30;
+    const plotDisplace = 15;
     const width = svgWidth - 5;
     const height = 90 + plotDisplace;
 
@@ -26,7 +27,7 @@ export default function Graph({ durList, chunkNum }) {
 
     const barHeight = 40;
     // gap on either side of the axis before first/last ticks
-    const endGap = 10;
+    const endGap = 15;
     // total minutes
     const minutes = durList.reduce((a, b) => a + b, 0);
     const gap = 1;
@@ -43,10 +44,10 @@ export default function Graph({ durList, chunkNum }) {
     // x coords for numbers
     let numCoords = [];
     for (let i = 0; i < minutes + 1; i++) {
-      if (i % 5 == 0 && i < 10) {
+      if (i % 5 === 0 && i < 10) {
         numCoords.push({ value: i, coord: xcoords[i] });
       }
-      if (i % 5 == 0 && i >= 10) {
+      if (i % 5 === 0 && i >= 10) {
         numCoords.push({ value: i, coord: xcoords[i] - 4 });
       }
     }
@@ -58,7 +59,7 @@ export default function Graph({ durList, chunkNum }) {
       .attr("y", plotDisplace + barHeight + 15)
       .attr("width", width)
       .attr("height", 2)
-      .attr("style", "fill:black")
+      .attr("style", "fill:"+blackColor)
       .attr("class", "axis");
 
     // TICK MARKS
@@ -71,7 +72,7 @@ export default function Graph({ durList, chunkNum }) {
       .attr("y", plotDisplace + 56)
       .attr("width", 2)
       .attr("height", 7)
-      .attr("style", "fill:black)")
+      .attr("style", "fill:"+blackColor)
       .attr("class", "tick");
 
     // NUMBERS
@@ -83,8 +84,9 @@ export default function Graph({ durList, chunkNum }) {
       .attr("x", (d) => d.coord - 4)
       .attr("y", plotDisplace + 80)
       .attr("stroke", "none")
-      .attr("style", "fill:black")
+      .attr("style", "fill:"+blackColor)
       .attr("font-weight", "bold")
+      .attr("class","chunkGraphAxisLabels")
       .text((d) => d.value);
 
     // GRAY BARS
@@ -119,9 +121,9 @@ export default function Graph({ durList, chunkNum }) {
       .enter()
       .append("rect")
       .attr("x", (d) => d + 2 + gap / 2)
-      .attr("y", plotDisplace + 15)
+      .attr("y", plotDisplace + 25)
       .attr("width", barSpacing - gap)
-      .attr("height", 40)
+      .attr("height", 30)
       .attr("style", "fill:rgb(50,132,193)")
       .attr("class", "lightbar");
 
@@ -136,13 +138,13 @@ export default function Graph({ durList, chunkNum }) {
       .enter()
       .append("text")
       .attr("x", anchorPoint[0] + 2 + gap / 2)
-      .attr("y", plotDisplace)
-      .text(currentDuration + " minutes")
+      .attr("y", plotDisplace+17)
+      .text(currentDuration + " min.")
       .attr("text-anchor", "middle")
-      .attr("fill", "black")
       .attr("font-family", '"Montserrat", "Helvetica", "Arial", sans-serif')
-      .attr("font-weight", "bold");
+      .attr("class","chunkGraphTimeLabel");
+
   }
 
-  return <div ref={container}></div>;
+  return <div ref={container}/>;
 }

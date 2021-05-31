@@ -11,36 +11,49 @@ body {
   li {
     font-weight: 400;
   }
+
+
+  li::marker, ul::marker {
+    color: $gp-burst-purple;
+    font-family: "Roboto", sans-serif;
+  }
+
+
   .Header {
     padding-top: 6rem;
-    background: $white;
-    background: linear-gradient(180deg, $sparkle-white 0%, $white 100%);
+    //background: $white;
+    background: linear-gradient(180deg, $sparkle-white 0%, $white 100%) !important;
 
     @media (max-width: map-get($grid-breakpoints, "md")) {
-      padding-right: 2rem;
+      margin-right: 2rem;
+      .container {
+        padding: 0;
+      }
     }
 
     p:first-of-type {
       margin-bottom: 1rem;
     }
 
-    h1 {
+    h2 {
       margin-top: 0;
       margin-bottom: 0;
       line-height: 1.1;
     }
 
-    h3 {
+    h4 {
       margin-top: 0.5rem;
+      font-weight: 500;
     }
 
     .Image {
-      margin: 1rem auto 0;
+      margin: 0 auto 0;
     }
 
     .sponsor {
+      justify-content: left;
       align-items: center;
-      margin: 1rem 0;
+      margin: 0 0 2rem;
 
       h5 {
         margin-bottom: 0;
@@ -60,6 +73,7 @@ body {
     overflow: hidden;
     position: relative;
     width: 100%;
+
     iframe {
       display: block;
       position: absolute;
@@ -70,6 +84,7 @@ body {
       max-width: 800px;
     }
   }
+
   .iframeContainer::after {
     padding-top: 56.25%;
     display: block;
@@ -90,12 +105,15 @@ body {
   h5,
   h6 {
     font-weight: bold;
+    color: $galactic-black;
   }
+
 
   p {
     font-size: 1rem;
     line-height: 1.6;
-    margin: 1.4rem 0;
+    margin: 0 0 1.4rem;
+    color: $galactic-black;
   }
 
   a {
@@ -155,20 +173,17 @@ body {
   @media only screen and (max-width: 600px) {
     /* sm phones */
     .LessonPlan {
-      background-color: blue;
+      //background-color: blue;
       margin: 40px;
     }
     .Header p:first-of-type {
       margin-top: 0;
     }
-    h1 {
-      font-size: 2.4rem;
-    }
     h2 {
-      font-size: 1.6rem;
+      font-size: 2rem;
     }
-    h3 {
-      font-size: 1.3em;
+    h4 {
+      font-size: 1.2em;
     }
   }
 }
