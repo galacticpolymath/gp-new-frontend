@@ -82,6 +82,11 @@ export default function SectionSubscribe() {
   const classes = useStyles();
   return (
     <>
+      <div className={"SectionHeading"} id={"Subscribe"} >
+      {/*Dots nav text; not displayed on page*/}
+        <span style={{display:"none"}}>Subscribe</span>
+
+
       <GridContainer justify="center"
                      className={classNames(classes.section, classes.subscribeContainer)}>
         <GridItem xs={12} sm={8} md={6} lg={5} className={classNames(classes.textLeft,classes.centerAlign,classes.textContainer)}>
@@ -162,6 +167,7 @@ export default function SectionSubscribe() {
         </form>*/}
 
       </GridContainer>
+      </div>
     </>
   );
 }
