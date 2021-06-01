@@ -69,7 +69,7 @@ export default function Graph({ durList, chunkNum }) {
       .enter()
       .append("rect")
       .attr("x", (d) => d)
-      .attr("y", plotDisplace + 45)
+      .attr("y", plotDisplace + 43)
       .attr("width", 2)
       .attr("height", 7)
       .attr("style", "fill:"+blackColor)
