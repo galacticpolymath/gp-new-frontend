@@ -20,6 +20,20 @@ const lessonPlanStyle = {
   },
   inlineIcon: {
     verticalAlign: "sub"
+  },
+  procLessonPreface:{
+    background: "#F4F4F4",
+    contentFit: "contain",
+    padding: "1rem",
+    margin: 0,
+    "& h4":{
+      padding: 0,
+      marginTop: 0,
+    },
+    "& p":{
+      margin: 0
+    }
+
   }
 };
 export default lessonPlanStyle;
