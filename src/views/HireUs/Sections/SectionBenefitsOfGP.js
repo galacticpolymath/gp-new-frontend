@@ -32,7 +32,7 @@ export default function SectionBenefitsOfGP() {
             className={classes.custInfoArea}
             title={"Expand Your Outreach"}
             description={
-              "Make grant proposals more impactful and achieve much broader impacts, while reducing your own workload."
+              "Make grant proposals more competitive and achieve much broader impacts, while reducing your own workload."
             }
             icon={BlurOn}
             iconColor={"rose"}
