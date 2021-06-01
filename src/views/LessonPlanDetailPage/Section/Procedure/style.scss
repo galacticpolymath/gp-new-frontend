@@ -88,7 +88,7 @@
     }
 
     .chunkTitle {
-      margin-bottom: -0.5rem;
+      margin-bottom: -0.75rem;
       padding-bottom: 0;
     }
     .chunkGraphTimeLabel {
@@ -130,7 +130,7 @@
     }
 
     .LessonStep {
-      padding: 2rem 1rem 0 2rem;
+      padding: 1.5rem 1rem 0 2rem;
       margin-left: 1rem;
       border-left: 1px solid rgba($hydrogen-blue, 0.5);
 
@@ -213,7 +213,10 @@
       font-size: 2.3rem !important;
     }
     .LessonStep {
-      padding: 2rem 0.1rem 0 1.3rem !important;
+      padding: 1rem 0.1rem 0 1.3rem !important;
+    }
+    .LessonStep:last-of-type {
+      padding-bottom: 2rem !important;
     }
   }
 
