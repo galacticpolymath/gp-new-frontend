@@ -8,6 +8,7 @@ import RichText from "components/RichText";
 import CollapsibleSection from "../CollapsibleSection";
 import LessonPart from "./LessonPart";
 
+
 import "./style.scss";
 const useStyles = makeStyles(lessonPlanStyle);
 
@@ -27,15 +28,17 @@ const Procedure = ({
       initiallyExpanded
     >
       <div className={classes.container}>
-        <h4>
-          <TimerIcon className={classes.inlineIcon} />
-          {"  "}
-          {LessonDuration}
-        </h4>
 
         {Data ? (
           <Fragment>
-            <RichText content={Data.lessonPreface} />
+            <div className={ classes.procLessonPreface}>
+              <h4>
+                <TimerIcon className={classes.inlineIcon} />
+                {"  "}
+                {LessonDuration}
+              </h4>
+              <RichText content={Data.lessonPreface} />
+            </div>
             {Data.parts.map((part, i) => (
               <LessonPart key={i} {...part} />
             ))}

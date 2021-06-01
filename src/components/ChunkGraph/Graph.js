@@ -17,7 +17,7 @@ export default function Graph({ durList, chunkNum }) {
     const svgWidth = 900;
     const plotDisplace = 15;
     const width = svgWidth - 5;
-    const height = 90 + plotDisplace;
+    const height = 70 + plotDisplace;
 
     let svg = d3
       .select(container.current)
@@ -25,7 +25,7 @@ export default function Graph({ durList, chunkNum }) {
       .attr("viewBox", "0 0 " + svgWidth + " " + height)
       .classed("svg-content-responsive", true);
 
-    const barHeight = 40;
+    const barHeight = 30;
     // gap on either side of the axis before first/last ticks
     const endGap = 15;
     // total minutes
@@ -56,7 +56,7 @@ export default function Graph({ durList, chunkNum }) {
     svg
       .append("rect")
       .attr("x", 0)
-      .attr("y", plotDisplace + barHeight + 15)
+      .attr("y", plotDisplace + barHeight + 10)
       .attr("width", width)
       .attr("height", 2)
       .attr("style", "fill:"+blackColor)
@@ -69,7 +69,7 @@ export default function Graph({ durList, chunkNum }) {
       .enter()
       .append("rect")
       .attr("x", (d) => d)
-      .attr("y", plotDisplace + 56)
+      .attr("y", plotDisplace + 45)
       .attr("width", 2)
       .attr("height", 7)
       .attr("style", "fill:"+blackColor)
@@ -82,7 +82,7 @@ export default function Graph({ durList, chunkNum }) {
       .enter()
       .append("text")
       .attr("x", (d) => d.coord - 4)
-      .attr("y", plotDisplace + 80)
+      .attr("y", plotDisplace + 67)
       .attr("stroke", "none")
       .attr("style", "fill:"+blackColor)
       .attr("font-weight", "bold")
@@ -102,9 +102,9 @@ export default function Graph({ durList, chunkNum }) {
       .enter()
       .append("rect")
       .attr("x", (d) => d + 2 + gap / 2)
-      .attr("y", plotDisplace + barHeight + 5)
+      .attr("y", plotDisplace + barHeight + 2)
       .attr("width", barSpacing - gap)
-      .attr("height", 10)
+      .attr("height", 8)
       .attr("style", "fill:rgb(30,79,116)")
       .attr("class", "darkbar");
 
@@ -123,7 +123,7 @@ export default function Graph({ durList, chunkNum }) {
       .attr("x", (d) => d + 2 + gap / 2)
       .attr("y", plotDisplace + 25)
       .attr("width", barSpacing - gap)
-      .attr("height", 30)
+      .attr("height", 15)
       .attr("style", "fill:rgb(50,132,193)")
       .attr("class", "lightbar");
 
