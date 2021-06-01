@@ -86,112 +86,135 @@
         align-items: flex-end;
       }
     }
-    .chunkTitle{
-      margin-bottom: 0.5rem;
-    }
-    .chunkGraphAxisLabels{
-    font-size: 1.1rem;
-      font-weight: bold;
-      @media screen and (max-width: 600px) {
-        font-size: 1.4rem;
-      }
-    }
 
+    .chunkTitle {
+      margin-bottom: -0.5rem;
+      padding-bottom: 0;
+    }
     .chunkGraphTimeLabel {
       font-size: 1.4rem;
       fill: $hydrogen-blue;
       font-weight: 800;
-      @media screen and (max-width: 960px) {
-        font-size: 1.7rem;
+    }
+
+    .chunkGraphAxisLabels {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+
+
+  .MuiCollapse-wrapper {
+    padding-top: 0 !important;
+  }
+
+  .PartBody {
+    .duration {
+      background: #eee;
+      border-radius: 0.5rem;
+      padding: 0.25rem 1rem;
+      margin: 0;
+
+      p {
+        color: $hydrogen-blue;
+        font-weight: bold;
       }
-      @media screen and (max-width: 600px) {
-        font-size: 2.3rem;
+
+      h5 {
+        color: rgba($charcoal, 0.9);
       }
     }
 
-    .MuiCollapse-wrapper {
-      padding-top: 0 !important;
+    > div {
+      padding-top: 1rem;
     }
 
-    .PartBody {
-      .duration {
-        background: #eee;
-        border-radius: 0.5rem;
-        padding: 0.25rem 1rem;
+    .LessonStep {
+      padding: 2rem 1rem 0 2rem;
+      margin-left: 1rem;
+      border-left: 1px solid rgba($hydrogen-blue, 0.5);
+
+      *:last-child {
+        margin-bottom: 0 !important;
+      }
+
+      h5 {
         margin: 0;
-
-        p {
-          color: $hydrogen-blue;
-          font-weight: bold;
-        }
-
-        h5 {
-          color: rgba($charcoal, 0.9);
-        }
+        padding: 0;
       }
 
-      > div {
-        padding-top: 1rem;
+      .step {
+        font-size: 1.1rem;
+        margin-top: -0.25rem;
+        background-color: $hydrogen-blue;
+        position: absolute;
+        left: 0;
+        width: 2rem;
+        height: 2rem;
+        box-sizing: border-box;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
-      .LessonStep {
-        padding: 2rem 1rem 0 2rem;
-        margin-left: 1rem;
-        border-left: 1px solid rgba($hydrogen-blue, 0.5);
+      .vocab {
+        padding: 0.5rem 1rem;
+        margin: 1rem 0 2rem 0;
 
-         *:last-child {
-          margin-bottom: 0 !important;
+        ul {
+          padding-left: 1.5rem;
         }
-
-        h5 {
-          margin: 0;
-          padding: 0;
-        }
-
-        .step {
-          font-size: 1.1rem;
-          margin-top: -0.25rem;
-          background-color: $hydrogen-blue;
-          position: absolute;
-          left: 0;
-          width: 2rem;
-          height: 2rem;
-          box-sizing: border-box;
-          border-radius: 50%;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .vocab {
-          padding: 0.5rem 1rem;
-          margin: 1rem 0 2rem 0;
-
-          ul {
-            padding-left: 1.5rem;
-          }
-        }
-      } /*End LessonStep*/
-      .LessonStep:last-of-type {
-        padding-bottom: 2rem;
       }
     }
 
-    .MuiExpansionPanelSummary-root {
-      padding: 0;
-
-      .MuiExpansionPanelSummary-content {
-        margin: 0 !important;
-
-        h2 {
-          margin: 0;
-        }
-      }
-
-      > .MuiExpansionPanelSummary-expandIcon .MuiSvgIcon-root {
-        font-size: 2.25rem;
-        color: $charcoal;
-      }
+    /*End LessonStep*/
+    .LessonStep:last-of-type {
+      padding-bottom: 2rem;
     }
   }
+
+  .MuiExpansionPanelSummary-root {
+    padding: 0;
+
+    .MuiExpansionPanelSummary-content {
+      margin: 0 !important;
+
+      h2 {
+        margin: 0;
+      }
+    }
+
+    > .MuiExpansionPanelSummary-expandIcon .MuiSvgIcon-root {
+      font-size: 2.25rem;
+      color: $charcoal;
+    }
+  }
+}
+
+  @media screen and (max-width: 960px) {
+
+    .chunkGraphTimeLabel {
+      font-size: 1.7rem !important;
+    }
+  }
+
+  @media screen and (max-width: 600px)  {
+    .chunkTitle {
+      font-size: 1rem !important;
+      line-height: 1.1 !important;
+      padding-bottom: 0.75rem !important;
+      margin-top: 0.25rem !important;
+    }
+    .chunkGraphAxisLabels {
+      font-size: 1.4rem !important;
+    }
+    .chunkGraphTimeLabel {
+      font-size: 2.3rem !important;
+    }
+    .LessonStep {
+      padding: 2rem 0.1rem 0 1.3rem !important;
+    }
+  }
+
 }
