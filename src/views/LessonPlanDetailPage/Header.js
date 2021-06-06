@@ -24,22 +24,25 @@ const Header = ({
   return (
     <div className="Header">
       <div className={classes.container}>
-        {/*SectionHeading Div used for nav dots*/}
-        <div className={"SectionHeading"} id={"Title"}
-             style={{padding: 0, margin: 0}}>
-          {/*Dots nav text; not displayed on page*/}
-          <span style={{display:"none"}}>Title</span>
+        {/* SectionHeading Div used for nav dots */}
+        <div
+          className={"SectionHeading"}
+          id={"Title"}
+          style={{ padding: 0, margin: 0 }}
+        >
+          {/* Dots nav text; not displayed on page */}
+          <span style={{ display: "none" }}>Title</span>
         </div>
         <AnchorLink href={"#version_notes"} offset={"125px"}>
-        <p>
-          Version {Version}{" "}
-          {LastUpdated &&
-            "(Updated " +
-              moment(new Date(LastUpdated))
-                .add({ day: 1 })
-                .format("MMM D, yyyy") +
-              ")"}
-        </p>
+          <p>
+            Version {Version}{" "}
+            {LastUpdated &&
+              "(Updated " +
+                moment(new Date(LastUpdated))
+                  .add({ day: 1 })
+                  .format("MMM D, yyyy") +
+                ")"}
+          </p>
         </AnchorLink>
         <h2>{Title}</h2>
         <h4>{Subtitle}</h4>
@@ -57,8 +60,7 @@ const Header = ({
             <Image {...SponsorImage} />
           </GridItem>
         </GridContainer>
-
-        </div>
+      </div>
     </div>
   );
 };
