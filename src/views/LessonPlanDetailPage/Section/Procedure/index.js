@@ -43,7 +43,6 @@ Procedure.propTypes = {
   index: PropTypes.number,
   SectionTitle: PropTypes.string,
   LessonDuration: PropTypes.string,
-  Chunks: PropTypes.string,
   Data: PropTypes.object,
 };
 
