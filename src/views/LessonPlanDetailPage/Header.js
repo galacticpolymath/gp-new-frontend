@@ -2,45 +2,61 @@ import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import moment from "moment";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 import GridContainer from "components/Grid/GridContainer";
 import GridItem from "components/Grid/GridItem";
 import Image from "../../components/StrapiImage";
 import RichText from "../../components/RichText";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+import { SECTIONS } from "./constants";
+
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
 const useStyles = makeStyles(lessonPlanStyle);
+
+const getLatestSubRelease = (sections) => {
+  const versionSection = sections.find(
+    ({ __component }) => __component === SECTIONS.VERSIONS
+  );
+  const lastRelease =
+    versionSection.Data[versionSection.Data.length - 1].sub_releases;
+  const lastSubRelease = lastRelease[lastRelease.length - 1];
+  return lastSubRelease;
+};
 
 const Header = ({
   Title,
   Subtitle,
-  Version,
-  LastUpdated,
   SponsoredBy,
   CoverImage,
   SponsorImage,
+  Section,
 }) => {
   const classes = useStyles();
+  const lastSubRelease = getLatestSubRelease(Section);
+
   return (
     <div className="Header">
       <div className={classes.container}>
-        {/*SectionHeading Div used for nav dots*/}
-        <div className={"SectionHeading"} id={"Title"}
-             style={{padding: 0, margin: 0}}>
-          {/*Dots nav text; not displayed on page*/}
-          <span style={{display:"none"}}>Title</span>
+        {/* SectionHeading Div used for nav dots */}
+        <div
+          className={"SectionHeading"}
+          id={"Title"}
+          style={{ padding: 0, margin: 0 }}
+        >
+          {/* Dots nav text; not displayed on page */}
+          <span style={{ display: "none" }}>Title</span>
         </div>
-        <AnchorLink href={"#version_notes"} offset={"125px"}>
-        <p>
-          Version {Version}{" "}
-          {LastUpdated &&
-            "(Updated " +
-              moment(new Date(LastUpdated))
+        {lastSubRelease && (
+          <AnchorLink href={"#version_notes"} offset={"125px"}>
+            <p>
+              Version {lastSubRelease.version} (Updated{" "}
+              {moment(new Date(lastSubRelease.date))
                 .add({ day: 1 })
-                .format("MMM D, yyyy") +
-              ")"}
-        </p>
-        </AnchorLink>
+                .format("MMM D, yyyy")}
+              )
+            </p>
+          </AnchorLink>
+        )}
         <h2>{Title}</h2>
         <h4>{Subtitle}</h4>
         <GridContainer className="text-center">
@@ -57,8 +73,7 @@ const Header = ({
             <Image {...SponsorImage} />
           </GridItem>
         </GridContainer>
-
-        </div>
+      </div>
     </div>
   );
 };
@@ -66,8 +81,6 @@ const Header = ({
 Header.propTypes = {
   Title: PropTypes.string,
   Subtitle: PropTypes.string,
-  Version: PropTypes.string,
-  LastUpdated: PropTypes.string,
   SponsoredBy: PropTypes.string,
   CoverImage: PropTypes.object,
   SponsorImage: PropTypes.object,
