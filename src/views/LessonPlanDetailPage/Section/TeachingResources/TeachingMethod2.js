@@ -7,7 +7,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 import ResourceSummary2 from "./ResourceSummary2";
 
-const TeachingMethod2 = ({ Title, resourceSummary, ...props }) => {
+const TeachingMethod2 = ({ title, resourceSummary }) => {
   const [expanded, expand] = useState(false);
   return (
     <ExpansionPanel
@@ -19,14 +19,11 @@ const TeachingMethod2 = ({ Title, resourceSummary, ...props }) => {
         className="ExpansionPanelSummary"
         expandIcon={<ExpandMoreIcon />}
       >
-        <h3>{Title}</h3>
+        <h3>{title}</h3>
       </ExpansionPanelSummary>
       <ExpansionPanelDetails className="ExpansionPanelDetails">
         <div>
-          <ResourceSummary2 {...resourceSummary} />
-          {/* {ResourceDownloads.map((resource, i) => (
-            <ResourceDownload key={i} {...resource} />
-          ))} */}
+          <ResourceSummary2 resources={resourceSummary} />
         </div>
       </ExpansionPanelDetails>
     </ExpansionPanel>

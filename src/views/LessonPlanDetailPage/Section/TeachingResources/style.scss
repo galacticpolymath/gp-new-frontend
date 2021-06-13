@@ -8,6 +8,9 @@
   @media (max-width: map-get($grid-breakpoints, "md")) {
     padding-right: 2rem;
   }
+  .ExpansionPanelDetails {
+    display: block;
+  }
   .ResourceSummary {
     background: $gray;
     padding: 0.5rem 2rem;
