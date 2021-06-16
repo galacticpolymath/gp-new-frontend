@@ -29,7 +29,7 @@ const ResourceSummary2 = ({ resources = [] }) => {
       if (item.match(new RegExp(slug, "gi"))) icon = ICONS[slug];
     }
     return (
-      <div key={i}>
+      <div key={i} className="resourceSummaryItem">
         {icon} {item} {itemExplanation}
       </div>
     );
