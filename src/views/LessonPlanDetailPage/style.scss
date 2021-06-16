@@ -12,17 +12,19 @@ body {
     font-weight: 400;
   }
 
-
-  li::marker, ul::marker {
+  li::marker,
+  ul::marker {
     color: $gp-burst-purple;
     font-family: "Roboto", sans-serif;
   }
 
-
   .Header {
     padding-top: 6rem;
-    //background: $white;
-    background: linear-gradient(180deg, $sparkle-white 0%, $white 100%) !important;
+    background: linear-gradient(
+      180deg,
+      $sparkle-white 0%,
+      $white 100%
+    ) !important;
 
     @media (max-width: map-get($grid-breakpoints, "md")) {
       margin-right: 2rem;
@@ -68,7 +70,7 @@ body {
       }
 
       .sponsorLogo > * {
-        justify-Content: center;
+        justify-content: center;
         margin: 0 auto;
       }
 
@@ -117,7 +119,6 @@ body {
     color: $galactic-black;
   }
 
-
   p {
     font-size: 1rem;
     line-height: 1.6;
@@ -139,6 +140,9 @@ body {
 
     &.Mui-expanded {
       margin: 1rem 0;
+    }
+    .Mui-focused {
+      background: transparent;
     }
 
     > .ExpansionPanelSummary {
@@ -182,7 +186,6 @@ body {
   @media only screen and (max-width: 600px) {
     /* sm phones */
     .LessonPlan {
-      //background-color: blue;
       margin: 40px;
     }
     h2 {
@@ -200,6 +203,5 @@ body {
     .sponsor {
       justify-content: center;
     }
-
   }
 }
