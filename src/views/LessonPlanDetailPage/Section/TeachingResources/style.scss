@@ -8,6 +8,16 @@
   @media (max-width: map-get($grid-breakpoints, "md")) {
     padding-right: 2rem;
   }
+  h3 {
+    svg {
+      display: inline-block;
+      height: 2.5rem;
+      width: 2.5rem;
+      text-align: center;
+      margin-right: 0.75rem;
+      vertical-align: bottom;
+    }
+  }
   .ExpansionPanelDetails {
     display: block;
   }
