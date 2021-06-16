@@ -12,13 +12,18 @@ import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanS
 const useStyles = makeStyles(lessonPlanStyle);
 
 const TeachingResources = ({
+  index,
   SectionTitle,
   Data,
   TeachingMethod: TeachingMethods = [],
 }) => {
   const classes = useStyles();
   return (
-    <CollapsibleSection initiallyExpanded SectionTitle={SectionTitle}>
+    <CollapsibleSection
+      initiallyExpanded
+      index={index}
+      SectionTitle={SectionTitle}
+    >
       <div className={classes.container}>
         {Data ? (
           <Fragment>
