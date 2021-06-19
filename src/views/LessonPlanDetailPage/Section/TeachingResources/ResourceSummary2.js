@@ -10,12 +10,12 @@ const ResourceSummary2 = ({ resources = [] }) => {
     return null;
   }
 
-  const renderRow = ({ itemsGroup = [], itemCat }) => {
+  const renderRow = ({ itemsGroup = [], itemCat, nItems }, i) => {
     return (
       itemsGroup.length > 0 && (
-        <GridContainer>
+        <GridContainer key={i}>
           <GridItem md={4}>
-            {itemsGroup.length} {itemCat}
+            {nItems} {itemCat}
           </GridItem>
           <GridItem md={8}>{itemsGroup.map(renderItem)}</GridItem>
         </GridContainer>
@@ -30,7 +30,7 @@ const ResourceSummary2 = ({ resources = [] }) => {
     }
     return (
       <div key={i} className="resourceSummaryItem">
-        {icon} {item} {itemExplanation}
+        {icon} {item} {typeof itemExplanation === "string" && itemExplanation}
       </div>
     );
   };
