@@ -6,7 +6,8 @@ import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 import ResourceSummary2 from "./ResourceSummary2";
-import Variants from "./Variants";
+import VariantSummary from "./VariantSummary";
+import GradeVariant from "./GradeVariant";
 
 import { COPY, ICONS, TITLES } from "./constants";
 
@@ -14,7 +15,7 @@ const TeachingMethod2 = ({
   type,
   resourceSummary,
   gradeVariantNotes,
-  resources,
+  resources = [],
 }) => {
   const [expanded, expand] = useState(false);
 
@@ -37,7 +38,10 @@ const TeachingMethod2 = ({
       </ExpansionPanelSummary>
       <ExpansionPanelDetails className="ExpansionPanelDetails">
         <ResourceSummary2 resources={resourceSummary} />
-        <Variants variants={gradeVariantNotes} />
+        <VariantSummary variants={gradeVariantNotes} />
+        {resources.map((resource, i) => (
+          <GradeVariant key={i} {...resource} />
+        ))}
       </ExpansionPanelDetails>
     </ExpansionPanel>
   );

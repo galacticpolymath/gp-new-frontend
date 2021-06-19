@@ -10,12 +10,12 @@ import { Box } from "@material-ui/core";
 import blogPostsPageStyle from "assets/jss/material-kit-pro-react/views/blogPostsPageStyle.js";
 const useStyles = makeStyles(blogPostsPageStyle);
 
-const Variants = ({ variants = [] }) => {
+const VariantSummary = ({ variants = [] }) => {
   const [expanded, expand] = useState(true);
   const classes = useStyles();
   return (
     <ExpansionPanel
-      className="Variants ExpansionPanel"
+      className="VariantSummary ExpansionPanel"
       onChange={() => expand(!expanded)}
       expanded={expanded}
     >
@@ -23,7 +23,7 @@ const Variants = ({ variants = [] }) => {
         className="ExpansionPanelSummary"
         expandIcon={<ExpandMoreIcon />}
       >
-        <h5>Grade Level Variations:</h5>
+        <h4>Grade Level Variations:</h4>
       </ExpansionPanelSummary>
       <ExpansionPanelDetails className="ExpansionPanelDetails">
         <Box boxShadow={3} className={classes.card}>
@@ -38,4 +38,4 @@ const Variants = ({ variants = [] }) => {
   );
 };
 
-export default Variants;
+export default VariantSummary;
