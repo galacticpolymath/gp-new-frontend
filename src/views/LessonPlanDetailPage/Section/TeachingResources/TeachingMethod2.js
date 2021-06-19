@@ -6,6 +6,7 @@ import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 import ResourceSummary2 from "./ResourceSummary2";
+import Variants from "./Variants";
 
 import { COPY, ICONS, TITLES } from "./constants";
 
@@ -35,9 +36,8 @@ const TeachingMethod2 = ({
         </div>
       </ExpansionPanelSummary>
       <ExpansionPanelDetails className="ExpansionPanelDetails">
-        <div>
-          <ResourceSummary2 resources={resourceSummary} />
-        </div>
+        <ResourceSummary2 resources={resourceSummary} />
+        <Variants variants={gradeVariantNotes} />
       </ExpansionPanelDetails>
     </ExpansionPanel>
   );

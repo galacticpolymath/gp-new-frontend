@@ -1,47 +1,75 @@
 @import "../../variables";
 @import "../../../../assets/scss/core/variables";
 
-.TeachingMethod {
-  button {
-    padding: 0;
-  }
-  @media (max-width: map-get($grid-breakpoints, "md")) {
-    padding-right: 2rem;
-  }
-  h3 {
-    svg {
-      display: inline-block;
-      height: 2.5rem;
-      width: 2.5rem;
-      text-align: center;
-      margin-right: 0.75rem;
-      vertical-align: bottom;
+.LessonPlan {
+  .TeachingMethod.ExpansionPanel {
+    button {
+      padding: 0;
     }
-  }
-  .ExpansionPanelDetails {
-    display: block;
-  }
-  .ResourceSummary {
-    background: $gray;
-    padding: 0.5rem 2rem;
-    > div {
+    @media (max-width: map-get($grid-breakpoints, "md")) {
+      padding-right: 2rem;
+    }
+    h3 {
+      svg {
+        display: inline-block;
+        height: 2.5rem;
+        width: 2.5rem;
+        text-align: center;
+        margin-right: 0.75rem;
+        vertical-align: bottom;
+      }
+    }
+    &.Mui-expanded {
+      margin-bottom: 1rem;
+    }
+    .ExpansionPanelDetails {
+      display: block;
+    }
+    .ResourceSummary {
+      background: $gray;
+      padding: 0.5rem 2rem;
       > div {
-        padding: 0.75rem 0;
-        line-height: 1.7;
-        font-size: 1.1em;
-      }
-      &:not(:last-child) > div {
-        border-bottom: 1px solid rgba($galactic-black, 0.5);
+        > div {
+          padding: 0.75rem 0;
+          line-height: 1.7;
+          font-size: 1.1em;
+        }
+        &:not(:last-child) > div {
+          border-bottom: 1px solid rgba($galactic-black, 0.5);
+        }
       }
     }
-  }
-  .resourceSummaryItem {
-    span[role="img"] {
-      width: 2rem;
-      height: 2rem;
-      margin-right: 0.5rem;
-      display: inline-block;
-      text-align: center;
+    .resourceSummaryItem {
+      span[role="img"] {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 0.5rem;
+        display: inline-block;
+        text-align: center;
+      }
+    }
+    .Variants {
+      margin: 1rem 0 2rem 0;
+      &:before {
+        display: none;
+      }
+      > .ExpansionPanelSummary {
+        border-top: none;
+        h5 {
+          margin: 0;
+        }
+        .MuiExpansionPanelSummary-expandIcon {
+          padding: 0;
+          .MuiSvgIcon-root {
+            font-size: 2rem;
+          }
+        }
+      }
+      .ExpansionPanelDetails {
+        p {
+          margin: 0.75rem 0;
+        }
+      }
     }
   }
 }
