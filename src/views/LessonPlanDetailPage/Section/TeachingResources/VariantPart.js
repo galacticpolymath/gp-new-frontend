@@ -4,15 +4,12 @@ import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import DownloadIcon from "@material-ui/icons/GetApp";
 
-import VariantPart from "./VariantPart";
-
-const GradeVariant = ({ parts = [], links, grades, gradePrefix }) => {
+const VariantPart = ({ part, title, preface, itemList, gradePrefix }) => {
   const [expanded, expand] = useState(false);
   return (
     <ExpansionPanel
-      className="GradeVariant ExpansionPanel"
+      className="VariantPart ExpansionPanel"
       onChange={() => expand(!expanded)}
       expanded={expanded}
     >
@@ -20,23 +17,16 @@ const GradeVariant = ({ parts = [], links, grades, gradePrefix }) => {
         className="ExpansionPanelSummary"
         expandIcon={<ExpandMoreIcon />}
       >
-        <h5>{grades}</h5>
+        <span>{gradePrefix}</span>
+        <strong>
+          Part {part}: {title}
+        </strong>
       </ExpansionPanelSummary>
       <ExpansionPanelDetails className="ExpansionPanelDetails">
-        {links && (
-          <a className="download" href={links.url}>
-            <DownloadIcon />
-            {links.linkText}
-          </a>
-        )}
-        <div className="VariantParts">
-          {parts.map((part, i) => (
-            <VariantPart key={i} {...part} gradePrefix={gradePrefix} />
-          ))}
-        </div>
+        {preface}
       </ExpansionPanelDetails>
     </ExpansionPanel>
   );
 };
 
-export default GradeVariant;
+export default VariantPart;

@@ -49,7 +49,8 @@
       }
     }
     .VariantSummary,
-    .GradeVariant {
+    .GradeVariant,
+    .VariantPart {
       > .ExpansionPanelSummary .MuiExpansionPanelSummary-expandIcon {
         padding: 0;
         .MuiSvgIcon-root {
@@ -97,6 +98,48 @@
             display: inline-block;
             text-align: center;
             vertical-align: middle;
+          }
+        }
+      }
+    }
+    .VariantParts {
+      .VariantPart.ExpansionPanel {
+        margin: 0;
+        &:before {
+          display: none;
+        }
+        > .ExpansionPanelSummary {
+          border: 2px solid rgba($galactic-black, 0.5);
+          padding: 0 0.5rem;
+          background: $gray;
+          .MuiExpansionPanelSummary-content {
+            align-items: center;
+            > span {
+              color: $hydrogen-blue;
+              font-weight: 500;
+              display: block;
+              padding-right: 0.5rem;
+              border-right: 2px solid rgba($galactic-black, 0.5);
+            }
+            strong {
+              padding-left: 0.5rem;
+            }
+          }
+        }
+        .MuiCollapse-wrapper {
+          border: 2px solid rgba($galactic-black, 0.5);
+          border-bottom: none;
+          padding: 0.8rem 0.5rem;
+        }
+        &:last-child {
+          .MuiCollapse-wrapper {
+            border-top: 0;
+            border-bottom: 2px solid rgba($galactic-black, 0.5);
+          }
+        }
+        &:not(:last-child) {
+          > .ExpansionPanelSummary {
+            border-bottom: none;
           }
         }
       }
