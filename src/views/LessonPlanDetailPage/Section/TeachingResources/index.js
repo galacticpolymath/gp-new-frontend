@@ -6,9 +6,11 @@ import TeachingMethod from "./TeachingMethod";
 import TeachingMethod2 from "./TeachingMethod2";
 import CollapsibleSection from "../CollapsibleSection";
 
-import "./style.scss";
+import { METHODS } from "./constants";
 
+import "./style.scss";
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
+
 const useStyles = makeStyles(lessonPlanStyle);
 
 const TeachingResources = ({
@@ -29,21 +31,20 @@ const TeachingResources = ({
           <Fragment>
             {Data.hasOwnProperty("classroom") && (
               <TeachingMethod2
-                title="Classroom/In-person Teaching"
-                key="classroom"
+                type={METHODS.IN_PERSON}
+                key={METHODS.IN_PERSON}
                 {...Data.classroom}
               />
             )}
             {Data.hasOwnProperty("remote") && (
               <TeachingMethod2
-                title="Remote Teaching"
-                key="remote"
+                type={METHODS.REMOTE}
+                key={METHODS.REMOTE}
                 {...Data.remote}
               />
             )}
           </Fragment>
         ) : (
-          TeachingMethods.length > 0 &&
           TeachingMethods.map((method, i) => (
             <TeachingMethod key={i} {...method} />
           ))

@@ -4,39 +4,18 @@ import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import SchoolIcon from "@material-ui/icons/School";
-import RemoteIcon from "@material-ui/icons/Laptop";
 
 import ResourceSummary2 from "./ResourceSummary2";
 
-const COPY = {
-  remote: (
-    <p>
-      Everything you need to teach the lesson in person. Classroom lessons are
-      designed to be led by a teacher, who will actively moderate discussions.
-      Students will record their observations and reflections on printed
-      handouts, as opposed to the remote version, where students respond
-      digitally to embedded questions using Nearpod on their laptop.
-    </p>
-  ),
-  in_person: (
-    <p>
-      Everything you need to teach the lesson in person. Classroom lessons are
-      designed to be led by a teacher, who will actively moderate discussions.
-      Students will record their observations and reflections on printed
-      handouts, as opposed to the remote version, where students respond
-      digitally to embedded questions using Nearpod on their laptop.
-    </p>
-  ),
-};
-const ICONS = {
-  remote: <RemoteIcon />,
-  in_person: <SchoolIcon />,
-};
+import { COPY, ICONS, TITLES } from "./constants";
 
-const TeachingMethod2 = ({ title, resourceSummary }) => {
+const TeachingMethod2 = ({
+  type,
+  resourceSummary,
+  gradeVariantNotes,
+  resources,
+}) => {
   const [expanded, expand] = useState(false);
-  const mode = title.toLowerCase().includes("remote") ? "remote" : "in_person";
 
   return (
     <ExpansionPanel
@@ -50,9 +29,9 @@ const TeachingMethod2 = ({ title, resourceSummary }) => {
       >
         <div>
           <h3>
-            {ICONS[mode]} {title}
+            {ICONS[type]} {TITLES[type]}
           </h3>
-          {COPY[mode]}
+          {COPY[type]}
         </div>
       </ExpansionPanelSummary>
       <ExpansionPanelDetails className="ExpansionPanelDetails">
@@ -65,9 +44,10 @@ const TeachingMethod2 = ({ title, resourceSummary }) => {
 };
 
 TeachingMethod2.propTypes = {
-  Title: PropTypes.string,
-  ResourceSummary: PropTypes.object,
-  ResourceDownloads: PropTypes.array,
+  type: PropTypes.string,
+  resourceSummary: PropTypes.array,
+  gradeVariantNotes: PropTypes.array,
+  resources: PropTypes.array,
 };
 
 export default TeachingMethod2;
