@@ -5,7 +5,10 @@ import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-const VariantPart = ({ part, title, preface, itemList, gradePrefix }) => {
+import RichText from "components/RichText";
+import ResourceGroup from "./ResourceGroup";
+
+const VariantPart = ({ part, title, preface, itemList = [], gradePrefix }) => {
   const [expanded, expand] = useState(false);
   return (
     <ExpansionPanel
@@ -23,7 +26,14 @@ const VariantPart = ({ part, title, preface, itemList, gradePrefix }) => {
         </strong>
       </ExpansionPanelSummary>
       <ExpansionPanelDetails className="ExpansionPanelDetails">
-        {preface}
+        <RichText className="VariantPreface" content={preface} />
+        {itemList.length > 0 && (
+          <ol>
+            {itemList.map((item, i) => (
+              <ResourceGroup key={i} {...item} />
+            ))}
+          </ol>
+        )}
       </ExpansionPanelDetails>
     </ExpansionPanel>
   );

@@ -108,6 +108,13 @@
         &:before {
           display: none;
         }
+        ol {
+          margin: 0;
+          padding: 0.5rem 1.5rem;
+          li {
+            margin: 1rem 0;
+          }
+        }
         > .ExpansionPanelSummary {
           border: 2px solid rgba($galactic-black, 0.5);
           padding: 0 0.5rem;
@@ -124,6 +131,12 @@
             strong {
               padding-left: 0.5rem;
             }
+          }
+        }
+        .VariantPreface {
+          border-bottom: 1px solid rgba($galactic-black, 0.25);
+          p:last-child {
+            margin-bottom: 0.5rem;
           }
         }
         .MuiCollapse-wrapper {
