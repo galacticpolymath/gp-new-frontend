@@ -22,8 +22,8 @@ const activateDot = function (index, elemIds) {
   let notActive = elemIds.slice();
   notActive.splice(index, 1);
   notActive.forEach((id) => {
-    let div = document.getElementsByClassName(id);
-    div && div.classList && div.classList.remove("activeDot");
+    let div = document.querySelector(`.${id}`);
+    div && div.classList.remove("activeDot");
   });
 };
 
