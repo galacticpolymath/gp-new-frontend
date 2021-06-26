@@ -24,10 +24,17 @@ const GradeVariant = ({ parts = [], links, grades, gradePrefix }) => {
       </ExpansionPanelSummary>
       <ExpansionPanelDetails className="ExpansionPanelDetails">
         {links && (
-          <a className="download" href={links.url}>
-            <DownloadIcon />
-            {links.linkText}
-          </a>
+          <p>
+            <a
+              className="download"
+              target="_blank"
+              rel="noopener noreferrer"
+              href={links.url}
+            >
+              <DownloadIcon />
+              {links.linkText}
+            </a>
+          </p>
         )}
         <div className="VariantParts">
           {parts.map((part, i) => (

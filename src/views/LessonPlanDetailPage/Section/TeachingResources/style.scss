@@ -111,8 +111,18 @@
         ol {
           margin: 0;
           padding: 0.5rem 1.5rem;
-          li {
+          > li {
             margin: 1rem 0;
+            > p {
+              margin-bottom: 0.25rem;
+            }
+            span[role="img"] {
+              margin-right: 0.5rem;
+            }
+            ul {
+              padding-left: 1rem;
+              list-style-type: none;
+            }
           }
         }
         > .ExpansionPanelSummary {
