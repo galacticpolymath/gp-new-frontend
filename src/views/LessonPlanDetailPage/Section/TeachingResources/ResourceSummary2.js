@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import GridContainer from "components/Grid/GridContainer";
 import GridItem from "components/Grid/GridItem";
-import ICONS from "../../icons";
+import { getIcon } from "../../icons";
 
 const ResourceSummary2 = ({ resources = [] }) => {
   if (resources.length === 0) {
@@ -24,13 +24,10 @@ const ResourceSummary2 = ({ resources = [] }) => {
   };
 
   const renderItem = ({ item, itemExplanation }, i) => {
-    let icon = "";
-    for (const slug in ICONS) {
-      if (item.match(new RegExp(slug, "gi"))) icon = ICONS[slug];
-    }
     return (
       <div key={i} className="resourceSummaryItem">
-        {icon} {item} {typeof itemExplanation === "string" && itemExplanation}
+        {getIcon(item)} {item}{" "}
+        {typeof itemExplanation === "string" && itemExplanation}
       </div>
     );
   };

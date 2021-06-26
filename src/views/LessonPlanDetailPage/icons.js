@@ -1,14 +1,31 @@
 import React from "react";
 
+import GoogleDriveIcon from "assets/img/drive.svg";
+import NearpodIcon from "assets/img/nearpod.svg";
+
 /**
  * Please alphabetize. Wrap all icons with
  * <span role="img" aria-label="" />
  * for accessibility.
 s */
-export default {
+const ICONS = {
   computer: (
     <span role="img" aria-label="computer">
       <i className="fas fa-laptop" style={{ fontSize: "1.3rem" }} />
+    </span>
+  ),
+  docx: (
+    <span role="img" aria-label="word document">
+      <i className="far fa-file-word" style={{ fontSize: "1.3rem" }} />
+    </span>
+  ),
+  drive: (
+    <span role="img" aria-label="google drive">
+      <img
+        src={GoogleDriveIcon}
+        alt="Google Drive"
+        style={{ width: "1.25rem", height: "1.25rem" }}
+      />
     </span>
   ),
   edit: (
@@ -33,7 +50,11 @@ export default {
   ),
   nearpod: (
     <span role="img" aria-label="nearpod">
-      <i className="fas fa-headphones" style={{ fontSize: "1.3rem" }} />
+      <img
+        src={NearpodIcon}
+        alt="Nearpod"
+        style={{ width: "1.25rem", height: "1.25rem", verticalAlign: "sub" }}
+      />
     </span>
   ),
   pencil: (
@@ -82,3 +103,15 @@ export default {
     </span>
   ),
 };
+
+export const getIcon = (slug) => {
+  if (!slug) {
+    return null;
+  }
+  for (const ICON_NAME in ICONS) {
+    if (slug.match(new RegExp(ICON_NAME, "gi"))) return ICONS[ICON_NAME];
+  }
+  return null;
+};
+
+export default ICONS;

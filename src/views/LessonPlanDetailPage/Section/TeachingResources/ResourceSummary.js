@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import GridContainer from "components/Grid/GridContainer";
 import GridItem from "components/Grid/GridItem";
 import RichText from "../../../../components/RichText";
-import ICONS from "../../icons";
+import { getIcon } from "../../icons";
 
 const ResourceSummary = ({
   DigitalItems = [],
@@ -35,12 +35,9 @@ const ResourceSummary = ({
   };
 
   const renderItem = (itemName, icon, i) => {
-    for (const slug in ICONS) {
-      if (itemName.match(new RegExp(slug, "gi"))) icon = ICONS[slug];
-    }
     return (
       <div key={i}>
-        {icon} {itemName}
+        {getIcon(itemName) || icon} {itemName}
       </div>
     );
   };
