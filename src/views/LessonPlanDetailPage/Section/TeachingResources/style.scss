@@ -34,9 +34,20 @@
           line-height: 1.7;
           font-size: 1.1em;
         }
-        &:not(:last-child) > div {
-          border-bottom: 1px solid rgba($galactic-black, 0.5);
+        &:not(:last-child) {
+          > div {
+            border-bottom: 1px solid rgba($galactic-black, 0.5);
+          }
+          > div.title {
+            color: $galactic-black;
+            font-weight: bold;
+            border-bottom: none;
+            padding-bottom: 0;
+          }
         }
+      }
+      > p {
+        margin: 0;
       }
     }
     .resourceSummaryItem {

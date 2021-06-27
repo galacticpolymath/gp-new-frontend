@@ -32,7 +32,14 @@ const ResourceSummary2 = ({ resources = [] }) => {
     );
   };
 
-  return <div className="ResourceSummary">{resources.map(renderRow)}</div>;
+  return (
+    <div className="ResourceSummary">
+      <GridContainer>
+        <GridItem className="title">Resources needed:</GridItem>
+      </GridContainer>
+      {resources.map(renderRow)}
+    </div>
+  );
 };
 
 ResourceSummary2.propTypes = {
