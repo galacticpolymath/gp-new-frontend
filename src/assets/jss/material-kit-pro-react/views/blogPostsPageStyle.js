@@ -80,6 +80,7 @@ const blogPostsPageStyle = {
   card: {
     "border-radius": "4px",
     color: "#3c4858",
+    padding: "0.5rem 1rem",
   },
 };
 

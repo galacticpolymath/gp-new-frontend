@@ -18,6 +18,7 @@ module.exports = {
     "react/prop-types": "off",
     "array-callback-return": "off",
     "react-hooks/exhaustive-deps": "off",
-    "prettier/prettier": "off"
+    "prettier/prettier": "off",
+    "no-prototype-builtins": "off",
   },
 };

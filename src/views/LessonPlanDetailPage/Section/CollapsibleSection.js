@@ -12,10 +12,10 @@ const useStyles = makeStyles(lessonPlanStyle);
 
 const CollapsibleSection = ({
   index,
-  SectionTitle,
+  SectionTitle = "",
   className = "",
   children,
-  initiallyExpanded = false
+  initiallyExpanded = false,
 }) => {
   const classes = useStyles();
   const [expanded, expand] = useState(initiallyExpanded);
@@ -53,7 +53,7 @@ CollapsibleSection.propTypes = {
   SectionTitle: PropTypes.string,
   className: PropTypes.string,
   children: PropTypes.object,
-  initiallyExpanded: PropTypes.bool
+  initiallyExpanded: PropTypes.bool,
 };
 
 export default CollapsibleSection;
