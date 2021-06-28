@@ -19,6 +19,14 @@
         vertical-align: bottom;
       }
     }
+    .footnote p,
+    p.footnote {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    p.footnote {
+      margin-bottom: 1rem;
+    }
     &.Mui-expanded {
       margin-bottom: 3rem;
     }

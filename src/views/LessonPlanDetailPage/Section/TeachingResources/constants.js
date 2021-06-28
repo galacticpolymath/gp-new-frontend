@@ -34,6 +34,7 @@ export const COPY = {
     </p>
   ),
 };
+
 export const ICONS = {
   [METHODS.REMOTE]: <RemoteIcon />,
   [METHODS.IN_PERSON]: <SchoolIcon />,

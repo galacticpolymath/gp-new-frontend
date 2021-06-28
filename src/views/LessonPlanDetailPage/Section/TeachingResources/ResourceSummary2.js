@@ -5,7 +5,7 @@ import GridContainer from "components/Grid/GridContainer";
 import GridItem from "components/Grid/GridItem";
 import { getIcon } from "../../icons";
 
-const ResourceSummary2 = ({ resources = [] }) => {
+const ResourceSummary2 = ({ resources = [], footnote }) => {
   if (resources.length === 0) {
     return null;
   }
@@ -38,15 +38,18 @@ const ResourceSummary2 = ({ resources = [] }) => {
         <GridItem className="title">Resources needed:</GridItem>
       </GridContainer>
       {resources.map(renderRow)}
+      {footnote && (
+        <GridContainer className="footnote">
+          <GridItem>{footnote}</GridItem>
+        </GridContainer>
+      )}
     </div>
   );
 };
 
 ResourceSummary2.propTypes = {
-  DigitalItems: PropTypes.array,
-  PrintedItems: PropTypes.array,
-  OtherRequirements: PropTypes.array,
-  Footnote: PropTypes.string,
+  resources: PropTypes.arrayOf(PropTypes.object),
+  footnote: PropTypes.node,
 };
 
 export default ResourceSummary2;

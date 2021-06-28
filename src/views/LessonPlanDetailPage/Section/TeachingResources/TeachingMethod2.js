@@ -9,7 +9,7 @@ import ResourceSummary2 from "./ResourceSummary2";
 import VariantSummary from "./VariantSummary";
 import GradeVariant from "./GradeVariant";
 
-import { COPY, ICONS, TITLES } from "./constants";
+import { METHODS, COPY, ICONS, TITLES } from "./constants";
 
 const TeachingMethod2 = ({
   type,
@@ -37,7 +37,39 @@ const TeachingMethod2 = ({
         </div>
       </ExpansionPanelSummary>
       <ExpansionPanelDetails className="ExpansionPanelDetails">
-        <ResourceSummary2 resources={resourceSummary} />
+        {type === METHODS.IN_PERSON && (
+          <p className="footnote">
+            *You will need to be logged into a{" "}
+            <a
+              href="https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp"
+              target="blank"
+              rel="noopener noreferrer"
+            >
+              free Google account
+            </a>{" "}
+            and click &quot;Use Template&quot; to add files to your Google
+            Drive.
+          </p>
+        )}
+
+        <ResourceSummary2
+          resources={resourceSummary}
+          footnote={
+            type === METHODS.REMOTE && (
+              <p>
+                *Remote teaching of our lessons requires a minimum (free) Silver
+                Subscription to Nearpod.{" "}
+                <a
+                  href="https://nearpod.com/signup/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Sign up here.
+                </a>
+              </p>
+            )
+          }
+        />
         <VariantSummary variants={gradeVariantNotes} />
         {resources.map((resource, i) => (
           <GradeVariant key={i} {...resource} />
