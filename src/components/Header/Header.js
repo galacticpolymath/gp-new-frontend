@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "@reach/router";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // nodejs library to set properties for components
@@ -70,9 +70,6 @@ export default function Header(props) {
       <Toolbar className={classes.container}>
         <Button className={classes.title}>
           <Link to="/">
-            {/* <div>
-              <img alt="logo" src={logoImage} width="50px" />
-            </div> */}
             <div className={classes.hideLogo}>
               <img alt="logo" src={GpImage} />
             </div>

@@ -2,7 +2,7 @@ import React from "react";
 // nodejs library to set properties for components
 import PropTypes from "prop-types";
 // react components for routing our app without refresh
-import { NavLink } from "react-router-dom";
+import { Link } from "@reach/router";
 
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
@@ -18,51 +18,51 @@ export default function HeaderLinks() {
   return (
     <List className={classes.list + " " + classes.mlAuto}>
       <ListItem className={classes.listItem}>
-        <NavLink
+        <Link
           to="/"
           className={classes.navLink}
           activeStyle={{ fontWeight: "bold" }}
           exact
         >
           Home
-        </NavLink>
+        </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <NavLink
+        <Link
           to="/lessons"
           className={classes.navLink}
           activeStyle={{ fontWeight: "bold" }}
         >
           Lessons
-        </NavLink>
+        </Link>
       </ListItem>
       {/* ///NAV BAR to JobViz */}
       <ListItem className={classes.listItem}>
-        <NavLink
+        <Link
           to="/jobviz"
           className={classes.navLink}
           activeStyle={{ fontWeight: "bold" }}
         >
           JobViz
-        </NavLink>
+        </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <NavLink
+        <Link
           to="/hire-us"
           className={classes.navLink}
           activeStyle={{ fontWeight: "bold" }}
         >
           Hire Us
-        </NavLink>
+        </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <NavLink
+        <Link
           to="/about"
           className={classes.navLink}
           activeStyle={{ fontWeight: "bold" }}
         >
           About
-        </NavLink>
+        </Link>
       </ListItem>
     </List>
   );
