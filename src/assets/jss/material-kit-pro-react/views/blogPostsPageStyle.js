@@ -82,6 +82,12 @@ const blogPostsPageStyle = {
     color: "#3c4858",
     padding: "0.5rem 1rem",
   },
+  purpleText: {
+    color: "#6812D1",
+    "&:hover, &:active": {
+      color: "#9F4BFF",
+    },
+  },
 };
 
 export default blogPostsPageStyle;

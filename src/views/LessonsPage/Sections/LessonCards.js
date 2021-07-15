@@ -9,7 +9,7 @@ import CardBody from "components/Card/CardBody.js";
 
 import blogPostsPageStyle from "assets/jss/material-kit-pro-react/views/blogPostsPageStyle.js";
 import Image from "components/StrapiImage";
-import { Link } from "react-router-dom";
+import { Link } from "@reach/router";
 import { Box } from "@material-ui/core";
 
 const useStyles = makeStyles(blogPostsPageStyle);
@@ -32,9 +32,7 @@ const LessonCards = ({ lessons }) => {
                   }}
                 />
                 <CardBody>
-                  <h4>
-                    <Link to={"/lessons/" + id}>{Title}</Link>
-                  </h4>
+                  <h4 className={classes.purpleText}>{Title}</h4>
                   <p>{Subtitle}</p>
                   <Badge color="primary">{Section[0].TargetSubject}</Badge>
                 </CardBody>
