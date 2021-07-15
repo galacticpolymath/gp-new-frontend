@@ -1,19 +1,20 @@
-/**
- * Fetch but abandon the request after `timeout` milliseconds.
- * {@link Source|https://dmitripavlutin.com/timeout-fetch-request/}
- */
-export const fetchWithTimeout = async (url, timeout = 3000) => {
-  if (!timeout) {
-    const response = await fetch(url);
-    return response.json();
-  }
+const axios = require("axios");
 
-  const controller = new AbortController();
-  const { signal } = controller;
+const URL =
+  process.env.REACT_APP_API_URL || "https://lessondirectory-api.herokuapp.com";
 
-  setTimeout(() => controller.abort(), timeout);
+const LESSONS_URL = URL + "/lesson-plans";
 
-  const response = await fetch(url, { signal });
-
-  return response.json();
+module.exports = {
+  fetchAll() {
+    return axios.get(LESSONS_URL).then(({ data }) => {
+      if (!Array.isArray(data)) {
+        return [data];
+      }
+      return data;
+    });
+  },
+  fetchOne(id) {
+    return axios.get(LESSONS_URL + "/" + id).then(({ data }) => data);
+  },
 };

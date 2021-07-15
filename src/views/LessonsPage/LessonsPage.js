@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
 import NewReleasesIcon from "@material-ui/icons/NewReleases";
@@ -16,26 +16,17 @@ import LessonCards from "./Sections/LessonCards.js";
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 import Hero from "assets/img/hero-images/Lessons_VerticalDotandline.svg";
 
-import cachedLessons from "../LessonPlanDetailPage/data/lesson-plans.json";
 import SectionSubscribe from "../LandingPage/Sections/SectionSubscribe";
-
-import { fetchAll } from "../LessonPlanDetailPage/data/lessonsApi.js";
 
 import lessonsPageStyle from "assets/jss/material-kit-pro-react/views/lessonsPageStyle.js";
 
 const useStyles = makeStyles(lessonsPageStyle);
 
-export default function LessonsPage() {
+export default function LessonsPage({ pageContext: { lessons } }) {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
   });
-
-  const [lessons, setLessons] = useState(cachedLessons);
-
-  useEffect(() => {
-    fetchAll(3000).then(setLessons).catch(console.log);
-  }, []);
 
   const classes = useStyles();
   return (
