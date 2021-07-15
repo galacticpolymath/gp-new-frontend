@@ -15,52 +15,38 @@ const useStyles = makeStyles(styles);
 
 export default function HeaderLinks() {
   const classes = useStyles();
+
+  const linkProps = {
+    getProps: ({ isCurrent }) => ({
+      className: `${isCurrent ? "active" : ""} ${classes.navLink}`,
+    }),
+  };
+
   return (
     <List className={classes.list + " " + classes.mlAuto}>
       <ListItem className={classes.listItem}>
-        <Link
-          to="/"
-          className={classes.navLink}
-          activeStyle={{ fontWeight: "bold" }}
-          exact
-        >
+        <Link to="/" {...linkProps}>
           Home
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link
-          to="/lessons"
-          className={classes.navLink}
-          activeStyle={{ fontWeight: "bold" }}
-        >
+        <Link to="/lessons" {...linkProps}>
           Lessons
         </Link>
       </ListItem>
       {/* ///NAV BAR to JobViz */}
       <ListItem className={classes.listItem}>
-        <Link
-          to="/jobviz"
-          className={classes.navLink}
-          activeStyle={{ fontWeight: "bold" }}
-        >
+        <Link to="/jobviz" {...linkProps}>
           JobViz
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link
-          to="/hire-us"
-          className={classes.navLink}
-          activeStyle={{ fontWeight: "bold" }}
-        >
+        <Link to="/hire-us" {...linkProps}>
           Hire Us
         </Link>
       </ListItem>
       <ListItem className={classes.listItem}>
-        <Link
-          to="/about"
-          className={classes.navLink}
-          activeStyle={{ fontWeight: "bold" }}
-        >
+        <Link to="/about" {...linkProps}>
           About
         </Link>
       </ListItem>
