@@ -25,7 +25,7 @@ import GPcopyrightFooter from "components/Footer/GPcopyrightFooter";
 
 import ParallaxImage from "assets/img/hero-images/landingPage-CityNetwork@75x-20.jpg";
 
-import "./index.scss";
+import "assets/scss/material-kit-pro-react.scss?v=1.9.0";
 
 const useStyles = makeStyles(landingPageStyle);
 
