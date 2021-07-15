@@ -11,6 +11,7 @@
     "eslint-plugin-only-warn": "^1.0.2",
     "gatsby": "^3.9.0",
     "gatsby-plugin-alias-imports": "^1.0.5",
+    "gatsby-plugin-sass": "^4.9.0",
     "history": "4.10.1",
     "moment": "2.26.0",
     "node-sass": "4.14.1",
