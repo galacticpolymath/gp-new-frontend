@@ -4,8 +4,8 @@ import {
   title,
   description,
   cardTitle,
-  grayColor,
-  } from "assets/jss/material-kit-pro-react.js";
+  grayColor
+} from "assets/jss/material-kit-pro-react.js";
 
 const teamStyle = {
   mrAuto,
@@ -21,6 +21,7 @@ const teamStyle = {
     justifyContent: "center",
     width: "80%",
     contentFit: "contain",
+    background: "linear-gradient(328deg, #e3f4ff 0%, #f5f9fc 100%)",
     maxWidth:"100% !important"
   },
 
