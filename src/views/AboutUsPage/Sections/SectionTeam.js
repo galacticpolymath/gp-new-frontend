@@ -18,8 +18,11 @@ import { makeCloudinaryUrl } from "components/shared/constants";
 // import {ReactComponent as ScholarIcon} from "assets/img/google_scholar.svg";
 // import SvgIcon from "@material-ui/core";
 import Scholar from "components/CustomIcons/googleScholar.js";
+
 import EmojiPeopleIcon from "@material-ui/icons/EmojiPeople";
 import Rose from "../../../components/Typography/Rose";
+import Accordion from "../../../components/Accordion/Accordion";
+import { grayColor } from "../../../assets/jss/material-kit-pro-react";
 
 const useStyles = makeStyles(teamStyle);
 
@@ -133,7 +136,7 @@ export default function SectionTeam() {
       <Card className={classes.infoBox}>
         <span className={classes.cardDescription}>
           <Rose><EmojiPeopleIcon
-          style={{ marginLeft: "-1.5rem",fontSize:"1.6rem" }}
+            style={{ marginLeft: "-1.5rem", fontSize: "1.6rem" }}
           /></Rose>
 
         Currently, Matt is the only full-time GP employee. The rest of the team is made up
@@ -673,164 +676,7 @@ export default function SectionTeam() {
           </Card>
         </GridItem>
 
-        {/*CASTLE*/}
-        <GridItem md={4} sm={12}>
-          <Card profile plain>
-            <CardAvatar profile plain>
-              <img
-                src={makeCloudinaryUrl(
-                  "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1614045951/Team/Castle_Crawford_nsmjgb.jpg"
-                )}
-                alt="profile-pic"
-                className={classes.img}
-              />
-            </CardAvatar>
-            <CardBody plain>
-              <h4 className={classes.cardTitle}>
-                Castle Crawford
-              </h4>
-              <h6 className={classes.textMuted}>
-                Front End Web Developer
-              </h6>
-              <p className={classes.cardDescription}>
-                A food fanatic, day hiker, video game vanquisher, Corgi lover, and Software Developer. Loves being part
-                of a team focused on making a difference.
-              </p>
-            </CardBody>
-            <CardFooter className={classes.justifyContent}>
-              <Button
-                href="https://github.com/castlesmadeofcode"
-                target="_blank"
-                justIcon
-                simple
-                color={"primary"}
-              >
-                <i className="fab fa-github" />
-              </Button>
-              <Button
-                href="https://www.linkedin.com/in/castlecrawford13/"
-                target="_blank"
-                justIcon
-                simple
-                color={"primary"}
-              >
-                <i className="fab fa-linkedin" />
-              </Button>
-              {/*<Button*/}
-              {/*  href=""*/}
-              {/*  target="_blank"*/}
-              {/*  justIcon*/}
-              {/*  simple*/}
-              {/*  color={"primary"}*/}
-              {/*>*/}
-              {/*  <i className="fab fa-twitter" />*/}
-              {/*</Button>*/}
-              {/*<Button*/}
-              {/*  href=""*/}
-              {/*  target="_blank"*/}
-              {/*  justIcon*/}
-              {/*  simple*/}
-              {/*  color={"primary"}*/}
-              {/*>*/}
-              {/*  <i className="fab fa-youtube" />*/}
-              {/*</Button>*/}
-              {/*<Button*/}
-              {/*  href=""*/}
-              {/*  target="_blank"*/}
-              {/*  justIcon*/}
-              {/*  simple*/}
-              {/*  color={"primary"}*/}
-              {/*>*/}
-              {/*  <i className="fab fa-instagram" />*/}
-              {/*</Button>*/}
-            </CardFooter>
-          </Card>
-        </GridItem>
-        {/*MARIA*/}
-        <GridItem md={4} sm={12}>
-          <Card profile plain>
-            <CardAvatar profile plain>
-              <img
-                src={makeCloudinaryUrl(
-                  "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1614046222/Team/Maria_Brock_y752ov.jpg"
-                )}
-                alt="profile-pic"
-                className={classes.img}
-              />
-            </CardAvatar>
-            <CardBody plain>
-              <h4 className={classes.cardTitle}>
-                Maria Brock
-              </h4>
-              <h6 className={classes.textMuted}>
-                Front End Web Developer
-              </h6>
-              <p className={classes.cardDescription}>
-                A Software Developer who loves problem solving, puzzles, and art. Fan of gaming, learning, and
-                crocheting
-                adorable, nerdy things. Powered by coffee.
-              </p>
-            </CardBody>
-            <CardFooter className={classes.justifyContent}>
-              <Button
-                href="https://www.mariabrock.dev/"
-                target="_blank"
-                justIcon
-                simple
-                color={"primary"}
-                className={classes.social}
-              >
-                <i className="fas fa-globe" />
-              </Button>
-              <Button
-                href="https://github.com/mariabrock?tab=repositories"
-                target="_blank"
-                justIcon
-                simple
-                color={"primary"}
-              >
-                <i className="fab fa-github" />
-              </Button>
-              <Button
-                href="https://www.linkedin.com/in/maria-brock/"
-                target="_blank"
-                justIcon
-                simple
-                color={"primary"}
-              >
-                <i className="fab fa-linkedin" />
-              </Button>
 
-              <Button
-                href="https://twitter.com/actual_jedi"
-                target="_blank"
-                justIcon
-                simple
-                color={"primary"}
-              >
-                <i className="fab fa-twitter" />
-              </Button>
-              {/*<Button*/}
-              {/*  href=""*/}
-              {/*  target="_blank"*/}
-              {/*  justIcon*/}
-              {/*  simple*/}
-              {/*  color={"primary"}*/}
-              {/*>*/}
-              {/*  <i className="fab fa-youtube" />*/}
-              {/*</Button>*/}
-              <Button
-                href="https://www.instagram.com/actual_jedi/"
-                target="_blank"
-                justIcon
-                simple
-                color={"primary"}
-              >
-                <i className="fab fa-instagram" />
-              </Button>
-            </CardFooter>
-          </Card>
-        </GridItem>
         {/*CAITLIN*/}
         {/*<GridItem md={4} sm={12}>*/}
         {/*  <Card profile plain>*/}
@@ -981,91 +827,246 @@ export default function SectionTeam() {
       }
       {/*//--------------------*/
       }
-
-      {/*ARDA*/
-      }
       <div className={classes.sectionLabel}>
         <h3>ALUMNI</h3>
         <h4>We wouldn't be here without the hard work of these amazing folks!</h4>
       </div>
-      <GridContainer className={classes.justifyContent}>
-        <GridItem md={4} sm={12}>
-          <Card profile plain>
+      <GridContainer className={classNames(classes.justifyContent, classes.accordionContainer)}>
+        <Accordion
+          style={{ color: grayColor }}
+          active={-1}
+          activeColor={"primary"}
+          collapses={[
+
+            /*Add Retired folks here*/
+
+            {
+              title: "Maria Brock",
+              content:
+                <GridItem md={4} sm={12}>
+                  <Card profile plain>
+                    <CardAvatar profile plain>
+                      <img
+                        src={makeCloudinaryUrl(
+                          "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1614046222/Team/Maria_Brock_y752ov.jpg"
+                        )}
+                        alt="profile-pic"
+                        className={classes.img}
+                      />
+                    </CardAvatar>
+                    <CardBody plain>
+                      <h4 className={classes.cardTitle}>
+                        Maria Brock
+                      </h4>
+                      <h6 className={classes.textMuted}>
+                        Front End Web Developer
+                      </h6>
+                      <p className={classes.cardDescription}>
+                        A Software Developer who loves problem solving, puzzles, and art. Fan of gaming, learning, and
+                        crocheting
+                        adorable, nerdy things. Powered by coffee.
+                      </p>
+                    </CardBody>
+                    <CardFooter className={classes.justifyContent}>
+                      <Button
+                        href="https://www.mariabrock.dev/"
+                        target="_blank"
+                        justIcon
+                        simple
+                        color={"primary"}
+                        className={classes.social}
+                      >
+                        <i className="fas fa-globe" />
+                      </Button>
+                      <Button
+                        href="https://github.com/mariabrock?tab=repositories"
+                        target="_blank"
+                        justIcon
+                        simple
+                        color={"primary"}
+                      >
+                        <i className="fab fa-github" />
+                      </Button>
+                      <Button
+                        href="https://www.linkedin.com/in/maria-brock/"
+                        target="_blank"
+                        justIcon
+                        simple
+                        color={"primary"}
+                      >
+                        <i className="fab fa-linkedin" />
+                      </Button>
+
+                      <Button
+                        href="https://twitter.com/actual_jedi"
+                        target="_blank"
+                        justIcon
+                        simple
+                        color={"primary"}
+                      >
+                        <i className="fab fa-twitter" />
+                      </Button>
+                      {/*<Button*/}
+                      {/*  href=""*/}
+                      {/*  target="_blank"*/}
+                      {/*  justIcon*/}
+                      {/*  simple*/}
+                      {/*  color={"primary"}*/}
+                      {/*>*/}
+                      {/*  <i className="fab fa-youtube" />*/}
+                      {/*</Button>*/}
+                      <Button
+                        href="https://www.instagram.com/actual_jedi/"
+                        target="_blank"
+                        justIcon
+                        simple
+                        color={"primary"}
+                      >
+                        <i className="fab fa-instagram" />
+                      </Button>
+                    </CardFooter>
+                  </Card>
+                </GridItem>
+            },
+            {
+              title: "Castle Crawford",
+              content:
+            <GridItem md={4} sm={12}>
+              <Card profile plain>
+                <CardAvatar profile plain>
+                  <img
+                    src={makeCloudinaryUrl(
+                      "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1614045951/Team/Castle_Crawford_nsmjgb.jpg"
+                    )}
+                    alt="profile-pic"
+                    className={classes.img}
+                  />
+                </CardAvatar>
+                <CardBody plain>
+                  <h4 className={classes.cardTitle}>
+                    Castle Crawford
+                  </h4>
+                  <h6 className={classes.textMuted}>
+                    Front End Web Developer
+                  </h6>
+                  <p className={classes.cardDescription}>
+                    A food fanatic, day hiker, video game vanquisher, Corgi lover, and Software Developer. Loves being
+                    part
+                    of a team focused on making a difference.
+                  </p>
+                </CardBody>
+                <CardFooter className={classes.justifyContent}>
+                  <Button
+                    href="https://github.com/castlesmadeofcode"
+                    target="_blank"
+                    justIcon
+                    simple
+                    color={"primary"}
+                  >
+                    <i className="fab fa-github" />
+                  </Button>
+                  <Button
+                    href="https://www.linkedin.com/in/castlecrawford13/"
+                    target="_blank"
+                    justIcon
+                    simple
+                    color={"primary"}
+                  >
+                    <i className="fab fa-linkedin" />
+                  </Button>
+                </CardFooter>
+              </Card>
+            </GridItem>
+          },
+          {
+            title:"Tyler Lemburg",
+            content:
+            <GridItem md={4} sm={12}>
+            <Card profile plain>
             <CardAvatar profile plain>
-              <img
-                src={makeCloudinaryUrl(
-                  "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1595867238/Team/FullSizeRender_Arda_headshot-2_ebakrg.jpg"
-                )}
-                alt="profile-pic"
-                className={classes.img}
-              />
+            <img
+            src={makeCloudinaryUrl(
+            "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1597278923/Team/image_2_jjogfs.png"
+            )}
+            alt="profile-pic"
+            className={classes.img}
+            />
             </CardAvatar>
             <CardBody plain>
-              <h4 className={classes.cardTitle}>Arda Turkmen</h4>
-              <h6 className={classes.textMuted}>Back End Developer</h6>
-              <p className={classes.cardDescription}>
-                Arda is a senior at Vanderbilt University, majoring in Computer Science and Mathematics. He was key in
-                developing our early website in 2019-2020 using Node.JS, React, and SQL managed through AWS.
-              </p>
+            <h4 className={classes.cardTitle}>Tyler Lemburg, MSc</h4>
+            <h6 className={classes.textMuted}>Previous Lead Developer, JobViz</h6>
+            <p className={classes.cardDescription}>
+            A Senior Software Engineer working remotely for Cognito. Tyler built the first iteration of JobViz.
+            He
+            has worked for several nonprofits as a web developer and recently earned a Masters in Climatology.
+            </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
-              <Button
-                href="https://www.linkedin.com/in/arda-turkmen-604432113/"
-                target="_blank"
-                justIcon
-                simple
-                color="primary"
-              >
-                <i className="fab fa-linkedin" />
-              </Button>
+            <Button
+            href="http://tylerlemburg.com/"
+            target="_blank"
+            justIcon
+            simple
+            color="primary"
+            >
+            <i className="fas fa-globe"> </i>
+            </Button>
+            <Button
+            href="https://www.linkedin.com/in/tylerlemburg/"
+            target="_blank"
+            justIcon
+            simple
+            color="primary"
+            >
+            <i className="fab fa-linkedin" />
+            </Button>
             </CardFooter>
-          </Card>
-        </GridItem>
-        {/*TYLER*/
-        }
-        <GridItem md={4} sm={12}>
-          <Card profile plain>
+            </Card>
+            </GridItem>
+          },
+          {
+            title: "Arda Turkmen",
+            content:
+            <GridItem md={4} sm={12}>
+            <Card profile plain>
             <CardAvatar profile plain>
-              <img
-                src={makeCloudinaryUrl(
-                  "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1597278923/Team/image_2_jjogfs.png"
-                )}
-                alt="profile-pic"
-                className={classes.img}
-              />
+            <img
+            src={makeCloudinaryUrl(
+            "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1595867238/Team/FullSizeRender_Arda_headshot-2_ebakrg.jpg"
+            )}
+            alt="profile-pic"
+            className={classes.img}
+            />
             </CardAvatar>
             <CardBody plain>
-              <h4 className={classes.cardTitle}>Tyler Lemburg, MSc</h4>
-              <h6 className={classes.textMuted}>Previous Lead Developer, JobViz</h6>
-              <p className={classes.cardDescription}>
-                A Senior Software Engineer working remotely for Cognito. Tyler built the first iteration of JobViz. He
-                has worked for several nonprofits as a web developer and recently earned a Masters in Climatology.
-              </p>
+            <h4 className={classes.cardTitle}>Arda Turkmen</h4>
+            <h6 className={classes.textMuted}>Back End Developer</h6>
+            <p className={classes.cardDescription}>
+            Arda is a senior at Vanderbilt University, majoring in Computer Science and Mathematics. He was key
+            in
+            developing our early website in 2019-2020 using Node.JS, React, and SQL managed through AWS.
+            </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
-              <Button
-                href="http://tylerlemburg.com/"
-                target="_blank"
-                justIcon
-                simple
-                color="primary"
-              >
-                <i className="fas fa-globe"> </i>
-              </Button>
-              <Button
-                href="https://www.linkedin.com/in/tylerlemburg/"
-                target="_blank"
-                justIcon
-                simple
-                color="primary"
-              >
-                <i className="fab fa-linkedin" />
-              </Button>
+            <Button
+            href="https://www.linkedin.com/in/arda-turkmen-604432113/"
+            target="_blank"
+            justIcon
+            simple
+            color="primary"
+            >
+            <i className="fab fa-linkedin" />
+            </Button>
             </CardFooter>
-          </Card>
-        </GridItem>
+            </Card>
+            </GridItem>
+          }]} />
+
       </GridContainer>
+
+
     </div>
+
   )
     ;
 }

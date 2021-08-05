@@ -6,7 +6,7 @@ import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
-
+import {PlayArrow} from "@material-ui/icons";
 import descriptionStyle from "assets/jss/material-kit-pro-react/views/aboutUsSections/descriptionStyle.js";
 import Warning from "../../../components/Typography/Warning";
 import Primary from "../../../components/Typography/Primary";

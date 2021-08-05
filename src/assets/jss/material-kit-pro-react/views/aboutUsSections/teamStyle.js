@@ -65,6 +65,10 @@ const teamStyle = {
   },
   bgColor: {
     backgroundColor: "#2c83c3",
+  },
+  accordionContainer:{
+    color: grayColor,
+    margin: "0 10%",
   }
 };
 
