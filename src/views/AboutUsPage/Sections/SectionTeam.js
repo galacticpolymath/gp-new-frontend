@@ -18,6 +18,8 @@ import { makeCloudinaryUrl } from "components/shared/constants";
 // import {ReactComponent as ScholarIcon} from "assets/img/google_scholar.svg";
 // import SvgIcon from "@material-ui/core";
 import Scholar from "components/CustomIcons/googleScholar.js";
+import EmojiPeopleIcon from "@material-ui/icons/EmojiPeople";
+import Rose from "../../../components/Typography/Rose";
 
 const useStyles = makeStyles(teamStyle);
 
@@ -44,7 +46,7 @@ export default function SectionTeam() {
       >
         <h3>LEADERSHIP</h3>
         <h4>After doing biological research for over a decade and teaching in Nashville public middle schools for
-          3&nbsp;1&frasl;2 years, Matt
+          3+ years, Matt
           left his position as a postdoc at Vanderbilt's Collaborative for STEM Education and Outreach in February 2021
           to focus on
           GP full time.</h4>
@@ -127,6 +129,20 @@ export default function SectionTeam() {
           </Card>
         </GridItem>
       </GridContainer>
+
+      <Card className={classes.infoBox}>
+        <span className={classes.cardDescription}>
+          <Rose><EmojiPeopleIcon
+          style={{ marginLeft: "-1.5rem",fontSize:"1.6rem" }}
+          /></Rose>
+
+        Currently, Matt is the only full-time GP employee. The rest of the team is made up
+        of an incredibly talented group of volunteers and contractors. If you want to get involved,
+        <a href={"#getinvolved"}> click here to learn more.</a>
+          </span>
+
+      </Card>
+
 
       {/*PRODUCT TEAM*/}
       <div className={classes.sectionLabel}>
@@ -603,7 +619,8 @@ export default function SectionTeam() {
                 Lesson Plan UI/UX Lead
               </h6>
               <p className={classes.cardDescription}>
-                An earnest problem solver that loves to break things down and build things up. Loves food, beer, and communing with the great outdoors.
+                An earnest problem solver that loves to break things down and build things up. Loves food, beer, and
+                communing with the great outdoors.
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>

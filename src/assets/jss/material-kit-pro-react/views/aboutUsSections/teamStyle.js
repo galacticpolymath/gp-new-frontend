@@ -15,19 +15,28 @@ const teamStyle = {
     ...description,
     marginBottom: "80px",
   },
+  infoBox:{
+    margin:"0 auto",
+    padding: "1rem",
+    justifyContent: "center",
+    width: "80%",
+    contentFit: "contain",
+    maxWidth:"100% !important"
+  },
+
   cardTitle,
   cardDescription: {
     color: grayColor[3],
-    padding: "1rem",
-    paddingBottom: "0",
-    marginBottom: 0
+    marginLeft: "1.2rem"
+
   },
+
   team: {
     // padding: "80px 0px",
   },
 
   sectionLabel:{
-    padding: "12vh 2vh 2vh",
+    padding: "6vh 2vh 2vh",
     "& >*":{
       textAlign: "center",
     },

@@ -12,6 +12,7 @@ import Warning from "../../../components/Typography/Warning";
 import Primary from "../../../components/Typography/Primary";
 import { makeCloudinaryUrl } from "../../../components/shared/constants";
 
+
 const useStyles = makeStyles(descriptionStyle);
 
 export default function SectionDescription() {
@@ -76,12 +77,16 @@ export default function SectionDescription() {
           className={classes.textLeft}
         >
           <Primary><h2>Our Vision</h2></Primary>
-          <h4>Our company was not founded just to make a big profit. We were founded
-            to improve the lives of teachers, students, and researchers–because we have been in all
-            of those roles. We envision a future where education is bolder, more creative, more equitable,
+          <h4>We are a <a href={"https://en.wikipedia.org/wiki/Triple_bottom_line"}>triple bottom line </a>
+            social enterprise, motivated by People, Planet, and Profit—in that order. We want to improve the lives of teachers,
+            students, and researchers because we have been in all of those roles. We are also keenly interested in
+            amplifying marginalized voices (particularly those of indigenous peoples around the world), not only because
+            representation matters, but because diverse perspectives lead to better solutions. We are working toward a
+            future where education is bolder, more creative, more equitable,
             and where organizational outreach truly has Broader Impacts.
-            <a href={"https://vimeo.com/manage/videos/448000812"} rel="noopener noreferrer" target="_blank">
-              &nbsp;See this talk by our founder to learn more.
+            <br/><br/>
+             <a href={"https://vimeo.com/manage/videos/448000812"} rel="noopener noreferrer" target="_blank">
+               <Warning><PlayArrow /></Warning>&nbsp;See this talk by our founder to learn more.
             </a>
             </h4>
         </GridItem>
