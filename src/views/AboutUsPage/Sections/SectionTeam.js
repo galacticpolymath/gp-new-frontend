@@ -19,8 +19,8 @@ import { makeCloudinaryUrl } from "components/shared/constants";
 // import SvgIcon from "@material-ui/core";
 import Scholar from "components/CustomIcons/googleScholar.js";
 
-import EmojiPeopleIcon from "@material-ui/icons/EmojiPeople";
-import Rose from "../../../components/Typography/Rose";
+// import EmojiPeopleIcon from "@material-ui/icons/EmojiPeople";
+// import Rose from "../../../components/Typography/Rose";
 import Accordion from "../../../components/Accordion/Accordion";
 import { grayColor } from "../../../assets/jss/material-kit-pro-react";
 
@@ -133,25 +133,25 @@ export default function SectionTeam() {
         </GridItem>
       </GridContainer>
 
-      <Card className={classes.infoBox}>
-        <span className={classes.cardDescription}>
-          <Rose><EmojiPeopleIcon
-            style={{ marginLeft: "-1.5rem", fontSize: "1.6rem" }}
-          /></Rose>
+      {/*<Card className={classes.infoBox}>*/}
+      {/*  <span className={classes.cardDescription}>*/}
+      {/*    <Rose><EmojiPeopleIcon*/}
+      {/*      style={{ marginLeft: "-1.5rem", fontSize: "1.6rem" }}*/}
+      {/*    /></Rose>*/}
 
-        Currently, Matt is the only full-time GP employee. The rest of the team is made up
-        of an incredibly talented group of volunteers and contractors. If you want to get involved,
-        <a href={"#getinvolved"}> click here to learn more.</a>
-          </span>
+      {/*  Currently, Matt is the only full-time GP employee. The rest of the team is made up*/}
+      {/*  of an incredibly talented group of volunteers and contractors. If you want to get involved,*/}
+      {/*  <a href={"#getinvolved"}> click here to learn more.</a>*/}
+      {/*    </span>*/}
 
-      </Card>
+      {/*</Card>*/}
 
 
       {/*PRODUCT TEAM*/}
       <div className={classes.sectionLabel}>
         <h3>PRODUCT TEAM</h3>
-        <h4>The multitalented group of scientists, artists, communicators, and education experts responsible for
-          bringing each Galactic Polymath lesson to life.</h4>
+        <h4>Our multitalented group of contractors and volunteers includes scientists, artists, communicators,
+          and education experts who are responsible for bringing each Galactic Polymath lesson to life.</h4>
       </div>
       <GridContainer className={classes.justifyContent}>
         {/*STEPH*/}
@@ -458,8 +458,8 @@ export default function SectionTeam() {
                 VIDEO CREATOR
               </h6>
               <p className={classes.cardDescription}>
-                Biology Educator, Science Communicator, Creative. Jayme says
-        Wow a lot <em>(especially about science!)</em> and works to help others do the same.
+                A biology educator and science communicator, Jayme says Wow a lot
+                <em>(especially about science!)</em> and works to help others do the same.
               </p>
             </CardBody>
             <CardFooter className={classes.justifyContent}>
@@ -658,7 +658,7 @@ export default function SectionTeam() {
       <GridContainer className={classes.justifyContent}>
         <div className={classes.sectionLabel}>
           <h3>DEV TEAM</h3>
-          <h4>The intrepid group building and maintaining our site, as well as a growing variety of publishing and
+          <h4>The talented, mostly volunteer, group building and maintaining our site, as well as a growing variety of publishing and
             teaching tools.
             Fluent in React.js, SASS, CSS, HTML, R and other languages.</h4>
         </div>
