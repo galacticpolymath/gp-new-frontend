@@ -580,6 +580,78 @@ export default function SectionTeam() {
           </Card>
         </GridItem>
 
+        {/*Audrey*/}
+        <GridItem md={4} sm={12}>
+          <Card profile plain>
+            <CardAvatar profile plain>
+              <img
+                src={makeCloudinaryUrl(
+                  "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1628345108/Team/audreyserene_headshot_l2v8wg.jpg"
+                )}
+                alt="profile-pic"
+                className={classes.img}
+              />
+            </CardAvatar>
+            <CardBody plain>
+              <h4 className={classes.cardTitle}>Audrey Serene</h4>
+              <h6 className={classes.textMuted}>
+                Animator
+              </h6>
+              <p className={classes.cardDescription}>
+                An animator and experimental filmmaker who loves anything and everything that combines art and technology.
+                Especially when it’s for a good cause.
+              </p>
+            </CardBody>
+            <CardFooter className={classes.justifyContent}>
+              <Button
+                href="https://audreyserene.com"
+                target="_blank"
+                justIcon
+                simple
+                color={"primary"}
+              >
+                <i className="fas fa-globe" />
+              </Button>
+              <Button
+                href="https://www.linkedin.com/in/audreyserene/"
+                target="_blank"
+                justIcon
+                simple
+                color={"primary"}
+              >
+                <i className="fab fa-linkedin" />
+              </Button>
+              {/*<Button*/}
+              {/*  href=""*/}
+              {/*  target="_blank"*/}
+              {/*  justIcon*/}
+              {/*  simple*/}
+              {/*  color={"primary"}*/}
+              {/*>*/}
+              {/*  <i className="fab fa-twitter" />*/}
+              {/*</Button>*/}
+              {/*<Button*/}
+              {/*  href=""*/}
+              {/*  target="_blank"*/}
+              {/*  justIcon*/}
+              {/*  simple*/}
+              {/*  color={"primary"}*/}
+              {/*>*/}
+              {/*  <i className="fab fa-youtube" />*/}
+              {/*</Button>*/}
+              <Button
+                href="https://www.instagram.com/audrey.animation/"
+                target="_blank"
+                justIcon
+                simple
+                color={"primary"}
+              >
+                <i className="fab fa-instagram" />
+              </Button>
+            </CardFooter>
+          </Card>
+        </GridItem>
+
         {/*Jacki Whisenant*/}
         <GridItem md={4} sm={12}>
           <Card profile plain>
