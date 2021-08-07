@@ -246,12 +246,15 @@ export default function SectionTeam() {
               </div>
               <div className={classes.doubleSpaced}>
                 <h4>
-                  Students learn better when lessons are
-                  contextualized in real-world scenarios and
-                  concepts are connected across subjects.&nbsp;
-                  <span className={classes.blackText}>
-                    This informs every lesson we design!
-                  </span>
+                  Our lessons can be <span className={classes.blackText}>taught in any subject classroom! </span>
+                  We align to learning standards in ELA, math, social studies and science to
+                  provide deeper understanding and longer retention.
+                  {/*Students learn better when lessons are*/}
+                  {/*contextualized in real-world scenarios and*/}
+                  {/*concepts are connected across subjects.&nbsp;*/}
+                  {/*<span className={classes.blackText}>*/}
+                  {/*  This informs every lesson we design!*/}
+                  {/*</span>*/}
                 </h4>
               </div>
               <div className={classes.doubleSpaced}>
@@ -261,8 +264,8 @@ export default function SectionTeam() {
               </div>
               <div className={classes.doubleSpaced}>
                 <h4>
-                  Our lessons are <span className={classes.blackText}>FREE and ready-to-launch, in person or virtually!</span> And teachers have access to editable
-                  files, so they can edit and remix to their liking.
+                  GP lessons are <span className={classes.blackText}>FREE and ready-to-launch, in person or remotely with Nearpod!</span>
+                  &nbsp;Teachers are free to edit and remix materials to meet their classroom needs.
                 </h4>
               </div>
               <div
