@@ -27,7 +27,7 @@ const LessonCards = ({ lessons }) => {
                 <div
                   className={classes.coloredShadow}
                   style={{
-                    backgroundImage: `url(${CoverImage.url})`,
+                    // backgroundImage: `url(${CoverImage.url})`,
                     opacity: "1",
                   }}
                 />
@@ -42,6 +42,33 @@ const LessonCards = ({ lessons }) => {
             </Link>
           </GridItem>
         ))}
+        {/*Manual coming soon addition*/}
+        <GridItem xs={12} sm={6} md={6}>
+          {/*<Link to={"/lessons/" + id}>*/}
+            <Box className={classes.card} boxShadow={4}>
+              <img
+                   className="Image"
+                   alt={"Coming Soon lesson graphic. A drawn cougar stands over a graph and a city map."}
+                   src={'https://res.cloudinary.com/galactic-polymath/image/upload/v1628365236/lesson_misc_share/geneticRescue_lesson-banner_exphsn.png'} />
+              <div
+                className={classes.coloredShadow}
+                style={{
+                  opacity: "1",
+                }}
+              />
+              <CardBody>
+                <h4>
+                  {/*<Link to={"/lessons/" + id}>{Title}</Link>*/}
+                  Genetic Rescue to the Rescue
+                </h4>
+                <p>Preventing extinction through gene flow</p>
+                <br/>
+                <Badge color={"rose"}>Science</Badge>
+              </CardBody>
+            </Box>
+          {/*</Link>*/}
+        </GridItem>
+
       </GridContainer>
     </div>
   );

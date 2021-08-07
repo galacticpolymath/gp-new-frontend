@@ -100,7 +100,7 @@ export default function LessonsPage() {
           {/* <SectionPills /> */}
           <InfoArea
             className={classes.infoArea}
-            description="Check out the first of many GP Lessons: the result of 100's of hours of skilled labor."
+            description="Check out the first of many GP Lessons: each the result of 100's of hours of skilled labor."
             icon={NewReleasesIcon}
             iconColor="rose"
           />
