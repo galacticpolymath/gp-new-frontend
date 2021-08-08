@@ -36,7 +36,7 @@ const GradeVariant = ({ parts = [], links, grades, gradePrefix }) => {
               {links.linkText}
             </a>
 
-            <DownloadHelp />
+            <DownloadHelp id={gradePrefix} />
           </p>
         )}
         <div className="VariantParts">

@@ -1,0 +1,24 @@
+.DownloadHelpModal {
+  span {
+    display: inline-block;
+    margin-left: 1rem;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+.DownloadHelpModalDialog {
+  .MuiDialogContent-root {
+    text-align: center;
+    p {
+      text-align: left;
+    }
+    img {
+      max-width: 100%;
+      margin: 1rem auto 2rem auto;
+      display: block;
+    }
+  }
+}
