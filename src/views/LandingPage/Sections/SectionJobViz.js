@@ -3,13 +3,10 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import classNames from "classnames";
 // @material-ui/icons
-import StarIcon from '@material-ui/icons/Star';
-// import  from "@material-ui/icons/";
+
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Card from "components/Card/Card.js";
-import CardBody from "components/Card/CardBody.js";
 import Button from "components/CustomButtons/Button.js";
 import teamsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/teamsStyle.js";
 import teamStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.js";
@@ -19,25 +16,27 @@ import {
   primaryColor,
   roseColor,
   hexToRgb,
-  blackColor,
+  blackColor
 } from "../../../assets/jss/material-kit-pro-react";
-import CreateIcon from "@material-ui/icons/Create";
+import Rose from "../../../components/Typography/Rose";
+import AccountTreeIcon from "@material-ui/icons/AccountTree";
+import { WorkOutlined } from "@material-ui/icons";
 
 const style = {
   ...teamsStyle,
   ...teamStyle,
   doubleSpaced: {
-    "& h3, h4":{
+    "& h3, h4": {
       paddingBottom: ".8rem"
-    },
+    }
 
   },
-  featuredLessonLabel:{
+  featuredLessonLabel: {
     float: "left",
     display: "flex",
     zIndex: "2",
     backgroundColor: roseColor[3],
-    border: "1px solid"+ blackColor,
+    border: "1px solid" + blackColor,
     marginTop: "10px",
     marginBottom: "-20px",
     textTransform: "uppercase",
@@ -46,11 +45,11 @@ const style = {
     // remove automargin for h4
     "& *": {
       margin: 0,
-      fontWeight: "400",
+      fontWeight: "400"
       // alignSelf: "center",
     },
     // add padding to star
-    "& > :first-child":{
+    "& > :first-child": {
       paddingRight: "4px"
     }
   },
@@ -73,7 +72,7 @@ const style = {
   justifyTextLeft: {
     textAlign: "left"
   },
-  lessonCover:{
+  lessonCover: {
     // border: "2px solid" + grayColor[6],
     backgroundColor: "white",
     zIndex: "0",
@@ -87,7 +86,7 @@ const style = {
       hexToRgb(blackColor) +
       ", 0.2)"
   },
-  lessonDescriptors:{
+  lessonDescriptors: {
     marginRight: "auto",
     marginLeft: "auto",
     padding: "20px 1rem"
@@ -99,21 +98,21 @@ const style = {
   purpleText: {
     color: "#6912D1",
     fontWeight: "500",
-    fontStyle:"italic"
+    fontStyle: "italic"
   },
   pinkText: {
     color: roseColor[0],
     fontWeight: "500",
-    fontStyle:"italic"
+    fontStyle: "italic"
   },
   blueText: {
     color: "#2C83C3",
     fontWeight: "500",
-    fontStyle:"italic"
+    fontStyle: "italic"
   },
-  blackText:{
+  blackText: {
     fontWeight: "500",
-    fontStyle:"italic"
+    fontStyle: "italic"
   },
   thinkBigger: {
     display: "block",
@@ -133,12 +132,12 @@ const style = {
   "@media only screen and (max-width: 960px)": {
     /* tablets */
     thinkBigger: {
-      "& h1":{
+      "& h1": {
         fontSize: "2.6rem"
       }
     },
-    lessonCover:{
-      marginBottom:"3rem"
+    lessonCover: {
+      marginBottom: "3rem"
     }
 
   },
@@ -166,43 +165,27 @@ export default function SectionJobViz() {
       )}
     >
       <div>
-        <br />
-        {/*Think Bigger Tagline*/}
-        <GridContainer style={{placeItems:"center"}}>
-          <div
-          className={classNames(classes.thinkBigger)}
-        >
-          <h1>
-            <span style={{whiteSpace:"nowrap",textAlign: "left"}}>Think <b>bigger</b>.</span>
-          </h1>
-          <h1>
-            <span style={{whiteSpace:"nowrap"}}>Learn everything.</span>
-          </h1>
-          </div>
-        </GridContainer>
 
         {/*Featured lesson*/}
-        <GridContainer >
-          <GridItem xs={12} sm={12} md={12} lg={7}>
-            <Card   style={{paddingBottom: "20px",}}>
-              <CardBody style={{backgroundColor: "transparent",}}>
-                <GridContainer
-                  style={{ display: "flex", alignContent: "middle",backgroundColor: "transparent" }}>
-                  <span className={classes.featuredLessonLabel}>
-                      <StarIcon/> <h4> Featured Lesson</h4>
-                    </span>
-                  <GridItem xs={12} md={10}>
-                    <div style={{ padding:"75% 0 0 0",position:"relative" }}>
-                      <iframe
-                        src="https://player.vimeo.com/video/584633265?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                        frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen
-                        style={{ position:"absolute",top:0,left:0,width:"100%",height:"100%" }} title="Jobviz.mov"></iframe>
-                    </div>
-                    <script src="https://player.vimeo.com/api/player.js"></script>
-                  </GridItem>
-                </GridContainer>
-              </CardBody>
-            </Card>
+        <GridContainer>
+          <GridItem xs={12} sm={12} md={6} lg={6}>
+            {/*<Card style={{ paddingBottom: "20px" }}>*/}
+            {/*  <CardBody style={{ backgroundColor: "transparent" }}>*/}
+                {/*<GridContainer*/}
+                {/*  style={{ display: "flex", alignContent: "middle", backgroundColor: "transparent" }}>*/}
+                {/*<GridItem xs={12} md={7}>*/}
+                <div style={{ padding: "100% 0 0 0", position: "relative" }}>
+                  <iframe
+                    src="https://player.vimeo.com/video/584633265?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                    frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen
+                    style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                    title="Jobviz.mov"></iframe>
+                </div>
+                <script src="https://player.vimeo.com/api/player.js"/>
+                {/*</GridItem>*/}
+                {/*</GridContainer>*/}
+              {/*</CardBody>*/}
+            {/*</Card>*/}
 
           </GridItem>
 
@@ -212,55 +195,41 @@ export default function SectionJobViz() {
                       classes.fontStyle,
                       classes.justifyTextLeft,
                       classes.justifyContentCenter,
-                      classes.lessonDescriptors,
+                      classes.lessonDescriptors
                     )}>
+            {/*<div className={classes.doubleSpaced}>*/}
+            <Rose>
+              <h1 style={{ fontWeight: 500 }}>
+                <AccountTreeIcon style={{ fontSize: "2.6rem" }} /> JobViz
+              </h1>
+            </Rose>
+            <h3>a free career exploration tool</h3>
+
+            {/*</div>*/}
+
+            <h4>
               <div className={classes.doubleSpaced}>
-                <h3 style={{fontWeight:500}}>
-                  Our goal is to <span>empower&nbsp;students </span>
-                  with{" "}
-                  <span className={classes.purpleText}>
-                    agency</span> and{" "}
-                  <span className={classes.pinkText}>
-                    critical thinking.
-                  </span>
-                </h3>
+                <ul>
+                  <li>Search and browse ~1,000 jobs</li>
+                  <li>Explore US Bureau of Labor Statistics data most relevant to students</li>
+                  <li>Clean, responsive user interface</li>
+                  <li>Share links to jobs (useful for assignments)</li>
+                  <li>Create a springboard for independent career research</li>
+                </ul>
               </div>
-              <div className={classes.doubleSpaced}>
-                <h4>
-                  Our lessons can be <span className={classes.blackText}>taught in any subject classroom! </span>
-                  We align to learning standards in ELA, math, social studies and science to
-                  provide deeper understanding and longer retention.
-                  {/*Students learn better when lessons are*/}
-                  {/*contextualized in real-world scenarios and*/}
-                  {/*concepts are connected across subjects.&nbsp;*/}
-                  {/*<span className={classes.blackText}>*/}
-                  {/*  This informs every lesson we design!*/}
-                  {/*</span>*/}
-                </h4>
-              </div>
-              <div className={classes.doubleSpaced}>
-                <h4>
-                  We build lessons around <span className={classes.blackText}>real research, data, and stories</span> from diverse STEM experts.
-                </h4>
-              </div>
-              <div className={classes.doubleSpaced}>
-                <h4>
-                  GP lessons are <span className={classes.blackText}>FREE and ready-to-launch, in person or remotely with Nearpod!</span>
-                  &nbsp;Teachers are free to edit and remix materials to meet their classroom needs.
-                </h4>
-              </div>
-              <div
-              style={{padding:"1.5rem 0 "}}>
-                <Button
-                  color="primary"
-                  size="lg"
-                  href="/lessons/1"
-                >
-                  <CreateIcon />
-                  <i className="fas" />
-                  See Our First Lesson
-                </Button>
-              </div>
+            </h4>
+
+            <div
+              style={{ padding: "1.5rem 0 " }}>
+              <Button
+                color="rose"
+                size="lg"
+                href="/jobviz"
+              >
+                <WorkOutlined/>
+                Explore Jobs
+              </Button>
+            </div>
           </GridItem>
         </GridContainer>
       </div>
