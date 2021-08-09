@@ -22,6 +22,7 @@ import Rose from "../../../components/Typography/Rose";
 import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import { WorkOutlined } from "@material-ui/icons";
 
+
 const style = {
   ...teamsStyle,
   ...teamStyle,
@@ -233,6 +234,18 @@ export default function SectionJobViz() {
           </GridItem>
         </GridContainer>
       </div>
+
+      <footer
+        className={classNames(
+          classes.fontStyle,
+          classes.paddingTop,
+          classes.lightPurp,
+          classes.upperCase
+        )}
+      >
+
+      </footer>
+
     </div>
   );
 }

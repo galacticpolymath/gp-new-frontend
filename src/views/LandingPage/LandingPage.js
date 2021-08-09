@@ -33,6 +33,7 @@ import SectionSubscribe from "./Sections/SectionSubscribe.js";
 
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 import SectionJobViz from "./Sections/SectionJobViz";
+import SectionGPEquation from "./Sections/SectionGPEquation";
 
 const useStyles = makeStyles(landingPageStyle);
 
@@ -51,7 +52,7 @@ export default function LandingPage({ ...rest }) {
         fixed
         changeColorOnScroll={{
           height: 50,
-          color: "dark",
+          color: "dark"
         }}
         {...rest}
       />
@@ -67,7 +68,7 @@ export default function LandingPage({ ...rest }) {
                 </h1>
                 <h4
                   style={{
-                    backgroundColor: "rgba(71, 15, 44, 0.7)",
+                    backgroundColor: "rgba(71, 15, 44, 0.7)"
                   }}
                 >
                   We translate current research into creative, interdisciplinary
@@ -101,12 +102,13 @@ export default function LandingPage({ ...rest }) {
         <div className={classes.container}>
           <SectionHow />
         </div>
-      <SectionJobViz/>
+        <SectionJobViz />
+        <SectionGPEquation/>
         <SectionBenefits />
 
-          <SectionSubscribe />
-          <br/>
-          {/* <SectionProduct />
+        <SectionSubscribe />
+        <br />
+        {/* <SectionProduct />
           <SectionTeam />
           <SectionWork /> */}
 
