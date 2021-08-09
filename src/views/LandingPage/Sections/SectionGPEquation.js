@@ -8,7 +8,7 @@ import classNames from "classnames";
 // import Button from "components/CustomButtons/Button.js";
 import teamsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/teamsStyle.js";
 import teamStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.js";
-import { primaryColor} from "assets/jss/material-kit-pro-react.js";
+import { primaryColor } from "assets/jss/material-kit-pro-react.js";
 import { makeCloudinaryUrl } from "../../../components/shared/constants";
 import { BarChart, ImportContacts, SearchOutlined, WorkOutline } from "@material-ui/icons";
 
@@ -25,26 +25,29 @@ const style = {
     padding: "5px",
     borderRadius: "10px",
     margin: "0.75rem 0.5rem",
-    "& .MuiSvgIcon-root":{
+    "& .MuiSvgIcon-root": {
       fontSize: "1.2em",
       margin: "auto 0",
-      align: "center",
+      align: "center"
     }
 
   },
   bubble2: {
     display: "inline-block",
     color: primaryColor[0],
+    backgroundColor: "white",
     placeContent: "center",
     border: "2px solid " + primaryColor[0],
     padding: "5px",
     borderRadius: "10px",
-    margin: "0.75rem 0.5rem",
+    margin: "0.75rem 0.5rem"
   },
   narrowSection: {
-    display:"flex",
+    display: "flex",
     padding: "2%",
     placeContent: "center",
+    backgroundColor: primaryColor[5],
+    border: "1px solid " + primaryColor[0]
 
   },
 
@@ -66,32 +69,32 @@ export default function SectionGPEquation() {
 
       <h3>
         <div className={classes.bubble1}>
-        <SearchOutlined className={classes.ic}/> Real Research
+        <SearchOutlined className={classes.ic} /> Real Research
         </div>
         +
         <div className={classes.bubble1}>
-         <ImportContacts/>  Real Stories
+          <ImportContacts /> Real Stories
         </div>
         +
         <div className={classes.bubble1}>
-         <BarChart /> Real Data
+          <BarChart /> Real Data
         </div>
         +
         <div className={classes.bubble1}>
-          <WorkOutline/> Real Careers
+          <WorkOutline /> Real Careers
         </div>
         =
         <div className={classes.bubble2}>
-                <img
-                  src={makeCloudinaryUrl("w_600/v1593304396/logos/GP_logo_grad_transBG_300_tbn4ei.jpeg")}
-                  className={classNames(classes.mlAuto, classes.mrAuto)}
-                  style={{
-                    // width:"10"
-                    width: "2rem", display: "inline-block", marginLeft: "1rem", marginRight: "0.25rem"
-                  }}
-                  alt={"The Galactic Polymath logo. A starburst of lines and dots, in blue, purple and pink."}
-                /><b>Real&nbsp;learning</b>
-              </div>
+          <img
+            src={makeCloudinaryUrl("w_600/v1593304396/logos/GP_logo_grad_transBG_300_tbn4ei.jpeg")}
+            className={classNames(classes.mlAuto, classes.mrAuto)}
+            style={{
+              // width:"10"
+              width: "2rem", display: "inline-block", marginLeft: "1rem", marginRight: "0.25rem"
+            }}
+            alt={"The Galactic Polymath logo. A starburst of lines and dots, in blue, purple and pink."}
+          /><b>Real&nbsp;learning</b>
+        </div>
 
       </h3>
     </div>

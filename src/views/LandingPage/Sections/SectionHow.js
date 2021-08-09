@@ -36,7 +36,7 @@ const style = {
     "& img": {
       alignSelf: "start",
       justifySelf: "left",
-      maxWidth: "250px"
+      maxWidth: "150px"
       // marginLeft: "-1rem"
     },
     "& h4": {
@@ -60,7 +60,7 @@ const style = {
     paddingLeft: "100px"
   },
   imagePadding: {
-    paddingTop: "50px",
+    paddingTop: "0.5rem",
     paddingRight: "70px"
   },
   subtitle: {
@@ -96,7 +96,7 @@ const style = {
     gridItemStyle: {
       marginLeft: "1rem",
       "& img": {
-        paddingTop: "8rem",
+        paddingTop: "4rem",
         paddingBottom: 0,
         "&.firstImg": {
           paddingTop: "1rem"
@@ -109,10 +109,10 @@ const style = {
       "& h4::after": {
         content: "\"↓\"",
         color: grayColor[6],
-        fontSize: "12rem",
+        fontSize: "8rem",
         fontWeight: "600",
         position: "absolute",
-        bottom: "-4rem",
+        bottom: "-2rem",
         left: "3rem"
       },
       "& h4.last::after": {
