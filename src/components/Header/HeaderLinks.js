@@ -17,16 +17,16 @@ export default function HeaderLinks() {
   const classes = useStyles();
   return (
     <List className={classes.list + " " + classes.mlAuto}>
-      <ListItem className={classes.listItem}>
-        <NavLink
-          to="/"
-          className={classes.navLink}
-          activeStyle={{ fontWeight: "bold" }}
-          exact
-        >
-          Home
-        </NavLink>
-      </ListItem>
+      {/*<ListItem className={classes.listItem}>*/}
+      {/*  <NavLink*/}
+      {/*    to="/"*/}
+      {/*    className={classes.navLink}*/}
+      {/*    activeStyle={{ fontWeight: "bold" }}*/}
+      {/*    exact*/}
+      {/*  >*/}
+      {/*    Home*/}
+      {/*  </NavLink>*/}
+      {/*</ListItem>*/}
       <ListItem className={classes.listItem}>
         <NavLink
           to="/lessons"

@@ -28,10 +28,12 @@ import landingPageStyle from "assets/jss/material-kit-pro-react/views/landingPag
 import SectionAbout from "./Sections/SectionAbout.js";
 import SectionLessons from "./Sections/SectionLessons.js";
 import SectionHow from "./Sections/SectionHow.js";
-import SectionLessonData from "./Sections/SectionLessonData.js";
+import SectionBenefits from "./Sections/SectionBenefits.js";
 import SectionSubscribe from "./Sections/SectionSubscribe.js";
 
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
+import SectionJobViz from "./Sections/SectionJobViz";
+import SectionGPEquation from "./Sections/SectionGPEquation";
 
 const useStyles = makeStyles(landingPageStyle);
 
@@ -50,7 +52,7 @@ export default function LandingPage({ ...rest }) {
         fixed
         changeColorOnScroll={{
           height: 50,
-          color: "dark",
+          color: "dark"
         }}
         {...rest}
       />
@@ -66,7 +68,7 @@ export default function LandingPage({ ...rest }) {
                 </h1>
                 <h4
                   style={{
-                    backgroundColor: "rgba(71, 15, 44, 0.7)",
+                    backgroundColor: "rgba(71, 15, 44, 0.7)"
                   }}
                 >
                   We translate current research into creative, interdisciplinary
@@ -96,14 +98,17 @@ export default function LandingPage({ ...rest }) {
           <SectionAbout />
         </div>
         <SectionLessons />
+        {/*This is How We Do It*/}
         <div className={classes.container}>
           <SectionHow />
         </div>
-        <SectionLessonData />
+        <SectionJobViz />
+        <SectionGPEquation/>
+        <SectionBenefits />
 
-          <SectionSubscribe />
-          <br/>
-          {/* <SectionProduct />
+        <SectionSubscribe />
+        <br />
+        {/* <SectionProduct />
           <SectionTeam />
           <SectionWork /> */}
 

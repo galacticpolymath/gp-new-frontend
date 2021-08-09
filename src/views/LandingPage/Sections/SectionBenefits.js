@@ -100,7 +100,7 @@ const style = {
 
 const useStyles = makeStyles(style);
 
-export default function SectionLessonData() {
+export default function SectionBenefits() {
   const classes = useStyles();
   return (
     <div className={classNames(classes.section, classes.greyBackground)}>
