@@ -27,7 +27,7 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 Transition.displayName = "Transition";
 
 const DownloadHelpModal = ({ id }) => {
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   const classes = useStyles();
 
   return (
@@ -39,7 +39,7 @@ const DownloadHelpModal = ({ id }) => {
         <Dialog
           classes={{
             root: classes.modalRoot,
-            paper: classes.modal,
+            paper: classes.modalLarge,
           }}
           className='DownloadHelpModalDialog'
           open={showModal}
