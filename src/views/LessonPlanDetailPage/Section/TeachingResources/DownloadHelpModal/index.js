@@ -72,15 +72,22 @@ const DownloadHelpModal = ({ id }) => {
             id={`${id}-description`}
             className={classes.modalBody}
           >
-            <p>
-              If logged into Google, click the dropdown menu on the folder containing handouts & presentations, and select download:
-            </p>
-            <img src={SignedIn} style={{ maxWidth: '15rem' }} />
+            <div className="flex">
+              <div>
+                <p>
+                  If logged into Google, click the dropdown menu on the folder containing handouts & presentations, and select download:
+                </p>
+                <img src={SignedIn} style={{ maxWidth: '15rem' }} />
+              </div>
+              <div>
 
-            <p>
-              If <em>not</em> logged into Google, click this icon in the upper right:
-            </p>
-            <img src={NotSignedIn} style={{ maxWidth: '13rem' }} />
+                <p>
+                  If <em>not</em> logged into Google, click this icon in the upper right:
+                </p>
+                <img src={NotSignedIn} style={{ maxWidth: '13rem' }} />
+              </div>
+
+            </div>
           </DialogContent>
           <DialogActions className={classes.modalFooter}>
             <Button

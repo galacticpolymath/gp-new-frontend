@@ -1,3 +1,5 @@
+@import "../../../variables";
+
 .DownloadHelpModal {
   span {
     display: inline-block;
@@ -12,13 +14,28 @@
 .DownloadHelpModalDialog {
   .MuiDialogContent-root {
     text-align: center;
-    p {
-      text-align: left;
-    }
-    img {
-      max-width: 100%;
-      margin: 1rem auto 2rem auto;
-      display: block;
+    .flex {
+      display: flex;
+      flex-direction: column;
+      > div {
+        flex-basis: 50%;
+        p {
+          text-align: left;
+        }
+        img {
+          max-width: 100%;
+          margin: 1rem auto 2rem auto;
+          display: block;
+        }
+      }
+      @media only screen and (min-width: 1056px) {
+        flex-direction: row;
+        > div:first-child {
+          padding-right: 2rem;
+          margin-right: 2rem;
+          border-right: 1px solid rgba($galactic-black, 0.3);
+        }
+      }
     }
   }
 }
