@@ -9,7 +9,7 @@ import {
 const blogPostPageStyle = {
   container: {
     ...container,
-    zIndex: "2"
+    zIndex: "2",
   },
   textCenter: {
     textAlign: "center"
@@ -60,7 +60,8 @@ const blogPostPageStyle = {
     height: "18px",
     top: "3px",
     position: "relative"
-  }
+  },
+
 };
 
 export default blogPostPageStyle;

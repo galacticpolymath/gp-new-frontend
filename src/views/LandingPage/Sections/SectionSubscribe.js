@@ -95,7 +95,7 @@ export default function SectionSubscribe() {
             <b>Join our mailing list</b>
           </h3>
           <h4
-            className={classes.subscribeText}>Get updates and insider access to our latest free lessons and learning
+            className={classes.subscribeText}>Get updates and early access to our latest free lessons and learning
             tools.
           </h4>
       </GridItem>
