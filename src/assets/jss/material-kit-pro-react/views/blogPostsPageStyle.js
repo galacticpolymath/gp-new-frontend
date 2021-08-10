@@ -81,6 +81,7 @@ const blogPostsPageStyle = {
     "border-radius": "4px",
     color: "#3c4858",
     padding: "0.5rem 1rem",
+    marginBottom: "2rem"
   },
 };
 

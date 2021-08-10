@@ -7,6 +7,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import DownloadIcon from "@material-ui/icons/GetApp";
 
 import VariantPart from "./VariantPart";
+import DownloadHelp from "./DownloadHelpModal";
 
 const GradeVariant = ({ parts = [], links, grades, gradePrefix }) => {
   const [expanded, expand] = useState(false);
@@ -24,7 +25,7 @@ const GradeVariant = ({ parts = [], links, grades, gradePrefix }) => {
       </ExpansionPanelSummary>
       <ExpansionPanelDetails className="ExpansionPanelDetails">
         {links && (
-          <p>
+          <p className="downloadAll">
             <a
               className="download"
               target="_blank"
@@ -34,6 +35,8 @@ const GradeVariant = ({ parts = [], links, grades, gradePrefix }) => {
               <DownloadIcon />
               {links.linkText}
             </a>
+
+            <DownloadHelp id={gradePrefix} />
           </p>
         )}
         <div className="VariantParts">

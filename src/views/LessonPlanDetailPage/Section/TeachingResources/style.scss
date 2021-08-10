@@ -106,17 +106,20 @@
         }
       }
       .ExpansionPanelDetails {
-        .download {
-          display: block;
-          font-weight: bold;
+        .downloadAll {
+          display: flex;
+          a.download {
+            display: block;
+            font-weight: bold;
 
-          svg {
-            width: 2rem;
-            height: 2rem;
-            margin-right: 0.5rem;
-            display: inline-block;
-            text-align: center;
-            vertical-align: middle;
+            svg {
+              width: 2rem;
+              height: 2rem;
+              margin-right: 0.5rem;
+              display: inline-block;
+              text-align: center;
+              vertical-align: middle;
+            }
           }
         }
       }
