@@ -204,7 +204,7 @@ export default function SectionJobViz() {
                 <AccountTreeIcon style={{ fontSize: "2.6rem" }} /> JobViz
               </h1>
             </Rose>
-            <h3>a free career exploration tool</h3>
+            <h3>Connect lessons to careers with this free tool!</h3>
 
             {/*</div>*/}
 

@@ -93,7 +93,7 @@ export default function SectionGPEquation() {
               width: "2rem", display: "inline-block", marginLeft: "1rem", marginRight: "0.25rem"
             }}
             alt={"The Galactic Polymath logo. A starburst of lines and dots, in blue, purple and pink."}
-          /><b>Real&nbsp;learning</b>
+          /><b>Real&nbsp;Learning</b>
         </div>
 
       </h3>
