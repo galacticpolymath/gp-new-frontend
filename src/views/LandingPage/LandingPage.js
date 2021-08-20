@@ -15,10 +15,6 @@ import Parallax from "components/Parallax/Parallax.js";
 
 import landingPageStyle from "assets/jss/material-kit-pro-react/views/landingPageStyle.js";
 
-// Sections for this page
-// import SectionProduct from "./Sections/SectionProduct.js";
-// import SectionTeam from "./Sections/SectionTeam.js";
-// import SectionWork from "./Sections/SectionWork.js";
 import SectionAbout from "./Sections/SectionAbout.js";
 import SectionLessons from "./Sections/SectionLessons.js";
 import SectionHow from "./Sections/SectionHow.js";
@@ -28,8 +24,11 @@ import SectionSubscribe from "./Sections/SectionSubscribe.js";
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 import SectionJobViz from "./Sections/SectionJobViz";
 import SectionGPEquation from "./Sections/SectionGPEquation";
+import ParallaxImage from "assets/img/hero-images/landingPage-CityNetwork@75x-20.jpg";
 
 const useStyles = makeStyles(landingPageStyle);
+
+import "assets/scss/material-kit-pro-react.scss?v=1.9.0";
 
 export default function LandingPage(props) {
   useEffect(() => {
@@ -100,10 +99,6 @@ export default function LandingPage(props) {
 
         <SectionSubscribe />
         <br />
-        {/* <SectionProduct />
-          <SectionTeam />
-          <SectionWork /> */}
-
       </div>
       <Footer
         theme={"transparent"}
