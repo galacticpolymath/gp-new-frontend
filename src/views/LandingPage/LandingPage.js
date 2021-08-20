@@ -15,17 +15,19 @@ import Parallax from "components/Parallax/Parallax.js";
 
 import landingPageStyle from "assets/jss/material-kit-pro-react/views/landingPageStyle.js";
 
-import SectionAbout from "views/LandingPage/Sections/SectionAbout.js";
-import SectionLessons from "views/LandingPage/Sections/SectionLessons.js";
-import SectionHow from "views/LandingPage/Sections/SectionHow.js";
-import SectionLessonData from "views/LandingPage/Sections/SectionLessonData.js";
-import SectionSubscribe from "views/LandingPage/Sections/SectionSubscribe.js";
+// Sections for this page
+// import SectionProduct from "./Sections/SectionProduct.js";
+// import SectionTeam from "./Sections/SectionTeam.js";
+// import SectionWork from "./Sections/SectionWork.js";
+import SectionAbout from "./Sections/SectionAbout.js";
+import SectionLessons from "./Sections/SectionLessons.js";
+import SectionHow from "./Sections/SectionHow.js";
+import SectionBenefits from "./Sections/SectionBenefits.js";
+import SectionSubscribe from "./Sections/SectionSubscribe.js";
 
-import GPcopyrightFooter from "components/Footer/GPcopyrightFooter";
-
-import ParallaxImage from "assets/img/hero-images/landingPage-CityNetwork@75x-20.jpg";
-
-import "assets/scss/material-kit-pro-react.scss?v=1.9.0";
+import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
+import SectionJobViz from "./Sections/SectionJobViz";
+import SectionGPEquation from "./Sections/SectionGPEquation";
 
 const useStyles = makeStyles(landingPageStyle);
 
@@ -44,7 +46,7 @@ export default function LandingPage(props) {
         fixed
         changeColorOnScroll={{
           height: 50,
-          color: "dark",
+          color: "dark"
         }}
         {...props}
       />
@@ -58,7 +60,7 @@ export default function LandingPage(props) {
                 </h1>
                 <h4
                   style={{
-                    backgroundColor: "rgba(71, 15, 44, 0.7)",
+                    backgroundColor: "rgba(71, 15, 44, 0.7)"
                   }}
                 >
                   We translate current research into creative, interdisciplinary
@@ -88,12 +90,20 @@ export default function LandingPage(props) {
           <SectionAbout />
         </div>
         <SectionLessons />
+        {/*This is How We Do It*/}
         <div className={classes.container}>
           <SectionHow />
         </div>
-        <SectionLessonData />
+        <SectionJobViz />
+        <SectionGPEquation />
+        <SectionBenefits />
 
         <SectionSubscribe />
+        <br />
+        {/* <SectionProduct />
+          <SectionTeam />
+          <SectionWork /> */}
+
       </div>
       <Footer
         theme={"transparent"}

@@ -11,7 +11,7 @@ import GridItem from "components/Grid/GridItem.js";
 import teamsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections/teamsStyle.js";
 import teamStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.js";
 import { primaryColor, grayColor } from "assets/jss/material-kit-pro-react.js";
-import { makeCloudinaryUrl } from "../../../components/shared/constants";
+
 
 const style = {
   ...teamsStyle,
@@ -36,7 +36,7 @@ const style = {
     "& img": {
       alignSelf: "start",
       justifySelf: "left",
-      maxWidth: "250px",
+      maxWidth: "150px"
       // marginLeft: "-1rem"
     },
     "& h4": {
@@ -59,11 +59,11 @@ const style = {
     paddingLeft: "100px",
   },
   imagePadding: {
-    paddingTop: "50px",
-    maxWidth: "100%",
+    paddingTop: "0.5rem",
+    paddingRight: "70px"
   },
   subtitle: {
-    paddingTop: 0,
+    paddingTop: 0
   },
   triplet: {
     paddingBottom: "1rem",
@@ -81,7 +81,7 @@ const style = {
   },
 
   //Special styling for sm to medium devices
-  "@media only screen and (min-width: 0px) and (max-width: 959px)": {
+  "@media only screen and (minWidth: 0px) and (maxWidth: 959px)": {
     triplet: {
       paddingTop: 0,
       "& h3": {
@@ -94,32 +94,32 @@ const style = {
     gridItemStyle: {
       marginLeft: "1rem",
       "& img": {
-        paddingTop: "8rem",
+        paddingTop: "4rem",
         paddingBottom: 0,
         "&.firstImg": {
           paddingTop: "1rem",
         },
       },
       "& h4": {
-        paddingBottom: 0,
+        paddingBottom: 0
         //Add partial width borders between divs
       },
       "& h4::after": {
         content: '"↓"',
         color: grayColor[6],
-        fontSize: "12rem",
+        fontSize: "8rem",
         fontWeight: "600",
         position: "absolute",
-        bottom: "-4rem",
-        left: "3rem",
+        bottom: "-2rem",
+        left: "3rem"
       },
       "& h4.last::after": {
-        content: '""',
-      },
-    },
+        content: """"
+      }
+    }
   },
   // Correct H3 size for medium screens where 4 columns are first displayed
-  "@media only screen and (min-width: 960px) and (max-width: 1279px)": {
+  "@media only screen and (minWidth: 960px) and (maxWidth: 1279px)": {
     triplet: {
       "& h3": {
         fontSize: ".9rem",
@@ -130,10 +130,12 @@ const style = {
     },
     gridItemStyle: {
       "& h4": {
-        fontSize: "0.9rem",
-      },
-    },
-  },
+        fontSize: "0.9rem"
+      }
+    }
+  }
+
+
 };
 
 const useStyles = makeStyles(style);
@@ -153,7 +155,9 @@ export default function SectionHow() {
           >
             What We Do
           </h1>
-          <h3 className={classNames(classes.purp, classes.subtitle)}>
+          <h3
+            className={classNames(classes.purp, classes.subtitle)}
+          >
             (And how we make it free for teachers)
           </h3>
         </GridItem>
@@ -234,13 +238,10 @@ export default function SectionHow() {
             </GridItem>
             <GridItem className={classes.gridItemStyle}>
               <h4>
-                Our team of science communicators, educators, and artists work
-                directly with subject experts to translate our clients&apos;
-                area of focus into free lessons for grades 5-12.{" "}
-                <em>
-                  Our goal is for every lesson to be ready to teach in any
-                  subject classroom by a non-expert with 15 min. of prep time.
-                </em>
+                Our team of science communicators, educators, and artists work directly with subject experts to
+                translate our clients' area of focus into free lessons for grades 5-12. <em>Our goal is for every lesson
+                  to be ready to
+                  teach in any subject classroom by a non-expert with 15 min. of prep time.</em>
               </h4>
             </GridItem>
           </GridItem>
@@ -313,37 +314,6 @@ export default function SectionHow() {
             </GridItem>
           </GridItem>
         </GridContainer>
-      </div>
-      <div>
-        <footer
-          className={classNames(
-            classes.fontStyle,
-            classes.paddingTop,
-            classes.lightPurp,
-            classes.upperCase
-          )}
-        >
-          <h3>
-            Real&nbsp;research&nbsp;+ real&nbsp;stories&nbsp;+
-            real&nbsp;data&nbsp;+ real&nbsp;careers&nbsp;=
-            <span style={{ marginTop: "0.75rem", display: "inline-block" }}>
-              <img
-                src={makeCloudinaryUrl(
-                  "w_600/v1593304396/logos/GP_logo_grad_transBG_300_tbn4ei.jpeg"
-                )}
-                className={classNames(classes.mlAuto, classes.mrAuto)}
-                style={{
-                  width: "2rem",
-                  display: "inline-block",
-                  marginLeft: "1rem",
-                  marginRight: "0.25rem",
-                }}
-                alt="The Galactic Polymath logo. A starburst of lines and dots, in blue, purple and pink."
-              />
-              <b>Real&nbsp;learning</b>
-            </span>
-          </h3>
-        </footer>
       </div>
     </div>
   );

@@ -27,7 +27,7 @@ export default function GetInvolved() {
   // };
   const classes = useStyles();
   return (
-    <div className={classes.aboutUs}>
+    <div className={classes.aboutUs} id={"getinvolved"}>
       <GridContainer>
         <GridItem
           md={8}

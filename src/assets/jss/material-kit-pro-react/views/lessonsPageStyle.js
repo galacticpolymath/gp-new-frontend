@@ -4,7 +4,7 @@ import {
   main,
   whiteColor,
   mainRaised,
-  mlAuto,
+  mlAuto
 } from "assets/jss/material-kit-pro-react.js";
 
 const lessonsPageStyle = {
@@ -14,16 +14,16 @@ const lessonsPageStyle = {
     position: "relative",
   },
   textCenter: {
-    textAlign: "center",
+    textAlign: "center"
   },
   title: {
     ...title,
-    color: whiteColor,
+    color: whiteColor
   },
   mlAuto,
   main: {
     ...main,
-    ...mainRaised,
+    ...mainRaised
   },
   block: {
     color: "inherit",
@@ -34,45 +34,48 @@ const lessonsPageStyle = {
     borderRadius: "3px",
     textDecoration: "none",
     position: "relative",
-    display: "block",
+    display: "block"
   },
   inlineBlock: {
     display: "inline-block",
     padding: "0px",
-    width: "auto",
+    width: "auto"
   },
   list: {
     marginBottom: "0",
     padding: "0",
-    marginTop: "0",
+    marginTop: "0"
   },
   left: {
     float: "left!important",
-    display: "block",
+    display: "block"
   },
   right: {
     padding: "15px 0",
     margin: "0",
-    float: "right",
+    float: "right"
   },
   icon: {
     width: "18px",
     height: "18px",
     top: "3px",
-    position: "relative",
+    position: "relative"
   },
   bgColor: {
-    backgroundColor: "#6812D1",
+    backgroundColor: "#6812D1"
+  },
+  addMargin:{
+    margin: "10rem",
   },
 
   "@media only screen and (max-width: 600px)": {
     /* iphones (material UI "sm" break) */
     hideLogo: {
       display: "none",
-      maxWidth: "100%",
+      maxWidth: "100%"
     },
     longTitle: {
-      fontSize: "2.5rem",
+      fontSize: "2.5rem"
     },
   },
 
@@ -81,12 +84,12 @@ const lessonsPageStyle = {
 
     hideLogo: {
       display: "none",
-      maxWidth: "100%",
-    },
+      maxWidth: "100%"
+    }
   },
   infoArea: {
-    padding: "2rem 0 0 0",
-  },
+    padding: "2rem 0 0 0"
+  }
 };
 
 export default lessonsPageStyle;
