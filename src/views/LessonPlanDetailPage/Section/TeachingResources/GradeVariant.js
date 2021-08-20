@@ -25,7 +25,7 @@ const GradeVariant = ({ parts = [], links, grades, gradePrefix }) => {
       </ExpansionPanelSummary>
       <ExpansionPanelDetails className="ExpansionPanelDetails">
         {links && (
-          <p className="downloadAll">
+          <div className="downloadAll">
             <a
               className="download"
               target="_blank"
@@ -37,7 +37,7 @@ const GradeVariant = ({ parts = [], links, grades, gradePrefix }) => {
             </a>
 
             <DownloadHelp id={gradePrefix} />
-          </p>
+          </div>
         )}
         <div className="VariantParts">
           {parts.map((part, i) => (
