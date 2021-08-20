@@ -1,3 +1,7 @@
+import { useEffect } from 'react';
+
+import throttle from "lodash.throttle";
+
 let lastOffset = window.pageYOffset;
 
 const getOffset = function (element) {
@@ -73,6 +77,13 @@ const scrollAction = function () {
   lastOffset = window.pageYOffset;
 };
 
-export default function scrollHandler() {
-  scrollAction();
+const useScrollHandler = () => {
+  useEffect(() => {
+    window.addEventListener("scroll", throttle(() => scrollAction(), 100));
+    return () => {
+      window.removeEventListener("scroll", throttle(() => scrollAction(), 100));
+    };
+  }, []);
 }
+
+export default useScrollHandler

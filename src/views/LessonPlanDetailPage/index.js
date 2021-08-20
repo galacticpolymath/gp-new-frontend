@@ -12,19 +12,11 @@ import SectionSubscribe from "../LandingPage/Sections/SectionSubscribe";
 import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 import Footer from "../../components/Footer/Footer";
 
-import "../../components/NavDots/Dots.css";
-import DotPanel from "../../components/LessonDots/DotPanel";
-import scrollHandler from "../../components/LessonDots/obs";
-
-import throttle from "lodash.throttle";
+import NavigationDots from "./NavigationDots";
+import useScrollHandler from './NavigationDots/useScrollHandler'
 
 const LessonPlan = ({ pageContext: { lesson } }) => {
-  useEffect(() => {
-    window.addEventListener("scroll", throttle(scrollHandler, 100));
-    return () => {
-      window.removeEventListener("scroll", throttle(scrollHandler, 100));
-    };
-  }, []);
+  useScrollHandler()
 
   let numberedElements = 0;
 
@@ -51,7 +43,7 @@ const LessonPlan = ({ pageContext: { lesson } }) => {
           lesson.Section.map((section, i) => renderSection(section, i))}
       </div>
       <SectionSubscribe />
-      <DotPanel sections={lesson.Section} />
+      <NavigationDots sections={lesson.Section} />
 
       <Footer content={<GPcopyrightFooter />} />
     </Fragment>
