@@ -36,7 +36,6 @@ const style = {
       alignSelf: "start",
       justifySelf: "left",
       maxWidth: "150px"
-      // marginLeft: "-1rem"
     },
     "& h4": {
       padding: 0,
@@ -58,8 +57,8 @@ const style = {
     paddingLeft: "100px",
   },
   imagePadding: {
-    paddingTop: "0.5rem",
-    paddingRight: "70px"
+    paddingTop: "50px",
+    maxWidth: "100%",
   },
   subtitle: {
     paddingTop: 0
@@ -113,7 +112,7 @@ const style = {
         left: "3rem"
       },
       "& h4.last::after": {
-        content: ""
+        content: '""',
       }
     }
   },
@@ -133,8 +132,6 @@ const style = {
       }
     }
   }
-
-
 };
 
 const useStyles = makeStyles(style);
