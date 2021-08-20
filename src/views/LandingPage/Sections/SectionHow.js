@@ -12,7 +12,6 @@ import teamsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections
 import teamStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.js";
 import { primaryColor, grayColor } from "assets/jss/material-kit-pro-react.js";
 
-
 const style = {
   ...teamsStyle,
   ...teamStyle,
@@ -114,7 +113,7 @@ const style = {
         left: "3rem"
       },
       "& h4.last::after": {
-        content: """"
+        content: ""
       }
     }
   },
@@ -238,10 +237,13 @@ export default function SectionHow() {
             </GridItem>
             <GridItem className={classes.gridItemStyle}>
               <h4>
-                Our team of science communicators, educators, and artists work directly with subject experts to
-                translate our clients' area of focus into free lessons for grades 5-12. <em>Our goal is for every lesson
-                  to be ready to
-                  teach in any subject classroom by a non-expert with 15 min. of prep time.</em>
+                Our team of science communicators, educators, and artists work directly
+                with subject experts to translate our clients&apos; area of focus into
+                free lessons for grades 5-12.
+                <em>
+                  Our goal is for every lesson to be ready to teach in any subject
+                  classroom by a non-expert with 15 min. of prep time.
+                </em>
               </h4>
             </GridItem>
           </GridItem>
