@@ -95,7 +95,6 @@ export default function LessonsPage({ pageContext: { lessons } }) {
             description="Check out the first of many GP Lessons: the result of 100's of hours of skilled labor."
             icon={NewReleasesIcon}
             iconColor="rose"
-            title=""
           />
           {lessons && <LessonCards lessons={lessons} />}
         </div>
