@@ -8,7 +8,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
 
   createPage({
     path: "lessons",
-    component: path.resolve("src/views/LessonsPage"),
+    component: path.resolve("src/views/LessonsPage/LessonsPage.js"),
     context: { lessons },
   });
 
