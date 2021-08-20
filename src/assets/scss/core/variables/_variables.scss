@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 // Variables
 //
 // Variables should follow the `$component-state-property-size` formula for
@@ -31,7 +33,7 @@ $grays: map-merge(
     "600": $gray-600,
     "700": $gray-700,
     "800": $gray-800,
-    "900": $gray-900
+    "900": $gray-900,
   ),
   $grays
 );
@@ -55,11 +57,11 @@ $gp-atomic-blue: #6812d1 !default;
 $gp-burst-purple: #cb1f8e !default;
 $gp-galactic-black: #363636 !default;
 $gp-sparkle-white: #f0f4ff !default;
-$math: #DB4125 !default;
-$sci: #B798E8 !default;
-$socstudies: #633A9A !default;
-$ela: #ECA14D !default;
-$extra: #F4F0D9 !default;
+$math: #db4125 !default;
+$sci: #b798e8 !default;
+$socstudies: #633a9a !default;
+$ela: #eca14d !default;
+$extra: #f4f0d9 !default;
 
 $colors: () !default;
 $colors: map-merge(
@@ -76,7 +78,7 @@ $colors: map-merge(
     "cyan": $cyan,
     "white": $white,
     "gray": $gray-600,
-    "gray-dark": $gray-800
+    "gray-dark": $gray-800,
   ),
   $colors
 );
@@ -100,7 +102,7 @@ $theme-colors: map-merge(
     "warning": $warning,
     "danger": $danger,
     "light": $light,
-    "dark": $dark
+    "dark": $dark,
   ),
   $theme-colors
 );
@@ -142,18 +144,18 @@ $spacers: map-merge(
   (
     0: 0,
     1: (
-      $spacer * 0.25
+      $spacer * 0.25,
     ),
     2: (
-      $spacer * 0.5
+      $spacer * 0.5,
     ),
     3: $spacer,
     4: (
-      $spacer * 1.5
+      $spacer * 1.5,
     ),
     5: (
-      $spacer * 3
-    )
+      $spacer * 3,
+    ),
   ),
   $spacers
 );
@@ -165,7 +167,7 @@ $sizes: map-merge(
     25: 25%,
     50: 50%,
     75: 75%,
-    100: 100%
+    100: 100%,
   ),
   $sizes
 );
@@ -203,7 +205,7 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px
+  xl: 1200px,
 ) !default;
 
 @include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
@@ -217,7 +219,7 @@ $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
-  xl: 1140px
+  xl: 1140px,
 ) !default;
 
 @include _assert-ascending($container-max-widths, "$container-max-widths");
@@ -283,7 +285,7 @@ $h4-font-size: $font-size-base * 1.5 !default;
 $h5-font-size: $font-size-base * 1.25 !default;
 $h6-font-size: $font-size-base !default;
 
-$headings-margin-bottom: ($spacer / 2) !default;
+$headings-margin-bottom: math.div($spacer, 2) !default;
 $headings-font-family: inherit !default;
 $headings-font-weight: 500 !default;
 $headings-line-height: 1.2 !default;
@@ -576,7 +578,7 @@ $custom-file-box-shadow: $input-box-shadow !default;
 $custom-file-button-color: $custom-file-color !default;
 $custom-file-button-bg: $input-group-addon-bg !default;
 $custom-file-text: (
-  en: "Browse"
+  en: "Browse",
 ) !default;
 
 // Form validation
@@ -646,7 +648,7 @@ $nav-pills-link-active-bg: $component-active-bg !default;
 
 // Navbar
 
-$navbar-padding-y: ($spacer / 2) !default;
+$navbar-padding-y: math.div($spacer, 2) !default;
 $navbar-padding-x: $spacer !default;
 
 $navbar-nav-link-padding-x: 0.5rem !default;
@@ -657,7 +659,10 @@ $nav-link-height: (
   $font-size-base * $line-height-base + $nav-link-padding-y * 2
 ) !default;
 $navbar-brand-height: $navbar-brand-font-size * $line-height-base !default;
-$navbar-brand-padding-y: ($nav-link-height - $navbar-brand-height) / 2 !default;
+$navbar-brand-padding-y: math.div(
+  $nav-link-height - $navbar-brand-height,
+  2
+) !default;
 
 $navbar-toggler-padding-y: 0.25rem !default;
 $navbar-toggler-padding-x: 0.75rem !default;
@@ -735,7 +740,7 @@ $card-bg: $white !default;
 
 $card-img-overlay-padding: 1.25rem !default;
 
-$card-group-margin: ($grid-gutter-width / 2) !default;
+$card-group-margin: math.div($grid-gutter-width, 2) !default;
 $card-deck-margin: $card-group-margin !default;
 
 $card-columns-count: 3 !default;
@@ -958,7 +963,6 @@ $pre-scrollable-max-height: 340px !default;
 $print-page-size: a3 !default;
 $print-body-min-width: map-get($grid-breakpoints, "lg") !default;
 
-
 :export {
   gpHydroBlue: $gp-hydro-blue;
   gpLightningPurple: $gp-lightning-purple;
@@ -970,6 +974,6 @@ $print-body-min-width: map-get($grid-breakpoints, "lg") !default;
   gpMath: $math;
   gpSci: $sci;
   gpSocStudies: $socstudies;
-  gpELA:$ela;
-  gpExtra:$extra;
+  gpELA: $ela;
+  gpExtra: $extra;
 }
