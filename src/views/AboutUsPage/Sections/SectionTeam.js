@@ -676,7 +676,7 @@ export default function SectionTeam() {
             </CardBody>
             <CardFooter className={classes.justifyContent}>
               <Button
-                href="www.jwhisenant.com"
+                href="http://www.jwhisenant.com/"
                 target="_blank"
                 justIcon
                 simple

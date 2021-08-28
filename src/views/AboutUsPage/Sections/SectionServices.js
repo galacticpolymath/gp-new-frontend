@@ -37,10 +37,11 @@ export default function SectionServices() {
           <h2 className={classes.title}>
             <BlurOn
                style={{ color: roseColor[0], fontSize:"2.6rem",marginLeft:"-2.6rem" }}/>
-            Achieve Real, Lasting Impact</h2>
+            Easier Outreach, Better Results
+            </h2>
           <h3>
-            We translate any complex body of knowledge into open-access,
-            interdisciplinary lessons that weave real world data and puzzles into memorable learning experiences.
+            We do the heavy lifting, creating and disseminating mind-expanding lessons that
+            engage young learners in the knowledge areas our clients care about.
           </h3>
         </GridItem>
       </GridContainer>
@@ -51,9 +52,9 @@ export default function SectionServices() {
             description={
               <span>
                 <h4>
-                  We define what knowledge you want to convey, align it to learning
-                  standards in each subject, and build lesson(s) that will improve
-                  public understanding and engagement in your focus area.
+                  In just a few short meetings, we define clients' outreach goals
+                  and map out the lessons and supporting media that will achieve lasting
+                  understanding in target areas.
                 </h4>
               </span>
             }
@@ -67,7 +68,7 @@ export default function SectionServices() {
             description={
               <span>
                 <h4>
-                  We publish lessons on our site and will do the hard work of getting them out to teachers through
+                  We create and publish lessons on our site and do the hard work of getting them out to teachers through
                   a growing network of educators, districts, and professional organizations.
                 </h4>
               </span>
@@ -82,8 +83,8 @@ export default function SectionServices() {
             description={
               <span>
                 <h4>
-                  As we hear back from teachers, we improve the lessons through transparent versioning, and collect
-                  impact data, which we will summarize and report back to you upon request.
+                  We measure and maximize outreach performance—as we hear back from teachers, we improve the lessons, and collect
+                  impact data, which we report back to clients upon request.
                 </h4>
               </span>
             }
