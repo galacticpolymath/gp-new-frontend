@@ -20,6 +20,7 @@ import Lessons from "views/LessonsPage/LessonsPage";
 import LandingPage from "views/LandingPage/LandingPage";
 import HireUsPage from "views/HireUs/HireUsPage";
 import ContactUsPage from "views/ContactUsPage/ContactUsPage";
+import CustomGPfooter from "views/GPfooter/CustomGPfooter";
 
 var hist = createBrowserHistory();
 
@@ -143,6 +144,7 @@ const App = () => (
       {/* This path matches anything, so it goes last. */}
       <Route path="/" component={LandingPage} />
     </Switch>
+    <CustomGPfooter />
   </Router>
 );
 
