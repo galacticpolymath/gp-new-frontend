@@ -18,12 +18,8 @@ import SectionPartners from "./Sections/SectionPartners";
 import SectionServices from "views/AboutUsPage/Sections/SectionServices.js";
 import GetInvolved from "views/AboutUsPage/Sections/GetInvolved.js";
 
-
 // styling
 import aboutUsStyle from "assets/jss/material-kit-pro-react/views/aboutUsStyle.js";
-import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
-import SectionSubscribe from "../LandingPage/Sections/SectionSubscribe";
-
 
 const useStyles = makeStyles(aboutUsStyle);
 
@@ -47,8 +43,7 @@ export default function AboutUsPage(...rest) {
       />
       <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
-          <GridContainer
-              style={{placeItems: "center"}}>
+          <GridContainer style={{ placeItems: "center" }}>
             <GridItem
               xs={12}
               sm={12}
@@ -63,12 +58,12 @@ export default function AboutUsPage(...rest) {
               <h1 className={classes.title}>About GP</h1>
               <h4
                 className={classes.title}
-                style={{ letterSpacing: "1.5px", fontWeight: 500}}
+                style={{ letterSpacing: "1.5px", fontWeight: 500 }}
               >
-                Galactic Polymath (GP) is an education studio.{"\n"} We help scientists,
-                nonprofits, and sustainable companies
-                achieve outreach at scale by translating complex, cutting-edge
-                research into mind-blowing lessons for grades 5+.
+                Galactic Polymath (GP) is an education studio.{"\n"} We help
+                scientists, nonprofits, and sustainable companies achieve
+                outreach at scale by translating complex, cutting-edge research
+                into mind-blowing lessons for grades 5+.
               </h4>
             </GridItem>
             <GridItem
@@ -86,7 +81,9 @@ export default function AboutUsPage(...rest) {
                 src={require("assets/img/hero-images/AboutPage_Bubbles.png")}
                 height="auto"
                 width="120%"
-                alt={"vertical lines with multicolored points threaded on them in a wavy pattern"}
+                alt={
+                  "vertical lines with multicolored points threaded on them in a wavy pattern"
+                }
               />
             </GridItem>
           </GridContainer>
@@ -98,11 +95,10 @@ export default function AboutUsPage(...rest) {
           <SectionDescription />
           <SectionTeam />
           <SectionPartners />
-           {/*<SectionOffice />*/}
+          {/*<SectionOffice />*/}
           <GetInvolved />
         </div>
       </div>
-      <SectionSubscribe/>
       <Footer
         content={
           <div>
@@ -146,7 +142,6 @@ export default function AboutUsPage(...rest) {
             {/*    </ListItem>*/}
             {/*  </List>*/}
             {/*</div>*/}
-            <GPcopyrightFooter/>
           </div>
         }
       />

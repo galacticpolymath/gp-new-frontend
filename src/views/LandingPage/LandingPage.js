@@ -29,9 +29,6 @@ import SectionAbout from "./Sections/SectionAbout.js";
 import SectionLessons from "./Sections/SectionLessons.js";
 import SectionHow from "./Sections/SectionHow.js";
 import SectionBenefits from "./Sections/SectionBenefits.js";
-import SectionSubscribe from "./Sections/SectionSubscribe.js";
-
-import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 import SectionJobViz from "./Sections/SectionJobViz";
 import SectionGPEquation from "./Sections/SectionGPEquation";
 
@@ -52,7 +49,7 @@ export default function LandingPage({ ...rest }) {
         fixed
         changeColorOnScroll={{
           height: 50,
-          color: "dark"
+          color: "dark",
         }}
         {...rest}
       />
@@ -68,7 +65,7 @@ export default function LandingPage({ ...rest }) {
                 </h1>
                 <h4
                   style={{
-                    backgroundColor: "rgba(71, 15, 44, 0.7)"
+                    backgroundColor: "rgba(71, 15, 44, 0.7)",
                   }}
                 >
                   We translate current research into creative, interdisciplinary
@@ -103,15 +100,13 @@ export default function LandingPage({ ...rest }) {
           <SectionHow />
         </div>
         <SectionJobViz />
-        <SectionGPEquation/>
+        <SectionGPEquation />
         <SectionBenefits />
 
-        <SectionSubscribe />
         <br />
         {/* <SectionProduct />
           <SectionTeam />
           <SectionWork /> */}
-
       </div>
       <Footer
         theme={"transparent"}
@@ -153,10 +148,6 @@ export default function LandingPage({ ...rest }) {
             {/*    </ListItem>*/}
             {/*  </List>*/}
             {/*</div>*/}
-
-            <div style={{ color: "white", opacity: ".7" }}>
-              <GPcopyrightFooter />
-            </div>
           </div>
         }
       />

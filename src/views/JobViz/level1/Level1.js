@@ -44,8 +44,6 @@ import { Level1Card } from "./Level1Card";
 // sections for this page Added by JOB VIZ TEAM^^^^^
 
 import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle";
-import GPcopyrightFooter from "../../../components/Footer/GPcopyrightFooter";
-import SectionSubscribe from "../../LandingPage/Sections/SectionSubscribe";
 import { jobData } from "../Helper";
 
 const useStyles = makeStyles(JobVizStyle);
@@ -257,16 +255,6 @@ export const Level1List = (props) => {
           </div>
         </div>
       </div>
-
-      <hr />
-      <SectionSubscribe />
-      <Footer
-        content={
-          <div>
-            <GPcopyrightFooter />
-          </div>
-        }
-      />
     </div>
   );
 };
