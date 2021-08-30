@@ -81,10 +81,10 @@ const style = {
     fontSize: "18px",
     lineHeight: "50px",
     marginLeft: "-15px",
-    color: grayColor[1],
+    color: grayColor[3],
     textDecoration: "none",
     fontWeight: 700,
-    fontFamily: "Roboto Slab,Times New Roman,serif"
+    fontFamily: "Cormorant Garamond,Times New Roman,serif"
   },
   pullCenter: {
     display: "inline-block",
