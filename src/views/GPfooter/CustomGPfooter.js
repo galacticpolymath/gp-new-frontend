@@ -51,11 +51,9 @@ export default function CustomGPfooter() {
                   </a>
                   {/* <br /> */}
                   <p>
-                    <strong>
-                      We translate current research into creative
-                      interdisciplinary lessons for grades 5+ that are{" "}
-                      <i>free for everyone</i>
-                    </strong>
+                    We translate current research into creative
+                    interdisciplinary lessons for grades 5+ that are{" "}
+                    <i>free for everyone</i>.
                   </p>
                   <ul className={classes.socialButtons}>
                     <li>
@@ -118,10 +116,8 @@ export default function CustomGPfooter() {
                 <GridItem xs={12} sm={3} md={3}>
                   <h5>Join Our Mailing List</h5>
                   <p>
-                    <strong>
-                      Get updates and early access to our latest free lessons
-                      and learning tools.
-                    </strong>
+                    Get updates and early access to our latest free lessons and
+                    learning tools.
                   </p>
                   <form>
                     <Button
