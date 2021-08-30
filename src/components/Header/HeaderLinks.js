@@ -39,7 +39,7 @@ export default function HeaderLinks() {
       {/* ///NAV BAR to JobViz */}
       <ListItem className={classes.listItem}>
         <NavLink
-          to="/jobviz"
+          to="/jobviz#top"
           className={classes.navLink}
           activeStyle={{ fontWeight: "bold" }}
         >
