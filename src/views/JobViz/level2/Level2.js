@@ -280,48 +280,7 @@ export const Level2List = (props) => {
       </div>
 
       <hr />
-      <Footer
-        content={
-          <div>
-            {/*<div className={classes.left}>*/}
-            {/*  <List className={classes.list}>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="https://www.creative-tim.com/?ref=mkpr-pricing"*/}
-            {/*        target="_blank"*/}
-            {/*        className={classes.block}*/}
-            {/*      >*/}
-            {/*        Creative Tim*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="https://www.creative-tim.com/presentation?ref=mkpr-pricing"*/}
-            {/*        target="_blank"*/}
-            {/*        className={classes.block}*/}
-            {/*      >*/}
-            {/*        About us*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a href="//blog.creative-tim.com/" className={classes.block}>*/}
-            {/*        Blog*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="https://www.creative-tim.com/license?ref=mkpr-pricing"*/}
-            {/*        target="_blank"*/}
-            {/*        className={classes.block}*/}
-            {/*      >*/}
-            {/*        Licenses*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*  </List>*/}
-            {/*</div>*/}
-          </div>
-        }
-      />
+      <Footer />
     </div>
   );
 };

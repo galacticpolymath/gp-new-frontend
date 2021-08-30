@@ -48,7 +48,6 @@ import { Level3Card } from "./Level3Card";
 
 import JobVizHeader from "../modules/JobVizComponents";
 import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle.js";
-import GPcopyrightFooter from "../../../components/Footer/GPcopyrightFooter";
 import Close from "@material-ui/icons/Close";
 
 const useStyles = makeStyles(JobVizStyle);
@@ -319,13 +318,7 @@ export const Level3List = (props) => {
       </div>
 
       <hr />
-      <Footer
-        content={
-          <div>
-            <GPcopyrightFooter />
-          </div>
-        }
-      />
+      <Footer />
     </div>
   );
 };
