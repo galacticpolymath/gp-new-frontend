@@ -100,11 +100,13 @@ export const Level1List = (props) => {
     getAllJobNames(jobs);
   }, [jobs]);
 
-  //THis causes the page to jump to top and it's super not helpful with all the navigation buttons
-  // React.useEffect(() => {
-  //   window.scrollTo(0, 0);
-  //   document.body.scrollTop = 0;
-  // });
+  //Only jumps to top of the page if the string 'top' is in the url
+  React.useEffect(() => {
+    if (props.history.location.hash.includes("top") == true) {
+      window.scrollTo(0, 0);
+      document.body.scrollTop = 0;
+    }
+  }, [props]);
 
   return (
     <div>
