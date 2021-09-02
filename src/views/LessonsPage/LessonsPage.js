@@ -1,25 +1,24 @@
 import React, { useEffect, useState } from "react";
-// nodejs library that concatenates classes
 import classNames from "classnames";
-// @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import NewReleasesIcon from "@material-ui/icons/NewReleases";
-// core components
+
 import Header from "components/Header/Header.js";
 import InfoArea from "components/InfoArea/InfoArea.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
-import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Parallax from "components/Parallax/Parallax.js";
-// sections for this page
-// import SectionPills from "./Sections/SectionPills.js";
+
 import LessonCards from "./Sections/LessonCards.js";
+
+import Hero from "assets/img/hero-images/Lessons_VerticalDotandline.svg";
 
 import cachedLessons from "../LessonPlanDetailPage/data/lesson-plans.json";
 import { fetchAll } from "../LessonPlanDetailPage/data/lessonsApi.js";
 
 import lessonsPageStyle from "assets/jss/material-kit-pro-react/views/lessonsPageStyle.js";
+
 const useStyles = makeStyles(lessonsPageStyle);
 
 export default function LessonsPage() {
@@ -83,7 +82,7 @@ export default function LessonsPage() {
               )}
             >
               <img
-                src={require("assets/img/hero-images/Lessons_VerticalDotandline.svg")}
+                src={Hero}
                 height="auto"
                 width="120%"
                 alt={"vertical geometric line and dot pattern"}
