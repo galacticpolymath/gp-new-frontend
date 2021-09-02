@@ -13,8 +13,6 @@ import Footer from "components/Footer/Footer.js";
 
 import style from "assets/jss/material-kit-pro-react/views/componentsSections/footerStyle";
 
-import GpImage from "../../assets/img/GP_logo_wordmark_horiz_grad_transBG_300.png";
-
 import GPcopyrightFooter from "components/Footer/GPcopyrightFooter";
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 
@@ -28,7 +26,7 @@ export default function CustomGPfooter() {
         <div>
           <br />
           <Footer
-            theme="light"
+            theme="white"
             content={
               <div>
                 <div
