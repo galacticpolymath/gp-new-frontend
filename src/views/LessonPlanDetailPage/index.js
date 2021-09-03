@@ -12,26 +12,17 @@ import Header from "./Header";
 import { NUMBERED_SECTIONS } from "./constants";
 
 import "./style.scss";
-import Footer from "../../components/Footer/Footer";
 
-import "../../components/NavDots/Dots.css";
-import DotPanel from "../../components/LessonDots/DotPanel";
-import scrollHandler from "../../components/LessonDots/obs";
-
-import throttle from "lodash.throttle";
+import NavigationDots from "./NavigationDots";
+import useScrollHandler from './NavigationDots/useScrollHandler'
 
 const LessonPlan = () => {
+  useScrollHandler()
+
   const { lessonId } = useParams();
   const [lesson, setLesson] = useState(
     cachedLessons.find(({ id }) => id.toString() === lessonId.toString())
   );
-
-  useEffect(() => {
-    window.addEventListener("scroll", throttle(scrollHandler, 100));
-    return () => {
-      window.removeEventListener("scroll", throttle(scrollHandler, 100));
-    };
-  }, []);
 
   useEffect(() => {
     fetchOne(lessonId, 3000).then(setLesson).catch(console.log);
@@ -61,7 +52,8 @@ const LessonPlan = () => {
         {lesson.Section &&
           lesson.Section.map((section, i) => renderSection(section, i))}
       </div>
-      <DotPanel sections={lesson.Section} />
+
+      <NavigationDots sections={lesson.Section} />
     </Fragment>
   );
 };
