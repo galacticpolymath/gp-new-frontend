@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router";
+import TagManager from 'react-gtm-module'
 
 import "assets/scss/material-kit-pro-react.scss?v=1.9.0";
 
@@ -21,6 +22,12 @@ import LandingPage from "views/LandingPage/LandingPage";
 import HireUsPage from "views/HireUs/HireUsPage";
 import ContactUsPage from "views/ContactUsPage/ContactUsPage";
 import CustomGPfooter from "views/GPfooter/CustomGPfooter";
+
+
+const tagManagerArgs = {
+  gtmId: 'G-8B58Y7HD3T'
+};
+TagManager.initialize(tagManagerArgs)
 
 var hist = createBrowserHistory();
 
