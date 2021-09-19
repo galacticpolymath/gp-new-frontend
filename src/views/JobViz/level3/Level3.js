@@ -5,7 +5,6 @@ import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
-
 // core components
 import Header from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
@@ -49,8 +48,6 @@ import { Level3Card } from "./Level3Card";
 
 import JobVizHeader from "../modules/JobVizComponents";
 import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle.js";
-import GPcopyrightFooter from "../../../components/Footer/GPcopyrightFooter";
-import SectionSubscribe from "../../LandingPage/Sections/SectionSubscribe";
 import Close from "@material-ui/icons/Close";
 
 const useStyles = makeStyles(JobVizStyle);
@@ -150,40 +147,36 @@ export const Level3List = (props) => {
 
       <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
-          <GridContainer
-            style={{placeItems: "center"}}
-          >
+          <GridContainer style={{ placeItems: "center" }}>
             <GridItem
               xs={12}
               sm={12}
               md={6}
-
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,
                 classes.textLeft
               )}
-
             >
               <JobVizHeader />
             </GridItem>
             <GridItem
-                xs={12}
-                sm={12}
-                md={6}
-                className={classNames(
-                    classes.hideLogo,
-                    classes.mlAuto,
-                    classes.mrAuto,
-                    classes.textLeft
-                )}
+              xs={12}
+              sm={12}
+              md={6}
+              className={classNames(
+                classes.hideLogo,
+                classes.mlAuto,
+                classes.mrAuto,
+                classes.textLeft
+              )}
             >
               <img
-                  src={require("assets/img/hero-images/JobViz_Bubble.svg")}
-                  height="auto"
-                  width="120%"
-                  style={{paddingTop:"2rem"}}
-                  alt={"geometric horizontal bubbles on line background pattern"}
+                src={require("assets/img/hero-images/JobViz_Bubble.svg")}
+                height="auto"
+                width="120%"
+                style={{ paddingTop: "2rem" }}
+                alt={"geometric horizontal bubbles on line background pattern"}
               />
             </GridItem>
           </GridContainer>
@@ -308,23 +301,24 @@ export const Level3List = (props) => {
             </div>
           </div>
           <div className={classes.attribution}>
-            <h5><b>Data Source: </b>
-              <a href={"https://www.bls.gov/emp/tables/occupational-projections-and-characteristics.htm"}
-                 target="_blank" rel="noopener noreferrer" >US Bureau of Labor Statistics</a></h5>
+            <h5>
+              <b>Data Source: </b>
+              <a
+                href={
+                  "https://www.bls.gov/emp/tables/occupational-projections-and-characteristics.htm"
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                US Bureau of Labor Statistics
+              </a>
+            </h5>
           </div>
         </div>
       </div>
 
-
-      <hr/>
-      <SectionSubscribe />
-      <Footer
-        content={
-          <div>
-            <GPcopyrightFooter/>
-          </div>
-        }
-      />
+      <hr />
+      <Footer />
     </div>
   );
 };

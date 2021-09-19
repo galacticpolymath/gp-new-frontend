@@ -77,14 +77,14 @@ const DownloadHelpModal = ({ id }) => {
                 <p>
                   If logged into Google, click the dropdown menu on the folder containing handouts & presentations, and select download:
                 </p>
-                <img src={SignedIn} style={{ maxWidth: '15rem' }} />
+                <img alt="A screenshot of a dropdown in Google Drive with the menu item 'Download' circled." src={SignedIn} style={{ maxWidth: '15rem' }} />
               </div>
               <div>
 
                 <p>
                   If <em>not</em> logged into Google, click this icon in the upper right:
                 </p>
-                <img src={NotSignedIn} style={{ maxWidth: '13rem' }} />
+                <img alt="A screenshot of Google Drive with a button called 'Download 'All' circled." src={NotSignedIn} style={{ maxWidth: '13rem' }} />
               </div>
 
             </div>

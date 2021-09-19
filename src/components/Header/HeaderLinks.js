@@ -24,16 +24,6 @@ export default function HeaderLinks() {
 
   return (
     <List className={classes.list + " " + classes.mlAuto}>
-      {/*<ListItem className={classes.listItem}>*/}
-      {/*  <NavLink*/}
-      {/*    to="/"*/}
-      {/*    className={classes.navLink}*/}
-      {/*    activeStyle={{ fontWeight: "bold" }}*/}
-      {/*    exact*/}
-      {/*  >*/}
-      {/*    Home*/}
-      {/*  </NavLink>*/}
-      {/*</ListItem>*/}
       <ListItem className={classes.listItem}>
         <Link to="/lessons" {...linkProps}>
           Lessons
@@ -41,7 +31,7 @@ export default function HeaderLinks() {
       </ListItem>
       {/* ///NAV BAR to JobViz */}
       <ListItem className={classes.listItem}>
-        <Link to="/jobviz" {...linkProps}>
+        <Link to="/jobviz#top" {...linkProps}>
           JobViz
         </Link>
       </ListItem>

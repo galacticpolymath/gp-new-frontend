@@ -13,7 +13,6 @@ const readHeadings = () => {
     const title = indextitle.substr(indextitle.indexOf(' ') + 1)
 
     titleArray.push([index, title, el.id])
-    //el.classList.add('scroll-indicator')
   })
   return titleArray
 }

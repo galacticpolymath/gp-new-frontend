@@ -19,9 +19,6 @@ import SectionAbout from "./Sections/SectionAbout.js";
 import SectionLessons from "./Sections/SectionLessons.js";
 import SectionHow from "./Sections/SectionHow.js";
 import SectionBenefits from "./Sections/SectionBenefits.js";
-import SectionSubscribe from "./Sections/SectionSubscribe.js";
-
-import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 import SectionJobViz from "./Sections/SectionJobViz";
 import SectionGPEquation from "./Sections/SectionGPEquation";
 import ParallaxImage from "assets/img/hero-images/landingPage-CityNetwork@75x-20.jpg";
@@ -97,16 +94,12 @@ export default function LandingPage(props) {
         <SectionGPEquation />
         <SectionBenefits />
 
-        <SectionSubscribe />
         <br />
       </div>
       <Footer
         theme={"transparent"}
         content={
           <div>
-            <div style={{ color: "white", opacity: ".7" }}>
-              <GPcopyrightFooter />
-            </div>
           </div>
         }
       />

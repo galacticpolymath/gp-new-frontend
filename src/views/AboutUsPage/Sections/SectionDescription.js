@@ -44,7 +44,7 @@ export default function SectionDescription() {
         >
           <h4
           className={classes.textLeft}>
-            To create a direct pipeline between the sources of knowledge and G5-12 classrooms by translating complex topics from
+            To create a direct pipeline between the sources of knowledge and grade 5-12 classrooms by translating complex topics from
             researchers, non-profits, and sustainable corporations, into high-quality, open-access educational
             materials.</h4>
         </GridItem>

@@ -6,17 +6,13 @@ import NewReleasesIcon from "@material-ui/icons/NewReleases";
 import Header from "components/Header/Header.js";
 import InfoArea from "components/InfoArea/InfoArea.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
-import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Parallax from "components/Parallax/Parallax.js";
 
 import LessonCards from "./Sections/LessonCards.js";
 
-import GPcopyrightFooter from "../../components/Footer/GPcopyrightFooter";
 import Hero from "assets/img/hero-images/Lessons_VerticalDotandline.svg";
-
-import SectionSubscribe from "../LandingPage/Sections/SectionSubscribe";
 
 import lessonsPageStyle from "assets/jss/material-kit-pro-react/views/lessonsPageStyle.js";
 
@@ -99,8 +95,6 @@ export default function LessonsPage({ pageContext: { lessons } }) {
           {lessons && <LessonCards lessons={lessons} />}
         </div>
       </div>
-      <SectionSubscribe />
-      <Footer content={<GPcopyrightFooter />} />
     </div>
   );
 }

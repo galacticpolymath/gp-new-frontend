@@ -35,7 +35,6 @@ const Transition = forwardRef(function Transition(props, ref) {
 
 Transition.displayName = "Transition";
 
-
 // sections for this page Added by JOB VIZ TEAM
 import { Link } from "react-router-dom";
 
@@ -47,11 +46,8 @@ import { LrAutoSearchV2 } from "../search/LRautoSearchV2";
 import { Level2Card } from "./Level2Card";
 // sections for this page Added by JOB VIZ TEAM
 
-
 import JobVizHeader from "../modules/JobVizComponents";
 import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle.js";
-import GPcopyrightFooter from "../../../components/Footer/GPcopyrightFooter";
-import SectionSubscribe from "../../LandingPage/Sections/SectionSubscribe";
 import Close from "@material-ui/icons/Close";
 
 const useStyles = makeStyles(JobVizStyle);
@@ -126,39 +122,35 @@ export const Level2List = (props) => {
 
       <Parallax className={classes.bgColor} small>
         <div className={classes.container}>
-          <GridContainer
-            style={{placeItems: "center"}}
-          >
+          <GridContainer style={{ placeItems: "center" }}>
             <GridItem
               xs={12}
               sm={12}
               md={6}
-
               className={classNames(
                 classes.mlAuto,
                 classes.mrAuto,
                 classes.textLeft
               )}
-
             >
               <JobVizHeader />
             </GridItem>
             <GridItem
-                xs={12}
-                sm={12}
-                md={6}
-                className={classNames(
-                    classes.hideLogo,
-                    classes.mlAuto,
-                    classes.mrAuto,
-                    classes.textLeft
-                )}
+              xs={12}
+              sm={12}
+              md={6}
+              className={classNames(
+                classes.hideLogo,
+                classes.mlAuto,
+                classes.mrAuto,
+                classes.textLeft
+              )}
             >
               <img
                 src={require("assets/img/hero-images/JobViz_Bubble.svg")}
                 height="auto"
                 width="120%"
-                style={{paddingTop:"2rem"}}
+                style={{ paddingTop: "2rem" }}
                 alt={"horizontal lines with bubbles, background pattern"}
               />
             </GridItem>
@@ -203,7 +195,7 @@ export const Level2List = (props) => {
             <Card className={classes.textCenter} style={{ width: "20rem" }}>
               <CardAvatar profile>
                 {/*<a href="" onClick={(e) => e.preventDefault()}>*/}
-                  <img src={branch2} alt="..." />
+                <img src={branch2} alt="..." />
                 {/*</a>*/}
               </CardAvatar>
               <CardBody>
@@ -271,59 +263,24 @@ export const Level2List = (props) => {
             </div>
           </div>
           <div className={classes.attribution}>
-            <h5><b>Data Source: </b>
-              <a href={"https://www.bls.gov/emp/tables/occupational-projections-and-characteristics.htm"}
-                 target="_blank" rel="noopener noreferrer" >US Bureau of Labor Statistics</a></h5>
+            <h5>
+              <b>Data Source: </b>
+              <a
+                href={
+                  "https://www.bls.gov/emp/tables/occupational-projections-and-characteristics.htm"
+                }
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                US Bureau of Labor Statistics
+              </a>
+            </h5>
           </div>
         </div>
       </div>
 
-
-      <hr/>
-      <SectionSubscribe />
-      <Footer
-        content={
-          <div>
-            {/*<div className={classes.left}>*/}
-            {/*  <List className={classes.list}>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="https://www.creative-tim.com/?ref=mkpr-pricing"*/}
-            {/*        target="_blank"*/}
-            {/*        className={classes.block}*/}
-            {/*      >*/}
-            {/*        Creative Tim*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="https://www.creative-tim.com/presentation?ref=mkpr-pricing"*/}
-            {/*        target="_blank"*/}
-            {/*        className={classes.block}*/}
-            {/*      >*/}
-            {/*        About us*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a href="//blog.creative-tim.com/" className={classes.block}>*/}
-            {/*        Blog*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="https://www.creative-tim.com/license?ref=mkpr-pricing"*/}
-            {/*        target="_blank"*/}
-            {/*        className={classes.block}*/}
-            {/*      >*/}
-            {/*        Licenses*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*  </List>*/}
-            {/*</div>*/}
-            <GPcopyrightFooter/>
-          </div>
-        }
-      />
+      <hr />
+      <Footer />
     </div>
   );
 };
