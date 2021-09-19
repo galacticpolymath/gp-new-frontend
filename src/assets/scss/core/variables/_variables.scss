@@ -1,4 +1,5 @@
 @use 'sass:math';
+@import '../variables/functions';
 
 // Variables
 //
@@ -54,6 +55,7 @@ $gp-hydro-blue: #2c83c3 !default;
 $gp-lightning-purple: #6c2d82 !default;
 $gp-fuchsia: #ff3dac !default;
 $gp-atomic-blue: #6812d1 !default;
+$gp-atomic-blue-hl: #9F4BFF;
 $gp-burst-purple: #cb1f8e !default;
 $gp-galactic-black: #363636 !default;
 $gp-sparkle-white: #f0f4ff !default;
@@ -63,6 +65,7 @@ $lilac: $sci;
 $socstudies: #633a9a !default;
 $ela: #eca14d !default;
 $extra: #f4f0d9 !default;
+$charcoal: #3c4858;
 
 $colors: () !default;
 $colors: map-merge(

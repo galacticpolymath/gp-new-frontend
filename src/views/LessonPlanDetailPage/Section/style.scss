@@ -1,4 +1,3 @@
-@import "../variables";
 @import "../../../assets/scss/core/variables";
 
 .Overview {
@@ -87,10 +86,6 @@
     }
   }/*End .stats*/
 
-  #lessonhook {
-    //padding-top: 1.5rem;
-  }
-
   .keywords {
     padding: 0.85rem 0;
   }
@@ -98,7 +93,7 @@
 
 .Procedure {
   h3 {
-    color: $hydrogen-blue;
+    color: $gp-hydro-blue;
     text-transform: uppercase;
   }
 
@@ -209,10 +204,10 @@
         margin-bottom: 0.25rem;
 
         a {
-          color: $burst-purple;
+          color: $gp-burst-purple;
 
           &:hover {
-            color: $flare-fuschia;
+            color: $gp-fuchsia;
           }
         }
       }
