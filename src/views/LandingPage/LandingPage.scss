@@ -1,0 +1,55 @@
+@import "../../assets/scss/core/variables/_variables";
+
+.container {
+  color: $white;
+  z-index: 2;
+}
+.title {
+  display: inline-block;
+  position: relative;
+  margin-top: 30px;
+  min-height: 32px;
+  color: $white;
+  text-decoration: none;
+}
+.subtitle {
+  font-size: 1.313rem;
+  max-width: 500px;
+  margin: 10px auto 0;
+}
+.block {
+  color: inherit;
+  padding: 0.9375rem;
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  text-decoration: none;
+  position: relative;
+  display: block;
+}
+.inlineBlock {
+  display: inline-block;
+  padding: 0px;
+  width: auto;
+}
+.list {
+  margin-bottom: 0;
+  padding: 0;
+  margin-top: 0;
+}
+.left {
+  float: left !important;
+  display: block;
+}
+.right {
+  padding: 15px 0;
+  margin: 0;
+  float: right;
+}
+.icon {
+  width: 18px;
+  height: 18px;
+  top: 3px;
+  position: relative;
+}

@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
-import classNames from "classnames";
 
-import { makeStyles } from "@material-ui/core/styles";
 import BlurOn from "@material-ui/icons/BlurOn";
 import CreateIcon from "@material-ui/icons/Create";
 
@@ -13,7 +11,6 @@ import Button from "components/CustomButtons/Button.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 
-import landingPageStyle from "assets/jss/material-kit-pro-react/views/landingPageStyle.js";
 
 import SectionAbout from "./Sections/SectionAbout.js";
 import SectionLessons from "./Sections/SectionLessons.js";
@@ -23,16 +20,14 @@ import SectionJobViz from "./Sections/SectionJobViz";
 import SectionGPEquation from "./Sections/SectionGPEquation";
 import ParallaxImage from "assets/img/hero-images/landingPage-CityNetwork@75x-20.jpg";
 
-const useStyles = makeStyles(landingPageStyle);
-
 import "assets/scss/material-kit-pro-react.scss?v=1.9.0";
+import "./LandingPage.scss"
 
 export default function LandingPage(props) {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
   }, []);
-  const classes = useStyles();
   return (
     <div style={{ backgroundColor: "#470F2C" }}>
       <Header
@@ -47,11 +42,11 @@ export default function LandingPage(props) {
         {...props}
       />
       <Parallax image={ParallaxImage}>
-        <div className={classes.container}>
+        <div className="container">
           <GridContainer>
             <GridItem xs={12} sm={6} md={6}>
               <div>
-                <h1 className={classes.title}>
+                <h1 className="title">
                   We are an <br /> education studio.
                 </h1>
                 <h4
@@ -81,13 +76,13 @@ export default function LandingPage(props) {
           </GridContainer>
         </div>
       </Parallax>
-      <div className={classNames(classes.main, classes.mainRaised)}>
-        <div className={classes.container}>
+      <div className="main mainRaised">
+        <div className="container">
           <SectionAbout />
         </div>
         <SectionLessons />
         {/*This is How We Do It*/}
-        <div className={classes.container}>
+        <div className="container">
           <SectionHow />
         </div>
         <SectionJobViz />
@@ -97,11 +92,8 @@ export default function LandingPage(props) {
         <br />
       </div>
       <Footer
-        theme={"transparent"}
-        content={
-          <div>
-          </div>
-        }
+        theme="transparent"
+        content={<div />}
       />
     </div>
   );
