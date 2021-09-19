@@ -1,0 +1,37 @@
+@import "../../assets/scss/core/variables/_variables";
+
+.badge {
+  margin-right: "3px";
+  border-radius: "12px";
+  padding: "5px 12px";
+  text-transform: "uppercase";
+  font-size: "10px";
+  font-weight: "500";
+  line-height: "1";
+  color: whiteColor;
+  text-align: "center";
+  white-space: "nowrap";
+  vertical-align: "baseline";
+  display: "inline-block";
+  &.primary {
+    background-color: $primary;
+  }
+  &.warning {
+    background-color: $secondary;
+  }
+  &.danger {
+    background-color: $danger;
+  }
+  &.success {
+    background-color: $lilac;
+  }
+  &.info {
+    background-color: $info;
+  }
+  &.rose {
+    background-color: $rose;
+  }
+  &.gray {
+    background-color: #6c757d;
+  }
+}
