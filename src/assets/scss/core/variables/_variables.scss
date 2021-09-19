@@ -59,6 +59,7 @@ $gp-galactic-black: #363636 !default;
 $gp-sparkle-white: #f0f4ff !default;
 $math: #db4125 !default;
 $sci: #b798e8 !default;
+$lilac: $sci;
 $socstudies: #633a9a !default;
 $ela: #eca14d !default;
 $extra: #f4f0d9 !default;
@@ -84,13 +85,14 @@ $colors: map-merge(
 );
 
 $primary: $gp-hydro-blue !default;
-$secondary: $gp-galactic-black !default;
-$success: green !default;
+$secondary: #fafafa !default;
+$success: $lilac !default;
 $info: $gp-lightning-purple !default;
-$warning: yellow !default;
-$danger: red !default;
+$warning: $gp-atomic-blue !default;
+$danger: $gp-fuchsia !default;
 $light: $gray-100 !default;
 $dark: $gray-800 !default;
+$rose: $gp-burst-purple; 
 
 $theme-colors: () !default;
 $theme-colors: map-merge(
