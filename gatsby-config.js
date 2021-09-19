@@ -14,5 +14,6 @@ module.exports = {
       },
     },
     "gatsby-plugin-sass",
+    "gatsby-plugin-material-ui"
   ],
 };
