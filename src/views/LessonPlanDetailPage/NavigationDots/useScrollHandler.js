@@ -13,8 +13,7 @@ const getOffset = function (element) {
 };
 
 const useScrollHandler = () => {
-  let lastOffset = window.pageYOffset;
-
+  let lastOffset
 
   const activateDot = function (index, elemIds) {
     const activeNodeid = elemIds[index];
@@ -80,6 +79,7 @@ const useScrollHandler = () => {
   };
 
   useEffect(() => {
+    lastOffset = window.pageYOffset;
     window.addEventListener("scroll", throttle(() => scrollAction(), 100));
     return () => {
       window.removeEventListener("scroll", throttle(() => scrollAction(), 100));
