@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { createBrowserHistory } from "history";
-import { Router, Route, Switch } from "react-router";
+import { Router, Route, Switch } from "react-router-dom";
 import TagManager from 'react-gtm-module'
 
 import "assets/scss/material-kit-pro-react.scss?v=1.9.0";

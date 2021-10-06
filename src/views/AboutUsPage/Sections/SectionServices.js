@@ -93,7 +93,7 @@ export default function SectionServices() {
           />
         </GridItem>
         <h3 className={classNames(classes.textCenter,classes.mrAuto,classes.mlAuto)}>
-          <b>Learn how we can level up your outreach in <a href={"hire-us/"}>Hire Us</a></b>
+          <b>Learn how we can level up your outreach in <a href={"/hire-us"}>Hire Us</a></b>
         </h3>
       </GridContainer>
     </div>
