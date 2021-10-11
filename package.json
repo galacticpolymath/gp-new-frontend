@@ -68,6 +68,9 @@
     "development": []
   },
   "reactSnap": {
-    "puppeteerArgs": ["--disable-dev-shm-usage"]
+    "puppeteerArgs": [
+      "--disable-dev-shm-usage",
+      "--shm-size=1gb"
+    ]
   }
 }
