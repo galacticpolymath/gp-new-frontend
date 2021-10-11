@@ -66,5 +66,11 @@
       "not op_mini all"
     ],
     "development": []
+  },
+  "reactSnap": {
+    "puppeteerArgs": [
+      "--disable-dev-shm-usage",
+      "--shm-size=1gb"
+    ]
   }
 }
