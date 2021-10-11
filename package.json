@@ -70,7 +70,7 @@
   "reactSnap": {
     "puppeteerArgs": [
       "--disable-dev-shm-usage",
-      "--shm-size=1gb"
+      "--shm-size=2gb"
     ]
   }
 }
