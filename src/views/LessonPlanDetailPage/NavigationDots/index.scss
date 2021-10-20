@@ -1,4 +1,13 @@
 .scroll-indicator-controller {
+  &:hover,
+  &:active {
+    div span {
+      width: auto;
+      opacity: 1;
+      overflow: visible;
+      transform: translateY(-50%) translateX(0px);
+    }
+  }
   position: fixed;
   top: 50vh;
   transform: translate(0, -50%);
@@ -17,32 +26,35 @@
     height: 12px;
     position: relative;
     border-radius: 50%;
-    border: 1px solid rgb(190, 190, 190);
+    border: 2px solid rgb(190, 190, 190);
     background: rgba(0, 0, 0, 0.1);
     margin: 0 0 20px 0;
     cursor: pointer;
     transition: background 0.4s ease;
     will-change: transition;
+    &.teaching_materials {
+      border: 2px solid  #9970ce;
+    }
     span {
+      /*characterizing the textbox for section titles*/
       position: absolute;
       right: calc(100% + 10px);
       white-space: nowrap;
       top: 50%;
-
       font-size: 16px;
       line-height: 17px;
-      width: 0;
-      overflow: hidden;
+      width: auto;
+      overflow: hidden; 
       opacity: 0;
-      transform: translateY(-50%) translateX(10px);
+      transform: translateY(-50%) translateX(0px);
       transition: all 0.4s ease;
       will-change: transition;
       color: #363636;
-      background-color: #d5e6f3;
-      border: 1px solid #363636;
-      border-radius: 6px;
-      box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24),
-        0 8px 10px -5px rgba(0, 0, 0, 0.2);
+      background-color: #ffffff;
+      border: none;
+      box-shadow: none;
+      //box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24),
+      //0 8px 10px -5px rgba(0, 0, 0, 0.2);
       font-weight: 400;
       padding: 6px;
       /*  disable text highlighting on long press for mobile*/
@@ -53,14 +65,11 @@
       -ms-user-select: none;
       user-select: none;
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-      &:after {
-        /*content: "-----";*/
-        font-family: "Barlow", sans-serif;
-        padding-left: 5px;
-        vertical-align: text-top;
-        line-height: 14px;
+      &:hover {
+        background-color: #d5e6f3;
+        border: 1px solid #363636;
+        border-radius: 6px;
       }
-
       /*make space to see labels around your thumb on mobile */
       @media only screen and (max-width: 600px) {
         right: calc(100% + 60px);
@@ -77,20 +86,23 @@
         }
       }
     }
-
-    &:hover,
-    &:active {
-      span {
-        width: auto;
-        opacity: 1;
-        overflow: visible;
-        transform: translateY(-50%) translateX(0px);
-      }
-    }
-
     &.activeDot {
       background: #2c83c3;
       border-color: rgba(255, 255, 255, 1);
+      span {
+            background-color: #d5e6f3;
+            border: 1px solid #363636;
+            border-radius: 6px;
+            box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24),
+              0 8px 10px -5px rgba(0, 0, 0, 0.2);
+      }
+      &.teaching_materials{
+        background: #6812d1;
+        span {
+          background-color: #f7f0ff;
+          border: 1px solid #0e0020;
+        }
+      }
     }
     @supports (-ms-ime-align: auto) {
       span {
