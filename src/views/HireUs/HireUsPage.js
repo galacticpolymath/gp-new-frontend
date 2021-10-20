@@ -18,7 +18,6 @@ import SectionFeatures from "views/HireUs/Sections/SectionFeatures.js";
 
 //styles broad material UI components
 import hireUsStyle from "../../assets/jss/material-kit-pro-react/views/hireUsStyle";
-import { makeCloudinaryUrl } from "../../components/shared/constants";
 import SectionHeardEnough from "./Sections/SectionHeardEnough";
 import Button from "../../components/CustomButtons/Button";
 
@@ -190,14 +189,12 @@ export default function PricingPage() {
 
           <div className={classNames(classes.container, classes.textCenter)}>
             <img
-              src={makeCloudinaryUrl(
-                "v1593304396/logos/GP_logo_grad_transBG_300_tbn4ei.jpeg"
-              )}
+              src={process.env.PUBLIC_URL + "/GP_bubbleLogo300px.png"}
               className={classNames(classes.mlAuto, classes.mrAuto)}
               style={{
                 // width:"10"
                 width: "25vw",
-                maxWidth: "150px",
+                maxWidth: "200px",
                 justifySelf: "center",
                 paddingTop: "10%",
               }}
