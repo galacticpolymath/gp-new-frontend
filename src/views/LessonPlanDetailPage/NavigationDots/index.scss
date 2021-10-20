@@ -22,6 +22,11 @@
     right: 12px;
   }
   .navDot {
+    &:hover,
+    &:active {
+      text-shadow: -.25px -.25px 0 black, 
+                .25px .25px black;
+    }
     width: 12px;
     height: 12px;
     position: relative;
@@ -33,7 +38,7 @@
     transition: background 0.4s ease;
     will-change: transition;
     &.teaching_materials {
-      border: 2px solid  #9970ce;
+      border: 2px solid  #cb1f8e;
     }
     span {
       /*characterizing the textbox for section titles*/
@@ -72,6 +77,9 @@
       }
       /*make space to see labels around your thumb on mobile */
       @media only screen and (max-width: 600px) {
+        border: 1px solid #363636;
+      }
+      @media only screen and (max-width: 600px) {
         right: calc(100% + 60px);
         &:after {
           content: "";
@@ -88,7 +96,7 @@
     }
     &.activeDot {
       background: #2c83c3;
-      border-color: rgba(255, 255, 255, 1);
+      border-color: #2c83c3;
       span {
             background-color: #d5e6f3;
             border: 1px solid #363636;
@@ -97,10 +105,11 @@
               0 8px 10px -5px rgba(0, 0, 0, 0.2);
       }
       &.teaching_materials{
-        background: #6812d1;
+        background: #cb1f8e;
+        border: solid 2px #cb1f8e;
         span {
-          background-color: #f7f0ff;
-          border: 1px solid #0e0020;
+          background-color: #ffeaf8;
+          border: 1px solid #1b0012;
         }
       }
     }
