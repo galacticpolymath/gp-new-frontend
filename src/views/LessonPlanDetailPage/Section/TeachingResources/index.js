@@ -1,9 +1,8 @@
-import React, { Fragment } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 
 import TeachingMethod from "./TeachingMethod";
-import TeachingMethod2 from "./TeachingMethod2";
 import CollapsibleSection from "../CollapsibleSection";
 
 import { METHODS } from "./constants";
@@ -17,7 +16,6 @@ const TeachingResources = ({
   index,
   SectionTitle,
   Data,
-  TeachingMethod: TeachingMethods = [],
 }) => {
   const classes = useStyles();
   return (
@@ -27,27 +25,19 @@ const TeachingResources = ({
       SectionTitle={SectionTitle}
     >
       <div className={classes.container}>
-        {Data ? (
-          <Fragment>
-            {Data.hasOwnProperty("classroom") && (
-              <TeachingMethod2
-                type={METHODS.IN_PERSON}
-                key={METHODS.IN_PERSON}
-                {...Data.classroom}
-              />
-            )}
-            {Data.hasOwnProperty("remote") && (
-              <TeachingMethod2
-                type={METHODS.REMOTE}
-                key={METHODS.REMOTE}
-                {...Data.remote}
-              />
-            )}
-          </Fragment>
-        ) : (
-          TeachingMethods.map((method, i) => (
-            <TeachingMethod key={i} {...method} />
-          ))
+        {Data.classroom && (
+          <TeachingMethod
+            type={METHODS.IN_PERSON}
+            key={METHODS.IN_PERSON}
+            {...Data.classroom}
+          />
+        )}
+        {Data.remote && (
+          <TeachingMethod
+            type={METHODS.REMOTE}
+            key={METHODS.REMOTE}
+            {...Data.remote}
+          />
         )}
       </div>
     </CollapsibleSection>

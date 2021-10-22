@@ -5,15 +5,20 @@ import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-import ResourceSummary from "./ResourceSummary";
-import ResourceDownload from "./ResourceDownload/index";
+import ResourceSummary2 from "./ResourceSummary2";
+import VariantSummary from "./VariantSummary";
+import GradeVariant from "./GradeVariant";
+
+import { METHODS, COPY, ICONS, TITLES } from "./constants";
 
 const TeachingMethod = ({
-  Title,
-  ResourceSummary: Summary,
-  ResourceDownloads = [],
+  type,
+  resourceSummary,
+  gradeVariantNotes,
+  resources = [],
 }) => {
   const [expanded, expand] = useState(false);
+
   return (
     <ExpansionPanel
       className="TeachingMethod ExpansionPanel"
@@ -24,24 +29,61 @@ const TeachingMethod = ({
         className="ExpansionPanelSummary"
         expandIcon={<ExpandMoreIcon />}
       >
-        <h3>{Title}</h3>
+        <div>
+          <h3>
+            {ICONS[type]} {TITLES[type]}
+          </h3>
+          {COPY[type]}
+        </div>
       </ExpansionPanelSummary>
       <ExpansionPanelDetails className="ExpansionPanelDetails">
-        <div>
-          <ResourceSummary {...Summary} />
-          {ResourceDownloads.map((resource, i) => (
-            <ResourceDownload key={i} {...resource} />
-          ))}
-        </div>
+        {type === METHODS.IN_PERSON && (
+          <p className="footnote">
+            *You will need to be logged into a{" "}
+            <a
+              href="https://accounts.google.com/signup/v2/webcreateaccount?hl=en&flowName=GlifWebSignIn&flowEntry=SignUp"
+              target="blank"
+              rel="noopener noreferrer"
+            >
+              free Google account
+            </a>{" "}
+            and click &quot;Use Template&quot; to add files to your Google
+            Drive.
+          </p>
+        )}
+
+        <ResourceSummary2
+          resources={resourceSummary}
+          footnote={
+            type === METHODS.REMOTE && (
+              <p>
+                *Remote teaching of our lessons requires a minimum (free) Silver
+                Subscription to Nearpod.{" "}
+                <a
+                  href="https://nearpod.com/signup/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Sign up here.
+                </a>
+              </p>
+            )
+          }
+        />
+        <VariantSummary variants={gradeVariantNotes} />
+        {resources.map((resource, i) => (
+          <GradeVariant key={i} {...resource} />
+        ))}
       </ExpansionPanelDetails>
     </ExpansionPanel>
   );
 };
 
 TeachingMethod.propTypes = {
-  Title: PropTypes.string,
-  ResourceSummary: PropTypes.object,
-  ResourceDownloads: PropTypes.array,
+  type: PropTypes.string,
+  resourceSummary: PropTypes.array,
+  gradeVariantNotes: PropTypes.array,
+  resources: PropTypes.array,
 };
 
 export default TeachingMethod;
