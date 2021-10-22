@@ -2,6 +2,11 @@
 @import "../../../../assets/scss/core/variables";
 
 .LessonPlan {
+  .SectionHeading#teaching_materials {
+    background-color: $burst-purple-hl;
+    border: 3px solid $burst-purple;
+    border-width: 3px 0;
+  }
   .TeachingMethod.ExpansionPanel {
     button {
       padding: 0;
