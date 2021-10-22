@@ -1,3 +1,5 @@
+@import '../variables';
+
 .scroll-indicator-controller {
   &:hover,
   &:active {
@@ -8,6 +10,7 @@
       transform: translateY(-50%) translateX(0px);
     }
   }
+  padding: 5px;
   position: fixed;
   top: 50vh;
   transform: translate(0, -50%);
@@ -38,7 +41,7 @@
     transition: background 0.4s ease;
     will-change: transition;
     &.teaching_materials {
-      border: 2px solid  #cb1f8e;
+      border: 2px solid $burst-purple;
     }
     span {
       /*characterizing the textbox for section titles*/
@@ -54,8 +57,8 @@
       transform: translateY(-50%) translateX(0px);
       transition: all 0.4s ease;
       will-change: transition;
-      color: #363636;
-      background-color: #ffffff;
+      color: $galactic-black;
+      background-color: $white;
       border: none;
       box-shadow: none;
       //box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24),
@@ -72,18 +75,18 @@
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
       &:hover {
         background-color: #d5e6f3;
-        border: 1px solid #363636;
+        border: 1px solid $galactic-black;
         border-radius: 6px;
       }
       /*make space to see labels around your thumb on mobile */
       @media only screen and (max-width: 600px) {
-        border: 1px solid #363636;
+        border: 1px solid $galactic-black;
       }
       @media only screen and (max-width: 600px) {
         right: calc(100% + 60px);
         &:after {
           content: "";
-          border-bottom: 1px dashed #363636;
+          border-bottom: 1px dashed $galactic-black;
           position: absolute;
           width: 52px;
           left: 101%;
@@ -95,20 +98,20 @@
       }
     }
     &.activeDot {
-      background: #2c83c3;
-      border-color: #2c83c3;
+      background: $hydrogen-blue;
+      border-color: $hydrogen-blue;
       span {
             background-color: #d5e6f3;
-            border: 1px solid #363636;
+            border: 1px solid $galactic-black;
             border-radius: 6px;
             box-shadow: 0 5px 15px -8px rgba(0, 0, 0, 0.24),
               0 8px 10px -5px rgba(0, 0, 0, 0.2);
       }
       &.teaching_materials{
-        background: #cb1f8e;
-        border: solid 2px #cb1f8e;
+        background: $burst-purple;
+        border: solid 2px $burst-purple;
         span {
-          background-color: #ffeaf8;
+          background-color: $burst-purple-hl;
           border: 1px solid #1b0012;
         }
       }
