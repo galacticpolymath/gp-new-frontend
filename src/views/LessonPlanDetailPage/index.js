@@ -1,11 +1,10 @@
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 import SiteHeader from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 
 import cachedLessons from "./data/lesson-plans.json";
-import { fetchOne } from "./data/lessonsApi";
 
 import Section from "./Section/index";
 import Header from "./Header";
@@ -25,13 +24,7 @@ const LessonPlan = () => {
   });
 
   const { lessonId } = useParams();
-  const [lesson, setLesson] = useState(
-    cachedLessons.find(({ id }) => id.toString() === lessonId.toString())
-  );
-
-  useEffect(() => {
-    fetchOne(lessonId, 3000).then(setLesson).catch(console.log);
-  }, [lessonId]);
+  const lesson = cachedLessons.find(({ id }) => id.toString() === lessonId.toString())
 
   let numberedElements = 0;
 
