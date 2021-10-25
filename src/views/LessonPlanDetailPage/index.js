@@ -19,6 +19,11 @@ import useScrollHandler from './NavigationDots/useScrollHandler'
 const LessonPlan = () => {
   useScrollHandler()
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    document.body.scrollTop = 0;
+  });
+
   const { lessonId } = useParams();
   const [lesson, setLesson] = useState(
     cachedLessons.find(({ id }) => id.toString() === lessonId.toString())
