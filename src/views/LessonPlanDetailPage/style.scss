@@ -27,7 +27,7 @@ body {
     ) !important;
 
     @media (max-width: map-get($grid-breakpoints, "md")) {
-      margin-right: 2rem;
+      padding-right: 2rem;
       .container {
         padding: 0;
       }
