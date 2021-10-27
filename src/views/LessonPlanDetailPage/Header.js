@@ -9,6 +9,7 @@ import GridItem from "components/Grid/GridItem";
 import Image from "../../components/StrapiImage";
 import RichText from "../../components/RichText";
 import { SECTIONS } from "./constants";
+import ShareTools from "./ShareTools";
 
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
 const useStyles = makeStyles(lessonPlanStyle);
@@ -24,6 +25,7 @@ const getLatestSubRelease = (sections) => {
 };
 
 const Header = ({
+  location,
   Title,
   Subtitle,
   SponsoredBy,
@@ -59,6 +61,9 @@ const Header = ({
         )}
         <h2>{Title}</h2>
         <h4>{Subtitle}</h4>
+
+        <ShareTools location={location} />
+
         <GridContainer className="text-center">
           <div className="col">
             <Image {...CoverImage} className="self-center" />
