@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Facebook from 'assets/img/share-logos/fb.svg'
 import Pinterest from 'assets/img/share-logos/pinterest.svg'
 import Twitter from 'assets/img/share-logos/twitter.svg'
+import Email from 'assets/img/share-logos/email.svg'
 
 const networks = [
   {
@@ -19,6 +20,11 @@ const networks = [
     name: 'Pinterest',
     link: 'https://pinterest.com/pin/create/link/?url=',
     image: Pinterest
+  },
+  {
+    name: 'Email',
+    link: 'mailto:?subject=',
+    image: Email
   }
 ]
 
