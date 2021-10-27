@@ -15,7 +15,7 @@ import "./style.scss";
 import NavigationDots from "./NavigationDots";
 import useScrollHandler from './NavigationDots/useScrollHandler'
 
-const LessonPlan = () => {
+const LessonPlan = ({ location }) => {
   useScrollHandler()
 
   useEffect(() => {
@@ -45,7 +45,8 @@ const LessonPlan = () => {
         color="dark"
       />
       <div className="LessonPlan" id="top">
-        <Header {...lesson} />
+
+        <Header location={location} {...lesson} />
 
         {lesson.Section &&
           lesson.Section.map((section, i) => renderSection(section, i))}
