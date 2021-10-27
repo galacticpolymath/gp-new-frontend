@@ -55,11 +55,16 @@ body {
     }
   }
 
-  @media (min-width: map-get($grid-breakpoints, "lg")) and (max-width: map-get($grid-breakpoints, "lg")+60) {
-    padding-left: 3rem;
-  }
-  @media (min-width: map-get($grid-breakpoints, "md")) and (max-width: map-get($grid-breakpoints, "md")+60) {
-    padding-left: 3rem;
+  > .SectionHeading,
+  > .SteamBadge,
+  > .Standards,
+  .CollapsibleSection > div {
+    @media (min-width: map-get($grid-breakpoints, "lg")) and (max-width: map-get($grid-breakpoints, "lg")+60) {
+      padding-left: 3rem !important;
+    }
+    @media (min-width: map-get($grid-breakpoints, "md")) and (max-width: map-get($grid-breakpoints, "md")+60) {
+      padding-left: 3rem !important;
+    }
   }
 
   .Header {
