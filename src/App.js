@@ -48,8 +48,6 @@ const App = () => (
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@GalacticPM" />
-      <meta name="twitter:description" content="We provide teachers with high-quality, FREE lessons for grades 5-12. Our lessons are contracted by researchers & brands who care about informing the public." />
-      <meta name="twitter:image" content="https://res.cloudinary.com/galactic-polymath/image/upload/v1593304395/logos/GP_full_stacked_grad_whiteBG_llfyal.png" />
     </Helmet>
     <Switch>
       <Route exact path="/" component={LandingPage} />

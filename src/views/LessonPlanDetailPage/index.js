@@ -47,10 +47,6 @@ const LessonPlan = ({ location }) => {
         <meta property="og:description" content={lesson.Subtitle} />
         <meta property="og:image" content={lesson.CoverImage.url} />
         <meta property="og:url" content={`https://galacticpolymath.com/lessons/${lessonId}`} />
-
-        <meta name="twitter:title" content={lesson.Title} />
-        <meta name="twitter:description" content={lesson.Subtitle} />
-        <meta name="twitter:image" content={lesson.CoverImage.url} />
       </Helmet>
       
       <SiteHeader
