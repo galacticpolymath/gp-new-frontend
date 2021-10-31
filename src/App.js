@@ -38,7 +38,7 @@ const App = () => (
       <title>Galactic Polymath</title>
       <meta name="description" content="We provide teachers with high-quality, FREE lessons for grades 5-12. Our lessons are contracted by researchers & brands who care about informing the public." />
       
-      <meta name="og:title" content="Galactic Polymath Education Studio" />
+      <meta property="og:title" content="Galactic Polymath Education Studio" />
       <meta property="og:url" content="https://www.galacticpolymath.com" />
       <meta property="og:description" content="We provide teachers with high-quality, FREE lessons for grades 5-12. Our lessons are contracted by researchers & brands who care about informing the public." />
       <meta property="og:determiner" content="" />

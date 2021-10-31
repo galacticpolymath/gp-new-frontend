@@ -1,5 +1,6 @@
 import React, { Fragment, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 import SiteHeader from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
@@ -39,6 +40,19 @@ const LessonPlan = ({ location }) => {
 
   return (
     <Fragment>
+      <Helmet>
+        <title>{lesson.Title}</title>
+        <meta name="description" content={lesson.Subtitle} />
+        <meta property="og:title" content={lesson.Title} />
+        <meta property="og:description" content={lesson.Subtitle} />
+        <meta property="og:image" content={lesson.CoverImage.url} />
+        <meta property="og:url" content={`https://galacticpolymath.com/lessons/${lessonId}`} />
+
+        <meta name="twitter:title" content={lesson.Title} />
+        <meta name="twitter:description" content={lesson.Subtitle} />
+        <meta name="twitter:image" content={lesson.CoverImage.url} />
+      </Helmet>
+      
       <SiteHeader
         links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
