@@ -62,7 +62,7 @@ const Header = ({
         <h2>{Title}</h2>
         <h4>{Subtitle}</h4>
 
-        <ShareTools location={location} />
+        <ShareTools location={location} lessonTitle={Title} />
 
         <GridContainer className="text-center">
           <div className="col">
