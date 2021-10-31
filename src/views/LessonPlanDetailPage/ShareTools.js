@@ -7,30 +7,30 @@ import Email from 'assets/img/share-logos/email.svg'
 
 
 const ShareTools = ({ location, lessonTitle }) => {
-  const [shareUrl, setShareUrl] = useState('')
+  const [pageUrl, setPageUrl] = useState('')
   useEffect(() => {
-    setShareUrl(encodeURI(window.location.origin + location.pathname))
+    setPageUrl(encodeURI(window.location.origin + location.pathname))
   }, [])
 
   const networks = [
     {
       name: 'Facebook',
-      link: 'https://www.facebook.com/sharer/sharer.php?u=',
+      link: `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`,
       image: Facebook
     },
     {
       name: 'Twitter',
-      link: 'https://twitter.com/intent/tweet?text=',
+      link: `https://twitter.com/intent/tweet?text=${pageUrl}`,
       image: Twitter
     },
     {
       name: 'Pinterest',
-      link: 'https://pinterest.com/pin/create/link/?url=',
+      link: `https://pinterest.com/pin/create/link/?url=${pageUrl}`,
       image: Pinterest
     },
     {
       name: 'Email',
-      link: `mailto:?subject=${lessonTitle}&body=`,
+      link: `mailto:?subject=${lessonTitle}&body=${pageUrl}`,
       image: Email
     }
   ]
@@ -43,7 +43,7 @@ const ShareTools = ({ location, lessonTitle }) => {
           key={name}
           rel='noopener noreferrer'
           target='_blank'
-          href={`${link}${shareUrl}`}
+          href={encodeURI(link)}
         >
           <img src={image} alt={name} />
         </a>
