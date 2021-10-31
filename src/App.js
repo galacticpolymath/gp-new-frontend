@@ -36,10 +36,20 @@ const App = () => (
     <Helmet>
       <meta charSet="utf-8" />
       <title>Galactic Polymath</title>
-      <meta
-        name="description"
-        content="We are an education studio. We translate current research into creative, interdisciplinary lessons for grades 5+ that are free for everyone."
-      />
+      <meta name="description" content="We provide teachers with high-quality, FREE lessons for grades 5-12. Our lessons are contracted by researchers & brands who care about informing the public." />
+      
+      <meta name="og:title" content="Galactic Polymath Education Studio" />
+      <meta property="og:url" content="https://www.galacticpolymath.com" />
+      <meta property="og:description" content="We provide teachers with high-quality, FREE lessons for grades 5-12. Our lessons are contracted by researchers & brands who care about informing the public." />
+      <meta property="og:determiner" content="" />
+      <meta property="og:locale" content="en_US" />
+      <meta property="og:site_name" content="Galactic Polymath Education Studio" />
+      <meta property="og:image" content="https://res.cloudinary.com/galactic-polymath/image/upload/v1593304395/logos/GP_full_stacked_grad_whiteBG_llfyal.png" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:site" content="@GalacticPM" />
+      <meta name="twitter:description" content="We provide teachers with high-quality, FREE lessons for grades 5-12. Our lessons are contracted by researchers & brands who care about informing the public." />
+      <meta name="twitter:image" content="https://res.cloudinary.com/galactic-polymath/image/upload/v1593304395/logos/GP_full_stacked_grad_whiteBG_llfyal.png" />
     </Helmet>
     <Switch>
       <Route exact path="/" component={LandingPage} />
