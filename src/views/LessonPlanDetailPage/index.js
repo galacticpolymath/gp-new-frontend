@@ -43,8 +43,6 @@ const LessonPlan = ({ location }) => {
       <Helmet>
         <title>Galactic Polymath | {lesson.Title}</title>
         <meta name="description" content={lesson.Subtitle} />
-        <meta property="og:title" content={`Galactic Polymath | ${lesson.Title}`} />
-        <meta property="og:description" content={lesson.Subtitle} />
         <meta property="og:image" content={lesson.CoverImage.url} />
         <meta property="og:url" content={`https://galacticpolymath.com/lessons/${lessonId}`} />
       </Helmet>
