@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
 import TagManager from 'react-gtm-module'
+import { renderMetaTags } from "utils/meta";
 
 import "assets/scss/material-kit-pro-react.scss?v=1.9.0";
 
@@ -21,9 +22,6 @@ import Lessons from "views/LessonsPage/LessonsPage";
 import LandingPage from "views/LandingPage/LandingPage";
 import HireUsPage from "views/HireUs/HireUsPage";
 import CustomGPfooter from "views/GPfooter/CustomGPfooter";
-
-import { renderMetaTags } from "utils/meta";
-
 
 const tagManagerArgs = {
   gtmId: 'G-8B58Y7HD3T'
