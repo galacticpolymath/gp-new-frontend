@@ -1,5 +1,6 @@
 /*eslint-disable*/
 import React from "react";
+import { Helmet } from "react-helmet";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -57,6 +58,10 @@ export default function PricingPage() {
 
   return (
     <div>
+      <Helmet>
+        <title>Galactic Polymath | Hire Us</title>
+        <meta name="description" content="Achieve easier outreach, with better results! We can level up your organization's outreach efforts, while reducing your own workload. Writing us into grants can help proposals be more competitive. You can also help reduce inequality by translating a complex body of knowledge you care about into free lessons that help create a more engaged and informed public." />
+      </Helmet>
       <Header
         brand="Galactic Polymath"
         links={<HeaderLinks dropdownHoverColor="info" />}

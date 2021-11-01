@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -22,7 +23,6 @@ import Footer from "components/Footer/Footer.js";
 import Parallax from "components/Parallax/Parallax.js";
 
 import contactUsStyle from "assets/jss/material-kit-pro-react/views/contactUsStyle.js";
-import { Helmet } from "react-helmet";
 
 const useStyles = makeStyles(contactUsStyle);
 
