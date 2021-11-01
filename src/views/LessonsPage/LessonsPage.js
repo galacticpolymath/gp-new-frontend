@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { Helmet } from "react-helmet";
 import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
 import NewReleasesIcon from "@material-ui/icons/NewReleases";
@@ -18,6 +17,7 @@ import Hero from "assets/img/hero-images/Lessons_VerticalDotandline.svg";
 import cachedLessons from "../LessonPlanDetailPage/data/lesson-plans.json";
 
 import lessonsPageStyle from "assets/jss/material-kit-pro-react/views/lessonsPageStyle.js";
+import { renderMetaTags } from "utils/meta.js";
 
 const useStyles = makeStyles(lessonsPageStyle);
 
@@ -30,10 +30,10 @@ export default function LessonsPage() {
   const classes = useStyles();
   return (
     <div>
-      <Helmet>
-        <title>Galacitc Polymath | Lessons</title>
-        <meta name="description" content="Our lessons are free, interdisciplinary, and connected to real world problems and real data. We spend hundreds to thousands of hours developing each release to ensure that they leave real impact on students and can be taught by a non-specialist with 15 minutes of prep time! Our lessons convey science, math, ELA, social studies, STEM, and STEAM concepts through memorable stories that expand minds." />
-      </Helmet>
+      {renderMetaTags(
+        'Lessons',
+        "Our lessons are free, interdisciplinary, and connected to real world problems and real data. We spend hundreds to thousands of hours developing each release to ensure that they leave real impact on students and can be taught by a non-specialist with 15 minutes of prep time! Our lessons convey science, math, ELA, social studies, STEM, and STEAM concepts through memorable stories that expand minds."
+      )}
       <Header
         brand="Galactic Polymath"
         links={<HeaderLinks dropdownHoverColor="info" />}
