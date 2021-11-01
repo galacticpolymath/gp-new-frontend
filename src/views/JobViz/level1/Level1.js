@@ -1,5 +1,4 @@
 import React, { useState, useEffect, forwardRef } from "react";
-import { Helmet } from "react-helmet";
 import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -43,6 +42,7 @@ import { Level1Card } from "./Level1Card";
 
 import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle";
 import { jobData } from "../Helper";
+import { renderMetaTags } from "utils/meta";
 
 const useStyles = makeStyles(JobVizStyle);
 const Transition = forwardRef(function Transition(props, ref) {
@@ -108,10 +108,10 @@ export const Level1List = (props) => {
 
   return (
     <div>
-      <Helmet>
-        <title>Galactic Polymath | JobViz</title>
-        <meta name="description" content="A tool for middle and high school students to explore career possibilities. Browse, search, and share descriptions and stats for over a thousand jobs! JobViz allows students to develop a deeper understanding of the true diversity of job options before them, and to make an informed decision about their career path from an early age." />
-      </Helmet>
+      {renderMetaTags(
+        'JobViz',
+        "A tool for middle and high school students to explore career possibilities. Browse, search, and share descriptions and stats for over a thousand jobs! JobViz allows students to develop a deeper understanding of the true diversity of job options before them, and to make an informed decision about their career path from an early age."
+      )}
       <Header
         brand="Galactic Polymath"
         links={<HeaderLinks dropdownHoverColor="info" />}
