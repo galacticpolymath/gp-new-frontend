@@ -22,6 +22,8 @@ import LandingPage from "views/LandingPage/LandingPage";
 import HireUsPage from "views/HireUs/HireUsPage";
 import CustomGPfooter from "views/GPfooter/CustomGPfooter";
 
+import { renderMetaTags } from "utils/meta";
+
 
 const tagManagerArgs = {
   gtmId: 'G-8B58Y7HD3T'
@@ -34,18 +36,20 @@ const App = () => (
   <Router history={hist}>
     <Helmet>
       <meta charSet="utf-8" />
-      <title>Galactic Polymath</title>
-      <meta name="description" content="We provide teachers with high-quality, FREE lessons for grades 5-12. Our lessons are contracted by researchers & brands who care about informing the public." />
       
       <meta property="og:url" content="https://www.galacticpolymath.com" />
       <meta property="og:determiner" content="" />
       <meta property="og:locale" content="en_US" />
       <meta property="og:site_name" content="Galactic Polymath Education Studio" />
-      <meta property="og:image" content="https://res.cloudinary.com/galactic-polymath/image/upload/v1593304395/logos/GP_full_stacked_grad_whiteBG_llfyal.png" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@GalacticPM" />
     </Helmet>
+    {renderMetaTags(
+      '',
+      'We provide teachers with high-quality, FREE lessons for grades 5-12. Our lessons are contracted by researchers & brands who care about informing the public.',
+      'https://res.cloudinary.com/galactic-polymath/image/upload/v1593304395/logos/GP_full_stacked_grad_whiteBG_llfyal.png'
+    )}
     <Switch>
       <Route exact path="/" component={LandingPage} />
       <Route path="/about" component={AboutUsPage} />
