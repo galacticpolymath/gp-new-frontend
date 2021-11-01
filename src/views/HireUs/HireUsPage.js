@@ -1,6 +1,6 @@
 /*eslint-disable*/
 import React from "react";
-import { Helmet } from "react-helmet";
+import Observer from "react-intersection-observer";
 // nodejs library that concatenates classes
 import classNames from "classnames";
 // @material-ui/core components
@@ -25,7 +25,7 @@ import Button from "../../components/CustomButtons/Button";
 //for scroll dots
 import "../../components/NavDots/Dots.css";
 import DotPanel from "../../components/NavDots/DotPanel";
-import Observer from "react-intersection-observer";
+import { renderMetaTags } from "utils/meta";
 
 const useStyles = makeStyles(hireUsStyle);
 
@@ -58,10 +58,11 @@ export default function PricingPage() {
 
   return (
     <div>
-      <Helmet>
-        <title>Galactic Polymath | Hire Us</title>
-        <meta name="description" content="Achieve easier outreach, with better results! We can level up your organization's outreach efforts, while reducing your own workload. Writing us into grants can help proposals be more competitive. You can also help reduce inequality by translating a complex body of knowledge you care about into free lessons that help create a more engaged and informed public." />
-      </Helmet>
+      {renderMetaTags(
+        'Hire Us',
+        "Achieve easier outreach, with better results! We can level up your organization's outreach efforts, while reducing your own workload. Writing us into grants can help proposals be more competitive. You can also help reduce inequality by translating a complex body of knowledge you care about into free lessons that help create a more engaged and informed public.",
+      )}
+    
       <Header
         brand="Galactic Polymath"
         links={<HeaderLinks dropdownHoverColor="info" />}
@@ -86,7 +87,6 @@ export default function PricingPage() {
                 classes.mrAuto,
                 classes.textLeft
               )}
-              // style={{ paddingTop: "3%"}}
             >
               <h1 className={classNames(classes.whiteTitle, "hireUsTitle")}>
                 Achieving Real, Lasting Impact
@@ -186,8 +186,6 @@ export default function PricingPage() {
           <Observer {...options}>
             <div className={"scroll-indicator"} id="section03"></div>
 
-            {/*</GridItem>*/}
-
             <SectionAddOns />
           </Observer>
           {/*GP Logo*/}
@@ -197,7 +195,6 @@ export default function PricingPage() {
               src={process.env.PUBLIC_URL + "/GP_bubbleLogo300px.png"}
               className={classNames(classes.mlAuto, classes.mrAuto)}
               style={{
-                // width:"10"
                 width: "25vw",
                 maxWidth: "200px",
                 justifySelf: "center",
@@ -232,49 +229,6 @@ export default function PricingPage() {
         </div>
       </div>
       <DotPanel />
-
-      <Footer
-        content={
-          <div>
-            {/*<div className={classes.left}>*/}
-            {/*  <List className={classes.list}>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="https://www.creative-tim.com/?ref=mkpr-pricing"*/}
-            {/*        target="_blank"*/}
-            {/*        className={classes.block}*/}
-            {/*      >*/}
-            {/*        Creative Tim*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="https://www.creative-tim.com/presentation?ref=mkpr-pricing"*/}
-            {/*        target="_blank"*/}
-            {/*        className={classes.block}*/}
-            {/*      >*/}
-            {/*        About us*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a href="//blog.creative-tim.com/" className={classes.block}>*/}
-            {/*        Blog*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="https://www.creative-tim.com/license?ref=mkpr-pricing"*/}
-            {/*        target="_blank"*/}
-            {/*        className={classes.block}*/}
-            {/*      >*/}
-            {/*        Licenses*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*  </List>*/}
-            {/*</div>*/}
-          </div>
-        }
-      />
     </div>
   );
 }
