@@ -43,11 +43,10 @@ const App = () => (
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@GalacticPM" />
     </Helmet>
-    {renderMetaTags(
-      '',
-      'We provide teachers with high-quality, FREE lessons for grades 5-12. Our lessons are contracted by researchers & brands who care about informing the public.',
-      'https://res.cloudinary.com/galactic-polymath/image/upload/v1593304395/logos/GP_full_stacked_grad_whiteBG_llfyal.png'
-    )}
+    {renderMetaTags({
+      description: 'We provide teachers with high-quality, FREE lessons for grades 5-12. Our lessons are contracted by researchers & brands who care about informing the public.',
+      image: 'https://res.cloudinary.com/galactic-polymath/image/upload/v1593304395/logos/GP_full_stacked_grad_whiteBG_llfyal.png'
+    })}
     <Switch>
       <Route exact path="/" component={LandingPage} />
       <Route path="/about" component={AboutUsPage} />

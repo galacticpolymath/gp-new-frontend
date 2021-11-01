@@ -1,6 +1,5 @@
 import React, { Fragment, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { Helmet } from "react-helmet";
 import { renderMetaTags } from "utils/meta";
 
 import SiteHeader from "components/Header/Header.js";
@@ -41,14 +40,12 @@ const LessonPlan = ({ location }) => {
 
   return (
     <Fragment>
-      {renderMetaTags(
-        lesson.Title,
-        lesson.Subtitle,
-        lesson.CoverImage.url
-      )}
-      <Helmet>
-        <meta property="og:url" content={`https://galacticpolymath.com/lessons/${lessonId}`} />
-      </Helmet>
+      {renderMetaTags({
+        title: lesson.Title,
+        description: lesson.Subtitle,
+        image: lesson.CoverImage.url,
+        url: `https://galacticpolymath.com/lessons/${lessonId}`
+      })}
       
       <SiteHeader
         links={<HeaderLinks dropdownHoverColor="info" />}

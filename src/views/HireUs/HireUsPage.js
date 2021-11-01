@@ -56,10 +56,11 @@ export default function PricingPage() {
 
   return (
     <div>
-      {renderMetaTags(
-        'Hire Us',
-        "Achieve easier outreach, with better results! We can level up your organization's outreach efforts, while reducing your own workload. Writing us into grants can help proposals be more competitive. You can also help reduce inequality by translating a complex body of knowledge you care about into free lessons that help create a more engaged and informed public.",
-      )}
+      {renderMetaTags({
+        title: 'Hire Us',
+        description: "Achieve easier outreach, with better results! We can level up your organization's outreach efforts, while reducing your own workload. Writing us into grants can help proposals be more competitive. You can also help reduce inequality by translating a complex body of knowledge you care about into free lessons that help create a more engaged and informed public.",
+        url: 'https://www.galacticpolymath.com/hire-us'
+      })}
     
       <Header
         brand="Galactic Polymath"

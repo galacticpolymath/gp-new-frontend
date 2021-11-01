@@ -106,10 +106,11 @@ export const Level1List = (props) => {
 
   return (
     <div>
-      {renderMetaTags(
-        'JobViz',
-        "A tool for middle and high school students to explore career possibilities. Browse, search, and share descriptions and stats for over a thousand jobs! JobViz allows students to develop a deeper understanding of the true diversity of job options before them, and to make an informed decision about their career path from an early age."
-      )}
+      {renderMetaTags({
+        title: 'JobViz',
+        description: "A tool for middle and high school students to explore career possibilities. Browse, search, and share descriptions and stats for over a thousand jobs! JobViz allows students to develop a deeper understanding of the true diversity of job options before them, and to make an informed decision about their career path from an early age.",
+        url: 'https://www.galacticpolymath.com/jobviz'
+      })}
       <Header
         brand="Galactic Polymath"
         links={<HeaderLinks dropdownHoverColor="info" />}

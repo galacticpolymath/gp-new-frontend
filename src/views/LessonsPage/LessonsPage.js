@@ -30,10 +30,11 @@ export default function LessonsPage() {
   const classes = useStyles();
   return (
     <div>
-      {renderMetaTags(
-        'Lessons',
-        "Our lessons are free, interdisciplinary, and connected to real world problems and real data. We spend hundreds to thousands of hours developing each release to ensure that they leave real impact on students and can be taught by a non-specialist with 15 minutes of prep time! Our lessons convey science, math, ELA, social studies, STEM, and STEAM concepts through memorable stories that expand minds."
-      )}
+      {renderMetaTags({
+        title: 'Lessons',
+        description: "Our lessons are free, interdisciplinary, and connected to real world problems and real data. We spend hundreds to thousands of hours developing each release to ensure that they leave real impact on students and can be taught by a non-specialist with 15 minutes of prep time! Our lessons convey science, math, ELA, social studies, STEM, and STEAM concepts through memorable stories that expand minds.",
+        url: 'https://galacticpolymath.com/lessons'
+      })}
       <Header
         brand="Galactic Polymath"
         links={<HeaderLinks dropdownHoverColor="info" />}
