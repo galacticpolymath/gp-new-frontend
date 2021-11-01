@@ -1,8 +1,7 @@
 import React, { useState, useEffect, forwardRef } from "react";
-// nodejs library that concatenates classes
 import classNames from "classnames";
-// @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import { renderMetaTags } from "utils/meta";
 
 import Header from "components/Header/Header";
 import HeaderLinks from "components/Header/HeaderLinks";
@@ -10,7 +9,6 @@ import Parallax from "components/Parallax/Parallax";
 
 import GridContainer from "components/Grid/GridContainer";
 import GridItem from "components/Grid/GridItem";
-import Footer from "components/Footer/Footer";
 
 // @material-ui/core components
 
@@ -31,8 +29,6 @@ import Slide from "@material-ui/core/Slide";
 
 // sections for this page Added by JOB VIZ TEAM \/
 import JobVizHeader from "../modules/JobVizComponents";
-
-// import { Link } from "react-router-dom";
 
 import JobManager from "../modules/JobManager";
 //custom JobViz Styling
@@ -110,6 +106,11 @@ export const Level1List = (props) => {
 
   return (
     <div>
+      {renderMetaTags({
+        title: 'JobViz',
+        description: "A tool for middle and high school students to explore career possibilities. Browse, search, and share descriptions and stats for over a thousand jobs! JobViz allows students to develop a deeper understanding of the true diversity of job options before them, and to make an informed decision about their career path from an early age.",
+        url: 'https://www.galacticpolymath.com/jobviz'
+      })}
       <Header
         brand="Galactic Polymath"
         links={<HeaderLinks dropdownHoverColor="info" />}

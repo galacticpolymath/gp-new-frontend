@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
 import NewReleasesIcon from "@material-ui/icons/NewReleases";
+import { renderMetaTags } from "utils/meta";
 
 import Header from "components/Header/Header.js";
 import InfoArea from "components/InfoArea/InfoArea.js";
@@ -26,10 +27,14 @@ export default function LessonsPage() {
     document.body.scrollTop = 0;
   });
 
-
   const classes = useStyles();
   return (
     <div>
+      {renderMetaTags({
+        title: 'Lessons',
+        description: "Our lessons are free, interdisciplinary, and connected to real world problems and real data. We spend hundreds to thousands of hours developing each release to ensure that they leave real impact on students and can be taught by a non-specialist with 15 minutes of prep time! Our lessons convey science, math, ELA, social studies, STEM, and STEAM concepts through memorable stories that expand minds.",
+        url: 'https://galacticpolymath.com/lessons'
+      })}
       <Header
         brand="Galactic Polymath"
         links={<HeaderLinks dropdownHoverColor="info" />}

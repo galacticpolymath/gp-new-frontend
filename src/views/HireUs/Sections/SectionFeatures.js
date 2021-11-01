@@ -20,7 +20,7 @@ export default function SectionFeatures() {
         keyPhrase2={"means hundreds of hours of skilled labor."}
         description={
           "Our basic lesson includes standards alignment, presentations, differentiation for grades 5-12, and more. " +
-          "On top of that, we will generate all the custom media assets (see below), teacher guides, custom puzzle hooks," +
+          "On top of that, we will generate all the custom media assets (see below), teacher guides, custom puzzle hooks, " +
           "or data syntheses necessary to create an amazing and easy-to-teach learning experience that mobilizes " +
           "the knowledge you care about."
         }

@@ -1,7 +1,8 @@
-/*eslint-disable*/
 import React from "react";
+import Observer from "react-intersection-observer";
 // nodejs library that concatenates classes
 import classNames from "classnames";
+import { renderMetaTags } from "utils/meta";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import Header from "components/Header/Header.js";
@@ -9,7 +10,6 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Footer from "components/Footer/Footer.js";
 // sections for this page
 import SectionBenefitsOfGP from "./Sections/SectionBenefitsOfGP";
 import SectionPricing from "views/HireUs/Sections/SectionPricing.js";
@@ -24,7 +24,6 @@ import Button from "../../components/CustomButtons/Button";
 //for scroll dots
 import "../../components/NavDots/Dots.css";
 import DotPanel from "../../components/NavDots/DotPanel";
-import Observer from "react-intersection-observer";
 
 const useStyles = makeStyles(hireUsStyle);
 
@@ -57,6 +56,12 @@ export default function PricingPage() {
 
   return (
     <div>
+      {renderMetaTags({
+        title: 'Hire Us',
+        description: "Achieve easier outreach, with better results! We can level up your organization's outreach efforts, while reducing your own workload. Writing us into grants can help proposals be more competitive. You can also help reduce inequality by translating a complex body of knowledge you care about into free lessons that help create a more engaged and informed public.",
+        url: 'https://www.galacticpolymath.com/hire-us'
+      })}
+    
       <Header
         brand="Galactic Polymath"
         links={<HeaderLinks dropdownHoverColor="info" />}
@@ -81,7 +86,6 @@ export default function PricingPage() {
                 classes.mrAuto,
                 classes.textLeft
               )}
-              // style={{ paddingTop: "3%"}}
             >
               <h1 className={classNames(classes.whiteTitle, "hireUsTitle")}>
                 Achieving Real, Lasting Impact
@@ -158,11 +162,11 @@ export default function PricingPage() {
           </h3>
           <h4> Looking for a fantastic infographic, video, or data visual?</h4>
           <h4>
-            We're your one-stop shop for scicomm, education, and outreach!
+            We&apos;re your one-stop shop for scicomm, education, and outreach!
           </h4>
           <h4>
             <em>
-              Even if your exact need isn't listed, we can likely make it
+              Even if your exact need isn&apos;t listed, we can likely make it
               happen!
             </em>
           </h4>
@@ -172,7 +176,7 @@ export default function PricingPage() {
             round
             style={{ alignText: "center" }}
           >
-            Let{"'"}s Get Started!
+            Let&apos;s Get Started!
           </Button>
         </div>
 
@@ -180,8 +184,6 @@ export default function PricingPage() {
         <div className={classes.container}>
           <Observer {...options}>
             <div className={"scroll-indicator"} id="section03"></div>
-
-            {/*</GridItem>*/}
 
             <SectionAddOns />
           </Observer>
@@ -192,7 +194,6 @@ export default function PricingPage() {
               src={process.env.PUBLIC_URL + "/GP_bubbleLogo300px.png"}
               className={classNames(classes.mlAuto, classes.mrAuto)}
               style={{
-                // width:"10"
                 width: "25vw",
                 maxWidth: "200px",
                 justifySelf: "center",
@@ -227,49 +228,6 @@ export default function PricingPage() {
         </div>
       </div>
       <DotPanel />
-
-      <Footer
-        content={
-          <div>
-            {/*<div className={classes.left}>*/}
-            {/*  <List className={classes.list}>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="https://www.creative-tim.com/?ref=mkpr-pricing"*/}
-            {/*        target="_blank"*/}
-            {/*        className={classes.block}*/}
-            {/*      >*/}
-            {/*        Creative Tim*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="https://www.creative-tim.com/presentation?ref=mkpr-pricing"*/}
-            {/*        target="_blank"*/}
-            {/*        className={classes.block}*/}
-            {/*      >*/}
-            {/*        About us*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a href="//blog.creative-tim.com/" className={classes.block}>*/}
-            {/*        Blog*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="https://www.creative-tim.com/license?ref=mkpr-pricing"*/}
-            {/*        target="_blank"*/}
-            {/*        className={classes.block}*/}
-            {/*      >*/}
-            {/*        Licenses*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*  </List>*/}
-            {/*</div>*/}
-          </div>
-        }
-      />
     </div>
   );
 }

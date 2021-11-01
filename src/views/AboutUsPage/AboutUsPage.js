@@ -4,12 +4,12 @@ import React from "react";
 import classNames from "classnames";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
+import { renderMetaTags } from "utils/meta";
 
 import Header from "components/Header/Header.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Parallax from "components/Parallax/Parallax.js";
-import Footer from "components/Footer/Footer.js";
 // sections for this page
 import HeaderLinks from "components/Header/HeaderLinks.js";
 import SectionDescription from "views/AboutUsPage/Sections/SectionDescription.js";
@@ -31,6 +31,12 @@ export default function AboutUsPage(...rest) {
   const classes = useStyles();
   return (
     <div>
+      {renderMetaTags({
+        title: 'About',
+        description: "Galactic Polymath (GP) is an education studio. We help scientists, nonprofits, and sustainable companies achieve outreach at scale by translating complex, cutting-edge research into FREE, mind-blowing lessons for grades 5+. GP was created by scientists and teachers to connect scientists and teachers. We do the heavy lifting: creating and disseminating mind-expanding lessons that engage young learners in the knowledge areas our clients care about, while taking teachers' feedback and perspectives into consideration at every step of development.",
+        image: 'https://res.cloudinary.com/galactic-polymath/image/upload/v1593304395/logos/GP_full_stacked_grad_whiteBG_llfyal.png',
+        url: 'https://www.galacticpolymath.com/about'
+      })}
       <Header
         links={<HeaderLinks />}
         fixed
@@ -95,56 +101,9 @@ export default function AboutUsPage(...rest) {
           <SectionDescription />
           <SectionTeam />
           <SectionPartners />
-          {/*<SectionOffice />*/}
           <GetInvolved />
         </div>
       </div>
-      <Footer
-        content={
-          <div>
-            {/*<div className={classes.left}>*/}
-            {/*  <List className={classes.list}>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="https://www.creative-tim.com/?ref=mkpr-about-us"*/}
-            {/*        className={classes.block}*/}
-            {/*        target="_blank"*/}
-            {/*      >*/}
-            {/*        Creative Tim*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="https://www.creative-tim.com/presentation?ref=mkpr-about-us"*/}
-            {/*        className={classes.block}*/}
-            {/*        target="_blank"*/}
-            {/*      >*/}
-            {/*        About us*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="//blog.creative-tim.com/"*/}
-            {/*        className={classes.block}*/}
-            {/*        target="_blank"*/}
-            {/*      >*/}
-            {/*        Blog*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*    <ListItem className={classes.inlineBlock}>*/}
-            {/*      <a*/}
-            {/*        href="https://www.creative-tim.com/license?ref=mkpr-about-us"*/}
-            {/*        className={classes.block}*/}
-            {/*        target="_blank"*/}
-            {/*      >*/}
-            {/*        Licenses*/}
-            {/*      </a>*/}
-            {/*    </ListItem>*/}
-            {/*  </List>*/}
-            {/*</div>*/}
-          </div>
-        }
-      />
     </div>
   );
 }
