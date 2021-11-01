@@ -1,8 +1,6 @@
 import React from "react";
-// @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import classNames from "classnames";
-// @material-ui/icons
 
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
@@ -12,7 +10,6 @@ import teamsStyle from "assets/jss/material-kit-pro-react/views/sectionsSections
 import teamStyle from "assets/jss/material-kit-pro-react/views/landingPageSections/teamStyle.js";
 import {
   warningColor,
-  // grayColor,
   primaryColor,
   roseColor,
   hexToRgb,
@@ -22,7 +19,6 @@ import Rose from "../../../components/Typography/Rose";
 import AccountTreeIcon from "@material-ui/icons/AccountTree";
 import { WorkOutlined } from "@material-ui/icons";
 
-
 const style = {
   ...teamsStyle,
   ...teamStyle,
@@ -30,7 +26,6 @@ const style = {
     "& h3, h4": {
       paddingBottom: ".8rem"
     }
-
   },
   featuredLessonLabel: {
     float: "left",
@@ -167,46 +162,34 @@ export default function SectionJobViz() {
     >
       <div>
 
-        {/*Featured lesson*/}
         <GridContainer>
           <GridItem xs={12} sm={12} md={6} lg={6}>
-            {/*<Card style={{ paddingBottom: "20px" }}>*/}
-            {/*  <CardBody style={{ backgroundColor: "transparent" }}>*/}
-                {/*<GridContainer*/}
-                {/*  style={{ display: "flex", alignContent: "middle", backgroundColor: "transparent" }}>*/}
-                {/*<GridItem xs={12} md={7}>*/}
-                <div style={{ padding: "100% 0 0 0", position: "relative" }}>
-                  <iframe
-                    src="https://player.vimeo.com/video/584633265?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                    frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen
-                    style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
-                    title="Jobviz.mov"></iframe>
-                </div>
-                <script src="https://player.vimeo.com/api/player.js"/>
-                {/*</GridItem>*/}
-                {/*</GridContainer>*/}
-              {/*</CardBody>*/}
-            {/*</Card>*/}
-
+            <div style={{ padding: "100% 0 0 0", position: "relative" }}>
+              <iframe
+                src="https://player.vimeo.com/video/584633265?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                frameBorder="0" allow="autoplay; fullscreen; picture-in-picture" allowFullScreen
+                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }}
+                title="Jobviz.mov"></iframe>
+            </div>
+            <script src="https://player.vimeo.com/api/player.js"/>
           </GridItem>
 
-          {/*Lesson descriptor/ add copy*/}
-          <GridItem xs={12} sm={10} md={8} lg={5}
-                    className={classNames(
-                      classes.fontStyle,
-                      classes.justifyTextLeft,
-                      classes.justifyContentCenter,
-                      classes.lessonDescriptors
-                    )}>
-            {/*<div className={classes.doubleSpaced}>*/}
+          <GridItem
+            xs={12} sm={10} md={8} lg={5}
+            className={classNames(
+              classes.fontStyle,
+              classes.justifyTextLeft,
+              classes.justifyContentCenter,
+              classes.lessonDescriptors
+            )}
+          >
             <Rose>
               <h1 style={{ fontWeight: 500 }}>
                 <AccountTreeIcon style={{ fontSize: "2.6rem" }} /> JobViz
               </h1>
             </Rose>
-            <h3>Connect lessons to careers with this free tool!</h3>
 
-            {/*</div>*/}
+            <h3>Connect lessons to careers with this free tool!</h3>
 
             <h4>
               <div className={classes.doubleSpaced}>
@@ -220,8 +203,7 @@ export default function SectionJobViz() {
               </div>
             </h4>
 
-            <div
-              style={{ padding: "1.5rem 0 " }}>
+            <div style={{ padding: "1.5rem 0 " }}>
               <Button
                 color="rose"
                 size="lg"
@@ -242,9 +224,7 @@ export default function SectionJobViz() {
           classes.lightPurp,
           classes.upperCase
         )}
-      >
-
-      </footer>
+      />
 
     </div>
   );
