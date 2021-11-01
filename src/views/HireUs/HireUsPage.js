@@ -2,6 +2,7 @@ import React from "react";
 import Observer from "react-intersection-observer";
 // nodejs library that concatenates classes
 import classNames from "classnames";
+import { renderMetaTags } from "utils/meta";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 import Header from "components/Header/Header.js";
@@ -23,7 +24,6 @@ import Button from "../../components/CustomButtons/Button";
 //for scroll dots
 import "../../components/NavDots/Dots.css";
 import DotPanel from "../../components/NavDots/DotPanel";
-import { renderMetaTags } from "utils/meta";
 
 const useStyles = makeStyles(hireUsStyle);
 

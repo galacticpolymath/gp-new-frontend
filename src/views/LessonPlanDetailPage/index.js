@@ -1,6 +1,7 @@
 import React, { Fragment, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet";
+import { renderMetaTags } from "utils/meta";
 
 import SiteHeader from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
@@ -15,7 +16,6 @@ import "./style.scss";
 
 import NavigationDots from "./NavigationDots";
 import useScrollHandler from './NavigationDots/useScrollHandler'
-import { renderMetaTags } from "utils/meta";
 
 const LessonPlan = ({ location }) => {
   useScrollHandler()

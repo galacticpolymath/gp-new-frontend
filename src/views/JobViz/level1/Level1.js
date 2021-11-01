@@ -1,6 +1,7 @@
 import React, { useState, useEffect, forwardRef } from "react";
 import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
+import { renderMetaTags } from "utils/meta";
 
 import Header from "components/Header/Header";
 import HeaderLinks from "components/Header/HeaderLinks";
@@ -29,8 +30,6 @@ import Slide from "@material-ui/core/Slide";
 // sections for this page Added by JOB VIZ TEAM \/
 import JobVizHeader from "../modules/JobVizComponents";
 
-// import { Link } from "react-router-dom";
-
 import JobManager from "../modules/JobManager";
 //custom JobViz Styling
 import "../styling/Style.css";
@@ -42,7 +41,6 @@ import { Level1Card } from "./Level1Card";
 
 import JobVizStyle from "assets/jss/material-kit-pro-react/views/JobVizStyle";
 import { jobData } from "../Helper";
-import { renderMetaTags } from "utils/meta";
 
 const useStyles = makeStyles(JobVizStyle);
 const Transition = forwardRef(function Transition(props, ref) {

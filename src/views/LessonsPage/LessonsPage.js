@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
 import NewReleasesIcon from "@material-ui/icons/NewReleases";
+import { renderMetaTags } from "utils/meta";
 
 import Header from "components/Header/Header.js";
 import InfoArea from "components/InfoArea/InfoArea.js";
@@ -17,7 +18,6 @@ import Hero from "assets/img/hero-images/Lessons_VerticalDotandline.svg";
 import cachedLessons from "../LessonPlanDetailPage/data/lesson-plans.json";
 
 import lessonsPageStyle from "assets/jss/material-kit-pro-react/views/lessonsPageStyle.js";
-import { renderMetaTags } from "utils/meta.js";
 
 const useStyles = makeStyles(lessonsPageStyle);
 
