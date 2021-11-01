@@ -1,4 +1,3 @@
-/*eslint-disable*/
 import React from "react";
 import Observer from "react-intersection-observer";
 // nodejs library that concatenates classes
@@ -10,7 +9,6 @@ import HeaderLinks from "components/Header/HeaderLinks.js";
 import Parallax from "components/Parallax/Parallax.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
-import Footer from "components/Footer/Footer.js";
 // sections for this page
 import SectionBenefitsOfGP from "./Sections/SectionBenefitsOfGP";
 import SectionPricing from "views/HireUs/Sections/SectionPricing.js";
@@ -163,11 +161,11 @@ export default function PricingPage() {
           </h3>
           <h4> Looking for a fantastic infographic, video, or data visual?</h4>
           <h4>
-            We're your one-stop shop for scicomm, education, and outreach!
+            We&apos;re your one-stop shop for scicomm, education, and outreach!
           </h4>
           <h4>
             <em>
-              Even if your exact need isn't listed, we can likely make it
+              Even if your exact need isn&apos;t listed, we can likely make it
               happen!
             </em>
           </h4>
@@ -177,7 +175,7 @@ export default function PricingPage() {
             round
             style={{ alignText: "center" }}
           >
-            Let{"'"}s Get Started!
+            Let&apos;s Get Started!
           </Button>
         </div>
 
