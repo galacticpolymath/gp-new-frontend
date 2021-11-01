@@ -22,6 +22,7 @@ import Footer from "components/Footer/Footer.js";
 import Parallax from "components/Parallax/Parallax.js";
 
 import contactUsStyle from "assets/jss/material-kit-pro-react/views/contactUsStyle.js";
+import { Helmet } from "react-helmet";
 
 const useStyles = makeStyles(contactUsStyle);
 
@@ -33,6 +34,9 @@ export default function ContactUsPage() {
   const classes = useStyles();
   return (
     <div>
+      <Helmet>
+        <title>Galactic Polymath | Contact Us</title>
+      </Helmet>
       <Header
         brand="Galactic Polymath"
         links={<HeaderLinks dropdownHoverColor="info" />}
