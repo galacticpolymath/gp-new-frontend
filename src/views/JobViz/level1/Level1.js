@@ -1,7 +1,6 @@
 import React, { useState, useEffect, forwardRef } from "react";
-// nodejs library that concatenates classes
+import { Helmet } from "react-helmet";
 import classNames from "classnames";
-// @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
 import Header from "components/Header/Header";
@@ -10,7 +9,6 @@ import Parallax from "components/Parallax/Parallax";
 
 import GridContainer from "components/Grid/GridContainer";
 import GridItem from "components/Grid/GridItem";
-import Footer from "components/Footer/Footer";
 
 // @material-ui/core components
 
@@ -110,6 +108,10 @@ export const Level1List = (props) => {
 
   return (
     <div>
+      <Helmet>
+        <title>Galactic Polymath | JobViz</title>
+        <meta name="description" content="A tool for middle and high school students to explore career possibilities. Browse, search, and share descriptions and stats for over a thousand jobs! JobViz allows students to develop a deeper understanding of the true diversity of job options before them, and to make an informed decision about their career path from an early age." />
+      </Helmet>
       <Header
         brand="Galactic Polymath"
         links={<HeaderLinks dropdownHoverColor="info" />}
