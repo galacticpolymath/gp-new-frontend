@@ -2,6 +2,7 @@
 import React from "react";
 // nodejs library that concatenates classes
 import classNames from "classnames";
+import { Helmet } from "react-helmet";
 // @material-ui/core components
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -31,6 +32,10 @@ export default function AboutUsPage(...rest) {
   const classes = useStyles();
   return (
     <div>
+      <Helmet>
+        <title>Galactic Polymath | About</title>
+        <meta name="description" content="Galactic Polymath (GP) is an education studio. We help scientists, nonprofits, and sustainable companies achieve outreach at scale by translating complex, cutting-edge research into FREE, mind-blowing lessons for grades 5+. GP was created by scientists and teachers to connect scientists and teachers. We do the heavy lifting: creating and disseminating mind-expanding lessons that engage young learners in the knowledge areas our clients care about, while taking teachers' feedback and perspectives into consideration at every step of development." />
+      </Helmet>
       <Header
         links={<HeaderLinks />}
         fixed
