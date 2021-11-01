@@ -20,7 +20,6 @@ import AboutUsPage from "views/AboutUsPage/AboutUsPage";
 import Lessons from "views/LessonsPage/LessonsPage";
 import LandingPage from "views/LandingPage/LandingPage";
 import HireUsPage from "views/HireUs/HireUsPage";
-import ContactUsPage from "views/ContactUsPage/ContactUsPage";
 import CustomGPfooter from "views/GPfooter/CustomGPfooter";
 
 
@@ -50,7 +49,6 @@ const App = () => (
     <Switch>
       <Route exact path="/" component={LandingPage} />
       <Route path="/about" component={AboutUsPage} />
-      <Route path="/contact-us" component={ContactUsPage} />
       <Route path="/hire-us" component={HireUsPage} />
 
       {/* Lessson Directory */}
