@@ -15,6 +15,7 @@ import "./style.scss";
 
 import NavigationDots from "./NavigationDots";
 import useScrollHandler from './NavigationDots/useScrollHandler'
+import { renderMetaTags } from "utils/meta";
 
 const LessonPlan = ({ location }) => {
   useScrollHandler()
@@ -40,10 +41,12 @@ const LessonPlan = ({ location }) => {
 
   return (
     <Fragment>
+      {renderMetaTags(
+        lesson.Title,
+        lesson.Subtitle,
+        lesson.CoverImage.url
+      )}
       <Helmet>
-        <title>Galactic Polymath | {lesson.Title}</title>
-        <meta name="description" content={lesson.Subtitle} />
-        <meta property="og:image" content={lesson.CoverImage.url} />
         <meta property="og:url" content={`https://galacticpolymath.com/lessons/${lessonId}`} />
       </Helmet>
       
