@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react'
+import classNames from 'classnames';
 import { makeStyles } from "@material-ui/core/styles";
 
 import SearchIcon from "@material-ui/icons/Search";
@@ -37,10 +38,11 @@ const SmartSearch = ({
   return <div className="SmartSearchWrapper">
     <div className="tray">
       <Button
-        className="SearchButton"
+        className={classNames("SearchButton", { emptySearch: !searchTerm })}
         type="button"
         color="primary"
         aria-label="search"
+        justIcon={!searchTerm}
         onClick={() => setIsVisible(true)}
         round
       >

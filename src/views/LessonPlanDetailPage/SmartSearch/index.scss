@@ -4,14 +4,20 @@
   .tray {
     position: fixed;
     z-index: 999;
-    bottom: 3rem;
-    left: 3rem;
+    top: 7rem;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     .SearchButton {
-      font-size: 1.15rem;
+      font-size: 1rem;
       font-family: $sans-serif;
       text-transform: none;
-      padding: .5rem 1.25rem .5rem 1rem;
-      margin-right: 1rem;
+      margin-bottom: .75rem;
+      padding: .5rem 1.25rem;
+      &.emptySearch {
+        padding: 1.5rem;
+      }
       svg {
         height: 1.5rem;
         width: 1.5rem;
