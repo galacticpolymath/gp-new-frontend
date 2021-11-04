@@ -24,7 +24,7 @@ const LessonPlan = ({ location }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
-  });
+  }, []);
   
   const { lessonId } = useParams();
   const lesson = cachedLessons.find(({ id }) => id.toString() === lessonId.toString())
