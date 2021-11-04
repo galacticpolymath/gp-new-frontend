@@ -38,10 +38,9 @@ const LessonPlan = ({ location }) => {
   });
   const [searchTerm, setSearchTerm] = useState('')
   const [isSearchVisible, setIsSearchVisible] = useState(false)
-  const search = (term) => {
-    setSearchTerm(term)
+  useEffect(() => {
     setIsSearchVisible(false)
-  }
+  }, [searchTerm])
   /**
    * End custom search
    */
@@ -71,7 +70,8 @@ const LessonPlan = ({ location }) => {
       })}
 
       <SmartSearch
-        search={search}
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
         isVisible={isSearchVisible}
         setIsVisible={setIsSearchVisible}
       />

@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { makeStyles } from "@material-ui/core/styles";
 
 import SearchIcon from "@material-ui/icons/Search";
+import CloseIcon from "@material-ui/icons/Close";
 import Close from "@material-ui/icons/Close";
 
 import Slide from "@material-ui/core/Slide";
@@ -23,10 +24,10 @@ const Transition = React.forwardRef(function Transition(props, ref) {
 const SmartSearch = ({
   isVisible, 
   setIsVisible,
-  search,
+  searchTerm,
+  setSearchTerm
 }) => {
   const classes = useStyles();
-  const [searchTerm, setSearchTerm] = useState('')
 
   const inputRef = useRef()
   useEffect(() => {
@@ -34,17 +35,25 @@ const SmartSearch = ({
   }, [isVisible])
 
   return <div className="SmartSearchWrapper">
-    <div className="icon">
+    <div className="tray">
       <Button
+        className="SearchButton"
         type="button"
         color="primary"
         aria-label="search"
         onClick={() => setIsVisible(true)}
-        justIcon
         round
       >
         <SearchIcon/>
+        {searchTerm && 'searching for "'+searchTerm+'"'}
       </Button>
+      {searchTerm && <Button
+        round
+        className="SearchButton"
+        onClick={() => setSearchTerm('')}
+      >
+        <CloseIcon/> Clear search
+      </Button>}
     </div>
     {isVisible && (
       <Dialog
@@ -83,15 +92,13 @@ const SmartSearch = ({
           <CustomInput
             labelText="Search for"
             type="text"
-            value={searchTerm} 
+            initialValue={searchTerm}
             inputProps={{
-              onChange(e) {
-                setSearchTerm(e.target.value)
-              },
+              defaultValue: searchTerm,
               onKeyDown(e) {
                 if (e.key === "Enter") {
                   e.preventDefault()
-                  search(searchTerm)
+                  setSearchTerm(e.target.value)
                 }
               },
               innerRef: inputRef,
@@ -100,7 +107,8 @@ const SmartSearch = ({
             name="searchTerm"
           />
           <Button
-            onClick={() => search(searchTerm)}
+            onClick={() => setSearchTerm(inputRef.current.value)}
+            round
             color="primary"
           >
             Search

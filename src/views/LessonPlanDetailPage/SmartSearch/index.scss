@@ -1,10 +1,22 @@
+@import "../variables";
+
 .SmartSearchWrapper {
-  .icon {
+  .tray {
     position: fixed;
     z-index: 999;
     bottom: 3rem;
     left: 3rem;
-    font-size: 3rem;
+    .SearchButton {
+      font-size: 1.15rem;
+      font-family: $sans-serif;
+      text-transform: none;
+      padding: .5rem 1.25rem .5rem 1rem;
+      margin-right: 1rem;
+      svg {
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+    }
   }
 }
 .SmartSearchDialog .MuiDialog-paper {
