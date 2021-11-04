@@ -7,3 +7,14 @@
     font-size: 3rem;
   }
 }
+.SmartSearchDialog .MuiDialog-paper {
+  width: 100%;
+  .SmartSearch {
+    display: flex;
+    align-items: center;
+    > .MuiFormControl-root {
+      flex-grow: 1;
+      margin-right: 1rem;
+    }
+  }
+}
