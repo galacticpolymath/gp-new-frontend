@@ -31,11 +31,11 @@ export const sectionTypeMap = {
   [SECTIONS.COLLAPSIBLE_TEXT]: CollapsibleTextSection,
 };
 
-const Section = ({ index, section }) => {
+const Section = ({ index, section, searchTerm }) => {
   const Component = sectionTypeMap[section.__component];
 
   return Component ? (
-    <Component className="Section" key={index} index={index} {...section} />
+    <Component className="Section" key={index} index={index} searchTerm={searchTerm} {...section} />
   ) : (
     <div>Invalid section {section.__component}</div>
   );

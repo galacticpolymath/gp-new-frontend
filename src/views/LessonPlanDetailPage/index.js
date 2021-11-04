@@ -53,7 +53,12 @@ const LessonPlan = ({ location }) => {
     if (NUMBERED_SECTIONS.indexOf(section.__component) !== -1) {
       numberedElements++;
     }
-    return <Section key={i} index={numberedElements} section={section} />;
+    return <Section 
+      key={i} 
+      index={numberedElements} 
+      section={section}
+      searchTerm={searchTerm}
+    />;
   };
 
   return (
