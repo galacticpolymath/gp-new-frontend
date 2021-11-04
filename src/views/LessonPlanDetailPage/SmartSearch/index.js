@@ -17,7 +17,7 @@ import javascriptStyles from "assets/jss/material-kit-pro-react/views/components
 const useStyles = makeStyles(javascriptStyles);
 
 const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="down" ref={ref} {...props} />;
+  return <Slide direction="up" ref={ref} {...props} />;
 });
 
 const SmartSearch = ({
@@ -87,6 +87,12 @@ const SmartSearch = ({
             inputProps={{
               onChange(e) {
                 setSearchTerm(e.target.value)
+              },
+              onKeyDown(e) {
+                if (e.key === "Enter") {
+                  e.preventDefault()
+                  search(searchTerm)
+                }
               },
               innerRef: inputRef,
               autoFocus: true
