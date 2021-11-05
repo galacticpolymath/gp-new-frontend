@@ -7,13 +7,15 @@ import { makeStyles } from "@material-ui/core/styles";
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
 const useStyles = makeStyles(lessonPlanStyle);
 
-const Acknowledgments = ({ index, SectionTitle, Data = [] }) => {
+const Acknowledgments = ({ index, SectionTitle, Data = [], searchTerm }) => {
   const classes = useStyles();
   return (
     <CollapsibleSection
       className="Acknowledgments"
       index={index}
       SectionTitle={SectionTitle}
+      searchTerm={searchTerm}
+      searchableData={Data}
     >
       <div className={classes.container}>
         {Data &&

@@ -13,6 +13,7 @@ const CollapsibleTextSection = ({
   SectionTitle,
   Content,
   InitiallyExpanded,
+  searchTerm,
 }) => {
   const classes = useStyles();
   return (
@@ -21,6 +22,8 @@ const CollapsibleTextSection = ({
       index={index}
       SectionTitle={SectionTitle}
       initiallyExpanded={InitiallyExpanded !== false}
+      searchableData={Content}
+      searchTerm={searchTerm}
     >
       <div className={classes.container}>
         <RichText content={Content} />

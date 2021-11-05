@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import { containsSearchTerm } from "utils/search";
 
 import { makeStyles } from "@material-ui/core/styles";
 import ExpansionPanel from "@material-ui/core/ExpansionPanel";
@@ -15,16 +16,27 @@ const CollapsibleSection = ({
   SectionTitle = "",
   className = "",
   children,
+  searchableData,
   initiallyExpanded = false,
+  searchTerm,
 }) => {
   const classes = useStyles();
-  const [expanded, expand] = useState(initiallyExpanded);
+  const [expanded, setExpanded] = useState(initiallyExpanded);
+
+  useEffect(() => {
+    if (searchTerm) {
+      if (containsSearchTerm(searchTerm, searchableData)) {
+        console.log('expand');
+        setExpanded(true)
+      }
+    }
+  }, [searchTerm, searchableData])
 
   return (
     <ExpansionPanel
       className={"ExpansionPanel CollapsibleSection " + className}
       expanded={expanded}
-      onChange={() => expand(!expanded)}
+      onChange={() => setExpanded(!expanded)}
     >
       <div
         className="SectionHeading"
