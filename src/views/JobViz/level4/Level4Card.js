@@ -115,7 +115,7 @@ export const Level4Card = (props) => {
             open={classicModal}
             TransitionComponent={Transition}
             keepMounted
-            onClick={() => {
+            onClose={() => {
               props.history.push(
                 `/jobviz/${greatGreatGrandparent}/${greatGrandparent}/${grandparent}/${parent}/${titleParent}`
               );
