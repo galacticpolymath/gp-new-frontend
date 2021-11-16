@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import PropTypes from "prop-types";
 import { containsSearchTerm } from "utils/search";
 
@@ -7,6 +7,8 @@ import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+
+import SearchContext from '../SmartSearch/SearchContext'
 
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
 const useStyles = makeStyles(lessonPlanStyle);
@@ -18,17 +20,14 @@ const CollapsibleSection = ({
   children,
   searchableData,
   initiallyExpanded = false,
-  searchTerm,
 }) => {
   const classes = useStyles();
   const [expanded, setExpanded] = useState(initiallyExpanded);
+  const { searchTerm } = useContext(SearchContext)
 
   useEffect(() => {
-    if (searchTerm) {
-      if (containsSearchTerm(searchTerm, searchableData)) {
-        console.log('expand');
-        setExpanded(true)
-      }
+    if (containsSearchTerm(searchTerm, searchableData)) {
+      setExpanded(true)
     }
   }, [searchTerm, searchableData])
 
