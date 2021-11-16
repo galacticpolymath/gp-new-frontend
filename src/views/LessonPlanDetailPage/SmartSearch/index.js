@@ -1,6 +1,7 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useContext, useEffect, useRef } from 'react'
 import classNames from 'classnames';
 import { makeStyles } from "@material-ui/core/styles";
+import hotkeys from 'hotkeys-js';
 
 import SearchIcon from "@material-ui/icons/Search";
 import CloseIcon from "@material-ui/icons/Close";
@@ -13,27 +14,32 @@ import DialogContent from "@material-ui/core/DialogContent";
 import Button from 'components/CustomButtons/Button'
 import CustomInput from 'components/CustomInput/CustomInput'
 
+import SearchContext from './SearchContext';
+
 import './index.scss'
 
 import javascriptStyles from "assets/jss/material-kit-pro-react/views/componentsSections/javascriptStyles.js";
 const useStyles = makeStyles(javascriptStyles);
 
 const Transition = React.forwardRef(function Transition(props, ref) {
-  return <Slide direction="up" ref={ref} {...props} />;
+  return <Slide direction="left" ref={ref} {...props} />;
 });
 
-const SmartSearch = ({
-  isVisible, 
-  setIsVisible,
-  searchTerm,
-  setSearchTerm
-}) => {
+const SmartSearch = () => {
   const classes = useStyles();
+
+  // Hijack Find keyboard shortcuts
+  hotkeys('ctrl+f,cmd+f', (e) => {
+    e.preventDefault() 
+    setIsSearchVisible(true)
+  });
+
+  const { searchTerm, setSearchTerm, isSearchVisible, setIsSearchVisible } = useContext(SearchContext)
 
   const inputRef = useRef()
   useEffect(() => {
     inputRef.current && inputRef.current.focus()
-  }, [isVisible])
+  }, [isSearchVisible])
 
   return <div className="SmartSearchWrapper">
     <div className="tray">
@@ -43,7 +49,7 @@ const SmartSearch = ({
         color="primary"
         aria-label="search"
         justIcon={!searchTerm}
-        onClick={() => setIsVisible(true)}
+        onClick={() => setIsSearchVisible(true)}
         round
       >
         <SearchIcon/>
@@ -57,17 +63,18 @@ const SmartSearch = ({
         <CloseIcon/> Clear search
       </Button>}
     </div>
-    {isVisible && (
+    
+    {isSearchVisible && (
       <Dialog
         classes={{
           root: classes.modalRoot,
           paper: classes.modalMedium,
         }}
         className='SmartSearchDialog'
-        open={isVisible}
+        open={isSearchVisible}
         TransitionComponent={Transition}
         keepMounted
-        onClose={() => setIsVisible(false)}
+        onClose={() => setIsSearchVisible(false)}
       >
         <DialogTitle
           disableTypography
@@ -78,7 +85,7 @@ const SmartSearch = ({
             className={classes.modalCloseButton}
             key="close"
             aria-label="Close"
-            onClick={() => setIsVisible(false)}
+            onClick={() => setIsSearchVisible(false)}
           >
             {" "}
             <Close className={classes.modalClose} />

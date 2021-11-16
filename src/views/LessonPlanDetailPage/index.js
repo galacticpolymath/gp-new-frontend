@@ -1,7 +1,6 @@
-import React, { Fragment, useEffect, useState, } from "react";
+import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { renderMetaTags } from "utils/meta";
-import hotkeys from 'hotkeys-js';
 
 import SiteHeader from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
@@ -17,6 +16,7 @@ import "./style.scss";
 
 import NavigationDots from "./NavigationDots";
 import useScrollHandler from './NavigationDots/useScrollHandler'
+import { SearchProvider } from "./SmartSearch/SearchContext";
 
 const LessonPlan = ({ location }) => {
   useScrollHandler()
@@ -29,22 +29,6 @@ const LessonPlan = ({ location }) => {
   const { lessonId } = useParams();
   const lesson = cachedLessons.find(({ id }) => id.toString() === lessonId.toString())
 
-  /**
-   * Custom search
-   */
-  hotkeys('ctrl+f,cmd+f', (e) => {
-    e.preventDefault() 
-    setIsSearchVisible(true)
-  });
-  const [searchTerm, setSearchTerm] = useState('')
-  const [isSearchVisible, setIsSearchVisible] = useState(false)
-  useEffect(() => {
-    setIsSearchVisible(false)
-  }, [searchTerm])
-  /**
-   * End custom search
-   */
-
   if (!lesson) return null;
 
   let numberedElements = 0;
@@ -56,12 +40,11 @@ const LessonPlan = ({ location }) => {
       key={i} 
       index={numberedElements} 
       section={section}
-      searchTerm={searchTerm}
     />;
   };
 
   return (
-    <Fragment>
+    <SearchProvider>
       {renderMetaTags({
         title: lesson.Title,
         description: lesson.Subtitle,
@@ -69,12 +52,7 @@ const LessonPlan = ({ location }) => {
         url: `https://galacticpolymath.com/lessons/${lessonId}`
       })}
 
-      <SmartSearch
-        searchTerm={searchTerm}
-        setSearchTerm={setSearchTerm}
-        isVisible={isSearchVisible}
-        setIsVisible={setIsSearchVisible}
-      />
+      <SmartSearch />
       
       <SiteHeader
         links={<HeaderLinks dropdownHoverColor="info" />}
@@ -90,7 +68,7 @@ const LessonPlan = ({ location }) => {
       </div>
 
       <NavigationDots sections={lesson.Section} />
-    </Fragment>
+    </SearchProvider>
   );
 };
 
