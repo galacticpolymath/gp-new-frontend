@@ -67,6 +67,8 @@ export const containsSearchTerm = (needle, haystack) => {
  * Searches a non-iterable entity (string, boolean, number, etc.) for a string.
  */
 export const nonIterableContainsSearchTerm = (needle, haystack) => {
+  if (!needle) return false
+  
   if (
     isSearchable(haystack) &&
     haystack.toLowerCase().includes(needle.toLowerCase())
