@@ -3,9 +3,12 @@ import { Helmet } from 'react-helmet'
 
 /**
  * Render a Helmet with meta tags.
- * @param {string} [title] - Meta title text
- * @param {string} description - Meta description text
- * @param {string} [image] - Meta image URL
+ * @param {Object} data
+ * @param {string} [data.title] - Meta title text
+ * @param {string} data.description - Meta description text
+ * @param {string} [data.image] - Meta image URL
+ * @param {string} [data.url] - Meta canonical URL
+ * @param {string} [data.type] - Meta page type
  */
 export const renderMetaTags = ({
   title = '',
