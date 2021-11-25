@@ -4,7 +4,7 @@ import {
   main,
   whiteColor,
   mainRaised,
-  mlAuto,
+  mlAuto
 } from "assets/jss/material-kit-pro-react.js";
 
 const blogPostsPageStyle = {
@@ -64,6 +64,11 @@ const blogPostsPageStyle = {
   bgColor: {
     backgroundColor: "#6812D1",
   },
+
+  subscribeFooter: {
+  padding:" 15px 30px"
+  },
+
   "@media (max-width: 991px)": {
     hideLogo: {
       display: "none",

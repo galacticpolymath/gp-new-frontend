@@ -12,6 +12,8 @@ import blogPostsPageStyle from "assets/jss/material-kit-pro-react/views/blogPost
 import Image from "components/StrapiImage";
 import { Link } from "react-router-dom";
 import { Box } from "@material-ui/core";
+import Button from "../../../components/CustomButtons/Button";
+import MailOutlineIcon from "@material-ui/icons/MailOutline";
 
 const useStyles = makeStyles(blogPostsPageStyle);
 
@@ -69,6 +71,26 @@ const LessonCards = ({ lessons }) => {
                 <Badge color={"rose"}>Science</Badge>
               </CardBody>
             </Box>
+
+              <GridContainer className={classNames(classes.subscribeFooter)}>
+                <GridItem  width={12}>
+                <Button
+                  color="primary"
+                  size="lg"
+                  href="https://eepurl.com/g_kQ4T"
+                  className={classNames(classes.button)}
+                >
+                  <MailOutlineIcon style={{ marginRight: "0.75rem" }} />
+                  Subscribe
+                </Button>
+                </GridItem>
+                <GridItem width={12}>
+                Be the first to hear when this lesson is released!
+                </GridItem>
+              </GridContainer>
+
+
+
             {/*</Link>*/}
           </div>
         </GridItem>
