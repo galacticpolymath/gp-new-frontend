@@ -73,7 +73,7 @@ const LessonCards = ({ lessons }) => {
             </Box>
 
               <GridContainer className={classNames(classes.subscribeFooter)}>
-                <GridItem  width={12}>
+                <GridItem  sm={12} md={6}>
                 <Button
                   color="primary"
                   size="lg"
@@ -84,8 +84,10 @@ const LessonCards = ({ lessons }) => {
                   Subscribe
                 </Button>
                 </GridItem>
-                <GridItem width={12}>
-                Be the first to hear when this lesson is released!
+                <GridItem  sm={12} md={6}>
+                  <div className={classes.subscribeAppeal}>
+                  Be the first to hear when this lesson is released!
+                  </div>
                 </GridItem>
               </GridContainer>
 
