@@ -145,10 +145,124 @@
         }
       },
       {
-        "__component": "lesson-plan.collapsible-text-section",
+        "__component": "lesson-plan.lesson-preview",
         "id": 4,
         "SectionTitle": "Lesson Preview",
-        "InitiallyExpanded": true
+        "InitiallyExpanded": true,
+        "multimedia": [
+          {
+            "order": 1,
+            "type": "video",
+            "title": "Lesson Trailer: \"Females Singing to be Heard\"",
+            "description": "A brief overview of our lesson \"Females singing to be heard: Challenging long-held assumptions about birdsong through data visualization,\" providing broader context from two authors of the study this lesson is based on.\nFull Lesson Plan: https://www.galacticpolymath.com/less...​\nSign up for emails to learn about all our free lesson plans and learning tools: https://galacticpolymath.us8.list-man...​\nAfter you teach it, we would love your feedback: https://docs.google.com/forms/d/e/1FA...​\nFunded by the Animal Behaviour Society (https://www.animalbehaviorsociety.org...​)",
+            "lessonRelevance": "A brief overview of the lesson, providing broader context from two authors of the study this lesson is based on.",
+            "by": "Galactic Polymath",
+            "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
+            "keywords": "histograms, scatter plots, data literacy, interdisciplinary lessons, STEM, STEAM",
+            "mainLink": "https://www.youtube.com/watch?v=HSBO60ZNeCo&list=PLz-D3xOC0d8-6cZe7bbKs1ItYJHTBaFuP&index=1",
+            "vimeoLink": "https://vimeo.com/540345409",
+            "filename": "NA",
+            "otherLink": "NA"
+          },
+          {
+            "order": 2,
+            "type": "video",
+            "title": "How to solve the Polymath Puzzle from the \"Females Sing\" lesson",
+            "description": "Part of the GP lesson \"Females singing to be heard: Challenging long-held assumptions about birdsong through data visualization\". \nhttps://www.galacticpolymath.com/lessons/1\nThis video explains strategies for solving this Polymath Puzzle–a graph with labels encoded using an alphabetic shift. By taking a real scientific figure and turning it into a puzzle, this activity provides a strong hook for students to engage in a lesson on scatter plots which builds key data literacy skills which are important for making informed decisions in the digital era.",
+            "lessonRelevance": "Explains strategies for solving the Polymath Puzzle. This is an engagement hook that blends a simple alphabetic shift puzzle with a data literacy challenge.",
+            "by": "Galactic Polymath",
+            "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
+            "keywords": "STEAM education,STEAM lessons,STEM education,bird song,birdsong,cipher,data literacy,histogram,interdisciplinary lesson,scatter plots",
+            "mainLink": "https://www.youtube.com/watch?v=M1u041BvjtI&list=PLz-D3xOC0d8-6cZe7bbKs1ItYJHTBaFuP&index=2",
+            "vimeoLink": null,
+            "filename": "NA",
+            "otherLink": "NA"
+          },
+          {
+            "order": 3,
+            "type": "video",
+            "title": "How to read the deciphered scatter plot",
+            "description": "Part of the GP lesson \"Females singing to be heard: Challenging long-held assumptions about birdsong through data visualization\". \nhttps://www.galacticpolymath.com/lessons/1\nThis video guides students through how to read a scatter plot and how this visualization tells a story. Specifically, it guides students with how to read and interpret axis labels and notice patterns in the data to hypothesize about its meaning.",
+            "lessonRelevance": "Provides scaffolding for understanding how to read this graph (which comes straight from a recent study) and notice patterns.",
+            "by": "Galactic Polymath",
+            "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
+            "keywords": "STEAM education,STEAM lessons,STEM education,bird song,birdsong,cipher,data literacy,histogram,interdisciplinary lesson,scatter plots",
+            "mainLink": "https://www.youtube.com/watch?v=of4tjz4fBl4&list=PLz-D3xOC0d8-6cZe7bbKs1ItYJHTBaFuP&index=3",
+            "vimeoLink": null,
+            "filename": "NA",
+            "otherLink": "NA"
+          },
+          {
+            "order": 4,
+            "type": "video",
+            "title": "Polymath Puzzle Reveal—Is the graph about birds, spiders, whales,...?",
+            "description": "Part of the GP lesson \"Females singing to be heard: Challenging long-held assumptions about birdsong through data visualization\". \nhttps://www.galacticpolymath.com/lessons/1\nThe study's lead author, Dr. Matthew Wilkins, explains how the data was collected, providing footage and stories from the fieldwork with barn swallows, and provides broader context for why the study's findings are important for our understanding of animal communication.",
+            "lessonRelevance": "Explains what this graph is actually about, providing background on female song in barn swallows and the field work employed to study it.",
+            "by": "Galactic Polymath",
+            "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
+            "keywords": "STEAM lessons,STEM education,STEAM education,interdisciplinary lesson,data literacy,scatter plots,cipher,bird song,birdsong,histogram",
+            "mainLink": "https://www.youtube.com/watch?v=91gnGO5DASI&list=PLz-D3xOC0d8-6cZe7bbKs1ItYJHTBaFuP&index=4 ",
+            "vimeoLink": null,
+            "filename": "NA",
+            "otherLink": "NA"
+          },
+          {
+            "order": 5,
+            "type": "video",
+            "title": "Scatter plots or histograms? Why data visualization is important",
+            "description": "Part of the GP lesson \"Females singing to be heard: Challenging long-held assumptions about birdsong through data visualization\". \nhttps://www.galacticpolymath.com/lessons/1\nThis video highlights the vital importance of data literacy. It explains that during peer review, a scientist requested that the scatter plot in the Polymath Puzzle (based on an actual figure in the scientific paper) should have been a histogram. Next, the students will be asked to use the raw study data to create a histogram and decide which is actually a better way to visualize the study findings.",
+            "lessonRelevance": "This video highlights the vital importance of data literacy. It asks students to compare two different types of graph and decide which is a better visual for demonstrating the main findings of the study.",
+            "by": "Galactic Polymath",
+            "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
+            "keywords": "STEAM lessons,STEM education,STEAM education,interdisciplinary lesson,data literacy,scatter plots,cipher,Nearly Impossible Task,NIT,bird song,birdsong,histogram",
+            "mainLink": "https://www.youtube.com/watch?v=e0PZJr-kL2g&list=PLz-D3xOC0d8-6cZe7bbKs1ItYJHTBaFuP&index=5",
+            "vimeoLink": null,
+            "filename": "NA",
+            "otherLink": "NA"
+          },
+          {
+            "order": 6,
+            "type": "video",
+            "title": "Connections between dot plots and histograms (with sound)",
+            "description": "This animation was developed to show the logical connections between a dot plot, a binned dot plot, and a histogram. The goal is for students to have a clearer understanding of what these three types of graphs are showing and to convey how the same data can be represented in different ways. We hope the silly sound effects make this a little more interesting for students, but mute if not :)",
+            "lessonRelevance": "This animation was developed to show the logical connections between a dot plot, a binned dot plot, and a histogram. The silly sounds are added for memorability.",
+            "by": "Galactic Polymath",
+            "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
+            "keywords": "K-12,STEM,STEMed,data literacy,data visualizations,graphs",
+            "mainLink": "https://www.youtube.com/watch?v=cA89FYd6biU&list=PLz-D3xOC0d8-6cZe7bbKs1ItYJHTBaFuP&index=6",
+            "vimeoLink": null,
+            "filename": "NA",
+            "otherLink": "NA"
+          },
+          {
+            "order": 7,
+            "type": "video",
+            "title": "Getting to know your data: Counting barn swallow songs",
+            "description": "This video demonstrates how to count barn swallow songs to generate the data examined in the \"Females Singing to be Heard\" lesson in the \"Assumptions Matter\" unit.\nhttps://www.galacticpolymath.com/lessons/1 \nThe video supports Part 3 of the lesson, to deepen student engagement by showing by showing what the data actually represent in the real world.",
+            "lessonRelevance": "This video demonstrates how to count barn swallow songs to generate the data examined.",
+            "by": "Galactic Polymath",
+            "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
+            "keywords": "sample size,behavior,barn swallow,bird song,birds,song",
+            "mainLink": "https://www.youtube.com/watch?v=ZsZcwhhJLFQ&list=PLz-D3xOC0d8-6cZe7bbKs1ItYJHTBaFuP&index=7",
+            "vimeoLink": null,
+            "filename": "NA",
+            "otherLink": "NA"
+          },
+          {
+            "order": 8,
+            "type": "video",
+            "title": "Scientific Background: Female barn swallows sing",
+            "description": "A video related to the 2020 study by Wilkins, et al for the first time describing female song in one of the most widely researched songbird species. Until now, females were thought to sing the same song as males or not sing at all, neither of which is accurate.\nThis video provides extra background context for our lesson \"\"Females singing to be heard: Challenging long-held assumptions about birdsong through data visualization\"\". \nhttps://www.galacticpolymath.com/lessons/1\nPaper: Wilkins MR, Odom KJ, Benedict L, Safran RJ (2020) \"\"Analysis of female song provides insight into the evolution of dimorphism in a widely studied songbird\"\" https://www.biorxiv.org/content/10.1101/2020.03.28.013433v1",
+            "lessonRelevance": "This video provides extra background context for the lesson. The video is not included in the lesson, but is provided for your background or if you want to use it in some way.",
+            "by": "Galactic Polymath",
+            "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
+            "keywords": "STEAM,science,birds,barn swallows,birdsong,female song,middle school math lessons",
+            "mainLink": "https://www.youtube.com/watch?v=eEpMtpyie74&list=PLz-D3xOC0d8-6cZe7bbKs1ItYJHTBaFuP&index=8",
+            "vimeoLink": null,
+            "filename": "NA",
+            "otherLink": "NA"
+          }
+        ]
       },
       {
         "__component": "teaching-resources.teaching-resources",
@@ -1093,121 +1207,7 @@
                 ]
               }
             ]
-          },
-          "multimedia": [
-            {
-              "order": 1,
-              "type": "video",
-              "title": "Lesson Trailer: \"Females Singing to be Heard\"",
-              "description": "A brief overview of our lesson \"Females singing to be heard: Challenging long-held assumptions about birdsong through data visualization,\" providing broader context from two authors of the study this lesson is based on.\nFull Lesson Plan: https://www.galacticpolymath.com/less...​\nSign up for emails to learn about all our free lesson plans and learning tools: https://galacticpolymath.us8.list-man...​\nAfter you teach it, we would love your feedback: https://docs.google.com/forms/d/e/1FA...​\nFunded by the Animal Behaviour Society (https://www.animalbehaviorsociety.org...​)",
-              "lessonRelevance": "A brief overview of the lesson, providing broader context from two authors of the study this lesson is based on.",
-              "by": "Galactic Polymath",
-              "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
-              "keywords": "histograms, scatter plots, data literacy, interdisciplinary lessons, STEM, STEAM",
-              "mainLink": "https://www.youtube.com/watch?v=HSBO60ZNeCo&list=PLz-D3xOC0d8-6cZe7bbKs1ItYJHTBaFuP&index=1",
-              "vimeoLink": "https://vimeo.com/540345409",
-              "filename": "NA",
-              "otherLink": "NA"
-            },
-            {
-              "order": 2,
-              "type": "video",
-              "title": "How to solve the Polymath Puzzle from the \"Females Sing\" lesson",
-              "description": "Part of the GP lesson \"Females singing to be heard: Challenging long-held assumptions about birdsong through data visualization\". \nhttps://www.galacticpolymath.com/lessons/1\nThis video explains strategies for solving this Polymath Puzzle–a graph with labels encoded using an alphabetic shift. By taking a real scientific figure and turning it into a puzzle, this activity provides a strong hook for students to engage in a lesson on scatter plots which builds key data literacy skills which are important for making informed decisions in the digital era.",
-              "lessonRelevance": "Explains strategies for solving the Polymath Puzzle. This is an engagement hook that blends a simple alphabetic shift puzzle with a data literacy challenge.",
-              "by": "Galactic Polymath",
-              "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
-              "keywords": "STEAM education,STEAM lessons,STEM education,bird song,birdsong,cipher,data literacy,histogram,interdisciplinary lesson,scatter plots",
-              "mainLink": "https://www.youtube.com/watch?v=M1u041BvjtI&list=PLz-D3xOC0d8-6cZe7bbKs1ItYJHTBaFuP&index=2",
-              "vimeoLink": null,
-              "filename": "NA",
-              "otherLink": "NA"
-            },
-            {
-              "order": 3,
-              "type": "video",
-              "title": "How to read the deciphered scatter plot",
-              "description": "Part of the GP lesson \"Females singing to be heard: Challenging long-held assumptions about birdsong through data visualization\". \nhttps://www.galacticpolymath.com/lessons/1\nThis video guides students through how to read a scatter plot and how this visualization tells a story. Specifically, it guides students with how to read and interpret axis labels and notice patterns in the data to hypothesize about its meaning.",
-              "lessonRelevance": "Provides scaffolding for understanding how to read this graph (which comes straight from a recent study) and notice patterns.",
-              "by": "Galactic Polymath",
-              "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
-              "keywords": "STEAM education,STEAM lessons,STEM education,bird song,birdsong,cipher,data literacy,histogram,interdisciplinary lesson,scatter plots",
-              "mainLink": "https://www.youtube.com/watch?v=of4tjz4fBl4&list=PLz-D3xOC0d8-6cZe7bbKs1ItYJHTBaFuP&index=3",
-              "vimeoLink": null,
-              "filename": "NA",
-              "otherLink": "NA"
-            },
-            {
-              "order": 4,
-              "type": "video",
-              "title": "Polymath Puzzle Reveal—Is the graph about birds, spiders, whales,...?",
-              "description": "Part of the GP lesson \"Females singing to be heard: Challenging long-held assumptions about birdsong through data visualization\". \nhttps://www.galacticpolymath.com/lessons/1\nThe study's lead author, Dr. Matthew Wilkins, explains how the data was collected, providing footage and stories from the fieldwork with barn swallows, and provides broader context for why the study's findings are important for our understanding of animal communication.",
-              "lessonRelevance": "Explains what this graph is actually about, providing background on female song in barn swallows and the field work employed to study it.",
-              "by": "Galactic Polymath",
-              "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
-              "keywords": "STEAM lessons,STEM education,STEAM education,interdisciplinary lesson,data literacy,scatter plots,cipher,bird song,birdsong,histogram",
-              "mainLink": "https://www.youtube.com/watch?v=91gnGO5DASI&list=PLz-D3xOC0d8-6cZe7bbKs1ItYJHTBaFuP&index=4 ",
-              "vimeoLink": null,
-              "filename": "NA",
-              "otherLink": "NA"
-            },
-            {
-              "order": 5,
-              "type": "video",
-              "title": "Scatter plots or histograms? Why data visualization is important",
-              "description": "Part of the GP lesson \"Females singing to be heard: Challenging long-held assumptions about birdsong through data visualization\". \nhttps://www.galacticpolymath.com/lessons/1\nThis video highlights the vital importance of data literacy. It explains that during peer review, a scientist requested that the scatter plot in the Polymath Puzzle (based on an actual figure in the scientific paper) should have been a histogram. Next, the students will be asked to use the raw study data to create a histogram and decide which is actually a better way to visualize the study findings.",
-              "lessonRelevance": "This video highlights the vital importance of data literacy. It asks students to compare two different types of graph and decide which is a better visual for demonstrating the main findings of the study.",
-              "by": "Galactic Polymath",
-              "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
-              "keywords": "STEAM lessons,STEM education,STEAM education,interdisciplinary lesson,data literacy,scatter plots,cipher,Nearly Impossible Task,NIT,bird song,birdsong,histogram",
-              "mainLink": "https://www.youtube.com/watch?v=e0PZJr-kL2g&list=PLz-D3xOC0d8-6cZe7bbKs1ItYJHTBaFuP&index=5",
-              "vimeoLink": null,
-              "filename": "NA",
-              "otherLink": "NA"
-            },
-            {
-              "order": 6,
-              "type": "video",
-              "title": "Connections between dot plots and histograms (with sound)",
-              "description": "This animation was developed to show the logical connections between a dot plot, a binned dot plot, and a histogram. The goal is for students to have a clearer understanding of what these three types of graphs are showing and to convey how the same data can be represented in different ways. We hope the silly sound effects make this a little more interesting for students, but mute if not :)",
-              "lessonRelevance": "This animation was developed to show the logical connections between a dot plot, a binned dot plot, and a histogram. The silly sounds are added for memorability.",
-              "by": "Galactic Polymath",
-              "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
-              "keywords": "K-12,STEM,STEMed,data literacy,data visualizations,graphs",
-              "mainLink": "https://www.youtube.com/watch?v=cA89FYd6biU&list=PLz-D3xOC0d8-6cZe7bbKs1ItYJHTBaFuP&index=6",
-              "vimeoLink": null,
-              "filename": "NA",
-              "otherLink": "NA"
-            },
-            {
-              "order": 7,
-              "type": "video",
-              "title": "Getting to know your data: Counting barn swallow songs",
-              "description": "This video demonstrates how to count barn swallow songs to generate the data examined in the \"Females Singing to be Heard\" lesson in the \"Assumptions Matter\" unit.\nhttps://www.galacticpolymath.com/lessons/1 \nThe video supports Part 3 of the lesson, to deepen student engagement by showing by showing what the data actually represent in the real world.",
-              "lessonRelevance": "This video demonstrates how to count barn swallow songs to generate the data examined.",
-              "by": "Galactic Polymath",
-              "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
-              "keywords": "sample size,behavior,barn swallow,bird song,birds,song",
-              "mainLink": "https://www.youtube.com/watch?v=ZsZcwhhJLFQ&list=PLz-D3xOC0d8-6cZe7bbKs1ItYJHTBaFuP&index=7",
-              "vimeoLink": null,
-              "filename": "NA",
-              "otherLink": "NA"
-            },
-            {
-              "order": 8,
-              "type": "video",
-              "title": "Scientific Background: Female barn swallows sing",
-              "description": "A video related to the 2020 study by Wilkins, et al for the first time describing female song in one of the most widely researched songbird species. Until now, females were thought to sing the same song as males or not sing at all, neither of which is accurate.\nThis video provides extra background context for our lesson \"\"Females singing to be heard: Challenging long-held assumptions about birdsong through data visualization\"\". \nhttps://www.galacticpolymath.com/lessons/1\nPaper: Wilkins MR, Odom KJ, Benedict L, Safran RJ (2020) \"\"Analysis of female song provides insight into the evolution of dimorphism in a widely studied songbird\"\" https://www.biorxiv.org/content/10.1101/2020.03.28.013433v1",
-              "lessonRelevance": "This video provides extra background context for the lesson. The video is not included in the lesson, but is provided for your background or if you want to use it in some way.",
-              "by": "Galactic Polymath",
-              "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
-              "keywords": "STEAM,science,birds,barn swallows,birdsong,female song,middle school math lessons",
-              "mainLink": "https://www.youtube.com/watch?v=eEpMtpyie74&list=PLz-D3xOC0d8-6cZe7bbKs1ItYJHTBaFuP&index=8",
-              "vimeoLink": null,
-              "filename": "NA",
-              "otherLink": "NA"
-            }
-          ]
+          }
         }
       },
       {

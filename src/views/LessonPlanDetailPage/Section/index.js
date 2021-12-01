@@ -15,6 +15,7 @@ import Standards from "./Standards/index";
 import Acknowledgments from "./Acknowledgments";
 import Versions from "./Versions";
 import CollapsibleTextSection from "./CollapsibleTextSection";
+import Preview from "./Preview";
 
 export const sectionTypeMap = {
   [SECTIONS.OVERVIEW]: Overview,
@@ -27,6 +28,7 @@ export const sectionTypeMap = {
   [SECTIONS.ACKNOWLEDGMENTS]: Acknowledgments,
   [SECTIONS.VERSIONS]: Versions,
   [SECTIONS.COLLAPSIBLE_TEXT]: CollapsibleTextSection,
+  [SECTIONS.PREVIEW]: Preview
 };
 
 const Section = ({ index, section }) => {
