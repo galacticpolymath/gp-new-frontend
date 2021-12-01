@@ -1,6 +1,5 @@
 export const SECTIONS = {
   OVERVIEW: "lesson-plan.overview",
-  MEDIA: "lesson-plan.media",
   HEADING: "lesson-plan.section-heading",
   TEXT_BLOCK: "lesson-plan.text-block",
   PROCEDURE: "lesson-plan.procedure",

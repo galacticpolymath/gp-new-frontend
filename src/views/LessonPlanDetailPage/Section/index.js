@@ -6,7 +6,6 @@ import { SECTIONS } from "../constants";
 import "./style.scss";
 
 import Overview from "./Overview";
-import Media from "./Media";
 import TextBlock from "./TextBlock";
 import Heading from "./Heading";
 import Procedure from "./Procedure/index";
@@ -19,7 +18,6 @@ import CollapsibleTextSection from "./CollapsibleTextSection";
 
 export const sectionTypeMap = {
   [SECTIONS.OVERVIEW]: Overview,
-  [SECTIONS.MEDIA]: Media,
   [SECTIONS.HEADING]: Heading,
   [SECTIONS.TEXT_BLOCK]: TextBlock,
   [SECTIONS.PROCEDURE]: Procedure,
