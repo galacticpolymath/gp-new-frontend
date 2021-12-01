@@ -1,0 +1,17 @@
+.Carousel {
+  .Slide {
+    max-width: 40rem;
+    text-align: left;
+    iframe {
+      margin: 2rem 0 1rem !important;
+    }
+  }
+  .caption {
+    p {
+      font-size: .9rem;
+    }
+  }
+  ul.thumbs {
+    padding: 0;
+  }
+}
