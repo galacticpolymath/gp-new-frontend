@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -22,6 +22,7 @@ const useStyles = makeStyles(lessonPlanStyle);
 
 const Overview = ({
   index,
+  Description,
   EstLessonTime,
   ForGrades,
   TargetSubject,
@@ -32,33 +33,33 @@ const Overview = ({
   const classes = useStyles();
   return (
     <CollapsibleSection
-      className={"Overview"}
+      className="Overview"
       index={index}
-      SectionTitle={`Overview`}
+      SectionTitle="Overview"
       initiallyExpanded
     >
       <div className={classes.container}>
         <Card className="stats">
           <GridContainer>
-            <AnchorLink href={"#standards"} offset={"125px"}>
+            <AnchorLink href="#standards" offset="125px">
             <Image {...SteamEpaulette} className="epaulette" />
           </AnchorLink>
-            <GridItem sm={4} className="border-right" id={"firstGridItem"}>
-              <MenuBookIcon fontSize="large" className={"statIcon"} />
+            <GridItem sm={4} className="border-right" id="firstGridItem">
+              <MenuBookIcon fontSize="large" className="statIcon" />
               <h5>Target Subject: </h5>
               <div className="statContainer">
                 <h3>{TargetSubject}</h3>
               </div>
             </GridItem>
             <GridItem sm={4} className="border-right">
-              <FaceIcon fontSize="large" className={"statIcon"} />
+              <FaceIcon fontSize="large" className="statIcon" />
               <h5>Grades: </h5>
               <div className="statContainer">
                 <h3>{ForGrades}</h3>
               </div>
             </GridItem>
             <GridItem sm={4} >
-              <ScheduleIcon fontSize="large" className={"statIcon"} />
+              <ScheduleIcon fontSize="large" className="statIcon" />
               <h5>Estimated Time: </h5>
               <div className="statContainer" id="lastGridItem">
                 <h3>{EstLessonTime}</h3>
@@ -68,11 +69,17 @@ const Overview = ({
           </GridContainer>
         </Card>
 
-
         <RichText content={Text} />
 
         <h5>Keywords:</h5>
         {Tags && <TagCloud tags={Tags} />}
+
+        {Description &&
+          <Fragment>
+            <h3>Lesson Description</h3>
+            <RichText content={Description} />
+          </Fragment>
+        }
       </div>
     </CollapsibleSection>
   );
