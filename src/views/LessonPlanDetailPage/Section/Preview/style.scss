@@ -3,28 +3,30 @@
 .Carousel {
   margin: 0 auto;
   max-width: 50rem;
+
+  > .carousel-slider {
+    display: flex;
+    align-items: center;
+  }
+  
   li.slide {
     padding: 1rem;
-  }
-  .Slide {
-    text-align: left;
-    height: calc(100% - 2rem);
-    padding: 1.5rem;
-    iframe {
-      margin: 0 !important;
-      width: 100% !important;
-    }
-  }
-  .caption {
-    p {
-      font-size: .9rem;
+    .Slide {
+      text-align: left;
+      height: calc(100% - 2rem);
+      padding: 1.5rem;
+      iframe {
+        margin: 0 !important;
+        width: 100% !important;
+      }
+      .caption {
+        p {
+          font-size: .9rem;
+        }
+      }
     }
   }
   ul.thumbs {
     padding: 0;
-  }
-  > .carousel-slider {
-    display: flex;
-    align-items: center;
   }
 }
