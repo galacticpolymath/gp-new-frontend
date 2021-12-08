@@ -1,9 +1,18 @@
+@import '../../variables';
+
 .Carousel {
+  margin: 0 auto;
+  max-width: 50rem;
+  li.slide {
+    padding: 1rem;
+  }
   .Slide {
-    max-width: 40rem;
     text-align: left;
+    height: calc(100% - 2rem);
+    padding: 1.5rem;
     iframe {
-      margin: 2rem 0 1rem !important;
+      margin: 0 !important;
+      width: 100% !important;
     }
   }
   .caption {
@@ -13,5 +22,9 @@
   }
   ul.thumbs {
     padding: 0;
+  }
+  > .carousel-slider {
+    display: flex;
+    align-items: center;
   }
 }
