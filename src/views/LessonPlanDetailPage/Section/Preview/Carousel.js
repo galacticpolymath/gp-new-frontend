@@ -9,8 +9,7 @@ const Carousel = ({
   items
 }) => {
   return <RRCarousel
-    showArrows
-    showThumbs
+    showStatus={false}
     className="Carousel"
     {...customControls}
   >

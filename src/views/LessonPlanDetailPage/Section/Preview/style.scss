@@ -1,20 +1,53 @@
 @import '../../variables';
+@import '../../../../assets/scss/core/variables';
 
 .Carousel {
   margin: 0 auto;
   max-width: 50rem;
-
   > .carousel-slider {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 2rem;
+    .slider-wrapper {
+      order: -1;
+    }
+    > button {
+      background: $flare-fuschia;
+      color: $white;
+      align-self: center;
+      margin: .5rem;
+      &:disabled {
+        background: rgba($flare-fuschia, .25);
+      }
+      &:hover {
+        background: $flare-fuschia-hl;
+      }
+    }
+    @media (min-width: map-get($grid-breakpoints, "md")) {
+      flex-wrap: nowrap;
+      justify-content: center;
+      
+      > button {
+        margin: .5rem 0;
+      }
+      .slider-wrapper {
+        order: 0;
+      }
+      ul.control-dots {
+        margin-top: 0;
+      }
+    }
   }
   
   li.slide {
     padding: 1rem;
     .Slide {
       text-align: left;
-      height: calc(100% - 2rem);
+      height: 100%;
       padding: 1.5rem;
+      margin-bottom: 0;
       iframe {
         margin: 0 !important;
         width: 100% !important;
@@ -22,6 +55,9 @@
       .caption {
         p {
           font-size: .9rem;
+          &:last-child {
+            margin-bottom: 0;
+          }
         }
       }
     }
