@@ -15,7 +15,7 @@
       order: -1;
     }
     > button {
-      background: $flare-fuschia;
+      background: $galactic-black;
       color: $white;
       align-self: center;
       margin: .75rem;
@@ -26,10 +26,10 @@
       }
       font-size: 1.6rem;
       &:disabled {
-        background: rgba($flare-fuschia, .25);
+        background: rgba($galactic-black, .25);
       }
       &:hover {
-        background: $flare-fuschia-hl;
+        background: rgba($galactic-black, .8);
       }
     }
     ul.control-dots {
