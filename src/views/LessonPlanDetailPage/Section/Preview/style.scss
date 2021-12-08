@@ -9,7 +9,8 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
+
     .slider-wrapper {
       order: -1;
     }
@@ -17,7 +18,13 @@
       background: $flare-fuschia;
       color: $white;
       align-self: center;
-      margin: .5rem;
+      margin: .75rem;
+      padding: .5rem;
+      svg {
+        width: 2rem;
+        height: 2rem;
+      }
+      font-size: 1.6rem;
       &:disabled {
         background: rgba($flare-fuschia, .25);
       }
@@ -25,6 +32,20 @@
         background: $flare-fuschia-hl;
       }
     }
+    ul.control-dots {
+      li.dot {
+        opacity: 1;
+        box-shadow: none;
+        border: 2px solid #bebebe;
+        background: #eee;
+        padding: 4px;
+        &.selected {
+          background: rgba($hydrogen-blue, .6);
+          border-color: $hydrogen-blue;
+        }
+      }
+    }
+
     @media (min-width: map-get($grid-breakpoints, "md")) {
       flex-wrap: nowrap;
       justify-content: center;
