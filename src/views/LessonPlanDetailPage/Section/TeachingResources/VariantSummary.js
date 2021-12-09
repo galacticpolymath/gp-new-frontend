@@ -26,13 +26,14 @@ const VariantSummary = ({ variants = [] }) => {
         <h4>Grade Level Variations:</h4>
       </ExpansionPanelSummary>
       <ExpansionPanelDetails className="ExpansionPanelDetails">
-        <Box boxShadow={3} className={classes.card}>
+        {variants.partGradVarNotes && <Box boxShadow={3} className={classes.card}>
           {variants.map(({ part, partGradeVarNotes }, i) => (
             <p key={i}>
               <strong>Part {part}:</strong> {partGradeVarNotes}
             </p>
           ))}
         </Box>
+        }
       </ExpansionPanelDetails>
     </ExpansionPanel>
   );
