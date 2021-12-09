@@ -40,7 +40,7 @@ export default function CustomGPfooter() {
             <div className={classes.footer}>
               <GridContainer>
                 <GridItem xs={12} sm={3} md={3}>
-                  <a href="#pablo">
+                  <a href="/">
                     {/* <div className={classes.hideLogo}>
                     <img alt="logo" src={GpImage} width="250px" />
                     <meta charSet="utf-8" />
@@ -108,6 +108,9 @@ export default function CustomGPfooter() {
                     </li>
                     <li>
                       <a href="/about">ABOUT</a>
+                    </li>
+                    <li>
+                      <a href="/">HOME</a>
                     </li>
                   </ul>
                 </GridItem>
