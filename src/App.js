@@ -149,10 +149,10 @@ const App = () => (
         }}
       />
       {/* End JobViz */}
-      {/*404*/}
-      <Route component={NotFoundPage} />
+      
+      <Route path="/404" component={NotFoundPage} />
       {/* This path matches anything, so it goes last. */}
-      {/*<Route path="/" component={LandingPage} />*/}
+      <Route component={NotFoundPage} />
     </Switch>
     <CustomGPfooter />
   </Router>
