@@ -22,13 +22,8 @@ const LessonCards = ({ lessons }) => {
   return (
     <div className={classes.container} style={{ padding: "40px 0" }}>
       <GridContainer >
-        {lessons.map(({ id, CoverImage, Title, Subtitle, Section, published_at }) => (
-          <GridItem
-            key={id}
-            xs={12} sm={6} md={6}
-            /** Render but hide unpublished lessons to make sure react-snap builds them. */
-            className={classNames({[classes.hidden]: !published_at})}
-          >
+        {lessons.map(({ id, CoverImage, Title, Subtitle, Section }) => (
+          <GridItem key={id} xs={12} sm={6} md={6}>
             <Link to={"/lessons/" + id}>
               <Box className={classes.card} boxShadow={4}>
                 <Image {...CoverImage} />
@@ -50,7 +45,7 @@ const LessonCards = ({ lessons }) => {
             </Link>
           </GridItem>
         ))}
-
+        {/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/}
         {/*Manual coming soon tile*/}
         <GridItem xs={12} sm={6} md={6} >
           {/*<Link to={"/lessons/" + id}>*/}

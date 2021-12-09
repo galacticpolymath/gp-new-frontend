@@ -13,9 +13,6 @@ const blogPostsPageStyle = {
     zIndex: "2",
     position: "relative"
   },
-  hidden: {
-    display: "none",
-  },
   textCenter: {
     textAlign: "center"
   },
