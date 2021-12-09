@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
-import TagManager from 'react-gtm-module'
+// import TagManager from 'react-gtm-module'
 import { renderMetaTags } from "utils/meta";
 
 import "assets/scss/material-kit-pro-react.scss?v=1.9.0";
@@ -24,10 +24,10 @@ import HireUsPage from "views/HireUs/HireUsPage";
 import CustomGPfooter from "views/GPfooter/CustomGPfooter";
 import { Container } from "@material-ui/core";
 
-const tagManagerArgs = {
-  gtmId: 'G-8B58Y7HD3T'
-};
-TagManager.initialize(tagManagerArgs)
+// const tagManagerArgs = {
+//   gtmId: 'G-8B58Y7HD3T'
+// };
+// TagManager.initialize(tagManagerArgs)
 
 var hist = createBrowserHistory();
 
