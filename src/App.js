@@ -22,22 +22,10 @@ import Lessons from "views/LessonsPage/LessonsPage";
 import LandingPage from "views/LandingPage/LandingPage";
 import HireUsPage from "views/HireUs/HireUsPage";
 import CustomGPfooter from "views/GPfooter/CustomGPfooter";
-import { Container } from "@material-ui/core";
-
-// const tagManagerArgs = {
-//   gtmId: 'G-8B58Y7HD3T'
-// };
-// TagManager.initialize(tagManagerArgs)
+import NotFoundPage from "views/NotFound";
 
 var hist = createBrowserHistory();
 
-const NoMatchPage = () => {
-  return (
-    <Container style={{textAlign: "center",padding:"10% 0"}}>
-    <h2>404 - We looked, but we ain't found nothin'</h2>
-    </Container>
-  )
-}
 
 const App = () => (
   <Router history={hist}>
@@ -162,7 +150,7 @@ const App = () => (
       />
       {/* End JobViz */}
       {/*404*/}
-      <Route component={NoMatchPage} />
+      <Route component={NotFoundPage} />
       {/* This path matches anything, so it goes last. */}
       {/*<Route path="/" component={LandingPage} />*/}
     </Switch>
