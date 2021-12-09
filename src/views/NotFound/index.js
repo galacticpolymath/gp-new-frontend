@@ -8,7 +8,7 @@ import Header from 'components/Header/Header';
 
 const NotFound = () => {
   return (
-    <Container style={{textAlign: "center", padding:"20% 0 0"}}>
+    <Container style={{ textAlign: "center", padding: "10% 0 0" }}>
       <Helmet>
         {renderMetaTags({
           title: "404 Page not found",
