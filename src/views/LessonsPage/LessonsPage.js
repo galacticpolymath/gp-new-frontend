@@ -100,7 +100,7 @@ export default function LessonsPage() {
             iconColor="rose"
             title=""
           />
-          {cachedLessons && <LessonCards lessons={cachedLessons.filter(({published_at}) => published_at)} />}
+          {cachedLessons && <LessonCards lessons={cachedLessons} />}
         </div>
       </div>
     </div>
