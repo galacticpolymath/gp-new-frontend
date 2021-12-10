@@ -26,7 +26,7 @@ const NotFound = () => {
           color: "dark",
         }}
       />
-      <h2>This page couldn&apos;t be found.</h2>
+      <h2>404 - We looked, but we ain&apos;t found nothin&apos;</h2>
       <h4><a href="/">&larr; Back to the homepage</a></h4>
     </Container>
   )

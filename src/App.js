@@ -150,7 +150,6 @@ const App = () => (
       />
       {/* End JobViz */}
       
-      <Route path="/404" component={NotFoundPage} />
       {/* This path matches anything, so it goes last. */}
       <Route component={NotFoundPage} />
     </Switch>
