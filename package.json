@@ -73,7 +73,6 @@
       "--shm-size=4gb"
     ],
     "include": [
-      "/404",
       "/lessons/3"
     ]
   }
