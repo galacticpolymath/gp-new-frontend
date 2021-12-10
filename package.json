@@ -71,6 +71,9 @@
     "puppeteerArgs": [
       "--disable-dev-shm-usage",
       "--shm-size=4gb"
+    ],
+    "include": [
+      "/lessons/3"
     ]
   }
 }
