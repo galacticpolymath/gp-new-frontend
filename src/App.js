@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
-import TagManager from 'react-gtm-module'
+// import TagManager from 'react-gtm-module'
 import { renderMetaTags } from "utils/meta";
 
 import "assets/scss/material-kit-pro-react.scss?v=1.9.0";
@@ -22,19 +22,16 @@ import Lessons from "views/LessonsPage/LessonsPage";
 import LandingPage from "views/LandingPage/LandingPage";
 import HireUsPage from "views/HireUs/HireUsPage";
 import CustomGPfooter from "views/GPfooter/CustomGPfooter";
-
-const tagManagerArgs = {
-  gtmId: 'G-8B58Y7HD3T'
-};
-TagManager.initialize(tagManagerArgs)
+import NotFoundPage from "views/NotFound";
 
 var hist = createBrowserHistory();
+
 
 const App = () => (
   <Router history={hist}>
     <Helmet>
       <meta charSet="utf-8" />
-      
+
       <meta property="og:url" content="https://www.galacticpolymath.com" />
       <meta property="og:determiner" content="" />
       <meta property="og:locale" content="en_US" />
@@ -49,8 +46,8 @@ const App = () => (
     })}
     <Switch>
       <Route exact path="/" component={LandingPage} />
-      <Route path="/about" component={AboutUsPage} />
-      <Route path="/hire-us" component={HireUsPage} />
+      <Route exact path="/about" component={AboutUsPage} />
+      <Route exact path="/hire-us" component={HireUsPage} />
 
       {/* Lessson Directory */}
       <Route exact path="/lessons" component={Lessons} />
@@ -152,9 +149,9 @@ const App = () => (
         }}
       />
       {/* End JobViz */}
-
+      
       {/* This path matches anything, so it goes last. */}
-      <Route path="/" component={LandingPage} />
+      <Route component={NotFoundPage} />
     </Switch>
     <CustomGPfooter />
   </Router>

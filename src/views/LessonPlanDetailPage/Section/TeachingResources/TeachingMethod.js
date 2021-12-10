@@ -70,10 +70,12 @@ const TeachingMethod = ({
             )
           }
         />
-        <VariantSummary variants={gradeVariantNotes} />
+
+        {gradeVariantNotes && <VariantSummary variants={gradeVariantNotes} />}
         {resources.map((resource, i) => (
-          <GradeVariant key={i} {...resource} />
-        ))}
+            <GradeVariant key={i} {...resource} />
+            ))}
+
       </ExpansionPanelDetails>
     </ExpansionPanel>
   );

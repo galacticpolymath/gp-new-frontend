@@ -7,7 +7,7 @@
     "@material-ui/icons": "4.9.1",
     "animate.css": "4.1.0",
     "classnames": "2.2.6",
-    "d3": "^7.1.1",
+    "d3": "^7.2.0",
     "eslint-plugin-only-warn": "^1.0.2",
     "history": "4.10.1",
     "moment": "2.26.0",
@@ -21,10 +21,9 @@
     "react-datetime": "2.16.3",
     "react-dom": "16.13.1",
     "react-google-maps": "9.4.5",
-    "react-gtm-module": "^2.0.11",
     "react-helmet": "^6.1.0",
     "react-image-gallery": "1.0.7",
-    "react-intersection-observer": "^8.31.1",
+    "react-intersection-observer": "^8.31.5",
     "react-responsive-carousel": "^3.2.22",
     "react-router-dom": "5.2.0",
     "react-scripts": "^3.4.3",
@@ -73,6 +72,9 @@
     "puppeteerArgs": [
       "--disable-dev-shm-usage",
       "--shm-size=4gb"
+    ],
+    "include": [
+      "/lessons/3"
     ]
   }
 }
