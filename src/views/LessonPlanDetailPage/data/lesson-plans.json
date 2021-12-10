@@ -3014,355 +3014,356 @@
         "id": 4,
         "SectionTitle": "Teaching Materials",
         "Data": {
-          "classroom": {
-            "resources": [
-              {
-                "links": {
-                  "url": "https://drive.google.com/drive/folders/1-LEgUSzHNVGq59c33AmFZD3mBsFp3MOK",
-                  "linkText": "Download G9-12 Materials for All Parts"
+
+        "classroom": {
+          "resourceSummary": [
+            {
+              "nItems": 5,
+              "itemCat": "Digital Items",
+              "itemsGroup": [
+                {
+                  "item": "Presentation",
+                  "itemExplanation": "x 5 Parts"
+                }
+              ]
+            },
+            {
+              "nItems": 11,
+              "itemCat": "Printed Items",
+              "itemsGroup": [
+                {
+                  "item": "Teacher Worksheet",
+                  "itemExplanation": "x 5 Parts"
                 },
-                "parts": [
-                  {
-                    "part": 1,
-                    "title": "Florida Panthers in Peril",
-                    "preface": "Introduction to the plight of the critically endangered Florida panther.",
-                    "itemList": [
-                      {
-                        "links": [
-                          {
-                            "url": "https://docs.google.com/presentation/d/11-0q_jFckw3jo3IrmmGpPRwVsfQ6LOy9OoSMxn5Hvo4/present",
-                            "linkText": "Present Now"
-                          },
-                          {
-                            "url": "https://docs.google.com/presentation/d/11-0q_jFckw3jo3IrmmGpPRwVsfQ6LOy9OoSMxn5Hvo4/template/preview",
-                            "linkText": "Copy to My Google Drive"
-                          }
-                        ],
-                        "itemCat": "presentation",
-                        "itemTitle": "Presentation"
-                      },
-                      {
-                        "links": [
-                          {
-                            "url": "https://docs.google.com/document/d/1pV0IRpph3dnb8V-o0uKfuNjedNV8BFsdNBoG2BSKK0o/export?format=pdf",
-                            "linkText": "PDF"
-                          },
-                          {
-                            "url": "https://docs.google.com/document/d/1pV0IRpph3dnb8V-o0uKfuNjedNV8BFsdNBoG2BSKK0o/",
-                            "linkText": "Copy to My Google Drive"
-                          }
-                        ],
-                        "itemCat": "NA",
-                        "itemTitle": "NA"
-                      },
-                      {
-                        "links": [
-                          {
-                            "url": "https://docs.google.com/document/d/1QOCEvwIk8366_VK18TnXMCyqDyy9sx6D12q5xjcGK_U/export?format=pdf",
-                            "linkText": "PDF"
-                          },
-                          {
-                            "url": "https://docs.google.com/document/d/1QOCEvwIk8366_VK18TnXMCyqDyy9sx6D12q5xjcGK_U/",
-                            "linkText": "Copy to My Google Drive"
-                          }
-                        ],
-                        "itemCat": "NA",
-                        "itemTitle": "NA"
-                      }
-                    ]
-                  },
-                  {
-                    "part": 2,
-                    "title": "Genetics of Endangered Species",
-                    "preface": "Reviews relevant genetics topics including dominant/recessive alleles and genotype vs. phenotype.",
-                    "itemList": [
-                      {
-                        "links": [
-                          {
-                            "url": "https://docs.google.com/presentation/d/1d5M-QrO2DVYCRGsJys-p6_lmYHmLKUa9-zfkBigQ7ZM/present",
-                            "linkText": "Present Now"
-                          },
-                          {
-                            "url": "https://docs.google.com/presentation/d/1d5M-QrO2DVYCRGsJys-p6_lmYHmLKUa9-zfkBigQ7ZM/template/preview",
-                            "linkText": "Copy to My Google Drive"
-                          }
-                        ],
-                        "itemCat": "presentation",
-                        "itemTitle": "Presentation"
-                      },
-                      {
-                        "links": [
-                          {
-                            "url": "https://docs.google.com/presentation/d/1rwgBdQ3W9XKdhfEddiBGs5vRxtTDOthOiSZAgNILqUw/present",
-                            "linkText": "Present Now"
-                          },
-                          {
-                            "url": "https://docs.google.com/presentation/d/1rwgBdQ3W9XKdhfEddiBGs5vRxtTDOthOiSZAgNILqUw/template/preview",
-                            "linkText": "Copy to My Google Drive"
-                          }
-                        ],
-                        "itemCat": "presentation",
-                        "itemTitle": "Presentation"
-                      },
-                      {
-                        "links": [
-                          {
-                            "url": "https://docs.google.com/document/d/1522hLLXRKBO8VzALl6WXv4WyuNa_I1jAJormI5tOuH8/export?format=pdf",
-                            "linkText": "PDF"
-                          },
-                          {
-                            "url": "https://docs.google.com/document/d/1522hLLXRKBO8VzALl6WXv4WyuNa_I1jAJormI5tOuH8/",
-                            "linkText": "Copy to My Google Drive"
-                          }
-                        ],
-                        "itemCat": "NA",
-                        "itemTitle": "NA"
-                      },
-                      {
-                        "links": [
-                          {
-                            "url": "https://docs.google.com/document/d/1HkWzEQB69xulxAWz2Xh5tnpDa2Uwj9JSZnLIhJuEMFA/export?format=pdf",
-                            "linkText": "PDF"
-                          },
-                          {
-                            "url": "https://docs.google.com/document/d/1HkWzEQB69xulxAWz2Xh5tnpDa2Uwj9JSZnLIhJuEMFA/",
-                            "linkText": "Copy to My Google Drive"
-                          }
-                        ],
-                        "itemCat": "NA",
-                        "itemTitle": "NA"
-                      },
-                      {
-                        "links": [
-                          {
-                            "url": "https://docs.google.com/presentation/d/1rwgBdQ3W9XKdhfEddiBGs5vRxtTDOthOiSZAgNILqUw/export/pdf",
-                            "linkText": "PDF"
-                          },
-                          {
-                            "url": "https://docs.google.com/presentation/d/1rwgBdQ3W9XKdhfEddiBGs5vRxtTDOthOiSZAgNILqUw/",
-                            "linkText": "Copy to My Google Drive"
-                          }
-                        ],
-                        "itemCat": "NA",
-                        "itemTitle": "NA"
-                      }
-                    ]
-                  },
-                  {
-                    "part": 3,
-                    "title": "The Florida Panther Debate",
-                    "preface": "Delves into what can (or should) be done to help save the Florida Panther. ",
-                    "itemList": [
-                      {
-                        "links": [
-                          {
-                            "url": "https://docs.google.com/presentation/d/12kuqfuWeBIlxmtp-50o_yp5i3HWENBu5r0QN7ukxJyU/present",
-                            "linkText": "Present Now"
-                          },
-                          {
-                            "url": "https://docs.google.com/presentation/d/12kuqfuWeBIlxmtp-50o_yp5i3HWENBu5r0QN7ukxJyU/template/preview",
-                            "linkText": "Copy to My Google Drive"
-                          }
-                        ],
-                        "itemCat": "presentation",
-                        "itemTitle": "Presentation"
-                      },
-                      {
-                        "links": [
-                          {
-                            "url": "https://docs.google.com/document/d/15hzLjht_9G8jfyDMk6ybpdDbJeYMO9O-wvhoOgx9ly8/export?format=pdf",
-                            "linkText": "PDF"
-                          },
-                          {
-                            "url": "https://docs.google.com/document/d/15hzLjht_9G8jfyDMk6ybpdDbJeYMO9O-wvhoOgx9ly8/",
-                            "linkText": "Copy to My Google Drive"
-                          }
-                        ],
-                        "itemCat": "NA",
-                        "itemTitle": "NA"
-                      },
-                      {
-                        "links": [
-                          {
-                            "url": "https://docs.google.com/document/d/1_3YoCjZOVkdEkiiyiAn7cOxIgezulVlYyWT3ChPMYr8/export?format=pdf",
-                            "linkText": "PDF"
-                          },
-                          {
-                            "url": "https://docs.google.com/document/d/1_3YoCjZOVkdEkiiyiAn7cOxIgezulVlYyWT3ChPMYr8/",
-                            "linkText": "Copy to My Google Drive"
-                          }
-                        ],
-                        "itemCat": "NA",
-                        "itemTitle": "NA"
-                      }
-                    ]
-                  },
-                  {
-                    "part": 4,
-                    "title": "Deep Dive into Genetic Rescue",
-                    "preface": "Provides an overview of genetic rescue concepts and how it relates to Florida Panther situation. ",
-                    "itemList": [
-                      {
-                        "links": [
-                          {
-                            "url": "https://docs.google.com/presentation/d/1jtBh7fTjo-e7hW3rw70vYNY6JTSHhU3U_jYoppfZEp4/present",
-                            "linkText": "Present Now"
-                          },
-                          {
-                            "url": "https://docs.google.com/presentation/d/1jtBh7fTjo-e7hW3rw70vYNY6JTSHhU3U_jYoppfZEp4/template/preview",
-                            "linkText": "Copy to My Google Drive"
-                          }
-                        ],
-                        "itemCat": "presentation",
-                        "itemTitle": "Presentation"
-                      },
-                      {
-                        "links": [
-                          {
-                            "url": "https://docs.google.com/document/d/1y5be2mif380Ee1XpI3dzyTn2WsrVm4zhe95XcG1XHYg/export?format=pdf",
-                            "linkText": "PDF"
-                          },
-                          {
-                            "url": "https://docs.google.com/document/d/1y5be2mif380Ee1XpI3dzyTn2WsrVm4zhe95XcG1XHYg/",
-                            "linkText": "Copy to My Google Drive"
-                          }
-                        ],
-                        "itemCat": "NA",
-                        "itemTitle": "NA"
-                      },
-                      {
-                        "links": [
-                          {
-                            "url": "https://docs.google.com/document/d/1zgylTvNDPslFcPwWyujTkgJphW7GmLrj-QoiirYJ-MA/export?format=pdf",
-                            "linkText": "PDF"
-                          },
-                          {
-                            "url": "https://docs.google.com/document/d/1zgylTvNDPslFcPwWyujTkgJphW7GmLrj-QoiirYJ-MA/",
-                            "linkText": "Copy to My Google Drive"
-                          }
-                        ],
-                        "itemCat": "NA",
-                        "itemTitle": "NA"
-                      }
-                    ]
-                  },
-                  {
-                    "part": 5,
-                    "title": "Analyzing Genetic Rescue",
-                    "preface": "Uses real data from a model species to investigate whether genetic rescue is a viable conservation method for Florida Panthers.",
-                    "itemList": [
-                      {
-                        "links": [
-                          {
-                            "url": "https://docs.google.com/presentation/d/10SMDLi6UturapkNMpq-4qt31H05tOhA3uJY4xamt79Y/present",
-                            "linkText": "Present Now"
-                          },
-                          {
-                            "url": "https://docs.google.com/presentation/d/10SMDLi6UturapkNMpq-4qt31H05tOhA3uJY4xamt79Y/template/preview",
-                            "linkText": "Copy to My Google Drive"
-                          }
-                        ],
-                        "itemCat": "presentation",
-                        "itemTitle": "Presentation"
-                      },
-                      {
-                        "links": [
-                          {
-                            "url": "https://docs.google.com/document/d/1ZAoZ_E2Jm6R5zI9fswxCorDS4AiCi9bxlvAZxrFGysY/export?format=pdf",
-                            "linkText": "PDF"
-                          },
-                          {
-                            "url": "https://docs.google.com/document/d/1ZAoZ_E2Jm6R5zI9fswxCorDS4AiCi9bxlvAZxrFGysY/",
-                            "linkText": "Copy to My Google Drive"
-                          }
-                        ],
-                        "itemCat": "NA",
-                        "itemTitle": "NA"
-                      },
-                      {
-                        "links": [
-                          {
-                            "url": "https://docs.google.com/document/d/17pVB3Aty3FHTRtH5-3ntvluGNMv_HBBuuruTBezuoQk/export?format=pdf",
-                            "linkText": "PDF"
-                          },
-                          {
-                            "url": "https://docs.google.com/document/d/17pVB3Aty3FHTRtH5-3ntvluGNMv_HBBuuruTBezuoQk/",
-                            "linkText": "Copy to My Google Drive"
-                          }
-                        ],
-                        "itemCat": "NA",
-                        "itemTitle": "NA"
-                      }
-                    ]
-                  }
-                ],
-                "grades": "Grades 9-12",
-                "gradePrefix": "G9-12"
-              }
-            ],
-            "resourceSummary": [
-              {
-                "nItems": 1,
-                "itemCat": "Digital Items",
-                "itemsGroup": [
-                  {
-                    "item": "Presentation",
-                    "itemExplanation": "x 5 Parts"
-                  }
-                ]
+                {
+                  "item": "Student Worksheet",
+                  "itemExplanation": "x 5 Parts"
+                },
+                {
+                  "item": "\"Big\" and \"Small\" Panther Population Cards (for Part 2)",
+                  "itemExplanation": "Set of cards for each group"
+                }
+              ]
+            },
+            {
+              "nItems": 6,
+              "itemCat": "Other Requirements",
+              "itemsGroup": [
+                {
+                  "item": "Opaque Envelopes (For Part 2)",
+                  "itemExplanation": "(i.e. 1 for \"Big\" and another for \"Small\" Population cards for each group)"
+                },
+                {
+                  "item": "Scissors (For Part 2)",
+                  "itemExplanation": "For cutting out panther cards"
+                },
+                {
+                  "item": "Teacher's computer",
+                  "itemExplanation": null
+                },
+                {
+                  "item": "Internet Connection",
+                  "itemExplanation": null
+                },
+                {
+                  "item": "Projector",
+                  "itemExplanation": null
+                },
+                {
+                  "item": "Set of Speakers",
+                  "itemExplanation": null
+                }
+              ]
+            }
+          ],
+          "gradeVariantNotes": {},
+          "resources": [
+            {
+              "grades": "Grades 9-12",
+              "gradePrefix": "G9-12",
+              "links": {
+                "linkText": "Download G9-12 Materials for All Parts",
+                "url": "https://drive.google.com/drive/folders/1-LEgUSzHNVGq59c33AmFZD3mBsFp3MOK"
               },
-              {
-                "nItems": "NA",
-                "itemCat": "Printed Items",
-                "itemsGroup": [
-                  {
-                    "item": "Teacher Worksheet",
-                    "itemExplanation": "x 5 Parts"
-                  },
-                  {
-                    "item": "Student Worksheet",
-                    "itemExplanation": "x 5 Parts"
-                  },
-                  {
-                    "item": "\"Big\" and \"Small\" Panther Population Cards (for Part 2)",
-                    "itemExplanation": "A pair of groups could possibly share a set of \"Big Population\" and \"Small Population\" cards"
-                  }
-                ]
-              },
-              {
-                "nItems": "NA",
-                "itemCat": "Other Requirements",
-                "itemsGroup": [
-                  {
-                    "item": "Opaque Envelopes (For Part 2)",
-                    "itemExplanation": "(i.e. 1 for \"Big\" and another for \"Small\" Population cards)"
-                  },
-                  {
-                    "item": "Scissors",
-                    "itemExplanation": "For cutting out panther cards"
-                  },
-                  {
-                    "item": "Teacher's computer",
-                    "itemExplanation": null
-                  },
-                  {
-                    "item": "Internet Connection",
-                    "itemExplanation": null
-                  },
-                  {
-                    "item": "Projector",
-                    "itemExplanation": null
-                  },
-                  {
-                    "item": "Set of Speakers",
-                    "itemExplanation": null
-                  }
-                ]
-              }
-            ],
-            "gradeVariantNotes": {}
-          }
-        },
+              "parts": [
+                {
+                  "part": 1,
+                  "title": "Florida Panthers in Peril",
+                  "preface": "Introduction to the plight of the critically endangered Florida panther.",
+                  "itemList": [
+                    {
+                      "itemTitle": "Presentation",
+                      "itemCat": "presentation",
+                      "links": [
+                        {
+                          "linkText": "Present Now",
+                          "url": "https://docs.google.com/presentation/d/11-0q_jFckw3jo3IrmmGpPRwVsfQ6LOy9OoSMxn5Hvo4/present"
+                        },
+                        {
+                          "linkText": "Copy to My Google Drive",
+                          "url": "https://docs.google.com/presentation/d/11-0q_jFckw3jo3IrmmGpPRwVsfQ6LOy9OoSMxn5Hvo4/template/preview"
+                        }
+                      ]
+                    },
+                    {
+                      "itemTitle": "Part 1 Student Worksheet",
+                      "itemCat": "NA",
+                      "links": [
+                        {
+                          "linkText": "PDF",
+                          "url": "https://docs.google.com/document/d/1pV0IRpph3dnb8V-o0uKfuNjedNV8BFsdNBoG2BSKK0o/export?format=pdf"
+                        },
+                        {
+                          "linkText": "Copy to My Google Drive",
+                          "url": "https://docs.google.com/document/d/1pV0IRpph3dnb8V-o0uKfuNjedNV8BFsdNBoG2BSKK0o/"
+                        }
+                      ]
+                    },
+                    {
+                      "itemTitle": "Part 1 Teacher Worksheet",
+                      "itemCat": "NA",
+                      "links": [
+                        {
+                          "linkText": "PDF",
+                          "url": "https://docs.google.com/document/d/1QOCEvwIk8366_VK18TnXMCyqDyy9sx6D12q5xjcGK_U/export?format=pdf"
+                        },
+                        {
+                          "linkText": "Copy to My Google Drive",
+                          "url": "https://docs.google.com/document/d/1QOCEvwIk8366_VK18TnXMCyqDyy9sx6D12q5xjcGK_U/"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "part": 2,
+                  "title": "Genetics of Endangered Species",
+                  "preface": "Reviews relevant genetics topics including dominant/recessive alleles and genotype vs. phenotype.",
+                  "itemList": [
+                    {
+                      "itemTitle": "Presentation",
+                      "itemCat": "presentation",
+                      "links": [
+                        {
+                          "linkText": "Present Now",
+                          "url": "https://docs.google.com/presentation/d/1d5M-QrO2DVYCRGsJys-p6_lmYHmLKUa9-zfkBigQ7ZM/present"
+                        },
+                        {
+                          "linkText": "Copy to My Google Drive",
+                          "url": "https://docs.google.com/presentation/d/1d5M-QrO2DVYCRGsJys-p6_lmYHmLKUa9-zfkBigQ7ZM/template/preview"
+                        }
+                      ]
+                    },
+                    {
+                      "itemTitle": "Presentation",
+                      "itemCat": "presentation",
+                      "links": [
+                        {
+                          "linkText": "Present Now",
+                          "url": "https://docs.google.com/presentation/d/1rwgBdQ3W9XKdhfEddiBGs5vRxtTDOthOiSZAgNILqUw/present"
+                        },
+                        {
+                          "linkText": "Copy to My Google Drive",
+                          "url": "https://docs.google.com/presentation/d/1rwgBdQ3W9XKdhfEddiBGs5vRxtTDOthOiSZAgNILqUw/template/preview"
+                        }
+                      ]
+                    },
+                    {
+                      "itemTitle": "Part 2 Student Worksheet",
+                      "itemCat": "NA",
+                      "links": [
+                        {
+                          "linkText": "PDF",
+                          "url": "https://docs.google.com/document/d/1522hLLXRKBO8VzALl6WXv4WyuNa_I1jAJormI5tOuH8/export?format=pdf"
+                        },
+                        {
+                          "linkText": "Copy to My Google Drive",
+                          "url": "https://docs.google.com/document/d/1522hLLXRKBO8VzALl6WXv4WyuNa_I1jAJormI5tOuH8/"
+                        }
+                      ]
+                    },
+                    {
+                      "itemTitle": "Part 2 Teacher Worksheet",
+                      "itemCat": "NA",
+                      "links": [
+                        {
+                          "linkText": "PDF",
+                          "url": "https://docs.google.com/document/d/1HkWzEQB69xulxAWz2Xh5tnpDa2Uwj9JSZnLIhJuEMFA/export?format=pdf"
+                        },
+                        {
+                          "linkText": "Copy to My Google Drive",
+                          "url": "https://docs.google.com/document/d/1HkWzEQB69xulxAWz2Xh5tnpDa2Uwj9JSZnLIhJuEMFA/"
+                        }
+                      ]
+                    },
+                    {
+                      "itemTitle": "Part 2 Panther Genotype Cards for Hands On Simulation of Genetics of Inbreeding in Panthers",
+                      "itemCat": "NA",
+                      "links": [
+                        {
+                          "linkText": "PDF",
+                          "url": "https://docs.google.com/presentation/d/1rwgBdQ3W9XKdhfEddiBGs5vRxtTDOthOiSZAgNILqUw/export/pdf"
+                        },
+                        {
+                          "linkText": "Copy to My Google Drive",
+                          "url": "https://docs.google.com/presentation/d/1rwgBdQ3W9XKdhfEddiBGs5vRxtTDOthOiSZAgNILqUw/"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "part": 3,
+                  "title": "The Florida Panther Debate",
+                  "preface": "Delves into what can (or should) be done to help save the Florida Panther. ",
+                  "itemList": [
+                    {
+                      "itemTitle": "Presentation",
+                      "itemCat": "presentation",
+                      "links": [
+                        {
+                          "linkText": "Present Now",
+                          "url": "https://docs.google.com/presentation/d/12kuqfuWeBIlxmtp-50o_yp5i3HWENBu5r0QN7ukxJyU/present"
+                        },
+                        {
+                          "linkText": "Copy to My Google Drive",
+                          "url": "https://docs.google.com/presentation/d/12kuqfuWeBIlxmtp-50o_yp5i3HWENBu5r0QN7ukxJyU/template/preview"
+                        }
+                      ]
+                    },
+                    {
+                      "itemTitle": "Part 3 Student Worksheet",
+                      "itemCat": "NA",
+                      "links": [
+                        {
+                          "linkText": "PDF",
+                          "url": "https://docs.google.com/document/d/15hzLjht_9G8jfyDMk6ybpdDbJeYMO9O-wvhoOgx9ly8/export?format=pdf"
+                        },
+                        {
+                          "linkText": "Copy to My Google Drive",
+                          "url": "https://docs.google.com/document/d/15hzLjht_9G8jfyDMk6ybpdDbJeYMO9O-wvhoOgx9ly8/"
+                        }
+                      ]
+                    },
+                    {
+                      "itemTitle": "Part 3 Teacher Worksheet",
+                      "itemCat": "NA",
+                      "links": [
+                        {
+                          "linkText": "PDF",
+                          "url": "https://docs.google.com/document/d/1_3YoCjZOVkdEkiiyiAn7cOxIgezulVlYyWT3ChPMYr8/export?format=pdf"
+                        },
+                        {
+                          "linkText": "Copy to My Google Drive",
+                          "url": "https://docs.google.com/document/d/1_3YoCjZOVkdEkiiyiAn7cOxIgezulVlYyWT3ChPMYr8/"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "part": 4,
+                  "title": "Deep Dive into Genetic Rescue",
+                  "preface": "Provides an overview of genetic rescue concepts and how it relates to Florida Panther situation. ",
+                  "itemList": [
+                    {
+                      "itemTitle": "Presentation",
+                      "itemCat": "presentation",
+                      "links": [
+                        {
+                          "linkText": "Present Now",
+                          "url": "https://docs.google.com/presentation/d/1jtBh7fTjo-e7hW3rw70vYNY6JTSHhU3U_jYoppfZEp4/present"
+                        },
+                        {
+                          "linkText": "Copy to My Google Drive",
+                          "url": "https://docs.google.com/presentation/d/1jtBh7fTjo-e7hW3rw70vYNY6JTSHhU3U_jYoppfZEp4/template/preview"
+                        }
+                      ]
+                    },
+                    {
+                      "itemTitle": "Part 4 Student Worksheet",
+                      "itemCat": "NA",
+                      "links": [
+                        {
+                          "linkText": "PDF",
+                          "url": "https://docs.google.com/document/d/1y5be2mif380Ee1XpI3dzyTn2WsrVm4zhe95XcG1XHYg/export?format=pdf"
+                        },
+                        {
+                          "linkText": "Copy to My Google Drive",
+                          "url": "https://docs.google.com/document/d/1y5be2mif380Ee1XpI3dzyTn2WsrVm4zhe95XcG1XHYg/"
+                        }
+                      ]
+                    },
+                    {
+                      "itemTitle": "Part 4 Teacher Worksheet",
+                      "itemCat": "NA",
+                      "links": [
+                        {
+                          "linkText": "PDF",
+                          "url": "https://docs.google.com/document/d/1zgylTvNDPslFcPwWyujTkgJphW7GmLrj-QoiirYJ-MA/export?format=pdf"
+                        },
+                        {
+                          "linkText": "Copy to My Google Drive",
+                          "url": "https://docs.google.com/document/d/1zgylTvNDPslFcPwWyujTkgJphW7GmLrj-QoiirYJ-MA/"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "part": 5,
+                  "title": "Analyzing Real Genetic Rescue Data",
+                  "preface": "Uses real data from a model species to investigate whether genetic rescue is a viable conservation method for Florida Panthers.",
+                  "itemList": [
+                    {
+                      "itemTitle": "Presentation",
+                      "itemCat": "presentation",
+                      "links": [
+                        {
+                          "linkText": "Present Now",
+                          "url": "https://docs.google.com/presentation/d/10SMDLi6UturapkNMpq-4qt31H05tOhA3uJY4xamt79Y/present"
+                        },
+                        {
+                          "linkText": "Copy to My Google Drive",
+                          "url": "https://docs.google.com/presentation/d/10SMDLi6UturapkNMpq-4qt31H05tOhA3uJY4xamt79Y/template/preview"
+                        }
+                      ]
+                    },
+                    {
+                      "itemTitle": "Part 5 Student Worksheet",
+                      "itemCat": "NA",
+                      "links": [
+                        {
+                          "linkText": "PDF",
+                          "url": "https://docs.google.com/document/d/1ZAoZ_E2Jm6R5zI9fswxCorDS4AiCi9bxlvAZxrFGysY/export?format=pdf"
+                        },
+                        {
+                          "linkText": "Copy to My Google Drive",
+                          "url": "https://docs.google.com/document/d/1ZAoZ_E2Jm6R5zI9fswxCorDS4AiCi9bxlvAZxrFGysY/"
+                        }
+                      ]
+                    },
+                    {
+                      "itemTitle": "Part 5 Teacher Worksheet",
+                      "itemCat": "NA",
+                      "links": [
+                        {
+                          "linkText": "PDF",
+                          "url": "https://docs.google.com/document/d/17pVB3Aty3FHTRtH5-3ntvluGNMv_HBBuuruTBezuoQk/export?format=pdf"
+                        },
+                        {
+                          "linkText": "Copy to My Google Drive",
+                          "url": "https://docs.google.com/document/d/17pVB3Aty3FHTRtH5-3ntvluGNMv_HBBuuruTBezuoQk/"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      },
         "TeachingMethod": [
           {
             "id": 5,
@@ -4131,19 +4132,13 @@
           {
             "sub_releases": [
               {
-                "date": null,
-                "notes": "This is intended to be taught in a single day. Includes both classroom and a remote version with Nearpod.",
-                "summary": "Initial lesson build. ",
+                "date": "12-9-2021",
+                "notes": "",
+                "summary": "Initial lesson build.",
                 "version": "0.1.0",
                 "acknowledgments": "NA"
-              },
-              {
-                "date": null,
-                "notes": null,
-                "summary": "Minor update to assets and styling.",
-                "version": "0.1.1",
-                "acknowledgments": "NA"
               }
+
             ],
             "major_release": "Beta"
           }
