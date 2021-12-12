@@ -4062,6 +4062,19 @@
             "records": [
               {
                 "name": "Sarah Fitzpatrick, PhD",
+                "url": "http://swfitz.com/",
+                "title": "Assistant Professor",
+                "affiliation": "W.K. Kellogg Biological Station",
+                "location": "Hickory Corners, MI "
+              }
+            ]
+          },
+          {
+            "role": "Provided Images of Florida Panthers",
+            "def": "(Florida Panthers & abnormalities in Part 1 Presentations)",
+            "records": [
+              {
+                "name": "Panther Team",
                 "url": null,
                 "title": null,
                 "affiliation": null,
@@ -4070,16 +4083,9 @@
             ]
           },
           {
-            "role": "Media Provider",
-            "def": "(Provided images of Florida panthers and genetic abnormalities)",
+            "role": "Provided Photo of Other \"Panthers\"",
+            "def": "(Keira & Neron Jaguars in Part 1 Presentation)",
             "records": [
-              {
-                "name": "Panther Team",
-                "url": "http://swfitz.com/",
-                "title": "Assistant Professor",
-                "affiliation": "W.K. Kellogg Biological Station",
-                "location": "Hickory Corners, MI "
-              },
               {
                 "name": "Alma Leaper",
                 "url": "http://www.almaleaper.co.uk/",
@@ -4091,6 +4097,7 @@
           }
         ]
       }
+
     ,
       {
         "__component": "lesson-plan.versions",
