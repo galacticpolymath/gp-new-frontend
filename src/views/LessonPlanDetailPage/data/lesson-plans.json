@@ -3006,9 +3006,10 @@
         "__component": "lesson-plan.collapsible-text-section",
         "id": 6,
         "SectionTitle": "Lesson Preview",
-        "Content": "### *Teach it in 15 Quick Prep:* \n1. Watch Video(s) for Part 1\n2. Look over [Background](#background)\n3. Look over [Procedure](#procedure)\n4. [Teach it!](#teaching_materials)\n5. Repeat for each part and [tell us what you think.](#feedback)\n\n### Lesson Description\n\nStudents learn about genetic rescue, an approach for helping endangered populations recover by introducing closely related individuals from a different population. The lesson is framed around the story of Florida panthers, which are a classic success story for genetic rescue. First, students explore Florida panther recovery through the lens of different stakeholders (ranchers, city-dwellers, and Native Americans), discussing ways that each group may have positive or negative associations with panthers. In Day 2, they then explore different options for helping panthers recovery, discussing pros and cons of genetic rescue, captive breeding, or doing nothing. Day 3 provides necessary scaffolding for a deeper dive into genetic rescue by explaining key concepts in the context of Florida panthers. Students also simulate matings to better understand why inbreeding and recessive traits are so problematic in small populations.\n\nIn Day 4, go deeper into genetic rescue: what can go wrong, and students provide evidence of their understanding of how all the concepts connect through a concept mapping exercise, interspersed with our carefully crafted explainer videos. A key take-home is that even though genetic rescue worked in Florida panthers, it's quite risky to test out conservation strategies on an endangered species. The concluding task is to analyze a table of organisms and their characteristics to determine which would be good models to study the effectiveness of genetic rescue without risking a rare species' extinction. Day 5 builds on this to reveal Dr. Sarah Fitzpatrick's (this lesson's sponsor) research using Trinidadian guppies as a model of genetic rescue. Students then spend much of the class period analyzing real, paired data collected from Florida panthers and guppies. They are asked to compare and label graphs from both species, and synthesize broader conclusions. The lesson leaves open many options for project-based lessons and independent projects.",
+        "Content": "### *Teach it in 15 Quick Prep:* \n1. Watch [Video(s) for Part 1](https://www.youtube.com/watch?v=S98srPEViJs&list=PLz-D3xOC0d88kLYQLB9xeUz7gAaO1JJZb)\n2. Look over [Background](#background)\n3. Look over [Procedure](#procedure)\n4. [Teach it!](#teaching_materials)\n5. Repeat for each part and [tell us what you think.](#feedback)\n\n### Lesson Description\n\nStudents learn about genetic rescue, an approach for helping endangered populations recover by introducing closely related individuals from a different population. The lesson is framed around the story of Florida panthers, which are a classic success story for genetic rescue. First, students explore Florida panther recovery through the lens of different stakeholders (ranchers, city-dwellers, and Native Americans), discussing ways that each group may have positive or negative associations with panthers. In Day 2, they then explore different options for helping panthers recovery, discussing pros and cons of genetic rescue, captive breeding, or doing nothing. Day 3 provides necessary scaffolding for a deeper dive into genetic rescue by explaining key concepts in the context of Florida panthers. Students also simulate matings to better understand why inbreeding and recessive traits are so problematic in small populations.\n\nIn Day 4, go deeper into genetic rescue: what can go wrong, and students provide evidence of their understanding of how all the concepts connect through a concept mapping exercise, interspersed with our carefully crafted explainer videos. A key take-home is that even though genetic rescue worked in Florida panthers, it's quite risky to test out conservation strategies on an endangered species. The concluding task is to analyze a table of organisms and their characteristics to determine which would be good models to study the effectiveness of genetic rescue without risking a rare species' extinction. Day 5 builds on this to reveal Dr. Sarah Fitzpatrick's (this lesson's sponsor) research using Trinidadian guppies as a model of genetic rescue. Students then spend much of the class period analyzing real, paired data collected from Florida panthers and guppies. They are asked to compare and label graphs from both species, and synthesize broader conclusions. The lesson leaves open many options for project-based lessons and independent projects.",
         "InitiallyExpanded": true
       },
+
       {
         "__component": "teaching-resources.teaching-resources",
         "id": 4,
@@ -4026,11 +4027,11 @@
       },
       {
         "__component": "lesson-plan.collapsible-text-section",
-        "id": 9,
         "SectionTitle": "Feedback",
-        "Content": "### Got suggestions or feedback? \n#### We want to know what you think!\n[Please share your thoughts using this form]()\n### What others had to say about this lesson:\n#### Teachers\n\n\n\n  ",
+        "Content": "### Got suggestions or found a bug?\n#### We want to know what you think!\n[Please share your thoughts with this form.](https://forms.gle/9sMQAz8JSjp5F9JV9) We'll use your feedback to improve this and future lessons!",
         "InitiallyExpanded": true
-      },
+      }
+    ,
       {
         "__component": "lesson-plan.collapsible-text-section",
         "id": 10,
@@ -4040,110 +4041,84 @@
       },
       {
         "__component": "lesson-plan.acknowledgments",
-        "id": 2,
         "SectionTitle": "Acknowledgments",
         "Data": [
           {
-            "def": "(Teachers who trialed earlier versions of the lesson with their children or students)",
-            "role": "Beta Testers",
-            "records": [
-              {
-                "url": "URL1",
-                "name": "Name1",
-                "title": "Title1",
-                "location": "Location1",
-                "affiliation": "Affiliation1"
-              },
-              {
-                "url": "URL2",
-                "name": "Name2",
-                "title": "Title2",
-                "location": "Location2",
-                "affiliation": "Affiliation2"
-              }
-            ]
-          },
-          {
-            "def": "(Instructional and subject experts who provided input or validation on content accuracy)",
             "role": "Peer Reviewers",
+            "def": "(Instructional and subject experts who provided input or validation on content accuracy)",
             "records": [
               {
+                "name": "Madelon van de Kerk, PhD",
                 "url": "http://www.westernwildlifelab.com/",
-                "name": "Madelon van de Kerk",
                 "title": "Assistant Professor",
-                "location": "Gunnison, Colorado, USA",
-                "affiliation": "Western Colorado University"
+                "affiliation": "Western Colorado University",
+                "location": "Gunnison, Colorado, USA"
               }
             ]
           },
           {
-            "def": "(Other Def)",
-            "role": "Other Role",
-            "records": [
-              {
-                "url": "URL4",
-                "name": "Name4",
-                "title": "Title4",
-                "location": "Location4",
-                "affiliation": "Affiliation4"
-              }
-            ]
-          },
-          {
-            "def": "(Provided background Florida panther data)",
             "role": "Data Provider",
+            "def": "(Provided background Florida panther data)",
             "records": [
               {
+                "name": "Sarah Fitzpatrick, PhD",
                 "url": null,
-                "name": null,
                 "title": null,
-                "location": null,
-                "affiliation": null
+                "affiliation": null,
+                "location": null
               }
             ]
           },
           {
-            "def": "(Provided images of Florida panthers and genetic abnormalities)",
             "role": "Media Provider",
+            "def": "(Provided images of Florida panthers and genetic abnormalities)",
             "records": [
               {
-                "url": "?",
                 "name": "Panther Team",
-                "title": null,
-                "location": "?",
-                "affiliation": "Florida Fish and Wildlife Conservation Commission"
+                "url": "http://swfitz.com/",
+                "title": "Assistant Professor",
+                "affiliation": "W.K. Kellogg Biological Station",
+                "location": "Hickory Corners, MI "
               },
               {
-                "url": "http://www.almaleaper.co.uk/",
                 "name": "Alma Leaper",
+                "url": "http://www.almaleaper.co.uk/",
                 "title": "Lead Photographer",
-                "location": "UK",
-                "affiliation": "The Big Cat Santuary"
+                "affiliation": "The Big Cat Santuary",
+                "location": "UK"
               }
             ]
-          }
-        ]
-      },
-      {
-        "__component": "lesson-plan.versions",
-        "id": 2,
-        "SectionTitle": "Version Notes",
-        "Data": [
-          {
-            "sub_releases": [
-              {
-                "date": "12-9-2021",
-                "notes": "",
-                "summary": "Initial lesson build.",
-                "version": "0.1.0",
-                "acknowledgments": "NA"
-              }
-
-            ],
-            "major_release": "Beta"
           }
         ]
       }
+    ,
+      {
+        "__component": "lesson-plan.versions",
+        "SectionTitle": "Version Notes",
+        "Data": [
+          {
+            "major_release": "Beta",
+            "sub_releases": [
+              {
+                "version": "0.1.0",
+                "date": "Dec 09, 2021",
+                "summary": "Initial lesson build. ",
+                "notes": "NA",
+                "acknowledgments": "NA"
+              },
+              {
+                "version": "0.1.1",
+                "date": "Dec 12, 2021",
+                "summary": "Fixed version number issue & added Video Links to Teach it in 15 Quick Prep",
+                "notes": "NA",
+                "acknowledgments": "NA"
+              }
+            ]
+          }
+        ]
+      }
+
+
     ],
     "CoverImage": {
       "id": 22,
