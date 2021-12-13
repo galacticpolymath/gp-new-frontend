@@ -141,13 +141,127 @@
           },
           "created_at": "2021-03-20T23:52:11.233Z",
           "updated_at": "2021-03-20T23:52:11.258Z"
-        }
+        },
+        "Description": "This lesson teaches students about data visualization (how to read and interpret scatter plots, dot plots, and histograms), and connects to a broader theme of how our assumptions affect our conclusions. Students learn how scientists and birders alike have assumed for decades that most female birds don't sing. As students explore real data from a recent study, they will learn how this assumption could be reinforced by the fact that females sing much less than males, and further, how this biased oversight has limited our understanding of bird research from its very beginnings. [See Scientific Background](https://www.galacticpolymath.com/lessons/1/#background) for details.\n\nThe lesson will take 3 class periods for most learners. Students dive in with a data literacy puzzle, which we call a “Polymath Puzzle.” Students are given a figure from a current scientific study on barn swallows (a common bird across the world), but with text elements coded with an alphabetic shift (e.g. each letter is shifted: A to B, B to C, and so on). They have to work in teams (or individually) to decipher the messages, and then try to understand the figure. This is a high-level data literacy task that piques students’ natural love of puzzle-solving, while working on GRIT/grappling and the [21st Century Skills (4 Cs)](https://www.aeseducation.com/blog/four-cs-21st-century-skills). Videos guide students through each stage of the Polymath Puzzle. In Parts 2 and 3, students create and interpret histograms from the same data, allowing for a deeper understanding of the pros and cons of scatter plots and histograms for visualizing data patterns. The culminating task is for students to synthesize the conclusions from the two types of graph, along with additional background information to hypothesize a reason for why female song has been missed until 2020 in this widely studied species."
       },
       {
-        "__component": "lesson-plan.collapsible-text-section",
-        "id": 4,
+        "__component": "lesson-plan.lesson-preview",
         "SectionTitle": "Lesson Preview",
-        "Content": "### Lesson Trailer:\n<div class=\"iframeContainer\">\n<iframe src=\"https://player.vimeo.com/video/540345409?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479\" frameborder=\"0\" allow=\"autoplay; fullscreen; picture-in-picture\" allowfullscreen style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" title=\"Lesson Trailer: &amp;quot;Females Singing to be Heard&amp;quot;\"></iframe>\n</div>\n\n### *Teach it in 15:* \nThese quick prep presentations are intended to give someone with no training in the lesson's subject matter enough background to lead the lesson, in 15 minutes or less. Additional detail on lesson procedure and scientific background are provided below.\n#### [→ Teach It in 15 | Part 1: Ciphers and Data Visuals](https://docs.google.com/presentation/d/1oGcH9nQZnII-5SyKuSZ3wz4IEXZTMQ6FNMF7yTWGz0Y/present)\n#### [→ Teach It in 15 | Part 2: From Tables to Graphs](https://docs.google.com/presentation/d/1w_rLdq_TAef4e2Ge83j3NCGZqdYtDMclK67xgQdR2jw/present)\n#### [→ Teach It in 15 | Part 3: Visualizing Song Data](https://docs.google.com/presentation/d/1ZD9CBPZDe3cJpn7jC_uWJG--WYz8O1heJE0z3pYzgbU/present)  \n\n### Lesson Description\n\nThis lesson teaches students about data visualization (how to read and interpret scatter plots, dot plots, and histograms), and connects to a broader theme of how our assumptions affect our conclusions. Students learn how scientists and birders alike have assumed for decades that most female birds don't sing. As students explore real data from a recent study, they will learn how this assumption could be reinforced by the fact that females sing much less than males, and further, how this biased oversight has limited our understanding of bird research from its very beginnings. [See Scientific Background](#background) for details.\n  \nThe lesson will take 3 class periods for most learners. Students dive in with a data literacy puzzle, which we call a “Polymath Puzzle.” Students are given a figure from a current scientific study on barn swallows (a common bird across the world), but with text elements coded with an alphabetic shift (e.g. each letter is shifted: A to B, B to C, and so on). They have to work in teams (or individually) to decipher the messages, and then try to understand the figure. This is a high-level data literacy task that piques students’ natural love of puzzle-solving, while working on GRIT/grappling and the [21st Century Skills (4 Cs)](https://www.aeseducation.com/blog/four-cs-21st-century-skills). Videos guide students through each stage of the Polymath Puzzle. In Parts 2 and 3, students create and interpret histograms from the same data, allowing for a deeper understanding of the pros and cons of scatter plots and histograms for visualizing data patterns. The culminating task is for students to synthesize the conclusions from the two types of graph, along with additional background information to hypothesize a reason for why female song has been missed until 2020 in this widely studied species.",
+        "Multimedia": [
+          {
+            "order": 1,
+            "type": "video",
+            "title": "Lesson Trailer: \"Females Singing to be Heard\"",
+            "description": "A brief overview of our lesson \"Females singing to be heard: Challenging long-held assumptions about birdsong through data visualization,\" providing broader context from two authors of the study this lesson is based on.\nFull Lesson Plan: https://www.galacticpolymath.com/less...​\nSign up for emails to learn about all our free lesson plans and learning tools: https://galacticpolymath.us8.list-man...​\nAfter you teach it, we would love your feedback: https://docs.google.com/forms/d/e/1FA...​\nFunded by the Animal Behaviour Society (https://www.animalbehaviorsociety.org...​)",
+            "lessonRelevance": "A brief overview of the lesson, providing broader context from two authors of the study this lesson is based on.",
+            "by": "Galactic Polymath",
+            "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
+            "keywords": "histograms, scatter plots, data literacy, interdisciplinary lessons, STEM, STEAM",
+            "mainLink": "https://www.youtube.com/embed/HSBO60ZNeCo",
+            "vimeoLink": "https://vimeo.com/540345409",
+            "filename": "NA",
+            "otherLink": "NA"
+          },
+          {
+            "order": 2,
+            "type": "video",
+            "title": "How to solve the Polymath Puzzle from the \"Females Sing\" lesson",
+            "description": "Part of the GP lesson \"Females singing to be heard: Challenging long-held assumptions about birdsong through data visualization\". \nhttps://www.galacticpolymath.com/lessons/1\nThis video explains strategies for solving this Polymath Puzzle–a graph with labels encoded using an alphabetic shift. By taking a real scientific figure and turning it into a puzzle, this activity provides a strong hook for students to engage in a lesson on scatter plots which builds key data literacy skills which are important for making informed decisions in the digital era.",
+            "lessonRelevance": "Explains strategies for solving the Polymath Puzzle. This is an engagement hook that blends a simple alphabetic shift puzzle with a data literacy challenge.",
+            "by": "Galactic Polymath",
+            "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
+            "keywords": "STEAM education,STEAM lessons,STEM education,bird song,birdsong,cipher,data literacy,histogram,interdisciplinary lesson,scatter plots",
+            "mainLink": "https://www.youtube.com/embed/M1u041BvjtI",
+            "vimeoLink": {},
+            "filename": "NA",
+            "otherLink": "NA"
+          },
+          {
+            "order": 3,
+            "type": "video",
+            "title": "How to read the deciphered scatter plot",
+            "description": "Part of the GP lesson \"Females singing to be heard: Challenging long-held assumptions about birdsong through data visualization\". \nhttps://www.galacticpolymath.com/lessons/1\nThis video guides students through how to read a scatter plot and how this visualization tells a story. Specifically, it guides students with how to read and interpret axis labels and notice patterns in the data to hypothesize about its meaning.",
+            "lessonRelevance": "Provides scaffolding for understanding how to read this graph (which comes straight from a recent study) and notice patterns.",
+            "by": "Galactic Polymath",
+            "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
+            "keywords": "STEAM education,STEAM lessons,STEM education,bird song,birdsong,cipher,data literacy,histogram,interdisciplinary lesson,scatter plots",
+            "mainLink": "https://www.youtube.com/embed/of4tjz4fBl4",
+            "vimeoLink": {},
+            "filename": "NA",
+            "otherLink": "NA"
+          },
+          {
+            "order": 4,
+            "type": "video",
+            "title": "Polymath Puzzle Reveal—Is the graph about birds, spiders, whales,...?",
+            "description": "Part of the GP lesson \"Females singing to be heard: Challenging long-held assumptions about birdsong through data visualization\". \nhttps://www.galacticpolymath.com/lessons/1\nThe study's lead author, Dr. Matthew Wilkins, explains how the data was collected, providing footage and stories from the fieldwork with barn swallows, and provides broader context for why the study's findings are important for our understanding of animal communication.",
+            "lessonRelevance": "Explains what this graph is actually about, providing background on female song in barn swallows and the field work employed to study it.",
+            "by": "Galactic Polymath",
+            "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
+            "keywords": "STEAM lessons,STEM education,STEAM education,interdisciplinary lesson,data literacy,scatter plots,cipher,bird song,birdsong,histogram",
+            "mainLink": "https://www.youtube.com/embed/91gnGO5DASI",
+            "vimeoLink": {},
+            "filename": "NA",
+            "otherLink": "NA"
+          },
+          {
+            "order": 5,
+            "type": "video",
+            "title": "Scatter plots or histograms? Why data visualization is important",
+            "description": "Part of the GP lesson \"Females singing to be heard: Challenging long-held assumptions about birdsong through data visualization\". \nhttps://www.galacticpolymath.com/lessons/1\nThis video highlights the vital importance of data literacy. It explains that during peer review, a scientist requested that the scatter plot in the Polymath Puzzle (based on an actual figure in the scientific paper) should have been a histogram. Next, the students will be asked to use the raw study data to create a histogram and decide which is actually a better way to visualize the study findings.",
+            "lessonRelevance": "This video highlights the vital importance of data literacy. It asks students to compare two different types of graph and decide which is a better visual for demonstrating the main findings of the study.",
+            "by": "Galactic Polymath",
+            "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
+            "keywords": "STEAM lessons,STEM education,STEAM education,interdisciplinary lesson,data literacy,scatter plots,cipher,Nearly Impossible Task,NIT,bird song,birdsong,histogram",
+            "mainLink": "https://www.youtube.com/embed/e0PZJr-kL2g",
+            "vimeoLink": {},
+            "filename": "NA",
+            "otherLink": "NA"
+          },
+          {
+            "order": 6,
+            "type": "video",
+            "title": "Connections between dot plots and histograms (with sound)",
+            "description": "This animation was developed to show the logical connections between a dot plot, a binned dot plot, and a histogram. The goal is for students to have a clearer understanding of what these three types of graphs are showing and to convey how the same data can be represented in different ways. We hope the silly sound effects make this a little more interesting for students, but mute if not :)",
+            "lessonRelevance": "This animation was developed to show the logical connections between a dot plot, a binned dot plot, and a histogram. The silly sounds are added for memorability.",
+            "by": "Galactic Polymath",
+            "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
+            "keywords": "K-12,STEM,STEMed,data literacy,data visualizations,graphs",
+            "mainLink": "https://www.youtube.com/embed/cA89FYd6biU",
+            "vimeoLink": {},
+            "filename": "NA",
+            "otherLink": "NA"
+          },
+          {
+            "order": 7,
+            "type": "video",
+            "title": "Getting to know your data: Counting barn swallow songs",
+            "description": "This video demonstrates how to count barn swallow songs to generate the data examined in the \"Females Singing to be Heard\" lesson in the \"Assumptions Matter\" unit.\nhttps://www.galacticpolymath.com/lessons/1 \nThe video supports Part 3 of the lesson, to deepen student engagement by showing by showing what the data actually represent in the real world.",
+            "lessonRelevance": "This video demonstrates how to count barn swallow songs to generate the data examined.",
+            "by": "Galactic Polymath",
+            "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
+            "keywords": "sample size,behavior,barn swallow,bird song,birds,song",
+            "mainLink": "https://www.youtube.com/embed/ZsZcwhhJLFQ",
+            "vimeoLink": {},
+            "filename": "NA",
+            "otherLink": "NA"
+          },
+          {
+            "order": 8,
+            "type": "video",
+            "title": "Scientific Background: Female barn swallows sing",
+            "description": "A video related to the 2020 study by Wilkins, et al for the first time describing female song in one of the most widely researched songbird species. Until now, females were thought to sing the same song as males or not sing at all, neither of which is accurate.\nThis video provides extra background context for our lesson \"\"Females singing to be heard: Challenging long-held assumptions about birdsong through data visualization\"\". \nhttps://www.galacticpolymath.com/lessons/1\nPaper: Wilkins MR, Odom KJ, Benedict L, Safran RJ (2020) \"\"Analysis of female song provides insight into the evolution of dimorphism in a widely studied songbird\"\" https://www.biorxiv.org/content/10.1101/2020.03.28.013433v1",
+            "lessonRelevance": "This video provides extra background context for the lesson. The video is not included in the lesson, but is provided for your background or if you want to use it in some way.",
+            "by": "Galactic Polymath",
+            "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
+            "keywords": "STEAM,science,birds,barn swallows,birdsong,female song,middle school math lessons",
+            "mainLink": "https://www.youtube.com/embed/eEpMtpyie74",
+            "vimeoLink": {},
+            "filename": "NA",
+            "otherLink": "NA"
+          }
+        ],
+        "QuickPrep": "1. Watch Video(s) for Part 1\n2. Look over [Background](#background)\n3. Look over [Procedure](#procedure)\n4. [Teach it!](#teaching_materials)\n5. Repeat for each part and [tell us what you think.](#feedback)\n",
         "InitiallyExpanded": true
       },
       {
@@ -2918,6 +3032,7 @@
             "Value": "extinction"
           }
         ],
+        "Description": "Students learn about genetic rescue, an approach for helping endangered populations recover by introducing closely related individuals from a different population. The lesson is framed around the story of Florida panthers, which are a classic success story for genetic rescue. First, students explore Florida panther recovery through the lens of different stakeholders (ranchers, city-dwellers, and Native Americans), discussing ways that each group may have positive or negative associations with panthers. In Day 2, they then explore different options for helping panthers recovery, discussing pros and cons of genetic rescue, captive breeding, or doing nothing. Day 3 provides necessary scaffolding for a deeper dive into genetic rescue by explaining key concepts in the context of Florida panthers. Students also simulate matings to better understand why inbreeding and recessive traits are so problematic in small populations.\n\nIn Day 4, go deeper into genetic rescue: what can go wrong, and students provide evidence of their understanding of how all the concepts connect through a concept mapping exercise, interspersed with our carefully crafted explainer videos. A key take-home is that even though genetic rescue worked in Florida panthers, it's quite risky to test out conservation strategies on an endangered species. The concluding task is to analyze a table of organisms and their characteristics to determine which would be good models to study the effectiveness of genetic rescue without risking a rare species' extinction. Day 5 builds on this to reveal Dr. Sarah Fitzpatrick's (this lesson's sponsor) research using Trinidadian guppies as a model of genetic rescue. Students then spend much of the class period analyzing real, paired data collected from Florida panthers and guppies. They are asked to compare and label graphs from both species, and synthesize broader conclusions. The lesson leaves open many options for project-based lessons and independent projects.",
         "SteamEpaulette": {
           "id": 25,
           "name": "GP-Learning-Epaulette_.png",
@@ -3003,368 +3118,409 @@
         }
       },
       {
-        "__component": "lesson-plan.collapsible-text-section",
-        "id": 6,
+        "__component": "lesson-plan.lesson-preview",
         "SectionTitle": "Lesson Preview",
-        "Content": "### *Teach it in 15 Quick Prep:* \n1. Watch [Video(s) for Part 1](https://www.youtube.com/watch?v=S98srPEViJs&list=PLz-D3xOC0d88kLYQLB9xeUz7gAaO1JJZb)\n2. Look over [Background](#background)\n3. Look over [Procedure](#procedure)\n4. [Teach it!](#teaching_materials)\n5. Repeat for each part and [tell us what you think.](#feedback)\n\n### Lesson Description\n\nStudents learn about genetic rescue, an approach for helping endangered populations recover by introducing closely related individuals from a different population. The lesson is framed around the story of Florida panthers, which are a classic success story for genetic rescue. First, students explore Florida panther recovery through the lens of different stakeholders (ranchers, city-dwellers, and Native Americans), discussing ways that each group may have positive or negative associations with panthers. In Day 2, they then explore different options for helping panthers recovery, discussing pros and cons of genetic rescue, captive breeding, or doing nothing. Day 3 provides necessary scaffolding for a deeper dive into genetic rescue by explaining key concepts in the context of Florida panthers. Students also simulate matings to better understand why inbreeding and recessive traits are so problematic in small populations.\n\nIn Day 4, go deeper into genetic rescue: what can go wrong, and students provide evidence of their understanding of how all the concepts connect through a concept mapping exercise, interspersed with our carefully crafted explainer videos. A key take-home is that even though genetic rescue worked in Florida panthers, it's quite risky to test out conservation strategies on an endangered species. The concluding task is to analyze a table of organisms and their characteristics to determine which would be good models to study the effectiveness of genetic rescue without risking a rare species' extinction. Day 5 builds on this to reveal Dr. Sarah Fitzpatrick's (this lesson's sponsor) research using Trinidadian guppies as a model of genetic rescue. Students then spend much of the class period analyzing real, paired data collected from Florida panthers and guppies. They are asked to compare and label graphs from both species, and synthesize broader conclusions. The lesson leaves open many options for project-based lessons and independent projects.",
+        "Multimedia": [
+          {
+            "order": 1,
+            "type": "video",
+            "title": "The Return of The Florida Panther",
+            "description": "Did you know Florida had panthers? The Florida panther, Puma concolor coryi, is a critically endangered species in the southern regions of Florida. Once rare and almost never seen, the Florida panther has bounced back from a brush with extinction to the point where more frequent encounters have people asking questions about this apex predator. There are misconceptions, misinformation, and misunderstandings about the panther and its habitat, so ecologist and filmmaker Chris Morgan travelled to Florida to get to the bottom of it. ",
+            "lessonRelevance": "For Part 1: This video provides background on the plight of Florida panthers, and different perspectives about their societal significance. Provides a starting point for discussions about different strategies for saving endangered species and a hook for exploring genetic rescue.",
+            "by": "UPROAR",
+            "byLink": "https://www.youtube.com/channel/UCKMBsN-udVTDvi0T67bU0Eg",
+            "keywords": "endangered species, Florida panther, puma, conservation, success story",
+            "mainLink": "https://www.youtube.com/embed/S98srPEViJs",
+            "vimeoLink": "NA",
+            "filename": "NA",
+            "otherLink": "NA"
+          },
+          {
+            "order": 2,
+            "type": "video",
+            "title": "What is genetic rescue, and can we use it to save endangered species?",
+            "description": "This video is part of \"Genetic Rescue to the Rescue,\" a Galactic Polymath lesson about endangered species, why they matter, what we lose if they go extinct, and what we can do to save them. \nFlorida panthers (Puma concolor coryi) nearly went extinct in the 1990s. Here, we learn what happened and how wildlife managers tried to bring them back. Through this story, we explore connected concepts of how habitat fragmentation affects the flow of genes, and how this can lead to increasing risk of extinction in endangered species (the \"Extinction Vortex\"). The video ends with an open-ended question about what common species we could use to study endangered species recovery so that we don't run the chance of inadvertently destroying what we're trying to save.\nCheck out the lesson at https://www.galacticpolymath.com/lessons",
+            "lessonRelevance": "For Part 4: This video summarizes spirals back on the key learning objectives and review topics from Parts 1-3, and provides deeper context around genetic rescue, its potential risks, and benefits. The video ends with a prompt that ties directly into the P4 topic of why model organisms are used to study endangered species.",
+            "by": "Galactic Polymath",
+            "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
+            "keywords": "endangered species, Florida panther, puma, conservation, genetic rescue, gene flow, genetic variation, DNA, extinction vortex",
+            "mainLink": "https://www.youtube.com/embed/oFQmNq8sJ2Y",
+            "vimeoLink": "NA",
+            "filename": "NA",
+            "otherLink": "NA"
+          },
+          {
+            "order": 3,
+            "type": "video",
+            "title": "Saving a species through genetic rescue: Why we need model organisms",
+            "description": "This video is part of \"Genetic Rescue to the Rescue,\" a Galactic Polymath lesson about endangered species, why they matter, what we lose if they go extinct, and what we can do to save them. This video focuses on model organisms—species used to study a problem that is impossible to study in the target organism. In this case, we learn about how Dr. Sarah Fitzpatrick, PhD uses Trinidadian guppies to study genetic rescue—a strategy used to bring back species like endangered Florida panthers from the brink of extinction. \nCheck out the lesson at https://www.galacticpolymath.com/lessons",
+            "lessonRelevance": "For Part 5: Understanding why model organisms are necessary to study endangered species and learning about Dr. Sarah Fitzpatrick's research to support and motivate analysis comparing her guppy research data to parallel data from Florida panther genetic rescue efforts.",
+            "by": "Galactic Polymath",
+            "byLink": "https://www.youtube.com/channel/UCfyBNvN3CH4uWmwOCQVhmhg/featured",
+            "keywords": "endangered species, Florida panther, puma, guppies, conservation, genetic rescue, gene flow, genetic variation, DNA, extinction vortex, women in STEM, real scientist",
+            "mainLink": "https://www.youtube.com/embed/AiXyHxv4Sx4",
+            "vimeoLink": "NA",
+            "filename": "NA",
+            "otherLink": "NA"
+          }
+        ],
+        "QuickPrep": "1. Watch Video(s) for Part 1\n2. Look over [Background](#background)\n3. Look over [Procedure](#procedure)\n4. [Teach it!](#teaching_materials)\n5. Repeat for each part and [tell us what you think.](#feedback)",
         "InitiallyExpanded": true
       },
-
       {
         "__component": "teaching-resources.teaching-resources",
         "id": 4,
         "SectionTitle": "Teaching Materials",
         "Data": {
-
-        "classroom": {
-          "resourceSummary": [
-            {
-              "nItems": 5,
-              "itemCat": "Digital Items",
-              "itemsGroup": [
-                {
-                  "item": "Presentation",
-                  "itemExplanation": "x 5 Parts"
-                }
-              ]
-            },
-            {
-              "nItems": 11,
-              "itemCat": "Printed Items",
-              "itemsGroup": [
-                {
-                  "item": "Teacher Worksheet",
-                  "itemExplanation": "x 5 Parts"
-                },
-                {
-                  "item": "Student Worksheet",
-                  "itemExplanation": "x 5 Parts"
-                },
-                {
-                  "item": "\"Big\" and \"Small\" Panther Population Cards (for Part 2)",
-                  "itemExplanation": "Set of cards for each group"
-                }
-              ]
-            },
-            {
-              "nItems": 6,
-              "itemCat": "Other Requirements",
-              "itemsGroup": [
-                {
-                  "item": "Opaque Envelopes (For Part 2)",
-                  "itemExplanation": "(i.e. 1 for \"Big\" and another for \"Small\" Population cards for each group)"
-                },
-                {
-                  "item": "Scissors (For Part 2)",
-                  "itemExplanation": "For cutting out panther cards"
-                },
-                {
-                  "item": "Teacher's computer",
-                  "itemExplanation": null
-                },
-                {
-                  "item": "Internet Connection",
-                  "itemExplanation": null
-                },
-                {
-                  "item": "Projector",
-                  "itemExplanation": null
-                },
-                {
-                  "item": "Set of Speakers",
-                  "itemExplanation": null
-                }
-              ]
-            }
-          ],
-          "gradeVariantNotes": {},
-          "resources": [
-            {
-              "grades": "Grades 9-12",
-              "gradePrefix": "G9-12",
-              "links": {
-                "linkText": "Download G9-12 Materials for All Parts",
-                "url": "https://drive.google.com/drive/folders/1-LEgUSzHNVGq59c33AmFZD3mBsFp3MOK"
+          "classroom": {
+            "resourceSummary": [
+              {
+                "nItems": 5,
+                "itemCat": "Digital Items",
+                "itemsGroup": [
+                  {
+                    "item": "Presentation",
+                    "itemExplanation": "x 5 Parts"
+                  }
+                ]
               },
-              "parts": [
-                {
-                  "part": 1,
-                  "title": "Florida Panthers in Peril",
-                  "preface": "Introduction to the plight of the critically endangered Florida panther.",
-                  "itemList": [
-                    {
-                      "itemTitle": "Presentation",
-                      "itemCat": "presentation",
-                      "links": [
-                        {
-                          "linkText": "Present Now",
-                          "url": "https://docs.google.com/presentation/d/11-0q_jFckw3jo3IrmmGpPRwVsfQ6LOy9OoSMxn5Hvo4/present"
-                        },
-                        {
-                          "linkText": "Copy to My Google Drive",
-                          "url": "https://docs.google.com/presentation/d/11-0q_jFckw3jo3IrmmGpPRwVsfQ6LOy9OoSMxn5Hvo4/template/preview"
-                        }
-                      ]
-                    },
-                    {
-                      "itemTitle": "Part 1 Student Worksheet",
-                      "itemCat": "NA",
-                      "links": [
-                        {
-                          "linkText": "PDF",
-                          "url": "https://docs.google.com/document/d/1pV0IRpph3dnb8V-o0uKfuNjedNV8BFsdNBoG2BSKK0o/export?format=pdf"
-                        },
-                        {
-                          "linkText": "Copy to My Google Drive",
-                          "url": "https://docs.google.com/document/d/1pV0IRpph3dnb8V-o0uKfuNjedNV8BFsdNBoG2BSKK0o/"
-                        }
-                      ]
-                    },
-                    {
-                      "itemTitle": "Part 1 Teacher Worksheet",
-                      "itemCat": "NA",
-                      "links": [
-                        {
-                          "linkText": "PDF",
-                          "url": "https://docs.google.com/document/d/1QOCEvwIk8366_VK18TnXMCyqDyy9sx6D12q5xjcGK_U/export?format=pdf"
-                        },
-                        {
-                          "linkText": "Copy to My Google Drive",
-                          "url": "https://docs.google.com/document/d/1QOCEvwIk8366_VK18TnXMCyqDyy9sx6D12q5xjcGK_U/"
-                        }
-                      ]
-                    }
-                  ]
+              {
+                "nItems": 11,
+                "itemCat": "Printed Items",
+                "itemsGroup": [
+                  {
+                    "item": "Teacher Worksheet",
+                    "itemExplanation": "x 5 Parts"
+                  },
+                  {
+                    "item": "Student Worksheet",
+                    "itemExplanation": "x 5 Parts"
+                  },
+                  {
+                    "item": "\"Big\" and \"Small\" Panther Population Cards (for Part 2)",
+                    "itemExplanation": "Set of cards for each group"
+                  }
+                ]
+              },
+              {
+                "nItems": 6,
+                "itemCat": "Other Requirements",
+                "itemsGroup": [
+                  {
+                    "item": "Opaque Envelopes (For Part 2)",
+                    "itemExplanation": "(i.e. 1 for \"Big\" and another for \"Small\" Population cards for each group)"
+                  },
+                  {
+                    "item": "Scissors (For Part 2)",
+                    "itemExplanation": "For cutting out panther cards"
+                  },
+                  {
+                    "item": "Teacher's computer",
+                    "itemExplanation": null
+                  },
+                  {
+                    "item": "Internet Connection",
+                    "itemExplanation": null
+                  },
+                  {
+                    "item": "Projector",
+                    "itemExplanation": null
+                  },
+                  {
+                    "item": "Set of Speakers",
+                    "itemExplanation": null
+                  }
+                ]
+              }
+            ],
+            "gradeVariantNotes": {},
+            "resources": [
+              {
+                "grades": "Grades 9-12",
+                "gradePrefix": "G9-12",
+                "links": {
+                  "linkText": "Download G9-12 Materials for All Parts",
+                  "url": "https://drive.google.com/drive/folders/1-LEgUSzHNVGq59c33AmFZD3mBsFp3MOK"
                 },
-                {
-                  "part": 2,
-                  "title": "Genetics of Endangered Species",
-                  "preface": "Reviews relevant genetics topics including dominant/recessive alleles and genotype vs. phenotype.",
-                  "itemList": [
-                    {
-                      "itemTitle": "Presentation",
-                      "itemCat": "presentation",
-                      "links": [
-                        {
-                          "linkText": "Present Now",
-                          "url": "https://docs.google.com/presentation/d/1d5M-QrO2DVYCRGsJys-p6_lmYHmLKUa9-zfkBigQ7ZM/present"
-                        },
-                        {
-                          "linkText": "Copy to My Google Drive",
-                          "url": "https://docs.google.com/presentation/d/1d5M-QrO2DVYCRGsJys-p6_lmYHmLKUa9-zfkBigQ7ZM/template/preview"
-                        }
-                      ]
-                    },
-                    {
-                      "itemTitle": "Presentation",
-                      "itemCat": "presentation",
-                      "links": [
-                        {
-                          "linkText": "Present Now",
-                          "url": "https://docs.google.com/presentation/d/1rwgBdQ3W9XKdhfEddiBGs5vRxtTDOthOiSZAgNILqUw/present"
-                        },
-                        {
-                          "linkText": "Copy to My Google Drive",
-                          "url": "https://docs.google.com/presentation/d/1rwgBdQ3W9XKdhfEddiBGs5vRxtTDOthOiSZAgNILqUw/template/preview"
-                        }
-                      ]
-                    },
-                    {
-                      "itemTitle": "Part 2 Student Worksheet",
-                      "itemCat": "NA",
-                      "links": [
-                        {
-                          "linkText": "PDF",
-                          "url": "https://docs.google.com/document/d/1522hLLXRKBO8VzALl6WXv4WyuNa_I1jAJormI5tOuH8/export?format=pdf"
-                        },
-                        {
-                          "linkText": "Copy to My Google Drive",
-                          "url": "https://docs.google.com/document/d/1522hLLXRKBO8VzALl6WXv4WyuNa_I1jAJormI5tOuH8/"
-                        }
-                      ]
-                    },
-                    {
-                      "itemTitle": "Part 2 Teacher Worksheet",
-                      "itemCat": "NA",
-                      "links": [
-                        {
-                          "linkText": "PDF",
-                          "url": "https://docs.google.com/document/d/1HkWzEQB69xulxAWz2Xh5tnpDa2Uwj9JSZnLIhJuEMFA/export?format=pdf"
-                        },
-                        {
-                          "linkText": "Copy to My Google Drive",
-                          "url": "https://docs.google.com/document/d/1HkWzEQB69xulxAWz2Xh5tnpDa2Uwj9JSZnLIhJuEMFA/"
-                        }
-                      ]
-                    },
-                    {
-                      "itemTitle": "Part 2 Panther Genotype Cards for Hands On Simulation of Genetics of Inbreeding in Panthers",
-                      "itemCat": "NA",
-                      "links": [
-                        {
-                          "linkText": "PDF",
-                          "url": "https://docs.google.com/presentation/d/1rwgBdQ3W9XKdhfEddiBGs5vRxtTDOthOiSZAgNILqUw/export/pdf"
-                        },
-                        {
-                          "linkText": "Copy to My Google Drive",
-                          "url": "https://docs.google.com/presentation/d/1rwgBdQ3W9XKdhfEddiBGs5vRxtTDOthOiSZAgNILqUw/"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "part": 3,
-                  "title": "The Florida Panther Debate",
-                  "preface": "Delves into what can (or should) be done to help save the Florida Panther. ",
-                  "itemList": [
-                    {
-                      "itemTitle": "Presentation",
-                      "itemCat": "presentation",
-                      "links": [
-                        {
-                          "linkText": "Present Now",
-                          "url": "https://docs.google.com/presentation/d/12kuqfuWeBIlxmtp-50o_yp5i3HWENBu5r0QN7ukxJyU/present"
-                        },
-                        {
-                          "linkText": "Copy to My Google Drive",
-                          "url": "https://docs.google.com/presentation/d/12kuqfuWeBIlxmtp-50o_yp5i3HWENBu5r0QN7ukxJyU/template/preview"
-                        }
-                      ]
-                    },
-                    {
-                      "itemTitle": "Part 3 Student Worksheet",
-                      "itemCat": "NA",
-                      "links": [
-                        {
-                          "linkText": "PDF",
-                          "url": "https://docs.google.com/document/d/15hzLjht_9G8jfyDMk6ybpdDbJeYMO9O-wvhoOgx9ly8/export?format=pdf"
-                        },
-                        {
-                          "linkText": "Copy to My Google Drive",
-                          "url": "https://docs.google.com/document/d/15hzLjht_9G8jfyDMk6ybpdDbJeYMO9O-wvhoOgx9ly8/"
-                        }
-                      ]
-                    },
-                    {
-                      "itemTitle": "Part 3 Teacher Worksheet",
-                      "itemCat": "NA",
-                      "links": [
-                        {
-                          "linkText": "PDF",
-                          "url": "https://docs.google.com/document/d/1_3YoCjZOVkdEkiiyiAn7cOxIgezulVlYyWT3ChPMYr8/export?format=pdf"
-                        },
-                        {
-                          "linkText": "Copy to My Google Drive",
-                          "url": "https://docs.google.com/document/d/1_3YoCjZOVkdEkiiyiAn7cOxIgezulVlYyWT3ChPMYr8/"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "part": 4,
-                  "title": "Deep Dive into Genetic Rescue",
-                  "preface": "Provides an overview of genetic rescue concepts and how it relates to Florida Panther situation. ",
-                  "itemList": [
-                    {
-                      "itemTitle": "Presentation",
-                      "itemCat": "presentation",
-                      "links": [
-                        {
-                          "linkText": "Present Now",
-                          "url": "https://docs.google.com/presentation/d/1jtBh7fTjo-e7hW3rw70vYNY6JTSHhU3U_jYoppfZEp4/present"
-                        },
-                        {
-                          "linkText": "Copy to My Google Drive",
-                          "url": "https://docs.google.com/presentation/d/1jtBh7fTjo-e7hW3rw70vYNY6JTSHhU3U_jYoppfZEp4/template/preview"
-                        }
-                      ]
-                    },
-                    {
-                      "itemTitle": "Part 4 Student Worksheet",
-                      "itemCat": "NA",
-                      "links": [
-                        {
-                          "linkText": "PDF",
-                          "url": "https://docs.google.com/document/d/1y5be2mif380Ee1XpI3dzyTn2WsrVm4zhe95XcG1XHYg/export?format=pdf"
-                        },
-                        {
-                          "linkText": "Copy to My Google Drive",
-                          "url": "https://docs.google.com/document/d/1y5be2mif380Ee1XpI3dzyTn2WsrVm4zhe95XcG1XHYg/"
-                        }
-                      ]
-                    },
-                    {
-                      "itemTitle": "Part 4 Teacher Worksheet",
-                      "itemCat": "NA",
-                      "links": [
-                        {
-                          "linkText": "PDF",
-                          "url": "https://docs.google.com/document/d/1zgylTvNDPslFcPwWyujTkgJphW7GmLrj-QoiirYJ-MA/export?format=pdf"
-                        },
-                        {
-                          "linkText": "Copy to My Google Drive",
-                          "url": "https://docs.google.com/document/d/1zgylTvNDPslFcPwWyujTkgJphW7GmLrj-QoiirYJ-MA/"
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "part": 5,
-                  "title": "Analyzing Real Genetic Rescue Data",
-                  "preface": "Uses real data from a model species to investigate whether genetic rescue is a viable conservation method for Florida Panthers.",
-                  "itemList": [
-                    {
-                      "itemTitle": "Presentation",
-                      "itemCat": "presentation",
-                      "links": [
-                        {
-                          "linkText": "Present Now",
-                          "url": "https://docs.google.com/presentation/d/10SMDLi6UturapkNMpq-4qt31H05tOhA3uJY4xamt79Y/present"
-                        },
-                        {
-                          "linkText": "Copy to My Google Drive",
-                          "url": "https://docs.google.com/presentation/d/10SMDLi6UturapkNMpq-4qt31H05tOhA3uJY4xamt79Y/template/preview"
-                        }
-                      ]
-                    },
-                    {
-                      "itemTitle": "Part 5 Student Worksheet",
-                      "itemCat": "NA",
-                      "links": [
-                        {
-                          "linkText": "PDF",
-                          "url": "https://docs.google.com/document/d/1ZAoZ_E2Jm6R5zI9fswxCorDS4AiCi9bxlvAZxrFGysY/export?format=pdf"
-                        },
-                        {
-                          "linkText": "Copy to My Google Drive",
-                          "url": "https://docs.google.com/document/d/1ZAoZ_E2Jm6R5zI9fswxCorDS4AiCi9bxlvAZxrFGysY/"
-                        }
-                      ]
-                    },
-                    {
-                      "itemTitle": "Part 5 Teacher Worksheet",
-                      "itemCat": "NA",
-                      "links": [
-                        {
-                          "linkText": "PDF",
-                          "url": "https://docs.google.com/document/d/17pVB3Aty3FHTRtH5-3ntvluGNMv_HBBuuruTBezuoQk/export?format=pdf"
-                        },
-                        {
-                          "linkText": "Copy to My Google Drive",
-                          "url": "https://docs.google.com/document/d/17pVB3Aty3FHTRtH5-3ntvluGNMv_HBBuuruTBezuoQk/"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      },
+                "parts": [
+                  {
+                    "part": 1,
+                    "title": "Florida Panthers in Peril",
+                    "preface": "Introduction to the plight of the critically endangered Florida panther.",
+                    "itemList": [
+                      {
+                        "itemTitle": "Presentation",
+                        "itemCat": "presentation",
+                        "links": [
+                          {
+                            "linkText": "Present Now",
+                            "url": "https://docs.google.com/presentation/d/11-0q_jFckw3jo3IrmmGpPRwVsfQ6LOy9OoSMxn5Hvo4/present"
+                          },
+                          {
+                            "linkText": "Copy to My Google Drive",
+                            "url": "https://docs.google.com/presentation/d/11-0q_jFckw3jo3IrmmGpPRwVsfQ6LOy9OoSMxn5Hvo4/template/preview"
+                          }
+                        ]
+                      },
+                      {
+                        "itemTitle": "Part 1 Student Worksheet",
+                        "itemCat": "NA",
+                        "links": [
+                          {
+                            "linkText": "PDF",
+                            "url": "https://docs.google.com/document/d/1pV0IRpph3dnb8V-o0uKfuNjedNV8BFsdNBoG2BSKK0o/export?format=pdf"
+                          },
+                          {
+                            "linkText": "Copy to My Google Drive",
+                            "url": "https://docs.google.com/document/d/1pV0IRpph3dnb8V-o0uKfuNjedNV8BFsdNBoG2BSKK0o/"
+                          }
+                        ]
+                      },
+                      {
+                        "itemTitle": "Part 1 Teacher Worksheet",
+                        "itemCat": "NA",
+                        "links": [
+                          {
+                            "linkText": "PDF",
+                            "url": "https://docs.google.com/document/d/1QOCEvwIk8366_VK18TnXMCyqDyy9sx6D12q5xjcGK_U/export?format=pdf"
+                          },
+                          {
+                            "linkText": "Copy to My Google Drive",
+                            "url": "https://docs.google.com/document/d/1QOCEvwIk8366_VK18TnXMCyqDyy9sx6D12q5xjcGK_U/"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "part": 2,
+                    "title": "Genetics of Endangered Species",
+                    "preface": "Reviews relevant genetics topics including dominant/recessive alleles and genotype vs. phenotype.",
+                    "itemList": [
+                      {
+                        "itemTitle": "Presentation",
+                        "itemCat": "presentation",
+                        "links": [
+                          {
+                            "linkText": "Present Now",
+                            "url": "https://docs.google.com/presentation/d/1d5M-QrO2DVYCRGsJys-p6_lmYHmLKUa9-zfkBigQ7ZM/present"
+                          },
+                          {
+                            "linkText": "Copy to My Google Drive",
+                            "url": "https://docs.google.com/presentation/d/1d5M-QrO2DVYCRGsJys-p6_lmYHmLKUa9-zfkBigQ7ZM/template/preview"
+                          }
+                        ]
+                      },
+                      {
+                        "itemTitle": "Presentation",
+                        "itemCat": "presentation",
+                        "links": [
+                          {
+                            "linkText": "Present Now",
+                            "url": "https://docs.google.com/presentation/d/1rwgBdQ3W9XKdhfEddiBGs5vRxtTDOthOiSZAgNILqUw/present"
+                          },
+                          {
+                            "linkText": "Copy to My Google Drive",
+                            "url": "https://docs.google.com/presentation/d/1rwgBdQ3W9XKdhfEddiBGs5vRxtTDOthOiSZAgNILqUw/template/preview"
+                          }
+                        ]
+                      },
+                      {
+                        "itemTitle": "Part 2 Student Worksheet",
+                        "itemCat": "NA",
+                        "links": [
+                          {
+                            "linkText": "PDF",
+                            "url": "https://docs.google.com/document/d/1522hLLXRKBO8VzALl6WXv4WyuNa_I1jAJormI5tOuH8/export?format=pdf"
+                          },
+                          {
+                            "linkText": "Copy to My Google Drive",
+                            "url": "https://docs.google.com/document/d/1522hLLXRKBO8VzALl6WXv4WyuNa_I1jAJormI5tOuH8/"
+                          }
+                        ]
+                      },
+                      {
+                        "itemTitle": "Part 2 Teacher Worksheet",
+                        "itemCat": "NA",
+                        "links": [
+                          {
+                            "linkText": "PDF",
+                            "url": "https://docs.google.com/document/d/1HkWzEQB69xulxAWz2Xh5tnpDa2Uwj9JSZnLIhJuEMFA/export?format=pdf"
+                          },
+                          {
+                            "linkText": "Copy to My Google Drive",
+                            "url": "https://docs.google.com/document/d/1HkWzEQB69xulxAWz2Xh5tnpDa2Uwj9JSZnLIhJuEMFA/"
+                          }
+                        ]
+                      },
+                      {
+                        "itemTitle": "Part 2 Panther Genotype Cards for Hands On Simulation of Genetics of Inbreeding in Panthers",
+                        "itemCat": "NA",
+                        "links": [
+                          {
+                            "linkText": "PDF",
+                            "url": "https://docs.google.com/presentation/d/1rwgBdQ3W9XKdhfEddiBGs5vRxtTDOthOiSZAgNILqUw/export/pdf"
+                          },
+                          {
+                            "linkText": "Copy to My Google Drive",
+                            "url": "https://docs.google.com/presentation/d/1rwgBdQ3W9XKdhfEddiBGs5vRxtTDOthOiSZAgNILqUw/"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "part": 3,
+                    "title": "The Florida Panther Debate",
+                    "preface": "Delves into what can (or should) be done to help save the Florida Panther. ",
+                    "itemList": [
+                      {
+                        "itemTitle": "Presentation",
+                        "itemCat": "presentation",
+                        "links": [
+                          {
+                            "linkText": "Present Now",
+                            "url": "https://docs.google.com/presentation/d/12kuqfuWeBIlxmtp-50o_yp5i3HWENBu5r0QN7ukxJyU/present"
+                          },
+                          {
+                            "linkText": "Copy to My Google Drive",
+                            "url": "https://docs.google.com/presentation/d/12kuqfuWeBIlxmtp-50o_yp5i3HWENBu5r0QN7ukxJyU/template/preview"
+                          }
+                        ]
+                      },
+                      {
+                        "itemTitle": "Part 3 Student Worksheet",
+                        "itemCat": "NA",
+                        "links": [
+                          {
+                            "linkText": "PDF",
+                            "url": "https://docs.google.com/document/d/15hzLjht_9G8jfyDMk6ybpdDbJeYMO9O-wvhoOgx9ly8/export?format=pdf"
+                          },
+                          {
+                            "linkText": "Copy to My Google Drive",
+                            "url": "https://docs.google.com/document/d/15hzLjht_9G8jfyDMk6ybpdDbJeYMO9O-wvhoOgx9ly8/"
+                          }
+                        ]
+                      },
+                      {
+                        "itemTitle": "Part 3 Teacher Worksheet",
+                        "itemCat": "NA",
+                        "links": [
+                          {
+                            "linkText": "PDF",
+                            "url": "https://docs.google.com/document/d/1_3YoCjZOVkdEkiiyiAn7cOxIgezulVlYyWT3ChPMYr8/export?format=pdf"
+                          },
+                          {
+                            "linkText": "Copy to My Google Drive",
+                            "url": "https://docs.google.com/document/d/1_3YoCjZOVkdEkiiyiAn7cOxIgezulVlYyWT3ChPMYr8/"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "part": 4,
+                    "title": "Deep Dive into Genetic Rescue",
+                    "preface": "Provides an overview of genetic rescue concepts and how it relates to Florida Panther situation. ",
+                    "itemList": [
+                      {
+                        "itemTitle": "Presentation",
+                        "itemCat": "presentation",
+                        "links": [
+                          {
+                            "linkText": "Present Now",
+                            "url": "https://docs.google.com/presentation/d/1jtBh7fTjo-e7hW3rw70vYNY6JTSHhU3U_jYoppfZEp4/present"
+                          },
+                          {
+                            "linkText": "Copy to My Google Drive",
+                            "url": "https://docs.google.com/presentation/d/1jtBh7fTjo-e7hW3rw70vYNY6JTSHhU3U_jYoppfZEp4/template/preview"
+                          }
+                        ]
+                      },
+                      {
+                        "itemTitle": "Part 4 Student Worksheet",
+                        "itemCat": "NA",
+                        "links": [
+                          {
+                            "linkText": "PDF",
+                            "url": "https://docs.google.com/document/d/1y5be2mif380Ee1XpI3dzyTn2WsrVm4zhe95XcG1XHYg/export?format=pdf"
+                          },
+                          {
+                            "linkText": "Copy to My Google Drive",
+                            "url": "https://docs.google.com/document/d/1y5be2mif380Ee1XpI3dzyTn2WsrVm4zhe95XcG1XHYg/"
+                          }
+                        ]
+                      },
+                      {
+                        "itemTitle": "Part 4 Teacher Worksheet",
+                        "itemCat": "NA",
+                        "links": [
+                          {
+                            "linkText": "PDF",
+                            "url": "https://docs.google.com/document/d/1zgylTvNDPslFcPwWyujTkgJphW7GmLrj-QoiirYJ-MA/export?format=pdf"
+                          },
+                          {
+                            "linkText": "Copy to My Google Drive",
+                            "url": "https://docs.google.com/document/d/1zgylTvNDPslFcPwWyujTkgJphW7GmLrj-QoiirYJ-MA/"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "part": 5,
+                    "title": "Analyzing Real Genetic Rescue Data",
+                    "preface": "Uses real data from a model species to investigate whether genetic rescue is a viable conservation method for Florida Panthers.",
+                    "itemList": [
+                      {
+                        "itemTitle": "Presentation",
+                        "itemCat": "presentation",
+                        "links": [
+                          {
+                            "linkText": "Present Now",
+                            "url": "https://docs.google.com/presentation/d/10SMDLi6UturapkNMpq-4qt31H05tOhA3uJY4xamt79Y/present"
+                          },
+                          {
+                            "linkText": "Copy to My Google Drive",
+                            "url": "https://docs.google.com/presentation/d/10SMDLi6UturapkNMpq-4qt31H05tOhA3uJY4xamt79Y/template/preview"
+                          }
+                        ]
+                      },
+                      {
+                        "itemTitle": "Part 5 Student Worksheet",
+                        "itemCat": "NA",
+                        "links": [
+                          {
+                            "linkText": "PDF",
+                            "url": "https://docs.google.com/document/d/1ZAoZ_E2Jm6R5zI9fswxCorDS4AiCi9bxlvAZxrFGysY/export?format=pdf"
+                          },
+                          {
+                            "linkText": "Copy to My Google Drive",
+                            "url": "https://docs.google.com/document/d/1ZAoZ_E2Jm6R5zI9fswxCorDS4AiCi9bxlvAZxrFGysY/"
+                          }
+                        ]
+                      },
+                      {
+                        "itemTitle": "Part 5 Teacher Worksheet",
+                        "itemCat": "NA",
+                        "links": [
+                          {
+                            "linkText": "PDF",
+                            "url": "https://docs.google.com/document/d/17pVB3Aty3FHTRtH5-3ntvluGNMv_HBBuuruTBezuoQk/export?format=pdf"
+                          },
+                          {
+                            "linkText": "Copy to My Google Drive",
+                            "url": "https://docs.google.com/document/d/17pVB3Aty3FHTRtH5-3ntvluGNMv_HBBuuruTBezuoQk/"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        },
         "TeachingMethod": [
           {
             "id": 5,
@@ -3773,8 +3929,7 @@
             }
           ]
         }
-      }
-    ,
+      },
       {
         "__component": "lesson-plan.collapsible-text-section",
         "id": 8,
@@ -4143,8 +4298,7 @@
         "SectionTitle": "Feedback",
         "Content": "### Got suggestions or found a bug?\n#### We want to know what you think!\n[Please share your thoughts with this form.](https://forms.gle/9sMQAz8JSjp5F9JV9) We'll use your feedback to improve this and future lessons!",
         "InitiallyExpanded": true
-      }
-    ,
+      },
       {
         "__component": "lesson-plan.collapsible-text-section",
         "id": 10,
@@ -4209,9 +4363,7 @@
             ]
           }
         ]
-      }
-
-    ,
+      },
       {
         "__component": "lesson-plan.versions",
         "SectionTitle": "Version Notes",
@@ -4237,8 +4389,6 @@
           }
         ]
       }
-
-
     ],
     "CoverImage": {
       "id": 22,
