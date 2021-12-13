@@ -11,7 +11,7 @@ import LessonPart from "./LessonPart";
 import "./style.scss";
 const useStyles = makeStyles(lessonPlanStyle);
 
-const Procedure = ({ index, SectionTitle, LessonDuration, Data }) => {
+const Procedure = ({ index, SectionTitle, Data }) => {
   const classes = useStyles();
   return (
     <CollapsibleSection
@@ -26,7 +26,7 @@ const Procedure = ({ index, SectionTitle, LessonDuration, Data }) => {
             <h4>
               <TimerIcon className={classes.inlineIcon} />
               {"  "}
-              {LessonDuration}
+              {Data.lessonDur}
             </h4>
             <RichText content={Data.lessonPreface} />
           </div>
@@ -42,7 +42,6 @@ const Procedure = ({ index, SectionTitle, LessonDuration, Data }) => {
 Procedure.propTypes = {
   index: PropTypes.number,
   SectionTitle: PropTypes.string,
-  LessonDuration: PropTypes.string,
   Data: PropTypes.object,
 };
 
