@@ -63,15 +63,38 @@
   }
   
   li.slide {
-    padding: 1rem;
+    padding: .75rem;
     .Slide {
       text-align: left;
       height: 100%;
-      padding: 1.5rem;
+      padding: .75rem;
       margin-bottom: 0;
       iframe {
         margin: 0 !important;
         width: 100% !important;
+        height: 12rem;
+      }
+      @media (min-width: 430px) {
+        iframe {
+          height: 16rem;
+        }
+      }
+      @media (min-width: map-get($grid-breakpoints, "sm")) {
+        padding: 1rem;
+        iframe {
+          height: 18rem;
+        }
+      }
+      @media (min-width: map-get($grid-breakpoints, "md")) {
+        padding: 1.5rem;
+        iframe {
+          height: 20rem;
+        }
+      }
+      @media (min-width: map-get($grid-breakpoints, "lg")) {
+        iframe {
+          height: 25rem;
+        }
       }
       .caption {
         p {
