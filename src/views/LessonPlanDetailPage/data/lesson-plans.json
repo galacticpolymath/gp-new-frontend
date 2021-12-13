@@ -3409,259 +3409,372 @@
       },
       {
         "__component": "lesson-plan.procedure",
-        "id": 5,
         "SectionTitle": "Procedure",
-        "LessonDuration": "5 x 45 min class periods",
-        "Chunks": null,
         "Data": {
+          "lessonPreface": "Part 2 is perhaps the densest. Everything builds toward interpreting real data from genetic rescue in Florida panthers and Trinidadian guppies (a model for studying endangered species) in Part 5.",
+          "lessonDur": "5 x 45 min",
           "parts": [
             {
+              "partNum": 1,
+              "partTitle": "Florida Panthers in Peril",
+              "partDur": 45,
+              "partPreface": "Introduction to the plight of the critically endangered Florida panther.",
               "chunks": [
                 {
+                  "chunkTitle": "Warm-Up",
+                  "chunkStart": 0,
+                  "chunkDur": 5,
                   "steps": [
                     {
                       "Step": 1,
-                      "Vocab": "- **subspecies:** a distinct population of a species, typically due to geographic isolation",
                       "StepTitle": "Polymath Puzzle #1",
+                      "StepQuickDescription": "What Question are we Investigating?",
                       "StepDetails": "Students interpret a series of images (rebus puzzle) to determine the focus of this lesson.",
-                      "TeachingTips": "This type of puzzle is called a [rebus](https://en.wikipedia.org/wiki/Rebus).",
-                      "StepQuickDescription": "What Question are we Investigating?"
+                      "Vocab": "- **subspecies:** a distinct population of a species, typically due to geographic isolation",
+                      "TeachingTips": "This type of puzzle is called a [rebus](https://en.wikipedia.org/wiki/Rebus)."
                     }
-                  ],
-                  "chunkDur": 5,
-                  "chunkStart": 0,
-                  "chunkTitle": "Engagement Hook"
+                  ]
                 },
                 {
+                  "chunkTitle": "Meet the Florida Panther",
+                  "chunkStart": 5,
+                  "chunkDur": 5,
                   "steps": [
                     {
                       "Step": 2,
                       "StepTitle": "Scientific vs. Common Names",
+                      "StepQuickDescription": "Brief intro to Genus and species and why scientific names avoid confusion around common names.",
                       "StepDetails": "What we call a \"panther\" actually means a lot of different,  very distinct types of cat. ",
-                      "StepQuickDescription": "Brief intro to Genus and species and why that avoids confusion around common names."
+                      "Vocab": "- **scientific name:** the *Genus* + *species* of an organism\n- **common name:** a local name for an organism\n- **panther:** can refer to 1) a dark variety of a jaguar or leopard  or 2) the Florida subspecies of the Puma or mountain lion"
                     },
                     {
                       "Step": 3,
                       "StepTitle": "Florida Panther history",
                       "StepQuickDescription": "A *very* brief history of how these great cats were hunted and driven to the brink of extinction."
                     }
-                  ],
-                  "chunkDur": 5,
-                  "chunkStart": 5,
-                  "chunkTitle": "Meet the Florida Panther"
+                  ]
                 },
                 {
+                  "chunkTitle": "Exploring Panther Perspectives",
+                  "chunkStart": 10,
+                  "chunkDur": 15,
                   "steps": [
                     {
                       "Step": 4,
-                      "StepTitle": "The Return of the Panther",
-                      "StepDetails": "Watch [▶\"The Return of The Florida Panther\"](https://www.youtube.com/watch?v=S98srPEViJs&list=PLz-D3xOC0d88kLYQLB9xeUz7gAaO1JJZb&index=1), which explores the plight of the panther through the lens of different stakeholders (e.g. urbanites, ranchers, and Native Americans).",
-                      "StepQuickDescription": "Watch [▶\"The Return of The Florida Panther\"](https://www.youtube.com/watch?v=S98srPEViJs&list=PLz-D3xOC0d88kLYQLB9xeUz7gAaO1JJZb&index=1), which explores the plight of the panther through the lens of different stakeholders (e.g. urbanites, ranchers, and Native Americans)."
+                      "StepTitle": "Watch Video 1",
+                      "StepQuickDescription": "How do people feel about the Florida Panther?",
+                      "StepDetails": "[▶\"The Return of The Florida Panther\"](https://www.youtube.com/watch?v=S98srPEViJs&list=PLz-D3xOC0d88kLYQLB9xeUz7gAaO1JJZb&index=1) explores the plight of the panther through the lens of different stakeholders (e.g. urbanites, ranchers, and Native Americans)."
                     },
                     {
                       "Step": 5,
-                      "StepTitle": "Exploring Panther Perspectives",
-                      "StepQuickDescription": "Students "
-                    }
-                  ],
-                  "chunkDur": 2,
-                  "chunkStart": 10,
-                  "chunkTitle": "Watch Video 1"
-                },
-                {
-                  "steps": [
+                      "StepTitle": "Reflection + Discussion",
+                      "StepQuickDescription": "Students Think+Ink+Share what they noticed/inferred from the video about why different groups like or dislike panthers."
+                    },
                     {
                       "Step": 6,
-                      "StepTitle": "On the Brink of Extinction"
+                      "StepTitle": "Let's review a scene",
+                      "StepQuickDescription": "Students reflect on a scene where a man compares the loss of panthers to loss of Master Art Works. "
                     }
-                  ],
-                  "chunkDur": 15,
-                  "chunkStart": 12,
-                  "chunkTitle": "What Happens if we Lose the Florida Panther?"
+                  ]
+                },
+                {
+                  "chunkTitle": "What Happens if we Lose the Florida Panther?",
+                  "chunkStart": 25,
+                  "chunkDur": 20,
+                  "steps": [
+                    {
+                      "Step": 7,
+                      "StepTitle": "On the Brink of Extinction",
+                      "StepQuickDescription": "Students spend rest of class period reflecting on different impacts of losing Florida panthers.",
+                      "StepDetails": "Students work with a partner, in a group, or individually, as you prefer to fill out a table with biological, social, and economic impacts caused by the extinction of Florida panthers. After sharing/discussing as a class, they spend the rest of class reflecting individually about different stakeholder perspectives and summarizing take-homes.",
+                      "Vocab": "- **inbred:** the product of mating with closely related individuals; often results in individuals with genetic disorders\n- **inbreeding:** a condition that occurs when genetically closely related animals mate, especially over multiple generations"
+                    }
+                  ]
                 }
-              ],
-              "partDur": 45,
-              "partNum": 1,
-              "partTitle": "Florida Panthers in Peril",
-              "partPreface": "Introduction to the plight of the critically endangered Florida panther."
+              ]
             },
             {
+              "partNum": 2,
+              "partTitle": "Genetics of Endangered Species",
+              "partDur": 45,
+              "partPreface": "Reviews relevant genetics topics including dominant/recessive alleles and genotype vs. phenotype.",
               "chunks": [
                 {
+                  "chunkTitle": "Warm-Up",
+                  "chunkStart": 0,
+                  "chunkDur": 5,
                   "steps": [
                     {
                       "Step": 1,
-                      "Vocab": "- **trait:** a specific characteristic of an organism\n- **variation:** any difference in organisms, or groups of organisms, cause by genetic or environmental differences",
                       "StepTitle": "Polymath Puzzles Set #2",
-                      "StepDetails": "For Polymath Puzzle #1, students look at a series of shapes with different patterns and colors and they must count how many different \"traits\" can be observed. For Polymath Puzzle #2, students are shown two groups of traits and they must decide which group exhibits greater variation.",
-                      "StepQuickDescription": "Students solve two puzzles which demonstrate the meaning of biological traits and how these translate into genetic variation."
+                      "StepQuickDescription": "Students solve two puzzles which demonstrate the meaning of biological traits and how these translate into genetic variation.",
+                      "StepDetails": "For Polymath Puzzle #1, students look at a series of shapes with different patterns and colors and they must count how many different \"traits\" can be observed. For puzzle #2, students are shown two groups of traits and they must decide which group exhibits greater variation.",
+                      "Vocab": "- **trait:** a specific characteristic of an organism\n- **variation:** any difference in organisms caused by genetic and/or environmental differences"
                     }
-                  ],
-                  "chunkDur": 5,
-                  "chunkStart": 0,
-                  "chunkTitle": "Polymath Puzzle: Investigating Traits"
+                  ]
                 },
                 {
+                  "chunkTitle": "Genetics Mini-Review: Unhealthy Cats",
+                  "chunkStart": 5,
+                  "chunkDur": 20,
                   "steps": [
                     {
                       "Step": 2,
-                      "Vocab": "- **nucleotide:** one of 4 chemical building blocks of DNA; abbreviated as A, C, G, and T\n- **allele:** different forms of a gene\n- **dominant:** when a trait is still functional even if one allele is defective\n- **recessive:** when a trait is only expressed when an individual has two copies of the allele\n- **genotype:** the combination of alleles an individual has for a set of genes\n- **phenotype:** the combined effect of genes to produce a trait",
                       "StepTitle": "Genetics Mini-Review",
+                      "StepQuickDescription": "Students go through a quick review of dominant and recessive alleles.",
                       "StepDetails": "Spend some time going through the slides with students to ensure a solid understanding of dominant and recessive traits. These form the basis of why the Florida Panther is experiencing genetic crisis. ",
-                      "StepQuickDescription": "Students go through a quick review of dominant and recessive alleles."
+                      "Vocab": "- **nucleotide:** one of 4 chemical building blocks of DNA; abbreviated as A, C, G, and T\n- **allele:** different forms of a gene\n- **dominant:** when a trait is still functional even if one allele is defective\n- **recessive:** when a trait is only expressed when an individual has two copies of the allele\n- **genotype:** the combination of alleles an individual has for a set of genes\n- **phenotype:** the combined effect of genes to produce a trait"
                     }
-                  ],
-                  "chunkDur": 20,
-                  "chunkStart": 5,
-                  "chunkTitle": "Genetics Mini-Review: Unhealthy Cats"
+                  ]
                 },
                 {
+                  "chunkTitle": "Recessive Traits Activity",
+                  "chunkStart": 25,
+                  "chunkDur": 20,
                   "steps": [
                     {
                       "Step": 3,
-                      "Vocab": "- **inbreeding:** a condition that occurs when genetically closely related animals mate, especially over multiple generations",
                       "StepTitle": "Understanding Inbreeding",
-                      "StepQuickDescription": "How does population size affect how common recessive traits are?"
+                      "StepQuickDescription": "How does population size affect how common recessive traits are?",
+                      "StepDetails": "In this activity, students simulate matings between panthers in a small and a large population.  The slides guide students through understanding the 3 traits that we will be studying: kinked tails (a bone defect), a heart defect (where kittens are born with a hole in the septum), and cowlick (a strange pattern in the fur). By simulating matings in a large population (where recessive traits will be less common) and a small population (which parallels inbreeding in endangered populations), students should recognize how population size affects overall health of a species.",
+                      "Vocab": "- **inbreeding:** a condition that occurs when genetically closely related animals mate, especially over multiple generations"
+                    },
+                    {
+                      "Step": 4,
+                      "StepTitle": "Small Population Simulations",
+                      "StepQuickDescription": "Students should work in groups to fill out their worksheets. ",
+                      "StepDetails": "Each group should have 2 envelopes with cutouts of 15 panther cards (1 set sampled from a small population; 1 sampled from a big population). Students start by drawing a pair of parents from the small population. They fill in Table 1, practicing with assigning genotypes and phenotypes.",
+                      "TeachingTips": "A pair of groups can share a set of envelopes to save you time and paper."
+                    },
+                    {
+                      "Step": 5,
+                      "StepTitle": "Small Population Mating",
+                      "StepQuickDescription": "With Steps 7-8,  students randomly select alleles to pass on and describe phenotypes of offspring.",
+                      "StepDetails": "If a parent is homozygous (e.g. TT or tt), they only have one allele to pass on. In cases of heterozygous parents (Tt), you can have students flip a coin  to determine which allele gets passed on."
+                    },
+                    {
+                      "Step": 6,
+                      "StepTitle": "Learn, Practice, Repeat",
+                      "StepQuickDescription": "Once the worksheet has walked students through the process, they simulate 5 more matings.",
+                      "StepDetails": "First students fill out Table 3, with three matings (parent and offspring genotypes), counting up recessive phenotypes. They then do the same thing in Table 4, drawing cards from the \"Big Population,\" which has many fewer recessive genotypes."
+                    },
+                    {
+                      "Step": 7,
+                      "StepTitle": "Combine Data",
+                      "StepQuickDescription": "Once groups have finished simulating matings in both populations, they combine data as a class.",
+                      "StepDetails": "You will need to have Table 5 drawn on the board (or use a spreadsheet) to allow groups to record their data.",
+                      "TeachingTips": "Look out for errors: small population matings should have many more recessive genotypes than big population matings."
+                    },
+                    {
+                      "Step": 8,
+                      "StepTitle": "Independent Analysis",
+                      "StepQuickDescription": "Students copy down other groups' data in Table 5",
+                      "StepDetails": "Students will then calculate the total number of recessive phenotypes out of the total possible to get a percentage. They should then reflect on why the percentage of recessive traits is higher in the small population and why it is important."
                     }
-                  ],
-                  "chunkDur": 20,
-                  "chunkStart": 25,
-                  "chunkTitle": "Recessive Traits Activity"
+                  ]
                 }
-              ],
-              "partDur": 45,
-              "partNum": 2,
-              "partTitle": "Genetics of Endangered Species",
-              "partPreface": "Reviews relevant genetics topics including dominant/recessive alleles and genotype vs. phenotype."
+              ]
             },
             {
+              "partNum": 3,
+              "partTitle": "The Florida Panther Debate",
+              "partDur": 45,
+              "partPreface": "Delves into what can (or should) be done to help save the Florida Panther. ",
               "chunks": [
                 {
+                  "chunkTitle": "Role Play: What to do about the Florida Panther?",
+                  "chunkStart": 0,
+                  "chunkDur": 25,
                   "steps": [
                     {
                       "Step": 1,
+                      "StepTitle": "Brainstorming",
+                      "StepQuickDescription": "Students simulate being on a committee in 1994 that will decide what to do about Florida Panthers.",
+                      "StepDetails": "Divide students into 3 groups and assign each a different option to advocate: let nature run its course; start a captive breeding program; or use genetic rescue. Allow groups 5-10 minutes to brainstorm the pros and cons of their arguments and fill out questions 1 & 2 on the worksheet. ",
                       "Vocab": "- **captive breeding:** breeding in zoos and aquariums of plants or animals to maintain populations",
-                      "StepTitle": "Role Play",
-                      "StepDetails": "Divide students into 3 groups and assign each a different option to advocate: let nature run its course, start a captive breeding program, or use genetic rescue. Allow groups 5-10 minutes to brainstorm the pros and cons of their arguments and fill out questions 1 & 2 on the worksheet. Groups then complete a gallery walk to observe what others worked on and finish by returning to their own group and finishing the worksheet based on what they learned.",
-                      "StepQuickDescription": "Students simulate being on a committee in 1994 that will decide what to do about Florida Panthers."
-                    }
-                  ],
-                  "chunkDur": 25,
-                  "chunkStart": 0,
-                  "chunkTitle": "Role Play: What to do about the Florida Panther?"
-                },
-                {
-                  "steps": [
+                      "TeachingTips": "For a large class, you can have multiple sets of 3. (e.g. have students number of 1-3, and have 3 group stations for the front half and 3 group stations for the back half of the room)"
+                    },
                     {
                       "Step": 2,
-                      "StepTitle": "Class Discussion",
-                      "StepDetails": "Write or type the pros & cons on three large charts for each scenario based on the students' input. Once all three options have been discussed, each student gets to vote on which they would vote for. Ask students to provide evidence and reasoning to support their choice.",
-                      "StepQuickDescription": "Each group will have the opportunity to share the pros & cons they brainstormed for each committee scenario. "
+                      "StepTitle": "Gallery Walk",
+                      "StepDetails": "Groups then complete a gallery walk to observe what others worked on and finish by returning to their own group and finishing the worksheet based on what they learned.",
+                      "TeachingTips": "You can choose whether the gallery walk should be \"as a group\" or individually paced."
                     }
-                  ],
-                  "chunkDur": 20,
+                  ]
+                },
+                {
+                  "chunkTitle": "Share Out! Pros/Cons of Saving the Florida Panther",
                   "chunkStart": 25,
-                  "chunkTitle": "Share Out! Pros/Cons of Saving the Florida Panther"
+                  "chunkDur": 20,
+                  "steps": [
+                    {
+                      "Step": 3,
+                      "StepTitle": "Class Discussion",
+                      "StepQuickDescription": "Each group will have the opportunity to share the pros & cons they brainstormed for each committee scenario. ",
+                      "StepDetails": "Write or type the pros & cons on three large charts for each scenario based on the students' input. Once all three options have been discussed, each student gets to vote on a course of action. Ask students to provide evidence and reasoning to support their choice.",
+                      "TeachingTips": "If you want to bring in some technology, you could add (or ask students to add) observations to a [Google Jamboard](https://ditchthattextbook.com/jamboard/) or [Padlet](https://www.techlearning.com/how-to/what-is-padlet-and-how-does-it-work-for-teachers-and-students)."
+                    },
+                    {
+                      "Step": 4,
+                      "StepTitle": "Scaffolding",
+                      "StepQuickDescription": "Slides go over the major pros & cons for each scenario, in case anything was missed."
+                    },
+                    {
+                      "Step": 5,
+                      "StepTitle": "Vote!",
+                      "StepQuickDescription": "Ask students to vote on a course of action",
+                      "StepDetails": "Ask them to provide evidence and reasoning to support their choice."
+                    },
+                    {
+                      "Step": 6,
+                      "StepTitle": "Students Finish Worksheet on their Own"
+                    }
+                  ]
                 }
-              ],
-              "partDur": 45,
-              "partNum": 3,
-              "partTitle": "The Florida Panther Debate",
-              "partPreface": "Delves into what can (or should) be done to help save the Florida Panther. "
+              ]
             },
             {
+              "partNum": 4,
+              "partTitle": "Deep Dive into Genetic Rescue",
+              "partDur": 45,
+              "partPreface": "Provides an overview of genetic rescue concepts and how it relates to Florida Panther situation. ",
               "chunks": [
                 {
+                  "chunkTitle": "Genetic Rescue Deep Dive",
+                  "chunkStart": 0,
+                  "chunkDur": 10,
                   "steps": [
                     {
                       "Step": 1,
                       "StepTitle": "Overview",
-                      "StepQuickDescription": "Students watch [▶\"What is genetic rescue, and can we use it to save endangered species?\"](https://www.youtube.com/watch?v=oFQmNq8sJ2Y&list=PLz-D3xOC0d88kLYQLB9xeUz7gAaO1JJZb&index=2) to learn about what genetic rescue is and why genetic variation in a population is so important. "
+                      "StepQuickDescription": "Students watch part of [▶\"What is genetic rescue, and can we use it to save endangered species?\"](https://www.youtube.com/watch?v=oFQmNq8sJ2Y&list=PLz-D3xOC0d88kLYQLB9xeUz7gAaO1JJZb&index=2) to review and go deeper into what genetic rescue is and why it is so important for a population to have genetic variation. ",
+                      "Vocab": "- **habitat fragmentation:** the process of breaking a habitat up into disconnected pieces"
                     }
-                  ],
-                  "chunkDur": 20,
-                  "chunkStart": 0,
-                  "chunkTitle": "Genetic Rescue Deep Dive"
+                  ]
                 },
                 {
+                  "chunkTitle": null,
+                  "chunkStart": 10,
+                  "chunkDur": 20,
                   "steps": [
                     {
                       "Step": 2,
-                      "Vocab": "- **extinction:** the dying out of a species due to environmental or evolutionary changes",
-                      "StepTitle": "Effects of Reduced Genetic Variation",
-                      "StepQuickDescription": "Building off of the first part, students continue watching [▶\"What is genetic rescue, and can we use it to save endangered species?\"](https://www.youtube.com/watch?v=oFQmNq8sJ2Y&list=PLz-D3xOC0d88kLYQLB9xeUz7gAaO1JJZb&index=2) to learn more about what an extinction vortex is and how populations can be saved from this circumstance."
+                      "StepTitle": "The Extinction Vortex",
+                      "StepQuickDescription": "Students continue watching [▶\"What is genetic rescue, and can we use it to save endangered species?\"](https://www.youtube.com/watch?v=oFQmNq8sJ2Y&list=PLz-D3xOC0d88kLYQLB9xeUz7gAaO1JJZb&index=2) to learn more about what an extinction vortex is and how populations can be saved from this circumstance.",
+                      "StepDetails": "They are then asked to fill out a concept map to demonstrate understanding of the Extinction Vortex. The slides then walk through a discussion of the logic behind the correct concept map.",
+                      "Vocab": "- **extinction:** the dying out of a species due to environmental or evolutionary changes\n- **concept map:** a diagram that shows how different inputs or parts of a system affect each other"
+                    },
+                    {
+                      "Step": 3,
+                      "StepTitle": "Genetic Rescue Concept Mapping",
+                      "StepQuickDescription": "Students work in pairs to fill out a scaffolded concept map of Genetic Rescue",
+                      "StepDetails": "Encourage a group to share their answer and the process for figuring it out. Walk through the logic as a class.",
+                      "Vocab": "- **genetic rescue:** introducing individuals with new genetic variation to help a population recover from inbreeding"
+                    },
+                    {
+                      "Step": 4,
+                      "StepTitle": "Pivot to Model Organisms",
+                      "StepQuickDescription": "Students finish the video, explaining how genetic rescue can go wrong.",
+                      "StepDetails": "Students are asked to study a table of organisms to determine which would be good and which would be bad models to use in studies of genetic rescue.",
+                      "Vocab": "- **model organism:** a species used to study a problem when it is difficult or impossible to study in a target species"
                     }
-                  ],
-                  "chunkDur": 25,
-                  "chunkStart": 20,
-                  "chunkTitle": "The Extinction Vortex"
+                  ]
+                },
+                {
+                  "chunkTitle": "Independent Reflection",
+                  "chunkStart": 30,
+                  "chunkDur": 15,
+                  "steps": [
+                    {
+                      "Step": 5,
+                      "StepTitle": "Students Finish Worksheet on their Own",
+                      "StepQuickDescription": "Students pick a model species to study genetic rescue from the table of options."
+                    }
+                  ]
                 }
-              ],
-              "partDur": 45,
-              "partNum": 4,
-              "partTitle": "Deep Dive into Genetic Rescue",
-              "partPreface": "Provides an overview of genetic rescue concepts and how it relates to Florida Panther situation. "
+              ]
             },
             {
+              "partNum": 5,
+              "partTitle": "Analyzing Real Genetic Rescue Data",
+              "partDur": 45,
+              "partPreface": "Uses real data from a model species to investigate whether genetic rescue is a viable conservation method for Florida Panthers.",
               "chunks": [
                 {
+                  "chunkTitle": "Review",
+                  "chunkStart": 0,
+                  "chunkDur": 5,
                   "steps": [
                     {
                       "Step": 1,
                       "StepTitle": "Genetic Rescue in Action",
-                      "StepQuickDescription": "Students finish [▶\"What is genetic rescue, and can we use it to save endangered species?\"](https://www.youtube.com/watch?v=oFQmNq8sJ2Y&list=PLz-D3xOC0d88kLYQLB9xeUz7gAaO1JJZb&index=2) which discusses how genetic rescue is considered as a management strategy. They will then review four different types of organisms and narrow which one is best to use as a model organism for genetic studies and why."
+                      "StepQuickDescription": "Students review the end of [▶\"What is genetic rescue, and can we use it to save endangered species?\"](https://www.youtube.com/watch?v=oFQmNq8sJ2Y&list=PLz-D3xOC0d88kLYQLB9xeUz7gAaO1JJZb&index=2) and go over the previous day's worksheet.",
+                      "StepDetails": "Tortoises are the only bad option listed, as they have a slow generation time and are not common. The other species are all actual models for genetic rescue research."
                     }
-                  ],
-                  "chunkDur": 5,
-                  "chunkStart": 0,
-                  "chunkTitle": "Model Organisms to Study Genetic Rescue"
+                  ]
                 },
                 {
+                  "chunkTitle": "Dr. Sarah Fitzpatrick Talks About her Research",
+                  "chunkStart": 5,
+                  "chunkDur": 5,
                   "steps": [
                     {
                       "Step": 2,
                       "StepTitle": "Hear it from a Scientist!",
-                      "StepQuickDescription": "Dr. Fitzpatrick, whose research formed the basis of this lesson, discusses how she has studied genetic rescue using Trinidadian Guppies (fish) in [▶\"Model organisms in conservation research\"](https://www.youtube.com/watch?v=AiXyHxv4Sx4&list=PLz-D3xOC0d88kLYQLB9xeUz7gAaO1JJZb&index=3)."
+                      "StepQuickDescription": "Dr. Fitzpatrick, whose research forms the basis of this lesson, discusses how she has studied genetic rescue using Trinidadian Guppies (fish) in [▶\"Saving a species through genetic rescue: Why we need model organisms\"](https://www.youtube.com/watch?v=AiXyHxv4Sx4&list=PLz-D3xOC0d88kLYQLB9xeUz7gAaO1JJZb&index=3)."
                     }
-                  ],
-                  "chunkDur": 5,
-                  "chunkStart": 5,
-                  "chunkTitle": "Dr. Sarah Fitzpatrick Talks About her Research"
+                  ]
                 },
                 {
+                  "chunkTitle": "Quick Activity",
+                  "chunkStart": 10,
+                  "chunkDur": 15,
                   "steps": [
                     {
                       "Step": 3,
-                      "StepTitle": "Peer Review",
-                      "StepQuickDescription": "Students think critically about how Guppies compare (and don't) to Panthers to better assess whether they serve as a good model species."
-                    }
-                  ],
-                  "chunkDur": 15,
-                  "chunkStart": 10,
-                  "chunkTitle": "Peer Review: Evaluating Genetic Rescue"
-                },
-                {
-                  "steps": [
+                      "StepTitle": "Instant Peer Review",
+                      "StepQuickDescription": "Students compare and contrast guppies and panthers on their worksheets (Q1-4).",
+                      "StepDetails": "They then switch papers with a partner. They should underline a point they strongly agree with, circle  a point they disagree with or think should be explained better, and discuss. Then revise based on the feedback. Students can then share positive/helpful feedback they received."
+                    },
                     {
                       "Step": 4,
-                      "StepTitle": "Analyzing Real Data",
-                      "StepQuickDescription": "Using real data from Dr. Fitzpatrick's studies, students predict whether genetic rescue in the Florida Panther will be successful."
+                      "StepTitle": "Scaffolding",
+                      "StepQuickDescription": "Slides walk through the primary responses students should have come up with."
                     }
-                  ],
-                  "chunkDur": 20,
+                  ]
+                },
+                {
+                  "chunkTitle": "Analyzing Real Data",
                   "chunkStart": 25,
-                  "chunkTitle": "Predicting the Outcomes of Genetic Rescue"
+                  "chunkDur": 20,
+                  "steps": [
+                    {
+                      "Step": 5,
+                      "StepTitle": "Developing Predictions",
+                      "StepQuickDescription": "Students revisit the genetic rescue concept map and think about what they could measure to assess success.",
+                      "StepDetails": "Specifically, we expect that if genetic rescue is successful:\n1. genetic variation should increase and \n2. as a result population size should increase (because of higher survival and reproduction)"
+                    },
+                    {
+                      "Step": 6,
+                      "StepTitle": "Independent Analysis",
+                      "StepQuickDescription": "Students spend the rest of class filling out the worksheet on their own.",
+                      "StepDetails": "They are asked to label graphs from Florida panthers and guppies by carefully studying part of the data table used to generate them.",
+                      "TeachingTips": "If students are confused, ask them to notice anything at all about the tables. Do some of the numbers or dates seem to match up with any of the graphs?"
+                    },
+                    {
+                      "Step": 7,
+                      "StepTitle": "Reflection",
+                      "StepQuickDescription": "Students generate a question from the data  and synthesize their findings and observations to make a recommendation.",
+                      "StepDetails": "Given the evidence from Florida panther recovery and the study in Trinidadian guppies, should we conduct a second genetic rescue attempt in the panthers?"
+                    }
+                  ]
                 }
-              ],
-              "partDur": 45,
-              "partNum": 5,
-              "partTitle": "Analyzing Genetic Rescue",
-              "partPreface": "Uses real data from a model species to investigate whether genetic rescue is a viable conservation method for Florida Panthers."
+              ]
             }
-          ],
-          "lessonDur": "5 x 45 min"
+          ]
         }
-      },
+      }
+    ,
       {
         "__component": "lesson-plan.collapsible-text-section",
         "id": 8,
