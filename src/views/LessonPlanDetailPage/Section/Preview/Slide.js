@@ -3,7 +3,6 @@ import { Box, makeStyles } from "@material-ui/core";
 import classNames from 'classnames';
 
 import ExternalLink from 'components/ExternalLink'
-import CardBody from 'components/Card/CardBody';
 
 import blogPostsPageStyle from 'assets/jss/material-kit-pro-react/views/blogPostsPageStyle';
 const useStyles = makeStyles(blogPostsPageStyle);
@@ -11,15 +10,10 @@ const useStyles = makeStyles(blogPostsPageStyle);
 const Slide = ({
   type,
   title,
-  description,
   lessonRelevance,
   by,
   byLink,
-  keywords,
   mainLink,
-  vimeoLink,
-  filename,
-  otherLink,
 }) => {
   const classes = useStyles();
   let media
@@ -35,7 +29,7 @@ const Slide = ({
     ></iframe>
   }
 
-  return <Box boxShadow={4} className={classNames("Slide",type, classes.card)}>
+  return <Box boxShadow={4} className={classNames("Slide", type, classes.card)}>
     {media}
     <div className="caption">
       <h5>{title}</h5>
