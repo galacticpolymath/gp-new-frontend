@@ -17,6 +17,7 @@ const Preview = ({
   SectionTitle,
   InitiallyExpanded,
   Multimedia,
+  QuickPrep,
 }) => {
   const classes = useStyles();
   return (
@@ -30,10 +31,7 @@ const Preview = ({
         <Carousel items={Multimedia} />
 
         <h5>&quot;Teach it in 15&quot; Quick Prep</h5>
-        <ol>
-          <li>TODO</li>
-          <li>TODO</li>
-        </ol>
+        <RichText content={QuickPrep} />
       </div>
     </CollapsibleSection>
   );
