@@ -3169,7 +3169,6 @@
       },
       {
         "__component": "teaching-resources.teaching-resources",
-        "id": 4,
         "SectionTitle": "Teaching Materials",
         "Data": {
           "classroom": {
@@ -3207,11 +3206,11 @@
                 "itemCat": "Other Requirements",
                 "itemsGroup": [
                   {
-                    "item": "Opaque Envelopes (For Part 2)",
-                    "itemExplanation": "(i.e. 1 for \"Big\" and another for \"Small\" Population cards for each group)"
+                    "item": "(For Part 2) Opaque Envelopes",
+                    "itemExplanation": "– (i.e. 1 for \"Big\" and another for \"Small\" Population cards for each group)"
                   },
                   {
-                    "item": "Scissors (For Part 2)",
+                    "item": "(For Part 2) Scissors",
                     "itemExplanation": "For cutting out panther cards"
                   },
                   {
@@ -3264,7 +3263,7 @@
                       },
                       {
                         "itemTitle": "Part 1 Student Worksheet",
-                        "itemCat": "NA",
+                        "itemCat": null,
                         "links": [
                           {
                             "linkText": "PDF",
@@ -3278,7 +3277,7 @@
                       },
                       {
                         "itemTitle": "Part 1 Teacher Worksheet",
-                        "itemCat": "NA",
+                        "itemCat": null,
                         "links": [
                           {
                             "linkText": "PDF",
@@ -3312,22 +3311,8 @@
                         ]
                       },
                       {
-                        "itemTitle": "Presentation",
-                        "itemCat": "presentation",
-                        "links": [
-                          {
-                            "linkText": "Present Now",
-                            "url": "https://docs.google.com/presentation/d/1rwgBdQ3W9XKdhfEddiBGs5vRxtTDOthOiSZAgNILqUw/present"
-                          },
-                          {
-                            "linkText": "Copy to My Google Drive",
-                            "url": "https://docs.google.com/presentation/d/1rwgBdQ3W9XKdhfEddiBGs5vRxtTDOthOiSZAgNILqUw/template/preview"
-                          }
-                        ]
-                      },
-                      {
                         "itemTitle": "Part 2 Student Worksheet",
-                        "itemCat": "NA",
+                        "itemCat": null,
                         "links": [
                           {
                             "linkText": "PDF",
@@ -3341,7 +3326,7 @@
                       },
                       {
                         "itemTitle": "Part 2 Teacher Worksheet",
-                        "itemCat": "NA",
+                        "itemCat": null,
                         "links": [
                           {
                             "linkText": "PDF",
@@ -3355,7 +3340,7 @@
                       },
                       {
                         "itemTitle": "Part 2 Panther Genotype Cards for Hands On Simulation of Genetics of Inbreeding in Panthers",
-                        "itemCat": "NA",
+                        "itemCat": null,
                         "links": [
                           {
                             "linkText": "PDF",
@@ -3390,7 +3375,7 @@
                       },
                       {
                         "itemTitle": "Part 3 Student Worksheet",
-                        "itemCat": "NA",
+                        "itemCat": null,
                         "links": [
                           {
                             "linkText": "PDF",
@@ -3404,7 +3389,7 @@
                       },
                       {
                         "itemTitle": "Part 3 Teacher Worksheet",
-                        "itemCat": "NA",
+                        "itemCat": null,
                         "links": [
                           {
                             "linkText": "PDF",
@@ -3439,7 +3424,7 @@
                       },
                       {
                         "itemTitle": "Part 4 Student Worksheet",
-                        "itemCat": "NA",
+                        "itemCat": null,
                         "links": [
                           {
                             "linkText": "PDF",
@@ -3453,7 +3438,7 @@
                       },
                       {
                         "itemTitle": "Part 4 Teacher Worksheet",
-                        "itemCat": "NA",
+                        "itemCat": null,
                         "links": [
                           {
                             "linkText": "PDF",
@@ -3488,7 +3473,7 @@
                       },
                       {
                         "itemTitle": "Part 5 Student Worksheet",
-                        "itemCat": "NA",
+                        "itemCat": null,
                         "links": [
                           {
                             "linkText": "PDF",
@@ -3502,7 +3487,7 @@
                       },
                       {
                         "itemTitle": "Part 5 Teacher Worksheet",
-                        "itemCat": "NA",
+                        "itemCat": null,
                         "links": [
                           {
                             "linkText": "PDF",
@@ -3520,48 +3505,7 @@
               }
             ]
           }
-        },
-        "TeachingMethod": [
-          {
-            "id": 5,
-            "Title": "Classroom/In-person Teaching ",
-            "ResourceSummary": {
-              "id": 5,
-              "Footnote": null,
-              "DigitalItems": [
-                {
-                  "id": 38,
-                  "Value": "Presentation"
-                }
-              ],
-              "PrintedItems": [
-                {
-                  "id": 41,
-                  "Value": "Teacher Worksheet (Parts 1-3)"
-                },
-                {
-                  "id": 42,
-                  "Value": "Student Worksheet (Parts 1-3)"
-                },
-                {
-                  "id": 43,
-                  "Value": "Table 1 (for Part 3)"
-                }
-              ],
-              "OtherRequirements": [
-                {
-                  "id": 47,
-                  "Value": "Internet connection"
-                },
-                {
-                  "id": 48,
-                  "Value": "Projector"
-                }
-              ]
-            },
-            "ResourceDownloads": []
-          }
-        ]
+        }
       },
       {
         "__component": "lesson-plan.procedure",
@@ -4357,7 +4301,7 @@
                 "name": "Alma Leaper",
                 "url": "http://www.almaleaper.co.uk/",
                 "title": "Lead Photographer",
-                "affiliation": "The Big Cat Santuary",
+                "affiliation": "The Big Cat Sanctuary",
                 "location": "UK"
               }
             ]
