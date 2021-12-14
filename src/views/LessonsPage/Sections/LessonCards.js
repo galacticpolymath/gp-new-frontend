@@ -26,13 +26,6 @@ const LessonCards = ({ lessons }) => {
             <Link to={"/lessons/" + id}>
               <Box className={classes.card} boxShadow={4}>
                 <Image {...CoverImage} />
-                <div
-                  className={classes.coloredShadow}
-                  style={{
-                    // backgroundImage: `url(${CoverImage.url})`,
-                    opacity: "1"
-                  }}
-                />
                 <CardBody>
                   <h4>
                     {Title}

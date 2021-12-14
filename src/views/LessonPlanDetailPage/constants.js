@@ -1,6 +1,5 @@
 export const SECTIONS = {
   OVERVIEW: "lesson-plan.overview",
-  MEDIA: "lesson-plan.media",
   HEADING: "lesson-plan.section-heading",
   TEXT_BLOCK: "lesson-plan.text-block",
   PROCEDURE: "lesson-plan.procedure",
@@ -10,6 +9,7 @@ export const SECTIONS = {
   ACKNOWLEDGMENTS: "lesson-plan.acknowledgments",
   VERSIONS: "lesson-plan.versions",
   COLLAPSIBLE_TEXT: "lesson-plan.collapsible-text-section",
+  PREVIEW: "lesson-plan.lesson-preview",
 };
 
 export const NUMBERED_SECTIONS = [
@@ -20,4 +20,5 @@ export const NUMBERED_SECTIONS = [
   SECTIONS.ACKNOWLEDGMENTS,
   SECTIONS.VERSIONS,
   SECTIONS.COLLAPSIBLE_TEXT,
+  SECTIONS.PREVIEW,
 ];
