@@ -25,10 +25,15 @@ const ResourceSummary2 = ({ resources = [], footnote }) => {
 
   const renderItem = ({ item, itemExplanation }, i) => {
     return (
-      <div key={i} className="resourceSummaryItem">
-        {getIcon(item)} {item}{" "}
+      <GridContainer key={i} className="resourceSummaryItem">
+        <GridItem xs={2} sm={1}>
+        {getIcon(item)}
+        </GridItem>
+        <GridItem xs={10} sm={11}>
+        {item}{" "}
         {typeof itemExplanation === "string" && itemExplanation}
-      </div>
+        </GridItem>
+      </GridContainer>
     );
   };
 

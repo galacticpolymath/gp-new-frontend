@@ -9,6 +9,11 @@ import NearpodIcon from "assets/img/nearpod.svg";
  * for accessibility.
 s */
 const ICONS = {
+  cards: (
+    <span role="img" aria-label="cards">
+      <i className="far fa-clone" style={{ fontSize: "1.3rem" }} />
+    </span>
+  ),
   computer: (
     <span role="img" aria-label="computer">
       <i className="fas fa-laptop" style={{ fontSize: "1.3rem" }} />
@@ -33,8 +38,13 @@ const ICONS = {
       <i className="far fa-edit" style={{ fontSize: "1.3rem" }} />
     </span>
   ),
+  envelope: (
+    <span role="img" aria-label="envelope">
+      <i className="far fa-envelope" style={{ fontSize: "1.3rem" }} />
+    </span>
+  ),
   inPerson: (
-    <span role="img" aria-label="internet">
+    <span role="img" aria-label="in person">
       <i className="fas fa-chalkboard-teacher" style={{ fontSize: "1.3rem" }} />
     </span>
   ),
@@ -75,6 +85,11 @@ const ICONS = {
   projector: (
     <span role="img" aria-label="projector">
       <i className="fas fa-video" style={{ fontSize: "1.3rem" }} />
+    </span>
+  ),
+  scissors: (
+    <span role="img" aria-label="scissors">
+      <i className="fas fa-cut" style={{ fontSize: "1.3rem" }} />
     </span>
   ),
   speaker: (
