@@ -5,6 +5,7 @@ import CollapsibleSection from "./CollapsibleSection";
 
 import { makeStyles } from "@material-ui/core/styles";
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
+import RichText from "../../../components/RichText";
 const useStyles = makeStyles(lessonPlanStyle);
 
 const Versions = ({ index, SectionTitle, Data = [] }) => {
@@ -27,10 +28,15 @@ const Versions = ({ index, SectionTitle, Data = [] }) => {
                       {version} {summary}
                     </h5>
                     <p className="date">{date}</p>
-                    <p>{notes}</p>
-                    {acknowledgments && (
-                      <p>Acknowledgments: {acknowledgments}</p>
-                    )}
+                    {notes &&
+                      <p>
+                    <RichText content={notes} />
+                      </p>}
+                    {acknowledgments &&
+                    <p>Acknowledgments:
+                      <RichText content={acknowledgments} />
+                    </p>
+                    }
                   </div>
                 )
               )}
