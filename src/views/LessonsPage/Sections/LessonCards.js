@@ -6,14 +6,13 @@ import Badge from "components/Badge/Badge";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import CardBody from "components/Card/CardBody.js";
-import classNames from "classnames";
+
 
 import blogPostsPageStyle from "assets/jss/material-kit-pro-react/views/blogPostsPageStyle.js";
 import Image from "components/StrapiImage";
 import { Link } from "react-router-dom";
 import { Box } from "@material-ui/core";
-import Button from "../../../components/CustomButtons/Button";
-import MailOutlineIcon from "@material-ui/icons/MailOutline";
+
 
 const useStyles = makeStyles(blogPostsPageStyle);
 
@@ -45,57 +44,57 @@ const LessonCards = ({ lessons }) => {
             </Link>
           </GridItem>
         ))}
-        {/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/}
-        {/*Manual coming soon tile*/}
-        <GridItem xs={12} sm={6} md={6} >
-          {/*<Link to={"/lessons/" + id}>*/}
-          <div className= {classes.addMargin}>
-            <Box className={classNames(classes.card,classes.addMargin)} boxShadow={4}>
-              <img
-                className="Image"
-                alt={"Coming Soon lesson graphic. A drawn cougar stands over a graph and a city map."}
-                src={"https://res.cloudinary.com/galactic-polymath/image/upload/v1628365236/lesson_misc_share/geneticRescue_lesson-banner_exphsn.png"} />
-              <div
-                className={classes.coloredShadow}
-                style={{
-                  opacity: "1"
-                }}
-              />
-              <CardBody>
-                <h4>
-                  {/*<Link to={"/lessons/" + id}>{Title}</Link>*/}
-                  Genetic Rescue to the Rescue
-                </h4>
-                <p>Preventing extinction through gene flow</p>
-                <br />
-                <Badge color={"rose"}>Science</Badge>
-              </CardBody>
-            </Box>
+      {/*  /!*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*!/*/}
+      {/*  /!*Manual coming soon tile*!/*/}
+      {/*  <GridItem xs={12} sm={6} md={6} >*/}
+      {/*    /!*<Link to={"/lessons/" + id}>*!/*/}
+      {/*    <div className= {classes.addMargin}>*/}
+      {/*      <Box className={classNames(classes.card,classes.addMargin)} boxShadow={4}>*/}
+      {/*        <img*/}
+      {/*          className="Image"*/}
+      {/*          alt={"Coming Soon lesson graphic. A drawn cougar stands over a graph and a city map."}*/}
+      {/*          src={"https://res.cloudinary.com/galactic-polymath/image/upload/v1628365236/lesson_misc_share/geneticRescue_lesson-banner_exphsn.png"} />*/}
+      {/*        <div*/}
+      {/*          className={classes.coloredShadow}*/}
+      {/*          style={{*/}
+      {/*            opacity: "1"*/}
+      {/*          }}*/}
+      {/*        />*/}
+      {/*        <CardBody>*/}
+      {/*          <h4>*/}
+      {/*            /!*<Link to={"/lessons/" + id}>{Title}</Link>*!/*/}
+      {/*            Genetic Rescue to the Rescue*/}
+      {/*          </h4>*/}
+      {/*          <p>Preventing extinction through gene flow</p>*/}
+      {/*          <br />*/}
+      {/*          <Badge color={"rose"}>Science</Badge>*/}
+      {/*        </CardBody>*/}
+      {/*      </Box>*/}
 
-              <GridContainer className={classNames(classes.subscribeFooter)}>
-                <GridItem  sm={12} md={6}>
-                <Button
-                  color="primary"
-                  size="lg"
-                  href="https://eepurl.com/g_kQ4T"
-                  className={classNames(classes.button)}
-                >
-                  <MailOutlineIcon style={{ marginRight: "0.75rem" }} />
-                  Subscribe
-                </Button>
-                </GridItem>
-                <GridItem  sm={12} md={6}>
-                  <div className={classes.subscribeAppeal}>
-                  Be the first to hear when this lesson is released!
-                  </div>
-                </GridItem>
-              </GridContainer>
+      {/*        <GridContainer className={classNames(classes.subscribeFooter)}>*/}
+      {/*          <GridItem  sm={12} md={6}>*/}
+      {/*          <Button*/}
+      {/*            color="primary"*/}
+      {/*            size="lg"*/}
+      {/*            href="https://eepurl.com/g_kQ4T"*/}
+      {/*            className={classNames(classes.button)}*/}
+      {/*          >*/}
+      {/*            <MailOutlineIcon style={{ marginRight: "0.75rem" }} />*/}
+      {/*            Subscribe*/}
+      {/*          </Button>*/}
+      {/*          </GridItem>*/}
+      {/*          <GridItem  sm={12} md={6}>*/}
+      {/*            <div className={classes.subscribeAppeal}>*/}
+      {/*            Be the first to hear when this lesson is released!*/}
+      {/*            </div>*/}
+      {/*          </GridItem>*/}
+      {/*        </GridContainer>*/}
 
 
 
-            {/*</Link>*/}
-          </div>
-        </GridItem>
+      {/*      /!*</Link>*!/*/}
+      {/*    </div>*/}
+      {/*  </GridItem>*/}
 
       </GridContainer>
     </div>
