@@ -3196,8 +3196,8 @@
                     "itemExplanation": "x 5 Parts"
                   },
                   {
-                    "item": "\"Big\" and \"Small\" Panther Population Cards (for Part 2)",
-                    "itemExplanation": "Set of cards for each group"
+                    "item": "(For Part 2) \"Big\" and \"Small\" Population Cards",
+                    "itemExplanation": "(1 set per group)"
                   }
                 ]
               },
@@ -3206,12 +3206,12 @@
                 "itemCat": "Other Requirements",
                 "itemsGroup": [
                   {
-                    "item": "(For Part 2) Opaque Envelopes",
-                    "itemExplanation": "– (i.e. 1 for \"Big\" and another for \"Small\" Population cards for each group)"
+                    "item": "(For Part 2) Envelopes",
+                    "itemExplanation": "(i.e. 1 for \"Big\" and another for \"Small\" Population cards for each group)"
                   },
                   {
                     "item": "(For Part 2) Scissors",
-                    "itemExplanation": "For cutting out panther cards"
+                    "itemExplanation": "(For cutting out cards)"
                   },
                   {
                     "item": "Teacher's computer",
