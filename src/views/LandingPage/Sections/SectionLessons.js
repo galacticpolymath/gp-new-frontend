@@ -38,7 +38,7 @@ const style = {
   featuredLessonLabel:{
     float: "left",
     display: "flex",
-    zIndex: "2",
+    zIndex: "20",
     backgroundColor: roseColor[3],
     border: "1px solid"+ blackColor,
     marginTop: "10px",
@@ -80,7 +80,6 @@ const style = {
     // border: "2px solid" + grayColor[6],
     backgroundColor: "white",
     zIndex: "0",
-    paddingTop: "20px",
     boxShadow:
       "0 16px 38px -12px rgba(" +
       hexToRgb(blackColor) +
