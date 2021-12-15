@@ -4,7 +4,10 @@ import { makeStyles } from "@material-ui/core/styles";
 import classNames from "classnames";
 // @material-ui/icons
 import StarIcon from '@material-ui/icons/Star';
-// import  from "@material-ui/icons/";
+// import  image
+import FeaturedLessonImg from "assets/img/geneticRescue_title_card.png";
+import SponsorLogo from "assets/img/featuredSponsorLogo.jpg";
+
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
@@ -189,19 +192,17 @@ export default function SectionTeam() {
                 <GridContainer
                   style={{ display: "flex", alignContent: "middle",backgroundColor: "transparent" }}>
                   <span className={classes.featuredLessonLabel}>
-                      <StarIcon/> <h4> Featured Lesson</h4>
+                      <StarIcon/> <h4> New Release!</h4>
                     </span>
                   <GridItem xs={12} md={10}>
                     {/*Featured Lesson Label*/}
 
                     {/*lesson cover image*/}
                     <img
-                      src={
-                        "https://res.cloudinary.com/galactic-polymath/image/upload/v1616346791/lesson_misc_share/FemalesSing_Title_Slide_cchr8u.svg"
-                      }
+                      src={FeaturedLessonImg}
                       height="auto"
                       width="100%"
-                      alt={"Lesson Preview"}
+                      alt={"Lesson Card Cover"}
                       className={classes.lessonCover}
                     />
                   </GridItem>
@@ -210,9 +211,8 @@ export default function SectionTeam() {
                             style={{ alignSelf: "center" }}>
                     <h4>Sponsor</h4>
                     <img
-                      src={
-                        "https://res.cloudinary.com/galactic-polymath/image/upload/v1616347064/ClientLogos/sponsor-logo_ABS_xsfosa.png"
-                      }
+                      src={SponsorLogo}
+
                       height="auto"
                       width="100%"
                       alt={"Lesson Preview"}
@@ -262,22 +262,16 @@ export default function SectionTeam() {
                   We build lessons around <span className={classes.blackText}>real research, data, and stories</span> from diverse STEM experts.
                 </h4>
               </div>
-              <div className={classes.doubleSpaced}>
-                <h4>
-                  GP lessons are <span className={classes.blackText}>FREE and ready-to-launch, in person or remotely with Nearpod!</span>
-                  &nbsp;Teachers are free to edit and remix materials to meet their classroom needs.
-                </h4>
-              </div>
               <div
               style={{padding:"1.5rem 0 "}}>
                 <Button
                   color="primary"
                   size="lg"
-                  href="/lessons/1"
+                  href="/lessons/3"
                 >
                   <CreateIcon />
                   <i className="fas" />
-                  See Our First Lesson
+                  Check it out!
                 </Button>
               </div>
           </GridItem>
