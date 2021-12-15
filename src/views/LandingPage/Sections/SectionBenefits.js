@@ -103,7 +103,7 @@ const useStyles = makeStyles(style);
 export default function SectionBenefits() {
   const classes = useStyles();
   return (
-    <div className={classNames(classes.section, classes.greyBackground)}>
+    <div className={classNames(classes.section, classes.container)}>
       <h2 className={classNames(classes.justifyContentSpaceBetween)}>
         Benefits of connecting classrooms to the world of Academia
       </h2>
