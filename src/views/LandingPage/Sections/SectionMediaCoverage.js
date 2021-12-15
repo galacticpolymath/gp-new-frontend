@@ -82,21 +82,30 @@ export default function SectionMediaCoverage() {
     <div className={classNames(classes.narrowSection)}>
     <GridContainer>
       <GridItem xs={0} sm={0} md={1} lg={2}/>
-      <GridItem xs={12} sm={6} md={3} lg={4}>
+      <GridItem xs={12} sm={6} md={5} lg={4}>
         <Card>
         <img src={sciamCover} alt="Scientific American cover featuring barn swallows" className={classes.coverImg}/>
         </Card>
       </GridItem>
-      <GridItem xs={12} sm={6} md={7} lg={4}>
-        <h3>Our lesson <a href="lessons/1"> "Females Singing to be heard" </a> featured in <em>Scientific American</em>.
+      <GridItem xs={12} sm={6} md={6} lg={4}>
+        <h3>Our lesson "Females Singing to be heard" featured in <em>Scientific American</em>.
         </h3>
         <Button
           color="primary"
+          style={{width: "12rem",marginTop: "1rem"}}
           href="https://www.scientificamerican.com/article/why-it-took-so-long-to-appreciate-female-birds-songs/">
           Read the Article
         </Button>
-      </GridItem>
-      <GridItem xs={0} sm={0} md={1} lg={2}/>
+        <div>
+        <Button
+          color="rose"
+          style={{width: "12rem",marginTop: ".5rem"}}
+        href="lessons/1">
+          Check out the lesson
+      </Button>
+        </div>
+      </GridItem>1
+      <GridItem xs={0} sm={0} md={0} lg={2}/>
 
     </GridContainer>
       </div>
