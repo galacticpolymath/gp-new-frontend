@@ -41,19 +41,18 @@ const Header = ({
       <div className={classes.container}>
         {/* SectionHeading Div used for nav dots */}
         <div
-          className={"SectionHeading"}
-          id={"Title"}
+          className="SectionHeading"
+          id="Title"
           style={{ padding: 0, margin: 0 }}
         >
           {/* Dots nav text; not displayed on page */}
           <span style={{ display: "none" }}>Title</span>
         </div>
         {lastSubRelease && (
-          <AnchorLink href={"#version_notes"} offset={"125px"}>
+          <AnchorLink href="#version_notes" offset="125px">
             <p>
               Version {lastSubRelease.version} (Updated{" "}
               {moment(new Date(lastSubRelease.date))
-                .add({ day: 1 })
                 .format("MMM D, yyyy")}
               )
             </p>
@@ -70,11 +69,11 @@ const Header = ({
           </div>
         </GridContainer>
         <GridContainer className="sponsor">
-          <GridItem xs={12} sm={9} md={9} className={"sponsorDescr"}>
+          <GridItem xs={12} sm={9} md={9} className="sponsorDescr">
             <h5>Sponsored by:</h5>
             <RichText content={SponsoredBy} />
           </GridItem>
-          <GridItem xs={4} sm={3} md={2} className={"sponsorLogo"}>
+          <GridItem xs={4} sm={3} md={2} className="sponsorLogo">
             <Image {...SponsorImage} />
           </GridItem>
         </GridContainer>
