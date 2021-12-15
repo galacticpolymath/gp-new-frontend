@@ -13,30 +13,34 @@ const useStyles = makeStyles(blogPostsPageStyle);
 const VariantSummary = ({ variants = [] }) => {
   const [expanded, expand] = useState(true);
   const classes = useStyles();
-  return (
-    <ExpansionPanel
-      className="VariantSummary ExpansionPanel"
-      onChange={() => expand(!expanded)}
-      expanded={expanded}
-    >
-      <ExpansionPanelSummary
-        className="ExpansionPanelSummary"
-        expandIcon={<ExpandMoreIcon />}
-      >
-        <h4>Grade Level Variations:</h4>
-      </ExpansionPanelSummary>
-      <ExpansionPanelDetails className="ExpansionPanelDetails">
-        {variants.partGradVarNotes && <Box boxShadow={3} className={classes.card}>
-          {variants.map(({ part, partGradeVarNotes }, i) => (
-            <p key={i}>
-              <strong>Part {part}:</strong> {partGradeVarNotes}
-            </p>
-          ))}
-        </Box>
-        }
-      </ExpansionPanelDetails>
-    </ExpansionPanel>
-  );
+
+      if(variants.partGradVarNotes) {
+        return(
+          <ExpansionPanel
+          className="VariantSummary ExpansionPanel"
+          onChange={() => expand(!expanded)}
+          expanded={expanded}
+        >
+          <ExpansionPanelSummary
+            className="ExpansionPanelSummary"
+            expandIcon={<ExpandMoreIcon />}
+          >
+            <h4>Grade Level Variations:</h4>
+          </ExpansionPanelSummary>
+          <ExpansionPanelDetails className="ExpansionPanelDetails">
+             <Box boxShadow={3} className={classes.card}>
+              {variants.map(({ part, partGradeVarNotes }, i) => (
+                <p key={i}>
+                  <strong>Part {part}:</strong> {partGradeVarNotes}
+                </p>
+              ))}
+            </Box>
+
+          </ExpansionPanelDetails>
+        </ExpansionPanel>
+        )
+      } else{return(null)}
+
 };
 
 export default VariantSummary;

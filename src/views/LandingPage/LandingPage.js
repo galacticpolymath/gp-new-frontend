@@ -22,6 +22,7 @@ import SectionBenefits from "./Sections/SectionBenefits.js";
 import SectionJobViz from "./Sections/SectionJobViz";
 import SectionGPEquation from "./Sections/SectionGPEquation";
 import ParallaxImage from "assets/img/hero-images/landingPage-CityNetwork@75x-20.jpg";
+import SectionMediaCoverage from "./Sections/SectionMediaCoverage";
 
 const useStyles = makeStyles(landingPageStyle);
 
@@ -88,11 +89,12 @@ export default function LandingPage(props) {
         <div className={classes.container}>
           <SectionHow />
         </div>
+        <SectionMediaCoverage />
         <SectionJobViz />
         <SectionGPEquation />
         <SectionBenefits />
 
-        <br />
+
       </div>
       <Footer
         theme={"transparent"}
