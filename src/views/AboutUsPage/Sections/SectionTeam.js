@@ -730,7 +730,7 @@ export default function SectionTeam() {
       <GridContainer className={classes.justifyContent}>
         <div className={classes.sectionLabel}>
           <h3>DEV TEAM</h3>
-          <h4>The talented, mostly volunteer, group building and maintaining our site, as well as a growing variety of publishing and
+          <h4>The talented (mostly volunteer) group building and maintaining our site, as well as a growing variety of publishing and
             teaching tools.
             Fluent in React.js, SASS, CSS, HTML, R and other languages.</h4>
         </div>

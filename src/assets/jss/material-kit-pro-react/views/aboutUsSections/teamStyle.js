@@ -13,7 +13,6 @@ const teamStyle = {
   title,
   description: {
     ...description,
-    marginBottom: "80px",
   },
   infoBox:{
     margin:"0 auto",
@@ -28,7 +27,8 @@ const teamStyle = {
   cardTitle,
   cardDescription: {
     color: grayColor[3],
-    marginLeft: "1.2rem"
+    padding: 0,
+    margin: 0
 
   },
 
@@ -37,7 +37,7 @@ const teamStyle = {
   },
 
   sectionLabel:{
-    padding: "6vh 2vh 2vh",
+    padding: "6vh 2vh 0",
     "& >*":{
       textAlign: "center",
     },
@@ -70,7 +70,8 @@ const teamStyle = {
   accordionContainer:{
     color: grayColor,
     margin: "0 10%",
-  }
+  },
+
 };
 
 export default teamStyle;

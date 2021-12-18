@@ -3506,7 +3506,7 @@
             ]
           }
         }
-      },
+      } ,
       {
         "__component": "lesson-plan.procedure",
         "SectionTitle": "Procedure",

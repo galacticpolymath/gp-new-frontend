@@ -104,7 +104,7 @@ export default function SectionMediaCoverage() {
           Check out the lesson
       </Button>
         </div>
-      </GridItem>1
+      </GridItem>
       <GridItem xs={0} sm={0} md={0} lg={2}/>
 
     </GridContainer>
