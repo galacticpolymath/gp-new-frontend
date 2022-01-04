@@ -41,16 +41,19 @@
     .ResourceSummary {
       background: $gray;
       padding: 0.5rem 2rem;
+
       > div {
         > div {
           padding: 0.75rem 0;
           line-height: 1.7;
           font-size: 1.1em;
         }
+
         &:not(:last-child) {
           > div {
             border-bottom: 1px solid rgba($galactic-black, 0.5);
           }
+
           > div.title {
             color: $galactic-black;
             font-weight: bold;
@@ -59,10 +62,22 @@
           }
         }
       }
+
       > p {
         margin: 0;
       }
     }
+    .pick-grade-band-note {
+      margin: 1rem 0 -1rem;
+      i,span{
+      color: $burst-purple;
+        font-weight: 500;
+      }
+      i{
+        margin-right: 10px;
+      }
+    }
+
     .resourceSummaryItem {
       span[role="img"] {
         width: 2rem;

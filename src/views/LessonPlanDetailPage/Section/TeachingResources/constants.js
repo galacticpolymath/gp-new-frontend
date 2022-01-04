@@ -9,8 +9,8 @@ export const METHODS = {
 };
 
 export const TITLES = {
-  [METHODS.REMOTE]: "Remote Teaching",
-  [METHODS.IN_PERSON]: "Classroom/In-person Teaching",
+  [METHODS.REMOTE]: "Remote Teaching Materials",
+  [METHODS.IN_PERSON]: "Classroom/In-person Teaching Materials",
 };
 
 export const COPY = {

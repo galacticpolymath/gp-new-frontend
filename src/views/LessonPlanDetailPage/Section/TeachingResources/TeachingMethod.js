@@ -70,7 +70,10 @@ const TeachingMethod = ({
             )
           }
         />
-
+        <div className="pick-grade-band-note">
+          <i className="fas fa-hand-point-down"/>
+          <span>Click grade band to see materials</span>
+        </div>
         {gradeVariantNotes && <VariantSummary variants={gradeVariantNotes} />}
         {resources.map((resource, i) => (
             <GradeVariant key={i} {...resource} />
