@@ -2367,7 +2367,7 @@
           "ext": ".png",
           "mime": "image/png",
           "size": 193.57,
-          "url": "https://res.cloudinary.com/galactic-polymath/image/upload/v1638921939/females_Sing_Learning_Chart_5_12_e2ea660011.png",
+          "url": "https://catalog.galacticpolymath.com/lessons/lesson_femalessing_math/GP-Learning-Chart.png",
           "previewUrl": null,
           "provider": "cloudinary",
           "provider_metadata": {
@@ -3917,7 +3917,7 @@
             },
             "small": {
               "ext": ".png",
-              "url": "https://res.cloudinary.com/galactic-polymath/image/upload/v1638921941/small_females_Sing_Learning_Chart_5_12_e2ea660011.png",
+              "url": "https://catalog.galacticpolymath.com/lessons/lesson_femalessing_math/GP-Learning-Chart.png",
               "hash": "small_females_Sing_Learning_Chart_5_12_e2ea660011",
               "mime": "image/png",
               "name": "small_femalesSing_LearningChart_5-12.png",
@@ -3932,7 +3932,7 @@
             },
             "medium": {
               "ext": ".png",
-              "url": "https://res.cloudinary.com/galactic-polymath/image/upload/v1638921940/medium_females_Sing_Learning_Chart_5_12_e2ea660011.png",
+              "url": "https://catalog.galacticpolymath.com/lessons/lesson_femalessing_math/GP-Learning-Chart.png",
               "hash": "medium_females_Sing_Learning_Chart_5_12_e2ea660011",
               "mime": "image/png",
               "name": "medium_femalesSing_LearningChart_5-12.png",
@@ -3947,7 +3947,7 @@
             },
             "thumbnail": {
               "ext": ".png",
-              "url": "https://res.cloudinary.com/galactic-polymath/image/upload/v1638921939/thumbnail_females_Sing_Learning_Chart_5_12_e2ea660011.png",
+              "url": "https://catalog.galacticpolymath.com/lessons/lesson_femalessing_math/GP-Learning-Chart.png",
               "hash": "thumbnail_females_Sing_Learning_Chart_5_12_e2ea660011",
               "mime": "image/png",
               "name": "thumbnail_femalesSing_LearningChart_5-12.png",
@@ -3965,7 +3965,7 @@
           "ext": ".png",
           "mime": "image/png",
           "size": 193.57,
-          "url": "https://res.cloudinary.com/galactic-polymath/image/upload/v1638921939/females_Sing_Learning_Chart_5_12_e2ea660011.png",
+          "url": "https://catalog.galacticpolymath.com/lessons/lesson_femalessing_math/GP-Learning-Chart.png",
           "previewUrl": null,
           "provider": "cloudinary",
           "provider_metadata": {
