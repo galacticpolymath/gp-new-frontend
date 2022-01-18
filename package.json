@@ -31,8 +31,7 @@
     "react-slick": "0.26.1",
     "react-snap": "^1.23.0",
     "react-swipeable-views": "0.13.9",
-    "react-tagsinput": "3.19.0",
-    "showdown": "^1.9.1"
+    "react-tagsinput": "3.19.0"
   },
   "scripts": {
     "start": "react-scripts start",
