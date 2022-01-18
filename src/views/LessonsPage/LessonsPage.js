@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import classNames from "classnames";
 import { makeStyles } from "@material-ui/core/styles";
 import NewReleasesIcon from "@material-ui/icons/NewReleases";
@@ -15,8 +15,6 @@ import LessonCards from "./Sections/LessonCards.js";
 
 import Hero from "assets/img/hero-images/Lessons_VerticalDotandline.svg";
 
-import cachedLessons from "../LessonPlanDetailPage/data/lesson-plans.json";
-
 import lessonsPageStyle from "assets/jss/material-kit-pro-react/views/lessonsPageStyle.js";
 
 const useStyles = makeStyles(lessonsPageStyle);
@@ -27,7 +25,16 @@ export default function LessonsPage() {
     document.body.scrollTop = 0;
   });
 
+  const [lessons, setLessons] = useState([])
   const classes = useStyles();
+
+  useEffect(() => {
+    fetch("https://catalog.galacticpolymath.com/index.json")
+      .then(res => res.json())
+      .then(result => setLessons(result))
+  }, []);
+
+
   return (
     <div>
       {renderMetaTags({
@@ -100,7 +107,7 @@ export default function LessonsPage() {
             iconColor="rose"
             title=""
           />
-          {cachedLessons && <LessonCards lessons={cachedLessons.filter(({published_at}) => published_at)} />}
+          {lessons && <LessonCards lessons={lessons.filter(({published_at}) => published_at)} />}
         </div>
       </div>
     </div>
