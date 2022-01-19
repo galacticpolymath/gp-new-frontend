@@ -652,77 +652,7 @@ export default function SectionTeam() {
           </Card>
         </GridItem>
 
-        {/*Jacki Whisenant*/}
-        <GridItem md={4} sm={12}>
-          <Card profile plain>
-            <CardAvatar profile plain>
-              <img
-                src={makeCloudinaryUrl(
-                  "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1628110609/Team/Jacki_Whisenant_yk31dn.png"
-                )}
-                alt="profile-pic"
-                className={classes.img}
-              />
-            </CardAvatar>
-            <CardBody plain>
-              <h4 className={classes.cardTitle}>Jacki Whisenant, MS</h4>
-              <h6 className={classes.textMuted}>
-                Scientific Illustrator
-              </h6>
-              <p className={classes.cardDescription}>
-                An illustrator, entomologists, and museum minion with a fondness for bats, bones, and anything with six legs.
-                Enthusiastic about collaboration!
-              </p>
-            </CardBody>
-            <CardFooter className={classes.justifyContent}>
-              <Button
-                href="http://www.jwhisenant.com/"
-                target="_blank"
-                justIcon
-                simple
-                color={"primary"}
-              >
-                <i className="fas fa-globe" />
-              </Button>
-              {/*<Button*/}
-              {/*  href=""*/}
-              {/*  target="_blank"*/}
-              {/*  justIcon*/}
-              {/*  simple*/}
-              {/*  color={"primary"}*/}
-              {/*>*/}
-              {/*  <i className="fab fa-linkedin" />*/}
-              {/*</Button>*/}
-              {/*<Button*/}
-              {/*  href=""*/}
-              {/*  target="_blank"*/}
-              {/*  justIcon*/}
-              {/*  simple*/}
-              {/*  color={"primary"}*/}
-              {/*>*/}
-              {/*  <i className="fab fa-twitter" />*/}
-              {/*</Button>*/}
-              {/*<Button*/}
-              {/*  href=""*/}
-              {/*  target="_blank"*/}
-              {/*  justIcon*/}
-              {/*  simple*/}
-              {/*  color={"primary"}*/}
-              {/*>*/}
-              {/*  <i className="fab fa-youtube" />*/}
-              {/*</Button>*/}
-              <Button
-                href="https://www.instagram.com/jacki.whisenant/"
-                target="_blank"
-                justIcon
-                simple
-                color={"primary"}
-              >
-                <i className="fab fa-instagram" />
-              </Button>
-            </CardFooter>
-          </Card>
-        </GridItem>
+
       </GridContainer>
 
       {/*---------------*/}
