@@ -20,9 +20,14 @@ const components = {
 }
 
 const CustomMarkdownView = ({
-  markdown
+  markdown,
+  ...passThruProps
 }) => {
-  return <MarkdownView markdown={markdown} components={{...components}} />
+  return <MarkdownView
+    {...passThruProps}
+    markdown={markdown}
+    components={{...components}}
+  />
 }
 
 export default CustomMarkdownView
