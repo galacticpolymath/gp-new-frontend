@@ -30,7 +30,7 @@ export default function SectionBenefitsOfGP() {
         <GridItem>
           <InfoArea
             className={classes.custInfoArea}
-            title={"Expand Your Outreach"}
+            title={"Better, Easier Outreach"}
             description={
               "Make grant proposals more competitive and achieve much broader impacts, while reducing your own workload."
             }
