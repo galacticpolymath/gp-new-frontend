@@ -1,20 +1,17 @@
 import React from "react";
-import showdown from "showdown";
 import PropTypes from "prop-types";
 
-import "./styles.scss";
+import CustomMarkdownView from "components/CustomMarkdownView";
 
-const converter = new showdown.Converter();
+import "./styles.scss";
 
 const RichText = ({ content, className = "" }) => {
   if (!content) return null;
 
-  let __html = converter.makeHtml(content);
-
   return (
-    <div
+    <CustomMarkdownView
       className={"RichText " + className}
-      dangerouslySetInnerHTML={{ __html }}
+      markdown={content}
     />
   );
 };
