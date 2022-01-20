@@ -26,6 +26,11 @@ import NotFoundPage from "views/NotFound";
 
 var hist = createBrowserHistory();
 
+var lessons = fetch("https://catalog.galacticpolymath.com/index.json")
+    .then(res => res.json())
+    .then(function (result){
+      lessons = result
+      console.log(lessons)})
 
 const App = () => (
   <Router history={hist}>
@@ -50,7 +55,7 @@ const App = () => (
       <Route exact path="/hire-us" component={HireUsPage} />
 
       {/* Lessson Directory */}
-      <Route exact path="/lessons" component={Lessons} />
+      <Route exact path="/lessons" element={<Lessons lessons={lessons}/>} />
       <Route path="/lessons/:lessonId" component={LessonPlanDetailsPage} />
 
       {/* JobViz */}

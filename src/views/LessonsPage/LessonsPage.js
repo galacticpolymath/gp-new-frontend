@@ -19,21 +19,20 @@ import lessonsPageStyle from "assets/jss/material-kit-pro-react/views/lessonsPag
 
 const useStyles = makeStyles(lessonsPageStyle);
 
-export default function LessonsPage() {
+export default function LessonsPage({props}) {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
   });
 
-  const [lessons, setLessons] = useState([])
+  //const [lessons, setLessons] = useState([])
   const classes = useStyles();
-
+/*
   useEffect(() => {
     fetch("https://catalog.galacticpolymath.com/index.json")
       .then(res => res.json())
       .then(result => setLessons(result))
-  }, []);
-
+  }, []);*/
 
   return (
     <div>
@@ -107,7 +106,7 @@ export default function LessonsPage() {
             iconColor="rose"
             title=""
           />
-          {lessons && <LessonCards lessons={lessons.filter(({published_at}) => published_at)} />}
+          {/*props.lessons && <LessonCards lessons={props.lessons} />*/}
         </div>
       </div>
     </div>

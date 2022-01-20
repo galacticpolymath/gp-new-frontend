@@ -12,6 +12,7 @@ import blogPostsPageStyle from "assets/jss/material-kit-pro-react/views/blogPost
 import Image from "components/StrapiImage";
 import { Link } from "react-router-dom";
 import { Box } from "@material-ui/core";
+import { TitleOutlined } from "@material-ui/icons";
 
 
 const useStyles = makeStyles(blogPostsPageStyle);
@@ -30,9 +31,9 @@ const LessonCards = ({ lessons }) => {
                   <h4>
                     {Title}
                   </h4>
-                  <p>{Subtitle}</p>
-                  <Badge color="primary">{Section[0].TargetSubject}</Badge>
-                </CardBody>
+                  <p>{Subtitle}</p>      
+                  <Badge color="primary">{Section.overview.TargetSubject}</Badge>   
+                  </CardBody>
               </Box>
             </Link>
           </GridItem>
