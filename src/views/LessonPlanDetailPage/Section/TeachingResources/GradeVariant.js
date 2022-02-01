@@ -9,8 +9,14 @@ import DownloadIcon from "@material-ui/icons/GetApp";
 import VariantPart from "./VariantPart";
 import DownloadHelp from "./DownloadHelpModal";
 
-const GradeVariant = ({ parts = [], links, grades, gradePrefix }) => {
-  const [expanded, expand] = useState(false);
+const GradeVariant = ({
+  parts = [],
+  links,
+  grades,
+  gradePrefix,
+  initiallyExpanded
+}) => {
+  const [expanded, expand] = useState(initiallyExpanded);
   return (
     <ExpansionPanel
       className="GradeVariant ExpansionPanel"
