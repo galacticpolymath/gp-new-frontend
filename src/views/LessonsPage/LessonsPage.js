@@ -25,14 +25,16 @@ export default function LessonsPage({props}) {
     document.body.scrollTop = 0;
   });
 
-  //const [lessons, setLessons] = useState([])
+  const [lessons, setLessons] = useState([])
   const classes = useStyles();
-/*
+
   useEffect(() => {
     fetch("https://catalog.galacticpolymath.com/index.json")
       .then(res => res.json())
       .then(result => setLessons(result))
-  }, []);*/
+  }, []);
+
+  console.log(lessons)
 
   return (
     <div>
@@ -106,7 +108,7 @@ export default function LessonsPage({props}) {
             iconColor="rose"
             title=""
           />
-          {/*props.lessons && <LessonCards lessons={props.lessons} />*/}
+          lessons && <LessonCards lessons={lessons} />
         </div>
       </div>
     </div>
