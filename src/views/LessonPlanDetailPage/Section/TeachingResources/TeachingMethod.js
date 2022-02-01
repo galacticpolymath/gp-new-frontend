@@ -16,8 +16,9 @@ const TeachingMethod = ({
   resourceSummary,
   gradeVariantNotes,
   resources = [],
+  initiallyExpanded
 }) => {
-  const [expanded, expand] = useState(false);
+  const [expanded, expand] = useState(initiallyExpanded);
 
   return (
     <ExpansionPanel
@@ -89,6 +90,7 @@ TeachingMethod.propTypes = {
   resourceSummary: PropTypes.array,
   gradeVariantNotes: PropTypes.array,
   resources: PropTypes.array,
+  initiallyExpanded: PropTypes.bool,
 };
 
 export default TeachingMethod;
