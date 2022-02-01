@@ -29,7 +29,7 @@ const TeachingResources = ({
       SectionTitle={SectionTitle}
     >
       <div className={classes.container}>
-        {classroom && remote && <LessonHelperText text="Click a category for more details."/>}
+        {classroom && remote && <LessonHelperText text="Click a category for more details"/>}
         {classroom && (
           <TeachingMethod
             type={METHODS.IN_PERSON}

@@ -73,11 +73,11 @@ const TeachingMethod = ({
             )
           }
         />
-        <LessonHelperText text="Click grade band to see materials" />
         {gradeVariantNotes && <VariantSummary variants={gradeVariantNotes} />}
+        {resources.length > 1 && <LessonHelperText text="Click grade band to see materials" />}
         {resources.map((resource, i) => (
-            <GradeVariant key={i} {...resource} />
-            ))}
+          <GradeVariant key={i} initiallyExpanded={resources.length === 1} {...resource} />
+        ))}
 
       </ExpansionPanelDetails>
     </ExpansionPanel>
