@@ -5,6 +5,8 @@ import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
+import LessonHelperText from "components/LessonHelperText";
+
 import ResourceSummary2 from "./ResourceSummary2";
 import VariantSummary from "./VariantSummary";
 import GradeVariant from "./GradeVariant";
@@ -71,10 +73,7 @@ const TeachingMethod = ({
             )
           }
         />
-        <div className="pick-grade-band-note">
-          <i className="fas fa-hand-point-down"/>
-          <span>Click grade band to see materials</span>
-        </div>
+        <LessonHelperText text="Click grade band to see materials" />
         {gradeVariantNotes && <VariantSummary variants={gradeVariantNotes} />}
         {resources.map((resource, i) => (
             <GradeVariant key={i} {...resource} />

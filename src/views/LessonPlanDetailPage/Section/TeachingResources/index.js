@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 
+import LessonHelperText from "components/LessonHelperText";
 import TeachingMethod from "./TeachingMethod";
 import CollapsibleSection from "../CollapsibleSection";
 
@@ -28,6 +29,7 @@ const TeachingResources = ({
       SectionTitle={SectionTitle}
     >
       <div className={classes.container}>
+        {classroom && remote && <LessonHelperText text="Click a category for more details."/>}
         {classroom && (
           <TeachingMethod
             type={METHODS.IN_PERSON}
