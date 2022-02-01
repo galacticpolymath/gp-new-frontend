@@ -1,0 +1,13 @@
+@import '../../views/LessonPlanDetailPage/variables';
+
+.pick-grade-band-note {
+  margin: 1rem 0 -.5rem;
+  i,
+  span {
+    color: $burst-purple;
+    font-weight: 500;
+  }
+  i {
+    margin-right: 10px;
+  }
+}
