@@ -17,8 +17,9 @@ import { TitleOutlined } from "@material-ui/icons";
 
 const useStyles = makeStyles(blogPostsPageStyle);
 
-const LessonCards = ({ lessons }) => {
+const LessonCards = ({lessons}) => {
   const classes = useStyles();
+
   return (
     <div className={classes.container} style={{ padding: "40px 0" }}>
       <GridContainer >
@@ -55,8 +56,6 @@ const LessonCards = ({ lessons }) => {
       {/*          }}*/}
       {/*        />*/}
       {/*        <CardBody>*/}
-      {/*          <h4>*/}
-      {/*            /!*<Link to={"/lessons/" + id}>{Title}</Link>*!/*/}
       {/*            Genetic Rescue to the Rescue*/}
       {/*          </h4>*/}
       {/*          <p>Preventing extinction through gene flow</p>*/}

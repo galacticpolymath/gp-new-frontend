@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
@@ -26,13 +26,8 @@ import NotFoundPage from "views/NotFound";
 
 var hist = createBrowserHistory();
 
-var lessons = fetch("https://catalog.galacticpolymath.com/index.json")
-    .then(res => res.json())
-    .then(function (result){
-      lessons = result
-      console.log(lessons)})
-
-const App = () => (
+export default function App() {
+  return (
   <Router history={hist}>
     <Helmet>
       <meta charSet="utf-8" />
@@ -55,7 +50,7 @@ const App = () => (
       <Route exact path="/hire-us" component={HireUsPage} />
 
       {/* Lessson Directory */}
-      <Route exact path="/lessons" element={<Lessons lessons={lessons}/>} />
+      <Route exact path="/lessons" component={Lessons} />
       <Route path="/lessons/:lessonId" component={LessonPlanDetailsPage} />
 
       {/* JobViz */}
@@ -161,5 +156,4 @@ const App = () => (
     <CustomGPfooter />
   </Router>
 );
-
-export default App;
+}

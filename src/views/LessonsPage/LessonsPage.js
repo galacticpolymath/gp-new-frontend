@@ -17,24 +17,25 @@ import Hero from "assets/img/hero-images/Lessons_VerticalDotandline.svg";
 
 import lessonsPageStyle from "assets/jss/material-kit-pro-react/views/lessonsPageStyle.js";
 
+//import cachedLessons from "../LessonPlanDetailPage/data/lesson-plans.json";
+
 const useStyles = makeStyles(lessonsPageStyle);
 
-export default function LessonsPage({props}) {
+export default function LessonsPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
   });
 
-  const [lessons, setLessons] = useState([])
   const classes = useStyles();
+
+  const [lessons, setLessons] = useState([])
 
   useEffect(() => {
     fetch("https://catalog.galacticpolymath.com/index.json")
       .then(res => res.json())
       .then(result => setLessons(result))
   }, []);
-
-  console.log(lessons)
 
   return (
     <div>
@@ -108,7 +109,7 @@ export default function LessonsPage({props}) {
             iconColor="rose"
             title=""
           />
-          lessons && <LessonCards lessons={lessons} />
+          {lessons && <LessonCards lessons={lessons} />}
         </div>
       </div>
     </div>
