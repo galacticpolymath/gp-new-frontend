@@ -1,11 +1,11 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { renderMetaTags } from "utils/meta";
 
 import SiteHeader from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 
-import cachedLessons from "./data/lesson-plans.json";
+//import cachedLessons from "./data/lesson-plans.json";
 
 import Section from "./Section/index";
 import Header from "./Header";
@@ -16,7 +16,7 @@ import "./style.scss";
 import NavigationDots from "./NavigationDots";
 import useScrollHandler from './NavigationDots/useScrollHandler'
 
-const LessonPlan = ({ location }) => {
+export default function LessonPlan({ location }) {
   useScrollHandler()
 
   useEffect(() => {
@@ -24,8 +24,21 @@ const LessonPlan = ({ location }) => {
     document.body.scrollTop = 0;
   });
 
+  const [wtf, setwtf] = useState([])
+
+  useEffect(() => {
+    fetch("https://catalog.galacticpolymath.com/index.json")
+      .then(res => res.json())
+      .then(result => setwtf(result))
+  }, []);
+
+  console.log(wtf)
+
   const { lessonId } = useParams();
-  const lesson = cachedLessons.find(({ id }) => id.toString() === lessonId.toString())
+  const lesson = wtf.find(({ id }) => id.toString() === lessonId.toString()) // object of objs
+  // need list of objs
+  console.log(lesson)
+  const sections = lesson.Section
 
   let numberedElements = 0;
 
@@ -57,7 +70,7 @@ const LessonPlan = ({ location }) => {
         <Header location={location} {...lesson} />
 
         {lesson.Section &&
-          lesson.Section.map((section, i) => renderSection(section, i))}
+          Object.keys(lesson.Section).map((sectionkey, i) => renderSection(lesson.Section.sectionkey, i))}
       </div>
 
       <NavigationDots sections={lesson.Section} />
@@ -65,4 +78,3 @@ const LessonPlan = ({ location }) => {
   );
 };
 
-export default LessonPlan;

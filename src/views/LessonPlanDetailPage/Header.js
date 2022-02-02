@@ -15,9 +15,7 @@ import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanS
 const useStyles = makeStyles(lessonPlanStyle);
 
 const getLatestSubRelease = (sections) => {
-  const versionSection = sections.find(
-    ({ __component }) => __component === SECTIONS.VERSIONS
-  );
+  const versionSection = sections.versions
   const lastRelease =
     versionSection.Data[versionSection.Data.length - 1].sub_releases;
   const lastSubRelease = lastRelease[lastRelease.length - 1];
@@ -35,6 +33,8 @@ const Header = ({
 }) => {
   const classes = useStyles();
   const lastSubRelease = getLatestSubRelease(Section);
+  console.log(lastSubRelease)
+
 
   return (
     <div className="Header">

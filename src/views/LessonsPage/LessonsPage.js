@@ -15,13 +15,13 @@ import LessonCards from "./Sections/LessonCards.js";
 
 import Hero from "assets/img/hero-images/Lessons_VerticalDotandline.svg";
 
-import cachedLessons from "../LessonPlanDetailPage/data/lesson-plans.json";
+//import cachedLessons from "../LessonPlanDetailPage/data/lesson-plans.json";
 
 import lessonsPageStyle from "assets/jss/material-kit-pro-react/views/lessonsPageStyle.js";
 
 const useStyles = makeStyles(lessonsPageStyle);
 
-export default function LessonsPage() {
+export default function LessonsPage({lessons}) {
   useEffect(() => {
     window.scrollTo(0, 0);
     document.body.scrollTop = 0;
@@ -100,7 +100,7 @@ export default function LessonsPage() {
             iconColor="rose"
             title=""
           />
-          {cachedLessons && <LessonCards lessons={cachedLessons.filter(({published_at}) => published_at)} />}
+          {lessons && <LessonCards lessons={lessons}/*={lessons.filter(({published_at}) => published_at)}*/ />}
         </div>
       </div>
     </div>

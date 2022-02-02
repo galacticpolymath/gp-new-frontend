@@ -31,7 +31,7 @@ const LessonCards = ({ lessons }) => {
                     {Title}
                   </h4>
                   <p>{Subtitle}</p>
-                  <Badge color="primary">{Section[0].TargetSubject}</Badge>
+                  <Badge color="primary">{Section.overview.TargetSubject}</Badge>
                 </CardBody>
               </Box>
             </Link>
