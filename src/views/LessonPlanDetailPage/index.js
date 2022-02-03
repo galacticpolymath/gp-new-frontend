@@ -1,11 +1,12 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { renderMetaTags } from "utils/meta";
+import axios from 'axios';
+
+import less from "./data/index.json"
 
 import SiteHeader from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
-
-import cachedLessons from "./data/lesson-plans.json";
 
 import Section from "./Section/index";
 import Header from "./Header";
@@ -19,31 +20,39 @@ import useScrollHandler from './NavigationDots/useScrollHandler'
 const LessonPlan = ({ location }) => {
   useScrollHandler()
 
+  /*
+  const [less, setLessons] = useState([])
+
   useEffect(() => {
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
-  });
+    fetch(`https://catalog.galacticpolymath.com/index.json`)
+      .then(res => res.json())
+      .then(result => setLessons(result))
+    
+  }, []);
+  */
 
   const { lessonId } = useParams();
-  const lesson = cachedLessons.find(({ id }) => id.toString() === lessonId.toString())
+  const les = less.find(({ id }) => id.toString() === lessonId.toString());
 
   let numberedElements = 0;
 
-  if (!lesson) return null;
+  if (!les) return null;
 
   const renderSection = (section, i) => {
     if (NUMBERED_SECTIONS.indexOf(section.__component) !== -1) {
       numberedElements++;
     }
+    console.log(section)
     return <Section key={i} index={numberedElements} section={section} />;
   };
 
+  if (true) {
   return (
     <Fragment>
       {renderMetaTags({
-        title: lesson.Title,
-        description: lesson.Subtitle,
-        image: lesson.CoverImage.url,
+        title: les.Title,
+        description: les.Subtitle,
+        image: les.CoverImage.url,
         url: `https://galacticpolymath.com/lessons/${lessonId}`
       })}
       
@@ -54,15 +63,16 @@ const LessonPlan = ({ location }) => {
       />
       <div className="LessonPlan" id="top">
 
-        <Header location={location} {...lesson} />
+        <Header location={location} {...les} />
 
-        {lesson.Section &&
-          lesson.Section.map((section, i) => renderSection(section, i))}
+        {les.Section &&
+          Object.keys(les.Section).map((key, i) => renderSection(les.Section[key], i))}
       </div>
 
-      <NavigationDots sections={lesson.Section} />
+      <NavigationDots sections={les.Section} />
     </Fragment>
   );
+  };
 };
 
 export default LessonPlan;

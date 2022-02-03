@@ -8,16 +8,14 @@ import GridContainer from "components/Grid/GridContainer";
 import GridItem from "components/Grid/GridItem";
 import Image from "../../components/StrapiImage";
 import RichText from "../../components/RichText";
-import { SECTIONS } from "./constants";
+//import { SECTIONS } from "./constants";
 import ShareTools from "./ShareTools";
 
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
 const useStyles = makeStyles(lessonPlanStyle);
 
 const getLatestSubRelease = (sections) => {
-  const versionSection = sections.find(
-    ({ __component }) => __component === SECTIONS.VERSIONS
-  );
+  const versionSection = sections.versions
   const lastRelease =
     versionSection.Data[versionSection.Data.length - 1].sub_releases;
   const lastSubRelease = lastRelease[lastRelease.length - 1];

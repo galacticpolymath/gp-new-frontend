@@ -28,13 +28,14 @@ export default function LessonsPage() {
   });
 
   const classes = useStyles();
-
+  
   const [lessons, setLessons] = useState([])
 
   useEffect(() => {
     fetch("https://catalog.galacticpolymath.com/index.json")
       .then(res => res.json())
       .then(result => setLessons(result))
+    
   }, []);
 
   return (
