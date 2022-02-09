@@ -6,6 +6,7 @@ import SiteHeader from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 
 //import cachedLessons from "./data/lesson-plans.json";
+import lessons from "./data/lessons.json";
 
 import Section from "./Section/index";
 import Header from "./Header";
@@ -24,30 +25,24 @@ export default function LessonPlan({ location }) {
     document.body.scrollTop = 0;
   });
 
-  const [wtf, setwtf] = useState([])
-
-  useEffect(() => {
-    fetch("https://catalog.galacticpolymath.com/index.json")
-      .then(res => res.json())
-      .then(result => setwtf(result))
-  }, []);
-
-  console.log(wtf)
-
   const { lessonId } = useParams();
-  const lesson = wtf.find(({ id }) => id.toString() === lessonId.toString()) // object of objs
+  const lesson = lessons.find(({ id }) => id.toString() === lessonId.toString()) // object of objs
   // need list of objs
-  console.log(lesson)
+  
   const sections = lesson.Section
 
   let numberedElements = 0;
 
   if (!lesson) return null;
 
+  // count the sections listed in numbered_sections. to send as index. 
+  // function takes a section object with flat properties
+  // returns a section component to render
   const renderSection = (section, i) => {
-    if (NUMBERED_SECTIONS.indexOf(section.__component) !== -1) {
+    if (NUMBERED_SECTIONS.indexOf(section.__component) !== -1) { 
       numberedElements++;
     }
+    console.log(section)
     return <Section key={i} index={numberedElements} section={section} />;
   };
 
@@ -69,8 +64,10 @@ export default function LessonPlan({ location }) {
 
         <Header location={location} {...lesson} />
 
-        {lesson.Section &&
-          Object.keys(lesson.Section).map((sectionkey, i) => renderSection(lesson.Section.sectionkey, i))}
+        {sections &&
+          Object.keys(sections).map((sectionkey, i) => {
+            renderSection(sections[sectionkey], i)}
+            )}
       </div>
 
       <NavigationDots sections={lesson.Section} />

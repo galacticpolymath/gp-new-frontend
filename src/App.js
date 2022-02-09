@@ -61,7 +61,7 @@ export default function App () {
         {/* Lessson Directory */}
         
         <Route exact path="/lessons" render={() => <Lessons lessons={lessons} />} />
-        <Route path="/lessons/:lessonId" render={({location}) => <LessonPlanDetailsPage location={location} />} />
+        <Route path="/lessons/:lessonId" render={({location}) => <LessonPlanDetailsPage location={location} lessons={lessons} />} />
 
         {/* JobViz */}
         <Route

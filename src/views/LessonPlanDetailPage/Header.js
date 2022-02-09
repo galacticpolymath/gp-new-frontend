@@ -8,7 +8,7 @@ import GridContainer from "components/Grid/GridContainer";
 import GridItem from "components/Grid/GridItem";
 import Image from "../../components/StrapiImage";
 import RichText from "../../components/RichText";
-import { SECTIONS } from "./constants";
+//import { SECTIONS } from "./constants";
 import ShareTools from "./ShareTools";
 
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
@@ -35,6 +35,10 @@ const Header = ({
   const lastSubRelease = getLatestSubRelease(Section);
   console.log(lastSubRelease)
 
+  // temporary code until multiple sponsor images can be handled
+  if (Array.isArray(SponsorImage.url)){
+    SponsorImage.url = SponsorImage.url[0]
+  }
 
   return (
     <div className="Header">
