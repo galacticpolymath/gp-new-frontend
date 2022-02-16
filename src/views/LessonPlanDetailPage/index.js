@@ -6,7 +6,7 @@ import SiteHeader from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 
 //import cachedLessons from "./data/lesson-plans.json";
-import lessons from "./data/lessons.json";
+//import lessons from "./data/lessons.json";
 
 import Section from "./Section/index";
 import Header from "./Header";
@@ -17,7 +17,7 @@ import "./style.scss";
 import NavigationDots from "./NavigationDots";
 import useScrollHandler from './NavigationDots/useScrollHandler'
 
-export default function LessonPlan({ location }) {
+export default function LessonPlan({ location, lessons }) {
   useScrollHandler()
 
   useEffect(() => {
