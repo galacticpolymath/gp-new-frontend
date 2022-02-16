@@ -33,9 +33,8 @@ const Header = ({
 }) => {
   const classes = useStyles();
   const lastSubRelease = getLatestSubRelease(Section);
-  console.log(lastSubRelease)
 
-  // temporary code until multiple sponsor images can be handled
+  // temporary code until we decide how multiple sponsor images should be displayed
   if (Array.isArray(SponsorImage.url)){
     SponsorImage.url = SponsorImage.url[0]
   }

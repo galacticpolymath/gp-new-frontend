@@ -31,6 +31,7 @@ const Overview = ({
   Tags
 }) => {
   const classes = useStyles();
+
   return (
     <CollapsibleSection
       className="Overview"

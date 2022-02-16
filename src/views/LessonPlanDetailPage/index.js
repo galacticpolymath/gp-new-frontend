@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { renderMetaTags } from "utils/meta";
 
@@ -29,7 +29,7 @@ export default function LessonPlan({ location }) {
   const lesson = lessons.find(({ id }) => id.toString() === lessonId.toString()) // object of objs
   // need list of objs
   
-  const sections = lesson.Section
+  const sections = lesson.Section;
 
   let numberedElements = 0;
 
@@ -42,7 +42,8 @@ export default function LessonPlan({ location }) {
     if (NUMBERED_SECTIONS.indexOf(section.__component) !== -1) { 
       numberedElements++;
     }
-    console.log(section)
+    // console.log(numberedElements, section);
+    
     return <Section key={i} index={numberedElements} section={section} />;
   };
 
@@ -65,9 +66,8 @@ export default function LessonPlan({ location }) {
         <Header location={location} {...lesson} />
 
         {sections &&
-          Object.keys(sections).map((sectionkey, i) => {
-            renderSection(sections[sectionkey], i)}
-            )}
+          Object.keys(sections).map((sectionkey, i) => renderSection(sections[sectionkey], i)
+        )}
       </div>
 
       <NavigationDots sections={lesson.Section} />
