@@ -69,7 +69,7 @@
           "formats": {
             "large": {
               "ext": ".png",
-              "url": "https://res.cloudinary.com/galactic-polymath/image/upload/v1616284330/large_females_Sing_Learning_Epaulette_5_12_4117bb0b7e.png",
+              "url": "https://catalog.galacticpolymath.com/lessons/lesson_femalessing_math/GP-Learning-Epaulette.png",
               "hash": "large_females_Sing_Learning_Epaulette_5_12_4117bb0b7e",
               "mime": "image/png",
               "name": "large_femalesSing_LearningEpaulette_5-12.png",
@@ -132,7 +132,7 @@
           "ext": ".png",
           "mime": "image/png",
           "size": 31.82,
-          "url": "https://res.cloudinary.com/galactic-polymath/image/upload/v1616284328/females_Sing_Learning_Epaulette_5_12_4117bb0b7e.png",
+          "url": "https://catalog.galacticpolymath.com/lessons/lesson_femalessing_math/GP-Learning-Epaulette.png",
           "previewUrl": null,
           "provider": "cloudinary",
           "provider_metadata": {
@@ -3043,7 +3043,7 @@
           "formats": {
             "large": {
               "ext": ".png",
-              "url": "https://res.cloudinary.com/galactic-polymath/image/upload/v1638918864/large_GP_Learning_Epaulette_15ac869469.png",
+              "url": "https://catalog.galacticpolymath.com/lessons/geneticrescue_sci/GP-Learning-Epaulette.png",
               "hash": "large_GP_Learning_Epaulette_15ac869469",
               "mime": "image/png",
               "name": "large_GP-Learning-Epaulette_.png",
@@ -3106,7 +3106,7 @@
           "ext": ".png",
           "mime": "image/png",
           "size": 19.19,
-          "url": "https://res.cloudinary.com/galactic-polymath/image/upload/v1638918863/GP_Learning_Epaulette_15ac869469.png",
+          "url": "https://catalog.galacticpolymath.com/lessons/geneticrescue_sci/GP-Learning-Epaulette.png",
           "previewUrl": null,
           "provider": "cloudinary",
           "provider_metadata": {

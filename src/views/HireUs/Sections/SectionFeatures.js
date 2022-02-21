@@ -197,7 +197,7 @@ export default function SectionFeatures() {
       />
       <FeatureDetails
         id={"GPsensible"}
-        keyPhrase1={"GP Sensible Lesson Plans"}
+        keyPhrase1={"GP Cascading Lesson Plans"}
         keyPhrase2={"are built for fast and easy implementation."}
         description={
           "The goal is 15 minutes or less of prep, even for teachers with no training in the lesson topic. We do " +
