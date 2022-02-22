@@ -18,6 +18,9 @@ import MailOutlineIcon from "@material-ui/icons/MailOutline";
 
 const useStyles = makeStyles(style);
 
+
+
+
 export default function CustomGPfooter() {
   const classes = useStyles();
   return (
@@ -120,17 +123,17 @@ export default function CustomGPfooter() {
                     Get updates and early access to our latest free lessons and
                     learning tools.
                   </p>
-                  <form>
+                  <div >
                     <Button
-                      color="primary"
+                      color="rose"
                       size="lg"
                       href="https://eepurl.com/g_kQ4T"
-                      className={classNames(classes.button)}
+                      className={classNames(classes.subscribeButton)}
                     >
                       <MailOutlineIcon style={{ marginRight: "0.75rem" }} />
                       Subscribe
                     </Button>
-                  </form>
+                  </div>
                 </GridItem>
               </GridContainer>
             </div>

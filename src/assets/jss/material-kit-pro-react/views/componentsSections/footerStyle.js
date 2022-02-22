@@ -7,7 +7,7 @@ import {
   twitterColor,
   dribbbleColor,
   instagramColor,
-  grayColor
+  grayColor,  roseColor
 } from "assets/jss/material-kit-pro-react.js";
 
 import imagesStyles from "assets/jss/material-kit-pro-react/imagesStyles.js";
@@ -179,6 +179,20 @@ const style = {
     width: "18px",
     height: "18px",
     position: "relative"
+  },
+  subscribeButton: {
+    color: "white !important",
+    position: "relative",
+    overflow: "hidden",
+    "&:hover":{
+      content: '',
+      position: "absolute",
+      backgroundColor: grayColor[6],
+      fontWeight: 600,
+      border: "1px solid "+roseColor[0],
+      color: roseColor[0]+" !important",
+      transform: "scale3d(1.1,1.1,1)"
+    }
   },
   customFormControl: {
     paddingTop: "14px"
