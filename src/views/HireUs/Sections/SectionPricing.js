@@ -32,11 +32,11 @@ export default function SectionPricing() {
                 </h5>
 
                 <h3 className={classes.cardTitle}>
-                  <span className={classes.dollar}>1,500&nbsp;– 5,000</span>
+                  <span className={classes.dollar}>5,000&nbsp;– 10,000</span>
                 </h3>
                 <ul>
                   <PricingFeature
-                    boldedLabel={"1"}
+                    boldedLabel={"1-2 day"}
                     description={"Lesson"}
                     linkTarget={"#1lesson"}
                   />
@@ -94,7 +94,7 @@ export default function SectionPricing() {
                   />
                   <PricingFeature
                     boldedLabel={"✔"}
-                    description={"GP Sensible Lesson Plan"}
+                    description={"GP Cascading Lesson Plan"}
                     linkTarget={"#GPsensible"}
                   />
                   <PricingFeature
@@ -118,12 +118,12 @@ export default function SectionPricing() {
               <CardBody pricing>
                 <h5 className={classes.cardCategory}>LASTING IMPACT</h5>
                 <h3 className={classes.cardTitleWhite}>
-                  <span className={classes.dollar}>10,000&nbsp;– 18,000</span>
+                  <span className={classes.dollar}>20,000&nbsp;– 30,000</span>
                 </h3>
                 <ul>
                   <PricingFeature
-                    boldedLabel={"4"}
-                    description={"Lesson Unit"}
+                    boldedLabel={"4–5 Day"}
+                    description={"Unit"}
                     linkTarget={"#1lesson"}
                   />
                   <PricingFeature
@@ -180,7 +180,7 @@ export default function SectionPricing() {
                   />
                   <PricingFeature
                     boldedLabel={"✔"}
-                    description={"GP Sensible Lesson Plan"}
+                    description={"GP Cascading Lesson Plan"}
                     linkTarget={"#GPsensible"}
                   />
                   <PricingFeature
@@ -269,7 +269,7 @@ export default function SectionPricing() {
                   />
                   <PricingFeature
                     boldedLabel={"✔"}
-                    description={"GP Sensible Lesson Plan"}
+                    description={"GP Cascading Lesson Plan"}
                     linkTarget={"#GPsensible"}
                   />
                   <PricingFeature
