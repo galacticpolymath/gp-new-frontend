@@ -28,7 +28,7 @@ const buttonStyle = {
     minHeight: "auto",
     minWidth: "auto",
     backgroundColor: grayColor[0],
-    color: whiteColor,
+    color: "inherit",
     boxShadow:
       "0 2px 2px 0 rgba(" +
       hexToRgb(grayColor[0]) +
@@ -56,7 +56,7 @@ const buttonStyle = {
     touchAction: "manipulation",
     cursor: "pointer",
     "&:hover,&:focus": {
-      color: whiteColor,
+      color: "inherit",
       backgroundColor: grayColor[0],
       boxShadow:
         "0 14px 26px -12px rgba(" +
@@ -105,6 +105,7 @@ const buttonStyle = {
     width: "100%"
   },
   primary: {
+    color: whiteColor+"!important",
     backgroundColor: primaryColor[0],
     boxShadow:
       "0 2px 2px 0 rgba(" +
@@ -115,7 +116,8 @@ const buttonStyle = {
       hexToRgb(primaryColor[0]) +
       ", 0.12)",
     "&:hover,&:focus": {
-      backgroundColor: primaryColor[0],
+      color: whiteColor+"!important",
+      backgroundColor: primaryColor[3],
       boxShadow:
         "0 14px 26px -12px rgba(" +
         hexToRgb(primaryColor[0]) +
@@ -151,6 +153,7 @@ const buttonStyle = {
     }
   },
   info: {
+    color: whiteColor+"!important",
     backgroundColor: infoColor[0],
     boxShadow:
       "0 2px 2px 0 rgba(" +
@@ -161,7 +164,8 @@ const buttonStyle = {
       hexToRgb(infoColor[0]) +
       ", 0.12)",
     "&:hover,&:focus": {
-      backgroundColor: infoColor[0],
+      color: whiteColor+"!important",
+      backgroundColor: infoColor[3],
       boxShadow:
         "0 14px 26px -12px rgba(" +
         hexToRgb(infoColor[0]) +
@@ -239,6 +243,7 @@ const buttonStyle = {
     }
   },
   rose: {
+    color: whiteColor+"!important",
     backgroundColor: roseColor[0],
     boxShadow:
       "0 2px 2px 0 rgba(" +
@@ -249,7 +254,8 @@ const buttonStyle = {
       hexToRgb(roseColor[0]) +
       ", 0.12)",
     "&:hover,&:focus": {
-      backgroundColor: roseColor[0],
+      color: whiteColor+"!important",
+      backgroundColor: roseColor[1],
       boxShadow:
         "0 14px 26px -12px rgba(" +
         hexToRgb(roseColor[0]) +

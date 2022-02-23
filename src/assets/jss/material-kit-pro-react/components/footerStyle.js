@@ -106,14 +106,14 @@ const footerStyle = {
     backgroundColor: whiteColor,
     color: grayColor[1],
     textDecoration: "none",
-    "& a": {
-      "&:visited": {
-        color: grayColor[1]
-      },
-      "&:hover, &:focus": {
-        color: grayColor[20]
-      }
-    }
+    // "& a": {
+    //   "&:visited": {
+    //     color: grayColor[1]
+    //   },
+    //   "&:hover, &:focus": {
+    //     color: grayColor[20]
+    //   }
+    // }
   },
   container,
   list: {

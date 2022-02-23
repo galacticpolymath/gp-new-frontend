@@ -132,8 +132,7 @@ const style = {
     "& ul li": {
       display: "inline-block",
       "& a:hover":{
-        transform:"scale(1.1,1.1)",
-        transition: "0.2s"
+        textDecoration: "underline"
       }
     },
     "& h4, & h5": {
@@ -241,12 +240,6 @@ const style = {
   },
   mailIcon:{
     margin: "auto 0.75rem auto auto !important",
-    // transform: "scale(2,2)"
-    // "&:hover":{
-    //   transform:"scale3d(2.1,2.1,1)",
-    //   transition:"0.2s",
-    //   // fontSize: "2em"
-    // }
   },
 
   customFormControl: {

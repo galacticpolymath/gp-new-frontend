@@ -107,7 +107,7 @@ legend {
 a {
   color: $link-color;
   font-weight: 400;
-  text-decoration: underline;
+  text-decoration: none;
   background-color: transparent;
 
     &:hover, &:focus, &:visited:hover {
@@ -125,6 +125,7 @@ a {
   }
 
 }
+
 
 label {
   font-size: 14px;

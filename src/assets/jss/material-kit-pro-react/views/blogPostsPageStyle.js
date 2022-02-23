@@ -4,7 +4,7 @@ import {
   main,
   whiteColor,
   mainRaised,
-  mlAuto, infoColor
+  mlAuto, infoColor, hexToRgb, blackColor
 } from "assets/jss/material-kit-pro-react.js";
 
 const blogPostsPageStyle = {
@@ -34,11 +34,35 @@ const blogPostsPageStyle = {
     gridAutoColumns: "auto",
     gridRowGap: "20px"
   },
+  link:{
+    "text-decoration": "none !important",
+
+    "&:hover": {
+      "text-decoration": "blue wavy underline !important",
+    }
+  },
   lessonCard:{
-    "border-radius": "6px",
+    borderRadius: "6px",
     color: "#3c4858",
     padding: "0.5rem 1rem",
-    height: "100%"
+    height: "100%",
+    "&:hover":{
+      //Man, I cannot disable this with none...but a white underline seems to work
+      textDecoration: "white underline ",
+      boxShadow:
+        "0 14px 26px -12px rgba(" +
+        hexToRgb(infoColor[0]) +
+        ", 0.42), 0 4px 23px 0px rgba(" +
+        hexToRgb(blackColor) +
+        ", 0.12), 0 8px 10px -5px rgba(" +
+        hexToRgb(infoColor[0]) +
+        ", 0.2)"
+    }
+  },
+  noUnderline:{
+    "&:hover": {
+      // "text-decoration": "tran underline !important"
+    }
   },
   textCenter: {
     textAlign: "center"

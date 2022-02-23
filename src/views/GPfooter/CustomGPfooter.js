@@ -40,14 +40,7 @@ export default function CustomGPfooter() {
             <div className={classes.footer}>
               <GridContainer>
                 <GridItem xs={12} sm={3} md={3}>
-                  <a href="/">
-                    {/* <div className={classes.hideLogo}>
-                    <img alt="logo" src={GpImage} width="250px" />
-                    <meta charSet="utf-8" />
-                  </div> */}
                     <h5>Galactic Polymath</h5>
-                  </a>
-                  {/* <br /> */}
                   <p>
                     We translate current research into creative
                     interdisciplinary lessons for grades 5+ that are{" "}
