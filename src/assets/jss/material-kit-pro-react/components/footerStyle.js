@@ -7,7 +7,7 @@ import {
   twitterColor,
   dribbbleColor,
   instagramColor,
-  hexToRgb
+  hexToRgb, roseColor
 } from "assets/jss/material-kit-pro-react.js";
 
 const footerStyle = {
@@ -19,6 +19,20 @@ const footerStyle = {
     padding: "15px 0",
     margin: "0",
     float: "right"
+  },
+  socialFeed: {
+    "& p": {
+      display: "table-cell",
+      verticalAlign: "top",
+      overflow: "hidden",
+      paddingBottom: "10px",
+      maxWidth: 300
+    },
+    "& i": {
+      fontSize: "20px",
+      display: "table-cell",
+      paddingRight: "10px"
+    }
   },
   rightLinks: {
     float: "right!important",
@@ -46,17 +60,6 @@ const footerStyle = {
       marginBottom: "0",
       padding: 0,
       listStyle: "none"
-    }
-  },
-  big: {
-    padding: "1.875rem 0",
-    "& h5, & h4": {
-      fontWeight: 700,
-      fontFamily: "Cormorant Garamond,Times New Roman,serif",
-      marginBottom: "15px"
-    },
-    "& p": {
-      color: grayColor[3]
     }
   },
   content: {
@@ -103,14 +106,14 @@ const footerStyle = {
     backgroundColor: whiteColor,
     color: grayColor[1],
     textDecoration: "none",
-    "& a": {
-      "&:visited": {
-        color: grayColor[1]
-      },
-      "&:hover, &:focus": {
-        color: grayColor[20]
-      }
-    }
+    // "& a": {
+    //   "&:visited": {
+    //     color: grayColor[1]
+    //   },
+    //   "&:hover, &:focus": {
+    //     color: grayColor[20]
+    //   }
+    // }
   },
   container,
   list: {
@@ -159,7 +162,7 @@ const footerStyle = {
     color: grayColor[1],
     textDecoration: "none",
     fontWeight: 700,
-    fontFamily: "Cormorant Garamond,Times New Roman,serif"
+    fontFamily: "Montserrat, sans"
   },
   pullCenter: {
     display: "inline-block",
@@ -167,6 +170,20 @@ const footerStyle = {
   },
   clearFix: {
     clear: "both"
-  }
+  },
+  subscribeButton: {
+    color: "white !important",
+    position: "relative",
+    overflow: "hidden",
+    "&:hover":{
+      content: '',
+      position: "absolute",
+      backgroundColor: grayColor[6],
+      fontWeight: 600,
+      border: "1px solid "+roseColor[0],
+      color: roseColor[0]+" !important",
+      transform: "scale3d(1.1,1.1,1)"
+    }
+  },
 };
 export default footerStyle;

@@ -18,15 +18,15 @@ import MailOutlineIcon from "@material-ui/icons/MailOutline";
 
 const useStyles = makeStyles(style);
 
+
+
 export default function CustomGPfooter() {
+
   const classes = useStyles();
   return (
-    <footer>
-      <div className={classes.section}>
-        <div>
-          <br />
           <Footer
             theme="white"
+            className={classes.footerContainer}
             content={
               <div>
                 <div
@@ -40,20 +40,18 @@ export default function CustomGPfooter() {
             <div className={classes.footer}>
               <GridContainer>
                 <GridItem xs={12} sm={3} md={3}>
-                  <a href="/">
-                    {/* <div className={classes.hideLogo}>
-                    <img alt="logo" src={GpImage} width="250px" />
-                    <meta charSet="utf-8" />
-                  </div> */}
                     <h5>Galactic Polymath</h5>
-                  </a>
-                  {/* <br /> */}
                   <p>
                     We translate current research into creative
                     interdisciplinary lessons for grades 5+ that are{" "}
                     <i>free for everyone</i>.
                   </p>
+
+                  <div className={classes.followUs}>
+                    <p>Follow Us:</p>
+
                   <ul className={classes.socialButtons}>
+                    <span className={classes.bracket}>[</span>
                     <li>
                       <Button
                         justIcon
@@ -84,9 +82,11 @@ export default function CustomGPfooter() {
                         <i className="fab fa-youtube" />
                       </Button>
                     </li>
+                    <span className={classes.bracket}>]</span>
                   </ul>
+                  </div>
                 </GridItem>
-                <GridItem xs={12} sm={3} md={3}>
+                <GridItem xs={12} sm={2} md={2}>
                   <h5>Contact</h5>
                   <ul className={classes.linksVertical}>
                     <a href="mailto:info@galacticpolymath.com" style={{ color: "#363636 important!",paddingLeft: "1rem" }}>
@@ -98,45 +98,46 @@ export default function CustomGPfooter() {
                   <h5>Navigation</h5>
                   <ul className={classes.linksVertical}>
                     <li>
-                      <a href="/lessons">LESSONS</a>
+                      <a href="/lessons">• Lessons</a>
                     </li>
                     <li>
-                      <a href="/jobviz">JOBVIZ</a>
+                      <a href="/jobviz">• JobViz</a>
                     </li>
                     <li>
-                      <a href="/hire-us">HIRE US</a>
+                      <a href="/hire-us">• Hire Us</a>
                     </li>
                     <li>
-                      <a href="/about">ABOUT</a>
+                      <a href="/about">• About</a>
                     </li>
                     <li>
-                      <a href="/">HOME</a>
+                      <a href="/">• Home</a>
                     </li>
                   </ul>
                 </GridItem>
-                <GridItem xs={12} sm={3} md={3}>
+                <GridItem xs={12} sm={4} md={4}>
                   <h5>Join Our Mailing List</h5>
                   <p>
                     Get updates and early access to our latest free lessons and
                     learning tools.
                   </p>
-                  <form>
+                  <div >
                     <Button
-                      color="primary"
+                      color="rose"
                       size="lg"
                       href="https://eepurl.com/g_kQ4T"
-                      className={classNames(classes.button)}
+                      className={classNames(classes.subscribeButton)}
                     >
-                      <MailOutlineIcon style={{ marginRight: "0.75rem" }} />
+                      <div className={classes.verticallyCentered}>
+                      <MailOutlineIcon  className={classes.mailIcon}/>
+
                       Subscribe
+                      </div>
                     </Button>
-                  </form>
+                  </div>
                 </GridItem>
               </GridContainer>
             </div>
           </Footer>
-        </div>
-      </div>
-    </footer>
+
   );
 }

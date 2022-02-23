@@ -59,7 +59,7 @@ const headerLinksStyle = theme => ({
   },
   navLink: {
     whiteSpace: "nowrap",
-    color: "inherit",
+    color: "white !important",
     position: "relative",
     padding: "0.9375rem",
     fontWeight: "400",
@@ -71,7 +71,7 @@ const headerLinksStyle = theme => ({
     margin: "0px",
     display: "inline-flex",
     "&:hover,&:focus": {
-      color: "inherit"
+      color: "white"
     },
     "& .fab,& .far,& .fal,& .fas,& .material-icons": {
       position: "relative",

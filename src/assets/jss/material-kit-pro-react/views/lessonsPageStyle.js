@@ -68,6 +68,7 @@ const lessonsPageStyle = {
     margin: "10rem",
   },
 
+
   "@media only screen and (max-width: 600px)": {
     /* iphones (material UI "sm" break) */
     hideLogo: {
