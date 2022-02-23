@@ -267,9 +267,10 @@ const buttonStyle = {
     }
   },
   white: {
-    "&,&:focus,&:hover": {
+    backgroundColor: "rgba(255,255,255,0.85)",
+    "&:focus,&:hover": {
       backgroundColor: whiteColor,
-      color: grayColor[0]
+      color: blackColor
     }
   },
   twitter: {
