@@ -106,13 +106,24 @@ legend {
 
 a {
   color: $link-color;
-  text-decoration: none;
+  font-weight: 400;
+  text-decoration: underline;
   background-color: transparent;
-  &:hover,
-  &:focus {
-    color: darken($link-color, 5%);
-    text-decoration: none;
+
+    &:hover, &:focus, &:visited:hover {
+      color: adjust-hue($link-color, 20);
+      text-decoration: underline;
+      transition: 0.3s;
+    }
+
+  &:visited, &:active {
+    color: darken($link-color, 15);
   }
+
+  img,svg{
+    border-bottom: none;
+  }
+
 }
 
 label {

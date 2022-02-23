@@ -123,7 +123,8 @@ const style = {
       marginLeft: "-5px",
       marginRight: "-5px",
       "& a": {
-        padding: "5px !important"
+        padding: "5px !important",
+        borderBottom: "none"
       }
     }
   },
@@ -143,6 +144,7 @@ const style = {
 
     },
     "& ul:not($socialButtons) li a": {
+      borderBottom: "none",
       color: "inherit",
       padding: "0.9375rem",
       fontWeight: "500",
