@@ -1,26 +1,47 @@
 import {
-  container,
   title,
   description,
-  section,
   btnLink,
   twitterColor,
   dribbbleColor,
   instagramColor,
-  grayColor,  roseColor
+  grayColor, roseColor, blackColor
 } from "assets/jss/material-kit-pro-react.js";
 
 import imagesStyles from "assets/jss/material-kit-pro-react/imagesStyles.js";
 
 const style = {
   ...imagesStyles,
-  container,
+  container:{
+    padding: 0,
+  },
   title,
   description,
-  section: {
-    ...section,
-    padding: "70px 0px"
+
+  footerContainer:{
+    background: "linear-gradient(180deg,rgba(1,1,1,0.3) 0%,transparent 3%)," +
+      "linear-gradient(-5deg, rgba(71,15,44,0.8) 2%, rgba(71,15,44,0) 20%),"+
+      "linear-gradient(10deg, rgba(44,131,195,1) 3%, rgba(44,131,195,0) 25%)",
+    borderTop: "1px solid"+grayColor[0],
+    paddingTop: "3rem",
+    display: "grid",
+    justifyContent: "center",
+
+    "& *": {
+
+    },
+    h5: {
+      fontWeight: 500,
+    },
+
+    "@media only screen and (max-width: 800px)": {
+      border: "1px solid blue",
+      background: "linear-gradient(180deg,rgba(1,1,1,0.3) 0%,transparent 3%)," +
+        "linear-gradient(-5deg, rgba(71,15,44,0.8) 0.5%, rgba(71,15,44,0) 9%)," +
+        "linear-gradient(8deg, rgba(44,131,195,1) 1%, rgba(44,131,195,0) 11%)"
+    }
   },
+
   socialFeed: {
     "& p": {
       display: "table-cell",
@@ -75,17 +96,7 @@ const style = {
     position: "relative",
     display: "block"
   },
-  footerBrand: {
-    height: "50px",
-    padding: "15px 15px",
-    fontSize: "18px",
-    lineHeight: "50px",
-    marginLeft: "-15px",
-    color: grayColor[3],
-    textDecoration: "none",
-    fontWeight: 700,
-    fontFamily: "Cormorant Garamond,Times New Roman,serif"
-  },
+
   pullCenter: {
     display: "inline-block",
     float: "none"
@@ -122,8 +133,11 @@ const style = {
       display: "inline-block"
     },
     "& h4, & h5": {
-      color: grayColor[1],
-      textDecoration: "none"
+      color: blackColor,
+      textDecoration: "none",
+      fontWeight: 500,
+      lineHeight: 1
+
     },
     "& ul:not($socialButtons) li a": {
       color: "inherit",
@@ -184,18 +198,22 @@ const style = {
     color: "white !important",
     position: "relative",
     overflow: "hidden",
+    maxWidth: "100%",
     "&:hover":{
       content: '',
       position: "absolute",
-      backgroundColor: grayColor[6],
+      backgroundColor: "rgba(203,31,142,0.3)",
       fontWeight: 600,
-      border: "1px solid "+roseColor[0],
+      border: "3px solid "+roseColor[0],
       color: roseColor[0]+" !important",
-      transform: "scale3d(1.1,1.1,1)"
+      transform: "scale3d(1,1,1)",
+      transition: "0.2s",
+      maxWidth: "100%"
     }
   },
+
   customFormControl: {
-    paddingTop: "14px"
+      paddingTop: "14px"
   }
 };
 

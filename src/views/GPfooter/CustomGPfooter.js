@@ -20,16 +20,13 @@ const useStyles = makeStyles(style);
 
 
 
-
 export default function CustomGPfooter() {
+
   const classes = useStyles();
   return (
-    <footer>
-      <div className={classes.section}>
-        <div>
-          <br />
           <Footer
             theme="white"
+            className={classes.footerContainer}
             content={
               <div>
                 <div
@@ -89,7 +86,7 @@ export default function CustomGPfooter() {
                     </li>
                   </ul>
                 </GridItem>
-                <GridItem xs={12} sm={3} md={3}>
+                <GridItem xs={12} sm={2} md={2}>
                   <h5>Contact</h5>
                   <ul className={classes.linksVertical}>
                     <a href="mailto:info@galacticpolymath.com" style={{ color: "#363636 important!",paddingLeft: "1rem" }}>
@@ -117,7 +114,7 @@ export default function CustomGPfooter() {
                     </li>
                   </ul>
                 </GridItem>
-                <GridItem xs={12} sm={3} md={3}>
+                <GridItem xs={12} sm={4} md={4}>
                   <h5>Join Our Mailing List</h5>
                   <p>
                     Get updates and early access to our latest free lessons and
@@ -138,8 +135,6 @@ export default function CustomGPfooter() {
               </GridContainer>
             </div>
           </Footer>
-        </div>
-      </div>
-    </footer>
+
   );
 }
