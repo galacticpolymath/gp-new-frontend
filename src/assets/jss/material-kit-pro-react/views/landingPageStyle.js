@@ -12,6 +12,12 @@ const landingPageStyle = {
     ...container,
     zIndex: "2"
   },
+  matte:{
+    backgroundColor: "#470F2C",
+    paddingBottom: "2rem",
+    //This is so it goes to the edge of the footer
+    marginBottom:"-2.1rem"
+  },
   title: {
     ...title,
     display: "inline-block",

@@ -22,6 +22,7 @@ const style = {
     background: "linear-gradient(180deg,rgba(1,1,1,0.3) 0%,transparent 3%)," +
       "linear-gradient(-5deg, rgba( 183, 152, 232,1) 10%, rgba( 183, 152, 232,0) 25%),"+
       "linear-gradient(10deg, rgba(44,131,195,1) 1%, rgba(44,131,195,0) 30%)",
+    marginTop: "2.1rem",
     borderTop: "1px solid"+grayColor[0],
     paddingTop: "3rem",
     display: "grid",

@@ -33,7 +33,7 @@ export default function LandingPage(props) {
   }, []);
   const classes = useStyles();
   return (
-    <div style={{ backgroundColor: "#470F2C" }}>
+    <div className={classes.matte}>
       <Header
         color="transparent"
         brand="Galactic Polymath"
@@ -96,13 +96,6 @@ export default function LandingPage(props) {
 
 
       </div>
-      <Footer
-        theme={"transparent"}
-        content={
-          <div>
-          </div>
-        }
-      />
     </div>
   );
 }
