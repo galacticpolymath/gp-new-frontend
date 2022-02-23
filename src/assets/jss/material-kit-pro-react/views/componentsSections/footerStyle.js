@@ -20,8 +20,8 @@ const style = {
 
   footerContainer:{
     background: "linear-gradient(180deg,rgba(1,1,1,0.3) 0%,transparent 3%)," +
-      "linear-gradient(-5deg, rgba(71,15,44,0.8) 2%, rgba(71,15,44,0) 20%),"+
-      "linear-gradient(10deg, rgba(44,131,195,1) 3%, rgba(44,131,195,0) 25%)",
+      "linear-gradient(-5deg, rgba( 183, 152, 232,1) 10%, rgba( 183, 152, 232,0) 25%),"+
+      "linear-gradient(10deg, rgba(44,131,195,1) 1%, rgba(44,131,195,0) 30%)",
     borderTop: "1px solid"+grayColor[0],
     paddingTop: "3rem",
     display: "grid",
@@ -37,7 +37,7 @@ const style = {
     "@media only screen and (max-width: 800px)": {
       border: "1px solid blue",
       background: "linear-gradient(180deg,rgba(1,1,1,0.3) 0%,transparent 3%)," +
-        "linear-gradient(-5deg, rgba(71,15,44,0.8) 0.5%, rgba(71,15,44,0) 9%)," +
+        "linear-gradient(-5deg, rgba( 183, 152, 232,1) 0.5%, rgba( 183, 152, 232,0) 9%)," +
         "linear-gradient(8deg, rgba(44,131,195,1) 1%, rgba(44,131,195,0) 11%)"
     }
   },
@@ -192,24 +192,44 @@ const style = {
     top: "3px",
     width: "18px",
     height: "18px",
-    position: "relative"
+    position: "relative",
+    "&:hover":{
+      color:"blue"
+    }
   },
-  subscribeButton: {
+  verticallyCentered:{
+    display: "flex"
+  },
+  subscribeButton : {
     color: "white !important",
     position: "relative",
     overflow: "hidden",
     maxWidth: "100%",
-    "&:hover":{
+    "&:hover": {
       content: '',
       position: "absolute",
       backgroundColor: "rgba(203,31,142,0.3)",
       fontWeight: 600,
-      border: "3px solid "+roseColor[0],
-      color: roseColor[0]+" !important",
-      transform: "scale3d(1,1,1)",
+      fontSize: "1.1em",
+      border: "3px solid " + roseColor[0],
+      color: roseColor[0] + " !important",
+      transform: "scale(1.05,1.05)",
       transition: "0.2s",
       maxWidth: "100%"
+    } ,
+    "&:hover svg": {
+      transform: "scale3d(1.5,1.5,1)",
+      fontSize: "3rem"
     }
+  },
+  mailIcon:{
+    margin: "auto 0.75rem auto auto !important",
+    // transform: "scale(2,2)"
+    // "&:hover":{
+    //   transform:"scale3d(2.1,2.1,1)",
+    //   transition:"0.2s",
+    //   // fontSize: "2em"
+    // }
   },
 
   customFormControl: {

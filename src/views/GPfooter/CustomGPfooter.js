@@ -127,8 +127,11 @@ export default function CustomGPfooter() {
                       href="https://eepurl.com/g_kQ4T"
                       className={classNames(classes.subscribeButton)}
                     >
-                      <MailOutlineIcon style={{ marginRight: "0.75rem" }} />
+                      <div className={classes.verticallyCentered}>
+                      <MailOutlineIcon  className={classes.mailIcon}/>
+
                       Subscribe
+                      </div>
                     </Button>
                   </div>
                 </GridItem>

@@ -207,7 +207,7 @@ const card = {
 const defaultFont = {
   fontFamily: '"Montserrat", "Helvetica", "Arial", sans-serif',
   fontWeight: "300",
-  lineHeight: "1.5em"
+  lineHeight: "1.15"
 };
 
 const boxShadow = {
