@@ -215,29 +215,41 @@ const style = {
     position: "relative",
   },
   verticallyCentered:{
-    display: "flex"
+    display: "flex",
   },
   subscribeButton : {
     color: "white !important",
     position: "relative",
     overflow: "hidden",
-    maxWidth: "100%",
+    width: "130px",
+
     "&:hover": {
-      content: '',
-      position: "absolute",
-      backgroundColor: "rgba(203,31,142,0.3)",
+      backgroundColor: roseColor[3],
       fontWeight: 600,
-      fontSize: "1.1em",
+      fontSize: "1.02em",
       border: "3px solid " + roseColor[0],
       color: roseColor[0] + " !important",
-      transform: "scale(1,1)",
+      // transform: "scale(1.5,1.5),translateX(10px)",
+      width: "150px",
       transition: "0.2s",
-      maxWidth: "100%"
-    } ,
+      } ,
     "&:hover svg": {
-      transform: "scale3d(1.5,1.5,1)",
-      fontSize: "3rem"
-    }
+      transform: "scale(1.5)",
+      marginRight:"7px !important"
+    },
+    "@media only screen and (max-width: 800px)": {
+      "&:hover":{
+        width: "135px",
+        fontSize:"1em",
+        transition: "0.1s"
+      },
+      "&:hover svg":{
+        transform: "scale(1.3)"
+      }
+    },
+
+
+
   },
   mailIcon:{
     margin: "auto 0.75rem auto auto !important",

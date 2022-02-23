@@ -2,7 +2,7 @@ import {
   grayColor,
   whiteColor,
   mlAuto,
-  hexToRgb
+  hexToRgb, blackColor
 } from "assets/jss/material-kit-pro-react.js";
 
 import tooltip from "assets/jss/material-kit-pro-react/tooltipsStyle.js";
@@ -177,6 +177,7 @@ const headerLinksStyle = theme => ({
     maxWidth: "24px"
   },
   dropdownLink: {
+    color: blackColor+ "!important",
     "&,&:hover,&:focus": {
       color: "inherit",
       textDecoration: "none",
