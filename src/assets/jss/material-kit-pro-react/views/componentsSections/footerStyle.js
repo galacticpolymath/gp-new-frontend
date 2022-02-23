@@ -35,7 +35,6 @@ const style = {
     },
 
     "@media only screen and (max-width: 800px)": {
-      border: "1px solid blue",
       background: "linear-gradient(180deg,rgba(1,1,1,0.3) 0%,transparent 3%)," +
         "linear-gradient(-5deg, rgba( 183, 152, 232,1) 0.5%, rgba( 183, 152, 232,0) 9%)," +
         "linear-gradient(8deg, rgba(44,131,195,1) 1%, rgba(44,131,195,0) 11%)"
@@ -130,7 +129,11 @@ const style = {
   },
   footer: {
     "& ul li": {
-      display: "inline-block"
+      display: "inline-block",
+      "& a:hover":{
+        transform:"scale(1.1,1.1)",
+        transition: "0.2s"
+      }
     },
     "& h4, & h5": {
       color: blackColor,
@@ -144,7 +147,7 @@ const style = {
       padding: "0.9375rem",
       fontWeight: "500",
       fontSize: "12px",
-      textTransform: "uppercase",
+      // textTransform: "uppercase",
       borderRadius: "3px",
       textDecoration: "none",
       position: "relative",
@@ -188,14 +191,26 @@ const style = {
     ...btnLink,
     color: instagramColor
   },
+  bracket:{
+    fontSize: "1.5em",
+    fontWeight: "100",
+    verticalAlign: "center"
+  },
+  followUs:{
+
+    placeContent: "center",
+    "& p":{
+      display:"block",
+      flexWrap: "nowrap",
+      paddingLeft: "0.25rem",
+      marginBottom: "-0.5rem"
+    }
+  },
   icon: {
     top: "3px",
     width: "18px",
     height: "18px",
     position: "relative",
-    "&:hover":{
-      color:"blue"
-    }
   },
   verticallyCentered:{
     display: "flex"
@@ -213,7 +228,7 @@ const style = {
       fontSize: "1.1em",
       border: "3px solid " + roseColor[0],
       color: roseColor[0] + " !important",
-      transform: "scale(1.05,1.05)",
+      transform: "scale(1,1)",
       transition: "0.2s",
       maxWidth: "100%"
     } ,

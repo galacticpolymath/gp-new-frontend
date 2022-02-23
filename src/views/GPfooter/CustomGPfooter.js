@@ -53,7 +53,12 @@ export default function CustomGPfooter() {
                     interdisciplinary lessons for grades 5+ that are{" "}
                     <i>free for everyone</i>.
                   </p>
+
+                  <div className={classes.followUs}>
+                    <p>Follow Us:</p>
+
                   <ul className={classes.socialButtons}>
+                    <span className={classes.bracket}>[</span>
                     <li>
                       <Button
                         justIcon
@@ -84,7 +89,9 @@ export default function CustomGPfooter() {
                         <i className="fab fa-youtube" />
                       </Button>
                     </li>
+                    <span className={classes.bracket}>]</span>
                   </ul>
+                  </div>
                 </GridItem>
                 <GridItem xs={12} sm={2} md={2}>
                   <h5>Contact</h5>
@@ -98,19 +105,19 @@ export default function CustomGPfooter() {
                   <h5>Navigation</h5>
                   <ul className={classes.linksVertical}>
                     <li>
-                      <a href="/lessons">LESSONS</a>
+                      <a href="/lessons">• Lessons</a>
                     </li>
                     <li>
-                      <a href="/jobviz">JOBVIZ</a>
+                      <a href="/jobviz">• JobViz</a>
                     </li>
                     <li>
-                      <a href="/hire-us">HIRE US</a>
+                      <a href="/hire-us">• Hire Us</a>
                     </li>
                     <li>
-                      <a href="/about">ABOUT</a>
+                      <a href="/about">• About</a>
                     </li>
                     <li>
-                      <a href="/">HOME</a>
+                      <a href="/">• Home</a>
                     </li>
                   </ul>
                 </GridItem>
