@@ -580,7 +580,7 @@ const buttonStyle = {
     },
     "&$primary": {
       "&,&:focus,&:hover,&:visited": {
-        color: primaryColor[0]
+        color: primaryColor[0]+"!important"
       }
     },
     "&$info": {
