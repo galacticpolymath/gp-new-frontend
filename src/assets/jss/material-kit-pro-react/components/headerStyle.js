@@ -164,6 +164,8 @@ const headerStyle = (theme) => ({
       ", 0.15)",
   },
   drawerPaper: {
+    color: whiteColor,
+    backgroundColor:blackColor,
     border: "none",
     bottom: "0",
     transitionProperty: "top, bottom, width",

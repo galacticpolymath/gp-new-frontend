@@ -6,7 +6,6 @@ import BlurOn from "@material-ui/icons/BlurOn";
 import CreateIcon from "@material-ui/icons/Create";
 
 import Header from "components/Header/Header.js";
-import Footer from "components/Footer/Footer.js";
 import GridContainer from "components/Grid/GridContainer.js";
 import GridItem from "components/Grid/GridItem.js";
 import Button from "components/CustomButtons/Button.js";
@@ -37,7 +36,7 @@ export default function LandingPage(props) {
       <Header
         color="transparent"
         brand="Galactic Polymath"
-        links={<HeaderLinks dropdownHoverColor="info" />}
+        links={<HeaderLinks dropdownHoverColor="primary" />}
         fixed
         changeColorOnScroll={{
           height: 50,

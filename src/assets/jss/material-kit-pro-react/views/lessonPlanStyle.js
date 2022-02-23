@@ -21,6 +21,17 @@ const lessonPlanStyle = {
   inlineIcon: {
     verticalAlign: "sub"
   },
+  quickPrep:{
+    maxWidth: "250px",
+    margin: "0 auto",
+    "& ol":{
+      paddingLeft: "30px"
+    },
+    "& li": {
+      paddingBottom: "0.5rem"
+    }
+
+  },
   procLessonPreface:{
     background: "#F4F4F4",
     contentFit: "contain",
