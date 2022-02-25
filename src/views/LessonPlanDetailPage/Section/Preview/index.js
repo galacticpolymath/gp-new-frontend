@@ -29,9 +29,10 @@ const Preview = ({
     >
       <div className={classes.container}>
         <Carousel items={Multimedia} />
-
+        <div className={classes.quickPrep}>
         <h5>&quot;Teach it in 15&quot; Quick Prep</h5>
         <RichText content={QuickPrep} />
+        </div>
       </div>
     </CollapsibleSection>
   );

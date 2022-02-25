@@ -4,14 +4,65 @@ import {
   main,
   whiteColor,
   mainRaised,
-  mlAuto, primaryColor
+  mlAuto, infoColor, hexToRgb, blackColor
 } from "assets/jss/material-kit-pro-react.js";
 
 const blogPostsPageStyle = {
   container: {
     ...container,
     zIndex: "2",
-    position: "relative"
+    position: "relative",
+    display: "grid"
+  },
+
+  noLeftPad:{
+    padding: "0.5rem 0",
+    "& h4":{
+      fontWeight: 400,
+      fontSize: "1.3em",
+      marginBottom: "0.25rem",
+      lineHeight: "1"
+    },
+    "& p":{
+      lineHeight: "1.15"
+    }
+  },
+
+  matrix: {
+    // display: "grid",
+    gridAutoRows: "max-content",
+    gridAutoColumns: "auto",
+    gridRowGap: "20px"
+  },
+  link:{
+    "text-decoration": "none !important",
+
+    "&:hover": {
+      "text-decoration": "blue wavy underline !important",
+    }
+  },
+  lessonCard:{
+    borderRadius: "6px",
+    color: "#3c4858",
+    padding: "0.5rem 1rem",
+    height: "100%",
+    "&:hover":{
+      //Man, I cannot disable this with none...but a white underline seems to work
+      textDecoration: "white underline ",
+      boxShadow:
+        "0 14px 26px -12px rgba(" +
+        hexToRgb(infoColor[0]) +
+        ", 0.42), 0 4px 23px 0px rgba(" +
+        hexToRgb(blackColor) +
+        ", 0.12), 0 8px 10px -5px rgba(" +
+        hexToRgb(infoColor[0]) +
+        ", 0.2)"
+    }
+  },
+  noUnderline:{
+    "&:hover": {
+      // "text-decoration": "tran underline !important"
+    }
   },
   textCenter: {
     textAlign: "center"
@@ -64,25 +115,24 @@ const blogPostsPageStyle = {
   bgColor: {
     backgroundColor: "#6812D1"
   },
-
-  subscribeFooter: {
-    placeItems: "center",
-    "&:first-child": {
-      padding: " 15px 30px"
-    }
+  subscribeFooter:{
+    paddingTop: "1rem"
   },
 
   subscribeAppeal:{
     fontWeight: 600,
-    color: primaryColor[0]
+    color: infoColor[0],
+
   },
 
   "@media (max-width: 991px)": {
     hideLogo: {
       display: "none"
     },
+
     subscribeAppeal: {
-      paddingTop: "1rem"
+
+
     }
 
   },
@@ -93,12 +143,6 @@ const blogPostsPageStyle = {
       display: "none",
       maxWidth: "100%"
     }
-  },
-  card: {
-    "border-radius": "4px",
-    color: "#3c4858",
-    padding: "0.5rem 1rem",
-    marginBottom: "2rem"
   }
 };
 

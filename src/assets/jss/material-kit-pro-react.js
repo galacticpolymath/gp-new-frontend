@@ -110,7 +110,7 @@ const infoColor = [
   "#6c2d82",// "#2c83c3",
   "#9c5ab2",  // "#26c6da",
   "#3e0055",  // "#00acc1",
-  "#83379E", //"#00d3ee",
+  "#913bae", //"#00d3ee",
   "#EDE5EF", //"#d9edf7",
   "#DACAE0", //"#c4e3f3",
   "#C8B0D0", //"#b2ebf2",
@@ -207,7 +207,7 @@ const card = {
 const defaultFont = {
   fontFamily: '"Montserrat", "Helvetica", "Arial", sans-serif',
   fontWeight: "300",
-  lineHeight: "1.5em"
+  lineHeight: "1.15"
 };
 
 const boxShadow = {

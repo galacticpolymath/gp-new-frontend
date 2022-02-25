@@ -1,26 +1,47 @@
 import {
-  container,
   title,
   description,
-  section,
   btnLink,
   twitterColor,
   dribbbleColor,
   instagramColor,
-  grayColor
+  grayColor, roseColor, blackColor
 } from "assets/jss/material-kit-pro-react.js";
 
 import imagesStyles from "assets/jss/material-kit-pro-react/imagesStyles.js";
 
 const style = {
   ...imagesStyles,
-  container,
+  container:{
+    padding: 0,
+  },
   title,
   description,
-  section: {
-    ...section,
-    padding: "70px 0px"
+
+  footerContainer:{
+    background: "linear-gradient(180deg,rgba(1,1,1,0.3) 0%,transparent 3%)," +
+      "linear-gradient(-5deg, rgba( 183, 152, 232,1) 10%, rgba( 183, 152, 232,0) 25%),"+
+      "linear-gradient(10deg, rgba(44,131,195,1) 1%, rgba(44,131,195,0) 30%)",
+    marginTop: "2.1rem",
+    borderTop: "1px solid"+grayColor[0],
+    paddingTop: "3rem",
+    display: "grid",
+    justifyContent: "center",
+
+    "& *": {
+
+    },
+    h5: {
+      fontWeight: 500,
+    },
+
+    "@media only screen and (max-width: 800px)": {
+      background: "linear-gradient(180deg,rgba(1,1,1,0.3) 0%,transparent 3%)," +
+        "linear-gradient(-5deg, rgba( 183, 152, 232,1) 0.5%, rgba( 183, 152, 232,0) 9%)," +
+        "linear-gradient(8deg, rgba(44,131,195,1) 1%, rgba(44,131,195,0) 11%)"
+    }
   },
+
   socialFeed: {
     "& p": {
       display: "table-cell",
@@ -75,17 +96,7 @@ const style = {
     position: "relative",
     display: "block"
   },
-  footerBrand: {
-    height: "50px",
-    padding: "15px 15px",
-    fontSize: "18px",
-    lineHeight: "50px",
-    marginLeft: "-15px",
-    color: grayColor[3],
-    textDecoration: "none",
-    fontWeight: 700,
-    fontFamily: "Cormorant Garamond,Times New Roman,serif"
-  },
+
   pullCenter: {
     display: "inline-block",
     float: "none"
@@ -113,24 +124,32 @@ const style = {
       marginLeft: "-5px",
       marginRight: "-5px",
       "& a": {
-        padding: "5px !important"
+        padding: "5px !important",
+        borderBottom: "none"
       }
     }
   },
   footer: {
     "& ul li": {
-      display: "inline-block"
+      display: "inline-block",
+      "& a:hover":{
+        textDecoration: "underline"
+      }
     },
     "& h4, & h5": {
-      color: grayColor[1],
-      textDecoration: "none"
+      color: blackColor,
+      textDecoration: "none",
+      fontWeight: 500,
+      lineHeight: 1
+
     },
     "& ul:not($socialButtons) li a": {
+      borderBottom: "none",
       color: "inherit",
       padding: "0.9375rem",
       fontWeight: "500",
       fontSize: "12px",
-      textTransform: "uppercase",
+      // textTransform: "uppercase",
       borderRadius: "3px",
       textDecoration: "none",
       position: "relative",
@@ -174,14 +193,70 @@ const style = {
     ...btnLink,
     color: instagramColor
   },
+  bracket:{
+    fontSize: "1.5em",
+    fontWeight: "100",
+    verticalAlign: "center"
+  },
+  followUs:{
+
+    placeContent: "center",
+    "& p":{
+      display:"block",
+      flexWrap: "nowrap",
+      paddingLeft: "0.25rem",
+      marginBottom: "-0.5rem"
+    }
+  },
   icon: {
     top: "3px",
     width: "18px",
     height: "18px",
-    position: "relative"
+    position: "relative",
   },
+  verticallyCentered:{
+    display: "flex",
+  },
+  subscribeButton : {
+    color: "white !important",
+    position: "relative",
+    overflow: "hidden",
+    width: "130px",
+
+    "&:hover": {
+      backgroundColor: roseColor[3],
+      fontWeight: 600,
+      fontSize: "1.02em",
+      border: "3px solid " + roseColor[0],
+      color: roseColor[0] + " !important",
+      // transform: "scale(1.5,1.5),translateX(10px)",
+      width: "150px",
+      transition: "0.2s",
+      } ,
+    "&:hover svg": {
+      transform: "scale(1.5)",
+      marginRight:"7px !important"
+    },
+    "@media only screen and (max-width: 800px)": {
+      "&:hover":{
+        width: "135px",
+        fontSize:"1em",
+        transition: "0.1s"
+      },
+      "&:hover svg":{
+        transform: "scale(1.3)"
+      }
+    },
+
+
+
+  },
+  mailIcon:{
+    margin: "auto 0.75rem auto auto !important",
+  },
+
   customFormControl: {
-    paddingTop: "14px"
+      paddingTop: "14px"
   }
 };
 

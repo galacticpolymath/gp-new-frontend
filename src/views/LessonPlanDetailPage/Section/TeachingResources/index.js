@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 
+import LessonHelperText from "components/LessonHelperText";
 import TeachingMethod from "./TeachingMethod";
 import CollapsibleSection from "../CollapsibleSection";
 
@@ -15,7 +16,10 @@ const useStyles = makeStyles(lessonPlanStyle);
 const TeachingResources = ({
   index,
   SectionTitle,
-  Data,
+  Data: {
+    classroom,
+    remote
+  },
 }) => {
   const classes = useStyles();
   return (
@@ -25,18 +29,21 @@ const TeachingResources = ({
       SectionTitle={SectionTitle}
     >
       <div className={classes.container}>
-        {Data.classroom && (
+        {classroom && remote && <LessonHelperText text="Click a category for more details"/>}
+        {classroom && (
           <TeachingMethod
             type={METHODS.IN_PERSON}
             key={METHODS.IN_PERSON}
-            {...Data.classroom}
+            initiallyExpanded={!remote}
+            {...classroom}
           />
         )}
-        {Data.remote && (
+        {remote && (
           <TeachingMethod
             type={METHODS.REMOTE}
             key={METHODS.REMOTE}
-            {...Data.remote}
+            initiallyExpanded={!classroom}
+            {...remote}
           />
         )}
       </div>
@@ -46,7 +53,10 @@ const TeachingResources = ({
 
 TeachingResources.propTypes = {
   SectionTitle: PropTypes.string,
-  Data: PropTypes.object,
+  Data: PropTypes.shape({
+    classroom: PropTypes.object,
+    remote: PropTypes.object,
+  }),
   TeachingMethod: PropTypes.array,
 };
 

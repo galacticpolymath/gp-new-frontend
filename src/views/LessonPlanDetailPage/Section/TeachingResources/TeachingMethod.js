@@ -5,6 +5,8 @@ import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
+import LessonHelperText from "components/LessonHelperText";
+
 import ResourceSummary2 from "./ResourceSummary2";
 import VariantSummary from "./VariantSummary";
 import GradeVariant from "./GradeVariant";
@@ -16,8 +18,9 @@ const TeachingMethod = ({
   resourceSummary,
   gradeVariantNotes,
   resources = [],
+  initiallyExpanded
 }) => {
-  const [expanded, expand] = useState(false);
+  const [expanded, expand] = useState(initiallyExpanded);
 
   return (
     <ExpansionPanel
@@ -70,14 +73,11 @@ const TeachingMethod = ({
             )
           }
         />
-        <div className="pick-grade-band-note">
-          <i className="fas fa-hand-point-down"/>
-          <span>Click grade band to see materials</span>
-        </div>
         {gradeVariantNotes && <VariantSummary variants={gradeVariantNotes} />}
+        {resources.length > 1 && <LessonHelperText text="Click grade band to see materials" />}
         {resources.map((resource, i) => (
-            <GradeVariant key={i} {...resource} />
-            ))}
+          <GradeVariant key={i} initiallyExpanded={resources.length === 1} {...resource} />
+        ))}
 
       </ExpansionPanelDetails>
     </ExpansionPanel>
@@ -89,6 +89,7 @@ TeachingMethod.propTypes = {
   resourceSummary: PropTypes.array,
   gradeVariantNotes: PropTypes.array,
   resources: PropTypes.array,
+  initiallyExpanded: PropTypes.bool,
 };
 
 export default TeachingMethod;

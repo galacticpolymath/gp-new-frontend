@@ -41,33 +41,38 @@ const Overview = ({
     >
       <div className={classes.container}>
         <Card className="stats">
-          <GridContainer>
-            <AnchorLink href="#standards" offset="125px">
-            <Image {...SteamEpaulette} className="epaulette" />
-          </AnchorLink>
-            <GridItem sm={4} className="border-right" id="firstGridItem">
+          <GridContainer className="tiles">
+            <GridItem  className=" focus" id="firstGridItem">
+
               <MenuBookIcon fontSize="large" className="statIcon" />
               <h5>Target Subject: </h5>
               <div className="statContainer">
                 <h3>{TargetSubject}</h3>
               </div>
             </GridItem>
-            <GridItem sm={4} className="border-right">
+            <GridItem className=" focus">
               <FaceIcon fontSize="large" className="statIcon" />
               <h5>Grades: </h5>
               <div className="statContainer">
                 <h3>{ForGrades}</h3>
               </div>
             </GridItem>
-            <GridItem sm={4} >
+            <GridItem  className="focus">
               <ScheduleIcon fontSize="large" className="statIcon" />
               <h5>Estimated Time: </h5>
               <div className="statContainer" id="lastGridItem">
                 <h3>{EstLessonTime}</h3>
               </div>
             </GridItem>
-
           </GridContainer>
+            <AnchorLink href="#standards" offset="125px">
+              <div className="epaulette-container">
+              <h5>Subject breakdown by standard alignments: </h5>
+              <Image {...SteamEpaulette} className="epaulette" />
+              </div>
+            </AnchorLink>
+
+
         </Card>
 
         <RichText content={Text} />
