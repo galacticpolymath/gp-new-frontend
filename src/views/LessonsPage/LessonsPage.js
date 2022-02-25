@@ -15,9 +15,6 @@ import LessonCards from "./Sections/LessonCards.js";
 
 import Hero from "assets/img/hero-images/Lessons_VerticalDotandline.svg";
 
-//import cachedLessons from "../LessonPlanDetailPage/data/lesson-plans.json";
-//import lessons from "../LessonPlanDetailPage/data/lessons.json";
-
 import lessonsPageStyle from "assets/jss/material-kit-pro-react/views/lessonsPageStyle.js";
 
 const useStyles = makeStyles(lessonsPageStyle);

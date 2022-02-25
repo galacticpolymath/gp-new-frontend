@@ -12,7 +12,7 @@ import RichText from "../../../components/RichText";
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
 const useStyles = makeStyles(lessonPlanStyle);
 
-const SteamBadge = ({ Title, Description, Footnote, Badge }) => {
+const LearningChart = ({ Title, Description, Footnote, Badge }) => {
   const classes = useStyles();
   const [expanded, expand] = useState(false);
 
@@ -40,11 +40,11 @@ const SteamBadge = ({ Title, Description, Footnote, Badge }) => {
   );
 };
 
-SteamBadge.propTypes = {
+LearningChart.propTypes = {
   Title: PropTypes.string,
   Description: PropTypes.string,
   Footnote: PropTypes.string,
   Badge: PropTypes.object,
 };
 
-export default SteamBadge;
+export default LearningChart;

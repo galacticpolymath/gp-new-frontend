@@ -24,6 +24,8 @@ import HireUsPage from "views/HireUs/HireUsPage";
 import CustomGPfooter from "views/GPfooter/CustomGPfooter";
 import NotFoundPage from "views/NotFound";
 
+//import lessons from "./views/LessonPlanDetailPage/data/lessons.json";
+
 var hist = createBrowserHistory();
 
 export default function App () {
