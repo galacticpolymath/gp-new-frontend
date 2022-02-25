@@ -87,7 +87,7 @@ export default function SectionMediaCoverage() {
         <img src={sciamCover} alt="Scientific American cover featuring barn swallows" className={classes.coverImg}/>
         </Card>
       </GridItem>
-      <GridItem xs={12} sm={6} md={6} lg={4}>
+      <GridItem xs={12} sm={6} md={5} lg={4}>
         <h3>Our lesson "Females Singing to be heard" featured in <em>Scientific American</em>.
         </h3>
         <Button
@@ -105,7 +105,7 @@ export default function SectionMediaCoverage() {
       </Button>
         </div>
       </GridItem>
-      <GridItem lg={2}/>
+      <GridItem md={1} lg={2}/>
 
     </GridContainer>
       </div>
