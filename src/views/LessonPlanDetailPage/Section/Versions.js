@@ -29,13 +29,12 @@ const Versions = ({ index, SectionTitle, Data = [] }) => {
                     </h5>
                     <p className="date">{date}</p>
                     {notes &&
-                      <p>
-                    <RichText content={notes} />
-                      </p>}
+                      <RichText content={notes} />
+                    }
                     {acknowledgments &&
-                    <p>Acknowledgments:
+                    <div className={classes.acknowledgment}>Acknowledgments:
                       <RichText content={acknowledgments} />
-                    </p>
+                      </div>
                     }
                   </div>
                 )

@@ -1,6 +1,12 @@
 import { container } from "assets/jss/material-kit-pro-react.js";
 
 const lessonPlanStyle = {
+  acknowledgment:{
+    fontWeight: 500,
+    "& p":{
+      paddingLeft: "1rem"
+    }
+  },
   container: {
     ...container,
     "@media (min-width: 1200px)": null

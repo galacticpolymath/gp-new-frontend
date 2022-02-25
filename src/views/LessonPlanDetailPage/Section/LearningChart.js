@@ -17,7 +17,7 @@ const LearningChart = ({ Title, Description, Footnote, Badge }) => {
   const [expanded, expand] = useState(false);
 
   return (
-    <div className={classes.container + " SteamBadge"}>
+    <div className={classes.container + " LearningChart"}>
       <Image {...Badge} />
 
       <ExpansionPanel
