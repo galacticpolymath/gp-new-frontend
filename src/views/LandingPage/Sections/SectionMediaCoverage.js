@@ -81,7 +81,7 @@ export default function SectionMediaCoverage() {
   return (
     <div className={classNames(classes.narrowSection)}>
     <GridContainer>
-      <GridItem xs={0} sm={0} md={1} lg={2}/>
+      <GridItem md={1} lg={2}/>
       <GridItem xs={12} sm={6} md={5} lg={4}>
         <Card>
         <img src={sciamCover} alt="Scientific American cover featuring barn swallows" className={classes.coverImg}/>
@@ -105,7 +105,7 @@ export default function SectionMediaCoverage() {
       </Button>
         </div>
       </GridItem>
-      <GridItem xs={0} sm={0} md={0} lg={2}/>
+      <GridItem lg={2}/>
 
     </GridContainer>
       </div>
