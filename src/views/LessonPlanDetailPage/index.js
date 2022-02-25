@@ -17,7 +17,7 @@ import "./style.scss";
 import NavigationDots from "./NavigationDots";
 import useScrollHandler from './NavigationDots/useScrollHandler'
 
-export default function LessonPlan({ location }) {
+export default function LessonPlan({ location, lessons }) {
   useScrollHandler()
 
   useEffect(() => {

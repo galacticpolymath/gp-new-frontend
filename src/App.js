@@ -31,7 +31,7 @@ export default function App () {
   const [lessons, setLessons] = useState([])
 
   useEffect(() => {
-    fetch("https://catalog.galacticpolymath.com/index.json")
+    fetch("https://catalog.galacticpolymath.com/temp_index.json")
       .then(res => res.json())
       .then(result => setLessons(result))
   }, []);
