@@ -87,12 +87,18 @@ export default function CustomGPfooter() {
                   </div>
                 </GridItem>
                 <GridItem xs={12} sm={2} md={2}>
-                  <h5>Contact</h5>
-                  <ul className={classes.linksVertical}>
-                    <a href="mailto:info@galacticpolymath.com" style={{ color: "#363636 important!",paddingLeft: "1rem" }}>
+                  <h5 className={classes.centered}>Contact</h5>
+                  <div className={classes.centered}>
+                  <Button
+                    justIcon
+                    simple
+                    href="mailto:info@galacticpolymath.com"
+                  >
                     <MailOutlineIcon />
-                    </a>
-                  </ul>
+                  </Button>
+                  </div>
+
+
                 </GridItem>
                 <GridItem xs={12} sm={3} md={3}>
                   <h5>Navigation</h5>

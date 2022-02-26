@@ -42,6 +42,11 @@ const style = {
     }
   },
 
+  centered:{
+    display: "flex",
+    justifyContent: "center"
+  },
+
   socialFeed: {
     "& p": {
       display: "table-cell",
