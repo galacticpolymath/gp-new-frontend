@@ -124,7 +124,7 @@ export default function CustomGPfooter() {
                     <Button
                       color="rose"
                       size="lg"
-                      href="https://eepurl.com/g_kQ4T"
+                      href="https://galacticpolymath.us8.list-manage.com/subscribe?u=42413c3d307f9b69fd5d5319e&id=33924ebd91"
                       className={classNames(classes.subscribeButton)}
                     >
                       <div className={classes.verticallyCentered}>
