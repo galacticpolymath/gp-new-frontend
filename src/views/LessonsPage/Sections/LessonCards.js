@@ -26,15 +26,15 @@ const LessonCards = ({ lessons }) => {
       <GridContainer className={classes.matrix}>
         {lessons.map(({ id, CoverImage, Title, Subtitle, Section }) => (
           <GridItem key={id} xs={12} sm={6} md={6}>
-            <Link to={"/lessons/" + id} classNames={classes.link}>
+            <Link to={"/lessons/" + id} classnames={classes.link}>
               <Box className={classNames(classes.card,classes.lessonCard)} boxShadow={4}>
                 <Image {...CoverImage} />
                 <CardBody className={classes.noLeftPad}>
                   <h4 className={classes.noUnderline}>
                     {Title}
                   </h4>
-                  <p className={classes.noUnderline}>{Subtitle}</p>
-                  <Badge color="primary">{Section[0].TargetSubject}</Badge>
+                  <p>{Subtitle}</p>
+                  <Badge color="primary">{Section.overview.TargetSubject}</Badge>
                 </CardBody>
               </Box>
             </Link>

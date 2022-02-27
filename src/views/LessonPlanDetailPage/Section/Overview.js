@@ -31,6 +31,7 @@ const Overview = ({
   Tags
 }) => {
   const classes = useStyles();
+
   return (
     <CollapsibleSection
       className="Overview"
@@ -64,7 +65,7 @@ const Overview = ({
               </div>
             </GridItem>
           </GridContainer>
-            <AnchorLink href="#standards" offset="125px">
+            <AnchorLink href="#learning_standards" offset="125px">
               <div className="epaulette-container">
               <h5>Subject breakdown by standard alignments: </h5>
               <Image {...SteamEpaulette} className="epaulette" />

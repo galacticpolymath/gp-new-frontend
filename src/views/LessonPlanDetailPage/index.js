@@ -5,8 +5,6 @@ import { renderMetaTags } from "utils/meta";
 import SiteHeader from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
 
-import cachedLessons from "./data/lesson-plans.json";
-
 import Section from "./Section/index";
 import Header from "./Header";
 import { NUMBERED_SECTIONS } from "./constants";
@@ -16,7 +14,7 @@ import "./style.scss";
 import NavigationDots from "./NavigationDots";
 import useScrollHandler from './NavigationDots/useScrollHandler'
 
-const LessonPlan = ({ location }) => {
+export default function LessonPlan({ location, lessons }) {
   useScrollHandler()
 
   useEffect(() => {
@@ -25,16 +23,23 @@ const LessonPlan = ({ location }) => {
   });
 
   const { lessonId } = useParams();
-  const lesson = cachedLessons.find(({ id }) => id.toString() === lessonId.toString())
+
+  if (!lessons) return null;
+  const lesson = lessons.find(({ id }) => id.toString() === lessonId.toString()) // object of objs
+  if (!lesson) return null;
+  const sections = lesson.Section;
 
   let numberedElements = 0;
 
-  if (!lesson) return null;
-
+  // count the sections listed in numbered_sections. to send as index. 
+  // function takes a section object with flat properties
+  // returns a section component to render
   const renderSection = (section, i) => {
     if (NUMBERED_SECTIONS.indexOf(section.__component) !== -1) {
       numberedElements++;
     }
+    // console.log(numberedElements, section);
+
     return <Section key={i} index={numberedElements} section={section} />;
   };
 
@@ -46,7 +51,7 @@ const LessonPlan = ({ location }) => {
         image: lesson.CoverImage.url,
         url: `https://galacticpolymath.com/lessons/${lessonId}`
       })}
-      
+
       <SiteHeader
         links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
@@ -56,13 +61,13 @@ const LessonPlan = ({ location }) => {
 
         <Header location={location} {...lesson} />
 
-        {lesson.Section &&
-          lesson.Section.map((section, i) => renderSection(section, i))}
+        {sections &&
+          Object.keys(sections).map((sectionkey, i) => renderSection(sections[sectionkey], i)
+          )}
       </div>
 
       <NavigationDots sections={lesson.Section} />
     </Fragment>
   );
-};
+}
 
-export default LessonPlan;

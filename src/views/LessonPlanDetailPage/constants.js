@@ -4,7 +4,7 @@ export const SECTIONS = {
   TEXT_BLOCK: "lesson-plan.text-block",
   PROCEDURE: "lesson-plan.procedure",
   TEACHING_RESOURCES: "teaching-resources.teaching-resources",
-  STEAM_BADGE: "lesson-plan.steam-badge",
+  LEARNING_CHART: "lesson-plan.learning-chart",
   STANDARDS: "lesson-plan.standards",
   ACKNOWLEDGMENTS: "lesson-plan.acknowledgments",
   VERSIONS: "lesson-plan.versions",

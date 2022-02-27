@@ -10,7 +10,7 @@ import TextBlock from "./TextBlock";
 import Heading from "./Heading";
 import Procedure from "./Procedure/index";
 import TeachingResources from "./TeachingResources/index";
-import SteamBadge from "./SteamBadge";
+import LearningChart from "./LearningChart";
 import Standards from "./Standards/index";
 import Acknowledgments from "./Acknowledgments";
 import Versions from "./Versions";
@@ -23,7 +23,7 @@ export const sectionTypeMap = {
   [SECTIONS.TEXT_BLOCK]: TextBlock,
   [SECTIONS.PROCEDURE]: Procedure,
   [SECTIONS.TEACHING_RESOURCES]: TeachingResources,
-  [SECTIONS.STEAM_BADGE]: SteamBadge,
+  [SECTIONS.LEARNING_CHART]: LearningChart,
   [SECTIONS.STANDARDS]: Standards,
   [SECTIONS.ACKNOWLEDGMENTS]: Acknowledgments,
   [SECTIONS.VERSIONS]: Versions,
@@ -33,6 +33,7 @@ export const sectionTypeMap = {
 
 const Section = ({ index, section }) => {
   const Component = sectionTypeMap[section.__component];
+  console.log(section.__component)
 
   return Component ? (
     <Component className="Section" key={index} index={index} {...section} />
