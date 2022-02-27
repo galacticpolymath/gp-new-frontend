@@ -23,24 +23,23 @@ export default function LessonPlan({ location, lessons }) {
   });
 
   const { lessonId } = useParams();
+
+  if (!lessons) return null;
   const lesson = lessons.find(({ id }) => id.toString() === lessonId.toString()) // object of objs
-  // need list of objs
-  
+  if (!lesson) return null;
   const sections = lesson.Section;
 
   let numberedElements = 0;
-
-  if (!lesson) return null;
 
   // count the sections listed in numbered_sections. to send as index. 
   // function takes a section object with flat properties
   // returns a section component to render
   const renderSection = (section, i) => {
-    if (NUMBERED_SECTIONS.indexOf(section.__component) !== -1) { 
+    if (NUMBERED_SECTIONS.indexOf(section.__component) !== -1) {
       numberedElements++;
     }
     // console.log(numberedElements, section);
-    
+
     return <Section key={i} index={numberedElements} section={section} />;
   };
 
@@ -52,7 +51,7 @@ export default function LessonPlan({ location, lessons }) {
         image: lesson.CoverImage.url,
         url: `https://galacticpolymath.com/lessons/${lessonId}`
       })}
-      
+
       <SiteHeader
         links={<HeaderLinks dropdownHoverColor="info" />}
         fixed
@@ -64,11 +63,11 @@ export default function LessonPlan({ location, lessons }) {
 
         {sections &&
           Object.keys(sections).map((sectionkey, i) => renderSection(sections[sectionkey], i)
-        )}
+          )}
       </div>
 
       <NavigationDots sections={lesson.Section} />
     </Fragment>
   );
-};
+}
 
