@@ -1,6 +1,7 @@
 @import "./variables";
 @import "../../assets/scss/core/variables";
 
+
 body {
   background: $white;
 }
@@ -10,6 +11,10 @@ body {
   ul,
   li {
     font-weight: 400;
+  }
+
+  li{
+    margin-bottom: 0.6rem;
   }
 
   li::marker,
@@ -29,7 +34,7 @@ body {
       margin-bottom: 0;
       margin-right: .5rem;
     }
-    
+
     margin: 1rem 0;
     @media (min-width: map-get($grid-breakpoints, "md")) {
       margin: 0;
@@ -87,6 +92,8 @@ body {
 
     p:first-of-type {
       margin-bottom: 1rem;
+      font-weight: 300;
+      font-size: 0.9em;
     }
 
     h2 {
@@ -98,6 +105,7 @@ body {
     h4 {
       margin-top: 0.5rem;
       font-weight: 500;
+      margin-bottom:0;
     }
 
     .Image {
@@ -173,8 +181,8 @@ body {
 
   p {
     font-size: 1rem;
-    line-height: 1.6;
-    margin: 0 0 1.4rem;
+    line-height: 1.15;
+    margin: 0 0 1.1rem;
     color: $galactic-black;
   }
 

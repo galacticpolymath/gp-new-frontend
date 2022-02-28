@@ -28,7 +28,7 @@
                   inset 0px 0px 15px 8px rgba(240, 244, 255, 1),
                   0 3px 5px rgba(245, 245, 245, 0.2),
                   0 3px 4px rgba(0, 0, 0, 0.2);
-    background: rgba(245, 245, 245,0.8);
+    background: rgba(245, 245, 245,0.1);
 
 
     .statIcon {
@@ -68,7 +68,7 @@
 
     .focus {
       box-shadow: inset 0px 0px 12px 12px rgba(240, 244, 255, 0.45), 0 1px 5px rgba(0, 0, 0, 0.03), 0 1px 4px rgba(0,0,0, 0.5);
-      padding: 1rem;
+      padding: 0.5rem;
       margin: 2px;
       border-radius: 25px;
       background: #FFFFFF;

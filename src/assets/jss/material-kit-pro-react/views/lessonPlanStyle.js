@@ -14,6 +14,15 @@ const lessonPlanStyle = {
   LessonPlan: {
     "padding-top": "70px",
   },
+  learningChartFootnote: {
+    display: "block",
+    "& p":{
+      marginBottom: "0.25rem"
+    }
+  },
+  learningChartDetails :{
+    display: "block"
+  },
   centered: {
     textAlign: "center"
   },
@@ -28,7 +37,16 @@ const lessonPlanStyle = {
     verticalAlign: "sub"
   },
   quickPrep:{
-    maxWidth: "250px",
+    marginTop: "-1rem",
+    marginBottom: "1rem",
+    maxWidth: "300px",
+    padding: "1rem 2rem 0",
+  border: "rgba(245,245,245,1) 1px solid",
+  boxShadow:   "inset 3px 2px 26px 20px rgba(153, 157, 168,0.1)," +
+    "inset 0px 0px 15px 8px rgba(240, 244, 255, 1)," +
+    "0 3px 5px rgba(245, 245, 245, 0.2)," +
+    "0 3px 4px rgba(0, 0, 0, 0.2)",
+  background: "white",
     margin: "0 auto",
     "& ol":{
       paddingLeft: "30px"
