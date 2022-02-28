@@ -9,6 +9,7 @@ import './style.scss'
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
 import CollapsibleSection from "../CollapsibleSection";
 import Carousel from "./Carousel";
+import Card from "components/Card/Card.js";
 const useStyles = makeStyles(lessonPlanStyle);
 
 
@@ -28,11 +29,11 @@ const Preview = ({
       initiallyExpanded={InitiallyExpanded !== false}
     >
       <div className={classes.container}>
-        <Carousel items={Multimedia} />
-        <div className={classes.quickPrep}>
-        <h5>&quot;Teach it in 15&quot; Quick Prep</h5>
+        <Carousel  items={Multimedia} />
+          <Card className={classes.quickPrep}>
+          <h5>&quot;Teach it in 15&quot; Quick Prep</h5>
         <RichText content={QuickPrep} />
-        </div>
+          </Card>
       </div>
     </CollapsibleSection>
   );
