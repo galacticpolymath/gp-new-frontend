@@ -55,6 +55,7 @@ export const Level2Card = (props) => {
 
   const [categoryObject, setCategoryObject] = useState(jobData);
 
+  const [copied, setCopied] = useState(false);
   //If URL path has word enpoint the modal for that endpoint will now be open on page load
   const checkIfUrlStringHasEndpoint = () => {
     let e = props.location.pathname.includes("endpoint");
@@ -98,6 +99,20 @@ export const Level2Card = (props) => {
   useEffect(() => {
     checkJobHasChildren();
   }, [props.location.pathway, jobs]);
+
+  function copy() {
+    const el = document.createElement("input");
+    el.value = window.location.href;
+    console.log(el.value);
+    document.body.appendChild(el);
+    console.log(document.body.appendChild(el));
+    el.select();
+    console.log(el.select());
+    el.focus();
+    document.execCommand("copy");
+    document.body.removeChild(el);
+    setCopied(true);
+  }
 
   return (
     <>
@@ -155,12 +170,16 @@ export const Level2Card = (props) => {
             >
               <ModalTable jobObject={categoryObject} />
               <DialogActions className={classes.modalFooter}>
+                <Button onClick={copy}>
+                  {!copied ? "Copy link" : "Link Copied!"}
+                </Button>
                 <Button
                   onClick={() => {
                     props.history.push(
                       `/jobviz/${grandparent}/${parent}/${titleParent}`
                     );
                     setClassicModal(false);
+                    setCopied(false);
                   }}
                   color="danger"
                   simple
