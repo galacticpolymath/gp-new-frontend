@@ -10,6 +10,7 @@ import Button from "../../../components/CustomButtons/Button";
 import classNames from "classnames"
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
 import ComingSoon from "assets/img/comingSoon.png"
+import LoadingIcon from "assets/img/loading.svg";
 
 import blogPostsPageStyle from "assets/jss/material-kit-pro-react/views/blogPostsPageStyle.js";
 import Image from "components/StrapiImage";
@@ -21,6 +22,13 @@ const useStyles = makeStyles(blogPostsPageStyle);
 
 const LessonCards = ({ lessons }) => {
   const classes = useStyles();
+  
+  if (!lessons || lessons.length === 0) {
+    return <div className={classes.loading}>
+      <img className={classes.loadingImg} src={LoadingIcon} alt="Loading..."/>
+    </div>
+  }
+
   return (
     <div className={classes.container} style={{ padding: "40px 0" }}>
       <GridContainer className={classes.matrix}>

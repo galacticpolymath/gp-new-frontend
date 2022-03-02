@@ -98,7 +98,7 @@ export default function LessonsPage({ lessons }) {
             iconColor="rose"
             title=""
           />
-          {lessons && <LessonCards lessons={lessons}/*={lessons.filter(({published_at}) => published_at)}*/ />}
+          <LessonCards lessons={lessons} />
         </div>
       </div>
     </div>

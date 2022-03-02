@@ -14,7 +14,16 @@ const blogPostsPageStyle = {
     position: "relative",
     display: "grid"
   },
-
+  loading: {
+    width: 'auto',
+    margin: 'auto',
+    textAlign: 'center',
+    padding: '4rem 0',
+  },
+  loadingImg: {
+    width: '5rem',
+    height: 'auto'
+  },
   noLeftPad:{
     padding: "0.5rem 0",
     "& h4":{
