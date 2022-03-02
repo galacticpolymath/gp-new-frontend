@@ -15,12 +15,12 @@ const blogPostsPageStyle = {
     display: "grid"
   },
   loading: {
-    width: 'auto',
-    margin: 'auto',
     textAlign: 'center',
     padding: '4rem 0',
   },
   loadingImg: {
+    display: 'block',
+    margin: 'auto',
     width: '5rem',
     height: 'auto'
   },

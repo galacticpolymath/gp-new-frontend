@@ -8,10 +8,11 @@ body {
 
 .LessonPlan {
   .loading {
-    margin: auto;
     text-align: center;
     padding: 8rem 0 0;
     img {
+      display: block;
+      margin: auto;
       width: 5rem;
       height: auto;
     }
