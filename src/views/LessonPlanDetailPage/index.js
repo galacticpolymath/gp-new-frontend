@@ -4,6 +4,7 @@ import { renderMetaTags } from "utils/meta";
 
 import SiteHeader from "components/Header/Header.js";
 import HeaderLinks from "components/Header/HeaderLinks.js";
+import LoadingIcon from "assets/img/loading.svg";
 
 import Section from "./Section/index";
 import Header from "./Header";
@@ -24,10 +25,9 @@ export default function LessonPlan({ location, lessons }) {
 
   const { lessonId } = useParams();
 
-  if (!lessons) return null;
-  const lesson = lessons.find(({ id }) => id.toString() === lessonId.toString()) // object of objs
-  if (!lesson) return null;
-  const sections = lesson.Section;
+  const lesson = lessons && lessons.find(({ id }) => id.toString() === lessonId.toString()) // object of objs
+
+  const sections = lesson ? lesson.Section : [];
 
   let numberedElements = 0;
 
@@ -45,7 +45,7 @@ export default function LessonPlan({ location, lessons }) {
 
   return (
     <Fragment>
-      {renderMetaTags({
+      {lesson && renderMetaTags({
         title: lesson.Title,
         description: lesson.Subtitle,
         image: lesson.CoverImage.url,
@@ -59,14 +59,17 @@ export default function LessonPlan({ location, lessons }) {
       />
       <div className="LessonPlan" id="top">
 
-        <Header location={location} {...lesson} />
+        {lesson ?
+          <Header location={location} {...lesson} /> :
+          <div className="loading">
+            <img src={LoadingIcon} alt="Loading..." />
+          </div>}
 
-        {sections &&
-          Object.keys(sections).map((sectionkey, i) => renderSection(sections[sectionkey], i)
-          )}
+        {sections && Object.keys(sections)
+          .map((sectionkey, i) => renderSection(sections[sectionkey], i))}
       </div>
 
-      <NavigationDots sections={lesson.Section} />
+      {lesson && <NavigationDots sections={lesson.Section} />}
     </Fragment>
   );
 }
