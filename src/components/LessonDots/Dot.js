@@ -16,10 +16,8 @@ function Dot(props){
     const classNames = `navDot ${props.section}`
 
     const doneScrolling = function() {
-        console.log('DONE SCROLLING')
         window.removeEventListener('scroll',callback)
         document.querySelectorAll('.navDot').forEach(el => el.classList.remove('activeDot'))
-        console.log('activating ' + `${props.section}`)
         document.querySelector(`.${props.section}`).classList.add('activeDot')
     }
 
@@ -43,7 +41,6 @@ function Dot(props){
         <div className={classNames} onClick={()=>{
             scrollWait()
             document.querySelectorAll('.navDot').forEach(el => el.classList.remove('activeDot'))
-            console.log('activating ' + `${props.section}`)
             document.querySelector(`.${props.section}`).classList.add('activeDot')
 
             window.scrollTo({

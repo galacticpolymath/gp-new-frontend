@@ -33,7 +33,6 @@ export const sectionTypeMap = {
 
 const Section = ({ index, section }) => {
   const Component = sectionTypeMap[section.__component];
-  console.log(section.__component)
 
   return Component ? (
     <Component className="Section" key={index} index={index} {...section} />
