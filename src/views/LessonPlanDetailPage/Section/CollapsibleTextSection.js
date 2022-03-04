@@ -23,7 +23,7 @@ const CollapsibleTextSection = ({
       initiallyExpanded={InitiallyExpanded !== false}
     >
       <div className={classes.container}>
-        <RichText content={Content} />
+        <RichText content={Content} className={SectionTitle}/>
       </div>
     </CollapsibleSection>
   );
