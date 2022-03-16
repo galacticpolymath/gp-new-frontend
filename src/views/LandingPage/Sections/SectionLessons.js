@@ -38,14 +38,14 @@ const style = {
   featuredLessonLabel:{
     float: "left",
     display: "flex",
-    zIndex: "20",
+    zIndex: "200",
     backgroundColor: roseColor[3],
     border: "1px solid"+ blackColor,
-    marginTop: "10px",
+    marginTop: "10px ",
     marginBottom: "-20px",
     textTransform: "uppercase",
     color: blackColor,
-    padding: "10px",
+    padding: "10px !important",
     // remove automargin for h4
     "& *": {
       margin: 0,
@@ -185,7 +185,7 @@ export default function SectionTeam() {
 
         {/*Featured lesson*/}
         <GridContainer >
-          <GridItem xs={12} sm={12} md={12} lg={7}>
+          <GridItem xs={12} sm={12} md={12} lg={7} >
             <Card   style={{paddingBottom: "20px",}}>
               <CardBody style={{backgroundColor: "transparent",}}>
                 <GridContainer
@@ -194,6 +194,7 @@ export default function SectionTeam() {
                       <StarIcon/> <h4> New Release!</h4>
                     </span>
                   <GridItem xs={12} md={10}>
+                    <a href="/lessons/3">
                     {/*Featured Lesson Label*/}
 
                     {/*lesson cover image*/}
@@ -204,7 +205,9 @@ export default function SectionTeam() {
                       alt={"Lesson Card Cover"}
                       className={classes.lessonCover}
                     />
+                  </a>
                   </GridItem>
+
                   {/*Sponsor Logo*/}
                   <GridItem xs={12} md={2}
                             style={{ alignSelf: "center" }}>
