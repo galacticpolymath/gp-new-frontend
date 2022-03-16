@@ -36,16 +36,16 @@ const style = {
 
   },
   featuredLessonLabel:{
-    float: "left",
-    display: "flex",
+    display: "flex !important",
     zIndex: "200",
+    maxHeight: "110px",
     backgroundColor: roseColor[3],
     border: "1px solid"+ blackColor,
     marginTop: "10px ",
     marginBottom: "-20px",
     textTransform: "uppercase",
     color: blackColor,
-    padding: "10px !important",
+    padding: "0.25rem",
     // remove automargin for h4
     "& *": {
       margin: 0,
@@ -55,6 +55,23 @@ const style = {
     // add padding to star
     "& > :first-child":{
       paddingRight: "4px"
+    },
+    "@media only screen and (max-width: 600px)":{
+      padding: "0.2rem",
+      marginBottom: "-10px",
+      "& h4": {
+        fontSize: "0.7rem",
+        marginRight: "0.2rem"
+      },
+      "& svg": {
+        height: "0.7rem",
+        marginTop: "auto",
+        marginBottom: "auto",
+        paddingRight: "6px",
+        paddingLeft: 0
+
+      }
+
     }
   },
   fontStyle: {
