@@ -52,7 +52,7 @@ export default function App () {
         <meta name="twitter:site" content="@GalacticPM" />
       </Helmet>
       {renderMetaTags({
-        description: 'Galactic Polymath (GP) is an education studio. We help scientists, nonprofits, and sustainable companies achieve outreach at scale by translating complex, cutting-edge research into FREE, mind-blowing lessons for grades 5+. We specialize in making NSF Broader Impacts, and K-12 STEM outreach in general, much easier and more effective. We do the heavy lifting: creating and disseminating mind-expanding STEM and STEAM lessons that grow public understanding and engagement in the topics our clients care about. We create fully interdisciplinary, culturally responsive lessons that connect knowledge across subjects to foster science lieteracy, data literacy, and critical thinking.',
+        description: 'Galactic Polymath (GP) is an education studio. We help scientists, nonprofits, and sustainable companies achieve outreach at scale by translating complex, cutting-edge research into FREE, mind-blowing lessons for grades 5+. We specialize in making science communication (scicomm), NSF Broader Impacts, and K-12 STEM outreach in general, much easier and more effective. We do the heavy lifting: creating and disseminating mind-expanding STEM and STEAM lessons that grow public understanding and engagement in the topics our clients care about. We create fully interdisciplinary, culturally responsive lessons that connect knowledge across subjects to foster science lieteracy, data literacy, and critical thinking.',
         image: 'https://res.cloudinary.com/galactic-polymath/image/upload/v1593304395/logos/GP_full_stacked_grad_whiteBG_llfyal.png'
       })}
       <Switch>
