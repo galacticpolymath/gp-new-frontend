@@ -38,7 +38,7 @@ export default function App () {
       .then(result => setLessons(result))
   }, []);
 
-  return( 
+  return(
     <Router history={hist}>
       <Helmet>
         <meta charSet="utf-8" />
@@ -52,7 +52,7 @@ export default function App () {
         <meta name="twitter:site" content="@GalacticPM" />
       </Helmet>
       {renderMetaTags({
-        description: 'We provide teachers with high-quality, FREE lessons for grades 5-12. Our lessons are contracted by researchers & brands who care about informing the public.',
+        description: 'Galactic Polymath (GP) is an education studio. We help scientists, nonprofits, and sustainable companies achieve outreach at scale by translating complex, cutting-edge research into FREE, mind-blowing lessons for grades 5+. We specialize in making NSF Broader Impacts, and K-12 STEM outreach in general, much easier and more effective. We do the heavy lifting: creating and disseminating mind-expanding STEM and STEAM lessons that grow public understanding and engagement in the topics our clients care about. We create fully interdisciplinary, culturally responsive lessons that connect knowledge across subjects to foster science lieteracy, data literacy, and critical thinking.',
         image: 'https://res.cloudinary.com/galactic-polymath/image/upload/v1593304395/logos/GP_full_stacked_grad_whiteBG_llfyal.png'
       })}
       <Switch>
@@ -61,7 +61,7 @@ export default function App () {
         <Route exact path="/hire-us" component={HireUsPage} />
 
         {/* Lessson Directory */}
-        
+
         <Route exact path="/lessons" render={() => <Lessons lessons={lessons} />} />
         <Route path="/lessons/:lessonId" render={({location}) => <LessonPlanDetailsPage location={location} lessons={lessons} />} />
 
@@ -161,7 +161,7 @@ export default function App () {
           }}
         />
         {/* End JobViz */}
-        
+
         {/* This path matches anything, so it goes last. */}
         <Route component={NotFoundPage} />
       </Switch>

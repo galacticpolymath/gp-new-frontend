@@ -33,7 +33,7 @@ export default function AboutUsPage(...rest) {
     <div>
       {renderMetaTags({
         title: 'About',
-        description: "Galactic Polymath (GP) is an education studio. We help scientists, nonprofits, and sustainable companies achieve outreach at scale by translating complex, cutting-edge research into FREE, mind-blowing lessons for grades 5+. GP was created by scientists and teachers to connect scientists and teachers. We do the heavy lifting: creating and disseminating mind-expanding lessons that engage young learners in the knowledge areas our clients care about, while taking teachers' feedback and perspectives into consideration at every step of development.",
+        description: "Galactic Polymath (GP) is an education studio. We help scientists, nonprofits, and sustainable companies achieve outreach at scale by translating complex, cutting-edge research into FREE, mind-blowing lessons for grades 5+. We specialize in making NSF Broader Impacts, and STEM outreach in general, much easier and more effective. GP was created by scientists and teachers to connect scientists and teachers. We do the heavy lifting: creating and disseminating mind-expanding STEM and STEAM lessons that grow public understanding and engagement in the topics our clients care about. We create fully interdisciplinary, culturally responsive lessons that connect knowledge across subjects to create lasting learning.",
         image: 'https://res.cloudinary.com/galactic-polymath/image/upload/v1593304395/logos/GP_full_stacked_grad_whiteBG_llfyal.png',
         url: 'https://www.galacticpolymath.com/about'
       })}
