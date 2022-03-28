@@ -30,7 +30,6 @@ export default function LessonsPage({ lessons }) {
   function filterPublished(ReleaseDate) {
     const today = new Date().toISOString().slice(0, 10)
     const released = new Date(ReleaseDate).toISOString().slice(0, 10)
-    // console.log("today: "+today+" pub: "+released)
     return released<=today
   }
 
