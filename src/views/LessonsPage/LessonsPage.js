@@ -26,6 +26,13 @@ export default function LessonsPage({ lessons }) {
   });
 
   const classes = useStyles();
+
+  function filterPublished(ReleaseDate) {
+    const today = new Date().toISOString().slice(0, 10)
+    const released = new Date(ReleaseDate).toISOString().slice(0, 10)
+    return released<=today
+  }
+
   return (
     <div>
       {renderMetaTags({
@@ -98,7 +105,8 @@ export default function LessonsPage({ lessons }) {
             iconColor="rose"
             title=""
           />
-          {lessons && <LessonCards lessons={lessons}/*={lessons.filter(({published_at}) => published_at)}*/ />}
+
+          {<LessonCards lessons={lessons.filter(({PublicationStatus,ReleaseDate})=> PublicationStatus==="Live" && filterPublished(ReleaseDate)) }/>}
         </div>
       </div>
     </div>
