@@ -147,7 +147,7 @@ export default function GetInvolved() {
       {/*  </GridContainer>*/}
       {/*</form>*/}
       <GridContainer className={classNames(classes.justifyContent, classes.emailButton)}>
-        <GridItem classNames={classNames(classes.mlAuto, classes.mrAuto, classes.justifyContent, classes.emailButton)}>
+        <GridItem className={classNames(classes.mlAuto, classes.mrAuto, classes.justifyContent, classes.emailButton)}>
           <Button
             color="primary"
             round
