@@ -7,6 +7,27 @@ import ExternalLink from 'components/ExternalLink'
 import blogPostsPageStyle from 'assets/jss/material-kit-pro-react/views/blogPostsPageStyle';
 const useStyles = makeStyles(blogPostsPageStyle);
 
+const getMedia = ({type, mainLink}) => {
+  if (type === "video") {
+    return <iframe
+      width="560"
+      height="315"
+      src={mainLink}
+      title="YouTube video player"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
+  } else if (type === 'pdf') {
+    return <iframe
+      src={mainLink}
+      width="640"
+      height="480"
+      allow="autoplay"
+    ></iframe>
+  }
+}
+
 const Slide = ({
   type,
   title,
@@ -16,21 +37,9 @@ const Slide = ({
   mainLink,
 }) => {
   const classes = useStyles();
-  let media
-  if (type === "video") {
-    media = <iframe
-      width="560"
-      height="315"
-      src={mainLink}
-      title="YouTube video player"
-      frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    ></iframe>
-  }
 
   return <Box boxShadow={4} className={classNames("Slide", type, classes.card)}>
-    {media}
+    {getMedia({ type, mainLink })}
     <div className="caption">
       <h5>{title}</h5>
       <p>{lessonRelevance}</p>
