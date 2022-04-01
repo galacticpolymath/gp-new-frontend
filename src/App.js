@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import { Helmet } from "react-helmet";
 import { createBrowserHistory } from "history";
 import { Router, Route, Switch } from "react-router-dom";
-// import TagManager from 'react-gtm-module'
+
 import { renderMetaTags } from "utils/meta";
 
 import "assets/scss/material-kit-pro-react.scss?v=1.9.0";
@@ -23,8 +23,6 @@ import LandingPage from "views/LandingPage/LandingPage";
 import HireUsPage from "views/HireUs/HireUsPage";
 import CustomGPfooter from "views/GPfooter/CustomGPfooter";
 import NotFoundPage from "views/NotFound";
-
-//import lessons from "./views/LessonPlanDetailPage/data/lessons.json";
 
 var hist = createBrowserHistory();
 
