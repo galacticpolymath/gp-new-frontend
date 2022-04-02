@@ -92,6 +92,7 @@ export default function CustomGPfooter() {
                   <Button
                     justIcon
                     simple
+                    color="primary"
                     href="mailto:info@galacticpolymath.com"
                   >
                     <MailOutlineIcon />

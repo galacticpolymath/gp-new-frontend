@@ -38,7 +38,7 @@ const blogPostsPageStyle = {
     "text-decoration": "none !important",
 
     "&:hover": {
-      "text-decoration": "blue wavy underline !important",
+      "text-decoration": "underline",
     }
   },
   lessonCard:{
@@ -61,7 +61,7 @@ const blogPostsPageStyle = {
   },
   noUnderline:{
     "&:hover": {
-      // "text-decoration": "tran underline !important"
+      "text-decoration": "none !important"
     }
   },
   textCenter: {
