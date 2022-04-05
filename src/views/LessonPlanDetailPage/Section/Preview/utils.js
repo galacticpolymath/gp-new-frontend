@@ -2,6 +2,7 @@ import React from 'react'
 import IconButton from "@material-ui/core/IconButton";
 import NextIcon from '@material-ui/icons/ArrowRight';
 import PrevIcon from '@material-ui/icons/ArrowLeft';
+import PdfIcon from "assets/img/pdf.svg";
 
 const getVideoThumb = link => {
   if (!link) return ''
@@ -14,8 +15,13 @@ const getVideoThumb = link => {
 }
 
 const renderThumbs = items => {
-  return items.map(({props: { mainLink, title }}, i) =>
-    <img key={i} src={getVideoThumb(mainLink)} alt={title} />)
+  return items.map(({props: { mainLink, type, title }}, i) => {
+    if (type === 'video') {
+      return <img key={i} src={getVideoThumb(mainLink)} alt={title} />
+    } else if (type === 'pdf') {
+      return <img key={i} className="pdf" src={PdfIcon} alt="PDF" />
+    }
+  })
 }
 
 const renderArrowPrev = (clickHandler, hasPrev, label) =>
