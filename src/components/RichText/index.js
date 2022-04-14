@@ -12,6 +12,7 @@ const RichText = ({ content, className = "" }) => {
     <CustomMarkdownView
       className={"RichText " + className}
       markdown={content}
+      options={{simpleLineBreaks: true, simplifiedAutoLink: true, parseImgDimensions: true, emoji: true}}
     />
   );
 };
