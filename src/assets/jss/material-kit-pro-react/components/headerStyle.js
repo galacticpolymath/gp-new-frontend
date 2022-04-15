@@ -248,6 +248,7 @@ const headerStyle = (theme) => ({
       "& img": {
         display: "inherit",
         maxHeight: "6vh",
+        maxWidth:"100%"
       }
       },
   },
@@ -263,6 +264,7 @@ const headerStyle = (theme) => ({
         justifySelf: "left",
         objectFit: "contain",
         marginRight: "auto",
+        maxWidth:"100%"
         // display: "block",
         // width: "75vw",
       }
