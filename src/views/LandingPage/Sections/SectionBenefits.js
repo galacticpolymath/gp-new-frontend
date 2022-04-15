@@ -53,12 +53,16 @@ const style = {
     paddingTop: "2rem",
     paddingBottom: 0,
     marginBottom: 0
+
   },
   topPadding: {
     paddingTop: "30px"
   },
   boxContainer:{
-  display: "grid"
+    display: "grid",
+    "@media only screen and (max-width: 600px)": {
+      margin: "0 20px"
+    }
 
   },
   buttonAtBottom: {
