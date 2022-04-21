@@ -27,7 +27,7 @@ const VariantPart = ({ part, title, preface, itemList = [], gradePrefix }) => {
       </ExpansionPanelSummary>
       <ExpansionPanelDetails className="ExpansionPanelDetails">
         <RichText className="VariantPreface" content={preface} />
-        {itemList.length > 0 && (
+        {itemList && (
           <ol>
             {itemList.map((item, i) => (
               <ResourceGroup key={i} {...item} />
