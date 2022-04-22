@@ -42,56 +42,56 @@ const LessonCards = ({ lessons }) => {
         ))}
         {/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/}
         {/*Manual coming soon tile*/}
-        <GridItem xs={12} sm={6} md={6} >
-          {/*<Link to={"/lessons/" + id}>*/}
-          <div className= {classes.addMargin}>
-            <Box className={classes.lessonCard} boxShadow={4}>
-              <img
-                className="Image"
-                alt={"Coming Soon lesson graphic"}
-                src={ComingSoon}
-              />
-              <div
-                className={classes.coloredShadow}
-                style={{
-                  opacity: "1"
-                }}
-              />
-              <CardBody className={classes.noLeftPad}>
-                <h4>
-                  {/*<Link to={"/lessons/" + id}>{Title}</Link>*/}
-                  The Guardian Frogs of Borneo
-                </h4>
-                <p>Why Exceptions Matter in Biology and Everyday Life</p>
-                <br />
-                <Badge color={"primary"}>Science</Badge>
-              </CardBody>
-            </Box>
+        {/*<GridItem xs={12} sm={6} md={6} >*/}
+        {/*  /!*<Link to={"/lessons/" + id}>*!/*/}
+        {/*  <div className= {classes.addMargin}>*/}
+        {/*    <Box className={classes.lessonCard} boxShadow={4}>*/}
+        {/*      <img*/}
+        {/*        className="Image"*/}
+        {/*        alt={"Coming Soon lesson graphic"}*/}
+        {/*        src={ComingSoon}*/}
+        {/*      />*/}
+        {/*      <div*/}
+        {/*        className={classes.coloredShadow}*/}
+        {/*        style={{*/}
+        {/*          opacity: "1"*/}
+        {/*        }}*/}
+        {/*      />*/}
+        {/*      <CardBody className={classes.noLeftPad}>*/}
+        {/*        <h4>*/}
+        {/*          /!*<Link to={"/lessons/" + id}>{Title}</Link>*!/*/}
+        {/*          The Guardian Frogs of Borneo*/}
+        {/*        </h4>*/}
+        {/*        <p>Why Exceptions Matter in Biology and Everyday Life</p>*/}
+        {/*        <br />*/}
+        {/*        <Badge color={"primary"}>Science</Badge>*/}
+        {/*      </CardBody>*/}
+        {/*    </Box>*/}
 
-              <GridContainer className={classNames(classes.subscribeFooter)}>
-                <GridItem  md={12} lg={5}>
-                <Button
-                  color="info"
-                  size="lg"
-                  href="https://galacticpolymath.us8.list-manage.com/subscribe?u=42413c3d307f9b69fd5d5319e&id=33924ebd91"
-                  className={classes.button}
-                >
-                  <MailOutlineIcon style={{ marginRight: "0.75rem" }} />
-                  Subscribe
-                </Button>
-                </GridItem>
-                <GridItem  md={12} lg={7}>
-                  <div className={classes.subscribeAppeal}>
-                  Be the first to hear when this lesson is released!
-                  </div>
-                </GridItem>
-              </GridContainer>
+        {/*      <GridContainer className={classNames(classes.subscribeFooter)}>*/}
+        {/*        <GridItem  md={12} lg={5}>*/}
+        {/*        <Button*/}
+        {/*          color="info"*/}
+        {/*          size="lg"*/}
+        {/*          href="https://galacticpolymath.us8.list-manage.com/subscribe?u=42413c3d307f9b69fd5d5319e&id=33924ebd91"*/}
+        {/*          className={classes.button}*/}
+        {/*        >*/}
+        {/*          <MailOutlineIcon style={{ marginRight: "0.75rem" }} />*/}
+        {/*          Subscribe*/}
+        {/*        </Button>*/}
+        {/*        </GridItem>*/}
+        {/*        <GridItem  md={12} lg={7}>*/}
+        {/*          <div className={classes.subscribeAppeal}>*/}
+        {/*          Be the first to hear when this lesson is released!*/}
+        {/*          </div>*/}
+        {/*        </GridItem>*/}
+        {/*      </GridContainer>*/}
 
 
 
-            {/*</Link>*/}
-          </div>
-        </GridItem>
+        {/*    /!*</Link>*!/*/}
+        {/*  </div>*/}
+        {/*</GridItem>*/}
 
       </GridContainer>
     </div>
