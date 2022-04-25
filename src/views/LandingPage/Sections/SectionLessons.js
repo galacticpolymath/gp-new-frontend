@@ -5,8 +5,8 @@ import classNames from "classnames";
 // @material-ui/icons
 import StarIcon from '@material-ui/icons/Star';
 // import  image
-import FeaturedLessonImg from "assets/img/geneticRescue_title_card.png";
-import SponsorLogo from "assets/img/featuredSponsorLogo.jpg";
+import FeaturedLessonImg from "assets/img/featuredLesson_card.png";
+import SponsorLogo from "assets/img/featuredSponsor_logo.png";
 
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
@@ -35,14 +35,16 @@ const style = {
     },
 
   },
-  featuredLessonLabel:{
-    display: "flex !important",
+  newRelease:{
+    display: "flex",
     zIndex: "200",
-    maxHeight: "110px",
+    height: "35px",
     backgroundColor: roseColor[3],
     border: "1px solid"+ blackColor,
-    marginTop: "10px ",
-    marginBottom: "-20px",
+    position: "absolute",
+    top: "-0.3rem",
+    left: "20px",
+    marginTop: "20px ",
     textTransform: "uppercase",
     color: blackColor,
     padding: "0.25rem",
@@ -93,9 +95,10 @@ const style = {
   justifyTextLeft: {
     textAlign: "left"
   },
-  lessonCover:{
+  lessonCard:{
     // border: "2px solid" + grayColor[6],
     backgroundColor: "white",
+    marginTop: "20px",
     zIndex: "0",
     boxShadow:
       "0 16px 38px -12px rgba(" +
@@ -110,6 +113,21 @@ const style = {
     marginRight: "auto",
     marginLeft: "auto",
     padding: "20px 1rem"
+  },
+  logo:{
+    alignSelf: "center",
+    width: "100%",
+    height: "auto",
+
+
+    "@media only screen and (max-width: 960px)":{
+      minHeight: "100px",
+      maxWidth:"50vw",
+    },
+
+  },
+  logoContainer:{
+    margin: "auto"
   },
   primaryColor: {
     color: primaryColor[0]
@@ -156,7 +174,7 @@ const style = {
         fontSize: "2.6rem"
       }
     },
-    lessonCover:{
+    lessonCard:{
       marginBottom:"3rem"
     }
 
@@ -204,13 +222,12 @@ export default function SectionTeam() {
         <GridContainer >
           <GridItem xs={12} sm={12} md={12} lg={7} >
             <Card   style={{paddingBottom: "20px",}}>
-              <CardBody style={{backgroundColor: "transparent",}}>
-                <GridContainer
-                  style={{ display: "flex", alignContent: "middle",backgroundColor: "transparent" }}>
-                  <span className={classes.featuredLessonLabel}>
+              <CardBody>
+                <GridContainer>
+                  <div className={classes.newRelease}>
                       <StarIcon/> <h4> New Release!</h4>
-                    </span>
-                  <GridItem xs={12} md={10}>
+                    </div>
+                  <GridItem xs={12} md={9}>
                     <a href="/lessons/3">
                     {/*Featured Lesson Label*/}
 
@@ -220,22 +237,20 @@ export default function SectionTeam() {
                       height="auto"
                       width="100%"
                       alt={"Lesson Card Cover"}
-                      className={classes.lessonCover}
+                      className={classes.lessonCard}
                     />
                   </a>
                   </GridItem>
 
                   {/*Sponsor Logo*/}
-                  <GridItem xs={12} md={2}
-                            style={{ alignSelf: "center" }}>
+                  <GridItem xs={12} md={3}
+                           className={classes.logoContainer}>
                     <h4>Sponsor</h4>
                     <img
                       src={SponsorLogo}
-
-                      height="auto"
-                      width="100%"
+                      className={classes.logo}
                       alt={"Lesson Preview"}
-                      style={{maxWidth:"100px"}}
+
                     />
                   </GridItem>
                 </GridContainer>
@@ -254,13 +269,9 @@ export default function SectionTeam() {
                     )}>
               <div className={classes.doubleSpaced}>
                 <h3 style={{fontWeight:500}}>
-                  Our goal is to <span>empower&nbsp;students </span>
-                  with{" "}
-                  <span className={classes.purpleText}>
-                    agency</span> and{" "}
-                  <span className={classes.pinkText}>
-                    critical thinking.
-                  </span>
+                  We want to <span>empower&nbsp;students </span>
+                  with <em> agency</em> and <em>critical thinking.</em>
+
                 </h3>
               </div>
               <div className={classes.doubleSpaced}>
@@ -286,11 +297,11 @@ export default function SectionTeam() {
                 <Button
                   color="primary"
                   size="lg"
-                  href="/lessons/3"
+                  href="/lessons/2"
                 >
                   <CreateIcon />
                   <i className="fas" />
-                  Check it out!
+                  See this lesson
                 </Button>
               </div>
           </GridItem>
