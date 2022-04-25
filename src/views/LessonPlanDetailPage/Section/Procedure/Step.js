@@ -25,7 +25,9 @@ const LessonStep = ({
   return (
     <div className="LessonStep">
       <Badge className="step">{Step}</Badge>
-      <h5>{StepTitle}</h5>
+          <RichText content={StepTitle}
+                    className="stepTitle" />
+
       <RichText className="tldr" content={StepQuickDescription} />
       <RichText content={StepDetails} />
       {Vocab && (
