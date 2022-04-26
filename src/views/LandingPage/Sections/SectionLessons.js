@@ -228,7 +228,7 @@ export default function SectionTeam() {
                       <StarIcon/> <h4> New Release!</h4>
                     </div>
                   <GridItem xs={12} md={9}>
-                    <a href="/lessons/3">
+                    <a href="/lessons/2">
                     {/*Featured Lesson Label*/}
 
                     {/*lesson cover image*/}
