@@ -151,7 +151,7 @@ export default function GetInvolved() {
           <Button
             color="primary"
             round
-            href="mailto:galacticpolymath@gmail.com?subject=GP%20Collaboration?"
+            href="mailto:info@galacticpolymath.com?subject=GP%20Collaboration?"
             target={"_blank"}
             rel="noopener noreferrer"
           >
