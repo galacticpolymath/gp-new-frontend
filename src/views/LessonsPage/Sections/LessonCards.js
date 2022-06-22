@@ -42,56 +42,61 @@ const LessonCards = ({ lessons }) => {
         ))}
         {/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/}
         {/*Manual coming soon tile*/}
-        {/*<GridItem xs={12} sm={6} md={6} >*/}
-        {/*  /!*<Link to={"/lessons/" + id}>*!/*/}
-        {/*  <div className= {classes.addMargin}>*/}
-        {/*    <Box className={classes.lessonCard} boxShadow={4}>*/}
-        {/*      <img*/}
-        {/*        className="Image"*/}
-        {/*        alt={"Coming Soon lesson graphic"}*/}
-        {/*        src={ComingSoon}*/}
-        {/*      />*/}
-        {/*      <div*/}
-        {/*        className={classes.coloredShadow}*/}
-        {/*        style={{*/}
-        {/*          opacity: "1"*/}
-        {/*        }}*/}
-        {/*      />*/}
-        {/*      <CardBody className={classes.noLeftPad}>*/}
-        {/*        <h4>*/}
-        {/*          /!*<Link to={"/lessons/" + id}>{Title}</Link>*!/*/}
-        {/*          The Guardian Frogs of Borneo*/}
-        {/*        </h4>*/}
-        {/*        <p>Why Exceptions Matter in Biology and Everyday Life</p>*/}
-        {/*        <br />*/}
-        {/*        <Badge color={"primary"}>Science</Badge>*/}
-        {/*      </CardBody>*/}
-        {/*    </Box>*/}
+        <GridItem xs={12} sm={6} md={6} >
+          <div className= {classes.addMargin}>
+            <Box className={classes.lessonCard} boxShadow={4}>
+              <div style={{
+                zIndex:5,
+                position:"absolute",
+                top:"3%",
+                right:"5%",
+                fontSize: "2rem",
+                verticalAlign:"top",
+                textAlign:"right",
+                lineHeight: "2rem",
+                fontWeight: 500,
+                textShadow: "0px 0px 5px white, 0px 0px 10px white"
+              }}>
+                Coming Soon!
+              </div>
+              <img
+                className="Image"
+                alt={"Coming Soon lesson graphic"}
+                src={ComingSoon}
+              />
+              <div
+              />
+              <CardBody className={classes.noLeftPad}>
+                <h4>
+                  {/*<Link to={"/lessons/" + id}>{Title}</Link>*/}
+                  Colourful Solutions
+                </h4>
+                <p>Chemical Engineering Dyes to Brighten Lives</p>
+                <br />
+                <Badge color={"primary"}>Science</Badge>
+              </CardBody>
+            </Box>
 
-        {/*      <GridContainer className={classNames(classes.subscribeFooter)}>*/}
-        {/*        <GridItem  md={12} lg={5}>*/}
-        {/*        <Button*/}
-        {/*          color="info"*/}
-        {/*          size="lg"*/}
-        {/*          href="https://galacticpolymath.us8.list-manage.com/subscribe?u=42413c3d307f9b69fd5d5319e&id=33924ebd91"*/}
-        {/*          className={classes.button}*/}
-        {/*        >*/}
-        {/*          <MailOutlineIcon style={{ marginRight: "0.75rem" }} />*/}
-        {/*          Subscribe*/}
-        {/*        </Button>*/}
-        {/*        </GridItem>*/}
-        {/*        <GridItem  md={12} lg={7}>*/}
-        {/*          <div className={classes.subscribeAppeal}>*/}
-        {/*          Be the first to hear when this lesson is released!*/}
-        {/*          </div>*/}
-        {/*        </GridItem>*/}
-        {/*      </GridContainer>*/}
-
-
-
-        {/*    /!*</Link>*!/*/}
-        {/*  </div>*/}
-        {/*</GridItem>*/}
+              <GridContainer className={classNames(classes.subscribeFooter)}>
+                <GridItem  md={12} lg={5}>
+                <Button
+                  color="info"
+                  size="lg"
+                  href="https://galacticpolymath.us8.list-manage.com/subscribe?u=42413c3d307f9b69fd5d5319e&id=33924ebd91"
+                  className={classes.button}
+                >
+                  <MailOutlineIcon style={{ marginRight: "0.75rem" }} />
+                  Subscribe
+                </Button>
+                </GridItem>
+                <GridItem  md={12} lg={7}>
+                  <div className={classes.subscribeAppeal}>
+                  Be the first to hear when this lesson is released!
+                  </div>
+                </GridItem>
+              </GridContainer>
+          </div>
+        </GridItem>
 
       </GridContainer>
     </div>
