@@ -25,6 +25,7 @@ const Overview = ({
   Description,
   EstLessonTime,
   ForGrades,
+  GradesOrYears,
   TargetSubject,
   SteamEpaulette,
   Text,
@@ -32,9 +33,6 @@ const Overview = ({
 }) => {
   const classes = useStyles();
 
-  // function(conditional_epaulette){
-  //   return()
-  // }
 
   return (
     <CollapsibleSection
@@ -56,7 +54,7 @@ const Overview = ({
             </GridItem>
             <GridItem className=" focus">
               <FaceIcon fontSize="large" className="statIcon" />
-              <h5>Grades: </h5>
+              <h5>{GradesOrYears}: </h5>
               <div className="statContainer">
                 <h3>{ForGrades}</h3>
               </div>
@@ -102,6 +100,7 @@ const Overview = ({
 Overview.propTypes = {
   index: PropTypes.number,
   EstLessonTime: PropTypes.string,
+  GradesOrYears: PropTypes.string,
   ForGrades: PropTypes.string,
   TargetSubject: PropTypes.string,
   SteamEpaulette: PropTypes.object,
