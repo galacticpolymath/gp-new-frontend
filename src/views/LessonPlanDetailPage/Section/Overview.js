@@ -32,6 +32,10 @@ const Overview = ({
 }) => {
   const classes = useStyles();
 
+  // function(conditional_epaulette){
+  //   return()
+  // }
+
   return (
     <CollapsibleSection
       className="Overview"
@@ -65,7 +69,7 @@ const Overview = ({
               </div>
             </GridItem>
           </GridContainer>
-          {SteamEpaulette &&
+          {SteamEpaulette.url &&
           <AnchorLink href="#learning_standards" offset="125px">
             <div className="epaulette-container">
               <h5>Subject breakdown by standard alignments: </h5>
@@ -73,6 +77,7 @@ const Overview = ({
 
             </div>
           </AnchorLink>
+
           }
 
 
