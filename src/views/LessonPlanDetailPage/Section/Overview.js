@@ -65,12 +65,15 @@ const Overview = ({
               </div>
             </GridItem>
           </GridContainer>
-            <AnchorLink href="#learning_standards" offset="125px">
-              <div className="epaulette-container">
+          {SteamEpaulette &&
+          <AnchorLink href="#learning_standards" offset="125px">
+            <div className="epaulette-container">
               <h5>Subject breakdown by standard alignments: </h5>
               <Image {...SteamEpaulette} className="epaulette" />
-              </div>
-            </AnchorLink>
+
+            </div>
+          </AnchorLink>
+          }
 
 
         </Card>
