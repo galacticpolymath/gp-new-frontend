@@ -87,6 +87,11 @@ const ICONS = {
       <i className="fas fa-video" style={{ fontSize: "1.3rem" }} />
     </span>
   ),
+  reading: (
+    <span role="img" >
+      <i className="fas fa-book" style={{ fontSize: "1.3rem" }} />
+    </span>
+  ),
   scissors: (
     <span role="img" aria-label="scissors">
       <i className="fas fa-cut" style={{ fontSize: "1.3rem" }} />
