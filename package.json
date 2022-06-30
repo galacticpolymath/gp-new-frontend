@@ -67,6 +67,7 @@
       "--shm-size=5gb"
     ],
     "include": [
+      "/lessons/3",
       "/lessons/4",
       "/lessons/5"
     ]
