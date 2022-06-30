@@ -29,11 +29,11 @@ const Preview = ({
       initiallyExpanded={InitiallyExpanded !== false}
     >
       <div className={classes.container}>
-        <Carousel items={Multimedia} />
         <Card className={classes.quickPrep}>
           <h5>&quot;Teach it in 15&quot; Quick Prep</h5>
           <RichText content={QuickPrep} />
         </Card>
+        <Carousel items={Multimedia} />
       </div>
     </CollapsibleSection>
   );

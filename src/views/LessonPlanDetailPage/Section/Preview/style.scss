@@ -1,6 +1,8 @@
 @import '../../variables';
 @import '../../../../assets/scss/core/variables';
 
+
+
 .Carousel {
   margin: 0 auto;
   max-width: 50rem;
@@ -49,7 +51,7 @@
     @media (min-width: map-get($grid-breakpoints, "md")) {
       flex-wrap: nowrap;
       justify-content: center;
-      
+
       > button {
         margin: .5rem 0;
       }
@@ -61,7 +63,7 @@
       }
     }
   }
-  
+
   li.slide {
     padding: .75rem;
     .Slide {

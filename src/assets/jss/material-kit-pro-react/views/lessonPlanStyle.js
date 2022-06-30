@@ -37,10 +37,10 @@ const lessonPlanStyle = {
     verticalAlign: "sub"
   },
   quickPrep:{
-    marginTop: "-1rem",
-    marginBottom: "1rem",
-    maxWidth: "300px",
-    padding: "1rem 2rem 0",
+    marginTop: "1rem",
+    marginBottom: "2rem",
+    maxWidth: "400px",
+    padding: "1rem 2rem 0.5rem",
   border: "rgba(245,245,245,1) 1px solid",
   boxShadow:   "inset 3px 2px 26px 20px rgba(153, 157, 168,0.1)," +
     "inset 0px 0px 15px 8px rgba(240, 244, 255, 1)," +
