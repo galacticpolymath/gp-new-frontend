@@ -33,7 +33,7 @@ const Preview = ({
           <h5>&quot;Teach it in 15&quot; Quick Prep</h5>
           <RichText content={QuickPrep} />
         </Card>
-        <Carousel items={Multimedia} />
+        {Multimedia && <Carousel items={Multimedia} /> }
       </div>
     </CollapsibleSection>
   );
