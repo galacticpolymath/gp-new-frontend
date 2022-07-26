@@ -26,17 +26,17 @@ export default function LessonPlan({ location, lessons }) {
   let { lessonId } = useParams(); // defined and App.js. taken from URL suffix
   lessonId = parseInt(lessonId);
 
-  lessons = require("C:/projects/gp-new-frontend/src/index.json");
+  console.log(lessonId, lessons);
 
   //console.log("LessonDetailsPage", lessons);
-  const temp = lessons.find(({ id }) => id === lessonId);
+  const temp = lessons.find(({ id }) => parseInt(id) === lessonId);
   const [lang, setLang] = useState(temp.DefaultLanguage);
   
-  const [lesson, setLesson] = useState(lessons.find(({ id, Language }) => id === lessonId && Language === lang));
+  const [lesson, setLesson] = useState(lessons.find(({ id, Language }) => parseInt(id) === lessonId && Language === lang));
   //console.log("lang", lang);
   const [sections, setSections] = useState(lesson.Section);
   const [locale, setLocale] = useState(lesson.locale);
-  const availLocales = lessons.filter((l) => l.id === lessonId).map((l)=>l.locale);
+  const availLocales = lessons.filter((l) => parseInt(l.id) === lessonId).map((l)=>l.locale);
   
   let numberedElements = 0;
 

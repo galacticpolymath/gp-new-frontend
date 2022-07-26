@@ -36,6 +36,8 @@ export default function App () {
       .then(result => setLessons(result))
   }, []);
 
+  console.log("App", lessons);
+
   return(
     <Router history={hist}>
       <Helmet>
