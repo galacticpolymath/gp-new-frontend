@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { renderMetaTags } from "utils/meta";
 
@@ -13,6 +13,7 @@ import "./style.scss";
 
 import NavigationDots from "./NavigationDots";
 import useScrollHandler from './NavigationDots/useScrollHandler'
+import { isConstructorDeclaration } from "typescript";
 
 export default function LessonPlan({ location, lessons }) {
   useScrollHandler()
@@ -22,13 +23,21 @@ export default function LessonPlan({ location, lessons }) {
     document.body.scrollTop = 0;
   });
 
-  const { lessonId } = useParams();
+  let { lessonId } = useParams(); // defined and App.js. taken from URL suffix
+  lessonId = parseInt(lessonId);
 
-  if (!lessons) return null;
-  const lesson = lessons.find(({ id }) => id.toString() === lessonId.toString()) // object of objs
-  if (!lesson) return null;
-  const sections = lesson.Section;
+  lessons = require("C:/projects/gp-new-frontend/src/index.json");
 
+  //console.log("LessonDetailsPage", lessons);
+  const temp = lessons.find(({ id }) => id === lessonId);
+  const [lang, setLang] = useState(temp.DefaultLanguage);
+  
+  const [lesson, setLesson] = useState(lessons.find(({ id, Language }) => id === lessonId && Language === lang));
+  //console.log("lang", lang);
+  const [sections, setSections] = useState(lesson.Section);
+  const [locale, setLocale] = useState(lesson.locale);
+  const availLocales = lessons.filter((l) => l.id === lessonId).map((l)=>l.locale);
+  
   let numberedElements = 0;
 
   // count the sections listed in numbered_sections. to send as index. 
@@ -42,6 +51,8 @@ export default function LessonPlan({ location, lessons }) {
 
     return <Section key={i} index={numberedElements} section={section} />;
   };
+  
+  const selectLocale = (localeSelected) => setLang(localeSelected);
 
   return (
     <Fragment>
@@ -49,7 +60,7 @@ export default function LessonPlan({ location, lessons }) {
         title: lesson.Title,
         description: lesson.Subtitle,
         image: lesson.CoverImage.url,
-        url: `https://galacticpolymath.com/lessons/${lessonId}`
+        url: `https://localhost:3000/lessons/${lessonId}`
       })}
 
       <SiteHeader
@@ -59,14 +70,14 @@ export default function LessonPlan({ location, lessons }) {
       />
       <div className="LessonPlan" id="top">
 
-        <Header location={location} {...lesson} />
+        <Header location={location} selectedLocale={locale} selectLocale={selectLocale} availLocales={availLocales} {...lesson} />       
 
         {sections &&
           Object.keys(sections).map((sectionkey, i) => renderSection(sections[sectionkey], i)
           )}
       </div>
-
-      <NavigationDots sections={lesson.Section} />
+      
+      <NavigationDots sections={sections} />
     </Fragment>
   );
 }

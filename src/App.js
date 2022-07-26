@@ -61,7 +61,7 @@ export default function App () {
         {/* Lessson Directory */}
 
         <Route exact path="/lessons" render={() => <Lessons lessons={lessons} />} />
-        <Route path="/lessons/:lessonId" render={({location}) => <LessonPlanDetailsPage location={location} lessons={lessons} />} />
+        <Route path="/lessons/:lessonId" render={({location}) => <LessonPlanDetailsPage location={location} lessons={lessons} />} /> {/* location is the site address https://v5.reactrouter.com/web/api/location*/}
 
         {/* JobViz */}
         <Route

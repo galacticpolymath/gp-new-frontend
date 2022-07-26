@@ -10,6 +10,7 @@ import Image from "../../components/StrapiImage";
 import RichText from "../../components/RichText";
 //import { SECTIONS } from "./constants";
 import ShareTools from "./ShareTools";
+import ReactFlagsSelect from "react-flags-select";
 
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
 const useStyles = makeStyles(lessonPlanStyle);
@@ -24,7 +25,12 @@ const getLatestSubRelease = (sections) => {
   return lastSubRelease;
 };
 
+const countryTable= {"US": "en-US", "GB": "en-GB", "NZ": "en-NZ", "FR": "FR", "DE": "DE", "IT": "IT", "AW": "fr-AW"}
+
 const Header = ({
+  availLocales, 
+  selectedLocale,
+  selectLocale,
   location,
   Title,
   Subtitle,
@@ -40,6 +46,17 @@ const Header = ({
   if (Array.isArray(SponsorImage.url)){
     SponsorImage.url = SponsorImage.url[0]
   }
+  
+  console.log(availLocales);
+  let countries = []
+  let labels = {}
+  Object.keys(countryTable).forEach((country)=>{
+    if (availLocales.includes(countryTable[country])){
+      countries.push(country);
+      labels[country] = countryTable[country];
+    }
+  })
+  console.log(labels);
 
   return (
     <div className="Header">
@@ -53,16 +70,21 @@ const Header = ({
           {/* Dots nav text; not displayed on page */}
           <span style={{ display: "none" }}>Title</span>
         </div>
-        {lastSubRelease && (
-          <AnchorLink href="#version_notes" offset="125px">
-            <p>
-              Version {lastSubRelease.version} (Updated{" "}
-              {moment(new Date(lastSubRelease.date))
-                .format("MMM D, yyyy")}
-              )
-            </p>
-          </AnchorLink>
-        )}
+        <div style={{ display: 'flex', justifyContent: 'space-between', direction: 'rtl'}}>
+          <ReactFlagsSelect selected={selectedLocale} countries={countries} customLabels={labels} showSelectedLabel={false}
+          onSelect={(code) => selectLocale(code)}
+          />
+          {lastSubRelease && (
+            <AnchorLink href="#version_notes" offset="125px">
+              <p>
+                Version {lastSubRelease.version} (Updated{" "}
+                {moment(new Date(lastSubRelease.date))
+                  .format("MMM D, yyyy")}
+                )
+              </p>
+            </AnchorLink>
+          )}
+        </div>
         <h2>{Title}</h2>
         <h4>{Subtitle}</h4>
 
