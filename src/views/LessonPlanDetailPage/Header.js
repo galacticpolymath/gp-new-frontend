@@ -72,7 +72,7 @@ const Header = ({
         </div>
         <div style={{ display: 'flex', justifyContent: 'space-between', direction: 'rtl'}}>
           <ReactFlagsSelect selected={selectedLocale} countries={countries} customLabels={labels} showSelectedLabel={false}
-          onSelect={(code) => selectLocale(code)}
+          onSelect={(code) => selectLocale(code)} placeholder={selectedLocale}
           />
           {lastSubRelease && (
             <AnchorLink href="#version_notes" offset="125px">

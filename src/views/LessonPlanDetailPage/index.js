@@ -26,7 +26,7 @@ export default function LessonPlan({ location, lessons }) {
   let { lessonId } = useParams(); // defined and App.js. taken from URL suffix
   lessonId = parseInt(lessonId);
 
-  console.log(lessonId, lessons);
+  //console.log(lessonId, lessons);
 
   //console.log("LessonDetailsPage", lessons);
   const temp = lessons.find(({ id }) => parseInt(id) === lessonId);
