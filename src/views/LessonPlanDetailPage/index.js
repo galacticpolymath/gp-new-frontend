@@ -26,15 +26,25 @@ export default function LessonPlan({ location, lessons }) {
   let { lessonId } = useParams(); // defined and App.js. taken from URL suffix
   lessonId = parseInt(lessonId);
 
-  const defaultLang = lessons.find(({ id }) => parseInt(id) === lessonId).DefaultLanguage;
-
-  console.log("def lang", defaultLang);
-  
-  const [lesson, setLesson] = useState(lessons.find(({ id, Language }) => parseInt(id) === lessonId && Language === defaultLang));
-  //console.log("lang", lang);
-  const [sections, setSections] = useState(lesson.Section);
-  const [locale, setLocale] = useState(lesson.locale);
+  const [loc, setLocale] = useState(lessons.find(({ id }) => parseInt(id) === lessonId).DefaultLocale);
   const availLocales = lessons.filter((l) => parseInt(l.id) === lessonId).map((l)=>l.locale);
+
+  const [lesson, setLesson] = useState(lessons.find(({ id, locale }) => parseInt(id) === lessonId && locale === loc))
+  const [sections, setSections] = useState(lesson.Section)
+
+  console.log("Title", lesson.Title, "locale", loc, availLocales);
+
+  useEffect(() => {
+    console.log("Locale change", loc);
+    setLesson(lessons.find(({ id, locale }) => parseInt(id) === lessonId && locale === loc));
+    setSections(lesson.Section);
+  }, [loc]);
+
+  //useEffect(() => {
+  //setLesson(lessons.find(({ id, locale }) => parseInt(id) === lessonId && locale === defaultLocale));
+  //setSections(lesson.Section);
+  //setLocale(lesson.locale);
+  //}, [])
   
   let numberedElements = 0;
 
@@ -45,7 +55,6 @@ export default function LessonPlan({ location, lessons }) {
     if (NUMBERED_SECTIONS.indexOf(section.__component) !== -1) {
       numberedElements++;
     }
-    // console.log(numberedElements, section);
 
     return <Section key={i} index={numberedElements} section={section} />;
   };
@@ -68,7 +77,7 @@ export default function LessonPlan({ location, lessons }) {
       />
       <div className="LessonPlan" id="top">
 
-        <Header location={location} selectedLocale={locale} selectLocale={selectLocale} availLocales={availLocales} {...lesson} />       
+        <Header location={location} selectedLocale={loc} selectLocale={selectLocale} availLocales={availLocales} {...lesson} />       
 
         {sections &&
           Object.keys(sections).map((sectionkey, i) => renderSection(sections[sectionkey], i)

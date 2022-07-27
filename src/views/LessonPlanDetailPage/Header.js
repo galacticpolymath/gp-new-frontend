@@ -25,7 +25,9 @@ const getLatestSubRelease = (sections) => {
   return lastSubRelease;
 };
 
-const countryTable= {"US": "en-US", "GB": "en-GB", "NZ": "en-NZ", "FR": "FR", "DE": "DE", "IT": "IT", "AW": "fr-AW"}
+                 // <locale>: <reactflagselect country code>
+const countryTable= {"EN-US": "US", "EN-GB": "GB", "EN-NZ": "NZ", "FR": "FR", "DE": "DE", "IT": "IT", "FR-AW": "AW"}
+const locTable= {"US": "EN-US", "GB": "EN-GB", "NZ": "EN-NZ", "FR": "FR", "DE": "DE", "IT": "IT", "AW": "FR-AW"}
 
 const Header = ({
   availLocales, 
@@ -47,16 +49,14 @@ const Header = ({
     SponsorImage.url = SponsorImage.url[0]
   }
   
-  console.log(availLocales);
   let countries = []
   let labels = {}
-  Object.keys(countryTable).forEach((country)=>{
-    if (availLocales.includes(countryTable[country])){
-      countries.push(country);
-      labels[country] = countryTable[country];
-    }
+
+  availLocales.forEach((loc) => {
+    const upperloc = loc.toUpperCase()
+    countries.push(countryTable[upperloc]);
+    labels[countryTable[upperloc]] = upperloc;
   })
-  console.log(labels);
 
   return (
     <div className="Header">
@@ -70,9 +70,11 @@ const Header = ({
           {/* Dots nav text; not displayed on page */}
           <span style={{ display: "none" }}>Title</span>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', direction: 'rtl'}}>
           <ReactFlagsSelect selected={selectedLocale} countries={countries} customLabels={labels} showSelectedLabel={false}
-          onSelect={(code) => selectLocale(code)} placeholder={selectedLocale}
+          onSelect={countryCode => {
+            selectLocale(locTable[countryCode])
+            //console.log(countryTable[loc])
+          }} placeholder={selectedLocale} alignOptionsToRight={false} fullWidth={false}
           />
           {lastSubRelease && (
             <AnchorLink href="#version_notes" offset="125px">
@@ -84,7 +86,6 @@ const Header = ({
               </p>
             </AnchorLink>
           )}
-        </div>
         <h2>{Title}</h2>
         <h4>{Subtitle}</h4>
 

@@ -28,6 +28,7 @@ var hist = createBrowserHistory();
 
 export default function App () {
 
+  /*
   const [lessons, setLessons] = useState([])
 
   useEffect(() => {
@@ -35,8 +36,9 @@ export default function App () {
       .then(res => res.json())
       .then(result => setLessons(result))
   }, []);
+  */
 
-  console.log("App", lessons);
+  const lessons = require('./current_index.json');
 
   return(
     <Router history={hist}>
