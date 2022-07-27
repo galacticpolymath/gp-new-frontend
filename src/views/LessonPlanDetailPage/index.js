@@ -26,13 +26,11 @@ export default function LessonPlan({ location, lessons }) {
   let { lessonId } = useParams(); // defined and App.js. taken from URL suffix
   lessonId = parseInt(lessonId);
 
-  //console.log(lessonId, lessons);
+  const defaultLang = lessons.find(({ id }) => parseInt(id) === lessonId).DefaultLanguage;
 
-  //console.log("LessonDetailsPage", lessons);
-  const temp = lessons.find(({ id }) => parseInt(id) === lessonId);
-  const [lang, setLang] = useState(temp.DefaultLanguage);
+  console.log("def lang", defaultLang);
   
-  const [lesson, setLesson] = useState(lessons.find(({ id, Language }) => parseInt(id) === lessonId && Language === lang));
+  const [lesson, setLesson] = useState(lessons.find(({ id, Language }) => parseInt(id) === lessonId && Language === defaultLang));
   //console.log("lang", lang);
   const [sections, setSections] = useState(lesson.Section);
   const [locale, setLocale] = useState(lesson.locale);
@@ -52,7 +50,7 @@ export default function LessonPlan({ location, lessons }) {
     return <Section key={i} index={numberedElements} section={section} />;
   };
   
-  const selectLocale = (localeSelected) => setLang(localeSelected);
+  const selectLocale = (localeSelected) => setLocale(localeSelected);
 
   return (
     <Fragment>
