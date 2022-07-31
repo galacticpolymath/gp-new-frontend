@@ -16,6 +16,7 @@ import useScrollHandler from './NavigationDots/useScrollHandler'
 import { isConstructorDeclaration } from "typescript";
 
 export default function LessonPlan({ location, lessons }) {
+
   useScrollHandler()
 
   useEffect(() => {
@@ -26,11 +27,13 @@ export default function LessonPlan({ location, lessons }) {
   let { lessonId } = useParams(); // defined and App.js. taken from URL suffix
   lessonId = parseInt(lessonId);
 
-  const [loc, setLocale] = useState(lessons.find(({ id }) => parseInt(id) === lessonId).DefaultLocale);
-  const availLocales = lessons.filter((l) => parseInt(l.id) === lessonId).map((l)=>l.locale);
-
-  const [lesson, setLesson] = useState(lessons.find(({ id, locale }) => parseInt(id) === lessonId && locale === loc))
-  const [sections, setSections] = useState(lesson.Section)
+  useEffect(()=>{
+    console.log(lessons);
+    const [loc, setLocale] = useState(lessons.find(({ id }) => parseInt(id) === lessonId).DefaultLocale);
+    const availLocales = lessons.filter((l) => parseInt(l.id) === lessonId).map((l)=>l.locale);
+    const [lesson, setLesson] = useState(lessons.find(({ id, locale }) => parseInt(id) === lessonId && locale === loc));
+    const [sections, setSections] = useState(lesson.Section)
+  }, [lessons])
 
   console.log("Title", lesson.Title, "locale", loc, availLocales);
 
@@ -40,12 +43,6 @@ export default function LessonPlan({ location, lessons }) {
     setSections(lesson.Section);
   }, [loc]);
 
-  //useEffect(() => {
-  //setLesson(lessons.find(({ id, locale }) => parseInt(id) === lessonId && locale === defaultLocale));
-  //setSections(lesson.Section);
-  //setLocale(lesson.locale);
-  //}, [])
-  
   let numberedElements = 0;
 
   // count the sections listed in numbered_sections. to send as index. 
@@ -60,7 +57,7 @@ export default function LessonPlan({ location, lessons }) {
   };
   
   const selectLocale = (localeSelected) => setLocale(localeSelected);
-
+  
   return (
     <Fragment>
       {renderMetaTags({
@@ -77,11 +74,11 @@ export default function LessonPlan({ location, lessons }) {
       />
       <div className="LessonPlan" id="top">
 
-        <Header location={location} selectedLocale={loc} selectLocale={selectLocale} availLocales={availLocales} {...lesson} />       
+        <Header location={location} selectedLocale={loc} selectLocale={selectLocale} availLocales={availLocales} {...lesson} />
 
         {sections &&
           Object.keys(sections).map((sectionkey, i) => renderSection(sections[sectionkey], i)
-          )}
+    )}
       </div>
       
       <NavigationDots sections={sections} />

@@ -26,8 +26,8 @@ const getLatestSubRelease = (sections) => {
 };
 
                  // <locale>: <reactflagselect country code>
-const countryTable= {"EN-US": "US", "EN-GB": "GB", "EN-NZ": "NZ", "FR": "FR", "DE": "DE", "IT": "IT", "FR-AW": "AW"}
-const locTable= {"US": "EN-US", "GB": "EN-GB", "NZ": "EN-NZ", "FR": "FR", "DE": "DE", "IT": "IT", "AW": "FR-AW"}
+const countryTable= {"en-US": "US", "en-GB": "GB", "en-NZ": "NZ", "fr": "FR", "de": "DE", "it": "IT", "fr-AW": "AW"}
+const locTable= {"US": "en-US", "GB": "en-GB", "NZ": "en-NZ", "FR": "fr", "DE": "de", "IT": "it", "AW": "fr-AW"}
 
 const Header = ({
   availLocales, 
@@ -53,9 +53,8 @@ const Header = ({
   let labels = {}
 
   availLocales.forEach((loc) => {
-    const upperloc = loc.toUpperCase()
-    countries.push(countryTable[upperloc]);
-    labels[countryTable[upperloc]] = upperloc;
+    countries.push(countryTable[loc]);
+    labels[countryTable[loc]] = loc;
   })
 
   return (
@@ -70,12 +69,14 @@ const Header = ({
           {/* Dots nav text; not displayed on page */}
           <span style={{ display: "none" }}>Title</span>
         </div>
+        {
           <ReactFlagsSelect selected={selectedLocale} countries={countries} customLabels={labels} showSelectedLabel={false}
           onSelect={countryCode => {
             selectLocale(locTable[countryCode])
             //console.log(countryTable[loc])
           }} placeholder={selectedLocale} alignOptionsToRight={false} fullWidth={false}
           />
+          }
           {lastSubRelease && (
             <AnchorLink href="#version_notes" offset="125px">
               <p>

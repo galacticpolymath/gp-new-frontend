@@ -28,17 +28,17 @@ var hist = createBrowserHistory();
 
 export default function App () {
 
-  /*
   const [lessons, setLessons] = useState([])
-
+  
   useEffect(() => {
     fetch("https://catalog.galacticpolymath.com/index.json")
       .then(res => res.json())
-      .then(result => setLessons(result))
+      .then(res => {setLessons(res)
+        console.log("App.js fetch: ", res)})
+      .catch(error => console.error(error));
   }, []);
-  */
-
-  const lessons = require('./current_index.json');
+  
+  //const lessons = require('./current_index.json');
 
   return(
     <Router history={hist}>
