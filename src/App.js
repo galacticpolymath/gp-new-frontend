@@ -37,8 +37,6 @@ export default function App () {
         console.log("App.js fetch: ", res)})
       .catch(error => console.error(error));
   }, []);
-  
-  //const lessons = require('./current_index.json');
 
   return(
     <Router history={hist}>
@@ -64,8 +62,15 @@ export default function App () {
 
         {/* Lessson Directory */}
 
-        <Route exact path="/lessons" render={() => <Lessons lessons={lessons} />} />
-        <Route path="/lessons/:lessonId" render={({location}) => <LessonPlanDetailsPage location={location} lessons={lessons} />} /> {/* location is the site address https://v5.reactrouter.com/web/api/location*/}
+        <Route exact path="/lessons" render={() => {
+        if (lessons.length > 0) return <Lessons lessons={lessons} />
+        else return <h1>Loading...</h1>
+        }} />
+        <Route path="/lessons/:lessonId" render={({location}) => {
+        if (lessons.length > 0) return <LessonPlanDetailsPage location={location} lessons={lessons} /> 
+        else return <h1>Loading...</h1> 
+        }} />
+        {/* location is the site address https://v5.reactrouter.com/web/api/location*/}
 
         {/* JobViz */}
         <Route

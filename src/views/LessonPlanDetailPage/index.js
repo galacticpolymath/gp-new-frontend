@@ -17,6 +17,14 @@ import { isConstructorDeclaration } from "typescript";
 
 export default function LessonPlan({ location, lessons }) {
 
+  let { lessonId } = useParams(); // defined and App.js. taken from URL suffix
+  lessonId = parseInt(lessonId);
+
+  const temp = lessons.find(({id}) => parseInt(id) === lessonId);
+  const [loc, setLocale] = useState(temp.DefaultLocale);
+  const [lesson, setLesson] = useState(lessons.find(({ id, locale }) => parseInt(id) === lessonId && locale === loc))
+  const availLocales = lessons.filter((l) => parseInt(l.id) === lessonId).map((l)=>l.locale);
+
   useScrollHandler()
 
   useEffect(() => {
@@ -24,24 +32,11 @@ export default function LessonPlan({ location, lessons }) {
     document.body.scrollTop = 0;
   });
 
-  let { lessonId } = useParams(); // defined and App.js. taken from URL suffix
-  lessonId = parseInt(lessonId);
-
-  useEffect(()=>{
-    console.log(lessons);
-    const [loc, setLocale] = useState(lessons.find(({ id }) => parseInt(id) === lessonId).DefaultLocale);
-    const availLocales = lessons.filter((l) => parseInt(l.id) === lessonId).map((l)=>l.locale);
-    const [lesson, setLesson] = useState(lessons.find(({ id, locale }) => parseInt(id) === lessonId && locale === loc));
-    const [sections, setSections] = useState(lesson.Section)
-  }, [lessons])
-
-  console.log("Title", lesson.Title, "locale", loc, availLocales);
-
   useEffect(() => {
-    console.log("Locale change", loc);
+    if (loc) {console.log("Locale change", loc);
     setLesson(lessons.find(({ id, locale }) => parseInt(id) === lessonId && locale === loc));
-    setSections(lesson.Section);
-  }, [loc]);
+    //if (lesson) console.log("Lesson", lesson, "locale", loc, "avail", availLocales);
+  }}, [loc]);
 
   let numberedElements = 0;
 
@@ -76,12 +71,12 @@ export default function LessonPlan({ location, lessons }) {
 
         <Header location={location} selectedLocale={loc} selectLocale={selectLocale} availLocales={availLocales} {...lesson} />
 
-        {sections &&
-          Object.keys(sections).map((sectionkey, i) => renderSection(sections[sectionkey], i)
+        {lesson.Section &&
+          Object.keys(lesson.Section).map((sectionkey, i) => renderSection(lesson.Section[sectionkey], i)
     )}
       </div>
       
-      <NavigationDots sections={sections} />
+      <NavigationDots sections={lesson.Section} />
     </Fragment>
   );
 }
