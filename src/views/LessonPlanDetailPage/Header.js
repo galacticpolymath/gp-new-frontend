@@ -26,8 +26,8 @@ const getLatestSubRelease = (sections) => {
 };
 
                  // <locale>: <reactflagselect country code>
-const countryTable= {"en-US": "US", "en-GB": "GB", "en-NZ": "NZ", "fr": "FR", "de": "DE", "it": "IT", "fr-AW": "AW"}
-const locTable= {"US": "en-US", "GB": "en-GB", "NZ": "en-NZ", "FR": "fr", "DE": "de", "IT": "it", "AW": "fr-AW"}
+const locToCountry= {"en-US": "US", "en-GB": "GB", "en-NZ": "NZ", "fr": "FR", "de": "DE", "it": "IT", "fr-AW": "AW"}
+const countryToLoc= {"US": "en-US", "GB": "en-GB", "NZ": "en-NZ", "FR": "fr", "DE": "de", "IT": "it", "AW": "fr-AW"}
 
 const Header = ({
   availLocales, 
@@ -53,8 +53,8 @@ const Header = ({
   let labels = {}
 
   availLocales.forEach((loc) => {
-    countries.push(countryTable[loc]);
-    labels[countryTable[loc]] = loc;
+    countries.push(locToCountry[loc]);
+    labels[locToCountry[loc]] = loc;
   })
 
   return (
@@ -69,14 +69,7 @@ const Header = ({
           {/* Dots nav text; not displayed on page */}
           <span style={{ display: "none" }}>Title</span>
         </div>
-        {
-          <ReactFlagsSelect selected={selectedLocale} countries={countries} customLabels={labels} showSelectedLabel={false}
-          onSelect={countryCode => {
-            selectLocale(locTable[countryCode])
-            //console.log(countryTable[loc])
-          }} placeholder={selectedLocale} alignOptionsToRight={false} fullWidth={false}
-          />
-          }
+        <div style={{display: "flex", justifyContent: "space-between"}}>
           {lastSubRelease && (
             <AnchorLink href="#version_notes" offset="125px">
               <p>
@@ -87,6 +80,12 @@ const Header = ({
               </p>
             </AnchorLink>
           )}
+          <ReactFlagsSelect selected={selectedLocale} countries={countries} customLabels={labels} showSelectedLabel={false}
+          onSelect={countryCode => {
+            selectLocale(countryToLoc[countryCode])
+          }} placeholder={"Current locale: " + selectedLocale} alignOptionsToRight={true} fullWidth={false}
+          />
+        </div>
         <h2>{Title}</h2>
         <h4>{Subtitle}</h4>
 
