@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -21,11 +21,12 @@ const useStyles = makeStyles(blogPostsPageStyle);
 
 const LessonCards = ({ lessons }) => {
   const classes = useStyles();
+
   return (
     <div className={classes.container} style={{ padding: "40px 0" }}>
       <GridContainer className={classes.matrix}>
-        {lessons.map(({ id, CoverImage, Title, Subtitle, Section }) => (
-          <GridItem key={id} xs={12} sm={6} md={6}>
+        {lessons.map(({ id, CoverImage, Title, Subtitle, Section }, index) => (
+          <GridItem key={index} xs={12} sm={6} md={6}>
             <Link to={"/lessons/" + id} className={classes.link}>
               <Box className={classNames(classes.card,classes.lessonCard)} boxShadow={4}>
                 <Image {...CoverImage} />

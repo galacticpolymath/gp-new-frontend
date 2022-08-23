@@ -10,6 +10,7 @@ import Image from "../../components/StrapiImage";
 import RichText from "../../components/RichText";
 //import { SECTIONS } from "./constants";
 import ShareTools from "./ShareTools";
+import ReactFlagsSelect from "react-flags-select";
 
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
 const useStyles = makeStyles(lessonPlanStyle);
@@ -24,7 +25,14 @@ const getLatestSubRelease = (sections) => {
   return lastSubRelease;
 };
 
+                 // <locale>: <reactflagselect country code>
+const locToCountry= {"en-US": "US", "en-GB": "GB", "en-NZ": "NZ", "fr": "FR", "de": "DE", "it": "IT", "fr-AW": "AW"}
+const countryToLoc= {"US": "en-US", "GB": "en-GB", "NZ": "en-NZ", "FR": "fr", "DE": "de", "IT": "it", "AW": "fr-AW"}
+
 const Header = ({
+  availLocales, 
+  selectedLocale,
+  selectLocale,
   location,
   Title,
   Subtitle,
@@ -40,6 +48,14 @@ const Header = ({
   if (Array.isArray(SponsorImage.url)){
     SponsorImage.url = SponsorImage.url[0]
   }
+  
+  let countries = []
+  let labels = {}
+
+  availLocales.forEach((loc) => {
+    countries.push(locToCountry[loc]);
+    labels[locToCountry[loc]] = loc;
+  })
 
   return (
     <div className="Header">
@@ -53,16 +69,23 @@ const Header = ({
           {/* Dots nav text; not displayed on page */}
           <span style={{ display: "none" }}>Title</span>
         </div>
-        {lastSubRelease && (
-          <AnchorLink href="#version_notes" offset="125px">
-            <p>
-              Version {lastSubRelease.version} (Updated{" "}
-              {moment(new Date(lastSubRelease.date))
-                .format("MMM D, yyyy")}
-              )
-            </p>
-          </AnchorLink>
-        )}
+        <div style={{display: "flex", justifyContent: "space-between"}}>
+          {lastSubRelease && (
+            <AnchorLink href="#version_notes" offset="125px">
+              <p>
+                Version {lastSubRelease.version} (Updated{" "}
+                {moment(new Date(lastSubRelease.date))
+                  .format("MMM D, yyyy")}
+                )
+              </p>
+            </AnchorLink>
+          )}
+          <ReactFlagsSelect selected={selectedLocale} countries={countries} customLabels={labels} showSelectedLabel={false}
+          onSelect={countryCode => {
+            selectLocale(countryToLoc[countryCode])
+          }} placeholder={"Current locale: " + selectedLocale} alignOptionsToRight={true} fullWidth={false}
+          />
+        </div>
         <h2>{Title}</h2>
         <h4>{Subtitle}</h4>
 

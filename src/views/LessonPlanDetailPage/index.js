@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { renderMetaTags } from "utils/meta";
 
@@ -13,8 +13,18 @@ import "./style.scss";
 
 import NavigationDots from "./NavigationDots";
 import useScrollHandler from './NavigationDots/useScrollHandler'
+import { isConstructorDeclaration } from "typescript";
 
 export default function LessonPlan({ location, lessons }) {
+
+  let { lessonId } = useParams(); // defined and App.js. taken from URL suffix
+  lessonId = parseInt(lessonId);
+
+  const temp = lessons.find(({id}) => parseInt(id) === lessonId);
+  const [loc, setLocale] = useState(temp.DefaultLocale);
+  const [lesson, setLesson] = useState(lessons.find(({ id, locale }) => parseInt(id) === lessonId && locale === loc))
+  const availLocales = lessons.filter((l) => parseInt(l.id) === lessonId).map((l)=>l.locale);
+
   useScrollHandler()
 
   useEffect(() => {
@@ -22,12 +32,11 @@ export default function LessonPlan({ location, lessons }) {
     document.body.scrollTop = 0;
   });
 
-  const { lessonId } = useParams();
-
-  if (!lessons) return null;
-  const lesson = lessons.find(({ id }) => id.toString() === lessonId.toString()) // object of objs
-  if (!lesson) return null;
-  const sections = lesson.Section;
+  useEffect(() => {
+    if (loc) {console.log("Locale change", loc);
+    setLesson(lessons.find(({ id, locale }) => parseInt(id) === lessonId && locale === loc));
+    //if (lesson) console.log("Lesson", lesson, "locale", loc, "avail", availLocales);
+  }}, [loc]);
 
   let numberedElements = 0;
 
@@ -38,18 +47,19 @@ export default function LessonPlan({ location, lessons }) {
     if (NUMBERED_SECTIONS.indexOf(section.__component) !== -1) {
       numberedElements++;
     }
-    // console.log(numberedElements, section);
 
     return <Section key={i} index={numberedElements} section={section} />;
   };
-
+  
+  const selectLocale = (localeSelected) => setLocale(localeSelected);
+  
   return (
     <Fragment>
       {renderMetaTags({
         title: lesson.Title,
         description: lesson.Subtitle,
         image: lesson.CoverImage.url,
-        url: `https://galacticpolymath.com/lessons/${lessonId}`
+        url: `https://localhost:3000/lessons/${lessonId}`
       })}
 
       <SiteHeader
@@ -59,13 +69,13 @@ export default function LessonPlan({ location, lessons }) {
       />
       <div className="LessonPlan" id="top">
 
-        <Header location={location} {...lesson} />
+        <Header location={location} selectedLocale={loc} selectLocale={selectLocale} availLocales={availLocales} {...lesson} />
 
-        {sections &&
-          Object.keys(sections).map((sectionkey, i) => renderSection(sections[sectionkey], i)
-          )}
+        {lesson.Section &&
+          Object.keys(lesson.Section).map((sectionkey, i) => renderSection(lesson.Section[sectionkey], i)
+    )}
       </div>
-
+      
       <NavigationDots sections={lesson.Section} />
     </Fragment>
   );

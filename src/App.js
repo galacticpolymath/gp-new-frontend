@@ -29,11 +29,13 @@ var hist = createBrowserHistory();
 export default function App () {
 
   const [lessons, setLessons] = useState([])
-
+  
   useEffect(() => {
     fetch("https://catalog.galacticpolymath.com/index.json")
       .then(res => res.json())
-      .then(result => setLessons(result))
+      .then(res => {setLessons(res)
+        console.log("App.js fetch: ", res)})
+      .catch(error => console.error(error));
   }, []);
 
   return(
@@ -60,8 +62,15 @@ export default function App () {
 
         {/* Lessson Directory */}
 
-        <Route exact path="/lessons" render={() => <Lessons lessons={lessons} />} />
-        <Route path="/lessons/:lessonId" render={({location}) => <LessonPlanDetailsPage location={location} lessons={lessons} />} />
+        <Route exact path="/lessons" render={() => {
+        if (lessons.length > 0) return <Lessons lessons={lessons} />
+        else return <h1>Loading...</h1>
+        }} />
+        <Route path="/lessons/:lessonId" render={({location}) => {
+        if (lessons.length > 0) return <LessonPlanDetailsPage location={location} lessons={lessons} /> 
+        else return <h1>Loading...</h1> 
+        }} />
+        {/* location is the site address https://v5.reactrouter.com/web/api/location*/}
 
         {/* JobViz */}
         <Route

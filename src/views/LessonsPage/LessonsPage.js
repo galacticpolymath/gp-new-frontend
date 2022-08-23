@@ -33,6 +33,8 @@ export default function LessonsPage({ lessons }) {
     return released<=today
   }
 
+  const publishedLessons = lessons.filter(({PublicationStatus,ReleaseDate})=> PublicationStatus==="Live" && filterPublished(ReleaseDate))
+
   return (
     <div>
       {renderMetaTags({
@@ -106,7 +108,7 @@ export default function LessonsPage({ lessons }) {
             title=""
           />
 
-          {<LessonCards lessons={lessons.filter(({PublicationStatus,ReleaseDate})=> PublicationStatus==="Live" && filterPublished(ReleaseDate)) }/>}
+          {<LessonCards lessons={publishedLessons}/>}
         </div>
       </div>
     </div>
