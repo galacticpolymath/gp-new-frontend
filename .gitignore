@@ -24,3 +24,4 @@ yarn-debug.log*
 yarn-error.log*
 
 # src/components/shared/constants.js
+.frontmatter/content/mediaDb.json

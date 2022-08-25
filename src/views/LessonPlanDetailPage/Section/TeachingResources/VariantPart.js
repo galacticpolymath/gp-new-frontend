@@ -10,6 +10,13 @@ import ResourceGroup from "./ResourceGroup";
 
 const VariantPart = ({ part, title, preface, itemList = [], gradePrefix }) => {
   const [expanded, expand] = useState(false);
+  let partString; 
+  if(isNaN(part)) {
+    partString=title
+  } else {
+    partString = "Part " + part + ": " + title
+  };
+
   return (
     <ExpansionPanel
       className="VariantPart ExpansionPanel"
@@ -22,7 +29,7 @@ const VariantPart = ({ part, title, preface, itemList = [], gradePrefix }) => {
       >
         <span>{gradePrefix}</span>
         <strong>
-          Part {part}: {title}
+          {partString}
         </strong>
       </ExpansionPanelSummary>
       <ExpansionPanelDetails className="ExpansionPanelDetails">
