@@ -83,7 +83,7 @@ const Header = ({
           <ReactFlagsSelect selected={selectedLocale} countries={countries} customLabels={labels} showSelectedLabel={false}
           onSelect={countryCode => {
             selectLocale(countryToLoc[countryCode])
-          }} placeholder={"Current locale: " + selectedLocale} alignOptionsToRight={true} fullWidth={false}
+          }} placeholder={"Language: " + selectedLocale} alignOptionsToRight={true} fullWidth={false}
           />
         </div>
         <h2>{Title}</h2>
