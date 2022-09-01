@@ -43,7 +43,7 @@ const LessonCards = ({ lessons }) => {
         ))}
         {/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/}
         {/*Manual coming soon tile*/}
-        <GridItem xs={12} sm={6} md={6} >
+        {/* <GridItem xs={12} sm={6} md={6} >
           <div className= {classes.addMargin}>
             <Box className={classes.lessonCard} boxShadow={4}>
               <div style={{
@@ -69,7 +69,7 @@ const LessonCards = ({ lessons }) => {
               />
               <CardBody className={classes.noLeftPad}>
                 <h4>
-                  {/*<Link to={"/lessons/" + id}>{Title}</Link>*/}
+                  
                   Colourful Solutions
                 </h4>
                 <p>Chemical Engineering Dyes to Brighten Lives</p>
@@ -97,7 +97,7 @@ const LessonCards = ({ lessons }) => {
                 </GridItem>
               </GridContainer>
           </div>
-        </GridItem>
+        </GridItem> */}
 
       </GridContainer>
     </div>
