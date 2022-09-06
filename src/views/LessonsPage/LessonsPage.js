@@ -33,8 +33,17 @@ export default function LessonsPage({ lessons }) {
     return released<=today
   }
 
-  const publishedLessons = lessons.filter(({PublicationStatus,ReleaseDate})=> PublicationStatus==="Live" && filterPublished(ReleaseDate))
+  const uniqueIDs = []
 
+  const publishedLessons = lessons.filter(({ PublicationStatus, ReleaseDate, id }) => {
+    if (!uniqueIDs.includes(id) 
+      && PublicationStatus==="Live" && filterPublished(ReleaseDate)) {
+        uniqueIDs.push(id);
+        return true;
+      }
+    return false;
+  });
+  
   return (
     <div>
       {renderMetaTags({
