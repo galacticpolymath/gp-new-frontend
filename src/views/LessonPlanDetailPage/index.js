@@ -51,8 +51,6 @@ export default function LessonPlan({ location, lessons }) {
     return <Section key={i} index={numberedElements} section={section} />;
   };
   
-  const selectLocale = (localeSelected) => setLocale(localeSelected);
-  
   return (
     <Fragment>
       {renderMetaTags({
@@ -69,7 +67,7 @@ export default function LessonPlan({ location, lessons }) {
       />
       <div className="LessonPlan" id="top">
 
-        <Header location={location} selectedLocale={loc} selectLocale={selectLocale} availLocales={availLocales} {...lesson} />
+        <Header location={location} selectedLocale={loc} setLocale={setLocale} availLocales={availLocales} {...lesson} />
 
         {lesson.Section &&
           Object.keys(lesson.Section).map((sectionkey, i) => renderSection(lesson.Section[sectionkey], i)

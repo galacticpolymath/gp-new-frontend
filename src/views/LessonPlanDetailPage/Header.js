@@ -10,7 +10,7 @@ import Image from "../../components/StrapiImage";
 import RichText from "../../components/RichText";
 //import { SECTIONS } from "./constants";
 import ShareTools from "./ShareTools";
-import ReactFlagsSelect from "react-flags-select";
+import LocDropdown from "./LocDropdown";
 
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
 const useStyles = makeStyles(lessonPlanStyle);
@@ -32,7 +32,7 @@ const countryToLoc= {"US": "en-US", "GB": "en-GB", "NZ": "en-NZ", "FR": "fr", "D
 const Header = ({
   availLocales, 
   selectedLocale,
-  selectLocale,
+  setLocale,
   location,
   Title,
   Subtitle,
@@ -49,14 +49,6 @@ const Header = ({
     SponsorImage.url = SponsorImage.url[0]
   }
   
-  let countries = []
-  let labels = {}
-
-  availLocales.forEach((loc) => {
-    countries.push(locToCountry[loc]);
-    labels[locToCountry[loc]] = loc;
-  })
-
   return (
     <div className="Header">
       <div className={classes.container}>
@@ -80,11 +72,7 @@ const Header = ({
               </p>
             </AnchorLink>
           )}
-          <ReactFlagsSelect selected={selectedLocale} countries={countries} customLabels={labels} showSelectedLabel={false}
-          onSelect={countryCode => {
-            selectLocale(countryToLoc[countryCode])
-          }} placeholder={"Language: " + selectedLocale} alignOptionsToRight={true} fullWidth={false}
-          />
+          <LocDropdown availLocales={availLocales} selectedLocale={selectedLocale} setLocale={setLocale} />
         </div>
         <h2>{Title}</h2>
         <h4>{Subtitle}</h4>
