@@ -1,0 +1,30 @@
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltiptext {
+  width: 100px;
+  background-color: #f0f4ff;
+  color: #3c4858;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  border-style: solid;
+  border-width: 1px;
+  top: 100%;
+  left: 50%;
+  margin-left: -50px;
+  position: absolute;
+  z-index: 1;
+  animation: hideAnimation 0s ease-in 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes hideAnimation {
+  to {
+    visibility: hidden;
+    width: 0;
+    height: 0;
+  }
+}

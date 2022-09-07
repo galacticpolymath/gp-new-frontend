@@ -1,5 +1,6 @@
 import React from "react";
 import ReactFlagsSelect from "react-flags-select";
+import './tooltip.css';
 
 export default function LocDropdown ({ selectedLocale, availLocales, setLocale }) {
   // <locale>: <reactflagselect country code>
@@ -7,7 +8,9 @@ export default function LocDropdown ({ selectedLocale, availLocales, setLocale }
 
   let countries = []
   let labels = {}
-  const selectedLanguage = new Intl.DisplayNames(['en'], {type: 'language'}).of(selectedLocale)
+  const selectedLanguage = new Intl.DisplayNames(['en'], {type: 'language'}).of(selectedLocale.substring(0,2));
+  const selectedCountry = new Intl.Locale(selectedLocale).region;
+  const selectedLabel = selectedLanguage + ' (' + selectedCountry + ')';
 
   availLocales.forEach((loc) => {
     const country = new Intl.Locale(loc).region;
@@ -16,18 +19,21 @@ export default function LocDropdown ({ selectedLocale, availLocales, setLocale }
   })
   
   return (countries.length <= 1 ? 
-    <div>Language: {selectedLanguage}</div> : 
-    <ReactFlagsSelect 
-      selected={selectedLocale} 
-      countries={countries} 
-      customLabels= {labels} 
-      showSelectedLabel={false} 
-      placeholder={"Language: " + selectedLanguage} 
-      alignOptionsToRight={true} 
-      fullWidth={false}
-      onSelect={countryCode => {
-        setLocale(countryToLoc[countryCode])
-      }} 
-    />  
+    <div>{selectedLabel}</div> : 
+    <div className='tooltip'>
+      <ReactFlagsSelect 
+        selected={selectedLocale} 
+        countries={countries} 
+        customLabels= {labels} 
+        showSelectedLabel={false} 
+        placeholder={selectedLabel} 
+        alignOptionsToRight={true} 
+        fullWidth={false}
+        onSelect={countryCode => {
+          setLocale(countryToLoc[countryCode])
+        }} 
+      />
+      <span className='tooltiptext'>Click for more locales!</span>  
+    </div>
   );
 };
