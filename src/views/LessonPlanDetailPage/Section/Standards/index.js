@@ -5,8 +5,10 @@ import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import RichText from "components/RichText";
 
 import Subject from "./Subject";
+import LearningObj from "../Overview";
 
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
 
@@ -14,7 +16,7 @@ import "./style.scss";
 
 const useStyles = makeStyles(lessonPlanStyle);
 
-const Standards = ({ Data }) => {
+const Standards = ({ Data, LearningObj }) => {
   const classes = useStyles();
   const [expanded, expand] = useState(false);
 
@@ -29,8 +31,13 @@ const Standards = ({ Data }) => {
           className="ExpansionPanelSummary"
           expandIcon={<ExpandMoreIcon />}
         >
-          <h3>Learning Standards</h3>
+          <h3>Alignment Details</h3>
         </ExpansionPanelSummary>
+        {LearningObj &&<div className={"LearningObj"}>
+        <h3>Learning Objectives</h3>
+        <RichText content={LearningObj}/>
+        </div>
+        }
         <div className={"clickInvitation"}>
           Note:&nbsp;
             <span className={"clickOn"}>
@@ -41,10 +48,16 @@ const Standards = ({ Data }) => {
     </div>
   <ExpansionPanelDetails className="ExpansionPanelDetails">
     <h3>Target Standard(s)</h3>
+    <div className="StandardsExpl">
+      Skills and concepts directly taught or reinforced by this lesson
+      </div>
     {Data.filter(({ target }) => target).map((subject, i) => (
       <Subject initiallyExpanded key={"target-" + i} {...subject} />
     ))}
     <h3>Connected Standard(s)</h3>
+    <div className="StandardsExpl">
+      Skills and concepts reviewed or hinted at in this lesson (for building upon)
+      </div>
     {Data.filter(({ target }) => !target).map((subject, i) => (
       <Subject key={"connected-" + i} {...subject} />
     ))}
@@ -56,6 +69,7 @@ const Standards = ({ Data }) => {
 
 Standards.propTypes = {
 Data: PropTypes.array,
+LearningObj: PropTypes.string
 };
 
 export default Standards;
