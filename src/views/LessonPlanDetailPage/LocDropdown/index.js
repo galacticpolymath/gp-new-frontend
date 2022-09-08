@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import ReactFlagsSelect from "react-flags-select";
+import { useParams } from "react-router-dom";
 import './tooltip.css';
 
-export default function LocDropdown ({ selectedLocale, availLocales, setLocale }) {
+export default function LocDropdown ({ selectedLocale, availLocales, setLoc }) {
   // <locale>: <reactflagselect country code>
   const countryToLoc= {"US": "en-US", "GB": "en-GB", "NZ": "en-NZ", "FR": "fr", "DE": "de", "IT": "it", "AW": "fr-AW"}
 
+  let { lessonId } = useParams(); // defined and App.js. taken from URL suffix
   let countries = []
   let labels = {}
   const selectedLanguage = new Intl.DisplayNames(['en'], {type: 'language'}).of(selectedLocale.substring(0,2));
@@ -32,7 +34,8 @@ export default function LocDropdown ({ selectedLocale, availLocales, setLocale }
         alignOptionsToRight={true} 
         fullWidth={false}
         onSelect={countryCode => {
-          setLocale(countryToLoc[countryCode])
+          const loc = countryToLoc[countryCode];
+          setLoc(loc);
         }} 
       />
       { tooltip ? 

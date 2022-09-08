@@ -16,12 +16,13 @@
 */
 import React from "react";
 import {render, hydrate} from "react-dom";
+import { CookiesProvider } from 'react-cookie';
 
 import App from "./App";
 
 const rootElement = document.getElementById("root");
 if (rootElement.hasChildNodes()) {
-  hydrate(<App />, rootElement);
+  hydrate(<CookiesProvider><App /></CookiesProvider>, rootElement);
 } else {
-  render(<App />, rootElement);
+  render(<CookiesProvider><App /></CookiesProvider>, rootElement);
 }

@@ -14,16 +14,33 @@ import "./style.scss";
 import NavigationDots from "./NavigationDots";
 import useScrollHandler from './NavigationDots/useScrollHandler'
 import { isConstructorDeclaration } from "typescript";
+import { useCookies } from 'react-cookie';
 
 export default function LessonPlan({ location, lessons }) {
 
   let { lessonId } = useParams(); // defined and App.js. taken from URL suffix
   lessonId = parseInt(lessonId);
 
+  const [cookies, setCookie] = useCookies();
+  //const [locale, setLocale] = useState(cookies[lessonId]);
+
+  const setLoc = (loc) => {
+    //setLocale(loc);
+    setCookie(lessonId, loc, { path: '/' });
+  }
+
   const temp = lessons.find(({id}) => parseInt(id) === lessonId);
-  const [loc, setLocale] = useState(temp.DefaultLocale);
-  const [lesson, setLesson] = useState(lessons.find(({ id, locale }) => parseInt(id) === lessonId && locale === loc))
   const availLocales = lessons.filter((l) => parseInt(l.id) === lessonId).map((l)=>l.locale);
+  let defaultLoc = temp.DefaultLocale;
+  if (!(lessonId in cookies)) {
+    setLoc(defaultLoc);
+    console.log(`setting first time cookie and locale: ${defaultLoc}`);
+  } else {
+    defaultLoc = cookies[lessonId];
+  }
+
+  const [lesson, setLesson] = useState(lessons.find(({ id, locale }) => parseInt(id) === lessonId && locale === defaultLoc));
+  
 
   useScrollHandler()
 
@@ -33,10 +50,11 @@ export default function LessonPlan({ location, lessons }) {
   });
 
   useEffect(() => {
-    if (loc) {console.log("Locale change", loc);
-    setLesson(lessons.find(({ id, locale }) => parseInt(id) === lessonId && locale === loc));
-    //if (lesson) console.log("Lesson", lesson, "locale", loc, "avail", availLocales);
-  }}, [loc]);
+    if (lessonId in cookies) {
+      setLesson(lessons.find(({ id, locale }) => parseInt(id) === lessonId && locale === cookies[lessonId]));
+      //if (lesson) console.log("Lesson", lesson, "locale", loc, "avail", availLocales);
+    }
+  }, [cookies[lessonId]]);
 
   let numberedElements = 0;
 
@@ -52,30 +70,32 @@ export default function LessonPlan({ location, lessons }) {
   };
   
   return (
-    <Fragment>
-      {renderMetaTags({
-        title: lesson.Title,
-        description: lesson.Subtitle,
-        image: lesson.CoverImage.url,
-        url: `https://localhost:3000/lessons/${lessonId}`
-      })}
+    lesson ?
+      <Fragment>
+        {renderMetaTags({
+          title: lesson.Title,
+          description: lesson.Subtitle,
+          image: lesson.CoverImage.url,
+          url: `https://localhost:3000/lessons/${lessonId}`
+        })}
 
-      <SiteHeader
-        links={<HeaderLinks dropdownHoverColor="info" />}
-        fixed
-        color="dark"
-      />
-      <div className="LessonPlan" id="top">
+        <SiteHeader
+          links={<HeaderLinks dropdownHoverColor="info" />}
+          fixed
+          color="dark"
+        />
+        <div className="LessonPlan" id="top">
 
-        <Header location={location} selectedLocale={loc} setLocale={setLocale} availLocales={availLocales} {...lesson} />
+          <Header location={location} selectedLocale={defaultLoc} availLocales={availLocales} setLoc={setLoc} {...lesson} />
 
-        {lesson.Section &&
-          Object.keys(lesson.Section).map((sectionkey, i) => renderSection(lesson.Section[sectionkey], i)
-    )}
-      </div>
-      
-      <NavigationDots sections={lesson.Section} />
-    </Fragment>
+          {lesson.Section &&
+            Object.keys(lesson.Section).map((sectionkey, i) => renderSection(lesson.Section[sectionkey], i)
+      )}
+        </div>
+        
+        <NavigationDots sections={lesson.Section} />
+      </Fragment> :
+      <div />
   );
 }
 

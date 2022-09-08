@@ -11,6 +11,7 @@ import RichText from "../../components/RichText";
 //import { SECTIONS } from "./constants";
 import ShareTools from "./ShareTools";
 import LocDropdown from "./LocDropdown";
+import { useCookies } from 'react-cookie';
 
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
 const useStyles = makeStyles(lessonPlanStyle);
@@ -32,7 +33,7 @@ const countryToLoc= {"US": "en-US", "GB": "en-GB", "NZ": "en-NZ", "FR": "fr", "D
 const Header = ({
   availLocales, 
   selectedLocale,
-  setLocale,
+  setLoc,
   location,
   Title,
   Subtitle,
@@ -43,12 +44,13 @@ const Header = ({
 }) => {
   const classes = useStyles();
   const lastSubRelease = getLatestSubRelease(Section);
+  const [cookies, setCookie] = useCookies();
 
   // temporary code until we decide how multiple sponsor images should be displayed
   if (Array.isArray(SponsorImage.url)){
     SponsorImage.url = SponsorImage.url[0]
   }
-  
+    
   return (
     <div className="Header">
       <div className={classes.container}>
@@ -72,7 +74,11 @@ const Header = ({
               </p>
             </AnchorLink>
           )}
-          <LocDropdown availLocales={availLocales} selectedLocale={selectedLocale} setLocale={setLocale} />
+          <LocDropdown 
+            availLocales={availLocales} 
+            selectedLocale={selectedLocale}  
+            setLoc={setLoc}
+          />
         </div>
         <h2>{Title}</h2>
         <h4>{Subtitle}</h4>
