@@ -36,6 +36,7 @@ const LessonCards = ({ lessons }) => {
                   </h4>
                   <p>{Subtitle}</p>
                   <Badge color="primary">{Section.overview.TargetSubject}</Badge>
+                  <Badge color="gray">{Section.overview.GradesOrYears+": "+Section.overview.ForGrades}</Badge>
                 </CardBody>
               </Box>
             </Link>
