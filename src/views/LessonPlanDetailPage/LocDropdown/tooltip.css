@@ -6,12 +6,13 @@
 .tooltiptext {
   width: 120px;
   background-color: #f0f4ff;
+  font-weight: bold;
   color: #3c4858;
   text-align: center;
-  padding: 5px 0;
+  padding: 5px;
   border-radius: 6px;
   border-style: solid;
-  border-width: 1px;
+  border-width: 2px;
   top: 80%;
   left: 50%;
   margin-left: -60px;
