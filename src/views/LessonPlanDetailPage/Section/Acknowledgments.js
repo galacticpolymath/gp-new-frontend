@@ -24,9 +24,11 @@ const Acknowledgments = ({ index, SectionTitle, Data = [] }) => {
               {records.map(({ name, url, title, affiliation, location }) => (
                 <div className="record" key={name}>
                   <h5>
-                    <a href={url} rel="noopener noreferrer" target="_blank">
-                      {name}
-                    </a>
+                    {url ? 
+                      <a href={url} rel="noopener noreferrer" target="_blank">
+                      {name}</a> :
+                      <div />
+                    }
                   </h5>
                   <div>{title}</div>
                   {affiliation && <div>{affiliation}</div>}
