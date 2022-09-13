@@ -9,7 +9,7 @@ import CardBody from "components/Card/CardBody.js";
 import Button from "../../../components/CustomButtons/Button";
 import classNames from "classnames"
 import MailOutlineIcon from "@material-ui/icons/MailOutline";
-import ComingSoon from "assets/img/comingSoon.png"
+import ComingSoon from "assets/img/comingSoon.jpg"
 
 import blogPostsPageStyle from "assets/jss/material-kit-pro-react/views/blogPostsPageStyle.js";
 import Image from "components/StrapiImage";
@@ -36,6 +36,7 @@ const LessonCards = ({ lessons }) => {
                   </h4>
                   <p>{Subtitle}</p>
                   <Badge color="primary">{Section.overview.TargetSubject}</Badge>
+                  <Badge color="gray">{Section.overview.GradesOrYears+": "+Section.overview.ForGrades}</Badge>
                 </CardBody>
               </Box>
             </Link>
@@ -43,14 +44,14 @@ const LessonCards = ({ lessons }) => {
         ))}
         {/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/}
         {/*Manual coming soon tile*/}
-        {/* <GridItem xs={12} sm={6} md={6} >
+        <GridItem xs={12} sm={6} md={6} >
           <div className= {classes.addMargin}>
             <Box className={classes.lessonCard} boxShadow={4}>
               <div style={{
                 zIndex:5,
                 position:"absolute",
                 top:"3%",
-                right:"5%",
+                right:"6%",
                 fontSize: "2rem",
                 verticalAlign:"top",
                 textAlign:"right",
@@ -70,9 +71,10 @@ const LessonCards = ({ lessons }) => {
               <CardBody className={classes.noLeftPad}>
                 <h4>
                   
-                  Colourful Solutions
+                  I Like That!
                 </h4>
-                <p>Chemical Engineering Dyes to Brighten Lives</p>
+                <p>How perception, emotion, and cognition shape our preferences
+</p>
                 <br />
                 <Badge color={"primary"}>Science</Badge>
               </CardBody>
@@ -97,7 +99,7 @@ const LessonCards = ({ lessons }) => {
                 </GridItem>
               </GridContainer>
           </div>
-        </GridItem> */}
+        </GridItem>
 
       </GridContainer>
     </div>

@@ -229,146 +229,8 @@ export default function SectionTeam() {
           </Card>
         </GridItem>
 
-        {/*ELAINE*/}
-        <GridItem md={4} sm={12}>
-          <Card profile plain>
-            <CardAvatar profile plain>
-              <img
-                src={makeCloudinaryUrl(
-                  "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1613059086/Team/E.Perignat_Headshot_1_h4avls.jpg"
-                )}
-                alt="profile-pic"
-                className={classes.img}
-              />
-            </CardAvatar>
-            <CardBody plain>
-              <h4 className={classes.cardTitle}>
-                Elaine Perignat, PhD
-              </h4>
-              <h6 className={classes.textMuted}>
-                Education Specialist
-              </h6>
-              <p className={classes.cardDescription}>
-                A spirited over-thinker with genuine enthusiasm for teaching and learning. Elaine loves to paint,
-                create,
-                build, and play if it means getting her hands dirty. Literally.
-              </p>
-            </CardBody>
-            <CardFooter className={classes.justifyContent}>
-              <Button
-                href="https://scholar.google.com/citations?user=G12SJQoAAAAJ&hl=en&oi=ao"
-                target="_blank"
-                justIcon
-                simple
-                color={"primary"}
-              >
-                <Scholar />
-              </Button>
-              {/*<Button*/}
-              {/*  href=""*/}
-              {/*  target="_blank"*/}
-              {/*  justIcon*/}
-              {/*  simple*/}
-              {/*  color={"primary"}*/}
-              {/*>*/}
-              {/*  <i className="fab fa-linkedin" />*/}
-              {/*</Button>*/}
-              {/*<Button*/}
-              {/*  href=""*/}
-              {/*  target="_blank"*/}
-              {/*  justIcon*/}
-              {/*  simple*/}
-              {/*  color={"primary"}*/}
-              {/*>*/}
-              {/*  <i className="fab fa-twitter" />*/}
-              {/*</Button>*/}
-              {/*<Button*/}
-              {/*  href=""*/}
-              {/*  target="_blank"*/}
-              {/*  justIcon*/}
-              {/*  simple*/}
-              {/*  color={"primary"}*/}
-              {/*>*/}
-              {/*  <i className="fab fa-youtube" />*/}
-              {/*</Button>*/}
-              {/*<Button*/}
-              {/*  href=""*/}
-              {/*  target="_blank"*/}
-              {/*  justIcon*/}
-              {/*  simple*/}
-              {/*  color={"primary"}*/}
-              {/*>*/}
-              {/*  <i className="fab fa-instagram" />*/}
-              {/*</Button>*/}
-            </CardFooter>
-          </Card>
-        </GridItem>
 
-        {/*CARVER*/}
-        <GridItem md={4} sm={12}>
-          <Card profile plain>
-            <CardAvatar profile plain>
-              <img
-                src={makeCloudinaryUrl(
-                  "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1613059065/Team/Carver_Lee_copy_fcxfg7.jpg"
-                )}
-                alt="profile-pic"
-                className={classes.img}
-              />
-            </CardAvatar>
-            <CardBody plain>
-              <h4 className={classes.cardTitle}>
-                Carver Lee, MSc
-              </h4>
-              <h6 className={classes.textMuted}>
-                Graphic Design + Marketing Lead
-              </h6>
-              <p className={classes.cardDescription}>
-                A geologist, sailor, teacher, and designer all rolled into one, Carver believes that learning and
-                creating are always the way forward.
-              </p>
-            </CardBody>
-            <CardFooter className={classes.justifyContent}>
-              <Button
-                href="https://www.csaltdesign.co/"
-                target="_blank"
-                justIcon
-                simple
-                color={"primary"}
-              >
-                <i className="fas fa-globe" />
-              </Button>
-              <Button
-                href="https://www.linkedin.com/in/carverelee/"
-                target="_blank"
-                justIcon
-                simple
-                color={"primary"}
-              >
-                <i className="fab fa-linkedin" />
-              </Button>
-              <Button
-                href="https://twitter.com/basalticcraver"
-                target="_blank"
-                justIcon
-                simple
-                color={"primary"}
-              >
-                <i className="fab fa-twitter" />
-              </Button>
-              <Button
-                href="https://www.instagram.com/carver.carve/"
-                target="_blank"
-                justIcon
-                simple
-                color={"primary"}
-              >
-                <i className="fab fa-instagram" />
-              </Button>
-            </CardFooter>
-          </Card>
-        </GridItem>
-
+        
         {/*Aarati*/}
         <GridItem md={4} sm={12}>
           <Card profile plain>
@@ -580,77 +442,6 @@ export default function SectionTeam() {
           </Card>
         </GridItem>
 
-        {/*Audrey*/}
-        <GridItem md={4} sm={12}>
-          <Card profile plain>
-            <CardAvatar profile plain>
-              <img
-                src={makeCloudinaryUrl(
-                  "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1628345108/Team/audreyserene_headshot_l2v8wg.jpg"
-                )}
-                alt="profile-pic"
-                className={classes.img}
-              />
-            </CardAvatar>
-            <CardBody plain>
-              <h4 className={classes.cardTitle}>Audrey Serene</h4>
-              <h6 className={classes.textMuted}>
-                Animator
-              </h6>
-              <p className={classes.cardDescription}>
-                An animator and experimental filmmaker who loves anything and everything that combines art and technology.
-                Especially when it’s for a good cause.
-              </p>
-            </CardBody>
-            <CardFooter className={classes.justifyContent}>
-              <Button
-                href="https://audreyserene.com"
-                target="_blank"
-                justIcon
-                simple
-                color={"primary"}
-              >
-                <i className="fas fa-globe" />
-              </Button>
-              <Button
-                href="https://www.linkedin.com/in/audreyserene/"
-                target="_blank"
-                justIcon
-                simple
-                color={"primary"}
-              >
-                <i className="fab fa-linkedin" />
-              </Button>
-              {/*<Button*/}
-              {/*  href=""*/}
-              {/*  target="_blank"*/}
-              {/*  justIcon*/}
-              {/*  simple*/}
-              {/*  color={"primary"}*/}
-              {/*>*/}
-              {/*  <i className="fab fa-twitter" />*/}
-              {/*</Button>*/}
-              {/*<Button*/}
-              {/*  href=""*/}
-              {/*  target="_blank"*/}
-              {/*  justIcon*/}
-              {/*  simple*/}
-              {/*  color={"primary"}*/}
-              {/*>*/}
-              {/*  <i className="fab fa-youtube" />*/}
-              {/*</Button>*/}
-              <Button
-                href="https://www.instagram.com/audrey.animation/"
-                target="_blank"
-                justIcon
-                simple
-                color={"primary"}
-              >
-                <i className="fab fa-instagram" />
-              </Button>
-            </CardFooter>
-          </Card>
-        </GridItem>
 
 
       </GridContainer>
@@ -988,6 +779,151 @@ export default function SectionTeam() {
           collapses={[
 
             /*Add Retired folks here*/
+            {
+          title:"Elaine Perignat",
+          content:
+        <GridItem md={4} sm={12}>
+        <Card profile plain>
+          <CardAvatar profile plain>
+            <img
+              src={makeCloudinaryUrl(
+                "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1613059086/Team/E.Perignat_Headshot_1_h4avls.jpg"
+              )}
+              alt="profile-pic"
+              className={classes.img}
+            />
+          </CardAvatar>
+          <CardBody plain>
+            <h4 className={classes.cardTitle}>
+              Elaine Perignat, PhD
+            </h4>
+            <h6 className={classes.textMuted}>
+              Education Specialist
+            </h6>
+            <p className={classes.cardDescription}>
+              A spirited over-thinker with genuine enthusiasm for teaching and learning. Elaine loves to paint,
+              create,
+              build, and play if it means getting her hands dirty. Literally.
+            </p>
+          </CardBody>
+          <CardFooter className={classes.justifyContent}>
+            <Button
+              href="https://scholar.google.com/citations?user=G12SJQoAAAAJ&hl=en&oi=ao"
+              target="_blank"
+              justIcon
+              simple
+              color={"primary"}
+            >
+              <Scholar />
+            </Button>
+            {/*<Button*/}
+            {/*  href=""*/}
+            {/*  target="_blank"*/}
+            {/*  justIcon*/}
+            {/*  simple*/}
+            {/*  color={"primary"}*/}
+            {/*>*/}
+            {/*  <i className="fab fa-linkedin" />*/}
+            {/*</Button>*/}
+            {/*<Button*/}
+            {/*  href=""*/}
+            {/*  target="_blank"*/}
+            {/*  justIcon*/}
+            {/*  simple*/}
+            {/*  color={"primary"}*/}
+            {/*>*/}
+            {/*  <i className="fab fa-twitter" />*/}
+            {/*</Button>*/}
+            {/*<Button*/}
+            {/*  href=""*/}
+            {/*  target="_blank"*/}
+            {/*  justIcon*/}
+            {/*  simple*/}
+            {/*  color={"primary"}*/}
+            {/*>*/}
+            {/*  <i className="fab fa-youtube" />*/}
+            {/*</Button>*/}
+            {/*<Button*/}
+            {/*  href=""*/}
+            {/*  target="_blank"*/}
+            {/*  justIcon*/}
+            {/*  simple*/}
+            {/*  color={"primary"}*/}
+            {/*>*/}
+            {/*  <i className="fab fa-instagram" />*/}
+            {/*</Button>*/}
+          </CardFooter>
+        </Card>
+      </GridItem>
+        },
+          {
+          title: "Carver Lee",
+          content: 
+        <GridItem md={4} sm={12}>
+        <Card profile plain>
+          <CardAvatar profile plain>
+            <img
+              src={makeCloudinaryUrl(
+                "q_auto:best,f_auto,c_fill,g_face,w_300,h_300/v1613059065/Team/Carver_Lee_copy_fcxfg7.jpg"
+              )}
+              alt="profile-pic"
+              className={classes.img}
+            />
+          </CardAvatar>
+          <CardBody plain>
+            <h4 className={classes.cardTitle}>
+              Carver Lee, MSc
+            </h4>
+            <h6 className={classes.textMuted}>
+              Graphic Design + Marketing Lead
+            </h6>
+            <p className={classes.cardDescription}>
+              A geologist, sailor, teacher, and designer all rolled into one, Carver believes that learning and
+              creating are always the way forward.
+            </p>
+          </CardBody>
+          <CardFooter className={classes.justifyContent}>
+            <Button
+              href="https://www.csaltdesign.co/"
+              target="_blank"
+              justIcon
+              simple
+              color={"primary"}
+            >
+              <i className="fas fa-globe" />
+            </Button>
+            <Button
+              href="https://www.linkedin.com/in/carverelee/"
+              target="_blank"
+              justIcon
+              simple
+              color={"primary"}
+            >
+              <i className="fab fa-linkedin" />
+            </Button>
+            <Button
+              href="https://twitter.com/basalticcraver"
+              target="_blank"
+              justIcon
+              simple
+              color={"primary"}
+            >
+              <i className="fab fa-twitter" />
+            </Button>
+            <Button
+              href="https://www.instagram.com/carver.carve/"
+              target="_blank"
+              justIcon
+              simple
+              color={"primary"}
+            >
+              <i className="fab fa-instagram" />
+            </Button>
+          </CardFooter>
+        </Card>
+      </GridItem>
+          },
+
 
             {
               title: "Maria Brock",

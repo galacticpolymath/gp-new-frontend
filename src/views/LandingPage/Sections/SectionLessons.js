@@ -5,8 +5,8 @@ import classNames from "classnames";
 // @material-ui/icons
 import StarIcon from '@material-ui/icons/Star';
 // import  image
-import FeaturedLessonImg from "assets/img/featuredLesson_card.png";
-import SponsorLogo from "assets/img/featuredSponsor_logo.png";
+import FeaturedLessonImg from "assets/img/featuredLesson_card.jpg";
+import SponsorLogo from "assets/img/featuredSponsor_logo.jpg";
 
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
@@ -228,7 +228,7 @@ export default function SectionTeam() {
                       <StarIcon/> <h4> New Release!</h4>
                     </div>
                   <GridItem xs={12} md={9}>
-                    <a href="/lessons/2">
+                    <a href="/lessons/4">
                     {/*Featured Lesson Label*/}
 
                     {/*lesson cover image*/}
@@ -297,7 +297,7 @@ export default function SectionTeam() {
                 <Button
                   color="primary"
                   size="lg"
-                  href="/lessons/2"
+                  href="/lessons/4"
                 >
                   <CreateIcon />
                   <i className="fas" />

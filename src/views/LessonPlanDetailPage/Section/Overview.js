@@ -88,7 +88,7 @@ const Overview = ({
 
         {Description &&
           <Fragment>
-            <h3>Lesson Description</h3>
+            <h5>Lesson Description</h5>
             <RichText content={Description} />
           </Fragment>
         }

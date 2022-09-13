@@ -33,7 +33,9 @@ const LearningChart = ({ Title, Description, Footnote, Badge }) => {
         </ExpansionPanelSummary>
         <ExpansionPanelDetails className={classes.learningChartDetails}>
           <RichText content={Description} />
+          {Footnote &&
           <RichText  content={Footnote} className={classes.learningChartFootnote}/>
+          }
         </ExpansionPanelDetails>
       </ExpansionPanel>
     </div>
