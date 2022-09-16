@@ -6,6 +6,8 @@ import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import DownloadIcon from "@material-ui/icons/GetApp";
 
+import LessonHelperText from "components/LessonHelperText";
+
 import VariantPart from "./VariantPart";
 import DownloadHelp from "./DownloadHelpModal";
 
@@ -45,6 +47,8 @@ const GradeVariant = ({
             <DownloadHelp id={gradePrefix} />
           </div>
         )}
+        
+        {parts.length>1 && <div style={{marginBottom: "0.5rem"}}><LessonHelperText text="Click a Part for details"/></div>}
         <div className="VariantParts">
           {parts.map((part, i) => (
             <VariantPart key={i} {...part} gradePrefix={gradePrefix} />

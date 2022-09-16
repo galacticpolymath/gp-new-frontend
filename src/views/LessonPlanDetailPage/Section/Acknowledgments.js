@@ -14,6 +14,7 @@ const Acknowledgments = ({ index, SectionTitle, Data = [] }) => {
       className="Acknowledgments"
       index={index}
       SectionTitle={SectionTitle}
+      initiallyExpanded
     >
       <div className={classes.container}>
         {Data &&
