@@ -53,7 +53,7 @@ const TeachingResources = ({
             {...remote}
           />
         )}
-        <GridContainer style={{border: "1pt solid #363636",marginBottom: "1.5rem"}}>
+        <GridContainer style={{border: "1pt solid #363636",margin: "0 0 1.5rem"}}>
           <GridItem>
           <h5>Please help us make more lessons like this!</h5>
             <a href="https://bit.ly/gpEmails" target="_blank" rel="noopener noreferrer">
