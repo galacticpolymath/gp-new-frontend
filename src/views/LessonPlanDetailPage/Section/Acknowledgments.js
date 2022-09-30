@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import CollapsibleSection from "./CollapsibleSection";
-
+import RichText from "components/RichText";
 import { makeStyles } from "@material-ui/core/styles";
 import lessonPlanStyle from "assets/jss/material-kit-pro-react/views/lessonPlanStyle.js";
 const useStyles = makeStyles(lessonPlanStyle);
@@ -21,7 +21,7 @@ const Acknowledgments = ({ index, SectionTitle, Data = [] }) => {
           Data.map(({ role, def, records = [] }, i) => (
             <div className="role" key={i}>
               <h4>{role}</h4>
-              <p>{def}</p>
+              <RichText content={def}/>
               {records.map(({ name, url, title, affiliation, location }) => (
                 <div className="record" key={name}>
                   <h5>

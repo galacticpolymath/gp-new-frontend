@@ -28,7 +28,9 @@ const Procedure = ({ index, SectionTitle, Data }) => {
               {"  "}
               {Data.lessonDur}
             </h4>
-            <RichText content={Data.lessonPreface} />
+            {Data.lessonPreface && <RichText content={Data.lessonPreface}
+              />
+            }
           </div>
           {Data.parts.map((part, i) => (
             <LessonPart key={i} {...part} />
