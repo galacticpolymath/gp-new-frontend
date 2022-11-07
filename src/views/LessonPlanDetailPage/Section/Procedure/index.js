@@ -24,7 +24,7 @@ const Procedure = ({ index, SectionTitle, Data }) => {
         <Fragment>
           <div className={classes.procLessonPreface}>
             <h4>
-              <TimerIcon className={classes.inlineIcon} />
+              <TimerIcon style={{verticalAlign: "sub"}} />
               {"  "}
               {Data.lessonDur}
             </h4>
