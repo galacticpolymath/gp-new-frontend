@@ -44,7 +44,7 @@ const LessonCards = ({ lessons }) => {
         ))}
         {/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/}
         {/*Manual coming soon tile*/}
-        <GridItem xs={12} sm={6} md={6} >
+        {/* <GridItem xs={12} sm={6} md={6} >
           <div className= {classes.addMargin}>
             <Box className={classes.lessonCard} boxShadow={4}>
               <div style={{
@@ -99,7 +99,7 @@ const LessonCards = ({ lessons }) => {
                 </GridItem>
               </GridContainer>
           </div>
-        </GridItem>
+        </GridItem> */}
 
       </GridContainer>
     </div>

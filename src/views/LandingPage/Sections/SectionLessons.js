@@ -6,7 +6,7 @@ import classNames from "classnames";
 import StarIcon from '@material-ui/icons/Star';
 // import  image
 import FeaturedLessonImg from "assets/img/featuredLesson_card.jpg";
-import SponsorLogo from "assets/img/featuredSponsor_logo.jpg";
+import SponsorLogo from "assets/img/featuredSponsor_logo.png";
 
 // core components
 import GridContainer from "components/Grid/GridContainer.js";
@@ -107,7 +107,8 @@ const style = {
       hexToRgb(blackColor) +
       ", 0.12), 0 8px 10px -5px rgba(" +
       hexToRgb(blackColor) +
-      ", 0.2)"
+      ", 0.2)",
+    border: "0.5px solid grey"
   },
   lessonDescriptors:{
     marginRight: "auto",
@@ -228,7 +229,7 @@ export default function SectionTeam() {
                       <StarIcon/> <h4> New Release!</h4>
                     </div>
                   <GridItem xs={12} md={9}>
-                    <a href="/lessons/4">
+                    <a href="/lessons/5">
                     {/*Featured Lesson Label*/}
 
                     {/*lesson cover image*/}
@@ -297,7 +298,7 @@ export default function SectionTeam() {
                 <Button
                   color="primary"
                   size="lg"
-                  href="/lessons/4"
+                  href="/lessons/5"
                 >
                   <CreateIcon />
                   <i className="fas" />
