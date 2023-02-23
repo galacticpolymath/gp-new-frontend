@@ -56,7 +56,8 @@ const TeachingResources = ({
         <GridContainer style={{border: "1pt solid #363636",margin: "0 0 1.5rem"}}>
           <GridItem>
           <h5>Please help us make more lessons like this!</h5>
-            <a href="https://bit.ly/gpEmails" target="_blank" rel="noopener noreferrer">
+            <a href="https://45216c4d.sibforms.com/serve/MUIEABKhQZtQBEauhcYKU3l3n-hkpWQzrO5xzjvf6yI0XwqVvF1MuYlACX2EVtDFWcm1w1nY6lw181I_CUGs3cYjltIR-qTgWYRKLH-zF1Ef_NONTcKn5KiY3iLDyW1Klex1c_dKo2S66mUXo6codlinm0zDopzcmgkU3wW1Wyp-T1L61TZcGWlE49DKcYAszOJj6AKW3MTxs5Q0" 
+            target="_blank" rel="noopener noreferrer">
               <MailIcon style={{marginBottom:"-0.35rem",marginRight:"0.25rem"}}/> 
               Subscribe to emails
             </a>
