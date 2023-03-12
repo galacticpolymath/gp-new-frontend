@@ -25,7 +25,7 @@ const Standards = ({ Data, LearningObj }) => {
     <div className={"Standards " + classes.container}>
       <ExpansionPanel
         className="ExpansionPanel LearningObj"
-        initiallyExpanded
+        
         expanded={!expanded2}
         onChange={() => expand2(!expanded2)}
       >
@@ -44,7 +44,7 @@ const Standards = ({ Data, LearningObj }) => {
 
       <ExpansionPanel
         className="ExpansionPanel"
-        initiallyExpanded
+        
         expanded={!expanded}
         onChange={() => expand(!expanded)}
       >
@@ -68,7 +68,7 @@ const Standards = ({ Data, LearningObj }) => {
             Skills and concepts directly taught or reinforced by this lesson
           </div>
           {Data.filter(({ target }) => target).map((subject, i) => (
-            <Subject initiallyExpanded key={"target-" + i} {...subject} />
+            <Subject  key={"target-" + i} {...subject} />
           ))}
           <h3>Connected Standard(s)</h3>
           <div className="StandardsExpl">
